@@ -1,0 +1,147 @@
+{
+  "snapshot_date": "2026-04-28",
+  "scope": "All of Republic of Croatia, JLS level (ADM2)",
+  "data_source": {
+    "primary": "geoBoundaries Open ADM2 (CC0)",
+    "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/HRV/ADM2/geoBoundaries-HRV-ADM2.geojson",
+    "license": "Creative Commons CC0 (public domain)",
+    "underlying": "OSM-derived, validated against national datasets"
+  },
+  "feature_counts": {
+    "total_features": 560,
+    "expected_jls_dzs": 556,
+    "extra_features": 4,
+    "extra_explanation": "geoBoundaries fragments some islands into separate polygons; e.g. Cres+Lošinj split into multiple ADM2 entries"
+  },
+  "area_summary": {
+    "computed_km2": 56551.91,
+    "dzs_official_km2": 56594,
+    "delta_km2": -42.09,
+    "delta_percent": -0.074
+  },
+  "by_zupanija": [
+    {
+      "name": "Ličko-senjska",
+      "count": 12,
+      "area_km2": 5350.28
+    },
+    {
+      "name": "Splitsko-dalmatinska",
+      "count": 56,
+      "area_km2": 4672.19
+    },
+    {
+      "name": "Sisačko-moslavačka",
+      "count": 19,
+      "area_km2": 4466.16
+    },
+    {
+      "name": "Osječko-baranjska",
+      "count": 42,
+      "area_km2": 4148.56
+    },
+    {
+      "name": "Zadarska",
+      "count": 46,
+      "area_km2": 3999.02
+    },
+    {
+      "name": "Karlovačka",
+      "count": 22,
+      "area_km2": 3622.98
+    },
+    {
+      "name": "Primorsko-goranska",
+      "count": 37,
+      "area_km2": 3575.28
+    },
+    {
+      "name": "Zagrebačka",
+      "count": 33,
+      "area_km2": 3020.29
+    },
+    {
+      "name": "Šibensko-kninska",
+      "count": 20,
+      "area_km2": 2927.12
+    },
+    {
+      "name": "Bjelovarsko-bilogorska",
+      "count": 20,
+      "area_km2": 2633.16
+    },
+    {
+      "name": "Istarska",
+      "count": 36,
+      "area_km2": 2550.37
+    },
+    {
+      "name": "Vukovarsko-srijemska",
+      "count": 31,
+      "area_km2": 2324.04
+    },
+    {
+      "name": "Brodsko-posavska",
+      "count": 28,
+      "area_km2": 2036.43
+    },
+    {
+      "name": "Virovitičko-podravska",
+      "count": 16,
+      "area_km2": 2025.36
+    },
+    {
+      "name": "Požeško-slavonska",
+      "count": 10,
+      "area_km2": 1826.29
+    },
+    {
+      "name": "Dubrovačko-neretvanska",
+      "count": 22,
+      "area_km2": 1776.15
+    },
+    {
+      "name": "Koprivničko-križevačka",
+      "count": 25,
+      "area_km2": 1746.35
+    },
+    {
+      "name": "Varaždinska",
+      "count": 27,
+      "area_km2": 1264.95
+    },
+    {
+      "name": "Krapinsko-zagorska",
+      "count": 32,
+      "area_km2": 1226.95
+    },
+    {
+      "name": "Međimurska",
+      "count": 25,
+      "area_km2": 717.2
+    },
+    {
+      "name": "Grad Zagreb",
+      "count": 1,
+      "area_km2": 642.8
+    }
+  ],
+  "topology_after_simplification": {
+    "tolerance_deg": 0.0003,
+    "tolerance_meters_approx": 30,
+    "overlap_deg2": 0.00038058,
+    "overlap_pct": 0.006,
+    "note": "Microscopic — simplify processed each polygon independently. For production use mapshaper/topojson topology-aware simplification."
+  },
+  "comparison_to_ispu": {
+    "ispu_canonical_status": "canonical (Croatian Ministry of Construction & Spatial Planning)",
+    "ispu_data_acquisition_speed": "very slow (~7s per request, 556 JLS × 2 requests = ~2 hours sequential)",
+    "geoboundaries_acquisition_speed": "instant (single 20MB file download)",
+    "use_for_ground_truth": "ISPU (when accuracy critical, e.g. smart contract Merkle root commitment)",
+    "use_for_visualization": "geoBoundaries (sufficient accuracy, 100x faster, no rate limits)",
+    "for_domovina_token": {
+      "phase_1_pilot": "geoBoundaries — fast iteration, demo, governance prototyping",
+      "phase_2_production": "Negotiate DGU shapefile license OR slow background ISPU scrape over weeks"
+    }
+  }
+}

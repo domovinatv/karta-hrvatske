@@ -1,0 +1,16 @@
+# DOMOVINA pipeline — Python dependencies
+# Tested with Python 3.11+
+
+# Geospatial core
+geopandas>=0.14.0
+shapely>=2.0.0
+pyproj>=3.6.0
+
+# Data wrangling
+pandas>=2.0.0
+
+# Excel parsing (DZS Census files)
+openpyxl>=3.1.0
+
+# H3 hexagonal indexing (used in research scripts; not strictly required for HTML build)
+h3>=4.0.0

@@ -1,0 +1,35 @@
+# OS / editor
+.DS_Store
+*.swp
+.idea/
+*.iml
+.vscode/
+
+# Python (apps/web)
+.venv/
+__pycache__/
+*.pyc
+
+# Flutter / Dart (apps/mobile)
+.dart_tool/
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+build/
+coverage/
+**/doc/api/
+**/ios/Flutter/.last_build_id
+app.*.symbols
+app.*.map.json
+/apps/mobile/android/app/debug
+/apps/mobile/android/app/profile
+/apps/mobile/android/app/release
+
+# Web app — large raw inputs (regenerable: apps/web/scripts/06_fetch_geoboundaries.py)
+apps/web/data/hr_adm2_geoboundaries_raw.geojson
+apps/web/data/dzs_jls.xlsx
+apps/web/data/dgu_jls.geojson
+apps/web/data/dgu_zupanije.geojson
+apps/web/data/dgu_drzava.geojson
+apps/web/data/dgu_naselja.geojson
+apps/web/outputs/hrvatska_naselja.geojson

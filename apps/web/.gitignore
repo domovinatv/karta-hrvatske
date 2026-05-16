@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+
+# Large raw inputs (regenerable: run scripts/06_fetch_geoboundaries.py)
+data/hr_adm2_geoboundaries_raw.geojson
+data/dzs_jls.xlsx
+data/dgu_jls.geojson
+data/dgu_zupanije.geojson
+data/dgu_drzava.geojson
+data/dgu_naselja.geojson
+outputs/hrvatska_naselja.geojson

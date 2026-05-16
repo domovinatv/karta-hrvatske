@@ -1,0 +1,1209 @@
+<!doctype html>
+<html lang="hr">
+<head>
+<meta charset="utf-8">
+<title>DOMOVINA · Republika Hrvatska — __NJLS__ JLS</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#002F6C">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<script>
+  // Sync theme attribute before CSS paints (no FOUC). Default: dark.
+  (function () {
+    try {
+      var t = localStorage.getItem('domovina-theme');
+      if (t === 'light') document.documentElement.setAttribute('data-theme', 'light');
+    } catch (e) {}
+  })();
+</script>
+<link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet">
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script src="https://unpkg.com/pmtiles@3.2.1/dist/pmtiles.js"></script>
+
+<style>
+:root {
+  /* Dark theme (default) — dark UI shell, used with dark-matter basemap.
+     --brand-red is pure #FF0000 for true brand elements (.ai suffix,
+     tricolor stripe). --ui-accent is a muted brand-derived red used
+     for UI states (active borders, hover text, badges) — keeps the
+     map's brick-red Grad fills from clashing with the chrome. */
+  --bg: #0a0e14; --bg-2: #11161e; --bg-3: #1a212c; --line: #232b38;
+  --text: #e6edf3; --muted: #8b94a8; --accent-2: #5B8DCE;
+  --good: #4ade80; --ink: #f8fafc;
+  --brand-navy: #002F6C; --brand-red: #FF0000;
+  --ui-accent: #EF4444;                  /* readable on dark bg */
+  --ui-accent-tint: rgba(239, 68, 68, 0.12);
+  --map-bg: #0a0e14;
+  --overlay-strong: rgba(10, 14, 20, 0.92);
+  --overlay-soft:   rgba(10, 14, 20, 0.85);
+  --popup-bg:       rgba(10, 14, 20, 0.95);
+  --popup-shadow:   0 8px 32px rgba(0, 0, 0, 0.6);
+}
+:root[data-theme="light"] {
+  /* Light theme — DOMOVINA brand on a slightly off-white surface.
+     Pure #FFFFFF was harsh against saturated polygon fills; #FAFBFC
+     reduces eye strain and lets the map carry the saturation. */
+  --bg: #FAFBFC; --bg-2: #F5F7F9; --bg-3: #EEF2F5; --line: #D1D5DB;
+  --text: #002F6C; --muted: #5A6570; --accent-2: #002F6C;
+  --good: #16a34a; --ink: #001a40;
+  --ui-accent: #DC2626;                  /* readable on light bg */
+  --ui-accent-tint: rgba(220, 38, 38, 0.08);
+  --map-bg: #F5F7F9;
+  --overlay-strong: rgba(255, 255, 255, 0.94);
+  --overlay-soft:   rgba(255, 255, 255, 0.88);
+  --popup-bg:       rgba(255, 255, 255, 0.97);
+  --popup-shadow:   0 1px 3px rgba(0, 47, 108, 0.08), 0 4px 12px rgba(0, 47, 108, 0.10);
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  background: var(--bg); color: var(--text);
+  font-size: 13px; line-height: 1.4;
+  display: grid; grid-template-rows: auto auto 1fr;
+  height: 100vh;
+}
+
+/* DOMOVINA brand tricolor stripe — red / white / navy */
+.brand-stripe { display: flex; height: 4px; width: 100%; flex-shrink: 0; }
+.brand-stripe span { flex: 1; }
+.brand-stripe span:nth-child(1) { background: var(--brand-red); }
+.brand-stripe span:nth-child(2) { background: #ffffff; }
+.brand-stripe span:nth-child(3) { background: var(--brand-navy); }
+
+header {
+  background: linear-gradient(180deg, var(--bg-2) 0%, var(--bg) 100%);
+  border-bottom: 1px solid var(--line);
+  padding: 14px 24px;
+  display: flex; align-items: center; gap: 24px; flex-wrap: wrap;
+}
+header h1 {
+  margin: 0;
+  display: inline-flex; align-items: baseline; gap: 12px;
+  font-weight: 600; font-size: 20px; color: var(--ink);
+}
+header h1 .brand-word {
+  font-family: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  font-size: 22px;
+  color: var(--ink);
+}
+header h1 .brand-word .ai { color: var(--brand-red); letter-spacing: 0; }
+header h1 .context {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+header h1 .sep { color: var(--muted); font-weight: 400; }
+header .subtitle {
+  color: var(--muted); font-size: 11px;
+  text-transform: uppercase; letter-spacing: 0.18em;
+}
+header .badges { margin-left: auto; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 4px 10px; border: 1px solid var(--line);
+  border-radius: 100px; font-size: 10.5px;
+  background: var(--bg-3); color: var(--text); white-space: nowrap;
+}
+.badge.gpu { border-color: rgba(91, 141, 206, 0.4); color: var(--accent-2); background: rgba(91, 141, 206, 0.05); }
+.badge.gpu::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent-2); box-shadow: 0 0 12px var(--accent-2); animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+.badge.free { border-color: rgba(74, 222, 128, 0.3); color: var(--good); }
+.badge.zero { border-color: color-mix(in srgb, var(--ui-accent) 35%, transparent); color: var(--ui-accent); }
+
+main {
+  display: grid;
+  grid-template-columns: 320px 1fr 380px;
+  overflow: hidden;
+}
+@media (max-width: 1200px) { main { grid-template-columns: 280px 1fr; } aside.right { display: none; } }
+@media (max-width: 800px) { main { grid-template-columns: 1fr; grid-template-rows: 220px 1fr; } }
+
+aside {
+  background: var(--bg-2);
+  overflow-y: auto;
+  border-right: 1px solid var(--line);
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
+}
+aside.right { border-right: 0; border-left: 1px solid var(--line); }
+aside h2 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 13px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.12em;
+  margin: 0; padding: 16px 18px 12px;
+  color: var(--muted); border-bottom: 1px solid var(--line);
+  display: flex; justify-content: space-between; align-items: baseline;
+}
+aside h2 .meta { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0; color: var(--accent-2); text-transform: none; }
+
+#map { background: var(--map-bg); height: 100%; }
+.maplibregl-ctrl-attrib { background: var(--overlay-soft) !important; color: var(--muted) !important; }
+.maplibregl-ctrl-attrib a { color: var(--text) !important; }
+
+.statgrid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 1px; background: var(--line); border-bottom: 1px solid var(--line);
+}
+.stat { background: var(--bg-2); padding: 12px 14px; }
+.stat-label {
+  font-size: 9px; text-transform: uppercase;
+  letter-spacing: 0.15em; color: var(--muted); margin-bottom: 4px;
+}
+.stat-value {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 20px; font-weight: 600;
+  letter-spacing: -0.01em; color: var(--ink);
+}
+.stat-unit { font-size: 11px; color: var(--muted); margin-left: 4px; font-family: 'JetBrains Mono', monospace; font-weight: normal; }
+
+.zup-list { padding: 8px 0; }
+.zup-row {
+  display: grid;
+  grid-template-columns: 12px 1fr auto;
+  gap: 10px; align-items: center;
+  padding: 7px 18px; cursor: pointer;
+  border-left: 2px solid transparent;
+  font-size: 11.5px;
+  transition: background 0.12s, border-color 0.12s;
+}
+.zup-row:hover { background: var(--bg-3); }
+.zup-row.active { background: var(--ui-accent-tint); border-left-color: var(--ui-accent); }
+.zup-swatch { width: 12px; height: 12px; border-radius: 2px; }
+.zup-name { color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.zup-meta { color: var(--muted); font-size: 10px; font-variant-numeric: tabular-nums; }
+
+.search-box {
+  padding: 12px 18px;
+  border-bottom: 1px solid var(--line);
+}
+.search-box input {
+  width: 100%;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 12px;
+  padding: 8px 10px;
+  border-radius: 4px;
+}
+.search-box input:focus { outline: none; border-color: var(--accent-2); }
+.jls-results { max-height: 250px; overflow-y: auto; padding: 4px 0; }
+.jls-result-row {
+  padding: 6px 18px;
+  cursor: pointer;
+  font-size: 11px;
+  display: flex;
+  justify-content: space-between;
+  border-left: 2px solid transparent;
+}
+.jls-result-row:hover { background: var(--bg-3); border-left-color: var(--accent-2); }
+.jls-result-name { color: var(--text); }
+.jls-result-zup { color: var(--muted); font-size: 10px; }
+.jls-result-row .badge-kind {
+  display: inline-block; padding: 1px 6px; margin-right: 6px;
+  font-size: 8.5px; font-weight: 600; letter-spacing: 0.06em;
+  border-radius: 100px; vertical-align: middle;
+  border: 1px solid var(--line); color: var(--muted);
+  text-transform: uppercase;
+}
+.jls-result-row .badge-kind.grad { color: #d4322f; border-color: rgba(212,50,47,.4); }
+.jls-result-row .badge-kind.opc  { color: #588b8b; border-color: rgba(88,139,139,.4); }
+.jls-result-row .badge-kind.nas  { color: var(--accent-2); border-color: rgba(91,141,206,.4); }
+.jls-result-row .pop-meta { font-size: 9px; color: var(--muted); }
+.jls-result-loading { padding: 8px 18px; font-size: 10px; color: var(--muted); font-style: italic; }
+
+.detail-panel { padding: 18px; }
+.detail-panel.empty { color: var(--muted); padding: 60px 20px 0; text-align: center; }
+.detail-name { font-family: 'Fraunces', Georgia, serif; font-size: 22px; font-weight: 600; color: var(--ink); margin-bottom: 4px; letter-spacing: -0.01em; }
+.detail-code { font-size: 11px; color: var(--muted); margin-bottom: 18px; }
+.detail-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px dashed var(--line); }
+.detail-row:last-child { border-bottom: 0; }
+.detail-row .k { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; }
+.detail-row .v { color: var(--text); font-variant-numeric: tabular-nums; text-align: right; }
+
+.legend {
+  position: absolute; bottom: 56px; left: 16px;
+  background: var(--overlay-strong); backdrop-filter: blur(12px);
+  border: 1px solid var(--line); border-radius: 6px;
+  padding: 12px 14px; z-index: 500; font-size: 11px; max-width: 290px;
+  display: none;
+}
+.legend.open { display: block; }
+.legend strong { color: var(--ink); display: block; margin-bottom: 6px; font-size: 11.5px; font-family: 'Fraunces', serif; }
+.legend .l-row { color: var(--muted); margin-top: 4px; line-height: 1.5; }
+
+.fineprint {
+  position: absolute; bottom: 56px; right: 16px;
+  background: var(--overlay-soft); backdrop-filter: blur(8px);
+  border: 1px solid var(--line); border-radius: 6px;
+  padding: 9px 12px; font-size: 10px; color: var(--muted);
+  z-index: 500; max-width: 380px; line-height: 1.6; text-align: right;
+  display: none;
+}
+.fineprint.open { display: block; }
+.fineprint a { color: var(--text); text-decoration: none; border-bottom: 1px dotted var(--muted); }
+.fineprint a:hover { color: var(--accent-2); border-color: var(--accent-2); }
+
+.icon-btn {
+  position: absolute; bottom: 16px;
+  width: 32px; height: 32px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--overlay-strong); backdrop-filter: blur(8px);
+  border: 1px solid var(--line); border-radius: 6px;
+  color: var(--text); font-size: 14px; cursor: pointer; z-index: 501;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+.icon-btn:hover { background: var(--bg-3); border-color: var(--accent-2); color: var(--accent-2); }
+.icon-btn.active { border-color: var(--ui-accent); color: var(--ui-accent); }
+.icon-btn.legend-toggle { left: 16px; }
+.icon-btn.fineprint-toggle { right: 16px; }
+
+.zoom-readout {
+  position: absolute; bottom: 16px; left: 56px;
+  background: var(--overlay-soft); backdrop-filter: blur(8px);
+  border: 1px solid var(--line); border-radius: 6px;
+  padding: 6px 10px; z-index: 500;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; color: var(--text);
+  font-variant-numeric: tabular-nums;
+  display: inline-flex; align-items: center; gap: 8px;
+  pointer-events: none;
+}
+.zoom-readout .k { color: var(--muted); font-size: 9px; text-transform: uppercase; letter-spacing: 0.1em; }
+.zoom-readout .v { color: var(--accent-2); font-weight: 600; }
+
+.hover-info {
+  position: absolute; bottom: 16px; right: 56px;
+  background: var(--overlay-strong); backdrop-filter: blur(12px);
+  border: 1px solid var(--line); border-radius: 6px;
+  padding: 6px 10px; z-index: 500;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; color: var(--text);
+  display: inline-flex; align-items: center; gap: 6px;
+  pointer-events: none;
+  max-width: calc(100% - 100px);
+  white-space: nowrap;
+  overflow: hidden; text-overflow: ellipsis;
+  opacity: 0; transition: opacity 0.12s;
+}
+.hover-info.visible { opacity: 1; }
+.hover-info .seg { display: inline-flex; align-items: baseline; gap: 5px; }
+.hover-info .k { color: var(--muted); font-size: 9px; text-transform: uppercase; letter-spacing: 0.1em; }
+.hover-info .v { color: var(--ink); font-weight: 500; }
+.hover-info .sep { color: var(--muted); margin: 0 4px; opacity: 0.6; }
+.hover-info .v-zup { color: var(--accent-2); }
+.hover-info .v-jls { color: var(--ink); }
+.hover-info .v-nas { color: var(--ui-accent); }
+
+.controls {
+  position: absolute; top: 16px; right: 16px;
+  display: flex; flex-direction: column; gap: 6px; z-index: 500;
+}
+.ctrl-btn {
+  padding: 9px 13px;
+  background: var(--overlay-strong);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--text);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+  text-align: left;
+  display: flex; align-items: center; gap: 8px;
+  min-width: 200px;
+}
+.ctrl-btn:hover { background: var(--bg-3); border-color: var(--accent-2); }
+.ctrl-btn.active { border-color: var(--ui-accent); color: var(--ui-accent); }
+.ctrl-btn .key { font-size: 9px; opacity: 0.5; margin-left: auto; }
+
+.loading {
+  position: fixed; inset: 0;
+  background: var(--bg); z-index: 10000;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Fraunces', serif;
+  font-size: 18px; color: var(--ink);
+  flex-direction: column; gap: 16px;
+}
+.loading.gone { display: none; }
+.spinner {
+  width: 32px; height: 32px;
+  border: 3px solid var(--line);
+  border-top-color: var(--ui-accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.maplibregl-popup-content {
+  background: var(--popup-bg) !important;
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--line) !important;
+  border-radius: 6px !important;
+  padding: 12px 14px !important;
+  color: var(--text) !important;
+  box-shadow: var(--popup-shadow) !important;
+  font-size: 11px;
+}
+.maplibregl-popup-tip { display: none !important; }
+</style>
+</head>
+<body>
+
+<div class="loading" id="loading">
+  <div class="spinner"></div>
+  <div>Učitavam __NJLS__ JLS...</div>
+</div>
+
+<div class="brand-stripe" aria-hidden="true"><span></span><span></span><span></span></div>
+
+<header>
+  <h1>
+    <span class="brand-word">DOMOVINA<span class="ai">.ai</span></span>
+    <span class="sep">·</span>
+    <span class="context">Republika Hrvatska</span>
+  </h1>
+  <div class="subtitle">phase 3 · __NJLS__ JLS · __NZ__ županija · GPU rendering</div>
+  <div class="badges">
+    <span class="badge gpu">WebGL</span>
+    <span class="badge free">DGU Registar prostornih jedinica</span>
+    <span class="badge free">OpenFreeMap basemap</span>
+    <span class="badge zero">$0 vendor</span>
+  </div>
+</header>
+
+<main>
+  <aside class="left">
+    <h2>Hrvatska <span class="meta">__NJLS__ JLS · __AREA__ km²</span></h2>
+    <div class="statgrid">
+      <div class="stat"><div class="stat-label">JLS-ova</div><div class="stat-value">__NJLS__</div></div>
+      <div class="stat"><div class="stat-label">Županija</div><div class="stat-value">__NZ__</div></div>
+      <div class="stat"><div class="stat-label">Gradova</div><div class="stat-value">__NG__</div></div>
+      <div class="stat"><div class="stat-label">Općina</div><div class="stat-value">__NO__</div></div>
+    </div>
+
+    <div class="search-box">
+      <input id="search" type="text" placeholder="Traži JLS ili naselje..." autocomplete="off">
+      <div class="jls-results" id="search-results" style="display:none;"></div>
+    </div>
+
+    <h2>Po županijama <span class="meta">klik = filter</span></h2>
+    <div class="zup-list">__ZUP_ROWS__</div>
+  </aside>
+
+  <div style="position:relative;">
+    <div id="map"></div>
+
+    <div class="controls">
+      <button class="ctrl-btn" id="btn-zup-mode" title="Boja po županiji vs. po tipu">
+        🎨 Color: županija <span class="key">C</span>
+      </button>
+      <button class="ctrl-btn" id="btn-style" title="Prebaci svijetla/tamna tema">
+        🌓 Tema <span class="key">L</span>
+      </button>
+      <button class="ctrl-btn active" id="btn-zup-borders" title="Toggle DGU županije border overlay">
+        ▦ Granice županija <span class="key">B</span>
+      </button>
+      <button class="ctrl-btn active" id="btn-jls-borders" title="Toggle JLS border overlay">
+        ▦ Granice JLS <span class="key">J</span>
+      </button>
+      <button class="ctrl-btn" id="btn-naselja" title="Prikaži/sakrij 6759 naselja (lazy-loaded)">
+        ⊟ Naselja <span class="key">N</span>
+      </button>
+      <button class="ctrl-btn" id="btn-focus" title="Sakrij sve osim odabrane JLS i naselja unutar nje">
+        ◎ Samo odabrana JLS <span class="key">O</span>
+      </button>
+      <button class="ctrl-btn" id="btn-fit" title="Reset view">
+        ⌖ Fit Hrvatska <span class="key">F</span>
+      </button>
+    </div>
+
+    <div class="zoom-readout" id="zoom-readout">
+      <span class="k">zoom</span><span class="v" id="zoom-val">—</span>
+      <span class="k">m/px</span><span class="v" id="zoom-mpp">—</span>
+    </div>
+
+    <div class="hover-info" id="hover-info">
+      <span class="seg"><span class="k">županija</span><span class="v v-zup" id="hov-zup">—</span></span>
+      <span class="sep" id="hov-sep1">›</span>
+      <span class="seg"><span class="k">JLS</span><span class="v v-jls" id="hov-jls">—</span></span>
+      <span class="sep" id="hov-sep2" style="display:none;">›</span>
+      <span class="seg" id="hov-nas-seg" style="display:none;"><span class="k">naselje</span><span class="v v-nas" id="hov-nas">—</span></span>
+    </div>
+
+    <button class="icon-btn legend-toggle" id="btn-legend" title="Prikaži/sakrij legendu">ⓘ</button>
+    <div class="legend" id="legend">
+      <strong>Republika Hrvatska — __NJLS__ JLS</strong>
+      <div class="l-row">→ __NG__ gradova + __NO__ općina</div>
+      <div class="l-row">→ Izvor: DGU Registar prostornih jedinica + DZS Census 2021</div>
+      <div class="l-row">→ Bojeno po 21 županiji</div>
+      <div class="l-row">→ Hover = highlight, klik = detalji</div>
+      <div class="l-row" style="margin-top:8px;color:var(--accent-2);">Open data: ODbL/CC0 — bez vendor lock-ina</div>
+    </div>
+
+    <button class="icon-btn fineprint-toggle" id="btn-fineprint" title="Prikaži/sakrij izvore">©</button>
+    <div class="fineprint" id="fineprint">
+      JLS granice: <a href="https://geoportal.dgu.hr/">DGU</a> Registar prostornih jedinica (rpj:jls) ·
+      Tipovi (Grad/Općina): <a href="https://podaci.dzs.hr/">DZS</a> Census 2021<br>
+      Basemap: <a href="https://openfreemap.org">OpenFreeMap</a> · OSM (ODbL) ·
+      Library: MapLibre GL JS 4.7 (BSD-2)
+    </div>
+  </div>
+
+  <aside class="right">
+    <h2>Detalji <span class="meta">click ili search</span></h2>
+    <div class="detail-panel empty" id="detail">
+      Klikni JLS na karti<br>ili pretraži ime gore lijevo
+    </div>
+  </aside>
+</main>
+
+<script id="hr-data" type="application/json">__GEOJSON__</script>
+<script id="hr-zup-data" type="application/json">__GEOJSON_ZUP__</script>
+<script id="hr-drz-data" type="application/json">__GEOJSON_DRZ__</script>
+
+<script>
+const data = JSON.parse(document.getElementById('hr-data').textContent);
+const zupData = JSON.parse(document.getElementById('hr-zup-data').textContent);
+const drzData = JSON.parse(document.getElementById('hr-drz-data').textContent);
+const totalArea = __TOTAL_AREA__;
+
+// Register PMTiles for future scaling
+const protocol = new pmtiles.Protocol();
+maplibregl.addProtocol("pmtiles", protocol.tile);
+
+const STYLE_LIGHT = 'https://tiles.openfreemap.org/styles/positron';
+const STYLE_DARK  = 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json';
+
+// Initial theme (set synchronously in <head> from localStorage). Default: dark.
+const initialTheme = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+
+const map = new maplibregl.Map({
+  container: 'map',
+  style: initialTheme === 'dark' ? STYLE_DARK : STYLE_LIGHT,
+  center: [16.5, 44.5],
+  zoom: 6.5,
+  attributionControl: { compact: true },
+  dragRotate: false,
+  pitchWithRotate: false,
+  touchPitch: false,
+});
+map.touchZoomRotate.disableRotation();
+map.keyboard.disableRotation();
+// Disable native context menu on the map canvas (right-click would otherwise show it)
+map.getCanvasContainer().addEventListener('contextmenu', e => e.preventDefault());
+map.addControl(new maplibregl.NavigationControl({ showCompass: false, visualizePitch: false }), 'bottom-right');
+map.addControl(new maplibregl.ScaleControl({ unit: 'metric' }), 'bottom-right');
+
+// Color palettes
+const ZUP_COLORS = {};
+data.features.forEach(f => { ZUP_COLORS[f.properties.zupanija] = f.properties.color; });
+
+// Type colors (Grad/Općina/Otok)
+const TYPE_COLORS = {'Grad':'#d4322f','Općina':'#588b8b','Otok':'#06aed5','Other':'#8d99ae'};
+
+let colorMode = 'zupanija';
+let dark = initialTheme === 'dark';
+let showZupBorders = true;
+let showJlsBorders = true;
+let showNaselja = false;
+let focusMode = false;
+let naseljaLoaded = false;
+let naseljaLoading = false;
+window._selectedNaselje = null;
+
+function fillColorExpr() {
+  if (colorMode === 'type') {
+    return ['match', ['get', 'type'],
+      'Grad', '#d4322f', 'Općina', '#588b8b', 'Otok', '#06aed5', '#8d99ae'];
+  }
+  return ['get', 'color'];
+}
+function lineColorExpr() {
+  if (colorMode === 'type') {
+    return ['match', ['get', 'type'],
+      'Grad', '#d4322f', 'Općina', '#588b8b', 'Otok', '#06aed5', '#8d99ae'];
+  }
+  return ['case',
+    ['boolean', ['feature-state', 'selected'], false], '#ffffff',
+    ['get', 'color']];
+}
+
+function addJlsLayers() {
+  if (map.getSource('hr')) return; // already there
+  // Note: data has top-level `id` on each Feature, so we use that natively (no promoteId).
+  map.addSource('hr', { type: 'geojson', data });
+
+  map.addLayer({
+    id: 'hr-fill', type: 'fill', source: 'hr',
+    paint: {
+      'fill-color': fillColorExpr(),
+      // Hover takes priority over focus-hidden so hovering a neighbouring JLS
+      // in focus mode reveals it as a discovery cue (cursor:pointer + faint
+      // fill). The layer is never filter-removed in focus mode so clicks on
+      // neighbouring JLS still register and switch the focus.
+      'fill-opacity': [
+        'case',
+        ['boolean', ['feature-state', 'hover'], false], 0.5,
+        ['boolean', ['feature-state', 'focus_hidden'], false], 0.0,
+        ['boolean', ['feature-state', 'selected'], false], 0.75,
+        ['boolean', ['feature-state', 'dimmed'], false], 0.08,
+        0.40
+      ],
+    }
+  });
+
+  map.addLayer({
+    id: 'hr-line', type: 'line', source: 'hr',
+    paint: {
+      'line-color': lineColorExpr(),
+      'line-width': ['case',
+        ['boolean', ['feature-state', 'selected'], false], 3,
+        ['boolean', ['feature-state', 'hover'], false], 1.8,
+        0.6
+      ],
+      'line-opacity': 0.85
+    }
+  });
+
+  // Labels at higher zoom only (560 labels at low zoom = chaos)
+  map.addLayer({
+    id: 'hr-label', type: 'symbol', source: 'hr',
+    minzoom: 9,
+    layout: {
+      'text-field': ['get', 'name'],
+      'text-font': ['Noto Sans Bold'],
+      'text-size': ['interpolate', ['linear'], ['zoom'], 9, 10, 13, 14, 16, 18],
+      'text-allow-overlap': false,
+    },
+    paint: {
+      'text-color': dark ? '#f8fafc' : '#0a0e14',
+      'text-halo-color': dark ? 'rgba(10,14,20,0.95)' : 'rgba(255,255,255,0.95)',
+      'text-halo-width': 2,
+      'text-halo-blur': 0.5
+    }
+  });
+
+  // DGU-authoritative županije borders. Derived from JLS-union, so they
+  // align pixel-perfect with our JLS polygons (topology-preserving simplify).
+  map.addSource('hr-zup', { type: 'geojson', data: zupData });
+  map.addLayer({
+    id: 'hr-zup-line', type: 'line', source: 'hr-zup',
+    layout: { visibility: showZupBorders ? 'visible' : 'none' },
+    paint: {
+      'line-color': dark ? '#f8fafc' : '#0a0e14',
+      'line-width': ['interpolate', ['linear'], ['zoom'], 6, 1.2, 10, 2.4, 14, 4],
+      'line-opacity': 0.9,
+      'line-dasharray': [3, 2]
+    }
+  });
+
+  // DGU-authoritative state border (Republika Hrvatska). Derived from the
+  // union of all JLS, so it's the same coastline and same land border that
+  // bounds every JLS polygon. Replaces (visually) the OSM border line which
+  // is hidden by hideBasemapAdminLayers().
+  map.addSource('hr-drz', { type: 'geojson', data: drzData });
+  map.addLayer({
+    id: 'hr-drz-line', type: 'line', source: 'hr-drz',
+    paint: {
+      'line-color': dark ? '#ffd166' : '#7a3b00',
+      'line-width': ['interpolate', ['linear'], ['zoom'], 5, 1.5, 9, 2.5, 14, 4],
+      'line-opacity': 0.95
+    }
+  });
+}
+
+// Naselja layers — only added once `naseljaLoaded` is true. Render fill +
+// thin line + name labels at higher zoom only (6759 features at low zoom = chaos).
+function addNaseljaLayers() {
+  if (!naseljaLoaded || map.getSource('hr-nas')) return;
+  map.addSource('hr-nas', { type: 'geojson', data: window._naseljaData });
+  // Add naselja layers ABOVE the JLS fill so they receive clicks and the
+  // distinct per-naselje colour is visible. nas_color comes from the build
+  // script (deterministic palette hash of maticni_broj).
+  map.addLayer({
+    id: 'hr-nas-fill', type: 'fill', source: 'hr-nas',
+    minzoom: 9,
+    paint: {
+      'fill-color': ['coalesce', ['get', 'nas_color'], ['get', 'color']],
+      'fill-opacity': [
+        'case',
+        ['boolean', ['feature-state', 'selected'], false], 0.85,
+        ['boolean', ['feature-state', 'hover'], false], 0.7,
+        0.45
+      ],
+    }
+  });
+  map.addLayer({
+    id: 'hr-nas-line', type: 'line', source: 'hr-nas',
+    minzoom: 9,
+    paint: {
+      'line-color': ['case',
+        ['boolean', ['feature-state', 'selected'], false], '#ffffff',
+        dark ? 'rgba(255,255,255,0.65)' : 'rgba(0,0,0,0.65)'
+      ],
+      'line-width': ['case',
+        ['boolean', ['feature-state', 'selected'], false], 3,
+        ['interpolate', ['linear'], ['zoom'], 9, 0.5, 14, 1.4]
+      ],
+      'line-opacity': 0.95,
+    }
+  });
+  map.addLayer({
+    id: 'hr-nas-label', type: 'symbol', source: 'hr-nas',
+    minzoom: 11,
+    layout: {
+      'text-field': ['get', 'name'],
+      'text-font': ['Noto Sans Regular'],
+      'text-size': ['interpolate', ['linear'], ['zoom'], 11, 9, 14, 12, 16, 16],
+      'text-allow-overlap': false,
+    },
+    paint: {
+      'text-color': dark ? '#cbd5e1' : '#1e293b',
+      'text-halo-color': dark ? 'rgba(10,14,20,0.95)' : 'rgba(255,255,255,0.95)',
+      'text-halo-width': 1.5,
+    }
+  });
+  // Hover state on naselja
+  let hoveredNas = null;
+  map.on('mousemove', 'hr-nas-fill', e => {
+    if (!e.features.length) return;
+    if (hoveredNas !== null) map.setFeatureState({source:'hr-nas', id:hoveredNas}, {hover:false});
+    hoveredNas = e.features[0].id;
+    map.setFeatureState({source:'hr-nas', id:hoveredNas}, {hover:true});
+    map.getCanvas().style.cursor = 'pointer';
+  });
+  map.on('mouseleave', 'hr-nas-fill', () => {
+    if (hoveredNas !== null) map.setFeatureState({source:'hr-nas', id:hoveredNas}, {hover:false});
+    hoveredNas = null;
+    map.getCanvas().style.cursor = '';
+  });
+  map.on('click', 'hr-nas-fill', e => {
+    if (!e.features.length) return;
+    const f = e.features[0];
+    const p = f.properties;
+    // Mark this naselje as visually selected (white outline, brighter fill)
+    if (window._selectedNaselje !== null && window._selectedNaselje !== undefined) {
+      map.setFeatureState({source:'hr-nas', id: window._selectedNaselje}, {selected: false});
+    }
+    window._selectedNaselje = f.id;
+    map.setFeatureState({source:'hr-nas', id: f.id}, {selected: true});
+
+    document.getElementById('detail').className = 'detail-panel';
+    document.getElementById('detail').innerHTML = `
+      <div class="detail-name" style="border-left:3px solid ${p.color}; padding-left:10px;">${p.name}</div>
+      <div class="detail-code">Naselje · ${p.jls_type || 'JLS'} ${p.jls_name || ''}</div>
+      ${p.stanovnistvo ? `<div class="detail-row"><span class="k">Stanovništvo</span><span class="v">${Number(p.stanovnistvo).toLocaleString('hr')}</span></div>` : ''}
+      <div class="detail-row"><span class="k">JLS</span><span class="v">${p.jls_type||''} ${p.jls_name||''}</span></div>
+      <div class="detail-row"><span class="k">Županija</span><span class="v">${p.zupanija||''}</span></div>
+      <div class="detail-row"><span class="k">Površina</span><span class="v">${Number(p.area_km2).toFixed(2)} km²</span></div>
+      <div class="detail-row"><span class="k">Matični broj</span><span class="v">${p.maticni_broj}</span></div>
+      <div class="detail-row"><span class="k">INSPIRE ID</span><span class="v" style="font-size:9px;">${p.inspire_id}</span></div>
+      <div class="detail-row"><span class="k">Izvor</span><span class="v" style="font-size:10px;color:var(--muted);">DGU rpj:naselje</span></div>
+    `;
+  });
+}
+
+function setNaseljaVisibility(show) {
+  for (const id of ['hr-nas-fill', 'hr-nas-line', 'hr-nas-label']) {
+    if (map.getLayer(id)) map.setLayoutProperty(id, 'visibility', show ? 'visible' : 'none');
+  }
+}
+
+async function ensureNaseljaLoaded() {
+  if (naseljaLoaded || naseljaLoading) return;
+  naseljaLoading = true;
+  const btn = document.getElementById('btn-naselja');
+  const orig = btn.firstChild.textContent;
+  btn.firstChild.textContent = '⏳ Učitavam naselja… ';
+  try {
+    const r = await fetch('hrvatska_naselja.geojson');
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    window._naseljaData = await r.json();
+    naseljaLoaded = true;
+    addNaseljaLayers();
+    // NB: applyFocusFilter is defined inside the map 'load' closure, so we
+    // can't reach it from here. The caller (setNaseljaOn) re-applies the
+    // filter after awaiting ensureNaseljaLoaded.
+    btn.firstChild.textContent = `⊟ Naselja (${window._naseljaData.features.length}) `;
+  } catch (e) {
+    btn.firstChild.textContent = '❌ Naselja (fetch failed) ';
+    console.error('Naselja fetch failed:', e);
+  } finally {
+    naseljaLoading = false;
+  }
+}
+
+// OSM/OpenFreeMap basemap renders its own admin/state lines, which don't
+// align with DGU. Hide them so only the authoritative DGU lines we draw on
+// top are visible.
+function hideBasemapAdminLayers() {
+  const style = map.getStyle();
+  if (!style || !style.layers) return;
+  const adminPattern = /admin|boundary|country|border/i;
+  for (const l of style.layers) {
+    if (adminPattern.test(l.id) || (l['source-layer'] && adminPattern.test(l['source-layer']))) {
+      try { map.setLayoutProperty(l.id, 'visibility', 'none'); } catch (e) {}
+    }
+  }
+}
+
+map.on('load', () => {
+  hideBasemapAdminLayers();
+  addJlsLayers();
+
+  // Fit Croatia (HR bbox approx)
+  map.fitBounds([[13.4, 42.3], [19.5, 46.6]], { padding: 25, duration: 0 });
+
+  // Live zoom + ground-resolution readout (Web Mercator: 156543·cos(lat)/2^z m/px).
+  const zVal = document.getElementById('zoom-val');
+  const zMpp = document.getElementById('zoom-mpp');
+  const refreshZoom = () => {
+    const z = map.getZoom();
+    const lat = map.getCenter().lat;
+    const mpp = 156543.03392 * Math.cos(lat * Math.PI / 180) / Math.pow(2, z);
+    zVal.textContent = z.toFixed(2);
+    zMpp.textContent = mpp >= 1000 ? (mpp / 1000).toFixed(1) + ' km' : mpp.toFixed(1);
+  };
+  refreshZoom();
+  map.on('move', refreshZoom);
+  map.on('zoom', refreshZoom);
+
+  // Hover breadcrumb: županija › JLS › naselje (naselje only when its layer is on).
+  const hovBox = document.getElementById('hover-info');
+  const hovZup = document.getElementById('hov-zup');
+  const hovJls = document.getElementById('hov-jls');
+  const hovNas = document.getElementById('hov-nas');
+  const hovNasSeg = document.getElementById('hov-nas-seg');
+  const hovSep2 = document.getElementById('hov-sep2');
+  map.on('mousemove', e => {
+    const layers = [];
+    if (map.getLayer('hr-fill')) layers.push('hr-fill');
+    if (showNaselja && naseljaLoaded && map.getLayer('hr-nas-fill')) layers.push('hr-nas-fill');
+    if (!layers.length) { hovBox.classList.remove('visible'); return; }
+    const feats = map.queryRenderedFeatures(e.point, { layers });
+    const jls = feats.find(f => f.layer.id === 'hr-fill');
+    const nas = feats.find(f => f.layer.id === 'hr-nas-fill');
+    if (!jls && !nas) { hovBox.classList.remove('visible'); return; }
+    // Naselje carries jls + zupanija context; prefer it when present.
+    const src = nas ? nas.properties : jls.properties;
+    hovZup.textContent = src.zupanija || '—';
+    const jlsLabel = nas
+      ? `${src.jls_type || ''} ${src.jls_name || ''}`.trim()
+      : `${src.type || ''} ${src.name || ''}`.trim();
+    hovJls.textContent = jlsLabel || '—';
+    if (nas) {
+      hovNas.textContent = nas.properties.name || '—';
+      hovNasSeg.style.display = '';
+      hovSep2.style.display = '';
+    } else {
+      hovNasSeg.style.display = 'none';
+      hovSep2.style.display = 'none';
+    }
+    hovBox.classList.add('visible');
+  });
+  map.on('mouseleave', () => hovBox.classList.remove('visible'));
+  map.getContainer().addEventListener('mouseleave', () => hovBox.classList.remove('visible'));
+
+  // Hide loading screen
+  document.getElementById('loading').classList.add('gone');
+
+  // Hover state
+  let hovered = null;
+  map.on('mousemove', 'hr-fill', e => {
+    if (!e.features.length) return;
+    if (hovered !== null) map.setFeatureState({source:'hr', id:hovered}, {hover:false});
+    hovered = e.features[0].id;
+    map.setFeatureState({source:'hr', id:hovered}, {hover:true});
+    map.getCanvas().style.cursor = 'pointer';
+  });
+  map.on('mouseleave', 'hr-fill', () => {
+    if (hovered !== null) map.setFeatureState({source:'hr', id:hovered}, {hover:false});
+    hovered = null;
+    map.getCanvas().style.cursor = '';
+  });
+
+  // Click → select. JLS clicks are suppressed only when a naselje is actually
+  // rendered under the click point — i.e. naselja layer is on AND the user is
+  // zoomed in past the naselja minzoom AND there is a naselje feature beneath
+  // the cursor. At lower zooms (or over sea / gaps) clicking JLS still works.
+  let selected = null;
+  map.on('click', 'hr-fill', e => {
+    if (!e.features.length) return;
+    if (showNaselja && naseljaLoaded && map.getLayer('hr-nas-fill')) {
+      const nasUnder = map.queryRenderedFeatures(e.point, { layers: ['hr-nas-fill'] });
+      if (nasUnder.length) return;  // naselje handler fires instead
+    }
+    selectJLS(e.features[0].id);
+  });
+
+  function selectJLS(id) {
+    if (selected !== null) map.setFeatureState({source:'hr', id:selected}, {selected:false});
+    selected = id;
+    map.setFeatureState({source:'hr', id}, {selected:true});
+
+    const f = data.features.find(x => x.id === id);
+    const p = f.properties;
+
+    document.getElementById('detail').className = 'detail-panel';
+    document.getElementById('detail').innerHTML = `
+      <div class="detail-name" style="border-left:3px solid ${p.color}; padding-left:10px;">${p.name}</div>
+      <div class="detail-code">${p.name_full || p.shapeName || (p.type + ' ' + p.name)}</div>
+      <div class="detail-row"><span class="k">Tip</span><span class="v">${p.type}</span></div>
+      <div class="detail-row"><span class="k">Županija</span><span class="v">${p.zupanija}</span></div>
+      ${p.roa ? `<div class="detail-row"><span class="k">Sjedište</span><span class="v">${p.roa}</span></div>` : ''}
+      ${p.maticni_broj ? `<div class="detail-row"><span class="k">Matični broj</span><span class="v">${p.maticni_broj}</span></div>` : ''}
+      <div class="detail-row"><span class="k">Površina</span><span class="v">${p.area_km2.toFixed(2)} km²</span></div>
+      <div class="detail-row"><span class="k">U m²</span><span class="v">${p.area_m2.toLocaleString('hr')}</span></div>
+      <div class="detail-row"><span class="k">Udio HR</span><span class="v">${(p.area_m2 / totalArea * 100).toFixed(3)} %</span></div>
+      ${p.inspire_id ? `<div class="detail-row"><span class="k">INSPIRE ID</span><span class="v" style="font-size:9px;">${p.inspire_id}</span></div>` : ''}
+      ${p.source ? `<div class="detail-row"><span class="k">Izvor</span><span class="v" style="font-size:10px;color:var(--muted);">${p.source}</span></div>` : ''}
+    `;
+    // Smooth fly to feature bounds
+    const b = computeBounds(f.geometry);
+    map.fitBounds(b, { padding: 50, maxZoom: 12, duration: 800 });
+    // Drill-down: selecting a JLS auto-enables focus + naselja (lazy-loaded
+    // on first activation; the focus filter is reapplied once naselja arrive).
+    setFocusMode(true);
+    setNaseljaOn(true);
+  }
+
+  // Županija filter
+  let activeZup = null;
+  document.querySelectorAll('.zup-row').forEach(row => {
+    row.addEventListener('click', () => {
+      const zup = row.dataset.zupanija;
+      if (activeZup === zup) {
+        // unfilter
+        activeZup = null;
+        row.classList.remove('active');
+        clearDimming();
+      } else {
+        document.querySelectorAll('.zup-row').forEach(r => r.classList.remove('active'));
+        row.classList.add('active');
+        activeZup = zup;
+        applyDimming(zup);
+        // zoom to all features of that županija
+        const fs = data.features.filter(f => f.properties.zupanija === zup);
+        if (fs.length) {
+          let minX=Infinity, minY=Infinity, maxX=-Infinity, maxY=-Infinity;
+          fs.forEach(f => walkCoords(f.geometry, (x,y) => {
+            if (x<minX) minX=x; if (x>maxX) maxX=x;
+            if (y<minY) minY=y; if (y>maxY) maxY=y;
+          }));
+          map.fitBounds([[minX,minY],[maxX,maxY]], { padding: 40, duration: 1000 });
+        }
+      }
+    });
+  });
+
+  function applyDimming(zupName) {
+    data.features.forEach(f => {
+      const dim = f.properties.zupanija !== zupName;
+      map.setFeatureState({source:'hr', id:f.id}, {dimmed: dim});
+    });
+  }
+  function clearDimming() {
+    data.features.forEach(f => map.setFeatureState({source:'hr', id:f.id}, {dimmed:false}));
+  }
+
+  // Pick a naselje from a search result: drill-down to its parent JLS
+  // (loading naselja if needed), then highlight the naselje and zoom to it.
+  async function selectNaseljeFromSearch(nasFeat) {
+    const mb = nasFeat.properties.jls_maticni_broj;
+    const parentJls = data.features.find(f => f.properties.maticni_broj === mb);
+    if (parentJls) {
+      selectJLS(parentJls.id);  // sets focus + triggers naselja load
+    } else {
+      setFocusMode(true);
+      await setNaseljaOn(true);
+    }
+    if (!naseljaLoaded) await ensureNaseljaLoaded();
+    // Clear previous naselje selection
+    if (window._selectedNaselje != null && map.getSource('hr-nas')) {
+      map.setFeatureState({source:'hr-nas', id: window._selectedNaselje}, {selected:false});
+    }
+    window._selectedNaselje = nasFeat.id;
+    if (map.getSource('hr-nas')) {
+      map.setFeatureState({source:'hr-nas', id: nasFeat.id}, {selected:true});
+    }
+    // Detail panel — naselje info (overrides the JLS info that selectJLS set)
+    const p = nasFeat.properties;
+    document.getElementById('detail').className = 'detail-panel';
+    document.getElementById('detail').innerHTML = `
+      <div class="detail-name" style="border-left:3px solid ${p.color || '#06aed5'}; padding-left:10px;">${p.name}</div>
+      <div class="detail-code">Naselje · ${p.jls_type || 'JLS'} ${p.jls_name || ''}</div>
+      ${p.stanovnistvo ? `<div class="detail-row"><span class="k">Stanovništvo</span><span class="v">${Number(p.stanovnistvo).toLocaleString('hr')}</span></div>` : ''}
+      <div class="detail-row"><span class="k">JLS</span><span class="v">${p.jls_type||''} ${p.jls_name||''}</span></div>
+      <div class="detail-row"><span class="k">Županija</span><span class="v">${p.zupanija||''}</span></div>
+      <div class="detail-row"><span class="k">Površina</span><span class="v">${Number(p.area_km2).toFixed(2)} km²</span></div>
+      <div class="detail-row"><span class="k">Matični broj</span><span class="v">${p.maticni_broj}</span></div>
+    `;
+    // Zoom to naselje
+    const b = computeBounds(nasFeat.geometry);
+    map.fitBounds(b, { padding: 60, maxZoom: 14, duration: 800 });
+  }
+
+  // Search box — across JLS and (lazy-loaded) naselja.
+  const searchInput = document.getElementById('search');
+  const searchResults = document.getElementById('search-results');
+  let searchKickedNaseljaLoad = false;
+
+  function renderSearch(q) {
+    if (q.length < 2) { searchResults.style.display = 'none'; return; }
+    const jlsMatches = data.features
+      .filter(f => f.properties.name.toLowerCase().includes(q))
+      .slice(0, 15);
+    let nasMatches = [];
+    if (naseljaLoaded && window._naseljaData) {
+      nasMatches = window._naseljaData.features
+        .filter(f => f.properties.name && f.properties.name.toLowerCase().includes(q))
+        .slice(0, 30);
+    }
+    let html = '';
+    for (const f of jlsMatches) {
+      const cls = f.properties.type === 'Grad' ? 'grad' : 'opc';
+      html += `<div class="jls-result-row" data-kind="jls" data-id="${f.id}">
+        <div><span class="badge-kind ${cls}">${f.properties.type}</span><span class="jls-result-name">${f.properties.name}</span></div>
+        <div class="jls-result-zup">${f.properties.zupanija}</div>
+      </div>`;
+    }
+    for (const f of nasMatches) {
+      const p = f.properties;
+      const pop = p.stanovnistvo ? Number(p.stanovnistvo).toLocaleString('hr') : '';
+      html += `<div class="jls-result-row" data-kind="nas" data-id="${f.id}">
+        <div><span class="badge-kind nas">naselje</span><span class="jls-result-name">${p.name}</span>${pop ? `<span class="pop-meta"> · ${pop}</span>` : ''}</div>
+        <div class="jls-result-zup">${p.jls_type || ''} ${p.jls_name || ''} · ${p.zupanija || ''}</div>
+      </div>`;
+    }
+    if (!naseljaLoaded) {
+      html += `<div class="jls-result-loading">${naseljaLoading ? 'Učitavam naselja…' : 'Naselja se učitavaju u pozadini za potpunu pretragu'}</div>`;
+      if (!naseljaLoading && !searchKickedNaseljaLoad) {
+        searchKickedNaseljaLoad = true;
+        ensureNaseljaLoaded().then(() => renderSearch(searchInput.value.trim().toLowerCase()));
+      }
+    }
+    searchResults.innerHTML = html;
+    searchResults.style.display = html ? 'block' : 'none';
+    searchResults.querySelectorAll('.jls-result-row').forEach(row => {
+      row.addEventListener('click', () => {
+        const id = parseInt(row.dataset.id);
+        const kind = row.dataset.kind;
+        if (kind === 'jls') {
+          selectJLS(id);
+        } else if (kind === 'nas' && window._naseljaData) {
+          const nasFeat = window._naseljaData.features.find(f => f.id === id);
+          if (nasFeat) selectNaseljeFromSearch(nasFeat);
+        }
+        searchResults.style.display = 'none';
+        searchInput.value = '';
+      });
+    });
+  }
+  searchInput.addEventListener('input', e => renderSearch(e.target.value.trim().toLowerCase()));
+
+  // Color mode toggle
+  const colorBtn = document.getElementById('btn-zup-mode');
+  colorBtn.addEventListener('click', () => {
+    colorMode = colorMode === 'zupanija' ? 'type' : 'zupanija';
+    if (colorMode === 'type') {
+      map.setPaintProperty('hr-fill', 'fill-color', [
+        'match', ['get', 'type'],
+        'Grad', '#d4322f',
+        'Općina', '#588b8b',
+        'Otok', '#06aed5',
+        '#8d99ae'
+      ]);
+      map.setPaintProperty('hr-line', 'line-color', [
+        'match', ['get', 'type'],
+        'Grad', '#d4322f', 'Općina', '#588b8b', 'Otok', '#06aed5', '#8d99ae'
+      ]);
+      colorBtn.firstChild.textContent = '🎨 Color: tip ';
+    } else {
+      map.setPaintProperty('hr-fill', 'fill-color', ['get', 'color']);
+      map.setPaintProperty('hr-line', 'line-color', [
+        'case', ['boolean', ['feature-state', 'selected'], false], '#ffffff',
+        ['get', 'color']
+      ]);
+      colorBtn.firstChild.textContent = '🎨 Color: županija ';
+    }
+  });
+
+  document.getElementById('btn-fit').addEventListener('click', () => {
+    map.fitBounds([[13.4, 42.3], [19.5, 46.6]], { padding: 25, duration: 1000 });
+    // Reset drill-down state: clear selection, leave focus + naselja off.
+    if (selected !== null) {
+      map.setFeatureState({source:'hr', id:selected}, {selected:false});
+      selected = null;
+    }
+    if (window._selectedNaselje != null && map.getSource('hr-nas')) {
+      map.setFeatureState({source:'hr-nas', id: window._selectedNaselje}, {selected:false});
+    }
+    window._selectedNaselje = null;
+    setFocusMode(false);
+    setNaseljaOn(false);
+    document.getElementById('detail').className = 'detail-panel empty';
+    document.getElementById('detail').innerHTML = 'Klikni JLS na karti<br>ili pretraži ime gore lijevo';
+    document.querySelectorAll('.zup-row.active').forEach(r => r.classList.remove('active'));
+    activeZup = null;
+    clearDimming();
+  });
+
+  document.getElementById('btn-legend').addEventListener('click', () => {
+    const panel = document.getElementById('legend');
+    const open = panel.classList.toggle('open');
+    document.getElementById('btn-legend').classList.toggle('active', open);
+  });
+
+  document.getElementById('btn-fineprint').addEventListener('click', () => {
+    const panel = document.getElementById('fineprint');
+    const open = panel.classList.toggle('open');
+    document.getElementById('btn-fineprint').classList.toggle('active', open);
+  });
+
+  document.getElementById('btn-zup-borders').addEventListener('click', () => {
+    showZupBorders = !showZupBorders;
+    if (map.getLayer('hr-zup-line')) {
+      map.setLayoutProperty('hr-zup-line', 'visibility', showZupBorders ? 'visible' : 'none');
+    }
+    document.getElementById('btn-zup-borders').classList.toggle('active', showZupBorders);
+  });
+
+  document.getElementById('btn-jls-borders').addEventListener('click', () => {
+    showJlsBorders = !showJlsBorders;
+    if (map.getLayer('hr-line')) {
+      map.setLayoutProperty('hr-line', 'visibility', showJlsBorders ? 'visible' : 'none');
+    }
+    document.getElementById('btn-jls-borders').classList.toggle('active', showJlsBorders);
+  });
+
+  function setFocusMode(on) {
+    focusMode = !!on;
+    document.getElementById('btn-focus').classList.toggle('active', focusMode);
+    applyFocusFilter();
+  }
+  document.getElementById('btn-focus').addEventListener('click', () => setFocusMode(!focusMode));
+
+  // Focus filter: when active + a JLS is selected, hide every other JLS and
+  // every naselje not in that JLS — except hr-fill stays queryable so the
+  // user can still click on neighbouring JLS to switch focus. We use:
+  //   - feature-state focus_hidden (paint opacity 0) on hr-fill
+  //   - setFilter on hr-line / hr-label (visible borders + labels gone)
+  //   - setFilter on hr-nas-* (only selected JLS' naselja render)
+  function applyFocusFilter() {
+    const filterLayers = ['hr-line', 'hr-label', 'hr-nas-fill', 'hr-nas-line', 'hr-nas-label'];
+    if (!focusMode || selected === null) {
+      // Clear focus_hidden state on all JLS + clear setFilter on filter layers
+      for (const f of data.features) {
+        map.setFeatureState({source: 'hr', id: f.id}, {focus_hidden: false});
+      }
+      for (const id of filterLayers) if (map.getLayer(id)) map.setFilter(id, null);
+      return;
+    }
+    const sel = data.features.find(f => f.id === selected);
+    if (!sel) return;
+    const mb = sel.properties.maticni_broj;
+    // Mark every non-selected JLS as focus_hidden — paint becomes opacity 0,
+    // but the layer stays interactive so clicks switch the focus.
+    for (const f of data.features) {
+      map.setFeatureState({source: 'hr', id: f.id}, {focus_hidden: f.id !== selected});
+    }
+    const jlsFilter = ['==', ['get', 'maticni_broj'], mb];
+    const nasFilter = ['==', ['get', 'jls_maticni_broj'], mb];
+    if (map.getLayer('hr-line'))  map.setFilter('hr-line',  jlsFilter);
+    if (map.getLayer('hr-label')) map.setFilter('hr-label', jlsFilter);
+    if (map.getLayer('hr-nas-fill'))  map.setFilter('hr-nas-fill',  nasFilter);
+    if (map.getLayer('hr-nas-line'))  map.setFilter('hr-nas-line',  nasFilter);
+    if (map.getLayer('hr-nas-label')) map.setFilter('hr-nas-label', nasFilter);
+  }
+
+  async function setNaseljaOn(on) {
+    on = !!on;
+    if (showNaselja === on && (on === false || naseljaLoaded)) {
+      document.getElementById('btn-naselja').classList.toggle('active', on);
+      if (naseljaLoaded) setNaseljaVisibility(on);
+      return;
+    }
+    showNaselja = on;
+    document.getElementById('btn-naselja').classList.toggle('active', on);
+    if (on && !naseljaLoaded) {
+      await ensureNaseljaLoaded();
+      // Naselja layers were created during ensureNaseljaLoaded — re-apply the
+      // focus filter so they don't render outside the currently-selected JLS.
+      applyFocusFilter();
+    }
+    setNaseljaVisibility(on);
+  }
+  document.getElementById('btn-naselja').addEventListener('click', () => setNaseljaOn(!showNaselja));
+
+  document.getElementById('btn-style').addEventListener('click', () => {
+    dark = !dark;
+    const nextTheme = dark ? 'dark' : 'light';
+    if (nextTheme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+    else document.documentElement.removeAttribute('data-theme');
+    try { localStorage.setItem('domovina-theme', nextTheme); } catch (e) {}
+    map.setStyle(dark ? STYLE_DARK : STYLE_LIGHT, { diff: false });
+    map.once('style.load', () => {
+      hideBasemapAdminLayers();
+      addJlsLayers();
+      // Restore selection / dimming feature-state after the source is re-created
+      data.features.forEach(f => {
+        const fs = {};
+        if (selected === f.id) fs.selected = true;
+        if (activeZup && f.properties.zupanija !== activeZup) fs.dimmed = true;
+        if (Object.keys(fs).length) map.setFeatureState({source:'hr', id:f.id}, fs);
+      });
+      // Re-add naselja if they were already loaded + visible
+      if (naseljaLoaded) {
+        addNaseljaLayers();
+        setNaseljaVisibility(showNaselja);
+        if (window._selectedNaselje !== null && window._selectedNaselje !== undefined) {
+          map.setFeatureState({source:'hr-nas', id: window._selectedNaselje}, {selected: true});
+        }
+      }
+      // Re-apply persistent UI states across style change
+      if (map.getLayer('hr-line') && !showJlsBorders) {
+        map.setLayoutProperty('hr-line', 'visibility', 'none');
+      }
+      applyFocusFilter();
+    });
+    document.getElementById('btn-style').classList.toggle('active', !dark);
+  });
+
+  // Initialize style-button active state to reflect persisted theme.
+  document.getElementById('btn-style').classList.toggle('active', !dark);
+
+  document.addEventListener('keydown', e => {
+    if (e.target.tagName === 'INPUT') return;
+    if (e.key.toLowerCase() === 'c') colorBtn.click();
+    if (e.key.toLowerCase() === 'l') document.getElementById('btn-style').click();
+    if (e.key.toLowerCase() === 'f') document.getElementById('btn-fit').click();
+    if (e.key.toLowerCase() === 'b') document.getElementById('btn-zup-borders').click();
+    if (e.key.toLowerCase() === 'j') document.getElementById('btn-jls-borders').click();
+    if (e.key.toLowerCase() === 'n') document.getElementById('btn-naselja').click();
+    if (e.key.toLowerCase() === 'o') document.getElementById('btn-focus').click();
+  });
+});
+
+function walkCoords(g, cb) {
+  if (g.type === 'Point') return cb(...g.coordinates);
+  if (g.type === 'Polygon') return g.coordinates.forEach(r => r.forEach(c => cb(c[0], c[1])));
+  if (g.type === 'MultiPolygon') return g.coordinates.forEach(p => p.forEach(r => r.forEach(c => cb(c[0], c[1]))));
+}
+function computeBounds(g) {
+  let minX=Infinity, minY=Infinity, maxX=-Infinity, maxY=-Infinity;
+  walkCoords(g, (x,y) => {
+    if (x<minX) minX=x; if (x>maxX) maxX=x;
+    if (y<minY) minY=y; if (y>maxY) maxY=y;
+  });
+  return [[minX, minY], [maxX, maxY]];
+}
+</script>
+</body>
+</html>

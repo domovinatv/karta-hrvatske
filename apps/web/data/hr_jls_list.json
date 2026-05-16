@@ -1,0 +1,2782 @@
+[
+  {
+    "zupanija": "Zagrebačka",
+    "type": "Grad",
+    "name": "Dugo Selo"
+  },
+  {
+    "zupanija": "Zagrebačka",
+    "type": "Grad",
+    "name": "Ivanić-Grad"
+  },
+  {
+    "zupanija": "Zagrebačka",
+    "type": "Grad",
+    "name": "Jastrebarsko"
+  },
+  {
+    "zupanija": "Zagrebačka",
+    "type": "Grad",
+    "name": "Samobor"
+  },
+  {
+    "zupanija": "Zagrebačka",
+    "type": "Grad",
+    "name": "Sveta Nedelja"
+  },
+  {
+    "zupanija": "Zagrebačka",
+    "type": "Grad",
+    "name": "Sveti Ivan Zelina"
+  },
+  {
+    "zupanija": "Zagrebačka",
+    "type": "Grad",
+    "name": "Velika Gorica"
+  },
+  {
+    "zupanija": "Zagrebačka",
+    "type": "Grad",
+    "name": "Vrbovec"
+  },
+  {
+    "zupanija": "Zagrebačka",
+    "type": "Grad",
+    "name": "Zaprešić"
+  },
+  {
+    "zupanija": "Zagrebačka",
+    "type": "Općina",
+    "name": "Bedenica"
+  },
+  {
+    "zupanija": "Zagrebačka",
+    "type": "Općina",
+    "name": "Bistra"
+  },
+  {
+    "zupanija": "Zagrebačka",
+    "type": "Općina",
+    "name": "Brckovljani"
+  },
+  {
+    "zupanija": "Zagrebačka",
+    "type": "Općina",
+    "name": "Brdovec"
+  },
+  {
+    "zupanija": "Zagrebačka",
+    "type": "Općina",
+    "name": "Dubrava"
+  },
+  {
+    "zupanija": "Zagrebačka",
+    "type": "Općina",
+    "name": "Dubravica"
+  },
+  {
+    "zupanija": "Zagrebačka",
+    "type": "Općina",
+    "name": "Farkaševac"
+  },
+  {
+    "zupanija": "Zagrebačka",
+    "type": "Općina",
+    "name": "Gradec"
+  },
+  {
+    "zupanija": "Zagrebačka",
+    "type": "Općina",
+    "name": "Jakovlje"
+  },
+  {
+    "zupanija": "Zagrebačka",
+    "type": "Općina",
+    "name": "Klinča Sela"
+  },
+  {
+    "zupanija": "Zagrebačka",
+    "type": "Općina",
+    "name": "Kloštar Ivanić"
+  },
+  {
+    "zupanija": "Zagrebačka",
+    "type": "Općina",
+    "name": "Krašić"
+  },
+  {
+    "zupanija": "Zagrebačka",
+    "type": "Općina",
+    "name": "Kravarsko"
+  },
+  {
+    "zupanija": "Zagrebačka",
+    "type": "Općina",
+    "name": "Križ"
+  },
+  {
+    "zupanija": "Zagrebačka",
+    "type": "Općina",
+    "name": "Luka"
+  },
+  {
+    "zupanija": "Zagrebačka",
+    "type": "Općina",
+    "name": "Marija Gorica"
+  },
+  {
+    "zupanija": "Zagrebačka",
+    "type": "Općina",
+    "name": "Orle"
+  },
+  {
+    "zupanija": "Zagrebačka",
+    "type": "Općina",
+    "name": "Pisarovina"
+  },
+  {
+    "zupanija": "Zagrebačka",
+    "type": "Općina",
+    "name": "Pokupsko"
+  },
+  {
+    "zupanija": "Zagrebačka",
+    "type": "Općina",
+    "name": "Preseka"
+  },
+  {
+    "zupanija": "Zagrebačka",
+    "type": "Općina",
+    "name": "Pušća"
+  },
+  {
+    "zupanija": "Zagrebačka",
+    "type": "Općina",
+    "name": "Rakovec"
+  },
+  {
+    "zupanija": "Zagrebačka",
+    "type": "Općina",
+    "name": "Rugvica"
+  },
+  {
+    "zupanija": "Zagrebačka",
+    "type": "Općina",
+    "name": "Stupnik"
+  },
+  {
+    "zupanija": "Zagrebačka",
+    "type": "Općina",
+    "name": "Žumberak"
+  },
+  {
+    "zupanija": "Krapinsko-zagorska",
+    "type": "Grad",
+    "name": "Donja Stubica"
+  },
+  {
+    "zupanija": "Krapinsko-zagorska",
+    "type": "Grad",
+    "name": "Klanjec"
+  },
+  {
+    "zupanija": "Krapinsko-zagorska",
+    "type": "Grad",
+    "name": "Krapina"
+  },
+  {
+    "zupanija": "Krapinsko-zagorska",
+    "type": "Grad",
+    "name": "Oroslavje"
+  },
+  {
+    "zupanija": "Krapinsko-zagorska",
+    "type": "Grad",
+    "name": "Pregrada"
+  },
+  {
+    "zupanija": "Krapinsko-zagorska",
+    "type": "Grad",
+    "name": "Zabok"
+  },
+  {
+    "zupanija": "Krapinsko-zagorska",
+    "type": "Grad",
+    "name": "Zlatar"
+  },
+  {
+    "zupanija": "Krapinsko-zagorska",
+    "type": "Općina",
+    "name": "Bedekovčina"
+  },
+  {
+    "zupanija": "Krapinsko-zagorska",
+    "type": "Općina",
+    "name": "Budinščina"
+  },
+  {
+    "zupanija": "Krapinsko-zagorska",
+    "type": "Općina",
+    "name": "Desinić"
+  },
+  {
+    "zupanija": "Krapinsko-zagorska",
+    "type": "Općina",
+    "name": "Đurmanec"
+  },
+  {
+    "zupanija": "Krapinsko-zagorska",
+    "type": "Općina",
+    "name": "Gornja Stubica"
+  },
+  {
+    "zupanija": "Krapinsko-zagorska",
+    "type": "Općina",
+    "name": "Hrašćina"
+  },
+  {
+    "zupanija": "Krapinsko-zagorska",
+    "type": "Općina",
+    "name": "Hum na Sutli"
+  },
+  {
+    "zupanija": "Krapinsko-zagorska",
+    "type": "Općina",
+    "name": "Jesenje"
+  },
+  {
+    "zupanija": "Krapinsko-zagorska",
+    "type": "Općina",
+    "name": "Konjščina"
+  },
+  {
+    "zupanija": "Krapinsko-zagorska",
+    "type": "Općina",
+    "name": "Kraljevec na Sutli"
+  },
+  {
+    "zupanija": "Krapinsko-zagorska",
+    "type": "Općina",
+    "name": "Krapinske Toplice"
+  },
+  {
+    "zupanija": "Krapinsko-zagorska",
+    "type": "Općina",
+    "name": "Kumrovec"
+  },
+  {
+    "zupanija": "Krapinsko-zagorska",
+    "type": "Općina",
+    "name": "Lobor"
+  },
+  {
+    "zupanija": "Krapinsko-zagorska",
+    "type": "Općina",
+    "name": "Mače"
+  },
+  {
+    "zupanija": "Krapinsko-zagorska",
+    "type": "Općina",
+    "name": "Marija Bistrica"
+  },
+  {
+    "zupanija": "Krapinsko-zagorska",
+    "type": "Općina",
+    "name": "Mihovljan"
+  },
+  {
+    "zupanija": "Krapinsko-zagorska",
+    "type": "Općina",
+    "name": "Novi Golubovec"
+  },
+  {
+    "zupanija": "Krapinsko-zagorska",
+    "type": "Općina",
+    "name": "Petrovsko"
+  },
+  {
+    "zupanija": "Krapinsko-zagorska",
+    "type": "Općina",
+    "name": "Radoboj"
+  },
+  {
+    "zupanija": "Krapinsko-zagorska",
+    "type": "Općina",
+    "name": "Stubičke Toplice"
+  },
+  {
+    "zupanija": "Krapinsko-zagorska",
+    "type": "Općina",
+    "name": "Sveti Križ Začretje"
+  },
+  {
+    "zupanija": "Krapinsko-zagorska",
+    "type": "Općina",
+    "name": "Tuhelj"
+  },
+  {
+    "zupanija": "Krapinsko-zagorska",
+    "type": "Općina",
+    "name": "Veliko Trgovišće"
+  },
+  {
+    "zupanija": "Krapinsko-zagorska",
+    "type": "Općina",
+    "name": "Zagorska Sela"
+  },
+  {
+    "zupanija": "Krapinsko-zagorska",
+    "type": "Općina",
+    "name": "Zlatar Bistrica"
+  },
+  {
+    "zupanija": "Sisačko-moslavačka",
+    "type": "Grad",
+    "name": "Glina"
+  },
+  {
+    "zupanija": "Sisačko-moslavačka",
+    "type": "Grad",
+    "name": "Hrvatska Kostajnica"
+  },
+  {
+    "zupanija": "Sisačko-moslavačka",
+    "type": "Grad",
+    "name": "Kutina"
+  },
+  {
+    "zupanija": "Sisačko-moslavačka",
+    "type": "Grad",
+    "name": "Novska"
+  },
+  {
+    "zupanija": "Sisačko-moslavačka",
+    "type": "Grad",
+    "name": "Petrinja"
+  },
+  {
+    "zupanija": "Sisačko-moslavačka",
+    "type": "Grad",
+    "name": "Popovača"
+  },
+  {
+    "zupanija": "Sisačko-moslavačka",
+    "type": "Grad",
+    "name": "Sisak"
+  },
+  {
+    "zupanija": "Sisačko-moslavačka",
+    "type": "Općina",
+    "name": "Donji Kukuruzari"
+  },
+  {
+    "zupanija": "Sisačko-moslavačka",
+    "type": "Općina",
+    "name": "Dvor"
+  },
+  {
+    "zupanija": "Sisačko-moslavačka",
+    "type": "Općina",
+    "name": "Gvozd"
+  },
+  {
+    "zupanija": "Sisačko-moslavačka",
+    "type": "Općina",
+    "name": "Hrvatska Dubica"
+  },
+  {
+    "zupanija": "Sisačko-moslavačka",
+    "type": "Općina",
+    "name": "Jasenovac"
+  },
+  {
+    "zupanija": "Sisačko-moslavačka",
+    "type": "Općina",
+    "name": "Lekenik"
+  },
+  {
+    "zupanija": "Sisačko-moslavačka",
+    "type": "Općina",
+    "name": "Lipovljani"
+  },
+  {
+    "zupanija": "Sisačko-moslavačka",
+    "type": "Općina",
+    "name": "Majur"
+  },
+  {
+    "zupanija": "Sisačko-moslavačka",
+    "type": "Općina",
+    "name": "Martinska Ves"
+  },
+  {
+    "zupanija": "Sisačko-moslavačka",
+    "type": "Općina",
+    "name": "Sunja"
+  },
+  {
+    "zupanija": "Sisačko-moslavačka",
+    "type": "Općina",
+    "name": "Topusko"
+  },
+  {
+    "zupanija": "Sisačko-moslavačka",
+    "type": "Općina",
+    "name": "Velika Ludina"
+  },
+  {
+    "zupanija": "Karlovačka",
+    "type": "Grad",
+    "name": "Duga Resa"
+  },
+  {
+    "zupanija": "Karlovačka",
+    "type": "Grad",
+    "name": "Karlovac"
+  },
+  {
+    "zupanija": "Karlovačka",
+    "type": "Grad",
+    "name": "Ogulin"
+  },
+  {
+    "zupanija": "Karlovačka",
+    "type": "Grad",
+    "name": "Ozalj"
+  },
+  {
+    "zupanija": "Karlovačka",
+    "type": "Grad",
+    "name": "Slunj"
+  },
+  {
+    "zupanija": "Karlovačka",
+    "type": "Općina",
+    "name": "Barilović"
+  },
+  {
+    "zupanija": "Karlovačka",
+    "type": "Općina",
+    "name": "Bosiljevo"
+  },
+  {
+    "zupanija": "Karlovačka",
+    "type": "Općina",
+    "name": "Cetingrad"
+  },
+  {
+    "zupanija": "Karlovačka",
+    "type": "Općina",
+    "name": "Draganić"
+  },
+  {
+    "zupanija": "Karlovačka",
+    "type": "Općina",
+    "name": "Generalski Stol"
+  },
+  {
+    "zupanija": "Karlovačka",
+    "type": "Općina",
+    "name": "Josipdol"
+  },
+  {
+    "zupanija": "Karlovačka",
+    "type": "Općina",
+    "name": "Kamanje"
+  },
+  {
+    "zupanija": "Karlovačka",
+    "type": "Općina",
+    "name": "Krnjak"
+  },
+  {
+    "zupanija": "Karlovačka",
+    "type": "Općina",
+    "name": "Lasinja"
+  },
+  {
+    "zupanija": "Karlovačka",
+    "type": "Općina",
+    "name": "Netretić"
+  },
+  {
+    "zupanija": "Karlovačka",
+    "type": "Općina",
+    "name": "Plaški"
+  },
+  {
+    "zupanija": "Karlovačka",
+    "type": "Općina",
+    "name": "Rakovica"
+  },
+  {
+    "zupanija": "Karlovačka",
+    "type": "Općina",
+    "name": "Ribnik"
+  },
+  {
+    "zupanija": "Karlovačka",
+    "type": "Općina",
+    "name": "Saborsko"
+  },
+  {
+    "zupanija": "Karlovačka",
+    "type": "Općina",
+    "name": "Tounj"
+  },
+  {
+    "zupanija": "Karlovačka",
+    "type": "Općina",
+    "name": "Vojnić"
+  },
+  {
+    "zupanija": "Karlovačka",
+    "type": "Općina",
+    "name": "Žakanje"
+  },
+  {
+    "zupanija": "Varaždinska",
+    "type": "Grad",
+    "name": "Ivanec"
+  },
+  {
+    "zupanija": "Varaždinska",
+    "type": "Grad",
+    "name": "Lepoglava"
+  },
+  {
+    "zupanija": "Varaždinska",
+    "type": "Grad",
+    "name": "Ludbreg"
+  },
+  {
+    "zupanija": "Varaždinska",
+    "type": "Grad",
+    "name": "Novi Marof"
+  },
+  {
+    "zupanija": "Varaždinska",
+    "type": "Grad",
+    "name": "Varaždin"
+  },
+  {
+    "zupanija": "Varaždinska",
+    "type": "Grad",
+    "name": "Varaždinske Toplice"
+  },
+  {
+    "zupanija": "Varaždinska",
+    "type": "Općina",
+    "name": "Bednja"
+  },
+  {
+    "zupanija": "Varaždinska",
+    "type": "Općina",
+    "name": "Beretinec"
+  },
+  {
+    "zupanija": "Varaždinska",
+    "type": "Općina",
+    "name": "Breznica"
+  },
+  {
+    "zupanija": "Varaždinska",
+    "type": "Općina",
+    "name": "Breznički Hum"
+  },
+  {
+    "zupanija": "Varaždinska",
+    "type": "Općina",
+    "name": "Cestica"
+  },
+  {
+    "zupanija": "Varaždinska",
+    "type": "Općina",
+    "name": "Donja Voća"
+  },
+  {
+    "zupanija": "Varaždinska",
+    "type": "Općina",
+    "name": "Gornji Kneginec"
+  },
+  {
+    "zupanija": "Varaždinska",
+    "type": "Općina",
+    "name": "Jalžabet"
+  },
+  {
+    "zupanija": "Varaždinska",
+    "type": "Općina",
+    "name": "Klenovnik"
+  },
+  {
+    "zupanija": "Varaždinska",
+    "type": "Općina",
+    "name": "Ljubešćica"
+  },
+  {
+    "zupanija": "Varaždinska",
+    "type": "Općina",
+    "name": "Mali Bukovec"
+  },
+  {
+    "zupanija": "Varaždinska",
+    "type": "Općina",
+    "name": "Martijanec"
+  },
+  {
+    "zupanija": "Varaždinska",
+    "type": "Općina",
+    "name": "Maruševec"
+  },
+  {
+    "zupanija": "Varaždinska",
+    "type": "Općina",
+    "name": "Petrijanec"
+  },
+  {
+    "zupanija": "Varaždinska",
+    "type": "Općina",
+    "name": "Sračinec"
+  },
+  {
+    "zupanija": "Varaždinska",
+    "type": "Općina",
+    "name": "Sveti Đurđ"
+  },
+  {
+    "zupanija": "Varaždinska",
+    "type": "Općina",
+    "name": "Sveti Ilija"
+  },
+  {
+    "zupanija": "Varaždinska",
+    "type": "Općina",
+    "name": "Trnovec Bartolovečki"
+  },
+  {
+    "zupanija": "Varaždinska",
+    "type": "Općina",
+    "name": "Veliki Bukovec"
+  },
+  {
+    "zupanija": "Varaždinska",
+    "type": "Općina",
+    "name": "Vidovec"
+  },
+  {
+    "zupanija": "Varaždinska",
+    "type": "Općina",
+    "name": "Vinica"
+  },
+  {
+    "zupanija": "Varaždinska",
+    "type": "Općina",
+    "name": "Visoko"
+  },
+  {
+    "zupanija": "Koprivničko-križevačka",
+    "type": "Grad",
+    "name": "Đurđevac"
+  },
+  {
+    "zupanija": "Koprivničko-križevačka",
+    "type": "Grad",
+    "name": "Koprivnica"
+  },
+  {
+    "zupanija": "Koprivničko-križevačka",
+    "type": "Grad",
+    "name": "Križevci"
+  },
+  {
+    "zupanija": "Koprivničko-križevačka",
+    "type": "Općina",
+    "name": "Drnje"
+  },
+  {
+    "zupanija": "Koprivničko-križevačka",
+    "type": "Općina",
+    "name": "Đelekovec"
+  },
+  {
+    "zupanija": "Koprivničko-križevačka",
+    "type": "Općina",
+    "name": "Ferdinandovac"
+  },
+  {
+    "zupanija": "Koprivničko-križevačka",
+    "type": "Općina",
+    "name": "Gola"
+  },
+  {
+    "zupanija": "Koprivničko-križevačka",
+    "type": "Općina",
+    "name": "Gornja Rijeka"
+  },
+  {
+    "zupanija": "Koprivničko-križevačka",
+    "type": "Općina",
+    "name": "Hlebine"
+  },
+  {
+    "zupanija": "Koprivničko-križevačka",
+    "type": "Općina",
+    "name": "Kalinovac"
+  },
+  {
+    "zupanija": "Koprivničko-križevačka",
+    "type": "Općina",
+    "name": "Kalnik"
+  },
+  {
+    "zupanija": "Koprivničko-križevačka",
+    "type": "Općina",
+    "name": "Kloštar Podravski"
+  },
+  {
+    "zupanija": "Koprivničko-križevačka",
+    "type": "Općina",
+    "name": "Koprivnički Bregi"
+  },
+  {
+    "zupanija": "Koprivničko-križevačka",
+    "type": "Općina",
+    "name": "Koprivnički Ivanec"
+  },
+  {
+    "zupanija": "Koprivničko-križevačka",
+    "type": "Općina",
+    "name": "Legrad"
+  },
+  {
+    "zupanija": "Koprivničko-križevačka",
+    "type": "Općina",
+    "name": "Molve"
+  },
+  {
+    "zupanija": "Koprivničko-križevačka",
+    "type": "Općina",
+    "name": "Novigrad Podravski"
+  },
+  {
+    "zupanija": "Koprivničko-križevačka",
+    "type": "Općina",
+    "name": "Novo Virje"
+  },
+  {
+    "zupanija": "Koprivničko-križevačka",
+    "type": "Općina",
+    "name": "Peteranec"
+  },
+  {
+    "zupanija": "Koprivničko-križevačka",
+    "type": "Općina",
+    "name": "Podravske Sesvete"
+  },
+  {
+    "zupanija": "Koprivničko-križevačka",
+    "type": "Općina",
+    "name": "Rasinja"
+  },
+  {
+    "zupanija": "Koprivničko-križevačka",
+    "type": "Općina",
+    "name": "Sokolovac"
+  },
+  {
+    "zupanija": "Koprivničko-križevačka",
+    "type": "Općina",
+    "name": "Sveti Ivan Žabno"
+  },
+  {
+    "zupanija": "Koprivničko-križevačka",
+    "type": "Općina",
+    "name": "Sveti Petar Orehovec"
+  },
+  {
+    "zupanija": "Koprivničko-križevačka",
+    "type": "Općina",
+    "name": "Virje"
+  },
+  {
+    "zupanija": "Bjelovarsko-bilogorska",
+    "type": "Grad",
+    "name": "Bjelovar"
+  },
+  {
+    "zupanija": "Bjelovarsko-bilogorska",
+    "type": "Grad",
+    "name": "Čazma"
+  },
+  {
+    "zupanija": "Bjelovarsko-bilogorska",
+    "type": "Grad",
+    "name": "Daruvar"
+  },
+  {
+    "zupanija": "Bjelovarsko-bilogorska",
+    "type": "Grad",
+    "name": "Garešnica"
+  },
+  {
+    "zupanija": "Bjelovarsko-bilogorska",
+    "type": "Grad",
+    "name": "Grubišno Polje"
+  },
+  {
+    "zupanija": "Bjelovarsko-bilogorska",
+    "type": "Općina",
+    "name": "Berek"
+  },
+  {
+    "zupanija": "Bjelovarsko-bilogorska",
+    "type": "Općina",
+    "name": "Dežanovac"
+  },
+  {
+    "zupanija": "Bjelovarsko-bilogorska",
+    "type": "Općina",
+    "name": "Đulovac"
+  },
+  {
+    "zupanija": "Bjelovarsko-bilogorska",
+    "type": "Općina",
+    "name": "Hercegovac"
+  },
+  {
+    "zupanija": "Bjelovarsko-bilogorska",
+    "type": "Općina",
+    "name": "Ivanska"
+  },
+  {
+    "zupanija": "Bjelovarsko-bilogorska",
+    "type": "Općina",
+    "name": "Kapela"
+  },
+  {
+    "zupanija": "Bjelovarsko-bilogorska",
+    "type": "Općina",
+    "name": "Končanica"
+  },
+  {
+    "zupanija": "Bjelovarsko-bilogorska",
+    "type": "Općina",
+    "name": "Nova Rača"
+  },
+  {
+    "zupanija": "Bjelovarsko-bilogorska",
+    "type": "Općina",
+    "name": "Rovišće"
+  },
+  {
+    "zupanija": "Bjelovarsko-bilogorska",
+    "type": "Općina",
+    "name": "Severin"
+  },
+  {
+    "zupanija": "Bjelovarsko-bilogorska",
+    "type": "Općina",
+    "name": "Sirač"
+  },
+  {
+    "zupanija": "Bjelovarsko-bilogorska",
+    "type": "Općina",
+    "name": "Šandrovac"
+  },
+  {
+    "zupanija": "Bjelovarsko-bilogorska",
+    "type": "Općina",
+    "name": "Štefanje"
+  },
+  {
+    "zupanija": "Bjelovarsko-bilogorska",
+    "type": "Općina",
+    "name": "Velika Pisanica"
+  },
+  {
+    "zupanija": "Bjelovarsko-bilogorska",
+    "type": "Općina",
+    "name": "Velika Trnovitica"
+  },
+  {
+    "zupanija": "Bjelovarsko-bilogorska",
+    "type": "Općina",
+    "name": "Veliki Grđevac"
+  },
+  {
+    "zupanija": "Bjelovarsko-bilogorska",
+    "type": "Općina",
+    "name": "Veliko Trojstvo"
+  },
+  {
+    "zupanija": "Bjelovarsko-bilogorska",
+    "type": "Općina",
+    "name": "Zrinski Topolovac"
+  },
+  {
+    "zupanija": "Primorsko-goranska",
+    "type": "Grad",
+    "name": "Bakar"
+  },
+  {
+    "zupanija": "Primorsko-goranska",
+    "type": "Grad",
+    "name": "Cres"
+  },
+  {
+    "zupanija": "Primorsko-goranska",
+    "type": "Grad",
+    "name": "Crikvenica"
+  },
+  {
+    "zupanija": "Primorsko-goranska",
+    "type": "Grad",
+    "name": "Čabar"
+  },
+  {
+    "zupanija": "Primorsko-goranska",
+    "type": "Grad",
+    "name": "Delnice"
+  },
+  {
+    "zupanija": "Primorsko-goranska",
+    "type": "Grad",
+    "name": "Kastav"
+  },
+  {
+    "zupanija": "Primorsko-goranska",
+    "type": "Grad",
+    "name": "Kraljevica"
+  },
+  {
+    "zupanija": "Primorsko-goranska",
+    "type": "Grad",
+    "name": "Krk"
+  },
+  {
+    "zupanija": "Primorsko-goranska",
+    "type": "Grad",
+    "name": "Mali Lošinj"
+  },
+  {
+    "zupanija": "Primorsko-goranska",
+    "type": "Grad",
+    "name": "Novi Vinodolski"
+  },
+  {
+    "zupanija": "Primorsko-goranska",
+    "type": "Grad",
+    "name": "Opatija"
+  },
+  {
+    "zupanija": "Primorsko-goranska",
+    "type": "Grad",
+    "name": "Rab"
+  },
+  {
+    "zupanija": "Primorsko-goranska",
+    "type": "Grad",
+    "name": "Rijeka"
+  },
+  {
+    "zupanija": "Primorsko-goranska",
+    "type": "Grad",
+    "name": "Vrbovsko"
+  },
+  {
+    "zupanija": "Primorsko-goranska",
+    "type": "Općina",
+    "name": "Baška"
+  },
+  {
+    "zupanija": "Primorsko-goranska",
+    "type": "Općina",
+    "name": "Brod Moravice"
+  },
+  {
+    "zupanija": "Primorsko-goranska",
+    "type": "Općina",
+    "name": "Čavle"
+  },
+  {
+    "zupanija": "Primorsko-goranska",
+    "type": "Općina",
+    "name": "Dobrinj"
+  },
+  {
+    "zupanija": "Primorsko-goranska",
+    "type": "Općina",
+    "name": "Fužine"
+  },
+  {
+    "zupanija": "Primorsko-goranska",
+    "type": "Općina",
+    "name": "Jelenje"
+  },
+  {
+    "zupanija": "Primorsko-goranska",
+    "type": "Općina",
+    "name": "Klana"
+  },
+  {
+    "zupanija": "Primorsko-goranska",
+    "type": "Općina",
+    "name": "Kostrena"
+  },
+  {
+    "zupanija": "Primorsko-goranska",
+    "type": "Općina",
+    "name": "Lokve"
+  },
+  {
+    "zupanija": "Primorsko-goranska",
+    "type": "Općina",
+    "name": "Lopar"
+  },
+  {
+    "zupanija": "Primorsko-goranska",
+    "type": "Općina",
+    "name": "Lovran"
+  },
+  {
+    "zupanija": "Primorsko-goranska",
+    "type": "Općina",
+    "name": "Malinska-Dubašnica"
+  },
+  {
+    "zupanija": "Primorsko-goranska",
+    "type": "Općina",
+    "name": "Matulji"
+  },
+  {
+    "zupanija": "Primorsko-goranska",
+    "type": "Općina",
+    "name": "Mošćenička Draga"
+  },
+  {
+    "zupanija": "Primorsko-goranska",
+    "type": "Općina",
+    "name": "Mrkopalj"
+  },
+  {
+    "zupanija": "Primorsko-goranska",
+    "type": "Općina",
+    "name": "Omišalj"
+  },
+  {
+    "zupanija": "Primorsko-goranska",
+    "type": "Općina",
+    "name": "Punat"
+  },
+  {
+    "zupanija": "Primorsko-goranska",
+    "type": "Općina",
+    "name": "Ravna Gora"
+  },
+  {
+    "zupanija": "Primorsko-goranska",
+    "type": "Općina",
+    "name": "Skrad"
+  },
+  {
+    "zupanija": "Primorsko-goranska",
+    "type": "Općina",
+    "name": "Vinodolska općina"
+  },
+  {
+    "zupanija": "Primorsko-goranska",
+    "type": "Općina",
+    "name": "Viškovo"
+  },
+  {
+    "zupanija": "Primorsko-goranska",
+    "type": "Općina",
+    "name": "Vrbnik"
+  },
+  {
+    "zupanija": "Ličko-senjska",
+    "type": "Grad",
+    "name": "Gospić"
+  },
+  {
+    "zupanija": "Ličko-senjska",
+    "type": "Grad",
+    "name": "Novalja"
+  },
+  {
+    "zupanija": "Ličko-senjska",
+    "type": "Grad",
+    "name": "Otočac"
+  },
+  {
+    "zupanija": "Ličko-senjska",
+    "type": "Grad",
+    "name": "Senj"
+  },
+  {
+    "zupanija": "Ličko-senjska",
+    "type": "Općina",
+    "name": "Brinje"
+  },
+  {
+    "zupanija": "Ličko-senjska",
+    "type": "Općina",
+    "name": "Donji Lapac"
+  },
+  {
+    "zupanija": "Ličko-senjska",
+    "type": "Općina",
+    "name": "Karlobag"
+  },
+  {
+    "zupanija": "Ličko-senjska",
+    "type": "Općina",
+    "name": "Lovinac"
+  },
+  {
+    "zupanija": "Ličko-senjska",
+    "type": "Općina",
+    "name": "Perušić"
+  },
+  {
+    "zupanija": "Ličko-senjska",
+    "type": "Općina",
+    "name": "Plitvička Jezera"
+  },
+  {
+    "zupanija": "Ličko-senjska",
+    "type": "Općina",
+    "name": "Udbina"
+  },
+  {
+    "zupanija": "Ličko-senjska",
+    "type": "Općina",
+    "name": "Vrhovine"
+  },
+  {
+    "zupanija": "Virovitičko-podravska",
+    "type": "Grad",
+    "name": "Orahovica"
+  },
+  {
+    "zupanija": "Virovitičko-podravska",
+    "type": "Grad",
+    "name": "Slatina"
+  },
+  {
+    "zupanija": "Virovitičko-podravska",
+    "type": "Grad",
+    "name": "Virovitica"
+  },
+  {
+    "zupanija": "Virovitičko-podravska",
+    "type": "Općina",
+    "name": "Crnac"
+  },
+  {
+    "zupanija": "Virovitičko-podravska",
+    "type": "Općina",
+    "name": "Čačinci"
+  },
+  {
+    "zupanija": "Virovitičko-podravska",
+    "type": "Općina",
+    "name": "Čađavica"
+  },
+  {
+    "zupanija": "Virovitičko-podravska",
+    "type": "Općina",
+    "name": "Gradina"
+  },
+  {
+    "zupanija": "Virovitičko-podravska",
+    "type": "Općina",
+    "name": "Lukač"
+  },
+  {
+    "zupanija": "Virovitičko-podravska",
+    "type": "Općina",
+    "name": "Mikleuš"
+  },
+  {
+    "zupanija": "Virovitičko-podravska",
+    "type": "Općina",
+    "name": "Nova Bukovica"
+  },
+  {
+    "zupanija": "Virovitičko-podravska",
+    "type": "Općina",
+    "name": "Pitomača"
+  },
+  {
+    "zupanija": "Virovitičko-podravska",
+    "type": "Općina",
+    "name": "Sopje"
+  },
+  {
+    "zupanija": "Virovitičko-podravska",
+    "type": "Općina",
+    "name": "Suhopolje"
+  },
+  {
+    "zupanija": "Virovitičko-podravska",
+    "type": "Općina",
+    "name": "Špišić Bukovica"
+  },
+  {
+    "zupanija": "Virovitičko-podravska",
+    "type": "Općina",
+    "name": "Voćin"
+  },
+  {
+    "zupanija": "Virovitičko-podravska",
+    "type": "Općina",
+    "name": "Zdenci"
+  },
+  {
+    "zupanija": "Požeško-slavonska",
+    "type": "Grad",
+    "name": "Kutjevo"
+  },
+  {
+    "zupanija": "Požeško-slavonska",
+    "type": "Grad",
+    "name": "Lipik"
+  },
+  {
+    "zupanija": "Požeško-slavonska",
+    "type": "Grad",
+    "name": "Pakrac"
+  },
+  {
+    "zupanija": "Požeško-slavonska",
+    "type": "Grad",
+    "name": "Pleternica"
+  },
+  {
+    "zupanija": "Požeško-slavonska",
+    "type": "Grad",
+    "name": "Požega"
+  },
+  {
+    "zupanija": "Požeško-slavonska",
+    "type": "Općina",
+    "name": "Brestovac"
+  },
+  {
+    "zupanija": "Požeško-slavonska",
+    "type": "Općina",
+    "name": "Čaglin"
+  },
+  {
+    "zupanija": "Požeško-slavonska",
+    "type": "Općina",
+    "name": "Jakšić"
+  },
+  {
+    "zupanija": "Požeško-slavonska",
+    "type": "Općina",
+    "name": "Kaptol"
+  },
+  {
+    "zupanija": "Požeško-slavonska",
+    "type": "Općina",
+    "name": "Velika"
+  },
+  {
+    "zupanija": "Brodsko-posavska",
+    "type": "Grad",
+    "name": "Nova Gradiška"
+  },
+  {
+    "zupanija": "Brodsko-posavska",
+    "type": "Grad",
+    "name": "Slavonski Brod"
+  },
+  {
+    "zupanija": "Brodsko-posavska",
+    "type": "Općina",
+    "name": "Bebrina"
+  },
+  {
+    "zupanija": "Brodsko-posavska",
+    "type": "Općina",
+    "name": "Brodski Stupnik"
+  },
+  {
+    "zupanija": "Brodsko-posavska",
+    "type": "Općina",
+    "name": "Bukovlje"
+  },
+  {
+    "zupanija": "Brodsko-posavska",
+    "type": "Općina",
+    "name": "Cernik"
+  },
+  {
+    "zupanija": "Brodsko-posavska",
+    "type": "Općina",
+    "name": "Davor"
+  },
+  {
+    "zupanija": "Brodsko-posavska",
+    "type": "Općina",
+    "name": "Donji Andrijevci"
+  },
+  {
+    "zupanija": "Brodsko-posavska",
+    "type": "Općina",
+    "name": "Dragalić"
+  },
+  {
+    "zupanija": "Brodsko-posavska",
+    "type": "Općina",
+    "name": "Garčin"
+  },
+  {
+    "zupanija": "Brodsko-posavska",
+    "type": "Općina",
+    "name": "Gornja Vrba"
+  },
+  {
+    "zupanija": "Brodsko-posavska",
+    "type": "Općina",
+    "name": "Gornji Bogićevci"
+  },
+  {
+    "zupanija": "Brodsko-posavska",
+    "type": "Općina",
+    "name": "Gundinci"
+  },
+  {
+    "zupanija": "Brodsko-posavska",
+    "type": "Općina",
+    "name": "Klakar"
+  },
+  {
+    "zupanija": "Brodsko-posavska",
+    "type": "Općina",
+    "name": "Nova Kapela"
+  },
+  {
+    "zupanija": "Brodsko-posavska",
+    "type": "Općina",
+    "name": "Okučani"
+  },
+  {
+    "zupanija": "Brodsko-posavska",
+    "type": "Općina",
+    "name": "Oprisavci"
+  },
+  {
+    "zupanija": "Brodsko-posavska",
+    "type": "Općina",
+    "name": "Oriovac"
+  },
+  {
+    "zupanija": "Brodsko-posavska",
+    "type": "Općina",
+    "name": "Podcrkavlje"
+  },
+  {
+    "zupanija": "Brodsko-posavska",
+    "type": "Općina",
+    "name": "Rešetari"
+  },
+  {
+    "zupanija": "Brodsko-posavska",
+    "type": "Općina",
+    "name": "Sibinj"
+  },
+  {
+    "zupanija": "Brodsko-posavska",
+    "type": "Općina",
+    "name": "Sikirevci"
+  },
+  {
+    "zupanija": "Brodsko-posavska",
+    "type": "Općina",
+    "name": "Slavonski Šamac"
+  },
+  {
+    "zupanija": "Brodsko-posavska",
+    "type": "Općina",
+    "name": "Stara Gradiška"
+  },
+  {
+    "zupanija": "Brodsko-posavska",
+    "type": "Općina",
+    "name": "Staro Petrovo Selo"
+  },
+  {
+    "zupanija": "Brodsko-posavska",
+    "type": "Općina",
+    "name": "Velika Kopanica"
+  },
+  {
+    "zupanija": "Brodsko-posavska",
+    "type": "Općina",
+    "name": "Vrbje"
+  },
+  {
+    "zupanija": "Brodsko-posavska",
+    "type": "Općina",
+    "name": "Vrpolje"
+  },
+  {
+    "zupanija": "Zadarska",
+    "type": "Grad",
+    "name": "Benkovac"
+  },
+  {
+    "zupanija": "Zadarska",
+    "type": "Grad",
+    "name": "Biograd na Moru"
+  },
+  {
+    "zupanija": "Zadarska",
+    "type": "Grad",
+    "name": "Nin"
+  },
+  {
+    "zupanija": "Zadarska",
+    "type": "Grad",
+    "name": "Obrovac"
+  },
+  {
+    "zupanija": "Zadarska",
+    "type": "Grad",
+    "name": "Pag"
+  },
+  {
+    "zupanija": "Zadarska",
+    "type": "Grad",
+    "name": "Zadar"
+  },
+  {
+    "zupanija": "Zadarska",
+    "type": "Općina",
+    "name": "Bibinje"
+  },
+  {
+    "zupanija": "Zadarska",
+    "type": "Općina",
+    "name": "Galovac"
+  },
+  {
+    "zupanija": "Zadarska",
+    "type": "Općina",
+    "name": "Gračac"
+  },
+  {
+    "zupanija": "Zadarska",
+    "type": "Općina",
+    "name": "Jasenice"
+  },
+  {
+    "zupanija": "Zadarska",
+    "type": "Općina",
+    "name": "Kali"
+  },
+  {
+    "zupanija": "Zadarska",
+    "type": "Općina",
+    "name": "Kolan"
+  },
+  {
+    "zupanija": "Zadarska",
+    "type": "Općina",
+    "name": "Kukljica"
+  },
+  {
+    "zupanija": "Zadarska",
+    "type": "Općina",
+    "name": "Lišane Ostrovičke"
+  },
+  {
+    "zupanija": "Zadarska",
+    "type": "Općina",
+    "name": "Novigrad"
+  },
+  {
+    "zupanija": "Zadarska",
+    "type": "Općina",
+    "name": "Pakoštane"
+  },
+  {
+    "zupanija": "Zadarska",
+    "type": "Općina",
+    "name": "Pašman"
+  },
+  {
+    "zupanija": "Zadarska",
+    "type": "Općina",
+    "name": "Polača"
+  },
+  {
+    "zupanija": "Zadarska",
+    "type": "Općina",
+    "name": "Poličnik"
+  },
+  {
+    "zupanija": "Zadarska",
+    "type": "Općina",
+    "name": "Posedarje"
+  },
+  {
+    "zupanija": "Zadarska",
+    "type": "Općina",
+    "name": "Povljana"
+  },
+  {
+    "zupanija": "Zadarska",
+    "type": "Općina",
+    "name": "Preko"
+  },
+  {
+    "zupanija": "Zadarska",
+    "type": "Općina",
+    "name": "Privlaka"
+  },
+  {
+    "zupanija": "Zadarska",
+    "type": "Općina",
+    "name": "Ražanac"
+  },
+  {
+    "zupanija": "Zadarska",
+    "type": "Općina",
+    "name": "Sali"
+  },
+  {
+    "zupanija": "Zadarska",
+    "type": "Općina",
+    "name": "Stankovci"
+  },
+  {
+    "zupanija": "Zadarska",
+    "type": "Općina",
+    "name": "Starigrad"
+  },
+  {
+    "zupanija": "Zadarska",
+    "type": "Općina",
+    "name": "Sukošan"
+  },
+  {
+    "zupanija": "Zadarska",
+    "type": "Općina",
+    "name": "Sveti Filip i Jakov"
+  },
+  {
+    "zupanija": "Zadarska",
+    "type": "Općina",
+    "name": "Škabrnja"
+  },
+  {
+    "zupanija": "Zadarska",
+    "type": "Općina",
+    "name": "Tkon"
+  },
+  {
+    "zupanija": "Zadarska",
+    "type": "Općina",
+    "name": "Vir"
+  },
+  {
+    "zupanija": "Zadarska",
+    "type": "Općina",
+    "name": "Vrsi"
+  },
+  {
+    "zupanija": "Zadarska",
+    "type": "Općina",
+    "name": "Zemunik Donji"
+  },
+  {
+    "zupanija": "Osječko-baranjska",
+    "type": "Grad",
+    "name": "Beli Manastir"
+  },
+  {
+    "zupanija": "Osječko-baranjska",
+    "type": "Grad",
+    "name": "Belišće"
+  },
+  {
+    "zupanija": "Osječko-baranjska",
+    "type": "Grad",
+    "name": "Donji Miholjac"
+  },
+  {
+    "zupanija": "Osječko-baranjska",
+    "type": "Grad",
+    "name": "Đakovo"
+  },
+  {
+    "zupanija": "Osječko-baranjska",
+    "type": "Grad",
+    "name": "Našice"
+  },
+  {
+    "zupanija": "Osječko-baranjska",
+    "type": "Grad",
+    "name": "Osijek"
+  },
+  {
+    "zupanija": "Osječko-baranjska",
+    "type": "Grad",
+    "name": "Valpovo"
+  },
+  {
+    "zupanija": "Osječko-baranjska",
+    "type": "Općina",
+    "name": "Antunovac"
+  },
+  {
+    "zupanija": "Osječko-baranjska",
+    "type": "Općina",
+    "name": "Bilje"
+  },
+  {
+    "zupanija": "Osječko-baranjska",
+    "type": "Općina",
+    "name": "Bizovac"
+  },
+  {
+    "zupanija": "Osječko-baranjska",
+    "type": "Općina",
+    "name": "Čeminac"
+  },
+  {
+    "zupanija": "Osječko-baranjska",
+    "type": "Općina",
+    "name": "Čepin"
+  },
+  {
+    "zupanija": "Osječko-baranjska",
+    "type": "Općina",
+    "name": "Darda"
+  },
+  {
+    "zupanija": "Osječko-baranjska",
+    "type": "Općina",
+    "name": "Donja Motičina"
+  },
+  {
+    "zupanija": "Osječko-baranjska",
+    "type": "Općina",
+    "name": "Draž"
+  },
+  {
+    "zupanija": "Osječko-baranjska",
+    "type": "Općina",
+    "name": "Drenje"
+  },
+  {
+    "zupanija": "Osječko-baranjska",
+    "type": "Općina",
+    "name": "Đurđenovac"
+  },
+  {
+    "zupanija": "Osječko-baranjska",
+    "type": "Općina",
+    "name": "Erdut"
+  },
+  {
+    "zupanija": "Osječko-baranjska",
+    "type": "Općina",
+    "name": "Ernestinovo"
+  },
+  {
+    "zupanija": "Osječko-baranjska",
+    "type": "Općina",
+    "name": "Feričanci"
+  },
+  {
+    "zupanija": "Osječko-baranjska",
+    "type": "Općina",
+    "name": "Gorjani"
+  },
+  {
+    "zupanija": "Osječko-baranjska",
+    "type": "Općina",
+    "name": "Jagodnjak"
+  },
+  {
+    "zupanija": "Osječko-baranjska",
+    "type": "Općina",
+    "name": "Kneževi Vinogradi"
+  },
+  {
+    "zupanija": "Osječko-baranjska",
+    "type": "Općina",
+    "name": "Koška"
+  },
+  {
+    "zupanija": "Osječko-baranjska",
+    "type": "Općina",
+    "name": "Levanjska Varoš"
+  },
+  {
+    "zupanija": "Osječko-baranjska",
+    "type": "Općina",
+    "name": "Magadenovac"
+  },
+  {
+    "zupanija": "Osječko-baranjska",
+    "type": "Općina",
+    "name": "Marijanci"
+  },
+  {
+    "zupanija": "Osječko-baranjska",
+    "type": "Općina",
+    "name": "Petlovac"
+  },
+  {
+    "zupanija": "Osječko-baranjska",
+    "type": "Općina",
+    "name": "Petrijevci"
+  },
+  {
+    "zupanija": "Osječko-baranjska",
+    "type": "Općina",
+    "name": "Podgorač"
+  },
+  {
+    "zupanija": "Osječko-baranjska",
+    "type": "Općina",
+    "name": "Podravska Moslavina"
+  },
+  {
+    "zupanija": "Osječko-baranjska",
+    "type": "Općina",
+    "name": "Popovac"
+  },
+  {
+    "zupanija": "Osječko-baranjska",
+    "type": "Općina",
+    "name": "Punitovci"
+  },
+  {
+    "zupanija": "Osječko-baranjska",
+    "type": "Općina",
+    "name": "Satnica Đakovačka"
+  },
+  {
+    "zupanija": "Osječko-baranjska",
+    "type": "Općina",
+    "name": "Semeljci"
+  },
+  {
+    "zupanija": "Osječko-baranjska",
+    "type": "Općina",
+    "name": "Strizivojna"
+  },
+  {
+    "zupanija": "Osječko-baranjska",
+    "type": "Općina",
+    "name": "Šodolovci"
+  },
+  {
+    "zupanija": "Osječko-baranjska",
+    "type": "Općina",
+    "name": "Trnava"
+  },
+  {
+    "zupanija": "Osječko-baranjska",
+    "type": "Općina",
+    "name": "Viljevo"
+  },
+  {
+    "zupanija": "Osječko-baranjska",
+    "type": "Općina",
+    "name": "Viškovci"
+  },
+  {
+    "zupanija": "Osječko-baranjska",
+    "type": "Općina",
+    "name": "Vladislavci"
+  },
+  {
+    "zupanija": "Osječko-baranjska",
+    "type": "Općina",
+    "name": "Vuka"
+  },
+  {
+    "zupanija": "Šibensko-kninska",
+    "type": "Grad",
+    "name": "Drniš"
+  },
+  {
+    "zupanija": "Šibensko-kninska",
+    "type": "Grad",
+    "name": "Knin"
+  },
+  {
+    "zupanija": "Šibensko-kninska",
+    "type": "Grad",
+    "name": "Skradin"
+  },
+  {
+    "zupanija": "Šibensko-kninska",
+    "type": "Grad",
+    "name": "Šibenik"
+  },
+  {
+    "zupanija": "Šibensko-kninska",
+    "type": "Grad",
+    "name": "Vodice"
+  },
+  {
+    "zupanija": "Šibensko-kninska",
+    "type": "Općina",
+    "name": "Bilice"
+  },
+  {
+    "zupanija": "Šibensko-kninska",
+    "type": "Općina",
+    "name": "Biskupija"
+  },
+  {
+    "zupanija": "Šibensko-kninska",
+    "type": "Općina",
+    "name": "Civljane"
+  },
+  {
+    "zupanija": "Šibensko-kninska",
+    "type": "Općina",
+    "name": "Ervenik"
+  },
+  {
+    "zupanija": "Šibensko-kninska",
+    "type": "Općina",
+    "name": "Kijevo"
+  },
+  {
+    "zupanija": "Šibensko-kninska",
+    "type": "Općina",
+    "name": "Kistanje"
+  },
+  {
+    "zupanija": "Šibensko-kninska",
+    "type": "Općina",
+    "name": "Murter-Kornati"
+  },
+  {
+    "zupanija": "Šibensko-kninska",
+    "type": "Općina",
+    "name": "Pirovac"
+  },
+  {
+    "zupanija": "Šibensko-kninska",
+    "type": "Općina",
+    "name": "Primošten"
+  },
+  {
+    "zupanija": "Šibensko-kninska",
+    "type": "Općina",
+    "name": "Promina"
+  },
+  {
+    "zupanija": "Šibensko-kninska",
+    "type": "Općina",
+    "name": "Rogoznica"
+  },
+  {
+    "zupanija": "Šibensko-kninska",
+    "type": "Općina",
+    "name": "Ružić"
+  },
+  {
+    "zupanija": "Šibensko-kninska",
+    "type": "Općina",
+    "name": "Tisno"
+  },
+  {
+    "zupanija": "Šibensko-kninska",
+    "type": "Općina",
+    "name": "Tribunj"
+  },
+  {
+    "zupanija": "Šibensko-kninska",
+    "type": "Općina",
+    "name": "Unešić"
+  },
+  {
+    "zupanija": "Vukovarsko-srijemska",
+    "type": "Grad",
+    "name": "Ilok"
+  },
+  {
+    "zupanija": "Vukovarsko-srijemska",
+    "type": "Grad",
+    "name": "Otok"
+  },
+  {
+    "zupanija": "Vukovarsko-srijemska",
+    "type": "Grad",
+    "name": "Vinkovci"
+  },
+  {
+    "zupanija": "Vukovarsko-srijemska",
+    "type": "Grad",
+    "name": "Vukovar"
+  },
+  {
+    "zupanija": "Vukovarsko-srijemska",
+    "type": "Grad",
+    "name": "Županja"
+  },
+  {
+    "zupanija": "Vukovarsko-srijemska",
+    "type": "Općina",
+    "name": "Andrijaševci"
+  },
+  {
+    "zupanija": "Vukovarsko-srijemska",
+    "type": "Općina",
+    "name": "Babina Greda"
+  },
+  {
+    "zupanija": "Vukovarsko-srijemska",
+    "type": "Općina",
+    "name": "Bogdanovci"
+  },
+  {
+    "zupanija": "Vukovarsko-srijemska",
+    "type": "Općina",
+    "name": "Borovo"
+  },
+  {
+    "zupanija": "Vukovarsko-srijemska",
+    "type": "Općina",
+    "name": "Bošnjaci"
+  },
+  {
+    "zupanija": "Vukovarsko-srijemska",
+    "type": "Općina",
+    "name": "Cerna"
+  },
+  {
+    "zupanija": "Vukovarsko-srijemska",
+    "type": "Općina",
+    "name": "Drenovci"
+  },
+  {
+    "zupanija": "Vukovarsko-srijemska",
+    "type": "Općina",
+    "name": "Gradište"
+  },
+  {
+    "zupanija": "Vukovarsko-srijemska",
+    "type": "Općina",
+    "name": "Gunja"
+  },
+  {
+    "zupanija": "Vukovarsko-srijemska",
+    "type": "Općina",
+    "name": "Ivankovo"
+  },
+  {
+    "zupanija": "Vukovarsko-srijemska",
+    "type": "Općina",
+    "name": "Jarmina"
+  },
+  {
+    "zupanija": "Vukovarsko-srijemska",
+    "type": "Općina",
+    "name": "Lovas"
+  },
+  {
+    "zupanija": "Vukovarsko-srijemska",
+    "type": "Općina",
+    "name": "Markušica"
+  },
+  {
+    "zupanija": "Vukovarsko-srijemska",
+    "type": "Općina",
+    "name": "Negoslavci"
+  },
+  {
+    "zupanija": "Vukovarsko-srijemska",
+    "type": "Općina",
+    "name": "Nijemci"
+  },
+  {
+    "zupanija": "Vukovarsko-srijemska",
+    "type": "Općina",
+    "name": "Nuštar"
+  },
+  {
+    "zupanija": "Vukovarsko-srijemska",
+    "type": "Općina",
+    "name": "Privlaka"
+  },
+  {
+    "zupanija": "Vukovarsko-srijemska",
+    "type": "Općina",
+    "name": "Stari Jankovci"
+  },
+  {
+    "zupanija": "Vukovarsko-srijemska",
+    "type": "Općina",
+    "name": "Stari Mikanovci"
+  },
+  {
+    "zupanija": "Vukovarsko-srijemska",
+    "type": "Općina",
+    "name": "Štitar"
+  },
+  {
+    "zupanija": "Vukovarsko-srijemska",
+    "type": "Općina",
+    "name": "Tompojevci"
+  },
+  {
+    "zupanija": "Vukovarsko-srijemska",
+    "type": "Općina",
+    "name": "Tordinci"
+  },
+  {
+    "zupanija": "Vukovarsko-srijemska",
+    "type": "Općina",
+    "name": "Tovarnik"
+  },
+  {
+    "zupanija": "Vukovarsko-srijemska",
+    "type": "Općina",
+    "name": "Trpinja"
+  },
+  {
+    "zupanija": "Vukovarsko-srijemska",
+    "type": "Općina",
+    "name": "Vođinci"
+  },
+  {
+    "zupanija": "Vukovarsko-srijemska",
+    "type": "Općina",
+    "name": "Vrbanja"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Grad",
+    "name": "Hvar"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Grad",
+    "name": "Imotski"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Grad",
+    "name": "Kaštela"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Grad",
+    "name": "Komiža"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Grad",
+    "name": "Makarska"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Grad",
+    "name": "Omiš"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Grad",
+    "name": "Sinj"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Grad",
+    "name": "Solin"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Grad",
+    "name": "Split"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Grad",
+    "name": "Stari Grad"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Grad",
+    "name": "Supetar"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Grad",
+    "name": "Trilj"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Grad",
+    "name": "Trogir"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Grad",
+    "name": "Vis"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Grad",
+    "name": "Vrgorac"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Grad",
+    "name": "Vrlika"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Općina",
+    "name": "Baška Voda"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Općina",
+    "name": "Bol"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Općina",
+    "name": "Brela"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Općina",
+    "name": "Cista Provo"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Općina",
+    "name": "Dicmo"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Općina",
+    "name": "Dugi Rat"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Općina",
+    "name": "Dugopolje"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Općina",
+    "name": "Gradac"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Općina",
+    "name": "Hrvace"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Općina",
+    "name": "Jelsa"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Općina",
+    "name": "Klis"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Općina",
+    "name": "Lećevica"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Općina",
+    "name": "Lokvičići"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Općina",
+    "name": "Lovreć"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Općina",
+    "name": "Marina"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Općina",
+    "name": "Milna"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Općina",
+    "name": "Muć"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Općina",
+    "name": "Nerežišća"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Općina",
+    "name": "Okrug"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Općina",
+    "name": "Otok"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Općina",
+    "name": "Podbablje"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Općina",
+    "name": "Podgora"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Općina",
+    "name": "Podstrana"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Općina",
+    "name": "Postira"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Općina",
+    "name": "Prgomet"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Općina",
+    "name": "Primorski Dolac"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Općina",
+    "name": "Proložac"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Općina",
+    "name": "Pučišća"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Općina",
+    "name": "Runovići"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Općina",
+    "name": "Seget"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Općina",
+    "name": "Selca"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Općina",
+    "name": "Sućuraj"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Općina",
+    "name": "Sutivan"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Općina",
+    "name": "Šestanovac"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Općina",
+    "name": "Šolta"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Općina",
+    "name": "Tučepi"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Općina",
+    "name": "Zadvarje"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Općina",
+    "name": "Zagvozd"
+  },
+  {
+    "zupanija": "Splitsko-dalmatinska",
+    "type": "Općina",
+    "name": "Zmijavci"
+  },
+  {
+    "zupanija": "Istarska",
+    "type": "Grad",
+    "name": "Buje – Buie"
+  },
+  {
+    "zupanija": "Istarska",
+    "type": "Grad",
+    "name": "Buzet"
+  },
+  {
+    "zupanija": "Istarska",
+    "type": "Grad",
+    "name": "Labin"
+  },
+  {
+    "zupanija": "Istarska",
+    "type": "Grad",
+    "name": "Novigrad – Cittanova"
+  },
+  {
+    "zupanija": "Istarska",
+    "type": "Grad",
+    "name": "Pazin"
+  },
+  {
+    "zupanija": "Istarska",
+    "type": "Grad",
+    "name": "Poreč – Parenzo"
+  },
+  {
+    "zupanija": "Istarska",
+    "type": "Grad",
+    "name": "Pula – Pola"
+  },
+  {
+    "zupanija": "Istarska",
+    "type": "Grad",
+    "name": "Rovinj – Rovigno"
+  },
+  {
+    "zupanija": "Istarska",
+    "type": "Grad",
+    "name": "Umag – Umago"
+  },
+  {
+    "zupanija": "Istarska",
+    "type": "Grad",
+    "name": "Vodnjan – Dignano"
+  },
+  {
+    "zupanija": "Istarska",
+    "type": "Općina",
+    "name": "Bale – Valle"
+  },
+  {
+    "zupanija": "Istarska",
+    "type": "Općina",
+    "name": "Barban"
+  },
+  {
+    "zupanija": "Istarska",
+    "type": "Općina",
+    "name": "Brtonigla – Verteneglio"
+  },
+  {
+    "zupanija": "Istarska",
+    "type": "Općina",
+    "name": "Cerovlje"
+  },
+  {
+    "zupanija": "Istarska",
+    "type": "Općina",
+    "name": "Fažana – Fasana"
+  },
+  {
+    "zupanija": "Istarska",
+    "type": "Općina",
+    "name": "Funtana – Fontane"
+  },
+  {
+    "zupanija": "Istarska",
+    "type": "Općina",
+    "name": "Gračišće"
+  },
+  {
+    "zupanija": "Istarska",
+    "type": "Općina",
+    "name": "Grožnjan – Grisignana"
+  },
+  {
+    "zupanija": "Istarska",
+    "type": "Općina",
+    "name": "Kanfanar"
+  },
+  {
+    "zupanija": "Istarska",
+    "type": "Općina",
+    "name": "Karojba"
+  },
+  {
+    "zupanija": "Istarska",
+    "type": "Općina",
+    "name": "Kaštelir-Labinci – Castelliere-S. Domenica"
+  },
+  {
+    "zupanija": "Istarska",
+    "type": "Općina",
+    "name": "Kršan"
+  },
+  {
+    "zupanija": "Istarska",
+    "type": "Općina",
+    "name": "Lanišće"
+  },
+  {
+    "zupanija": "Istarska",
+    "type": "Općina",
+    "name": "Ližnjan – Lisignano"
+  },
+  {
+    "zupanija": "Istarska",
+    "type": "Općina",
+    "name": "Lupoglav"
+  },
+  {
+    "zupanija": "Istarska",
+    "type": "Općina",
+    "name": "Marčana"
+  },
+  {
+    "zupanija": "Istarska",
+    "type": "Općina",
+    "name": "Medulin"
+  },
+  {
+    "zupanija": "Istarska",
+    "type": "Općina",
+    "name": "Motovun – Montona"
+  },
+  {
+    "zupanija": "Istarska",
+    "type": "Općina",
+    "name": "Oprtalj – Portole"
+  },
+  {
+    "zupanija": "Istarska",
+    "type": "Općina",
+    "name": "Pićan"
+  },
+  {
+    "zupanija": "Istarska",
+    "type": "Općina",
+    "name": "Raša"
+  },
+  {
+    "zupanija": "Istarska",
+    "type": "Općina",
+    "name": "Sveta Nedelja"
+  },
+  {
+    "zupanija": "Istarska",
+    "type": "Općina",
+    "name": "Sveti Lovreč"
+  },
+  {
+    "zupanija": "Istarska",
+    "type": "Općina",
+    "name": "Sveti Petar u Šumi"
+  },
+  {
+    "zupanija": "Istarska",
+    "type": "Općina",
+    "name": "Svetvinčenat"
+  },
+  {
+    "zupanija": "Istarska",
+    "type": "Općina",
+    "name": "Tar-Vabriga – Torre-Abrega"
+  },
+  {
+    "zupanija": "Istarska",
+    "type": "Općina",
+    "name": "Tinjan"
+  },
+  {
+    "zupanija": "Istarska",
+    "type": "Općina",
+    "name": "Višnjan – Visignano"
+  },
+  {
+    "zupanija": "Istarska",
+    "type": "Općina",
+    "name": "Vižinada – Visinada"
+  },
+  {
+    "zupanija": "Istarska",
+    "type": "Općina",
+    "name": "Vrsar – Orsera"
+  },
+  {
+    "zupanija": "Istarska",
+    "type": "Općina",
+    "name": "Žminj"
+  },
+  {
+    "zupanija": "Dubrovačko-neretvanska",
+    "type": "Grad",
+    "name": "Dubrovnik"
+  },
+  {
+    "zupanija": "Dubrovačko-neretvanska",
+    "type": "Grad",
+    "name": "Korčula"
+  },
+  {
+    "zupanija": "Dubrovačko-neretvanska",
+    "type": "Grad",
+    "name": "Metković"
+  },
+  {
+    "zupanija": "Dubrovačko-neretvanska",
+    "type": "Grad",
+    "name": "Opuzen"
+  },
+  {
+    "zupanija": "Dubrovačko-neretvanska",
+    "type": "Grad",
+    "name": "Ploče"
+  },
+  {
+    "zupanija": "Dubrovačko-neretvanska",
+    "type": "Općina",
+    "name": "Blato"
+  },
+  {
+    "zupanija": "Dubrovačko-neretvanska",
+    "type": "Općina",
+    "name": "Dubrovačko primorje"
+  },
+  {
+    "zupanija": "Dubrovačko-neretvanska",
+    "type": "Općina",
+    "name": "Janjina"
+  },
+  {
+    "zupanija": "Dubrovačko-neretvanska",
+    "type": "Općina",
+    "name": "Konavle"
+  },
+  {
+    "zupanija": "Dubrovačko-neretvanska",
+    "type": "Općina",
+    "name": "Kula Norinska"
+  },
+  {
+    "zupanija": "Dubrovačko-neretvanska",
+    "type": "Općina",
+    "name": "Lastovo"
+  },
+  {
+    "zupanija": "Dubrovačko-neretvanska",
+    "type": "Općina",
+    "name": "Lumbarda"
+  },
+  {
+    "zupanija": "Dubrovačko-neretvanska",
+    "type": "Općina",
+    "name": "Mljet"
+  },
+  {
+    "zupanija": "Dubrovačko-neretvanska",
+    "type": "Općina",
+    "name": "Orebić"
+  },
+  {
+    "zupanija": "Dubrovačko-neretvanska",
+    "type": "Općina",
+    "name": "Pojezerje"
+  },
+  {
+    "zupanija": "Dubrovačko-neretvanska",
+    "type": "Općina",
+    "name": "Slivno"
+  },
+  {
+    "zupanija": "Dubrovačko-neretvanska",
+    "type": "Općina",
+    "name": "Smokvica"
+  },
+  {
+    "zupanija": "Dubrovačko-neretvanska",
+    "type": "Općina",
+    "name": "Ston"
+  },
+  {
+    "zupanija": "Dubrovačko-neretvanska",
+    "type": "Općina",
+    "name": "Trpanj"
+  },
+  {
+    "zupanija": "Dubrovačko-neretvanska",
+    "type": "Općina",
+    "name": "Vela Luka"
+  },
+  {
+    "zupanija": "Dubrovačko-neretvanska",
+    "type": "Općina",
+    "name": "Zažablje"
+  },
+  {
+    "zupanija": "Dubrovačko-neretvanska",
+    "type": "Općina",
+    "name": "Župa dubrovačka"
+  },
+  {
+    "zupanija": "Međimurska",
+    "type": "Grad",
+    "name": "Čakovec"
+  },
+  {
+    "zupanija": "Međimurska",
+    "type": "Grad",
+    "name": "Mursko Središće"
+  },
+  {
+    "zupanija": "Međimurska",
+    "type": "Grad",
+    "name": "Prelog"
+  },
+  {
+    "zupanija": "Međimurska",
+    "type": "Općina",
+    "name": "Belica"
+  },
+  {
+    "zupanija": "Međimurska",
+    "type": "Općina",
+    "name": "Dekanovec"
+  },
+  {
+    "zupanija": "Međimurska",
+    "type": "Općina",
+    "name": "Domašinec"
+  },
+  {
+    "zupanija": "Međimurska",
+    "type": "Općina",
+    "name": "Donja Dubrava"
+  },
+  {
+    "zupanija": "Međimurska",
+    "type": "Općina",
+    "name": "Donji Kraljevec"
+  },
+  {
+    "zupanija": "Međimurska",
+    "type": "Općina",
+    "name": "Donji Vidovec"
+  },
+  {
+    "zupanija": "Međimurska",
+    "type": "Općina",
+    "name": "Goričan"
+  },
+  {
+    "zupanija": "Međimurska",
+    "type": "Općina",
+    "name": "Gornji Mihaljevec"
+  },
+  {
+    "zupanija": "Međimurska",
+    "type": "Općina",
+    "name": "Kotoriba"
+  },
+  {
+    "zupanija": "Međimurska",
+    "type": "Općina",
+    "name": "Mala Subotica"
+  },
+  {
+    "zupanija": "Međimurska",
+    "type": "Općina",
+    "name": "Nedelišće"
+  },
+  {
+    "zupanija": "Međimurska",
+    "type": "Općina",
+    "name": "Orehovica"
+  },
+  {
+    "zupanija": "Međimurska",
+    "type": "Općina",
+    "name": "Podturen"
+  },
+  {
+    "zupanija": "Međimurska",
+    "type": "Općina",
+    "name": "Pribislavec"
+  },
+  {
+    "zupanija": "Međimurska",
+    "type": "Općina",
+    "name": "Selnica"
+  },
+  {
+    "zupanija": "Međimurska",
+    "type": "Općina",
+    "name": "Strahoninec"
+  },
+  {
+    "zupanija": "Međimurska",
+    "type": "Općina",
+    "name": "Sveta Marija"
+  },
+  {
+    "zupanija": "Međimurska",
+    "type": "Općina",
+    "name": "Sveti Juraj na Bregu"
+  },
+  {
+    "zupanija": "Međimurska",
+    "type": "Općina",
+    "name": "Sveti Martin na Muri"
+  },
+  {
+    "zupanija": "Međimurska",
+    "type": "Općina",
+    "name": "Šenkovec"
+  },
+  {
+    "zupanija": "Međimurska",
+    "type": "Općina",
+    "name": "Štrigova"
+  },
+  {
+    "zupanija": "Međimurska",
+    "type": "Općina",
+    "name": "Vratišinec"
+  },
+  {
+    "zupanija": "Grad Zagreb",
+    "type": "Grad",
+    "name": "Zagreb"
+  }
+]

@@ -1,0 +1,580 @@
+{
+  "source": "ISPU MGIPU (https://ispu.mgipu.hr/api/v1/gis/)",
+  "coordinate_system": "EPSG:3765 (HTRS96/TM, official Croatian)",
+  "snapshot_date": "2026-04-28",
+  "scope": "Zagrebačka županija, all 34 JLS",
+  "topology": {
+    "polygon_count": 34,
+    "sum_of_individual_m2": 3061697866.3,
+    "union_area_m2": 3061697866.3,
+    "overlap_total_m2": -0.0,
+    "pairwise_overlaps_count": 0,
+    "topology_pass": true
+  },
+  "comparison_to_dzs": {
+    "dzs_official_km2": 3060,
+    "computed_km2": 3061.6979,
+    "delta_km2": 1.6979,
+    "delta_percent": 0.0555
+  },
+  "shared_boundaries_count": 63,
+  "shared_boundaries_total_m": 673430.31,
+  "per_jls": [
+    {
+      "name": "VELIKA GORICA",
+      "code": "05410",
+      "area_m2": 326639128.37,
+      "area_km2": 326.6391,
+      "vertices": 6832
+    },
+    {
+      "name": "SAMOBOR",
+      "code": "03808",
+      "area_m2": 251464863.36,
+      "area_km2": 251.4649,
+      "vertices": 6355
+    },
+    {
+      "name": "JASTREBARSKO",
+      "code": "01694",
+      "area_m2": 226435542.99,
+      "area_km2": 226.4355,
+      "vertices": 5523
+    },
+    {
+      "name": "SVETI IVAN ZELINA",
+      "code": "04294",
+      "area_m2": 185974901.99,
+      "area_km2": 185.9749,
+      "vertices": 4738
+    },
+    {
+      "name": "IVANIĆ-GRAD",
+      "code": "01589",
+      "area_m2": 173518448.43,
+      "area_km2": 173.5184,
+      "vertices": 2297
+    },
+    {
+      "name": "VRBOVEC",
+      "code": "05088",
+      "area_m2": 160862153.08,
+      "area_km2": 160.8622,
+      "vertices": 2235
+    },
+    {
+      "name": "PISAROVINA",
+      "code": "03310",
+      "area_m2": 145375387.44,
+      "area_km2": 145.3754,
+      "vertices": 4028
+    },
+    {
+      "name": "KRIŽ",
+      "code": "02135",
+      "area_m2": 117764869.81,
+      "area_km2": 117.7649,
+      "vertices": 1453
+    },
+    {
+      "name": "DUBRAVA",
+      "code": "00973",
+      "area_m2": 115652067.23,
+      "area_km2": 115.6521,
+      "vertices": 1644
+    },
+    {
+      "name": "ŽUMBERAK",
+      "code": "05401",
+      "area_m2": 110093988.66,
+      "area_km2": 110.094,
+      "vertices": 4279
+    },
+    {
+      "name": "POKUPSKO",
+      "code": "05444",
+      "area_m2": 105858921.98,
+      "area_km2": 105.8589,
+      "vertices": 2758
+    },
+    {
+      "name": "RUGVICA",
+      "code": "03760",
+      "area_m2": 93666456.26,
+      "area_km2": 93.6665,
+      "vertices": 906
+    },
+    {
+      "name": "GRADEC",
+      "code": "01350",
+      "area_m2": 88983435.1,
+      "area_km2": 88.9834,
+      "vertices": 1685
+    },
+    {
+      "name": "KLOŠTAR IVANIĆ",
+      "code": "01937",
+      "area_m2": 77450292.88,
+      "area_km2": 77.4503,
+      "vertices": 860
+    },
+    {
+      "name": "KLINČA SELA",
+      "code": "01902",
+      "area_m2": 77030414.7,
+      "area_km2": 77.0304,
+      "vertices": 4062
+    },
+    {
+      "name": "FARKAŠEVAC",
+      "code": "01147",
+      "area_m2": 73770274.9,
+      "area_km2": 73.7703,
+      "vertices": 1585
+    },
+    {
+      "name": "KRAŠIĆ",
+      "code": "05339",
+      "area_m2": 71497345.66,
+      "area_km2": 71.4973,
+      "vertices": 3342
+    },
+    {
+      "name": "BRCKOVLJANI",
+      "code": "00337",
+      "area_m2": 69719890.47,
+      "area_km2": 69.7199,
+      "vertices": 1520
+    },
+    {
+      "name": "ORLE",
+      "code": "05428",
+      "area_m2": 58569656.52,
+      "area_km2": 58.5697,
+      "vertices": 1357
+    },
+    {
+      "name": "KRAVARSKO",
+      "code": "05452",
+      "area_m2": 58286338.75,
+      "area_km2": 58.2863,
+      "vertices": 2494
+    },
+    {
+      "name": "DUGO SELO",
+      "code": "01015",
+      "area_m2": 54269666.84,
+      "area_km2": 54.2697,
+      "vertices": 825
+    },
+    {
+      "name": "ZAPREŠIĆ",
+      "code": "05436",
+      "area_m2": 53814213.43,
+      "area_km2": 53.8142,
+      "vertices": 2095
+    },
+    {
+      "name": "BISTRA",
+      "code": "05479",
+      "area_m2": 52929283.19,
+      "area_km2": 52.9293,
+      "vertices": 1292
+    },
+    {
+      "name": "PRESEKA",
+      "code": "03565",
+      "area_m2": 46120779.51,
+      "area_km2": 46.1208,
+      "vertices": 957
+    },
+    {
+      "name": "SVETA NEDELJA",
+      "code": "04367",
+      "area_m2": 39785541.1,
+      "area_km2": 39.7855,
+      "vertices": 1353
+    },
+    {
+      "name": "BRDOVEC",
+      "code": "00345",
+      "area_m2": 37225348.38,
+      "area_km2": 37.2253,
+      "vertices": 1679
+    },
+    {
+      "name": "JAKOVLJE",
+      "code": "01635",
+      "area_m2": 35651505.3,
+      "area_km2": 35.6515,
+      "vertices": 2559
+    },
+    {
+      "name": "RAKOVEC",
+      "code": "05363",
+      "area_m2": 34853627.84,
+      "area_km2": 34.8536,
+      "vertices": 1517
+    },
+    {
+      "name": "STUPNIK",
+      "code": "05517",
+      "area_m2": 24848865.98,
+      "area_km2": 24.8489,
+      "vertices": 1247
+    },
+    {
+      "name": "BEDENICA",
+      "code": "05509",
+      "area_m2": 21477351.06,
+      "area_km2": 21.4774,
+      "vertices": 1296
+    },
+    {
+      "name": "DUBRAVICA",
+      "code": "05495",
+      "area_m2": 20556107.36,
+      "area_km2": 20.5561,
+      "vertices": 1106
+    },
+    {
+      "name": "LUKA",
+      "code": "05487",
+      "area_m2": 17376004.68,
+      "area_km2": 17.376,
+      "vertices": 1142
+    },
+    {
+      "name": "MARIJA GORICA",
+      "code": "05398",
+      "area_m2": 17148216.9,
+      "area_km2": 17.1482,
+      "vertices": 1547
+    },
+    {
+      "name": "PUŠĆA",
+      "code": "03620",
+      "area_m2": 17026976.17,
+      "area_km2": 17.027,
+      "vertices": 1451
+    }
+  ],
+  "pairwise_overlaps_detail": [],
+  "adjacency_graph": [
+    {
+      "a": "DUGO SELO",
+      "b": "SVETI IVAN ZELINA",
+      "shared_m": 21.77
+    },
+    {
+      "a": "DUGO SELO",
+      "b": "BRCKOVLJANI",
+      "shared_m": 15220.57
+    },
+    {
+      "a": "DUGO SELO",
+      "b": "RUGVICA",
+      "shared_m": 15539.44
+    },
+    {
+      "a": "IVANIĆ-GRAD",
+      "b": "BRCKOVLJANI",
+      "shared_m": 4963.13
+    },
+    {
+      "a": "IVANIĆ-GRAD",
+      "b": "KLOŠTAR IVANIĆ",
+      "shared_m": 18761.22
+    },
+    {
+      "a": "IVANIĆ-GRAD",
+      "b": "ORLE",
+      "shared_m": 4744.21
+    },
+    {
+      "a": "IVANIĆ-GRAD",
+      "b": "RUGVICA",
+      "shared_m": 12425.37
+    },
+    {
+      "a": "IVANIĆ-GRAD",
+      "b": "KRIŽ",
+      "shared_m": 26259.46
+    },
+    {
+      "a": "JASTREBARSKO",
+      "b": "SAMOBOR",
+      "shared_m": 19141.62
+    },
+    {
+      "a": "JASTREBARSKO",
+      "b": "PISAROVINA",
+      "shared_m": 6718.11
+    },
+    {
+      "a": "JASTREBARSKO",
+      "b": "KLINČA SELA",
+      "shared_m": 31439.39
+    },
+    {
+      "a": "JASTREBARSKO",
+      "b": "KRAŠIĆ",
+      "shared_m": 24538.29
+    },
+    {
+      "a": "SAMOBOR",
+      "b": "BRDOVEC",
+      "shared_m": 8793.65
+    },
+    {
+      "a": "SAMOBOR",
+      "b": "STUPNIK",
+      "shared_m": 1941.5
+    },
+    {
+      "a": "SAMOBOR",
+      "b": "ZAPREŠIĆ",
+      "shared_m": 3077.86
+    },
+    {
+      "a": "SAMOBOR",
+      "b": "KLINČA SELA",
+      "shared_m": 21145.23
+    },
+    {
+      "a": "SAMOBOR",
+      "b": "KRAŠIĆ",
+      "shared_m": 5073.45
+    },
+    {
+      "a": "SAMOBOR",
+      "b": "ŽUMBERAK",
+      "shared_m": 16134.43
+    },
+    {
+      "a": "SAMOBOR",
+      "b": "SVETA NEDELJA",
+      "shared_m": 16459.4
+    },
+    {
+      "a": "SVETI IVAN ZELINA",
+      "b": "VRBOVEC",
+      "shared_m": 2049.13
+    },
+    {
+      "a": "SVETI IVAN ZELINA",
+      "b": "BEDENICA",
+      "shared_m": 7318.1
+    },
+    {
+      "a": "SVETI IVAN ZELINA",
+      "b": "BRCKOVLJANI",
+      "shared_m": 9176.19
+    },
+    {
+      "a": "SVETI IVAN ZELINA",
+      "b": "PRESEKA",
+      "shared_m": 7370.06
+    },
+    {
+      "a": "SVETI IVAN ZELINA",
+      "b": "RAKOVEC",
+      "shared_m": 17833.72
+    },
+    {
+      "a": "VELIKA GORICA",
+      "b": "KRAVARSKO",
+      "shared_m": 18497.25
+    },
+    {
+      "a": "VELIKA GORICA",
+      "b": "ORLE",
+      "shared_m": 29781.14
+    },
+    {
+      "a": "VELIKA GORICA",
+      "b": "PISAROVINA",
+      "shared_m": 8549.52
+    },
+    {
+      "a": "VELIKA GORICA",
+      "b": "POKUPSKO",
+      "shared_m": 8711.78
+    },
+    {
+      "a": "VELIKA GORICA",
+      "b": "RUGVICA",
+      "shared_m": 12809.3
+    },
+    {
+      "a": "VRBOVEC",
+      "b": "BRCKOVLJANI",
+      "shared_m": 14431.32
+    },
+    {
+      "a": "VRBOVEC",
+      "b": "DUBRAVA",
+      "shared_m": 7756.15
+    },
+    {
+      "a": "VRBOVEC",
+      "b": "GRADEC",
+      "shared_m": 12188.72
+    },
+    {
+      "a": "VRBOVEC",
+      "b": "KLOŠTAR IVANIĆ",
+      "shared_m": 5255.76
+    },
+    {
+      "a": "VRBOVEC",
+      "b": "PRESEKA",
+      "shared_m": 15468.79
+    },
+    {
+      "a": "VRBOVEC",
+      "b": "RAKOVEC",
+      "shared_m": 14183.91
+    },
+    {
+      "a": "BISTRA",
+      "b": "JAKOVLJE",
+      "shared_m": 13208.9
+    },
+    {
+      "a": "BISTRA",
+      "b": "ZAPREŠIĆ",
+      "shared_m": 11834.13
+    },
+    {
+      "a": "BRCKOVLJANI",
+      "b": "KLOŠTAR IVANIĆ",
+      "shared_m": 7692.71
+    },
+    {
+      "a": "BRCKOVLJANI",
+      "b": "RUGVICA",
+      "shared_m": 2640.11
+    },
+    {
+      "a": "BRDOVEC",
+      "b": "MARIJA GORICA",
+      "shared_m": 10577.26
+    },
+    {
+      "a": "BRDOVEC",
+      "b": "ZAPREŠIĆ",
+      "shared_m": 4342.23
+    },
+    {
+      "a": "BRDOVEC",
+      "b": "PUŠĆA",
+      "shared_m": 1460.64
+    },
+    {
+      "a": "DUBRAVA",
+      "b": "GRADEC",
+      "shared_m": 19225.69
+    },
+    {
+      "a": "DUBRAVA",
+      "b": "KLOŠTAR IVANIĆ",
+      "shared_m": 7561.44
+    },
+    {
+      "a": "DUBRAVA",
+      "b": "FARKAŠEVAC",
+      "shared_m": 19538.61
+    },
+    {
+      "a": "DUBRAVICA",
+      "b": "LUKA",
+      "shared_m": 992.4
+    },
+    {
+      "a": "DUBRAVICA",
+      "b": "MARIJA GORICA",
+      "shared_m": 4199.47
+    },
+    {
+      "a": "DUBRAVICA",
+      "b": "ZAPREŠIĆ",
+      "shared_m": 571.97
+    },
+    {
+      "a": "DUBRAVICA",
+      "b": "PUŠĆA",
+      "shared_m": 3716.3
+    },
+    {
+      "a": "GRADEC",
+      "b": "FARKAŠEVAC",
+      "shared_m": 1969.92
+    },
+    {
+      "a": "JAKOVLJE",
+      "b": "LUKA",
+      "shared_m": 5082.72
+    },
+    {
+      "a": "JAKOVLJE",
+      "b": "ZAPREŠIĆ",
+      "shared_m": 1755.42
+    },
+    {
+      "a": "KRAVARSKO",
+      "b": "POKUPSKO",
+      "shared_m": 19861.85
+    },
+    {
+      "a": "LUKA",
+      "b": "ZAPREŠIĆ",
+      "shared_m": 7169.27
+    },
+    {
+      "a": "MARIJA GORICA",
+      "b": "PUŠĆA",
+      "shared_m": 7639.74
+    },
+    {
+      "a": "ORLE",
+      "b": "RUGVICA",
+      "shared_m": 13228.4
+    },
+    {
+      "a": "PISAROVINA",
+      "b": "POKUPSKO",
+      "shared_m": 8700.95
+    },
+    {
+      "a": "PISAROVINA",
+      "b": "KLINČA SELA",
+      "shared_m": 9373.2
+    },
+    {
+      "a": "PRESEKA",
+      "b": "RAKOVEC",
+      "shared_m": 7078.64
+    },
+    {
+      "a": "STUPNIK",
+      "b": "SVETA NEDELJA",
+      "shared_m": 4541.53
+    },
+    {
+      "a": "ZAPREŠIĆ",
+      "b": "PUŠĆA",
+      "shared_m": 14672.16
+    },
+    {
+      "a": "ZAPREŠIĆ",
+      "b": "SVETA NEDELJA",
+      "shared_m": 3385.68
+    },
+    {
+      "a": "KRAŠIĆ",
+      "b": "ŽUMBERAK",
+      "shared_m": 17630.03
+    }
+  ]
+}

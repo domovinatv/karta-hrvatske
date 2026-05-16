@@ -1,0 +1,11 @@
+{
+  "summary": {
+    "features_total": 556,
+    "hard_violations": 0,
+    "borderline": 0,
+    "coverage_diffs": 0
+  },
+  "hard_violations": [],
+  "borderline": [],
+  "coverage_diffs": []
+}

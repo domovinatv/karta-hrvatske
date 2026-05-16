@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="DOMOVINA: interaktivna karta JLS-ova Hrvatske">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0a0e14">
+
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="map.DOMOVINA.ai">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="alternate icon" type="image/png" href="favicon.png">
+
+  <title>DOMOVINA · karta JLS-ova RH</title>
+  <link rel="manifest" href="manifest.json">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet">
+  <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+  <!-- PMTiles is auto-registered by maplibre_web; the global must exist. -->
+  <script src="https://unpkg.com/pmtiles@3.2.1/dist/pmtiles.js"></script>
+
+  <style>
+    html, body { margin: 0; padding: 0; background: #0a0e14; height: 100%; overflow: hidden; }
+    #loading {
+      position: fixed; inset: 0; display: flex; align-items: center; justify-content: center;
+      background: #0a0e14; color: #8b94a8; font-family: 'JetBrains Mono', monospace; font-size: 12px;
+      letter-spacing: 0.18em; text-transform: uppercase; z-index: 9999;
+    }
+    #loading.gone { opacity: 0; pointer-events: none; transition: opacity 0.4s; }
+    #loading .dot {
+      width: 8px; height: 8px; border-radius: 50%; background: #d4322f; margin-right: 10px;
+      box-shadow: 0 0 16px #d4322f; animation: pulse 1.4s infinite ease-in-out;
+    }
+    @keyframes pulse { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.4; transform: scale(0.7); } }
+  </style>
+</head>
+<body>
+  <div id="loading"><div class="dot"></div>učitavanje karte</div>
+  <script>
+    window.addEventListener('flutter-first-frame', function () {
+      var el = document.getElementById('loading');
+      if (el) { el.classList.add('gone'); setTimeout(function () { el.remove(); }, 500); }
+    });
+  </script>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+[
+  {
+    "name": "Ljubešćica",
+    "dzs_name": "Ljubešćica",
+    "type": "Općina",
+    "zupanija": "Varaždinska"
+  },
+  {
+    "name": "Ivanska",
+    "dzs_name": "Ivanska",
+    "type": "Općina",
+    "zupanija": "Bjelovarsko-bilogorska"
+  },
+  {
+    "name": "Rovišće",
+    "dzs_name": "Rovišće",
+    "type": "Općina",
+    "zupanija": "Bjelovarsko-bilogorska"
+  },
+  {
+    "name": "Zrinski Topolovac",
+    "dzs_name": "Zrinski Topolovac",
+    "type": "Općina",
+    "zupanija": "Bjelovarsko-bilogorska"
+  },
+  {
+    "name": "Krk",
+    "dzs_name": "Krk",
+    "type": "Grad",
+    "zupanija": "Primorsko-goranska"
+  },
+  {
+    "name": "Baška",
+    "dzs_name": "Baška",
+    "type": "Općina",
+    "zupanija": "Primorsko-goranska"
+  },
+  {
+    "name": "Dobrinj",
+    "dzs_name": "Dobrinj",
+    "type": "Općina",
+    "zupanija": "Primorsko-goranska"
+  },
+  {
+    "name": "Punat",
+    "dzs_name": "Punat",
+    "type": "Općina",
+    "zupanija": "Primorsko-goranska"
+  },
+  {
+    "name": "Vrbnik",
+    "dzs_name": "Vrbnik",
+    "type": "Općina",
+    "zupanija": "Primorsko-goranska"
+  },
+  {
+    "name": "Lišane Ostrovičke",
+    "dzs_name": "Lišane Ostrovičke",
+    "type": "Općina",
+    "zupanija": "Zadarska"
+  },
+  {
+    "name": "Stankovci",
+    "dzs_name": "Stankovci",
+    "type": "Općina",
+    "zupanija": "Zadarska"
+  },
+  {
+    "name": "Tisno",
+    "dzs_name": "Tisno",
+    "type": "Općina",
+    "zupanija": "Šibensko-kninska"
+  },
+  {
+    "name": "Tribunj",
+    "dzs_name": "Tribunj",
+    "type": "Općina",
+    "zupanija": "Šibensko-kninska"
+  }
+]
