@@ -10,14 +10,20 @@ Output: outputs/hrvatska_full.html
 """
 import json
 import os
+import shutil
+from pathlib import Path
 
 INPUT_PATH = "data/hr_canonical.geojson"
 INPUT_ZUP_PATH = "data/hr_canonical_zupanije.geojson"
 INPUT_DRZ_PATH = "data/hr_canonical_drzava.geojson"
 INPUT_NAS_PATH = "data/hr_canonical_naselja.geojson"
+INPUT_CLUBS_PATH = "data/hr_football_clubs.geojson"
+CLUBS_LOGOS_SRC = Path.home() / "git" / "ss" / "hrvatski-amaterski-nogometni-klubovi" / "data" / "logos"
 TEMPLATE_PATH = "scripts/templates/hrvatska_full.html.tmpl"
 OUTPUT_PATH = "outputs/hrvatska_full.html"
 OUTPUT_NAS_PATH = "outputs/hrvatska_naselja.geojson"
+OUTPUT_CLUBS_PATH = "outputs/hr_football_clubs.geojson"
+OUTPUT_LOGOS_DIR = Path("outputs/logos")
 
 
 def main():
@@ -37,6 +43,21 @@ def main():
         with open(INPUT_NAS_PATH, "rb") as src, open(OUTPUT_NAS_PATH, "wb") as dst:
             dst.write(src.read())
         print(f"Copied {OUTPUT_NAS_PATH}: {os.path.getsize(OUTPUT_NAS_PATH):,} bytes")
+
+    # Football clubs overlay — lazy-loaded too. Optional (skipped if not exported).
+    n_clubs = 0
+    if os.path.exists(INPUT_CLUBS_PATH):
+        os.makedirs(os.path.dirname(OUTPUT_CLUBS_PATH), exist_ok=True)
+        shutil.copyfile(INPUT_CLUBS_PATH, OUTPUT_CLUBS_PATH)
+        n_clubs = len(json.loads(open(INPUT_CLUBS_PATH).read())["features"])
+        print(f"Copied {OUTPUT_CLUBS_PATH}: {os.path.getsize(OUTPUT_CLUBS_PATH):,} bytes ({n_clubs} clubs)")
+        if CLUBS_LOGOS_SRC.is_dir():
+            OUTPUT_LOGOS_DIR.mkdir(parents=True, exist_ok=True)
+            copied = 0
+            for png in CLUBS_LOGOS_SRC.glob("*.png"):
+                shutil.copyfile(png, OUTPUT_LOGOS_DIR / png.name)
+                copied += 1
+            print(f"Copied {copied} logos -> {OUTPUT_LOGOS_DIR}")
     fc = json.loads(geojson_str)
     features = fc["features"]
 
@@ -84,6 +105,7 @@ def main():
         .replace("__NO__", str(n_opc))
         .replace("__AREA__", f"{total_area / 1e6:,.0f}".replace(",", " "))
         .replace("__TOTAL_AREA__", str(total_area))
+        .replace("__NCLUBS__", str(n_clubs))
     )
 
     os.makedirs("outputs", exist_ok=True)

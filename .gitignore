@@ -33,3 +33,8 @@ apps/web/data/dgu_zupanije.geojson
 apps/web/data/dgu_drzava.geojson
 apps/web/data/dgu_naselja.geojson
 apps/web/outputs/hrvatska_naselja.geojson
+
+# Football clubs overlay — logos regenerable from sibling repo
+# (~/git/ss/hrvatski-amaterski-nogometni-klubovi/data/logos), ~30 MB across copies
+apps/web/logos/
+apps/web/outputs/logos/

@@ -352,6 +352,19 @@ aside h2 .meta { font-family: 'JetBrains Mono', monospace; font-size: 10px; lett
   font-size: 11px;
 }
 .maplibregl-popup-tip { display: none !important; }
+
+.club-popup { min-width: 240px; }
+.club-popup .club-head { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 8px; }
+.club-popup .club-logo { width: 44px; height: 44px; object-fit: contain; background: rgba(255,255,255,0.06); border-radius: 4px; padding: 3px; flex-shrink: 0; }
+.club-popup .club-title { min-width: 0; flex: 1; }
+.club-popup .club-name { font-weight: 600; font-size: 13px; color: var(--ink); line-height: 1.25; margin-bottom: 3px; }
+.club-popup .club-league { font-size: 10.5px; color: var(--muted); }
+.club-popup .club-row { display: flex; justify-content: space-between; gap: 10px; padding: 4px 0; border-top: 1px dashed var(--line); font-size: 11px; }
+.club-popup .club-row .k { color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; font-size: 9.5px; padding-top: 2px; }
+.club-popup .club-row .v { color: var(--text); text-align: right; }
+.club-popup .club-links { margin-top: 8px; padding-top: 6px; border-top: 1px dashed var(--line); font-size: 11px; }
+.club-popup .club-links a { color: var(--accent-2); text-decoration: none; }
+.club-popup .club-links a:hover { text-decoration: underline; }
 </style>
 </head>
 <body>
@@ -416,6 +429,9 @@ aside h2 .meta { font-family: 'JetBrains Mono', monospace; font-size: 10px; lett
       <button class="ctrl-btn" id="btn-naselja" title="Prikaži/sakrij 6759 naselja (lazy-loaded)">
         ⊟ Naselja <span class="key">N</span>
       </button>
+      <button class="ctrl-btn" id="btn-clubs" title="Prikaži/sakrij nogometne klubove (lazy-loaded)">
+        ⚽ Klubovi <span class="key">K</span>
+      </button>
       <button class="ctrl-btn" id="btn-focus" title="Sakrij sve osim odabrane JLS i naselja unutar nje">
         ◎ Samo odabrana JLS <span class="key">O</span>
       </button>
@@ -444,6 +460,7 @@ aside h2 .meta { font-family: 'JetBrains Mono', monospace; font-size: 10px; lett
       <div class="l-row">→ Izvor: DGU Registar prostornih jedinica + DZS Census 2021</div>
       <div class="l-row">→ Bojeno po 21 županiji</div>
       <div class="l-row">→ Hover = highlight, klik = detalji</div>
+      <div class="l-row" style="margin-top:6px;">⚽ Klubovi (K): 508 klubova od HNL-a do 3. ŽNL</div>
       <div class="l-row" style="margin-top:8px;color:var(--accent-2);">Open data: ODbL/CC0 — bez vendor lock-ina</div>
     </div>
 
@@ -737,6 +754,123 @@ async function ensureNaseljaLoaded() {
     console.error('Naselja fetch failed:', e);
   } finally {
     naseljaLoading = false;
+  }
+}
+
+// Football clubs overlay — lazy-loaded GeoJSON of Point features, one per
+// club with lat/lng. Color + radius scale by `top_tier` (1 = elite, 8 = amateur).
+let showClubs = false;
+let clubsLoaded = false;
+let clubsLoading = false;
+let clubsPopup = null;
+
+const TIER_COLOR = ['match', ['get', 'top_tier'],
+  1, '#d4322f', 2, '#e8853c', 3, '#e2b94f', 4, '#a8c256',
+  5, '#5fa8a8', 6, '#5b8aaa', 7, '#7e7eb8', 8, '#8d99ae',
+  '#8d99ae'];
+
+function addClubsLayers() {
+  if (!clubsLoaded || map.getSource('hr-clubs')) return;
+  map.addSource('hr-clubs', { type: 'geojson', data: window._clubsData });
+  map.addLayer({
+    id: 'hr-clubs-circle', type: 'circle', source: 'hr-clubs',
+    layout: { visibility: showClubs ? 'visible' : 'none' },
+    paint: {
+      'circle-color': TIER_COLOR,
+      // Radius scales with both tier (lower tier = bigger) and zoom.
+      'circle-radius': [
+        'interpolate', ['linear'], ['zoom'],
+        5,  ['interpolate', ['linear'], ['coalesce', ['get', 'top_tier'], 8], 1, 5, 8, 2],
+        8,  ['interpolate', ['linear'], ['coalesce', ['get', 'top_tier'], 8], 1, 8, 8, 3.5],
+        12, ['interpolate', ['linear'], ['coalesce', ['get', 'top_tier'], 8], 1, 14, 8, 6]
+      ],
+      'circle-stroke-color': '#ffffff',
+      'circle-stroke-width': ['case', ['boolean', ['feature-state', 'hover'], false], 2.2, 1.2],
+      'circle-opacity': 0.92,
+      'circle-stroke-opacity': 0.95
+    }
+  });
+
+  let hoveredClub = null;
+  map.on('mousemove', 'hr-clubs-circle', e => {
+    if (!e.features.length) return;
+    if (hoveredClub !== null) map.setFeatureState({source:'hr-clubs', id:hoveredClub}, {hover:false});
+    hoveredClub = e.features[0].id ?? e.features[0].properties.id;
+    map.setFeatureState({source:'hr-clubs', id:hoveredClub}, {hover:true});
+    map.getCanvas().style.cursor = 'pointer';
+  });
+  map.on('mouseleave', 'hr-clubs-circle', () => {
+    if (hoveredClub !== null) map.setFeatureState({source:'hr-clubs', id:hoveredClub}, {hover:false});
+    hoveredClub = null;
+    map.getCanvas().style.cursor = '';
+  });
+
+  map.on('click', 'hr-clubs-circle', e => {
+    if (!e.features.length) return;
+    const f = e.features[0];
+    const p = f.properties;
+    const coords = f.geometry.coordinates.slice();
+    if (clubsPopup) clubsPopup.remove();
+    const links = [];
+    if (p.website) links.push(`<a href="${p.website}" target="_blank" rel="noopener">web</a>`);
+    if (p.email)   links.push(`<a href="mailto:${p.email}">email</a>`);
+    if (p.phone)   links.push(`<a href="tel:${p.phone}">tel</a>`);
+    if (p.fb_url)  links.push(`<a href="${p.fb_url}" target="_blank" rel="noopener">FB</a>`);
+    if (p.ig_url)  links.push(`<a href="${p.ig_url}" target="_blank" rel="noopener">IG</a>`);
+    if (p.x_url)   links.push(`<a href="${p.x_url}" target="_blank" rel="noopener">X</a>`);
+    const tierColor = (() => {
+      const c = {1:'#d4322f',2:'#e8853c',3:'#e2b94f',4:'#a8c256',
+                 5:'#5fa8a8',6:'#5b8aaa',7:'#7e7eb8',8:'#8d99ae'};
+      return c[p.top_tier] || '#8d99ae';
+    })();
+    const html = `
+      <div class="club-popup">
+        <div class="club-head">
+          <img class="club-logo" src="logos/${p.slug}.png" onerror="this.style.display='none'" alt="">
+          <div class="club-title">
+            <div class="club-name">${p.canonical_name}</div>
+            ${p.top_league_name ? `<div class="club-league" style="border-left:3px solid ${tierColor};padding-left:6px;">${p.top_league_name}${p.top_tier?` · tier ${p.top_tier}`:''}</div>` : ''}
+          </div>
+        </div>
+        ${p.city || p.county ? `<div class="club-row"><span class="k">Lokacija</span><span class="v">${[p.city, p.county].filter(Boolean).join(', ')}</span></div>` : ''}
+        ${p.stadium_name ? `<div class="club-row"><span class="k">Stadion</span><span class="v">${p.stadium_name}${p.stadium_capacity?` (${Number(p.stadium_capacity).toLocaleString('hr')})`:''}</span></div>` : ''}
+        ${p.founded_year ? `<div class="club-row"><span class="k">Osnovan</span><span class="v">${p.founded_year}</span></div>` : ''}
+        ${p.president ? `<div class="club-row"><span class="k">Predsjednik</span><span class="v">${p.president}</span></div>` : ''}
+        ${p.address ? `<div class="club-row"><span class="k">Adresa</span><span class="v">${p.address}</span></div>` : ''}
+        ${links.length ? `<div class="club-links">${links.join(' · ')}</div>` : ''}
+      </div>`;
+    clubsPopup = new maplibregl.Popup({offset: 12, maxWidth: '320px', className: 'club-popup-wrap'})
+      .setLngLat(coords).setHTML(html).addTo(map);
+  });
+}
+
+function setClubsVisibility(show) {
+  if (map.getLayer('hr-clubs-circle')) {
+    map.setLayoutProperty('hr-clubs-circle', 'visibility', show ? 'visible' : 'none');
+  }
+  if (!show && clubsPopup) { clubsPopup.remove(); clubsPopup = null; }
+}
+
+async function ensureClubsLoaded() {
+  if (clubsLoaded || clubsLoading) return;
+  clubsLoading = true;
+  const btn = document.getElementById('btn-clubs');
+  btn.firstChild.textContent = '⏳ Učitavam klubove… ';
+  try {
+    const r = await fetch('hr_football_clubs.geojson');
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    const fc = await r.json();
+    // Promote properties.id to top-level Feature.id so setFeatureState works.
+    fc.features.forEach(f => { if (f.id == null && f.properties && f.properties.id != null) f.id = f.properties.id; });
+    window._clubsData = fc;
+    clubsLoaded = true;
+    addClubsLayers();
+    btn.firstChild.textContent = `⚽ Klubovi (${fc.features.length}) `;
+  } catch (e) {
+    btn.firstChild.textContent = '❌ Klubovi (fetch failed) ';
+    console.error('Clubs fetch failed:', e);
+  } finally {
+    clubsLoading = false;
   }
 }
 
@@ -1142,6 +1276,15 @@ map.on('load', () => {
   }
   document.getElementById('btn-naselja').addEventListener('click', () => setNaseljaOn(!showNaselja));
 
+  async function setClubsOn(on) {
+    on = !!on;
+    showClubs = on;
+    document.getElementById('btn-clubs').classList.toggle('active', on);
+    if (on && !clubsLoaded) await ensureClubsLoaded();
+    setClubsVisibility(on);
+  }
+  document.getElementById('btn-clubs').addEventListener('click', () => setClubsOn(!showClubs));
+
   document.getElementById('btn-style').addEventListener('click', () => {
     dark = !dark;
     const nextTheme = dark ? 'dark' : 'light';
@@ -1167,6 +1310,11 @@ map.on('load', () => {
           map.setFeatureState({source:'hr-nas', id: window._selectedNaselje}, {selected: true});
         }
       }
+      // Re-add clubs if loaded + visible
+      if (clubsLoaded) {
+        addClubsLayers();
+        setClubsVisibility(showClubs);
+      }
       // Re-apply persistent UI states across style change
       if (map.getLayer('hr-line') && !showJlsBorders) {
         map.setLayoutProperty('hr-line', 'visibility', 'none');
@@ -1188,6 +1336,7 @@ map.on('load', () => {
     if (e.key.toLowerCase() === 'j') document.getElementById('btn-jls-borders').click();
     if (e.key.toLowerCase() === 'n') document.getElementById('btn-naselja').click();
     if (e.key.toLowerCase() === 'o') document.getElementById('btn-focus').click();
+    if (e.key.toLowerCase() === 'k') document.getElementById('btn-clubs').click();
   });
 });
 
