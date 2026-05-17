@@ -365,6 +365,89 @@ aside h2 .meta { font-family: 'JetBrains Mono', monospace; font-size: 10px; lett
 .club-popup .club-links { margin-top: 8px; padding-top: 6px; border-top: 1px dashed var(--line); font-size: 11px; }
 .club-popup .club-links a { color: var(--accent-2); text-decoration: none; }
 .club-popup .club-links a:hover { text-decoration: underline; }
+.club-popup .club-details-btn {
+  display: block; margin-top: 10px; padding: 7px 10px;
+  background: var(--bg-3); color: var(--ink); border: 1px solid var(--line);
+  border-radius: 4px; text-align: center; font-size: 11px; cursor: pointer;
+  font-family: inherit; width: 100%; transition: all 0.15s;
+}
+.club-popup .club-details-btn:hover { background: var(--accent-2); color: #fff; border-color: var(--accent-2); }
+
+/* Rich-card modal — opens on "Sve detalje" button click in popup */
+.club-modal-backdrop {
+  position: fixed; inset: 0; background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px); z-index: 999;
+  display: none; align-items: center; justify-content: center;
+}
+.club-modal-backdrop.open { display: flex; }
+.club-modal {
+  background: var(--bg-2); border: 1px solid var(--line); border-radius: 8px;
+  max-width: 560px; width: calc(100% - 32px); max-height: calc(100vh - 64px);
+  overflow-y: auto; box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  scrollbar-width: thin; scrollbar-color: var(--line) transparent;
+}
+.club-modal .cm-head {
+  display: flex; gap: 14px; align-items: center; padding: 18px 20px 14px;
+  border-bottom: 1px solid var(--line); position: sticky; top: 0;
+  background: var(--bg-2); z-index: 2;
+}
+.club-modal .cm-logo {
+  width: 56px; height: 56px; object-fit: contain;
+  background: rgba(255,255,255,0.08); border-radius: 6px; padding: 4px; flex-shrink: 0;
+}
+.club-modal .cm-title { flex: 1; min-width: 0; }
+.club-modal .cm-name { font-size: 16px; font-weight: 600; color: var(--ink); line-height: 1.25; }
+.club-modal .cm-short { font-size: 11px; color: var(--muted); margin-top: 3px; }
+.club-modal .cm-close {
+  background: transparent; border: 1px solid var(--line); color: var(--muted);
+  border-radius: 4px; padding: 4px 9px; cursor: pointer; font-family: inherit;
+  font-size: 16px; line-height: 1; transition: all 0.15s;
+}
+.club-modal .cm-close:hover { background: var(--bg-3); color: var(--ink); }
+.club-modal .cm-section { padding: 14px 20px; border-bottom: 1px solid var(--line); }
+.club-modal .cm-section:last-child { border-bottom: 0; }
+.club-modal .cm-section h3 {
+  font-size: 10px; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.08em; color: var(--muted); margin: 0 0 10px;
+}
+.club-modal .cm-row {
+  display: flex; justify-content: space-between; gap: 12px;
+  padding: 5px 0; font-size: 12px; align-items: flex-start;
+}
+.club-modal .cm-row .k {
+  color: var(--muted); font-size: 10.5px; text-transform: uppercase;
+  letter-spacing: 0.04em; flex-shrink: 0; min-width: 90px;
+}
+.club-modal .cm-row .v { color: var(--text); text-align: right; word-break: break-word; }
+.club-modal .cm-row .v a { color: var(--accent-2); text-decoration: none; }
+.club-modal .cm-row .v a:hover { text-decoration: underline; }
+.club-modal .cm-tag {
+  display: inline-block; padding: 1px 6px; border-radius: 3px;
+  background: var(--bg-3); border: 1px solid var(--line);
+  font-size: 9.5px; color: var(--muted); margin-left: 5px;
+  text-transform: uppercase; letter-spacing: 0.05em;
+}
+.club-modal .cm-tier-chip {
+  display: inline-block; padding: 2px 8px; border-radius: 3px;
+  font-size: 10px; font-weight: 600; color: #fff;
+}
+.club-modal .cm-league-block { margin-bottom: 10px; padding-bottom: 8px; border-bottom: 1px dashed var(--line); }
+.club-modal .cm-league-block:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: 0; }
+.club-modal .cm-league-name { font-size: 12px; color: var(--ink); margin-bottom: 4px; }
+.club-modal .cm-season-pill {
+  display: inline-block; padding: 2px 7px; margin: 2px 4px 2px 0;
+  font-size: 10px; background: var(--bg-3); border: 1px solid var(--line);
+  border-radius: 10px; color: var(--text); font-variant-numeric: tabular-nums;
+}
+.club-modal .cm-socials { display: flex; gap: 8px; flex-wrap: wrap; }
+.club-modal .cm-socials a {
+  padding: 6px 12px; background: var(--bg-3); border: 1px solid var(--line);
+  border-radius: 4px; color: var(--text); font-size: 11px; text-decoration: none;
+  transition: all 0.15s;
+}
+.club-modal .cm-socials a:hover { background: var(--accent-2); color: #fff; border-color: var(--accent-2); }
+.club-modal .cm-aliases-list { display: flex; flex-wrap: wrap; gap: 5px; }
+.club-modal .cm-empty { color: var(--muted); font-style: italic; font-size: 11px; }
 </style>
 </head>
 <body>
@@ -480,6 +563,10 @@ aside h2 .meta { font-family: 'JetBrains Mono', monospace; font-size: 10px; lett
     </div>
   </aside>
 </main>
+
+<div class="club-modal-backdrop" id="club-modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="club-modal" id="club-modal"></div>
+</div>
 
 <script id="hr-data" type="application/json">__GEOJSON__</script>
 <script id="hr-zup-data" type="application/json">__GEOJSON_ZUP__</script>
@@ -838,10 +925,184 @@ function addClubsLayers() {
         ${p.president ? `<div class="club-row"><span class="k">Predsjednik</span><span class="v">${p.president}</span></div>` : ''}
         ${p.address ? `<div class="club-row"><span class="k">Adresa</span><span class="v">${p.address}</span></div>` : ''}
         ${links.length ? `<div class="club-links">${links.join(' · ')}</div>` : ''}
+        <button class="club-details-btn" data-club-id="${p.id}">Sve detalje →</button>
       </div>`;
     clubsPopup = new maplibregl.Popup({offset: 12, maxWidth: '320px', className: 'club-popup-wrap'})
       .setLngLat(coords).setHTML(html).addTo(map);
+    // Wire the "Sve detalje" button — popup HTML is rendered after addTo so
+    // we attach the listener now (querying the popup's DOM). We pass the
+    // ORIGINAL feature from window._clubsData (not e.features[0].properties)
+    // because MapLibre serializes nested arrays/objects to JSON strings and
+    // would lose the structured seasons / aliases / source_ids fields.
+    const popupEl = clubsPopup.getElement();
+    const detailsBtn = popupEl && popupEl.querySelector('.club-details-btn');
+    if (detailsBtn) detailsBtn.addEventListener('click', () => {
+      const orig = window._clubsData && window._clubsData.features.find(
+        x => (x.id ?? x.properties.id) === (f.id ?? p.id));
+      const props = orig ? orig.properties : p;
+      const [lng, lat] = (orig ? orig.geometry.coordinates : coords);
+      openClubModal({...props, _lat: lat, _lng: lng});
+    });
   });
+}
+
+// ── Rich-card modal ────────────────────────────────────────────────────────
+// Maps tier (1..8) -> color used in the small chip beside league name.
+const TIER_CHIP_COLOR = {
+  1:'#d4322f',2:'#e8853c',3:'#e2b94f',4:'#a8c256',
+  5:'#5fa8a8',6:'#5b8aaa',7:'#7e7eb8',8:'#8d99ae'
+};
+
+function _esc(s) {
+  return String(s).replace(/[&<>"']/g, c =>
+    ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+// Pretty-print a season string. SofaScore uses "25/26" (year). Hrnogomet uses
+// opaque ids like "hrnogomet-season-998" — strip the prefix to show "#998".
+function _fmtSeason(s) {
+  if (!s) return '';
+  const m = String(s).match(/^hrnogomet-season-(\d+)$/);
+  if (m) return `#${m[1]}`;
+  return s;
+}
+
+function _row(k, v) {
+  if (v == null || v === '') return '';
+  return `<div class="cm-row"><span class="k">${_esc(k)}</span><span class="v">${v}</span></div>`;
+}
+
+function _rowText(k, v) { return _row(k, v == null || v === '' ? '' : _esc(v)); }
+
+function _section(title, bodyHtml) {
+  if (!bodyHtml) return '';
+  return `<div class="cm-section"><h3>${_esc(title)}</h3>${bodyHtml}</div>`;
+}
+
+function openClubModal(p) {
+  const modal = document.getElementById('club-modal');
+  const backdrop = document.getElementById('club-modal-backdrop');
+
+  // ── Header ───────────────────────────────────────────────────────────────
+  const shortDiff = p.short_name && p.short_name !== p.canonical_name ? p.short_name : null;
+  const headHtml = `
+    <div class="cm-head">
+      <img class="cm-logo" src="logos/${_esc(p.slug)}.png" onerror="this.style.display='none'" alt="">
+      <div class="cm-title">
+        <div class="cm-name">${_esc(p.canonical_name)}</div>
+        ${shortDiff ? `<div class="cm-short">${_esc(shortDiff)} · ${_esc(p.slug)}</div>` : `<div class="cm-short">${_esc(p.slug)}</div>`}
+      </div>
+      <button class="cm-close" id="cm-close" aria-label="Zatvori">✕</button>
+    </div>`;
+
+  // ── Sezone (grouped by league) ──────────────────────────────────────────
+  let seasonsHtml = '';
+  if (p.seasons && p.seasons.length) {
+    const byLeague = new Map();
+    for (const s of p.seasons) {
+      const key = `${s.tier ?? 99}|${s.league || ''}`;
+      if (!byLeague.has(key)) byLeague.set(key, { league: s.league, tier: s.tier, county: s.league_county, seasons: [] });
+      byLeague.get(key).seasons.push(s);
+    }
+    const blocks = [...byLeague.values()]
+      .sort((a, b) => (a.tier ?? 99) - (b.tier ?? 99))
+      .map(g => {
+        const chipColor = TIER_CHIP_COLOR[g.tier] || '#8d99ae';
+        const tierChip = g.tier ? `<span class="cm-tier-chip" style="background:${chipColor}">T${g.tier}</span>` : '';
+        const countyTag = g.county ? `<span class="cm-tag">${_esc(g.county)}</span>` : '';
+        const pills = g.seasons.map(s => {
+          const lbl = _fmtSeason(s.season) || '—';
+          const src = s.source ? ` <span class="cm-tag">${_esc(s.source)}</span>` : '';
+          return `<span class="cm-season-pill">${_esc(lbl)}${src}</span>`;
+        }).join('');
+        return `<div class="cm-league-block">
+          <div class="cm-league-name">${tierChip} ${_esc(g.league || '—')}${countyTag}</div>
+          <div>${pills}</div>
+        </div>`;
+      }).join('');
+    seasonsHtml = blocks;
+  }
+
+  // ── Lokacija ────────────────────────────────────────────────────────────
+  const lat = p.lat, lng = p.lng;  // properties on the original feature won't have lat/lng (stripped) — we'll set them in caller
+  let lokacijaRows = '';
+  lokacijaRows += _rowText('Grad', p.city);
+  lokacijaRows += _rowText('Županija', p.county);
+  lokacijaRows += _rowText('Adresa', p.address);
+  if (p._lng != null && p._lat != null) {
+    const mapsUrl = `https://www.openstreetmap.org/?mlat=${p._lat}&mlon=${p._lng}#map=16/${p._lat}/${p._lng}`;
+    lokacijaRows += _row('Koordinate',
+      `<a href="${mapsUrl}" target="_blank" rel="noopener">${p._lat.toFixed(5)}, ${p._lng.toFixed(5)}</a>`);
+  }
+
+  // ── Stadion / Klub ───────────────────────────────────────────────────────
+  let stadionRows = '';
+  stadionRows += _rowText('Stadion', p.stadium_name);
+  if (p.stadium_capacity) stadionRows += _row('Kapacitet', Number(p.stadium_capacity).toLocaleString('hr'));
+  if (p.founded_year) stadionRows += _row('Osnovan', _esc(p.founded_year));
+
+  // ── Kontakt ──────────────────────────────────────────────────────────────
+  let kontaktRows = '';
+  if (p.website) kontaktRows += _row('Web', `<a href="${_esc(p.website)}" target="_blank" rel="noopener">${_esc(p.website)}</a>`);
+  if (p.email)   kontaktRows += _row('Email', `<a href="mailto:${_esc(p.email)}">${_esc(p.email)}</a>`);
+  if (p.phone) {
+    const kindTag = p.phone_kind ? `<span class="cm-tag">${_esc(p.phone_kind)}</span>` : '';
+    const tel = p.phone_e164 || p.phone;
+    kontaktRows += _row('Telefon', `<a href="tel:${_esc(tel)}">${_esc(p.phone)}</a>${kindTag}`);
+  }
+  if (p.president) kontaktRows += _rowText('Predsjednik', p.president);
+
+  // ── Društvene mreže ─────────────────────────────────────────────────────
+  const socials = [];
+  if (p.fb_url) socials.push(`<a href="${_esc(p.fb_url)}" target="_blank" rel="noopener">Facebook</a>`);
+  if (p.ig_url) socials.push(`<a href="${_esc(p.ig_url)}" target="_blank" rel="noopener">Instagram</a>`);
+  if (p.x_url)  socials.push(`<a href="${_esc(p.x_url)}" target="_blank" rel="noopener">X / Twitter</a>`);
+  const socialsHtml = socials.length ? `<div class="cm-socials">${socials.join('')}</div>` : '';
+
+  // ── Aliasi ──────────────────────────────────────────────────────────────
+  let aliasesHtml = '';
+  if (p.aliases && p.aliases.length) {
+    aliasesHtml = `<div class="cm-aliases-list">` + p.aliases.map(a =>
+      `<span class="cm-season-pill">${_esc(a.alias)}<span class="cm-tag">${_esc(a.source)}</span></span>`
+    ).join('') + `</div>`;
+  }
+
+  // ── Vanjski izvori (sofascore-id, hrnogomet-id) ─────────────────────────
+  let sourceIdsHtml = '';
+  if (p.source_ids && p.source_ids.length) {
+    sourceIdsHtml = p.source_ids.map(s => {
+      let linked = _esc(s.id);
+      if (s.source === 'sofascore-id') linked = `<a href="https://www.sofascore.com/team/football/x/${_esc(s.id)}" target="_blank" rel="noopener">${_esc(s.id)}</a>`;
+      return _row(s.source, linked);
+    }).join('');
+  }
+
+  // ── Meta ────────────────────────────────────────────────────────────────
+  let metaRows = '';
+  if (p.notes) metaRows += _rowText('Bilješke', p.notes);
+  if (p.created_at) metaRows += _rowText('Dodano', p.created_at);
+  if (p.updated_at) metaRows += _rowText('Ažurirano', p.updated_at);
+
+  modal.innerHTML = headHtml
+    + _section('Sezone / lige', seasonsHtml)
+    + _section('Lokacija', lokacijaRows)
+    + _section('Stadion', stadionRows)
+    + _section('Kontakt', kontaktRows)
+    + _section('Društvene mreže', socialsHtml)
+    + _section('Aliasi', aliasesHtml)
+    + _section('Vanjski izvori', sourceIdsHtml)
+    + _section('Meta', metaRows);
+
+  backdrop.classList.add('open');
+  backdrop.setAttribute('aria-hidden', 'false');
+  const closeBtn = document.getElementById('cm-close');
+  if (closeBtn) closeBtn.addEventListener('click', closeClubModal);
+}
+
+function closeClubModal() {
+  const backdrop = document.getElementById('club-modal-backdrop');
+  backdrop.classList.remove('open');
+  backdrop.setAttribute('aria-hidden', 'true');
 }
 
 function setClubsVisibility(show) {
@@ -1327,8 +1588,18 @@ map.on('load', () => {
   // Initialize style-button active state to reflect persisted theme.
   document.getElementById('btn-style').classList.toggle('active', !dark);
 
+  // Close rich-card modal on ESC or backdrop click. Backdrop wiring is set
+  // once here (the modal HTML is static, only its inner content is replaced).
+  document.getElementById('club-modal-backdrop').addEventListener('click', e => {
+    if (e.target.id === 'club-modal-backdrop') closeClubModal();
+  });
+
   document.addEventListener('keydown', e => {
     if (e.target.tagName === 'INPUT') return;
+    if (e.key === 'Escape' && document.getElementById('club-modal-backdrop').classList.contains('open')) {
+      closeClubModal();
+      return;
+    }
     if (e.key.toLowerCase() === 'c') colorBtn.click();
     if (e.key.toLowerCase() === 'l') document.getElementById('btn-style').click();
     if (e.key.toLowerCase() === 'f') document.getElementById('btn-fit').click();
