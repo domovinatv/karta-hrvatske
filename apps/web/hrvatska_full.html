@@ -1067,15 +1067,30 @@ function openClubModal(p) {
     ).join('') + `</div>`;
   }
 
-  // ── Vanjski izvori (sofascore-id, hrnogomet-id) ─────────────────────────
+  // ── Vanjski izvori (sofascore-id, hrnogomet-id, semafor_url) ────────────
+  // Linkable: SofaScore → /team/football/{slug}/{id} (slug se ignorira, ID određuje klub)
+  //           semafor    → već puni URL iz sibling DB
+  // Non-linkable: hrnogomet — Flutter SPA bez deep-link rute. Prikazujemo
+  //   samo ID kao referencu (može se ručno pretražiti na hrnogomet.hr).
   let sourceIdsHtml = '';
+  const sourceLinks = [];
   if (p.source_ids && p.source_ids.length) {
     sourceIdsHtml = p.source_ids.map(s => {
-      let linked = _esc(s.id);
-      if (s.source === 'sofascore-id') linked = `<a href="https://www.sofascore.com/team/football/x/${_esc(s.id)}" target="_blank" rel="noopener">${_esc(s.id)}</a>`;
-      return _row(s.source, linked);
+      if (s.source === 'sofascore-id') {
+        const url = `https://www.sofascore.com/team/football/${_esc(p.slug)}/${_esc(s.id)}`;
+        sourceLinks.push(`<a href="${url}" target="_blank" rel="noopener">SofaScore</a>`);
+        return _row(s.source, `<a href="${url}" target="_blank" rel="noopener">${_esc(s.id)}</a>`);
+      }
+      return _row(s.source, _esc(s.id));
     }).join('');
   }
+  if (p.semafor_url) {
+    sourceLinks.push(`<a href="${_esc(p.semafor_url)}" target="_blank" rel="noopener">HNS semafor</a>`);
+    sourceIdsHtml += _row('semafor', `<a href="${_esc(p.semafor_url)}" target="_blank" rel="noopener">${_esc(p.semafor_url)}</a>`);
+  }
+  const sourceLinksHtml = sourceLinks.length
+    ? `<div class="cm-socials">${sourceLinks.join('')}</div>` + sourceIdsHtml
+    : sourceIdsHtml;
 
   // ── Meta ────────────────────────────────────────────────────────────────
   let metaRows = '';
@@ -1090,7 +1105,7 @@ function openClubModal(p) {
     + _section('Kontakt', kontaktRows)
     + _section('Društvene mreže', socialsHtml)
     + _section('Aliasi', aliasesHtml)
-    + _section('Vanjski izvori', sourceIdsHtml)
+    + _section('Vanjski izvori', sourceLinksHtml)
     + _section('Meta', metaRows);
 
   backdrop.classList.add('open');

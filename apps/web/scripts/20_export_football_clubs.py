@@ -45,6 +45,7 @@ CLUB_COLS = [
     "website", "email", "phone", "phone_e164", "phone_kind",
     "president",
     "fb_url", "ig_url", "x_url",
+    "semafor_url",
     "notes", "created_at", "updated_at",
     "lat", "lng",
 ]
@@ -148,7 +149,7 @@ def main() -> None:
     coverage_fields = [
         "short_name", "address", "stadium_name", "stadium_capacity", "founded_year",
         "website", "email", "phone", "president",
-        "fb_url", "ig_url", "x_url",
+        "fb_url", "ig_url", "x_url", "semafor_url",
         "seasons", "aliases", "source_ids",
     ]
     print("Coverage:")
