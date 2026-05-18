@@ -962,6 +962,15 @@ function addNaseljaLayers() {
   // Hover state on naselja
   let hoveredNas = null;
   map.on('mousemove', 'hr-nas-fill', e => {
+    if (showClubs) {
+      // Clear any leftover hover when Clubs gets toggled mid-hover
+      if (hoveredNas !== null) {
+        map.setFeatureState({source:'hr-nas', id:hoveredNas}, {hover:false});
+        hoveredNas = null;
+        map.getCanvas().style.cursor = '';
+      }
+      return;
+    }
     if (!e.features.length) return;
     if (hoveredNas !== null) map.setFeatureState({source:'hr-nas', id:hoveredNas}, {hover:false});
     hoveredNas = e.features[0].id;
@@ -974,6 +983,7 @@ function addNaseljaLayers() {
     map.getCanvas().style.cursor = '';
   });
   map.on('click', 'hr-nas-fill', e => {
+    if (showClubs) return;  // Clubs mode: only club clicks register
     if (!e.features.length) return;
     const f = e.features[0];
     const p = f.properties;
@@ -1409,9 +1419,19 @@ map.on('load', () => {
   // Hide loading screen
   document.getElementById('loading').classList.add('gone');
 
-  // Hover state
+  // Hover state. When Clubs layer is on, JLS is inert (only club circles
+  // accept hover + click) so the user can scan clubs without accidental
+  // JLS selection. Hover/click suppression mirrors the click guard below.
   let hovered = null;
   map.on('mousemove', 'hr-fill', e => {
+    if (showClubs) {
+      if (hovered !== null) {
+        map.setFeatureState({source:'hr', id:hovered}, {hover:false});
+        hovered = null;
+        map.getCanvas().style.cursor = '';
+      }
+      return;
+    }
     if (!e.features.length) return;
     if (hovered !== null) map.setFeatureState({source:'hr', id:hovered}, {hover:false});
     hovered = e.features[0].id;
@@ -1424,12 +1444,13 @@ map.on('load', () => {
     map.getCanvas().style.cursor = '';
   });
 
-  // Click → select. JLS clicks are suppressed only when a naselje is actually
-  // rendered under the click point — i.e. naselja layer is on AND the user is
-  // zoomed in past the naselja minzoom AND there is a naselje feature beneath
-  // the cursor. At lower zooms (or over sea / gaps) clicking JLS still works.
+  // Click → select. JLS clicks are suppressed when (a) Clubs layer is on
+  // (clubs-only mode) or (b) a naselje is rendered under the click point —
+  // i.e. naselja layer is on AND zoomed past its minzoom AND there is a
+  // naselje feature beneath the cursor. Otherwise clicking JLS works.
   let selected = null;
   map.on('click', 'hr-fill', e => {
+    if (showClubs) return;  // Clubs mode: only club clicks register
     if (!e.features.length) return;
     if (showNaselja && naseljaLoaded && map.getLayer('hr-nas-fill')) {
       const nasUnder = map.queryRenderedFeatures(e.point, { layers: ['hr-nas-fill'] });
