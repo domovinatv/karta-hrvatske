@@ -692,6 +692,9 @@ aside h2 .meta { font-family: 'JetBrains Mono', monospace; font-size: 10px; lett
       <button class="ctrl-btn" id="btn-clubs" title="Prikaži/sakrij nogometne klubove (lazy-loaded)">
         ⚽ Klubovi <span class="key">K</span>
       </button>
+      <button class="ctrl-btn" id="btn-orto" title="Prikaži/sakrij ortofoto sloj (Esri World Imagery)">
+        🛰 Ortofoto <span class="key">S</span>
+      </button>
       <button class="ctrl-btn" id="btn-focus" title="Sakrij sve osim odabrane JLS i naselja unutar nje">
         ◎ Samo odabrana JLS <span class="key">O</span>
       </button>
@@ -729,6 +732,7 @@ aside h2 .meta { font-family: 'JetBrains Mono', monospace; font-size: 10px; lett
       JLS granice: <a href="https://geoportal.dgu.hr/">DGU</a> Registar prostornih jedinica (rpj:jls) ·
       Tipovi (Grad/Općina): <a href="https://podaci.dzs.hr/">DZS</a> Census 2021<br>
       Basemap: <a href="https://openfreemap.org">OpenFreeMap</a> · OSM (ODbL) ·
+      Ortofoto: <a href="https://www.esri.com/en-us/legal/terms/data-attributions">Esri</a> World Imagery (Maxar, Earthstar Geographics) ·
       Library: MapLibre GL JS 4.7 (BSD-2)
     </div>
   </div>
@@ -815,10 +819,44 @@ let dark = initialTheme === 'dark';
 let showZupBorders = true;
 let showJlsBorders = true;
 let showNaselja = false;
+let showOrto = false;
 let focusMode = false;
 let naseljaLoaded = false;
 let naseljaLoading = false;
 window._selectedNaselje = null;
+
+// JLS / naselje fill-opacity expressions — switched between two presets
+// depending on whether ortofoto raster is showing underneath. When orto is
+// on, polygons are made translucent so satellite imagery is the dominant
+// visual; when off, the regular saturated polygons return.
+const JLS_FILL_OPACITY_DEFAULT = [
+  'case',
+  ['boolean', ['feature-state', 'hover'], false], 0.5,
+  ['boolean', ['feature-state', 'focus_hidden'], false], 0.0,
+  ['boolean', ['feature-state', 'selected'], false], 0.75,
+  ['boolean', ['feature-state', 'dimmed'], false], 0.08,
+  0.40
+];
+const JLS_FILL_OPACITY_ORTO = [
+  'case',
+  ['boolean', ['feature-state', 'hover'], false], 0.28,
+  ['boolean', ['feature-state', 'focus_hidden'], false], 0.0,
+  ['boolean', ['feature-state', 'selected'], false], 0.22,
+  ['boolean', ['feature-state', 'dimmed'], false], 0.04,
+  0.14
+];
+const NAS_FILL_OPACITY_DEFAULT = [
+  'case',
+  ['boolean', ['feature-state', 'selected'], false], 0.85,
+  ['boolean', ['feature-state', 'hover'], false], 0.7,
+  0.45
+];
+const NAS_FILL_OPACITY_ORTO = [
+  'case',
+  ['boolean', ['feature-state', 'selected'], false], 0.40,
+  ['boolean', ['feature-state', 'hover'], false], 0.30,
+  0.15
+];
 
 function fillColorExpr() {
   if (colorMode === 'type') {
@@ -850,14 +888,8 @@ function addJlsLayers() {
       // in focus mode reveals it as a discovery cue (cursor:pointer + faint
       // fill). The layer is never filter-removed in focus mode so clicks on
       // neighbouring JLS still register and switch the focus.
-      'fill-opacity': [
-        'case',
-        ['boolean', ['feature-state', 'hover'], false], 0.5,
-        ['boolean', ['feature-state', 'focus_hidden'], false], 0.0,
-        ['boolean', ['feature-state', 'selected'], false], 0.75,
-        ['boolean', ['feature-state', 'dimmed'], false], 0.08,
-        0.40
-      ],
+      // Opacity preset switches when ortofoto overlay is on (see setOrtofotoOn).
+      'fill-opacity': showOrto ? JLS_FILL_OPACITY_ORTO : JLS_FILL_OPACITY_DEFAULT,
     }
   });
 
@@ -921,6 +953,50 @@ function addJlsLayers() {
   });
 }
 
+// Ortofoto raster — Esri World Imagery (free public XYZ tiles, sub-meter in
+// HR cities, ~1 m rural). Inserted with beforeId='hr-fill' so the raster
+// covers all basemap (OpenFreeMap / Carto dark-matter) layers but our JLS /
+// naselja / clubs vectors still render on top. When ortofoto is on, the
+// polygon fill-opacity drops to ORTO presets so imagery shows through.
+//
+// Alternative HR-authoritative source (not used by default): DGU DOF WMS at
+// https://geoportal.dgu.hr/services/inspire/orthophoto_2019-2020/wms . WMS
+// is bbox-based so slower for interactive panning; left as a swap option.
+function addOrtofotoLayers() {
+  if (map.getSource('hr-orto')) return;
+  map.addSource('hr-orto', {
+    type: 'raster',
+    tiles: ['https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'],
+    tileSize: 256,
+    maxzoom: 19,
+    attribution: 'Imagery © <a href="https://www.esri.com">Esri</a>, Maxar, Earthstar Geographics'
+  });
+  // Place below hr-fill so our vectors are on top. If hr-fill isn't there
+  // yet (race during style swap), append without beforeId — it lands on top
+  // and we re-add JLS layers afterwards which puts them back above.
+  const before = map.getLayer('hr-fill') ? 'hr-fill' : undefined;
+  map.addLayer({
+    id: 'hr-orto', type: 'raster', source: 'hr-orto',
+    layout: { visibility: showOrto ? 'visible' : 'none' },
+    paint: { 'raster-opacity': 1.0 }
+  }, before);
+}
+
+function setOrtofotoVisibility(show) {
+  if (map.getLayer('hr-orto')) {
+    map.setLayoutProperty('hr-orto', 'visibility', show ? 'visible' : 'none');
+  }
+  // Swap fill-opacity presets so polygons let imagery through when on.
+  if (map.getLayer('hr-fill')) {
+    map.setPaintProperty('hr-fill', 'fill-opacity',
+      show ? JLS_FILL_OPACITY_ORTO : JLS_FILL_OPACITY_DEFAULT);
+  }
+  if (map.getLayer('hr-nas-fill')) {
+    map.setPaintProperty('hr-nas-fill', 'fill-opacity',
+      show ? NAS_FILL_OPACITY_ORTO : NAS_FILL_OPACITY_DEFAULT);
+  }
+}
+
 // Naselja layers — only added once `naseljaLoaded` is true. Render fill +
 // thin line + name labels at higher zoom only (6759 features at low zoom = chaos).
 function addNaseljaLayers() {
@@ -934,12 +1010,7 @@ function addNaseljaLayers() {
     minzoom: 9,
     paint: {
       'fill-color': ['coalesce', ['get', 'nas_color'], ['get', 'color']],
-      'fill-opacity': [
-        'case',
-        ['boolean', ['feature-state', 'selected'], false], 0.85,
-        ['boolean', ['feature-state', 'hover'], false], 0.7,
-        0.45
-      ],
+      'fill-opacity': showOrto ? NAS_FILL_OPACITY_ORTO : NAS_FILL_OPACITY_DEFAULT,
     }
   });
   map.addLayer({
@@ -1802,6 +1873,14 @@ map.on('load', () => {
   }
   document.getElementById('btn-clubs').addEventListener('click', () => setClubsOn(!showClubs));
 
+  function setOrtoOn(on) {
+    showOrto = !!on;
+    document.getElementById('btn-orto').classList.toggle('active', showOrto);
+    if (!map.getSource('hr-orto')) addOrtofotoLayers();
+    setOrtofotoVisibility(showOrto);
+  }
+  document.getElementById('btn-orto').addEventListener('click', () => setOrtoOn(!showOrto));
+
   document.getElementById('btn-style').addEventListener('click', () => {
     dark = !dark;
     const nextTheme = dark ? 'dark' : 'light';
@@ -1832,6 +1911,9 @@ map.on('load', () => {
         addClubsLayers();
         setClubsVisibility(showClubs);
       }
+      // Re-add ortofoto raster + re-apply fill-opacity preset for the new style
+      addOrtofotoLayers();
+      setOrtofotoVisibility(showOrto);
       // Re-apply persistent UI states across style change
       if (map.getLayer('hr-line') && !showJlsBorders) {
         map.setLayoutProperty('hr-line', 'visibility', 'none');
@@ -1864,6 +1946,7 @@ map.on('load', () => {
     if (e.key.toLowerCase() === 'n') document.getElementById('btn-naselja').click();
     if (e.key.toLowerCase() === 'o') document.getElementById('btn-focus').click();
     if (e.key.toLowerCase() === 'k') document.getElementById('btn-clubs').click();
+    if (e.key.toLowerCase() === 's') document.getElementById('btn-orto').click();
   });
 
   // ── Mobile bottom sheet + FAB wiring ────────────────────────────────────
