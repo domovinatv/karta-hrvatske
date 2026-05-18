@@ -373,18 +373,34 @@ aside h2 .meta { font-family: 'JetBrains Mono', monospace; font-size: 10px; lett
 }
 .club-popup .club-details-btn:hover { background: var(--accent-2); color: #fff; border-color: var(--accent-2); }
 
-/* Rich-card modal — opens on "Sve detalje" button click in popup */
+/* Rich-card modal — opens on "Sve detalje" button click in popup.
+   Uses dvh (dynamic viewport height) instead of vh so iOS Safari's
+   collapsing address bar doesn't push the bottom of the modal under
+   the bar. Backdrop is padded by env(safe-area-inset-*) so the modal
+   stays inside the visible safe area (notch + home indicator). */
 .club-modal-backdrop {
-  position: fixed; inset: 0; background: rgba(0, 0, 0, 0.55);
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 100vh;
+  height: 100dvh;
+  background: rgba(0, 0, 0, 0.55);
   backdrop-filter: blur(4px); z-index: 999;
   display: none; align-items: center; justify-content: center;
+  padding: max(env(safe-area-inset-top), 16px)
+           max(env(safe-area-inset-right), 16px)
+           max(env(safe-area-inset-bottom), 16px)
+           max(env(safe-area-inset-left), 16px);
+  box-sizing: border-box;
 }
 .club-modal-backdrop.open { display: flex; }
 .club-modal {
   background: var(--bg-2); border: 1px solid var(--line); border-radius: 8px;
-  max-width: 560px; width: calc(100% - 32px); max-height: calc(100vh - 64px);
-  overflow-y: auto; box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  max-width: 560px; width: 100%;
+  max-height: 100%;
+  overflow-y: auto; -webkit-overflow-scrolling: touch;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
   scrollbar-width: thin; scrollbar-color: var(--line) transparent;
+  overscroll-behavior: contain;
 }
 .club-modal .cm-head {
   display: flex; gap: 14px; align-items: center; padding: 18px 20px 14px;
@@ -596,11 +612,8 @@ aside h2 .meta { font-family: 'JetBrains Mono', monospace; font-size: 10px; lett
   .maplibregl-ctrl-bottom-right { bottom: 110px !important; }
   .maplibregl-ctrl-bottom-left  { bottom: 110px !important; }
 
-  /* Club modal — close button reachable for thumbs */
-  .club-modal {
-    max-height: calc(100vh - 24px);
-    border-radius: 10px;
-  }
+  /* Club modal — thumb-friendly paddings (max-height handled by base via dvh) */
+  .club-modal { border-radius: 10px; }
   .club-modal .cm-head { padding: 16px 16px 12px; }
   .club-modal .cm-section { padding: 14px 16px; }
   .club-modal .cm-close { padding: 8px 12px; font-size: 18px; }
