@@ -448,6 +448,170 @@ aside h2 .meta { font-family: 'JetBrains Mono', monospace; font-size: 10px; lett
 .club-modal .cm-socials a:hover { background: var(--accent-2); color: #fff; border-color: var(--accent-2); }
 .club-modal .cm-aliases-list { display: flex; flex-wrap: wrap; gap: 5px; }
 .club-modal .cm-empty { color: var(--muted); font-style: italic; font-size: 11px; }
+
+/* ── Mobile bottom sheet + FAB ───────────────────────────────────────────
+   Hidden on desktop; activated by the @media block below. The sheet sits
+   fixed at the bottom of the viewport with a peek state (handle + tabs
+   visible, content offscreen) and an expanded state (~78vh). On select
+   events #detail is updated via a MutationObserver that auto-expands the
+   sheet on the Detalji tab — see notifyDetailUpdated() in JS. */
+.mobile-sheet {
+  display: none;
+  position: fixed; left: 0; right: 0; bottom: 0;
+  background: var(--bg-2);
+  border-top: 1px solid var(--line);
+  border-radius: 14px 14px 0 0;
+  box-shadow: 0 -10px 30px rgba(0,0,0,0.45);
+  z-index: 600;
+  height: 78vh; max-height: 78vh;
+  flex-direction: column;
+  transform: translateY(calc(100% - 100px));
+  transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+.mobile-sheet.open { transform: translateY(0); }
+.ms-handle {
+  display: flex; align-items: center; justify-content: center;
+  padding: 10px 12px 6px; cursor: pointer; flex-shrink: 0;
+  touch-action: none;
+}
+.ms-handle::before {
+  content: ""; width: 42px; height: 4px;
+  background: var(--line); border-radius: 2px;
+}
+.ms-tabs {
+  display: flex; gap: 4px;
+  padding: 2px 10px 10px;
+  border-bottom: 1px solid var(--line);
+  flex-shrink: 0;
+}
+.ms-tab {
+  flex: 1; padding: 11px 6px;
+  background: transparent; border: 1px solid transparent;
+  color: var(--muted); font-family: inherit; font-size: 12px; font-weight: 500;
+  border-radius: 8px; cursor: pointer;
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.ms-tab.active {
+  background: var(--bg-3); color: var(--ink); border-color: var(--line);
+}
+.ms-tab:disabled { opacity: 0.35; cursor: not-allowed; }
+.ms-panes { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+.ms-pane { display: none; }
+.ms-pane.active { display: block; }
+.ms-pane > h2 { display: none; }
+
+/* Layers FAB (mobile only) — replaces the wide .controls panel */
+.layers-fab {
+  display: none;
+  position: fixed; top: calc(env(safe-area-inset-top, 0px) + 56px); right: 12px;
+  width: 44px; height: 44px;
+  background: var(--overlay-strong); backdrop-filter: blur(8px);
+  border: 1px solid var(--line); border-radius: 10px;
+  color: var(--text); font-size: 18px; cursor: pointer; z-index: 700;
+  align-items: center; justify-content: center;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+.layers-fab:hover { background: var(--bg-3); border-color: var(--accent-2); }
+.layers-fab.active { border-color: var(--ui-accent); color: var(--ui-accent); }
+.layers-popover {
+  display: none;
+  position: fixed; top: calc(env(safe-area-inset-top, 0px) + 108px); right: 12px;
+  background: var(--overlay-strong); backdrop-filter: blur(12px);
+  border: 1px solid var(--line); border-radius: 10px;
+  padding: 8px; z-index: 700;
+  flex-direction: column; gap: 4px;
+  min-width: 230px; max-width: calc(100vw - 24px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+}
+.layers-popover.open { display: flex; }
+
+/* ── Mobile portrait overrides (≤640px) ────────────────────────────────── */
+@media (max-width: 640px) {
+  body { font-size: 13px; }
+
+  /* Compact one-line header — drop badges + subtitle */
+  header {
+    padding: 9px 14px;
+    gap: 8px;
+    flex-wrap: nowrap;
+  }
+  header h1 { font-size: 14px; gap: 7px; min-width: 0; }
+  header h1 .brand-word { font-size: 16px; letter-spacing: 0.05em; }
+  header h1 .context { font-size: 13px; white-space: nowrap;
+    overflow: hidden; text-overflow: ellipsis; }
+  header .subtitle, header .badges { display: none; }
+
+  /* Single-column: only the map; asides become source nodes for the sheet */
+  main { grid-template-columns: 1fr; grid-template-rows: 1fr; }
+  aside.left, aside.right { display: none; }
+
+  /* Hide the always-on controls panel (replaced by FAB → popover) */
+  .controls { display: none; }
+
+  /* No hover on touch; zoom-readout is desktop clutter on small screens */
+  .hover-info, .zoom-readout { display: none !important; }
+
+  /* Touch-friendly icon-btns lifted above the sheet peek */
+  .icon-btn {
+    width: 44px; height: 44px; font-size: 16px;
+    bottom: 118px;
+  }
+  .icon-btn.legend-toggle { left: 12px; }
+  .icon-btn.fineprint-toggle { right: 12px; }
+  .legend, .fineprint {
+    bottom: 170px;
+    max-width: calc(100vw - 24px);
+    font-size: 11px;
+  }
+
+  /* Reveal mobile chrome */
+  .mobile-sheet { display: flex; }
+  .layers-fab { display: inline-flex; }
+
+  /* Sheet pane content tweaks (children are reparented in JS) */
+  .ms-pane .search-box { padding: 12px 16px; border-bottom: 0; }
+  .ms-pane .search-box input { font-size: 16px; padding: 12px 12px; }
+  .ms-pane .jls-results { max-height: none; padding: 4px 0 8px; }
+  .ms-pane .jls-result-row { padding: 12px 16px; font-size: 13px; }
+  .ms-pane .statgrid { margin: 0; border-top: 1px solid var(--line); }
+  .ms-pane .stat { padding: 10px 12px; }
+  .ms-pane .stat-value { font-size: 17px; }
+  .ms-pane .zup-list { padding: 4px 0 16px; }
+  .ms-pane .zup-row { padding: 12px 18px; font-size: 13px; }
+  .ms-pane .detail-panel { padding: 18px 18px 32px; }
+  .ms-pane .detail-panel.empty { padding: 40px 24px; }
+  .ms-pane .detail-name { font-size: 21px; }
+  .ms-pane .detail-row { padding: 10px 0; }
+
+  /* Controls moved into popover — full-width buttons, no kbd hints */
+  .layers-popover .ctrl-btn {
+    min-width: 0; width: 100%; font-size: 12px;
+    padding: 12px 12px;
+  }
+  .layers-popover .ctrl-btn .key { display: none; }
+
+  /* MapLibre attribution + zoom controls above the sheet peek */
+  .maplibregl-ctrl-bottom-right { bottom: 110px !important; }
+  .maplibregl-ctrl-bottom-left  { bottom: 110px !important; }
+
+  /* Club modal — close button reachable for thumbs */
+  .club-modal {
+    max-height: calc(100vh - 24px);
+    border-radius: 10px;
+  }
+  .club-modal .cm-head { padding: 16px 16px 12px; }
+  .club-modal .cm-section { padding: 14px 16px; }
+  .club-modal .cm-close { padding: 8px 12px; font-size: 18px; }
+  .club-modal .cm-row .k { min-width: 78px; font-size: 10px; }
+}
+
+@media (max-width: 640px) and (orientation: landscape) {
+  /* Phone landscape: keep sheet usable but smaller; header even tighter */
+  header { padding: 6px 12px; }
+  .mobile-sheet { height: 70vh; max-height: 70vh; }
+}
 </style>
 </head>
 <body>
@@ -563,6 +727,27 @@ aside h2 .meta { font-family: 'JetBrains Mono', monospace; font-size: 10px; lett
     </div>
   </aside>
 </main>
+
+<!-- Mobile-only chrome (CSS hides on ≥641px). FAB opens popover with the
+     layer-toggle buttons (which are reparented out of .controls in JS).
+     Bottom sheet panes are reparent destinations for search-box/zup-list/
+     #detail; see setupMobileSheetDom() in JS. -->
+<button class="layers-fab" id="layers-fab" aria-label="Slojevi" title="Slojevi">☰</button>
+<div class="layers-popover" id="layers-popover" role="menu" aria-hidden="true"></div>
+
+<div class="mobile-sheet" id="mobile-sheet" aria-hidden="true">
+  <div class="ms-handle" id="ms-handle" role="button" tabindex="0" aria-label="Otvori / zatvori"></div>
+  <div class="ms-tabs" role="tablist">
+    <button class="ms-tab active" data-tab="pretraga" role="tab">🔍 Pretraga</button>
+    <button class="ms-tab" data-tab="zupanije" role="tab">🗺 Županije</button>
+    <button class="ms-tab" data-tab="detalji" role="tab" disabled>ℹ Detalji</button>
+  </div>
+  <div class="ms-panes">
+    <div class="ms-pane active" data-pane="pretraga" role="tabpanel"></div>
+    <div class="ms-pane" data-pane="zupanije" role="tabpanel"></div>
+    <div class="ms-pane" data-pane="detalji" role="tabpanel"></div>
+  </div>
+</div>
 
 <div class="club-modal-backdrop" id="club-modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true">
   <div class="club-modal" id="club-modal"></div>
@@ -1624,6 +1809,118 @@ map.on('load', () => {
     if (e.key.toLowerCase() === 'o') document.getElementById('btn-focus').click();
     if (e.key.toLowerCase() === 'k') document.getElementById('btn-clubs').click();
   });
+
+  // ── Mobile bottom sheet + FAB wiring ────────────────────────────────────
+  // The sheet/FAB DOM exists at all sizes but is CSS-hidden on desktop. We
+  // reparent the existing search-box / statgrid / zup-list / #detail nodes
+  // into the sheet panes, and the existing .controls children into the FAB
+  // popover. Event listeners on those nodes survive appendChild() because
+  // it reparents the same nodes (no clone). On rotate or DevTools resize
+  // the move is one-way (mobile-only); regular phone use never crosses
+  // 640px so this is fine.
+  const isMobile = () => window.matchMedia('(max-width: 640px)').matches;
+  const sheet = document.getElementById('mobile-sheet');
+  const sheetTabs = sheet ? [...sheet.querySelectorAll('.ms-tab')] : [];
+  const sheetPanes = sheet ? [...sheet.querySelectorAll('.ms-pane')] : [];
+  const sheetHandle = document.getElementById('ms-handle');
+  const fab = document.getElementById('layers-fab');
+  const popover = document.getElementById('layers-popover');
+
+  function setSheetOpen(open) {
+    if (!sheet) return;
+    sheet.classList.toggle('open', !!open);
+    sheet.setAttribute('aria-hidden', open ? 'false' : 'true');
+  }
+  function setSheetTab(name) {
+    sheetTabs.forEach(t => t.classList.toggle('active', t.dataset.tab === name));
+    sheetPanes.forEach(p => p.classList.toggle('active', p.dataset.pane === name));
+  }
+
+  if (sheet && isMobile()) {
+    const paneSearch = sheet.querySelector('[data-pane="pretraga"]');
+    const paneZup = sheet.querySelector('[data-pane="zupanije"]');
+    const paneDet = sheet.querySelector('[data-pane="detalji"]');
+    const leftAside = document.querySelector('aside.left');
+    const rightAside = document.querySelector('aside.right');
+    const searchBox = leftAside && leftAside.querySelector('.search-box');
+    const statgrid = leftAside && leftAside.querySelector('.statgrid');
+    const zupList = leftAside && leftAside.querySelector('.zup-list');
+    const detailEl = rightAside && rightAside.querySelector('#detail');
+    if (searchBox) paneSearch.appendChild(searchBox);
+    if (statgrid) paneSearch.appendChild(statgrid);
+    if (zupList) paneZup.appendChild(zupList);
+    if (detailEl) paneDet.appendChild(detailEl);
+  }
+
+  if (popover && fab) {
+    const controls = document.querySelector('.controls');
+    if (controls && isMobile()) {
+      [...controls.children].forEach(child => popover.appendChild(child));
+    }
+    fab.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const open = popover.classList.toggle('open');
+      fab.classList.toggle('active', open);
+      popover.setAttribute('aria-hidden', open ? 'false' : 'true');
+    });
+    // Tap on any control inside popover closes it (action consumed)
+    popover.addEventListener('click', (e) => {
+      if (e.target.closest('.ctrl-btn')) {
+        popover.classList.remove('open');
+        fab.classList.remove('active');
+        popover.setAttribute('aria-hidden', 'true');
+      }
+    });
+    // Tap outside closes
+    document.addEventListener('click', (e) => {
+      if (!popover.classList.contains('open')) return;
+      if (popover.contains(e.target) || fab.contains(e.target)) return;
+      popover.classList.remove('open');
+      fab.classList.remove('active');
+      popover.setAttribute('aria-hidden', 'true');
+    });
+  }
+
+  if (sheet) {
+    sheetTabs.forEach(t => t.addEventListener('click', () => {
+      if (t.disabled) return;
+      setSheetTab(t.dataset.tab);
+      setSheetOpen(true);
+    }));
+    if (sheetHandle) {
+      const toggle = () => setSheetOpen(!sheet.classList.contains('open'));
+      sheetHandle.addEventListener('click', toggle);
+      sheetHandle.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+      });
+    }
+    const searchInput = document.getElementById('search');
+    if (searchInput) {
+      searchInput.addEventListener('focus', () => {
+        if (isMobile()) { setSheetTab('pretraga'); setSheetOpen(true); }
+      });
+    }
+    // Watch the detail panel: empty-class flips control the Detalji tab.
+    // When detail populates (className loses 'empty'), enable + auto-switch
+    // on mobile. Covers selectJLS / naselje click / search-driven updates.
+    const detailEl = document.getElementById('detail');
+    if (detailEl) {
+      const detTab = sheet.querySelector('.ms-tab[data-tab="detalji"]');
+      const sync = () => {
+        const isEmpty = detailEl.classList.contains('empty');
+        if (detTab) detTab.disabled = isEmpty;
+        if (!isEmpty && isMobile()) { setSheetTab('detalji'); setSheetOpen(true); }
+        if (isEmpty && isMobile()) {
+          // Reset (e.g. Fit Hrvatska): collapse + go back to Pretraga
+          setSheetTab('pretraga');
+          setSheetOpen(false);
+        }
+      };
+      new MutationObserver(sync).observe(detailEl, {
+        attributes: true, attributeFilter: ['class'], childList: true
+      });
+    }
+  }
 });
 
 function walkCoords(g, cb) {
