@@ -1131,7 +1131,7 @@ function addClubsLayers() {
     // click landed over sea / outside any JLS (e.g. coastline rounding).
     if (window._selectJLS && map.getLayer('hr-fill')) {
       const jlsUnder = map.queryRenderedFeatures(e.point, { layers: ['hr-fill'] });
-      if (jlsUnder.length) window._selectJLS(jlsUnder[0].id, { silent: true });
+      if (jlsUnder.length) window._selectJLS(jlsUnder[0].id, { silent: true, skipFit: true });
     }
     // Wire the "Sve detalje" button — popup HTML is rendered after addTo so
     // we attach the listener now (querying the popup's DOM). We pass the
