@@ -1124,6 +1124,15 @@ function addClubsLayers() {
       </div>`;
     clubsPopup = new maplibregl.Popup({offset: 12, maxWidth: '320px', className: 'club-popup-wrap'})
       .setLngLat(coords).setHTML(html).addTo(map);
+    // Highlight the JLS containing the clicked club: visual selection +
+    // focus mode + naselja overlay, but WITHOUT updating #detail (so the
+    // mobile bottom sheet stays out of the way). queryRenderedFeatures on
+    // hr-fill at the click point returns the underlying JLS. Skipped if the
+    // click landed over sea / outside any JLS (e.g. coastline rounding).
+    if (window._selectJLS && map.getLayer('hr-fill')) {
+      const jlsUnder = map.queryRenderedFeatures(e.point, { layers: ['hr-fill'] });
+      if (jlsUnder.length) window._selectJLS(jlsUnder[0].id, { silent: true });
+    }
     // Wire the "Sve detalje" button — popup HTML is rendered after addTo so
     // we attach the listener now (querying the popup's DOM). We pass the
     // ORIGINAL feature from window._clubsData (not e.features[0].properties)
@@ -1459,7 +1468,13 @@ map.on('load', () => {
     selectJLS(e.features[0].id);
   });
 
-  function selectJLS(id) {
+  // opts.silent: skip #detail update (so the bottom sheet doesn't auto-open
+  // via the MutationObserver). Used by the club click handler — we want the
+  // JLS visually highlighted + focus + naselja, but the bottom sheet stays
+  // out of the way because we're in clubs-only mode.
+  // opts.skipFit: skip the fitBounds zoom (currently unused; kept for symmetry).
+  function selectJLS(id, opts) {
+    opts = opts || {};
     if (selected !== null) map.setFeatureState({source:'hr', id:selected}, {selected:false});
     selected = id;
     map.setFeatureState({source:'hr', id}, {selected:true});
@@ -1467,28 +1482,35 @@ map.on('load', () => {
     const f = data.features.find(x => x.id === id);
     const p = f.properties;
 
-    document.getElementById('detail').className = 'detail-panel';
-    document.getElementById('detail').innerHTML = `
-      <div class="detail-name" style="border-left:3px solid ${p.color}; padding-left:10px;">${p.name}</div>
-      <div class="detail-code">${p.name_full || p.shapeName || (p.type + ' ' + p.name)}</div>
-      <div class="detail-row"><span class="k">Tip</span><span class="v">${p.type}</span></div>
-      <div class="detail-row"><span class="k">Županija</span><span class="v">${p.zupanija}</span></div>
-      ${p.roa ? `<div class="detail-row"><span class="k">Sjedište</span><span class="v">${p.roa}</span></div>` : ''}
-      ${p.maticni_broj ? `<div class="detail-row"><span class="k">Matični broj</span><span class="v">${p.maticni_broj}</span></div>` : ''}
-      <div class="detail-row"><span class="k">Površina</span><span class="v">${p.area_km2.toFixed(2)} km²</span></div>
-      <div class="detail-row"><span class="k">U m²</span><span class="v">${p.area_m2.toLocaleString('hr')}</span></div>
-      <div class="detail-row"><span class="k">Udio HR</span><span class="v">${(p.area_m2 / totalArea * 100).toFixed(3)} %</span></div>
-      ${p.inspire_id ? `<div class="detail-row"><span class="k">INSPIRE ID</span><span class="v" style="font-size:9px;">${p.inspire_id}</span></div>` : ''}
-      ${p.source ? `<div class="detail-row"><span class="k">Izvor</span><span class="v" style="font-size:10px;color:var(--muted);">${p.source}</span></div>` : ''}
-    `;
+    if (!opts.silent) {
+      document.getElementById('detail').className = 'detail-panel';
+      document.getElementById('detail').innerHTML = `
+        <div class="detail-name" style="border-left:3px solid ${p.color}; padding-left:10px;">${p.name}</div>
+        <div class="detail-code">${p.name_full || p.shapeName || (p.type + ' ' + p.name)}</div>
+        <div class="detail-row"><span class="k">Tip</span><span class="v">${p.type}</span></div>
+        <div class="detail-row"><span class="k">Županija</span><span class="v">${p.zupanija}</span></div>
+        ${p.roa ? `<div class="detail-row"><span class="k">Sjedište</span><span class="v">${p.roa}</span></div>` : ''}
+        ${p.maticni_broj ? `<div class="detail-row"><span class="k">Matični broj</span><span class="v">${p.maticni_broj}</span></div>` : ''}
+        <div class="detail-row"><span class="k">Površina</span><span class="v">${p.area_km2.toFixed(2)} km²</span></div>
+        <div class="detail-row"><span class="k">U m²</span><span class="v">${p.area_m2.toLocaleString('hr')}</span></div>
+        <div class="detail-row"><span class="k">Udio HR</span><span class="v">${(p.area_m2 / totalArea * 100).toFixed(3)} %</span></div>
+        ${p.inspire_id ? `<div class="detail-row"><span class="k">INSPIRE ID</span><span class="v" style="font-size:9px;">${p.inspire_id}</span></div>` : ''}
+        ${p.source ? `<div class="detail-row"><span class="k">Izvor</span><span class="v" style="font-size:10px;color:var(--muted);">${p.source}</span></div>` : ''}
+      `;
+    }
     // Smooth fly to feature bounds
-    const b = computeBounds(f.geometry);
-    map.fitBounds(b, { padding: 50, maxZoom: 12, duration: 800 });
+    if (!opts.skipFit) {
+      const b = computeBounds(f.geometry);
+      map.fitBounds(b, { padding: 50, maxZoom: 12, duration: 800 });
+    }
     // Drill-down: selecting a JLS auto-enables focus + naselja (lazy-loaded
     // on first activation; the focus filter is reapplied once naselja arrive).
     setFocusMode(true);
     setNaseljaOn(true);
   }
+  // Expose so the club click handler (registered in addClubsLayers, outside
+  // this closure) can highlight the JLS containing the clicked club.
+  window._selectJLS = selectJLS;
 
   // Županija filter
   let activeZup = null;
