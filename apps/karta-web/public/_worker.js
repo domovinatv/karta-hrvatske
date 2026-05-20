@@ -1,17 +1,14 @@
 /**
  * Cloudflare Pages Advanced Mode worker — gis.domovina.ai
  *
- * Responsibilities (matched to klubovi.domovina.ai pattern):
- *  1. SPA fallback — unknown routes return index.html with 200
- *  2. OG/social meta injection — /klub/:slug, /jls/:slug, /zupanija/:slug
- *     enrich index.html with og:* + <title> from lookup JSON before the
- *     crawler ever sees the response (avoids JS-render dependency)
- *  3. Cache-Control patching — _headers is NOT applied while a worker
- *     handles the request (CF Pages Advanced Mode contract), so headers
- *     are set here
+ * Responsibilities:
+ *  1. SPA fallback — non-asset routes return index.html
+ *  2. OG/social meta injection on /klub/:slug, /jls/:slug, /zupanija/:slug
+ *  3. Cache-Control patching (CF Pages Advanced Mode: _headers is ignored
+ *     while a worker handles the request)
  *
- * NOTE: Do NOT add a _redirects file — it would shadow env.ASSETS.fetch()
- * and break OG injection (lesson reused from klubovi.domovina.ai).
+ * NOTE: Do NOT add a _redirects file — it shadows env.ASSETS.fetch() and
+ * breaks OG injection (lesson from klubovi.domovina.ai).
  */
 
 const SITE = "https://gis.domovina.ai";
@@ -20,27 +17,21 @@ let LOOKUP_CLUBS = null;
 let LOOKUP_JLS = null;
 let LOOKUP_ZUP = null;
 
-async function loadLookup(env, name) {
-  // Each lookup is fetched at most once per worker isolate.
-  const url = `${SITE}/data/lookup-${name}.json`;
-  const res = await env.ASSETS.fetch(new Request(url));
-  if (!res.ok) return {};
-  try {
-    return await res.json();
-  } catch {
-    return {};
-  }
+function fetchLookup(env, name) {
+  return env.ASSETS.fetch(new Request(`${SITE}/data/lookup-${name}.json`))
+    .then((r) => (r.ok ? r.json() : {}))
+    .catch(() => ({}));
 }
-async function loadClubsLookup(env) {
-  if (!LOOKUP_CLUBS) LOOKUP_CLUBS = loadLookup(env, "clubs");
+function loadClubsLookup(env) {
+  if (!LOOKUP_CLUBS) LOOKUP_CLUBS = fetchLookup(env, "clubs");
   return LOOKUP_CLUBS;
 }
-async function loadJlsLookup(env) {
-  if (!LOOKUP_JLS) LOOKUP_JLS = loadLookup(env, "jls");
+function loadJlsLookup(env) {
+  if (!LOOKUP_JLS) LOOKUP_JLS = fetchLookup(env, "jls");
   return LOOKUP_JLS;
 }
-async function loadZupLookup(env) {
-  if (!LOOKUP_ZUP) LOOKUP_ZUP = loadLookup(env, "zupanije");
+function loadZupLookup(env) {
+  if (!LOOKUP_ZUP) LOOKUP_ZUP = fetchLookup(env, "zupanije");
   return LOOKUP_ZUP;
 }
 
@@ -58,12 +49,9 @@ function applyCacheHeaders(res, path) {
     headers.set("Cache-Control", "public, max-age=2592000, immutable");
   } else if (/^\/data\//.test(path)) {
     headers.set("Cache-Control", "public, max-age=3600, must-revalidate");
-  } else if (/^\/icons\//.test(path)) {
-    headers.set("Cache-Control", "public, max-age=86400");
-  } else if (/\.(js|css|svg|woff2?|png|jpg|webp|ico)$/.test(path)) {
+  } else if (/\.(js|css|svg|woff2?|png|jpg|webp|ico|webmanifest)$/.test(path)) {
     headers.set("Cache-Control", "public, max-age=3600");
   } else {
-    // HTML — keep short cache so OG updates propagate.
     headers.set("Cache-Control", "public, max-age=60, must-revalidate");
   }
   headers.set("X-Content-Type-Options", "nosniff");
@@ -80,69 +68,46 @@ class OgInjector {
   constructor(meta, canonical) {
     this.meta = meta;
     this.canonical = canonical;
-    this.replaced = false;
   }
   element(el) {
-    if (el.tagName !== "head") return;
-    const tags = [];
-    tags.push(`<title>${escapeHtml(this.meta.title)}</title>`);
-    tags.push(`<meta name="description" content="${escapeHtml(this.meta.description)}" />`);
-    tags.push(`<meta property="og:title" content="${escapeHtml(this.meta.title)}" />`);
-    tags.push(
+    if (el.tagName.toLowerCase() !== "head") return;
+    const tags = [
+      `<title>${escapeHtml(this.meta.title)}</title>`,
+      `<meta name="description" content="${escapeHtml(this.meta.description)}" />`,
+      `<meta property="og:title" content="${escapeHtml(this.meta.title)}" />`,
       `<meta property="og:description" content="${escapeHtml(this.meta.description)}" />`,
-    );
+      `<meta property="og:url" content="${escapeHtml(this.canonical)}" />`,
+      `<meta property="og:type" content="website" />`,
+      `<meta name="twitter:card" content="summary_large_image" />`,
+      `<link rel="canonical" href="${escapeHtml(this.canonical)}" />`,
+    ];
     if (this.meta.image) {
-      tags.push(`<meta property="og:image" content="${SITE}${escapeHtml(this.meta.image)}" />`);
+      tags.push(
+        `<meta property="og:image" content="${SITE}${escapeHtml(this.meta.image)}" />`,
+      );
     }
-    tags.push(`<meta property="og:url" content="${escapeHtml(this.canonical)}" />`);
-    tags.push(`<meta property="og:type" content="website" />`);
-    tags.push(`<meta name="twitter:card" content="summary_large_image" />`);
-    tags.push(`<link rel="canonical" href="${escapeHtml(this.canonical)}" />`);
     el.append(tags.join("\n"), { html: true });
   }
 }
 
 async function serveWithOg(env, request, meta) {
-  const indexReq = new Request(`${SITE}/index.html`, request);
-  const indexResp = await env.ASSETS.fetch(indexReq);
-  if (!indexResp.ok) return indexResp;
-
+  const indexRes = await env.ASSETS.fetch(new Request(`${SITE}/index.html`));
+  if (!indexRes.ok) return indexRes;
   const url = new URL(request.url);
   const canonical = `${SITE}${url.pathname}`;
-
-  // Strip the static <title> + og/description meta from the source HTML so
-  // crawlers don't see duplicate tags after our injector appends fresh ones.
   const transformed = new HTMLRewriter()
     .on("title", { element: (el) => el.remove() })
     .on('meta[property^="og:"], meta[name="description"], meta[name="twitter:card"]', {
       element: (el) => el.remove(),
     })
     .on("head", new OgInjector(meta, canonical))
-    .transform(indexResp);
-
-  return applyCacheHeaders(
-    new Response(transformed.body, {
-      status: 200,
-      statusText: "OK",
-      headers: {
-        "content-type": "text/html; charset=utf-8",
-      },
-    }),
-    url.pathname,
-  );
-}
-
-async function spaFallback(env, request) {
-  const indexReq = new Request(`${SITE}/index.html`, request);
-  const indexResp = await env.ASSETS.fetch(indexReq);
-  return applyCacheHeaders(
-    new Response(indexResp.body, {
-      status: 200,
-      statusText: "OK",
-      headers: indexResp.headers,
-    }),
-    "/index.html",
-  );
+    .transform(indexRes);
+  const out = new Response(transformed.body, transformed);
+  out.headers.set("Content-Type", "text/html; charset=utf-8");
+  out.headers.set("Cache-Control", "public, max-age=300, must-revalidate");
+  out.headers.set("X-Content-Type-Options", "nosniff");
+  out.headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
+  return out;
 }
 
 export default {
@@ -154,19 +119,15 @@ export default {
     const url = new URL(request.url);
     const path = url.pathname;
 
-    // Static asset pass-through with cache headers.
-    if (
-      path.startsWith("/data/") ||
-      path.startsWith("/logos/") ||
-      path.startsWith("/assets/") ||
-      path.startsWith("/icons/") ||
-      /\.(css|js|svg|png|jpg|webp|json|geojson|ico|woff2?|ttf|webmanifest)$/.test(path)
-    ) {
+    // Static assets — anything with a file extension. Cheaper than
+    // path-prefix matching for /data/, /logos/, etc. — ASSETS.fetch
+    // handles MIME types and 404s, we just patch cache headers on top.
+    if (/\.\w{1,8}$/.test(path)) {
       const res = await env.ASSETS.fetch(request);
       return applyCacheHeaders(res, path);
     }
 
-    // Entity routes — inject OG, fall back to SPA shell on miss.
+    // Entity routes — OG injection.
     let m;
     if ((m = path.match(/^\/klub\/([^/]+)\/?$/))) {
       const lookup = await loadClubsLookup(env);
@@ -182,7 +143,18 @@ export default {
       if (meta) return serveWithOg(env, request, meta);
     }
 
-    // Root + everything else → SPA shell (200, not 404, so client router runs).
-    return spaFallback(env, request);
+    // SPA fallback — every other path serves index.html with 200 so the
+    // client router can take over. Single-shot Response wrap to avoid
+    // body stream lock issues across two new Response() calls.
+    const indexRes = await env.ASSETS.fetch(new Request(`${SITE}/index.html`));
+    const headers = new Headers(indexRes.headers);
+    headers.set("Content-Type", "text/html; charset=utf-8");
+    headers.set("Cache-Control", "public, max-age=300, must-revalidate");
+    headers.set("X-Content-Type-Options", "nosniff");
+    headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
+    return new Response(indexRes.body, {
+      status: indexRes.status === 404 ? 200 : indexRes.status,
+      headers,
+    });
   },
 };
