@@ -1,11 +1,11 @@
 import { useCallback, useMemo, useRef } from "react";
-import { Helmet } from "react-helmet-async";
 import { BottomSheet } from "@/components/BottomSheet";
 import { ClubModal } from "@/components/ClubModal";
 import { ControlsPanel } from "@/components/ControlsPanel";
 import { DetailPanel } from "@/components/DetailPanel";
 import { LayersFab } from "@/components/LayersFab";
 import { MapHeader } from "@/components/MapHeader";
+import { RouteHelmet } from "@/components/RouteHelmet";
 import { SearchBox } from "@/components/SearchBox";
 import { ZupList } from "@/components/ZupList";
 import { useClubsLayer } from "@/hooks/useClubsLayer";
@@ -16,6 +16,7 @@ import { useJlsSelection } from "@/hooks/useJlsSelection";
 import { useMapLibre } from "@/hooks/useMapLibre";
 import { useNaseljaLayer } from "@/hooks/useNaseljaLayer";
 import { useOrtofotoLayer } from "@/hooks/useOrtofotoLayer";
+import { useUrlSync } from "@/hooks/useUrlSync";
 import { useMapState } from "@/lib/MapState";
 import type { JlsCollection, JlsFeature } from "@/lib/types";
 
@@ -23,7 +24,7 @@ export default function MapView() {
   const containerRef = useRef<HTMLDivElement>(null);
   const { mapRef, loaded, styleRev } = useMapLibre({ container: containerRef });
   const { jls, zupanije, drzava, error } = useGeojsonData();
-  const { setSelectedJls, setFocusMode, setShowNaselja } = useMapState();
+  const { setSelectedJls, setFocusMode, setShowNaselja, setShowClubs } = useMapState();
 
   const totalArea = useMemo(() => {
     if (!jls) return 1;
@@ -48,13 +49,15 @@ export default function MapView() {
     styleRev,
   });
   useOrtofotoLayer({ map: mapRef.current, loaded, styleRev });
-  useClubsLayer({
+  const { clubs } = useClubsLayer({
     map: mapRef.current,
     loaded,
     styleRev,
     jls: jls as JlsCollection | null,
     silentSelectJls,
   });
+  const ensureClubsOn = useCallback(() => setShowClubs(true), [setShowClubs]);
+  useUrlSync({ map: mapRef.current, jls: jls as JlsCollection | null, clubs, ensureClubsOn });
 
   // Search & sheet need a way to lazy-load naselja before user toggles the
   // layer button. setShowNaselja(true) triggers the fetch via useNaseljaLayer's
@@ -63,9 +66,7 @@ export default function MapView() {
 
   return (
     <>
-      <Helmet>
-        <title>DOMOVINA Karta — Geografija Hrvatske</title>
-      </Helmet>
+      <RouteHelmet jls={jls as JlsCollection | null} clubs={clubs} />
       <MapHeader />
       <main className="grid flex-1 overflow-hidden md:grid-cols-[280px_1fr] lg:grid-cols-[320px_1fr_380px]">
         {/* Desktop left sidebar: search + zup list */}
