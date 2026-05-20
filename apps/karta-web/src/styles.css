@@ -67,3 +67,304 @@ body {
 .maplibregl-ctrl-attrib a {
   color: var(--text) !important;
 }
+
+.maplibregl-popup-content {
+  background: var(--popup-bg) !important;
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--line) !important;
+  border-radius: 6px !important;
+  padding: 12px 14px !important;
+  color: var(--text) !important;
+  box-shadow: var(--popup-shadow) !important;
+  font-size: 11px;
+}
+.maplibregl-popup-tip {
+  display: none !important;
+}
+
+.club-popup {
+  min-width: 240px;
+}
+.club-popup .club-head {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+.club-popup .club-logo {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 4px;
+  padding: 3px;
+  flex-shrink: 0;
+}
+.club-popup .club-title {
+  min-width: 0;
+  flex: 1;
+}
+.club-popup .club-name {
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--ink);
+  line-height: 1.25;
+  margin-bottom: 3px;
+}
+.club-popup .club-league {
+  font-size: 10.5px;
+  color: var(--muted);
+}
+.club-popup .club-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 4px 0;
+  border-top: 1px dashed var(--line);
+  font-size: 11px;
+}
+.club-popup .club-row .k {
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 9.5px;
+  padding-top: 2px;
+}
+.club-popup .club-row .v {
+  color: var(--text);
+  text-align: right;
+}
+.club-popup .club-links {
+  margin-top: 8px;
+  padding-top: 6px;
+  border-top: 1px dashed var(--line);
+  font-size: 11px;
+}
+.club-popup .club-links a {
+  color: var(--accent-2);
+  text-decoration: none;
+}
+.club-popup .club-links a:hover {
+  text-decoration: underline;
+}
+.club-popup .club-details-btn {
+  display: block;
+  margin-top: 10px;
+  padding: 7px 10px;
+  background: var(--bg-3);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  text-align: center;
+  font-size: 11px;
+  cursor: pointer;
+  font-family: inherit;
+  width: 100%;
+  transition: all 0.15s;
+}
+.club-popup .club-details-btn:hover {
+  background: var(--accent-2);
+  color: #fff;
+  border-color: var(--accent-2);
+}
+
+/* Rich-card modal — iOS safe-area + 100dvh aware. */
+.club-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  height: 100dvh;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  z-index: 999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: max(env(safe-area-inset-top), 16px) max(env(safe-area-inset-right), 16px)
+    max(env(safe-area-inset-bottom), 16px) max(env(safe-area-inset-left), 16px);
+  box-sizing: border-box;
+}
+.club-modal-backdrop.open {
+  display: flex;
+}
+.club-modal {
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  max-width: 560px;
+  width: 100%;
+  max-height: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
+  overscroll-behavior: contain;
+}
+.club-modal .cm-head {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding: 18px 20px 14px;
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  background: var(--bg-2);
+  z-index: 2;
+}
+.club-modal .cm-logo {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  padding: 4px;
+  flex-shrink: 0;
+}
+.club-modal .cm-title {
+  flex: 1;
+  min-width: 0;
+}
+.club-modal .cm-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.25;
+}
+.club-modal .cm-short {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 3px;
+}
+.club-modal .cm-close {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  border-radius: 4px;
+  padding: 4px 9px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1;
+  transition: all 0.15s;
+}
+.club-modal .cm-close:hover {
+  background: var(--bg-3);
+  color: var(--ink);
+}
+.club-modal .cm-section {
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--line);
+}
+.club-modal .cm-section:last-child {
+  border-bottom: 0;
+}
+.club-modal .cm-section h3 {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin: 0 0 10px;
+}
+.club-modal .cm-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 5px 0;
+  font-size: 12px;
+  align-items: flex-start;
+}
+.club-modal .cm-row .k {
+  color: var(--muted);
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+  min-width: 90px;
+}
+.club-modal .cm-row .v {
+  color: var(--text);
+  text-align: right;
+  word-break: break-word;
+}
+.club-modal .cm-row .v a {
+  color: var(--accent-2);
+  text-decoration: none;
+}
+.club-modal .cm-row .v a:hover {
+  text-decoration: underline;
+}
+.club-modal .cm-tag {
+  display: inline-block;
+  padding: 1px 6px;
+  border-radius: 3px;
+  background: var(--bg-3);
+  border: 1px solid var(--line);
+  font-size: 9.5px;
+  color: var(--muted);
+  margin-left: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.club-modal .cm-tier-chip {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 600;
+  color: #fff;
+}
+.club-modal .cm-league-block {
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed var(--line);
+}
+.club-modal .cm-league-block:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+.club-modal .cm-league-name {
+  font-size: 12px;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.club-modal .cm-season-pill {
+  display: inline-block;
+  padding: 2px 7px;
+  margin: 2px 4px 2px 0;
+  font-size: 10px;
+  background: var(--bg-3);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+.club-modal .cm-socials {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.club-modal .cm-socials a {
+  padding: 6px 12px;
+  background: var(--bg-3);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  color: var(--text);
+  font-size: 11px;
+  text-decoration: none;
+  transition: all 0.15s;
+}
+.club-modal .cm-socials a:hover {
+  background: var(--accent-2);
+  color: #fff;
+  border-color: var(--accent-2);
+}
+.club-modal .cm-aliases-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}

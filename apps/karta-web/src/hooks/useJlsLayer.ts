@@ -1,27 +1,39 @@
 import { useEffect } from "react";
 import type { Map as MapLibreMap } from "maplibre-gl";
-import { JLS_FILL_OPACITY_DEFAULT } from "@/lib/style";
+import { useMapState } from "@/lib/MapState";
+import {
+  JLS_FILL_OPACITY_DEFAULT,
+  JLS_FILL_OPACITY_ORTO,
+  TYPE_COLOR,
+} from "@/lib/style";
 
 interface UseJlsLayerOptions {
   map: MapLibreMap | null;
   loaded: boolean;
+  styleRev: number;
   jls: GeoJSON.FeatureCollection | null;
   zupanije: GeoJSON.FeatureCollection | null;
   drzava: GeoJSON.FeatureCollection | null;
-  dark: boolean;
 }
 
-// Adds the JLS fill + line + labels, županije borders and state border
-// layers. Same paint properties as the legacy template so the visual is
-// pixel-identical until Phase 2 tweaks it.
+// Adds JLS fill + line + labels, županije borders, državna granica.
+// Re-runs whenever styleRev bumps (basemap swap wipes sources). Other
+// state-driven mutations (color mode, ortofoto opacity preset, border
+// visibility) are handled by separate effects below so theme switches
+// don't have to know about every paint property.
 export function useJlsLayer({
   map,
   loaded,
+  styleRev,
   jls,
   zupanije,
   drzava,
-  dark,
 }: UseJlsLayerOptions) {
+  const { theme, colorMode, showOrto, showZupBorders, showJlsBorders } = useMapState();
+  const dark = theme === "dark";
+
+  // Add sources + layers. Guarded so we don't double-add when state changes
+  // unrelated to the basemap (those run in the lower effects).
   useEffect(() => {
     if (!map || !loaded || !jls || !zupanije || !drzava) return;
     if (map.getSource("hr")) return;
@@ -32,14 +44,28 @@ export function useJlsLayer({
       type: "fill",
       source: "hr",
       paint: {
-        "fill-color": ["get", "color"],
-        "fill-opacity": JLS_FILL_OPACITY_DEFAULT,
+        "fill-color":
+          colorMode === "type"
+            ? ([
+                "match",
+                ["get", "type"],
+                "Grad",
+                TYPE_COLOR.Grad,
+                "Općina",
+                TYPE_COLOR["Općina"],
+                "Otok",
+                TYPE_COLOR.Otok,
+                TYPE_COLOR.Other,
+              ] as never)
+            : ["get", "color"],
+        "fill-opacity": showOrto ? JLS_FILL_OPACITY_ORTO : JLS_FILL_OPACITY_DEFAULT,
       },
     });
     map.addLayer({
       id: "hr-line",
       type: "line",
       source: "hr",
+      layout: { visibility: showJlsBorders ? "visible" : "none" },
       paint: {
         "line-color": [
           "case",
@@ -82,6 +108,7 @@ export function useJlsLayer({
       id: "hr-zup-line",
       type: "line",
       source: "hr-zup",
+      layout: { visibility: showZupBorders ? "visible" : "none" },
       paint: {
         "line-color": dark ? "#f8fafc" : "#0a0e14",
         "line-width": ["interpolate", ["linear"], ["zoom"], 6, 1.2, 10, 2.4, 14, 4],
@@ -102,22 +129,93 @@ export function useJlsLayer({
       },
     });
 
-    // Hide OSM/OpenFreeMap admin lines — they conflict with our DGU borders.
+    // Hide OSM/OFM admin lines that don't align with DGU.
     const style = map.getStyle();
     if (style?.layers) {
       const adminPattern = /admin|boundary|country|border/i;
       for (const l of style.layers) {
+        const layerObj = l as { id: string; "source-layer"?: string };
         if (
-          adminPattern.test(l.id) ||
-          (("source-layer" in l && l["source-layer"] && adminPattern.test(l["source-layer"])) as boolean)
+          adminPattern.test(layerObj.id) ||
+          (layerObj["source-layer"] && adminPattern.test(layerObj["source-layer"]))
         ) {
           try {
-            map.setLayoutProperty(l.id, "visibility", "none");
+            map.setLayoutProperty(layerObj.id, "visibility", "none");
           } catch {
             /* ignore */
           }
         }
       }
     }
-  }, [map, loaded, jls, zupanije, drzava, dark]);
+    // styleRev triggers re-add after theme/style swap.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [map, loaded, styleRev, jls, zupanije, drzava]);
+
+  // Toggle paint props when ortofoto / colorMode change.
+  useEffect(() => {
+    if (!map?.getLayer("hr-fill")) return;
+    map.setPaintProperty(
+      "hr-fill",
+      "fill-opacity",
+      (showOrto ? JLS_FILL_OPACITY_ORTO : JLS_FILL_OPACITY_DEFAULT) as never,
+    );
+  }, [map, showOrto, styleRev]);
+
+  useEffect(() => {
+    if (!map) return;
+    if (map.getLayer("hr-fill")) {
+      map.setPaintProperty(
+        "hr-fill",
+        "fill-color",
+        (colorMode === "type"
+          ? [
+              "match",
+              ["get", "type"],
+              "Grad",
+              TYPE_COLOR.Grad,
+              "Općina",
+              TYPE_COLOR["Općina"],
+              "Otok",
+              TYPE_COLOR.Otok,
+              TYPE_COLOR.Other,
+            ]
+          : ["get", "color"]) as never,
+      );
+    }
+    if (map.getLayer("hr-line")) {
+      map.setPaintProperty(
+        "hr-line",
+        "line-color",
+        (colorMode === "type"
+          ? [
+              "match",
+              ["get", "type"],
+              "Grad",
+              TYPE_COLOR.Grad,
+              "Općina",
+              TYPE_COLOR["Općina"],
+              "Otok",
+              TYPE_COLOR.Otok,
+              TYPE_COLOR.Other,
+            ]
+          : [
+              "case",
+              ["boolean", ["feature-state", "selected"], false],
+              "#ffffff",
+              ["get", "color"],
+            ]) as never,
+      );
+    }
+  }, [map, colorMode, styleRev]);
+
+  // Border visibility toggles.
+  useEffect(() => {
+    if (!map?.getLayer("hr-zup-line")) return;
+    map.setLayoutProperty("hr-zup-line", "visibility", showZupBorders ? "visible" : "none");
+  }, [map, showZupBorders, styleRev]);
+
+  useEffect(() => {
+    if (!map?.getLayer("hr-line")) return;
+    map.setLayoutProperty("hr-line", "visibility", showJlsBorders ? "visible" : "none");
+  }, [map, showJlsBorders, styleRev]);
 }

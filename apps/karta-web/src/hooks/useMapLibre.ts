@@ -1,31 +1,32 @@
 import { useEffect, useRef, useState } from "react";
 import maplibregl, { type Map as MapLibreMap } from "maplibre-gl";
 import { Protocol } from "pmtiles";
+import { useMapState } from "@/lib/MapState";
 import { HR_BOUNDS, STYLE_DARK, STYLE_LIGHT } from "@/lib/style";
 
 interface UseMapLibreOptions {
   container: React.RefObject<HTMLDivElement>;
-  initialTheme?: "light" | "dark";
 }
 
-// Initialises a MapLibre instance once when the container ref is attached.
-// Returns the map ref + loaded flag so callers can register sources/layers
-// only after style.load has fired (otherwise addSource throws).
-export function useMapLibre({ container, initialTheme = "dark" }: UseMapLibreOptions) {
+// Initializes a MapLibre instance and tracks style version. Theme changes
+// trigger setStyle({ diff: false }) which wipes sources/layers — styleRev
+// bumps on every fresh style.load so layer hooks can re-add their work.
+export function useMapLibre({ container }: UseMapLibreOptions) {
+  const { theme } = useMapState();
   const mapRef = useRef<MapLibreMap | null>(null);
   const [loaded, setLoaded] = useState(false);
+  const [styleRev, setStyleRev] = useState(0);
 
+  // First-mount: spin up MapLibre.
   useEffect(() => {
     if (!container.current || mapRef.current) return;
 
-    // Register PMTiles protocol so future PMTiles sources work without
-    // reinstall — same pattern as the legacy HTML.
     const protocol = new Protocol();
     maplibregl.addProtocol("pmtiles", protocol.tile);
 
     const map = new maplibregl.Map({
       container: container.current,
-      style: initialTheme === "dark" ? STYLE_DARK : STYLE_LIGHT,
+      style: theme === "dark" ? STYLE_DARK : STYLE_LIGHT,
       center: [16.5, 44.5],
       zoom: 6.5,
       attributionControl: { compact: true },
@@ -43,22 +44,36 @@ export function useMapLibre({ container, initialTheme = "dark" }: UseMapLibreOpt
     );
     map.addControl(new maplibregl.ScaleControl({ unit: "metric" }), "bottom-right");
 
+    const handleStyleLoad = () => {
+      setLoaded(true);
+      setStyleRev((r) => r + 1);
+    };
+    map.on("style.load", handleStyleLoad);
+
     map.on("load", () => {
       map.fitBounds(HR_BOUNDS, { padding: 25, duration: 0 });
-      setLoaded(true);
     });
 
     mapRef.current = map;
 
     return () => {
+      map.off("style.load", handleStyleLoad);
       map.remove();
       mapRef.current = null;
       setLoaded(false);
     };
-    // initialTheme is captured at first init; theme switches are handled by
-    // callers via map.setStyle() after the fact (Phase 2).
+    // theme captured at init; subsequent changes handled by the effect below.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [container]);
 
-  return { mapRef, loaded };
+  // Theme change → setStyle. The style.load event we already subscribe to
+  // handles re-flagging loaded + bumping styleRev so layer hooks rerun.
+  useEffect(() => {
+    if (!mapRef.current) return;
+    const desired = theme === "dark" ? STYLE_DARK : STYLE_LIGHT;
+    setLoaded(false);
+    mapRef.current.setStyle(desired, { diff: false });
+  }, [theme]);
+
+  return { mapRef, loaded, styleRev };
 }
