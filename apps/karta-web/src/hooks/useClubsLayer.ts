@@ -4,6 +4,7 @@ import maplibregl, {
   type MapLayerMouseEvent,
 } from "maplibre-gl";
 import { useMapState } from "@/lib/MapState";
+import { v } from "@/lib/version";
 import { computeBounds } from "@/lib/geo";
 import type { ClubCollection, ClubFeature, ClubProperties, JlsCollection } from "@/lib/types";
 
@@ -69,7 +70,7 @@ export function useClubsLayer({ map, loaded, styleRev, jls, silentSelectJls }: O
   useEffect(() => {
     if (!showClubs || clubs || loadingRef.current) return;
     loadingRef.current = true;
-    fetch("/data/clubs.geojson")
+    fetch(v("/data/clubs.geojson"))
       .then((r) => r.json())
       .then((fc: ClubCollection) => {
         fc.features.forEach((f) => {

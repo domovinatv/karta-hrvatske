@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import type { Map as MapLibreMap, MapLayerMouseEvent } from "maplibre-gl";
 import { useMapState } from "@/lib/MapState";
+import { v } from "@/lib/version";
 import { computeBounds } from "@/lib/geo";
 import {
   NAS_FILL_OPACITY_DEFAULT,
@@ -45,7 +46,7 @@ export function useNaseljaLayer({
     if (!showNaselja || naselja || loadingRef.current) return;
     loadingRef.current = true;
     setLoading(true);
-    fetch("/data/naselja.geojson")
+    fetch(v("/data/naselja.geojson"))
       .then((r) => r.json())
       .then((fc: NaseljaCollection) => {
         setNaselja(fc);

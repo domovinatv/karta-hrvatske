@@ -4,6 +4,7 @@ import maplibregl, {
   type MapLayerMouseEvent,
 } from "maplibre-gl";
 import { useMapState } from "@/lib/MapState";
+import { v } from "@/lib/version";
 import type { StadiumCollection, StadiumProperties } from "@/lib/types";
 
 // Stadiums (OSM `leisure=stadium`). ~450 features. Rendered as larger
@@ -26,7 +27,7 @@ export function useStadiumsLayer({
   useEffect(() => {
     if (!showStadiums || stadiums || loadingRef.current) return;
     loadingRef.current = true;
-    fetch("/data/stadiums.geojson")
+    fetch(v("/data/stadiums.geojson"))
       .then((r) => r.json())
       .then((fc: StadiumCollection) => {
         fc.features.forEach((f) => {

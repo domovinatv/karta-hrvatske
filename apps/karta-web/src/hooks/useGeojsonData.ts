@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { v } from "@/lib/version";
 
 interface DataState {
   jls: GeoJSON.FeatureCollection | null;
@@ -22,9 +23,9 @@ export function useGeojsonData() {
   useEffect(() => {
     let cancelled = false;
     Promise.all([
-      fetch("/data/jls.geojson").then((r) => r.json()),
-      fetch("/data/zupanije.geojson").then((r) => r.json()),
-      fetch("/data/drzava.geojson").then((r) => r.json()),
+      fetch(v("/data/jls.geojson")).then((r) => r.json()),
+      fetch(v("/data/zupanije.geojson")).then((r) => r.json()),
+      fetch(v("/data/drzava.geojson")).then((r) => r.json()),
     ])
       .then(([jls, zupanije, drzava]) => {
         if (cancelled) return;

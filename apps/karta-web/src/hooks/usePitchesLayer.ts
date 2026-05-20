@@ -5,6 +5,7 @@ import maplibregl, {
 } from "maplibre-gl";
 import { useNavigate } from "react-router-dom";
 import { useMapState } from "@/lib/MapState";
+import { v } from "@/lib/version";
 import type { PitchCollection, PitchProperties } from "@/lib/types";
 
 // Football pitches (OSM `leisure=pitch` + `sport=soccer`). ~7000 features
@@ -32,7 +33,7 @@ export function usePitchesLayer({
   useEffect(() => {
     if (!showPitches || pitches || loadingRef.current) return;
     loadingRef.current = true;
-    fetch("/data/pitches.geojson")
+    fetch(v("/data/pitches.geojson"))
       .then((r) => r.json())
       .then((fc: PitchCollection) => {
         fc.features.forEach((f) => {
