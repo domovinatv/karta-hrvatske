@@ -49,6 +49,10 @@ export function useUrlSync({ map, jls, clubs, ensureClubsOn }: Options) {
   } = useMapState();
   // Track the URL we set so reverse-sync doesn't re-fire on our own write.
   const lastWrittenUrl = useRef<string | null>(null);
+  // Track whether any selection has ever existed. Without this, the
+  // state→URL effect on initial mount (state all-null) would overwrite a
+  // deep-linked URL with "/", clobbering the very URL we're meant to read.
+  const hadSelectionRef = useRef(false);
 
   // URL → state
   useEffect(() => {
@@ -136,16 +140,31 @@ export function useUrlSync({ map, jls, clubs, ensureClubsOn }: Options) {
   // state → URL
   useEffect(() => {
     let desired = "/";
+    let hasSelection = false;
     if (clubModal?.slug) {
       desired = `/klub/${clubModal.slug}`;
+      hasSelection = true;
     } else if (selectedJls !== null && jls) {
       const f = (jls.features as JlsFeature[]).find((x) => x.id === selectedJls);
-      if (f) desired = `/jls/${slugify(f.properties.name)}`;
+      if (f) {
+        desired = `/jls/${slugify(f.properties.name)}`;
+        hasSelection = true;
+      }
     } else if (activeZup) {
       desired = `/zupanija/${slugify(activeZup)}`;
+      hasSelection = true;
     }
 
-    if (desired === location.pathname) return;
+    // First mount or unrelated re-renders: state is empty AND we haven't
+    // tracked any prior selection. Don't fire navigate("/") — that would
+    // clobber a deep-linked URL before URL→state could populate state.
+    if (!hasSelection && !hadSelectionRef.current) return;
+    hadSelectionRef.current = hasSelection || hadSelectionRef.current;
+
+    if (desired === location.pathname) {
+      lastWrittenUrl.current = desired;
+      return;
+    }
     if (lastWrittenUrl.current === desired) return;
     lastWrittenUrl.current = desired;
     navigate(desired, { replace: false });

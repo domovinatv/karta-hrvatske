@@ -55,12 +55,19 @@ export function useMapLibre({ container }: UseMapLibreOptions) {
     });
 
     mapRef.current = map;
+    // Expose for e2e tests / debugging; harmless in production.
+    if (typeof window !== "undefined") {
+      (window as unknown as { _gisMap?: maplibregl.Map })._gisMap = map;
+    }
 
     return () => {
       map.off("style.load", handleStyleLoad);
       map.remove();
       mapRef.current = null;
       setLoaded(false);
+      if (typeof window !== "undefined") {
+        delete (window as unknown as { _gisMap?: maplibregl.Map })._gisMap;
+      }
     };
     // theme captured at init; subsequent changes handled by the effect below.
     // eslint-disable-next-line react-hooks/exhaustive-deps

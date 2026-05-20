@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { Map as MapLibreMap, MapLayerMouseEvent } from "maplibre-gl";
 import { useMapState } from "@/lib/MapState";
 import { computeBounds } from "@/lib/geo";
@@ -34,29 +34,30 @@ export function useNaseljaLayer({
     selectedNaselje,
   } = useMapState();
   const [naselja, setNaselja] = useState<NaseljaCollection | null>(null);
+  // Ref-based loading flag — same bug fix as in useClubsLayer: state-based
+  // loading caused effect re-runs to cancel the in-flight fetch.
+  const loadingRef = useRef(false);
   const [loading, setLoading] = useState(false);
   const dark = theme === "dark";
 
   // Lazy fetch on first toggle-on.
   useEffect(() => {
-    if (!showNaselja || naselja || loading) return;
-    let cancelled = false;
+    if (!showNaselja || naselja || loadingRef.current) return;
+    loadingRef.current = true;
     setLoading(true);
     fetch("/data/naselja.geojson")
       .then((r) => r.json())
       .then((fc: NaseljaCollection) => {
-        if (!cancelled) setNaselja(fc);
+        setNaselja(fc);
       })
       .catch((e: unknown) => {
-        if (!cancelled) console.error("Naselja fetch failed", e);
+        console.error("Naselja fetch failed", e);
       })
       .finally(() => {
-        if (!cancelled) setLoading(false);
+        loadingRef.current = false;
+        setLoading(false);
       });
-    return () => {
-      cancelled = true;
-    };
-  }, [showNaselja, naselja, loading]);
+  }, [showNaselja, naselja]);
 
   // Add layers when naselja arrive (or after style swap).
   useEffect(() => {

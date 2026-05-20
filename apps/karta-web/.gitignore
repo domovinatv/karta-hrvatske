@@ -3,6 +3,11 @@ dist/
 .vite/
 *.tsbuildinfo
 
+# Playwright e2e
+test-results/
+playwright-report/
+e2e/screenshots/
+
 # Synced from apps/web pipeline — gitignored to avoid duplicating large geojson
 # in two trees. Build CI runs sync-data.mjs before vite build.
 public/data/

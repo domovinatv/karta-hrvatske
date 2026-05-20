@@ -58,40 +58,37 @@ interface Options {
 export function useClubsLayer({ map, loaded, styleRev, jls, silentSelectJls }: Options) {
   const { showClubs, openClubModal } = useMapState();
   const [clubs, setClubs] = useState<ClubCollection | null>(null);
-  const [loading, setLoading] = useState(false);
+  // `loading` lives in a ref (not state) — keeping it as state caused the
+  // effect to re-run on setLoading(true), cancel itself via cleanup, and
+  // drop the inflight fetch's result. Ref doesn't trigger re-renders, so
+  // the original effect run is the only one alive while the fetch is open.
+  const loadingRef = useRef(false);
   const popupRef = useRef<maplibregl.Popup | null>(null);
 
   // Lazy fetch.
   useEffect(() => {
-    if (!showClubs || clubs || loading) return;
-    let cancelled = false;
-    setLoading(true);
+    if (!showClubs || clubs || loadingRef.current) return;
+    loadingRef.current = true;
     fetch("/data/clubs.geojson")
       .then((r) => r.json())
       .then((fc: ClubCollection) => {
-        if (cancelled) return;
-        // Promote properties.id to top-level Feature.id for setFeatureState
         fc.features.forEach((f) => {
           if (f.id == null && f.properties.id != null) f.id = f.properties.id;
         });
         setClubs(fc);
       })
       .catch((e: unknown) => {
-        if (!cancelled) console.error("Clubs fetch failed", e);
+        console.error("Clubs fetch failed", e);
       })
       .finally(() => {
-        if (!cancelled) setLoading(false);
+        loadingRef.current = false;
       });
-    return () => {
-      cancelled = true;
-    };
-  }, [showClubs, clubs, loading]);
+  }, [showClubs, clubs]);
 
   // Add layer.
   useEffect(() => {
     if (!map || !loaded || !clubs) return;
     if (map.getSource("hr-clubs")) return;
-
     map.addSource("hr-clubs", { type: "geojson", data: clubs });
     map.addLayer({
       id: "hr-clubs-circle",
@@ -240,7 +237,7 @@ export function useClubsLayer({ map, loaded, styleRev, jls, silentSelectJls }: O
     };
   }, [map, styleRev, clubs, jls, silentSelectJls, openClubModal]);
 
-  return { clubs, loading };
+  return { clubs };
 }
 
 // Helper to keep computeBounds importable from this file (used by Phase 4
