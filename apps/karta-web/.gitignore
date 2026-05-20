@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.vite/
+*.tsbuildinfo
+
+# Synced from apps/web pipeline — gitignored to avoid duplicating large geojson
+# in two trees. Build CI runs sync-data.mjs before vite build.
+public/data/
+public/logos/
+
+# Local env / IDE noise
+.env
+.env.local
+.DS_Store

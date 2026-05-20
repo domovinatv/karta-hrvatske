@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Brand color tokens — ported from apps/web/scripts/templates/hrvatska_full.html.tmpl
+   Dark is default; light theme activates via [data-theme="light"]. */
+:root {
+  --bg: #0a0e14;
+  --bg-2: #11161e;
+  --bg-3: #1a212c;
+  --line: #232b38;
+  --text: #e6edf3;
+  --muted: #8b94a8;
+  --accent-2: #5b8dce;
+  --good: #4ade80;
+  --ink: #f8fafc;
+  --brand-navy: #002f6c;
+  --brand-red: #ff0000;
+  --ui-accent: #ef4444;
+  --ui-accent-tint: rgba(239, 68, 68, 0.12);
+  --map-bg: #0a0e14;
+  --overlay-strong: rgba(10, 14, 20, 0.92);
+  --overlay-soft: rgba(10, 14, 20, 0.85);
+  --popup-bg: rgba(10, 14, 20, 0.95);
+  --popup-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="light"] {
+  --bg: #fafbfc;
+  --bg-2: #f5f7f9;
+  --bg-3: #eef2f5;
+  --line: #d1d5db;
+  --text: #002f6c;
+  --muted: #5a6570;
+  --accent-2: #002f6c;
+  --good: #16a34a;
+  --ink: #001a40;
+  --ui-accent: #dc2626;
+  --ui-accent-tint: rgba(220, 38, 38, 0.08);
+  --map-bg: #f5f7f9;
+  --overlay-strong: rgba(255, 255, 255, 0.94);
+  --overlay-soft: rgba(255, 255, 255, 0.88);
+  --popup-bg: rgba(255, 255, 255, 0.97);
+  --popup-shadow: 0 1px 3px rgba(0, 47, 108, 0.08), 0 4px 12px rgba(0, 47, 108, 0.1);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* MapLibre attribution + ctrl restyling — same look as the legacy HTML. */
+.maplibregl-ctrl-attrib {
+  background: var(--overlay-soft) !important;
+  color: var(--muted) !important;
+}
+.maplibregl-ctrl-attrib a {
+  color: var(--text) !important;
+}

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="hr" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#002F6C" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css"
+      rel="stylesheet"
+    />
+    <!--META-->
+    <title>DOMOVINA Karta — Geografija Hrvatske</title>
+    <meta
+      name="description"
+      content="Interaktivna karta Republike Hrvatske — 556 JLS, 6759 naselja, 901 nogometni klub. Otvoreni podaci, $0 vendor."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="DOMOVINA Karta — Geografija Hrvatske" />
+    <meta
+      property="og:description"
+      content="Interaktivna karta RH s 556 JLS, 6759 naselja i 901 nogometnim klubom."
+    />
+    <script>
+      // No-FOUC theme sync before CSS paints. Default: dark.
+      try {
+        const t = localStorage.getItem("domovina-theme");
+        if (t === "light") document.documentElement.setAttribute("data-theme", "light");
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
