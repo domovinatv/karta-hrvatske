@@ -1,0 +1,12 @@
+# Cloudflare Pages config for gis.domovina.ai
+#
+# This file is read by `wrangler pages dev` (local) and by `wrangler pages deploy`
+# (CI). The CF Pages project itself was created via `wrangler pages project create
+# gis-domovina --production-branch=main` in the D.O.M. account.
+#
+# The actual deploy command lives in scripts/deploy.sh — wrangler.toml is mostly
+# documentation here.
+
+name = "gis-domovina"
+compatibility_date = "2024-11-01"
+pages_build_output_dir = "./dist"
