@@ -43,9 +43,18 @@ CLUB_COLS = [
     "city", "county", "address",
     "stadium_name", "stadium_capacity", "founded_year",
     "website", "email", "phone", "phone_e164", "phone_kind",
-    "president",
+    "president", "president_role",
     "fb_url", "ig_url", "x_url",
-    "semafor_url",
+    "semafor_url", "sofascore_url",
+    # Croatian legal/registry data — added 2026-05-20 after migration to
+    # klubovi.domovina.ai. Tells legal entity (udruga vs SDD), OIB, official
+    # registry link with already-built URL (do not construct).
+    "oib", "udruga_id",
+    "registry_url", "registry_status", "registry_naziv",
+    # Google Places metadata — google_place_id is a stable reference to a
+    # specific map location (not coords). geo_source tags lat/lng provenance:
+    # "both" (Google + Nominatim agree), "nominatim" (only Nominatim).
+    "google_place_id", "geo_source",
     "notes", "created_at", "updated_at",
     "lat", "lng",
 ]
@@ -148,8 +157,9 @@ def main() -> None:
     # Field coverage telemetry — useful to see what backfill has filled.
     coverage_fields = [
         "short_name", "address", "stadium_name", "stadium_capacity", "founded_year",
-        "website", "email", "phone", "president",
-        "fb_url", "ig_url", "x_url", "semafor_url",
+        "website", "email", "phone", "president", "president_role",
+        "fb_url", "ig_url", "x_url", "semafor_url", "sofascore_url",
+        "oib", "udruga_id", "registry_url", "google_place_id", "geo_source",
         "seasons", "aliases", "source_ids",
     ]
     print("Coverage:")

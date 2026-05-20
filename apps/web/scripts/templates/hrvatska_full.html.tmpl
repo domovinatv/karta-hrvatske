@@ -1106,7 +1106,7 @@ async function ensureNaseljaLoaded() {
   const orig = btn.firstChild.textContent;
   btn.firstChild.textContent = '⏳ Učitavam naselja… ';
   try {
-    const r = await fetch('hrvatska_naselja.geojson');
+    const r = await fetch('hrvatska_naselja.geojson?v=__VERSION__');
     if (!r.ok) throw new Error('HTTP ' + r.status);
     window._naseljaData = await r.json();
     naseljaLoaded = true;
@@ -1319,8 +1319,19 @@ function openClubModal(p) {
   lokacijaRows += _rowText('Adresa', p.address);
   if (p._lng != null && p._lat != null) {
     const mapsUrl = `https://www.openstreetmap.org/?mlat=${p._lat}&mlon=${p._lng}#map=16/${p._lat}/${p._lng}`;
+    // geo_source='both' = Google + Nominatim agree → trust signal next to coordinates.
+    const verifiedTag = p.geo_source === 'both'
+      ? ` <span class="cm-tag" title="Potvrđeno: Google + Nominatim daju istu lokaciju" style="color: var(--good); border-color: color-mix(in srgb, var(--good) 40%, transparent);">✓ verified</span>`
+      : (p.geo_source ? ` <span class="cm-tag">${_esc(p.geo_source)}</span>` : '');
     lokacijaRows += _row('Koordinate',
-      `<a href="${mapsUrl}" target="_blank" rel="noopener">${p._lat.toFixed(5)}, ${p._lng.toFixed(5)}</a>`);
+      `<a href="${mapsUrl}" target="_blank" rel="noopener">${p._lat.toFixed(5)}, ${p._lng.toFixed(5)}</a>${verifiedTag}`);
+  }
+  // Google Maps link via stable place_id (100% pokrivenost). Otvara konkretno
+  // mjesto, ne samo koordinate — bolji za street-view / panoramske rezultate.
+  if (p.google_place_id) {
+    const gUrl = `https://www.google.com/maps/place/?q=place_id:${_esc(p.google_place_id)}`;
+    lokacijaRows += _row('Google Maps',
+      `<a href="${gUrl}" target="_blank" rel="noopener">Otvori u Google Maps →</a>`);
   }
 
   // ── Stadion / Klub ───────────────────────────────────────────────────────
@@ -1338,7 +1349,10 @@ function openClubModal(p) {
     const tel = p.phone_e164 || p.phone;
     kontaktRows += _row('Telefon', `<a href="tel:${_esc(tel)}">${_esc(p.phone)}</a>${kindTag}`);
   }
-  if (p.president) kontaktRows += _rowText('Predsjednik', p.president);
+  if (p.president) {
+    const roleTag = p.president_role ? ` <span class="cm-tag">${_esc(p.president_role)}</span>` : '';
+    kontaktRows += _row('Predsjednik', _esc(p.president) + roleTag);
+  }
 
   // ── Društvene mreže ─────────────────────────────────────────────────────
   const socials = [];
@@ -1355,16 +1369,25 @@ function openClubModal(p) {
     ).join('') + `</div>`;
   }
 
-  // ── Vanjski izvori (sofascore-id, hrnogomet-id, semafor_url) ────────────
-  // Linkable: SofaScore → /team/football/{slug}/{id} (slug se ignorira, ID određuje klub)
-  //           semafor    → već puni URL iz sibling DB
+  // ── Vanjski izvori ──────────────────────────────────────────────────────
+  // Linkable: SofaScore (sad eksplicitna sofascore_url kolona), HNS semafor,
+  //           Registar udruga RH / Companywall (registry_url je već full URL).
   // Non-linkable: hrnogomet — Flutter SPA bez deep-link rute. Prikazujemo
   //   samo ID kao referencu (može se ručno pretražiti na hrnogomet.hr).
   let sourceIdsHtml = '';
   const sourceLinks = [];
+  // SofaScore: prefer eksplicitnu kolonu sofascore_url; fallback na konstrukciju
+  // iz source_ids zbog backward-kompat (stariji exporti bez te kolone).
+  let sofascoreEmitted = false;
+  if (p.sofascore_url) {
+    sourceLinks.push(`<a href="${_esc(p.sofascore_url)}" target="_blank" rel="noopener">SofaScore</a>`);
+    sourceIdsHtml += _row('sofascore', `<a href="${_esc(p.sofascore_url)}" target="_blank" rel="noopener">${_esc(p.sofascore_url)}</a>`);
+    sofascoreEmitted = true;
+  }
   if (p.source_ids && p.source_ids.length) {
-    sourceIdsHtml = p.source_ids.map(s => {
+    sourceIdsHtml += p.source_ids.map(s => {
       if (s.source === 'sofascore-id') {
+        if (sofascoreEmitted) return '';  // već prikazano kao puni URL iznad
         const url = `https://www.sofascore.com/team/football/${_esc(p.slug)}/${_esc(s.id)}`;
         sourceLinks.push(`<a href="${url}" target="_blank" rel="noopener">SofaScore</a>`);
         return _row(s.source, `<a href="${url}" target="_blank" rel="noopener">${_esc(s.id)}</a>`);
@@ -1375,6 +1398,23 @@ function openClubModal(p) {
   if (p.semafor_url) {
     sourceLinks.push(`<a href="${_esc(p.semafor_url)}" target="_blank" rel="noopener">HNS semafor</a>`);
     sourceIdsHtml += _row('semafor', `<a href="${_esc(p.semafor_url)}" target="_blank" rel="noopener">${_esc(p.semafor_url)}</a>`);
+  }
+  // Registar pravnih osoba: URL određuje koji je izvor (npo-mpu = udruge,
+  // companywall = SDD oblik za HNL/1.NL elite). Label dolazi iz URL hosta.
+  if (p.registry_url) {
+    const isCw = p.registry_url.includes('companywall');
+    const label = isCw ? 'Companywall (SDD)' : 'Registar udruga RH';
+    sourceLinks.push(`<a href="${_esc(p.registry_url)}" target="_blank" rel="noopener">${label}</a>`);
+    const naziv = p.registry_naziv && p.registry_naziv !== p.canonical_name
+      ? `<div class="cm-row" style="font-size:10px;color:var(--muted);padding-top:0;"><span class="k"></span><span class="v">${_esc(p.registry_naziv)}</span></div>` : '';
+    const statusTag = p.registry_status ? ` <span class="cm-tag">${_esc(p.registry_status)}</span>` : '';
+    sourceIdsHtml += _row(isCw ? 'companywall' : 'udruge',
+      `<a href="${_esc(p.registry_url)}" target="_blank" rel="noopener">${_esc(p.registry_url)}</a>${statusTag}`) + naziv;
+  }
+  if (p.oib) sourceIdsHtml += _rowText('OIB', p.oib);
+  if (p.udruga_id && !p.registry_url) {
+    // Imamo ID, ali nije zgrabljen full URL → samo prikaz reference.
+    sourceIdsHtml += _rowText('udruga_id', p.udruga_id);
   }
   const sourceLinksHtml = sourceLinks.length
     ? `<div class="cm-socials">${sourceLinks.join('')}</div>` + sourceIdsHtml
@@ -1421,7 +1461,7 @@ async function ensureClubsLoaded() {
   const btn = document.getElementById('btn-clubs');
   btn.firstChild.textContent = '⏳ Učitavam klubove… ';
   try {
-    const r = await fetch('hr_football_clubs.geojson');
+    const r = await fetch('hr_football_clubs.geojson?v=__VERSION__');
     if (!r.ok) throw new Error('HTTP ' + r.status);
     const fc = await r.json();
     // Promote properties.id to top-level Feature.id so setFeatureState works.

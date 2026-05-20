@@ -11,6 +11,7 @@ Output: outputs/hrvatska_full.html
 import json
 import os
 import shutil
+from datetime import datetime, timezone
 from pathlib import Path
 
 INPUT_PATH = "data/hr_canonical.geojson"
@@ -92,6 +93,11 @@ def main():
         for z, s in zup_sorted
     )
 
+    # Build version string injected into ?v=__VERSION__ query strings on
+    # lazy-loaded geojson fetches. Forces browsers to bypass cached copies
+    # whenever the build produces a new bundle, even if file names don't change.
+    version = datetime.now(timezone.utc).strftime("%Y%m%d%H%M%S")
+
     html = (
         template.replace("__GEOJSON__", geojson_str)
         .replace("__GEOJSON_ZUP__", geojson_zup_str)
@@ -106,12 +112,13 @@ def main():
         .replace("__AREA__", f"{total_area / 1e6:,.0f}".replace(",", " "))
         .replace("__TOTAL_AREA__", str(total_area))
         .replace("__NCLUBS__", str(n_clubs))
+        .replace("__VERSION__", version)
     )
 
     os.makedirs("outputs", exist_ok=True)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         f.write(html)
-    print(f"Generated {OUTPUT_PATH}: {os.path.getsize(OUTPUT_PATH):,} bytes ({os.path.getsize(OUTPUT_PATH) / 1024 / 1024:.2f} MB)")
+    print(f"Generated {OUTPUT_PATH}: {os.path.getsize(OUTPUT_PATH):,} bytes ({os.path.getsize(OUTPUT_PATH) / 1024 / 1024:.2f} MB), version={version}")
 
 
 if __name__ == "__main__":
