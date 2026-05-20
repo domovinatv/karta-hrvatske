@@ -22,7 +22,7 @@ Properties shape (per Feature):
 Empty / NULL fields are omitted entirely from properties so the renderer
 can fall back cleanly (no `"field": null` noise in the GeoJSON).
 
-Input:  ~/git/ss/hrvatski-amaterski-nogometni-klubovi/data/clubs.db
+Input:  ~/git/domovinatv/klubovi.domovina.ai/data/clubs.db
 Output: data/hr_football_clubs.geojson
 """
 from __future__ import annotations
@@ -32,7 +32,7 @@ import sqlite3
 from collections import defaultdict
 from pathlib import Path
 
-CLUBS_DB = Path.home() / "git" / "ss" / "hrvatski-amaterski-nogometni-klubovi" / "data" / "clubs.db"
+CLUBS_DB = Path.home() / "git" / "domovinatv" / "klubovi.domovina.ai" / "data" / "clubs.db"
 OUTPUT_PATH = Path("data/hr_football_clubs.geojson")
 
 # Source values in club_aliases that are *external IDs* (numeric), not names.
