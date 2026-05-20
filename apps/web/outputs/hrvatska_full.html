@@ -1106,7 +1106,7 @@ async function ensureNaseljaLoaded() {
   const orig = btn.firstChild.textContent;
   btn.firstChild.textContent = '⏳ Učitavam naselja… ';
   try {
-    const r = await fetch('hrvatska_naselja.geojson?v=20260520163029');
+    const r = await fetch('hrvatska_naselja.geojson?v=20260520202806');
     if (!r.ok) throw new Error('HTTP ' + r.status);
     window._naseljaData = await r.json();
     naseljaLoaded = true;
@@ -1461,7 +1461,7 @@ async function ensureClubsLoaded() {
   const btn = document.getElementById('btn-clubs');
   btn.firstChild.textContent = '⏳ Učitavam klubove… ';
   try {
-    const r = await fetch('hr_football_clubs.geojson?v=20260520163029');
+    const r = await fetch('hr_football_clubs.geojson?v=20260520202806');
     if (!r.ok) throw new Error('HTTP ' + r.status);
     const fc = await r.json();
     // Promote properties.id to top-level Feature.id so setFeatureState works.

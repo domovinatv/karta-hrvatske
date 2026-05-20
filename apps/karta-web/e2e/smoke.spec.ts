@@ -211,6 +211,42 @@ test("Stadioni toggle loads stadiums and renders at HR zoom", async ({ page }) =
   );
 });
 
+test("Zračne luke toggle loads airports + runways + approaches", async ({ page }) => {
+  await page.goto(BASE + "/");
+  await waitForMapIdle(page);
+
+  const airports = page.locator("button", { hasText: /Zračne luke/ }).first();
+  await expect(airports).toBeVisible();
+  const reqs = Promise.all([
+    page.waitForRequest((r) => r.url().includes("/data/airports.geojson")),
+    page.waitForRequest((r) => r.url().includes("/data/runways.geojson")),
+    page.waitForRequest((r) => r.url().includes("/data/approaches.geojson")),
+  ]);
+  await airports.click();
+  const [aReq, rReq, appReq] = await reqs;
+  const statuses = await Promise.all([
+    aReq.response().then((r) => r?.status()),
+    rReq.response().then((r) => r?.status()),
+    appReq.response().then((r) => r?.status()),
+  ]);
+  expect(statuses).toEqual([200, 200, 200]);
+
+  // Verify all three layers exist + have features rendered
+  await page.waitForFunction(
+    () => {
+      const w = window as unknown as { _gisMap?: import("maplibre-gl").Map };
+      const map = w._gisMap;
+      if (!map) return false;
+      const needed = ["hr-airports-circle", "hr-runways-line", "hr-approaches-line"];
+      return needed.every((id) => {
+        if (!map.getLayer(id)) return false;
+        return map.queryRenderedFeatures({ layers: [id] } as never).length > 0;
+      });
+    },
+    { timeout: 10000 },
+  );
+});
+
 test("klub click activates JLS + opens popup (no modal)", async ({ page }) => {
   await page.goto(BASE + "/");
   await waitForMapIdle(page);

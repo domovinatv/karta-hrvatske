@@ -113,6 +113,14 @@ export function ControlsPanel({ variant = "desktop", onAction }: Props) {
         🏟 Stadioni
       </CtrlBtn>
       <CtrlBtn
+        active={s.showAirports}
+        onClick={wrap(() => s.setShowAirports(!s.showAirports))}
+        shortcut="A"
+        title="Zračne luke + runwayi + approach corridori (3° glide, 15 km, gradient pokazuje visinu)"
+      >
+        ✈ Zračne luke
+      </CtrlBtn>
+      <CtrlBtn
         active={s.showOrto}
         onClick={wrap(() => s.setShowOrto(!s.showOrto))}
         shortcut="S"

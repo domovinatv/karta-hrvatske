@@ -125,3 +125,38 @@ export interface StadiumProperties {
 }
 export type StadiumFeature = GeoJSON.Feature<GeoJSON.Point, StadiumProperties> & { id: number };
 export type StadiumCollection = GeoJSON.FeatureCollection<GeoJSON.Point, StadiumProperties>;
+
+export interface AirportProperties {
+  id: string;
+  osm_type: string;
+  osm_id: number;
+  aeroway: string;
+  name?: string;
+  icao?: string;
+  iata?: string;
+  aerodrome_type?: string;
+}
+export type AirportCollection = GeoJSON.FeatureCollection<GeoJSON.Point, AirportProperties>;
+
+export interface RunwayProperties {
+  id: number;
+  osm_id: number;
+  ref?: string;
+  surface?: string;
+  length_m: number;
+  heading_fwd: number;
+  heading_rev: number;
+  name?: string;
+}
+export type RunwayCollection = GeoJSON.FeatureCollection<GeoJSON.LineString, RunwayProperties>;
+
+export interface ApproachProperties {
+  runway_id: number;
+  runway_ref?: string;
+  heading_deg: number;
+  heading_label: string;
+  end_alt_m: number;
+  length_km: number;
+  glide_slope_deg: number;
+}
+export type ApproachCollection = GeoJSON.FeatureCollection<GeoJSON.LineString, ApproachProperties>;

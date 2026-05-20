@@ -21,6 +21,9 @@ INPUT_NAS_PATH = "data/hr_canonical_naselja.geojson"
 INPUT_CLUBS_PATH = "data/hr_football_clubs.geojson"
 INPUT_PITCHES_PATH = "data/hr_pitches.geojson"
 INPUT_STADIUMS_PATH = "data/hr_stadiums.geojson"
+INPUT_AIRPORTS_PATH = "data/hr_airports.geojson"
+INPUT_RUNWAYS_PATH = "data/hr_runways.geojson"
+INPUT_APPROACHES_PATH = "data/hr_approaches.geojson"
 CLUBS_LOGOS_SRC = Path.home() / "git" / "domovinatv" / "klubovi.domovina.ai" / "data" / "logos"
 TEMPLATE_PATH = "scripts/templates/hrvatska_full.html.tmpl"
 OUTPUT_PATH = "outputs/hrvatska_full.html"
@@ -28,6 +31,9 @@ OUTPUT_NAS_PATH = "outputs/hrvatska_naselja.geojson"
 OUTPUT_CLUBS_PATH = "outputs/hr_football_clubs.geojson"
 OUTPUT_PITCHES_PATH = "outputs/hr_pitches.geojson"
 OUTPUT_STADIUMS_PATH = "outputs/hr_stadiums.geojson"
+OUTPUT_AIRPORTS_PATH = "outputs/hr_airports.geojson"
+OUTPUT_RUNWAYS_PATH = "outputs/hr_runways.geojson"
+OUTPUT_APPROACHES_PATH = "outputs/hr_approaches.geojson"
 OUTPUT_LOGOS_DIR = Path("outputs/logos")
 
 
@@ -63,10 +69,14 @@ def main():
                 shutil.copyfile(png, OUTPUT_LOGOS_DIR / png.name)
                 copied += 1
             print(f"Copied {copied} logos -> {OUTPUT_LOGOS_DIR}")
-    # OSM football pitches + stadiums — lazy-loaded layers in karta-web.
+    # OSM football pitches + stadiums + airports/runways/approaches —
+    # lazy-loaded layers in karta-web.
     for src, dst in (
         (INPUT_PITCHES_PATH, OUTPUT_PITCHES_PATH),
         (INPUT_STADIUMS_PATH, OUTPUT_STADIUMS_PATH),
+        (INPUT_AIRPORTS_PATH, OUTPUT_AIRPORTS_PATH),
+        (INPUT_RUNWAYS_PATH, OUTPUT_RUNWAYS_PATH),
+        (INPUT_APPROACHES_PATH, OUTPUT_APPROACHES_PATH),
     ):
         if os.path.exists(src):
             shutil.copyfile(src, dst)
