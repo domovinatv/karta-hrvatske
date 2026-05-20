@@ -161,6 +161,56 @@ test("deep link /jls/grad-zagreb selects and fits", async ({ page }) => {
   );
 });
 
+test("Igrališta toggle loads pitches and renders at zoom ≥ 9", async ({ page }) => {
+  await page.goto(BASE + "/");
+  await waitForMapIdle(page);
+
+  // Zoom to a populated area so the minzoom=9 layer renders features.
+  await page.evaluate(() => {
+    const w = window as unknown as { _gisMap?: import("maplibre-gl").Map };
+    w._gisMap!.jumpTo({ center: [15.97, 45.81], zoom: 11 });
+  });
+  await page.waitForTimeout(500);
+
+  const igralista = page.locator("button", { hasText: /Igrališta/ }).first();
+  await expect(igralista).toBeVisible();
+  const reqPromise = page.waitForRequest((req) => req.url().includes("/data/pitches.geojson"));
+  await igralista.click();
+  const resp = await (await reqPromise).response();
+  expect(resp?.status()).toBe(200);
+
+  await page.waitForFunction(
+    () => {
+      const w = window as unknown as { _gisMap?: import("maplibre-gl").Map };
+      const map = w._gisMap;
+      if (!map?.getLayer("hr-pitches-circle")) return false;
+      return map.queryRenderedFeatures({ layers: ["hr-pitches-circle"] } as never).length > 0;
+    },
+    { timeout: 10000 },
+  );
+});
+
+test("Stadioni toggle loads stadiums and renders at HR zoom", async ({ page }) => {
+  await page.goto(BASE + "/");
+  await waitForMapIdle(page);
+
+  const stadioni = page.locator("button", { hasText: /Stadioni/ }).first();
+  const reqPromise = page.waitForRequest((req) => req.url().includes("/data/stadiums.geojson"));
+  await stadioni.click();
+  const resp = await (await reqPromise).response();
+  expect(resp?.status()).toBe(200);
+
+  await page.waitForFunction(
+    () => {
+      const w = window as unknown as { _gisMap?: import("maplibre-gl").Map };
+      const map = w._gisMap;
+      if (!map?.getLayer("hr-stadiums-circle")) return false;
+      return map.queryRenderedFeatures({ layers: ["hr-stadiums-circle"] } as never).length > 0;
+    },
+    { timeout: 10000 },
+  );
+});
+
 test("klub click activates JLS + opens popup (no modal)", async ({ page }) => {
   await page.goto(BASE + "/");
   await waitForMapIdle(page);

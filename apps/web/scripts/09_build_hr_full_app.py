@@ -19,11 +19,15 @@ INPUT_ZUP_PATH = "data/hr_canonical_zupanije.geojson"
 INPUT_DRZ_PATH = "data/hr_canonical_drzava.geojson"
 INPUT_NAS_PATH = "data/hr_canonical_naselja.geojson"
 INPUT_CLUBS_PATH = "data/hr_football_clubs.geojson"
+INPUT_PITCHES_PATH = "data/hr_pitches.geojson"
+INPUT_STADIUMS_PATH = "data/hr_stadiums.geojson"
 CLUBS_LOGOS_SRC = Path.home() / "git" / "domovinatv" / "klubovi.domovina.ai" / "data" / "logos"
 TEMPLATE_PATH = "scripts/templates/hrvatska_full.html.tmpl"
 OUTPUT_PATH = "outputs/hrvatska_full.html"
 OUTPUT_NAS_PATH = "outputs/hrvatska_naselja.geojson"
 OUTPUT_CLUBS_PATH = "outputs/hr_football_clubs.geojson"
+OUTPUT_PITCHES_PATH = "outputs/hr_pitches.geojson"
+OUTPUT_STADIUMS_PATH = "outputs/hr_stadiums.geojson"
 OUTPUT_LOGOS_DIR = Path("outputs/logos")
 
 
@@ -59,6 +63,15 @@ def main():
                 shutil.copyfile(png, OUTPUT_LOGOS_DIR / png.name)
                 copied += 1
             print(f"Copied {copied} logos -> {OUTPUT_LOGOS_DIR}")
+    # OSM football pitches + stadiums — lazy-loaded layers in karta-web.
+    for src, dst in (
+        (INPUT_PITCHES_PATH, OUTPUT_PITCHES_PATH),
+        (INPUT_STADIUMS_PATH, OUTPUT_STADIUMS_PATH),
+    ):
+        if os.path.exists(src):
+            shutil.copyfile(src, dst)
+            n = len(json.loads(open(src).read())["features"])
+            print(f"Copied {dst}: {os.path.getsize(dst):,} bytes ({n} features)")
     fc = json.loads(geojson_str)
     features = fc["features"]
 

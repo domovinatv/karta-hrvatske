@@ -26,6 +26,8 @@ interface MapState {
   showNaselja: boolean;
   showClubs: boolean;
   showOrto: boolean;
+  showPitches: boolean;
+  showStadiums: boolean;
   showZupBorders: boolean;
   showJlsBorders: boolean;
   // Theme
@@ -44,6 +46,8 @@ interface MapStateActions {
   setShowNaselja: (on: boolean) => void;
   setShowClubs: (on: boolean) => void;
   setShowOrto: (on: boolean) => void;
+  setShowPitches: (on: boolean) => void;
+  setShowStadiums: (on: boolean) => void;
   toggleZupBorders: () => void;
   toggleJlsBorders: () => void;
   setTheme: (t: Theme) => void;
@@ -73,6 +77,8 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
   const [showNaselja, setShowNaselja] = useState(false);
   const [showClubs, setShowClubs] = useState(false);
   const [showOrto, setShowOrto] = useState(false);
+  const [showPitches, setShowPitches] = useState(false);
+  const [showStadiums, setShowStadiums] = useState(false);
   const [showZupBorders, setShowZupBorders] = useState(true);
   const [showJlsBorders, setShowJlsBorders] = useState(true);
   const [theme, setThemeState] = useState<Theme>(initialTheme);
@@ -116,6 +122,8 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
       showNaselja,
       showClubs,
       showOrto,
+      showPitches,
+      showStadiums,
       showZupBorders,
       showJlsBorders,
       theme,
@@ -128,6 +136,8 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
       setShowNaselja,
       setShowClubs,
       setShowOrto,
+      setShowPitches,
+      setShowStadiums,
       toggleZupBorders,
       toggleJlsBorders,
       setTheme,
@@ -144,6 +154,8 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
       showNaselja,
       showClubs,
       showOrto,
+      showPitches,
+      showStadiums,
       showZupBorders,
       showJlsBorders,
       theme,

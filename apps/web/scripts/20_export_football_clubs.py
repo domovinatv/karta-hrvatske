@@ -55,8 +55,14 @@ CLUB_COLS = [
     # specific map location (not coords). geo_source tags lat/lng provenance:
     # "both" (Google + Nominatim agree), "nominatim" (only Nominatim).
     "google_place_id", "geo_source",
+    # OSM-verified truth (filled by klubovi.domovina.ai/scripts/32_ingest_osm_pitches.py):
+    # geo_truth_source picks between Nominatim and Google by which one is
+    # closer to an OSM-tagged football pitch within 1500 m. Values:
+    #   'osm:google' / 'osm:nominatim' / 'osm:tie' / 'unverified' / NULL.
+    # See memory: project-geo-truth-verification.
+    "geo_truth_source", "osm_pitch_id", "osm_pitch_distance_m",
     "notes", "created_at", "updated_at",
-    "lat", "lng",
+    "lat", "lng", "lat_google", "lng_google",
 ]
 
 
@@ -119,7 +125,14 @@ def main() -> None:
             None,
         )
 
-        props = {k: r[k] for k in CLUB_COLS if k not in ("lat", "lng")}
+        props = {
+            k: r[k]
+            for k in CLUB_COLS
+            if k not in (
+                "lat", "lng", "lat_google", "lng_google",
+                "osm_pitch_id", "osm_pitch_distance_m",
+            )
+        }
         props["top_tier"] = top_tier
         props["top_league_name"] = top_league_name
         if seasons:
@@ -140,9 +153,30 @@ def main() -> None:
 
         props = _strip_empty(props)
 
+        # Pick the marker coordinate. Authoritative source is the OSM-pitch
+        # verified `geo_truth_source` (script 32 in klubovi.domovina.ai). It
+        # tells us which of the two geocoders landed closer to a tagged
+        # football pitch. For 'unverified' (no OSM pitch in 1500 m radius)
+        # and 'osm:tie' (both same distance) we fall back to the simpler
+        # heuristic — Google when `geo_source='both'`, otherwise Nominatim.
+        truth = r["geo_truth_source"]
+        has_google = r["lat_google"] is not None and r["lng_google"] is not None
+        if truth == "osm:google" and has_google:
+            lng, lat = r["lng_google"], r["lat_google"]
+        elif truth == "osm:nominatim":
+            lng, lat = r["lng"], r["lat"]
+        else:
+            # osm:tie / unverified / NULL → prefer Google when both agreed
+            if r["geo_source"] == "both" and has_google:
+                lng, lat = r["lng_google"], r["lat_google"]
+            else:
+                lng, lat = r["lng"], r["lat"]
+        if r["osm_pitch_distance_m"] is not None:
+            props["osm_pitch_distance_m"] = r["osm_pitch_distance_m"]
+
         features.append({
             "type": "Feature",
-            "geometry": {"type": "Point", "coordinates": [r["lng"], r["lat"]]},
+            "geometry": {"type": "Point", "coordinates": [lng, lat]},
             "properties": props,
         })
         by_tier[top_tier] += 1
@@ -160,6 +194,7 @@ def main() -> None:
         "website", "email", "phone", "president", "president_role",
         "fb_url", "ig_url", "x_url", "semafor_url", "sofascore_url",
         "oib", "udruga_id", "registry_url", "google_place_id", "geo_source",
+        "geo_truth_source",
         "seasons", "aliases", "source_ids",
     ]
     print("Coverage:")

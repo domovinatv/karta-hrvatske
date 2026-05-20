@@ -103,3 +103,25 @@ export type ClubFeature = GeoJSON.Feature<GeoJSON.Point, ClubProperties> & { id?
 export type ClubCollection = GeoJSON.FeatureCollection<GeoJSON.Point, ClubProperties>;
 
 export type Theme = "light" | "dark";
+
+export interface PitchProperties {
+  id: number;
+  osm_type: "way" | "relation";
+  osm_id: number;
+  name?: string;
+  surface?: string;
+  linked_club_slug?: string;
+  linked_club_name?: string;
+}
+export type PitchFeature = GeoJSON.Feature<GeoJSON.Point, PitchProperties> & { id: number };
+export type PitchCollection = GeoJSON.FeatureCollection<GeoJSON.Point, PitchProperties>;
+
+export interface StadiumProperties {
+  id: number;
+  osm_type: "way" | "relation";
+  osm_id: number;
+  name?: string;
+  capacity?: number;
+}
+export type StadiumFeature = GeoJSON.Feature<GeoJSON.Point, StadiumProperties> & { id: number };
+export type StadiumCollection = GeoJSON.FeatureCollection<GeoJSON.Point, StadiumProperties>;

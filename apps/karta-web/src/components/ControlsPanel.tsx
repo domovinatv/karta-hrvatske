@@ -97,6 +97,22 @@ export function ControlsPanel({ variant = "desktop", onAction }: Props) {
         ⚽ Klubovi
       </CtrlBtn>
       <CtrlBtn
+        active={s.showPitches}
+        onClick={wrap(() => s.setShowPitches(!s.showPitches))}
+        shortcut="P"
+        title="Sva nogometna igrališta iz OSM-a (lazy-loaded, vidljivo od zoom 9)"
+      >
+        ▦ Igrališta
+      </CtrlBtn>
+      <CtrlBtn
+        active={s.showStadiums}
+        onClick={wrap(() => s.setShowStadiums(!s.showStadiums))}
+        shortcut="T"
+        title="Svi stadioni iz OSM-a (lazy-loaded)"
+      >
+        🏟 Stadioni
+      </CtrlBtn>
+      <CtrlBtn
         active={s.showOrto}
         onClick={wrap(() => s.setShowOrto(!s.showOrto))}
         shortcut="S"

@@ -26,6 +26,8 @@ const fileMap = [
   ["hr_canonical_drzava.geojson", "drzava.geojson"],
   ["hrvatska_naselja.geojson", "naselja.geojson"],
   ["hr_football_clubs.geojson", "clubs.geojson"],
+  ["hr_pitches.geojson", "pitches.geojson"],
+  ["hr_stadiums.geojson", "stadiums.geojson"],
 ];
 
 // hr_canonical.geojson lives in apps/web/data/, not outputs/. Look in both.

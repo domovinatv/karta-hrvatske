@@ -16,6 +16,8 @@ import { useJlsSelection } from "@/hooks/useJlsSelection";
 import { useMapLibre } from "@/hooks/useMapLibre";
 import { useNaseljaLayer } from "@/hooks/useNaseljaLayer";
 import { useOrtofotoLayer } from "@/hooks/useOrtofotoLayer";
+import { usePitchesLayer } from "@/hooks/usePitchesLayer";
+import { useStadiumsLayer } from "@/hooks/useStadiumsLayer";
 import { useUrlSync } from "@/hooks/useUrlSync";
 import { useMapState } from "@/lib/MapState";
 import type { JlsCollection, JlsFeature } from "@/lib/types";
@@ -49,6 +51,8 @@ export default function MapView() {
     styleRev,
   });
   useOrtofotoLayer({ map: mapRef.current, loaded, styleRev });
+  usePitchesLayer({ map: mapRef.current, loaded, styleRev });
+  useStadiumsLayer({ map: mapRef.current, loaded, styleRev });
   const { clubs } = useClubsLayer({
     map: mapRef.current,
     loaded,
