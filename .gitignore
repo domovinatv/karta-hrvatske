@@ -5,12 +5,12 @@
 *.iml
 .vscode/
 
-# Python (apps/web)
+# Python (apps/data-pipeline)
 .venv/
 __pycache__/
 *.pyc
 
-# Flutter / Dart (apps/mobile)
+# Flutter / Dart (apps/karta-mobile)
 .dart_tool/
 .flutter-plugins-dependencies
 .pub-cache/
@@ -21,20 +21,20 @@ coverage/
 **/ios/Flutter/.last_build_id
 app.*.symbols
 app.*.map.json
-/apps/mobile/android/app/debug
-/apps/mobile/android/app/profile
-/apps/mobile/android/app/release
+/apps/karta-mobile/android/app/debug
+/apps/karta-mobile/android/app/profile
+/apps/karta-mobile/android/app/release
 
-# Web app — large raw inputs (regenerable: apps/web/scripts/06_fetch_geoboundaries.py)
-apps/web/data/hr_adm2_geoboundaries_raw.geojson
-apps/web/data/dzs_jls.xlsx
-apps/web/data/dgu_jls.geojson
-apps/web/data/dgu_zupanije.geojson
-apps/web/data/dgu_drzava.geojson
-apps/web/data/dgu_naselja.geojson
-apps/web/outputs/hrvatska_naselja.geojson
+# Web app — large raw inputs (regenerable: apps/data-pipeline/scripts/06_fetch_geoboundaries.py)
+apps/data-pipeline/data/hr_adm2_geoboundaries_raw.geojson
+apps/data-pipeline/data/dzs_jls.xlsx
+apps/data-pipeline/data/dgu_jls.geojson
+apps/data-pipeline/data/dgu_zupanije.geojson
+apps/data-pipeline/data/dgu_drzava.geojson
+apps/data-pipeline/data/dgu_naselja.geojson
+apps/data-pipeline/outputs/hrvatska_naselja.geojson
 
 # Football clubs overlay — logos regenerable from sibling repo
 # (~/git/ss/hrvatski-amaterski-nogometni-klubovi/data/logos), ~30 MB across copies
-apps/web/logos/
-apps/web/outputs/logos/
+apps/data-pipeline/logos/
+apps/data-pipeline/outputs/logos/

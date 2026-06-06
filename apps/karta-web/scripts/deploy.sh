@@ -5,7 +5,7 @@ set -euo pipefail
 
 cd "$(dirname "$0")/.."
 
-echo "▸ 1/5 sync-data (apps/web/outputs → public/data + public/logos)"
+echo "▸ 1/5 sync-data (apps/data-pipeline/outputs → public/data + public/logos)"
 node scripts/sync-data.mjs
 
 echo "▸ 2/5 build-lookups (lookup-{clubs,jls,zupanije}.json for CF Worker)"

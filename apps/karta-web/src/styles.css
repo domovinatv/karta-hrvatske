@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Brand color tokens — ported from apps/web/scripts/templates/hrvatska_full.html.tmpl
+/* Brand color tokens — ported from apps/data-pipeline/scripts/templates/hrvatska_full.html.tmpl
    Dark is default; light theme activates via [data-theme="light"]. */
 :root {
   --bg: #0a0e14;

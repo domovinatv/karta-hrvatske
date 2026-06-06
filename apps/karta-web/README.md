@@ -2,7 +2,7 @@
 
 Production React/Vite frontend za **krovnu DOMOVINA GIS kartu**. Trenutni layeri: JLS granice + nogometni klubovi. Planirano dodavanje više layera kroz vrijeme (Phase 7 layer-registry refactor kad dosegne 3+ layera).
 
-Sibling `apps/web` ostaje Python data pipeline + dev HTML.
+Sibling `apps/data-pipeline` ostaje Python data pipeline + dev HTML.
 
 ## Stack
 
@@ -19,13 +19,13 @@ Stack je identičan sibling-u `klubovi.domovina.ai/frontend/` — dijeli infrast
 ## Razvoj
 
 ```bash
-# 1. Generiraj source data u sibling apps/web Python pipeline-u
-cd ../web && python3 scripts/09_build_hr_full_app.py
+# 1. Generiraj source data u sibling apps/data-pipeline Python pipeline-u
+cd ../data-pipeline && python3 scripts/09_build_hr_full_app.py
 
 # 2. Sync data + install + dev
 cd ../karta-web
 npm install
-npm run sync-data    # apps/web/outputs/ → public/data/
+npm run sync-data    # apps/data-pipeline/outputs/ → public/data/
 npm run dev          # → http://localhost:5174/
 ```
 

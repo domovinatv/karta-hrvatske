@@ -1,44 +1,59 @@
 # karta-hrvatske
 
-Monorepo za interaktivnu kartu Republike Hrvatske — JLS-ovi, županije, naselja.
+Monorepo za interaktivnu kartu Republike Hrvatske — JLS-ovi, županije, naselja, nogometni klubovi, aerodromi.
 
-Pragmatičan split: dvije nezavisne implementacije koje rade dobro na svojim platformama, nema dijeljenog koda među njima.
+Tri nezavisne komponente, bez dijeljenog koda: jedan podatkovni sloj (Python) hrani dvije nezavisne klijentske implementacije (web + mobile).
 
 ## Struktura
 
 ```
 apps/
-├── mobile/   Flutter + maplibre — iOS, Android (i webview fallback)
-└── web/      Pure WebGL (jedan statički HTML) — produkcijska web verzija
+├── karta-web/        React + maplibre + pmtiles — PRODUKCIJA, gis.domovina.ai
+├── karta-mobile/     Flutter + maplibre — iOS, Android (i webview fallback)
+└── data-pipeline/    Python — generira sve GeoJSON/topologiju + dev HTML (podatkovni sloj)
 ```
 
-### `apps/mobile/` — Flutter
+### `apps/karta-web/` — React frontend (LIVE)
 
-Prepisano iz `domovinatv/map.domovina.ai`. Koristi `maplibre 0.3.5` (locked) + free tiles (OpenFreeMap). 2D, bez 3D, bez style togglea.
+Produkcijska web verzija na **gis.domovina.ai** (Cloudflare Pages, projekt `gis-domovina`). maplibre-gl + pmtiles, lazy-loaded layeri (naselja, klubovi, aerodromi). Vuče podatke iz `data-pipeline` preko `npm run sync-data`.
 
 ```bash
-cd apps/mobile
+cd apps/karta-web
+npm install
+npm run dev          # lokalni dev
+npm run deploy       # sync-data → build-lookups → sitemap → vite build → wrangler deploy
+```
+
+### `apps/karta-mobile/` — Flutter
+
+Prepisano iz (sad deprecirane) `domovinatv/map.domovina.ai`. Koristi `maplibre 0.3.5` (locked) + free tiles (OpenFreeMap). 2D, bez 3D, bez style togglea.
+
+```bash
+cd apps/karta-mobile
 flutter pub get
 flutter run -d chrome --web-port=8080   # ili -d ios / -d android
 ```
 
-### `apps/web/` — pure WebGL
+### `apps/data-pipeline/` — podatkovni sloj (Python)
 
-Prepisano iz `domovina/draft_karta_rh`. Build pipeline (Python) generira jedan samostalan HTML (`hrvatska_full.html`) — to je produkcijski deliverable.
+Prepisano iz `domovina/draft_karta_rh`. Build pipeline generira kanonske GeoJSON-ove (JLS/županije/naselja iz DGU+DZS), nogometne klubove, OSM teren/aerodrome, te samostalan dev HTML (`hrvatska_full.html`). Izlazi iz `outputs/` i `data/` se sinkaju u `karta-web`.
 
 ```bash
-cd apps/web
+cd apps/data-pipeline
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 ./scripts/00_pipeline.sh   # regenerira sve iz raw DGU/DZS izvora
 ```
 
-## Zašto dvije implementacije
+## Tok podataka
 
-Iskustvo iz oba projekta:
-- **iOS/Android**: Flutter + maplibre je najpragmatičnije — native scroll/touch, jedan codebase, prolazi App Store/Play.
-- **Web**: pure WebGL u jednom HTML-u (12 MB) puca s najmanjom latencijom i bez Flutter Web overheada. Eksperiment s `lib/web_native/` Flutter web rendererom je bio dead end (vidi memoriju `web_native_renderer_decision`).
+```
+data-pipeline (Python)  →  outputs/*.geojson + data/*.geojson
+        │
+        └─ karta-web `npm run sync-data`  →  public/data/  →  Cloudflare Pages
+```
 
-Deprecirani izvori (zadržati za referencu, ne mergati natrag):
-- `domovinatv/map.domovina.ai`
-- `domovina/draft_karta_rh`
+## Deprecirani izvori (premješteni u `~/git/legacy/`, ne mergati natrag)
+
+- `map.domovina.ai` — standalone Flutter preteča, u cijelosti migrirana u `apps/karta-mobile` (zadnji commit: *"DEPRECATED on arrival"*).
+- Upstream izvori za referencu: `domovina/draft_karta_rh` (→ data-pipeline).

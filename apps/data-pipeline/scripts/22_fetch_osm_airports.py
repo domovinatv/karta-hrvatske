@@ -16,7 +16,7 @@ threshold the aircraft altitude is ~785 m AGL (15000 × tan 3°). The
 corridor is rendered in karta-web with a `line-gradient` so altitude is
 visually obvious (low = warm colour, high = cool).
 
-Outputs (geojson) into apps/web/data/ ; the karta-web sync-data step
+Outputs (geojson) into apps/data-pipeline/data/ ; the karta-web sync-data step
 ships them to public/data/.
   - data/hr_airports.geojson    (Point features, ~30-50)
   - data/hr_runways.geojson     (LineString, ~50-100)

@@ -8,7 +8,7 @@ test-results/
 playwright-report/
 e2e/screenshots/
 
-# Synced from apps/web pipeline — gitignored to avoid duplicating large geojson
+# Synced from apps/data-pipeline pipeline — gitignored to avoid duplicating large geojson
 # in two trees. Build CI runs sync-data.mjs before vite build.
 public/data/
 public/logos/

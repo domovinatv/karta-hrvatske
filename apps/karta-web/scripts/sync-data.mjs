@@ -1,17 +1,17 @@
 #!/usr/bin/env node
 // Phase 0 sync: copies the Python pipeline's outputs/ into public/data/ +
 // public/logos/. Run after `python3 scripts/09_build_hr_full_app.py` in
-// apps/web/. Run by `npm run sync-data` or directly: node scripts/sync-data.mjs
+// apps/data-pipeline/. Run by `npm run sync-data` or directly: node scripts/sync-data.mjs
 import { copyFileSync, cpSync, existsSync, mkdirSync, writeFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const KARTA_WEB = resolve(__dirname, "..");
-const OUTPUTS = resolve(KARTA_WEB, "../web/outputs");
+const OUTPUTS = resolve(KARTA_WEB, "../data-pipeline/outputs");
 
 if (!existsSync(OUTPUTS)) {
-  console.error(`Missing ${OUTPUTS}. Run apps/web pipeline first.`);
+  console.error(`Missing ${OUTPUTS}. Run apps/data-pipeline pipeline first.`);
   process.exit(1);
 }
 
@@ -33,8 +33,8 @@ const fileMap = [
   ["hr_approaches.geojson", "approaches.geojson"],
 ];
 
-// hr_canonical.geojson lives in apps/web/data/, not outputs/. Look in both.
-const apps_web_data = resolve(KARTA_WEB, "../web/data");
+// hr_canonical.geojson lives in apps/data-pipeline/data/, not outputs/. Look in both.
+const apps_web_data = resolve(KARTA_WEB, "../data-pipeline/data");
 
 let copied = 0;
 for (const [srcName, destName] of fileMap) {

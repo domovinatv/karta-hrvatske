@@ -1,4 +1,4 @@
-// Feature property shapes — mirror what the apps/web Python pipeline emits.
+// Feature property shapes — mirror what the apps/data-pipeline Python pipeline emits.
 // Keeping these explicit means hooks and components don't have to do `any` casts.
 
 export interface JlsProperties {
