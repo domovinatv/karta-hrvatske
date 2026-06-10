@@ -29,6 +29,7 @@ interface MapState {
   showPitches: boolean;
   showStadiums: boolean;
   showAirports: boolean;
+  showPinka: boolean;
   showZupBorders: boolean;
   showJlsBorders: boolean;
   // Theme
@@ -50,6 +51,7 @@ interface MapStateActions {
   setShowPitches: (on: boolean) => void;
   setShowStadiums: (on: boolean) => void;
   setShowAirports: (on: boolean) => void;
+  setShowPinka: (on: boolean) => void;
   toggleZupBorders: () => void;
   toggleJlsBorders: () => void;
   setTheme: (t: Theme) => void;
@@ -82,6 +84,7 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
   const [showPitches, setShowPitches] = useState(false);
   const [showStadiums, setShowStadiums] = useState(false);
   const [showAirports, setShowAirports] = useState(false);
+  const [showPinka, setShowPinka] = useState(false);
   const [showZupBorders, setShowZupBorders] = useState(true);
   const [showJlsBorders, setShowJlsBorders] = useState(true);
   const [theme, setThemeState] = useState<Theme>(initialTheme);
@@ -128,6 +131,7 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
       showPitches,
       showStadiums,
       showAirports,
+      showPinka,
       showZupBorders,
       showJlsBorders,
       theme,
@@ -143,6 +147,7 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
       setShowPitches,
       setShowStadiums,
       setShowAirports,
+      setShowPinka,
       toggleZupBorders,
       toggleJlsBorders,
       setTheme,
@@ -162,6 +167,7 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
       showPitches,
       showStadiums,
       showAirports,
+      showPinka,
       showZupBorders,
       showJlsBorders,
       theme,

@@ -102,6 +102,32 @@ export interface ClubProperties {
 export type ClubFeature = GeoJSON.Feature<GeoJSON.Point, ClubProperties> & { id?: number };
 export type ClubCollection = GeoJSON.FeatureCollection<GeoJSON.Point, ClubProperties>;
 
+// pinka.io kampanja s lokacijom (live fetch s api.domovina.ai, vidi lib/pinka.ts)
+export interface PinkaCampaignProperties {
+  /** Sequential numeric id (feature-state hover needs a number). */
+  num_id: number;
+  id: string;
+  slug: string;
+  type: string;
+  title: string;
+  description: string | null;
+  goal_cents: number | null;
+  state: string;
+  cover_image_url: string | null;
+  location_name: string | null;
+  total_raised_cents: number;
+  contribution_count: number;
+  contributor_count: number;
+}
+
+export type PinkaCampaignFeature = GeoJSON.Feature<GeoJSON.Point, PinkaCampaignProperties> & {
+  id?: number;
+};
+export type PinkaCampaignCollection = GeoJSON.FeatureCollection<
+  GeoJSON.Point,
+  PinkaCampaignProperties
+>;
+
 export type Theme = "light" | "dark";
 
 export interface PitchProperties {

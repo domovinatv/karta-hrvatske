@@ -22,6 +22,7 @@ export const router = createBrowserRouter([
     children: [
       { index: true, element: lazyRoute(MapView) },
       { path: "klub/:slug", element: lazyRoute(MapView) },
+      { path: "kampanje", element: lazyRoute(MapView) },
       { path: "jls/:slug", element: lazyRoute(MapView) },
       { path: "zupanija/:slug", element: lazyRoute(MapView) },
       { path: "*", element: lazyRoute(NotFound) },

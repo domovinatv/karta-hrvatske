@@ -97,6 +97,14 @@ export function ControlsPanel({ variant = "desktop", onAction }: Props) {
         ⚽ Klubovi
       </CtrlBtn>
       <CtrlBtn
+        active={s.showPinka}
+        onClick={wrap(() => s.setShowPinka(!s.showPinka))}
+        shortcut="€"
+        title="Aktivne pinka.io kampanje s lokacijom — klik na marker = donacija (lazy-loaded)"
+      >
+        💶 Pinka kampanje
+      </CtrlBtn>
+      <CtrlBtn
         active={s.showPitches}
         onClick={wrap(() => s.setShowPitches(!s.showPitches))}
         shortcut="P"

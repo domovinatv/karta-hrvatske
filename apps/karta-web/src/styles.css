@@ -168,6 +168,54 @@ body {
   border-color: var(--accent-2);
 }
 
+/* Pinka kampanje popup (sloj 💶 — pinka.io coral #E85D5D) */
+.pinka-popup {
+  min-width: 230px;
+}
+.pinka-popup .pk-name {
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--ink);
+  line-height: 1.3;
+}
+.pinka-popup .pk-loc {
+  font-size: 10.5px;
+  color: var(--muted);
+  margin-top: 3px;
+}
+.pinka-popup .pk-bar {
+  height: 6px;
+  border-radius: 3px;
+  background: var(--line);
+  overflow: hidden;
+  margin-top: 9px;
+}
+.pinka-popup .pk-bar > div {
+  height: 100%;
+  background: #e85d5d;
+}
+.pinka-popup .pk-stats {
+  font-size: 11px;
+  color: var(--text);
+  margin-top: 7px;
+}
+.pinka-popup .pk-donate-btn {
+  display: block;
+  margin-top: 10px;
+  padding: 7px 10px;
+  background: #e85d5d;
+  color: #fff;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+.pinka-popup .pk-donate-btn:hover {
+  background: #d14545;
+}
+
 /* Rich-card modal — iOS safe-area + 100dvh aware. */
 .club-modal-backdrop {
   position: fixed;

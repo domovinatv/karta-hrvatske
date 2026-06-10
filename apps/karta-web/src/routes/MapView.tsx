@@ -1,4 +1,5 @@
-import { useCallback, useMemo, useRef } from "react";
+import { useCallback, useEffect, useMemo, useRef } from "react";
+import { useLocation } from "react-router-dom";
 import { BottomSheet } from "@/components/BottomSheet";
 import { ClubModal } from "@/components/ClubModal";
 import { ControlsPanel } from "@/components/ControlsPanel";
@@ -16,6 +17,7 @@ import { useJlsSelection } from "@/hooks/useJlsSelection";
 import { useMapLibre } from "@/hooks/useMapLibre";
 import { useNaseljaLayer } from "@/hooks/useNaseljaLayer";
 import { useOrtofotoLayer } from "@/hooks/useOrtofotoLayer";
+import { usePinkaLayer } from "@/hooks/usePinkaLayer";
 import { usePitchesLayer } from "@/hooks/usePitchesLayer";
 import { useStadiumsLayer } from "@/hooks/useStadiumsLayer";
 import { useAirportsLayer } from "@/hooks/useAirportsLayer";
@@ -27,7 +29,18 @@ export default function MapView() {
   const containerRef = useRef<HTMLDivElement>(null);
   const { mapRef, loaded, styleRev } = useMapLibre({ container: containerRef });
   const { jls, zupanije, drzava, error } = useGeojsonData();
-  const { setSelectedJls, setFocusMode, setShowNaselja, setShowClubs } = useMapState();
+  const { setSelectedJls, setFocusMode, setShowNaselja, setShowClubs, setShowPinka } =
+    useMapState();
+
+  // Deep-link /kampanje[?c={slug}] — uključi pinka sloj; ?c fokusira kampanju.
+  const routerLocation = useLocation();
+  const isPinkaRoute = routerLocation.pathname === "/kampanje";
+  const pinkaFocusSlug = isPinkaRoute
+    ? new URLSearchParams(routerLocation.search).get("c")
+    : null;
+  useEffect(() => {
+    if (isPinkaRoute) setShowPinka(true);
+  }, [isPinkaRoute, setShowPinka]);
 
   const totalArea = useMemo(() => {
     if (!jls) return 1;
@@ -55,6 +68,7 @@ export default function MapView() {
   usePitchesLayer({ map: mapRef.current, loaded, styleRev });
   useStadiumsLayer({ map: mapRef.current, loaded, styleRev });
   useAirportsLayer({ map: mapRef.current, loaded, styleRev });
+  usePinkaLayer({ map: mapRef.current, loaded, styleRev, focusSlug: pinkaFocusSlug });
   const { clubs } = useClubsLayer({
     map: mapRef.current,
     loaded,
