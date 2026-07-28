@@ -1,13 +1,16 @@
 import { useEffect, useRef } from "react";
 import type { Map as MapLibreMap } from "maplibre-gl";
 import { useMapState } from "@/lib/MapState";
-import type { JlsCollection, JlsFeature } from "@/lib/types";
+import type { JlsCollection, JlsFeature, NaseljaCollection } from "@/lib/types";
 
 interface Options {
   map: MapLibreMap | null;
   loaded: boolean;
   styleRev: number;
   jls: JlsCollection | null;
+  /** Re-run trigger: naselja layeri se dodaju tek kad 22 MB fetch završi, pa
+   *  focus filter mora ponovno proći kad se pojave (deep-link race). */
+  naselja?: NaseljaCollection | null;
 }
 
 // Mirrors `selectedJls` / `activeZup` / `focusMode` state into MapLibre
@@ -15,7 +18,7 @@ interface Options {
 // it only paints. Selection is driven by useJlsInteractions and click
 // handlers on other layers (clubs, naselja). Separating "select" from
 // "paint" keeps state changes pure.
-export function useJlsSelection({ map, loaded, styleRev, jls }: Options) {
+export function useJlsSelection({ map, loaded, styleRev, jls, naselja }: Options) {
   const { selectedJls, activeZup, focusMode } = useMapState();
   const prevSelected = useRef<number | null>(null);
 
@@ -75,5 +78,5 @@ export function useJlsSelection({ map, loaded, styleRev, jls }: Options) {
     if (map.getLayer("hr-nas-fill")) map.setFilter("hr-nas-fill", nasFilter);
     if (map.getLayer("hr-nas-line")) map.setFilter("hr-nas-line", nasFilter);
     if (map.getLayer("hr-nas-label")) map.setFilter("hr-nas-label", nasFilter);
-  }, [map, loaded, styleRev, jls, focusMode, selectedJls]);
+  }, [map, loaded, styleRev, jls, focusMode, selectedJls, naselja]);
 }

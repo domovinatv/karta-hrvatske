@@ -37,6 +37,25 @@ export interface NaseljeProperties {
 export type NaseljeFeature = GeoJSON.Feature<GeoJSON.Geometry, NaseljeProperties> & { id: number };
 export type NaseljaCollection = GeoJSON.FeatureCollection<GeoJSON.Geometry, NaseljeProperties>;
 
+// Kvartovi unutar gradova (pipeline 23_fetch_kvartovi.py) — gradske četvrti
+// + mjesni odbori. `parent_mb` veže MO na matičnu GČ; MO nasljeđuje njenu boju.
+export interface KvartProperties {
+  id: number;
+  razina: "cetvrt" | "mjesni_odbor";
+  name: string;
+  mb: string;
+  parent_mb: string | null;
+  jls_name: string;
+  jls_maticni_broj: string;
+  zupanija: string;
+  area_km2: number;
+  color: string;
+  source: string;
+}
+
+export type KvartFeature = GeoJSON.Feature<GeoJSON.Geometry, KvartProperties> & { id: number };
+export type KvartCollection = GeoJSON.FeatureCollection<GeoJSON.Geometry, KvartProperties>;
+
 export interface ClubSeason {
   league: string;
   tier?: number;

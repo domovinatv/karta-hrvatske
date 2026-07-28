@@ -15,6 +15,7 @@ import { useJlsInteractions } from "@/hooks/useJlsInteractions";
 import { useJlsLayer } from "@/hooks/useJlsLayer";
 import { useJlsSelection } from "@/hooks/useJlsSelection";
 import { useMapLibre } from "@/hooks/useMapLibre";
+import { useKvartoviLayer } from "@/hooks/useKvartoviLayer";
 import { useNaseljaLayer } from "@/hooks/useNaseljaLayer";
 import { useOrtofotoLayer } from "@/hooks/useOrtofotoLayer";
 import { usePinkaLayer } from "@/hooks/usePinkaLayer";
@@ -58,11 +59,24 @@ export default function MapView() {
 
   useJlsLayer({ map: mapRef.current, loaded, styleRev, jls, zupanije, drzava });
   useJlsInteractions({ map: mapRef.current, loaded, styleRev, jls: jls as JlsCollection | null });
-  useJlsSelection({ map: mapRef.current, loaded, styleRev, jls: jls as JlsCollection | null });
   const { naselja, loading: naseljaLoading } = useNaseljaLayer({
     map: mapRef.current,
     loaded,
     styleRev,
+  });
+  useJlsSelection({
+    map: mapRef.current,
+    loaded,
+    styleRev,
+    jls: jls as JlsCollection | null,
+    naselja,
+  });
+  useKvartoviLayer({
+    map: mapRef.current,
+    loaded,
+    styleRev,
+    jls: jls as JlsCollection | null,
+    naselja,
   });
   useOrtofotoLayer({ map: mapRef.current, loaded, styleRev });
   usePitchesLayer({ map: mapRef.current, loaded, styleRev });

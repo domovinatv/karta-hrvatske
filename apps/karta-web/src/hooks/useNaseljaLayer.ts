@@ -90,11 +90,17 @@ export function useNaseljaLayer({
           "#ffffff",
           dark ? "rgba(255,255,255,0.65)" : "rgba(0,0,0,0.65)",
         ],
+        // ["zoom"] smije biti samo input top-level interpolate/step izraza —
+        // case oko interpolacije je nevaljan i ruši parsiranje tile-ova za
+        // sve geojson sourceve na istom workeru (naselja + kvartovi).
         "line-width": [
-          "case",
-          ["boolean", ["feature-state", "selected"], false],
-          3,
-          ["interpolate", ["linear"], ["zoom"], 9, 0.5, 14, 1.4],
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          9,
+          ["case", ["boolean", ["feature-state", "selected"], false], 3, 0.5],
+          14,
+          ["case", ["boolean", ["feature-state", "selected"], false], 3, 1.4],
         ],
         "line-opacity": 0.95,
       },

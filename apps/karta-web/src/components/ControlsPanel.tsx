@@ -89,6 +89,14 @@ export function ControlsPanel({ variant = "desktop", onAction }: Props) {
         ⊟ Naselja
       </CtrlBtn>
       <CtrlBtn
+        active={s.showKvartovi}
+        onClick={wrap(() => s.setShowKvartovi(!s.showKvartovi))}
+        shortcut="V"
+        title="Kvartovi unutar gradova — gradske četvrti + mjesni odbori (Zagreb, Velika Gorica; lazy-loaded)"
+      >
+        ⌂ Kvartovi
+      </CtrlBtn>
+      <CtrlBtn
         active={s.showClubs}
         onClick={wrap(() => s.setShowClubs(!s.showClubs))}
         shortcut="K"

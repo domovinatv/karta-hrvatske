@@ -24,6 +24,7 @@ interface MapState {
   activeZup: string | null;
   // Layer visibility
   showNaselja: boolean;
+  showKvartovi: boolean;
   showClubs: boolean;
   showOrto: boolean;
   showPitches: boolean;
@@ -46,6 +47,7 @@ interface MapStateActions {
   setFocusMode: (on: boolean) => void;
   setActiveZup: (zup: string | null) => void;
   setShowNaselja: (on: boolean) => void;
+  setShowKvartovi: (on: boolean) => void;
   setShowClubs: (on: boolean) => void;
   setShowOrto: (on: boolean) => void;
   setShowPitches: (on: boolean) => void;
@@ -79,6 +81,7 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
   const [focusMode, setFocusMode] = useState(false);
   const [activeZup, setActiveZup] = useState<string | null>(null);
   const [showNaselja, setShowNaselja] = useState(false);
+  const [showKvartovi, setShowKvartovi] = useState(false);
   const [showClubs, setShowClubs] = useState(false);
   const [showOrto, setShowOrto] = useState(false);
   const [showPitches, setShowPitches] = useState(false);
@@ -117,6 +120,7 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
     setFocusMode(false);
     setActiveZup(null);
     setShowNaselja(false);
+    setShowKvartovi(false);
   }, []);
 
   const value = useMemo(
@@ -126,6 +130,7 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
       focusMode,
       activeZup,
       showNaselja,
+      showKvartovi,
       showClubs,
       showOrto,
       showPitches,
@@ -142,6 +147,7 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
       setFocusMode,
       setActiveZup,
       setShowNaselja,
+      setShowKvartovi,
       setShowClubs,
       setShowOrto,
       setShowPitches,
@@ -162,6 +168,7 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
       focusMode,
       activeZup,
       showNaselja,
+      showKvartovi,
       showClubs,
       showOrto,
       showPitches,
