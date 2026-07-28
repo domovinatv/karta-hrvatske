@@ -43,7 +43,12 @@ function escapeHtml(s) {
 
 function applyCacheHeaders(res, path) {
   const headers = new Headers(res.headers);
-  if (/^\/assets\//.test(path)) {
+  if (path === "/sw.js" || /^\/workbox-.*\.js$/.test(path) || path === "/registerSW.js") {
+    // Service worker skripte NIKAD ne smiju na edge/browser cache — inače
+    // korisnici nakon deploya satima dobivaju stari precache manifest
+    // (stari app shell) iako je novi build live.
+    headers.set("Cache-Control", "no-cache, must-revalidate");
+  } else if (/^\/assets\//.test(path)) {
     headers.set("Cache-Control", "public, max-age=31536000, immutable");
   } else if (/^\/logos\//.test(path)) {
     headers.set("Cache-Control", "public, max-age=2592000, immutable");
