@@ -2,6 +2,9 @@
 __pycache__/
 *.pyc
 
+# Raw kvartovi downloads (regenerable: run scripts/23_fetch_kvartovi.py)
+data/raw_kvartovi/
+
 # Large raw inputs (regenerable: run scripts/06_fetch_geoboundaries.py)
 data/hr_adm2_geoboundaries_raw.geojson
 data/dzs_jls.xlsx

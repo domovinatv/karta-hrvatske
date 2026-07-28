@@ -31,6 +31,7 @@ const fileMap = [
   ["hr_airports.geojson", "airports.geojson"],
   ["hr_runways.geojson", "runways.geojson"],
   ["hr_approaches.geojson", "approaches.geojson"],
+  ["hr_kvartovi.geojson", "kvartovi.geojson"],
 ];
 
 // hr_canonical.geojson lives in apps/data-pipeline/data/, not outputs/. Look in both.
