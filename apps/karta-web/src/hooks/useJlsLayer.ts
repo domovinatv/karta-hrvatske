@@ -91,7 +91,9 @@ export function useJlsLayer({
       minzoom: 9,
       layout: {
         "text-field": ["get", "name"],
-        "text-font": ["Noto Sans Bold"],
+        // cartocdn (dark basemap) NEMA "Noto Sans Bold" glyphove (404) —
+        // Bold u dark temi = layer bez ijedne labele. OFM (light) ima Bold.
+        "text-font": [dark ? "Noto Sans Regular" : "Noto Sans Bold"],
         "text-size": ["interpolate", ["linear"], ["zoom"], 9, 10, 13, 14, 16, 18],
         "text-allow-overlap": false,
       },

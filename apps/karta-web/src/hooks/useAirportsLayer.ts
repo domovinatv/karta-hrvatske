@@ -33,7 +33,8 @@ export function useAirportsLayer({
   loaded: boolean;
   styleRev: number;
 }) {
-  const { showAirports } = useMapState();
+  const { showAirports, theme } = useMapState();
+  const dark = theme === "dark";
   const [airports, setAirports] = useState<AirportCollection | null>(null);
   const [runways, setRunways] = useState<RunwayCollection | null>(null);
   const [approaches, setApproaches] = useState<ApproachCollection | null>(null);
@@ -160,7 +161,8 @@ export function useAirportsLayer({
           ["get", "icao"],
           ["get", "name"],
         ] as never,
-        "text-font": ["Noto Sans Bold"],
+        // cartocdn (dark) nema Bold glyphove — vidi useJlsLayer.
+        "text-font": [dark ? "Noto Sans Regular" : "Noto Sans Bold"],
         "text-size": ["interpolate", ["linear"], ["zoom"], 7, 10, 12, 14] as never,
         "text-offset": [0, 1.2],
         "text-anchor": "top",

@@ -187,13 +187,14 @@ export function useKvartoviLayer({
       id: LABEL_ID,
       type: "symbol",
       source: "hr-kvart",
-      minzoom: 10,
+      minzoom: 9.5,
       filter: CETVRT_FILTER as never,
       layout: {
         visibility: vis,
         "text-field": ["get", "name"],
-        "text-font": ["Noto Sans Bold"],
-        "text-size": ["interpolate", ["linear"], ["zoom"], 10, 11, 13, 15],
+        // cartocdn (dark) nema Bold glyphove (404) — vidi useJlsLayer.
+        "text-font": [dark ? "Noto Sans Regular" : "Noto Sans Bold"],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 9.5, 10, 13, 15],
         "text-transform": "uppercase",
         "text-letter-spacing": 0.08,
         "text-allow-overlap": false,
@@ -261,12 +262,16 @@ export function useKvartoviLayer({
       id: K_LABEL_ID,
       type: "symbol",
       source: "hr-kvart-kolok",
-      minzoom: 10.5,
+      // Deep-link fitBounds na grad završi na ~z10 — labele moraju biti
+      // vidljive čim su poligoni čitljivi, inače karta izgleda "bez imena".
+      minzoom: 9,
       layout: {
         visibility: vis,
         "text-field": ["get", "name"],
-        "text-font": ["Noto Sans Bold"],
-        "text-size": ["interpolate", ["linear"], ["zoom"], 10.5, 10, 13, 14, 15, 17],
+        // cartocdn (dark) nema Bold glyphove (404) — vidi useJlsLayer.
+        "text-font": [dark ? "Noto Sans Regular" : "Noto Sans Bold"],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 9, 9, 11, 12.5, 13, 15, 15, 18],
+        "text-padding": 1,
         "text-allow-overlap": false,
       },
       paint: {
