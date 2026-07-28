@@ -41,10 +41,12 @@ export type NaseljaCollection = GeoJSON.FeatureCollection<GeoJSON.Geometry, Nase
 // + mjesni odbori. `parent_mb` veže MO na matičnu GČ; MO nasljeđuje njenu boju.
 export interface KvartProperties {
   id: number;
-  razina: "cetvrt" | "mjesni_odbor";
+  razina: "cetvrt" | "mjesni_odbor" | "kvart";
   name: string;
-  mb: string;
-  parent_mb: string | null;
+  mb?: string;
+  parent_mb?: string | null;
+  /** razina="kvart": broj mjesnih odbora iz kojih je kvart dissolvean. */
+  mo_count?: number;
   jls_name: string;
   jls_maticni_broj: string;
   zupanija: string;

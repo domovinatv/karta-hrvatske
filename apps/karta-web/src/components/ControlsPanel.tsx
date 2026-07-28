@@ -89,12 +89,20 @@ export function ControlsPanel({ variant = "desktop", onAction }: Props) {
         ⊟ Naselja
       </CtrlBtn>
       <CtrlBtn
+        active={s.showKolokvijalni}
+        onClick={wrap(() => s.setShowKolokvijalni(!s.showKolokvijalni))}
+        shortcut="Q"
+        title="Kolokvijalni kvartovi (Jarun, Knežija, Špansko…) — derivirani iz mjesnih odbora + OSM imena (Zagreb, Velika Gorica; lazy-loaded)"
+      >
+        ⌂ Kvartovi
+      </CtrlBtn>
+      <CtrlBtn
         active={s.showKvartovi}
         onClick={wrap(() => s.setShowKvartovi(!s.showKvartovi))}
         shortcut="V"
-        title="Kvartovi unutar gradova — gradske četvrti + mjesni odbori (Zagreb, Velika Gorica; lazy-loaded)"
+        title="Službena mjesna samouprava — gradske četvrti + mjesni odbori (Zagreb, Velika Gorica; lazy-loaded)"
       >
-        ⌂ Kvartovi
+        ▦ Četvrti i MO
       </CtrlBtn>
       <CtrlBtn
         active={s.showClubs}

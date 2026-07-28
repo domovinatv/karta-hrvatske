@@ -25,6 +25,7 @@ interface MapState {
   // Layer visibility
   showNaselja: boolean;
   showKvartovi: boolean;
+  showKolokvijalni: boolean;
   showClubs: boolean;
   showOrto: boolean;
   showPitches: boolean;
@@ -48,6 +49,7 @@ interface MapStateActions {
   setActiveZup: (zup: string | null) => void;
   setShowNaselja: (on: boolean) => void;
   setShowKvartovi: (on: boolean) => void;
+  setShowKolokvijalni: (on: boolean) => void;
   setShowClubs: (on: boolean) => void;
   setShowOrto: (on: boolean) => void;
   setShowPitches: (on: boolean) => void;
@@ -82,6 +84,7 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
   const [activeZup, setActiveZup] = useState<string | null>(null);
   const [showNaselja, setShowNaselja] = useState(false);
   const [showKvartovi, setShowKvartovi] = useState(false);
+  const [showKolokvijalni, setShowKolokvijalni] = useState(false);
   const [showClubs, setShowClubs] = useState(false);
   const [showOrto, setShowOrto] = useState(false);
   const [showPitches, setShowPitches] = useState(false);
@@ -121,6 +124,7 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
     setActiveZup(null);
     setShowNaselja(false);
     setShowKvartovi(false);
+    setShowKolokvijalni(false);
   }, []);
 
   const value = useMemo(
@@ -131,6 +135,7 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
       activeZup,
       showNaselja,
       showKvartovi,
+      showKolokvijalni,
       showClubs,
       showOrto,
       showPitches,
@@ -148,6 +153,7 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
       setActiveZup,
       setShowNaselja,
       setShowKvartovi,
+      setShowKolokvijalni,
       setShowClubs,
       setShowOrto,
       setShowPitches,
@@ -169,6 +175,7 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
       activeZup,
       showNaselja,
       showKvartovi,
+      showKolokvijalni,
       showClubs,
       showOrto,
       showPitches,

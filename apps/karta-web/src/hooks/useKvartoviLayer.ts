@@ -12,17 +12,24 @@ import type {
   NaseljaCollection,
 } from "@/lib/types";
 
-// JLS matični brojevi za koje kvartovi.geojson ima podatke — sloj se
-// auto-uključi kad korisnik fokusira jedan od tih gradova (npr.
+// JLS matični brojevi za koje kvartovi datoteke imaju podatke — kolokvijalni
+// sloj se auto-uključi kad korisnik fokusira jedan od tih gradova (npr.
 // /jls/grad-zagreb). Proširiti kad pipeline pokrije nove gradove.
 const KVARTOVI_JLS_MB = new Set(["01333", "05410"]); // Grad Zagreb, Velika Gorica
 
+// Službena razina: gradske četvrti + mjesni odbori (kvartovi.geojson).
 const FILL_ID = "hr-kvart-fill";
 const LINE_ID = "hr-kvart-line";
 const LABEL_ID = "hr-kvart-label";
 const MO_LINE_ID = "hr-kvart-mo-line";
 const MO_LABEL_ID = "hr-kvart-mo-label";
-const ALL_IDS = [FILL_ID, LINE_ID, LABEL_ID, MO_LINE_ID, MO_LABEL_ID];
+const OFF_IDS = [FILL_ID, LINE_ID, LABEL_ID, MO_LINE_ID, MO_LABEL_ID];
+
+// Kolokvijalna razina: derivirani kvartovi (kvartovi-kolokvijalni.geojson).
+const K_FILL_ID = "hr-kvart-kolok-fill";
+const K_LINE_ID = "hr-kvart-kolok-line";
+const K_LABEL_ID = "hr-kvart-kolok-label";
+const KOLOK_IDS = [K_FILL_ID, K_LINE_ID, K_LABEL_ID];
 
 const CETVRT_FILTER = ["==", ["get", "razina"], "cetvrt"];
 const MO_FILTER = ["==", ["get", "razina"], "mjesni_odbor"];
@@ -30,18 +37,35 @@ const MO_FILTER = ["==", ["get", "razina"], "mjesni_odbor"];
 const RAZINA_LABEL: Record<string, string> = {
   cetvrt: "Gradska četvrt",
   mjesni_odbor: "Mjesni odbor",
+  kvart: "Kvart",
 };
+
+const OPACITY_DEFAULT = [
+  "case",
+  ["boolean", ["feature-state", "hover"], false],
+  0.65,
+  0.4,
+];
+const OPACITY_ORTO = [
+  "case",
+  ["boolean", ["feature-state", "hover"], false],
+  0.3,
+  0.15,
+];
 
 interface UseKvartoviLayerReturn {
   kvartovi: KvartCollection | null;
+  kolokvijalni: KvartCollection | null;
   loading: boolean;
 }
 
-// Kvartovi unutar gradova (MVP: Zagreb GČ+MO, Velika Gorica GČ). Lazy-loads
-// kvartovi.geojson on first toggle, re-adds after style swaps via styleRev.
-// Gradske četvrti render as fill+line+label; mjesni odbori appear as a finer
-// line+label grid from zoom ~12.5 (they inherit the parent četvrt colour in
-// the data, so no extra fill is needed).
+// Dva sloja kvartova unutar gradova:
+//  - "kolokvijalni" (⌂ Kvartovi) — derivirani kvartovi (Jarun, Knežija…),
+//    flagship sloj, auto-on na deep-link fokusiranog grada s podacima
+//  - "službeni" (▦ Četvrti i MO) — gradske četvrti fill+label od z8.5,
+//    mjesni odbori dashed mreža od z12.5
+// Oba lazy-loadaju svoj geojson na prvi toggle, re-add nakon style swapa
+// preko styleRev, focus mode filtrira po jls_maticni_broj unutar hooka.
 export function useKvartoviLayer({
   map,
   loaded,
@@ -56,46 +80,64 @@ export function useKvartoviLayer({
   /** Samo kao signal da su naselja layeri (možda) dodani — vidi moveLayer effect. */
   naselja: NaseljaCollection | null;
 }): UseKvartoviLayerReturn {
-  const { showKvartovi, setShowKvartovi, showOrto, theme, focusMode, selectedJls } =
-    useMapState();
+  const {
+    showKvartovi,
+    showKolokvijalni,
+    setShowKolokvijalni,
+    showOrto,
+    theme,
+    focusMode,
+    selectedJls,
+  } = useMapState();
   const [kvartovi, setKvartovi] = useState<KvartCollection | null>(null);
+  const [kolokvijalni, setKolokvijalni] = useState<KvartCollection | null>(null);
   // Ref-based loading flag — same bug fix as in useClubsLayer: state-based
   // loading caused effect re-runs to cancel the in-flight fetch.
   const loadingRef = useRef(false);
+  const loadingKolokRef = useRef(false);
   const [loading, setLoading] = useState(false);
   const popupRef = useRef<maplibregl.Popup | null>(null);
   const dark = theme === "dark";
 
-  // Auto-enable when the focused JLS has kvartovi data (deep-link
-  // /jls/grad-zagreb should show them without hunting for the toggle).
+  // Auto-enable kolokvijalnih kad fokusirani JLS ima podatke (deep-link
+  // /jls/grad-zagreb treba pokazati kvartove bez traženja togglea).
   useEffect(() => {
     if (selectedJls == null || !jls) return;
     const sel = (jls.features as JlsFeature[]).find((f) => f.id === selectedJls);
     if (sel?.properties.maticni_broj && KVARTOVI_JLS_MB.has(sel.properties.maticni_broj)) {
-      setShowKvartovi(true);
+      setShowKolokvijalni(true);
     }
-  }, [selectedJls, jls, setShowKvartovi]);
+  }, [selectedJls, jls, setShowKolokvijalni]);
 
-  // Lazy fetch on first toggle-on.
+  // Lazy fetch — službena razina.
   useEffect(() => {
     if (!showKvartovi || kvartovi || loadingRef.current) return;
     loadingRef.current = true;
     setLoading(true);
     fetch(v("/data/kvartovi.geojson"))
       .then((r) => r.json())
-      .then((fc: KvartCollection) => {
-        setKvartovi(fc);
-      })
-      .catch((e: unknown) => {
-        console.error("Kvartovi fetch failed", e);
-      })
+      .then((fc: KvartCollection) => setKvartovi(fc))
+      .catch((e: unknown) => console.error("Kvartovi fetch failed", e))
       .finally(() => {
         loadingRef.current = false;
         setLoading(false);
       });
   }, [showKvartovi, kvartovi]);
 
-  // Add layers when data arrives (or after style swap).
+  // Lazy fetch — kolokvijalna razina.
+  useEffect(() => {
+    if (!showKolokvijalni || kolokvijalni || loadingKolokRef.current) return;
+    loadingKolokRef.current = true;
+    fetch(v("/data/kvartovi-kolokvijalni.geojson"))
+      .then((r) => r.json())
+      .then((fc: KvartCollection) => setKolokvijalni(fc))
+      .catch((e: unknown) => console.error("Kolokvijalni kvartovi fetch failed", e))
+      .finally(() => {
+        loadingKolokRef.current = false;
+      });
+  }, [showKolokvijalni, kolokvijalni]);
+
+  // Add layers — službena razina.
   useEffect(() => {
     if (!map || !loaded || !kvartovi) return;
     if (map.getSource("hr-kvart")) return;
@@ -112,19 +154,7 @@ export function useKvartoviLayer({
       layout: { visibility: vis },
       paint: {
         "fill-color": ["get", "color"],
-        "fill-opacity": showOrto
-          ? ([
-              "case",
-              ["boolean", ["feature-state", "hover"], false],
-              0.3,
-              0.15,
-            ] as never)
-          : ([
-              "case",
-              ["boolean", ["feature-state", "hover"], false],
-              0.65,
-              0.4,
-            ] as never),
+        "fill-opacity": (showOrto ? OPACITY_ORTO : OPACITY_DEFAULT) as never,
       },
     });
     map.addLayer({
@@ -196,125 +226,209 @@ export function useKvartoviLayer({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [map, loaded, styleRev, kvartovi, dark]);
 
-  // Kvart layers must sit ABOVE naselja: kvartovi (0.9 MB) usually finish
+  // Add layers — kolokvijalna razina.
+  useEffect(() => {
+    if (!map || !loaded || !kolokvijalni) return;
+    if (map.getSource("hr-kvart-kolok")) return;
+
+    const vis = showKolokvijalni ? "visible" : "none";
+    map.addSource("hr-kvart-kolok", { type: "geojson", data: kolokvijalni });
+
+    map.addLayer({
+      id: K_FILL_ID,
+      type: "fill",
+      source: "hr-kvart-kolok",
+      minzoom: 8.5,
+      layout: { visibility: vis },
+      paint: {
+        "fill-color": ["get", "color"],
+        "fill-opacity": (showOrto ? OPACITY_ORTO : OPACITY_DEFAULT) as never,
+      },
+    });
+    map.addLayer({
+      id: K_LINE_ID,
+      type: "line",
+      source: "hr-kvart-kolok",
+      minzoom: 8.5,
+      layout: { visibility: vis },
+      paint: {
+        "line-color": dark ? "rgba(255,255,255,0.75)" : "rgba(0,0,0,0.65)",
+        "line-width": ["interpolate", ["linear"], ["zoom"], 9, 0.8, 13, 1.8],
+        "line-opacity": 0.9,
+      },
+    });
+    map.addLayer({
+      id: K_LABEL_ID,
+      type: "symbol",
+      source: "hr-kvart-kolok",
+      minzoom: 10.5,
+      layout: {
+        visibility: vis,
+        "text-field": ["get", "name"],
+        "text-font": ["Noto Sans Bold"],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 10.5, 10, 13, 14, 15, 17],
+        "text-allow-overlap": false,
+      },
+      paint: {
+        "text-color": dark ? "#f8fafc" : "#111827",
+        "text-halo-color": dark ? "rgba(10,14,20,0.95)" : "rgba(255,255,255,0.95)",
+        "text-halo-width": 1.7,
+      },
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [map, loaded, styleRev, kolokvijalni, dark]);
+
+  // Kvart layers must sit ABOVE naselja: kvartovi (<1 MB) usually finish
   // loading before naselja (22 MB), so hr-nas-fill would otherwise get added
   // on top and the naselje "Zagreb" monolith would cover every kvart.
   useEffect(() => {
-    if (!map || !naselja || !map.getLayer(FILL_ID) || !map.getLayer("hr-nas-fill")) return;
-    for (const id of ALL_IDS) {
+    if (!map || !naselja || !map.getLayer("hr-nas-fill")) return;
+    for (const id of [...OFF_IDS, ...KOLOK_IDS]) {
       if (map.getLayer(id)) map.moveLayer(id); // bez beforeId = na vrh
     }
-  }, [map, styleRev, kvartovi, naselja]);
+  }, [map, styleRev, kvartovi, kolokvijalni, naselja]);
 
-  // Visibility toggle.
+  // Visibility toggles.
   useEffect(() => {
     if (!map) return;
-    for (const id of ALL_IDS) {
+    for (const id of OFF_IDS) {
       if (map.getLayer(id)) {
         map.setLayoutProperty(id, "visibility", showKvartovi ? "visible" : "none");
       }
     }
   }, [map, showKvartovi, styleRev]);
 
+  useEffect(() => {
+    if (!map) return;
+    for (const id of KOLOK_IDS) {
+      if (map.getLayer(id)) {
+        map.setLayoutProperty(id, "visibility", showKolokvijalni ? "visible" : "none");
+      }
+    }
+  }, [map, showKolokvijalni, styleRev]);
+
   // Ortofoto opacity preset.
   useEffect(() => {
-    if (!map?.getLayer(FILL_ID)) return;
-    map.setPaintProperty(
-      FILL_ID,
-      "fill-opacity",
-      (showOrto
-        ? ["case", ["boolean", ["feature-state", "hover"], false], 0.3, 0.15]
-        : ["case", ["boolean", ["feature-state", "hover"], false], 0.65, 0.4]) as never,
-    );
+    if (!map) return;
+    for (const id of [FILL_ID, K_FILL_ID]) {
+      if (map.getLayer(id)) {
+        map.setPaintProperty(
+          id,
+          "fill-opacity",
+          (showOrto ? OPACITY_ORTO : OPACITY_DEFAULT) as never,
+        );
+      }
+    }
   }, [map, showOrto, styleRev]);
 
   // Focus mode: when a JLS is focused, show only its kvartovi. The filter is
   // combined with each layer's razina filter here (NOT in useJlsSelection —
   // a plain setFilter there would clobber the razina split).
   useEffect(() => {
-    if (!map || !map.getLayer(FILL_ID)) return;
+    if (!map) return;
     let mb: string | undefined;
     if (focusMode && selectedJls !== null && jls) {
       mb = (jls.features as JlsFeature[]).find((f) => f.id === selectedJls)?.properties
         .maticni_broj;
     }
+    const focusFilter = mb ? ["==", ["get", "jls_maticni_broj"], mb] : null;
     const withFocus = (base: unknown) =>
-      mb ? ["all", base, ["==", ["get", "jls_maticni_broj"], mb]] : base;
+      focusFilter ? (base ? ["all", base, focusFilter] : focusFilter) : (base ?? null);
     for (const [id, base] of [
       [FILL_ID, CETVRT_FILTER],
       [LINE_ID, CETVRT_FILTER],
       [LABEL_ID, CETVRT_FILTER],
       [MO_LINE_ID, MO_FILTER],
       [MO_LABEL_ID, MO_FILTER],
+      [K_FILL_ID, null],
+      [K_LINE_ID, null],
+      [K_LABEL_ID, null],
     ] as const) {
       if (map.getLayer(id)) map.setFilter(id, withFocus(base) as never);
     }
-  }, [map, styleRev, kvartovi, jls, focusMode, selectedJls]);
+  }, [map, styleRev, kvartovi, kolokvijalni, jls, focusMode, selectedJls]);
 
-  // Hover + click → popup with name / razina / area, fit bounds.
+  // Hover + click → popup, fit bounds. Registrira se za oba fill sloja.
   useEffect(() => {
-    if (!map || !map.getLayer(FILL_ID) || !kvartovi) return;
-    let hovered: number | null = null;
+    if (!map) return;
+    const bindings: Array<[string, string, KvartCollection]> = [];
+    if (map.getLayer(K_FILL_ID) && kolokvijalni) {
+      bindings.push([K_FILL_ID, "hr-kvart-kolok", kolokvijalni]);
+    }
+    if (map.getLayer(FILL_ID) && kvartovi) {
+      bindings.push([FILL_ID, "hr-kvart", kvartovi]);
+    }
+    if (!bindings.length) return;
 
-    const handleMove = (e: MapLayerMouseEvent) => {
-      if (!e.features?.length) return;
-      const id = e.features[0].id as number | undefined;
-      if (id == null) return;
-      if (hovered !== null && hovered !== id) {
-        map.setFeatureState({ source: "hr-kvart", id: hovered }, { hover: false });
-      }
-      hovered = id;
-      map.setFeatureState({ source: "hr-kvart", id }, { hover: true });
-      map.getCanvas().style.cursor = "pointer";
-    };
+    const cleanups: Array<() => void> = [];
+    for (const [layerId, sourceId, fc] of bindings) {
+      let hovered: number | null = null;
 
-    const handleLeave = () => {
-      if (hovered !== null) {
-        map.setFeatureState({ source: "hr-kvart", id: hovered }, { hover: false });
-        hovered = null;
-      }
-      map.getCanvas().style.cursor = "";
-    };
+      const handleMove = (e: MapLayerMouseEvent) => {
+        if (!e.features?.length) return;
+        const id = e.features[0].id as number | undefined;
+        if (id == null) return;
+        if (hovered !== null && hovered !== id) {
+          map.setFeatureState({ source: sourceId, id: hovered }, { hover: false });
+        }
+        hovered = id;
+        map.setFeatureState({ source: sourceId, id }, { hover: true });
+        map.getCanvas().style.cursor = "pointer";
+      };
 
-    const handleClick = (e: MapLayerMouseEvent) => {
-      if (!e.features?.length) return;
-      const p = e.features[0].properties as KvartProperties;
-      const feat = kvartovi.features.find((f) => f.id === p.id);
-      if (!feat) return;
-      if (popupRef.current) popupRef.current.remove();
-      const html = `
-        <div class="club-popup">
-          <div class="club-head">
-            <div class="club-title">
-              <div class="club-name">${esc(p.name)}</div>
-              <div class="club-league" style="border-left:3px solid ${esc(p.color)};padding-left:6px;">${esc(
-                RAZINA_LABEL[p.razina] ?? p.razina,
-              )} · ${esc(p.jls_name)}</div>
+      const handleLeave = () => {
+        if (hovered !== null) {
+          map.setFeatureState({ source: sourceId, id: hovered }, { hover: false });
+          hovered = null;
+        }
+        map.getCanvas().style.cursor = "";
+      };
+
+      const handleClick = (e: MapLayerMouseEvent) => {
+        if (!e.features?.length) return;
+        const p = e.features[0].properties as KvartProperties;
+        const feat = fc.features.find((f) => f.id === p.id);
+        if (!feat) return;
+        if (popupRef.current) popupRef.current.remove();
+        const moRow =
+          p.razina === "kvart" && p.mo_count
+            ? `<div class="club-row"><span class="k">Mjesni odbori</span><span class="v">${p.mo_count}</span></div>`
+            : "";
+        const html = `
+          <div class="club-popup">
+            <div class="club-head">
+              <div class="club-title">
+                <div class="club-name">${esc(p.name)}</div>
+                <div class="club-league" style="border-left:3px solid ${esc(p.color)};padding-left:6px;">${esc(
+                  RAZINA_LABEL[p.razina] ?? p.razina,
+                )} · ${esc(p.jls_name)}</div>
+              </div>
             </div>
-          </div>
-          <div class="club-row"><span class="k">Površina</span><span class="v">${p.area_km2} km²</span></div>
-          <div class="club-row"><span class="k">Izvor</span><span class="v">${esc(p.source)}</span></div>
-        </div>`;
-      popupRef.current = new maplibregl.Popup({ offset: 8, maxWidth: "300px" })
-        .setLngLat(e.lngLat)
-        .setHTML(html)
-        .addTo(map);
-      const b = computeBounds(feat.geometry);
-      map.fitBounds(b, { padding: 80, maxZoom: 14.5, duration: 700 });
-    };
+            <div class="club-row"><span class="k">Površina</span><span class="v">${p.area_km2} km²</span></div>
+            ${moRow}
+            <div class="club-row"><span class="k">Izvor</span><span class="v">${esc(p.source)}</span></div>
+          </div>`;
+        popupRef.current = new maplibregl.Popup({ offset: 8, maxWidth: "300px" })
+          .setLngLat(e.lngLat)
+          .setHTML(html)
+          .addTo(map);
+        const b = computeBounds(feat.geometry);
+        map.fitBounds(b, { padding: 80, maxZoom: 14.5, duration: 700 });
+      };
 
-    map.on("mousemove", FILL_ID, handleMove);
-    map.on("mouseleave", FILL_ID, handleLeave);
-    map.on("click", FILL_ID, handleClick);
+      map.on("mousemove", layerId, handleMove);
+      map.on("mouseleave", layerId, handleLeave);
+      map.on("click", layerId, handleClick);
+      cleanups.push(() => {
+        map.off("mousemove", layerId, handleMove);
+        map.off("mouseleave", layerId, handleLeave);
+        map.off("click", layerId, handleClick);
+      });
+    }
+    return () => cleanups.forEach((fn) => fn());
+  }, [map, styleRev, kvartovi, kolokvijalni]);
 
-    return () => {
-      map.off("mousemove", FILL_ID, handleMove);
-      map.off("mouseleave", FILL_ID, handleLeave);
-      map.off("click", FILL_ID, handleClick);
-    };
-  }, [map, styleRev, kvartovi]);
-
-  return { kvartovi, loading };
+  return { kvartovi, kolokvijalni, loading };
 }
 
 function esc(s: string): string {
