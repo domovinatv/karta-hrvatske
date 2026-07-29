@@ -8,6 +8,7 @@ import {
   POSTER_PALETTES,
   downloadBlob,
   fontFaceCss,
+  labelColorFor,
   parsePoints,
   projectCity,
   svgToPng,
@@ -96,20 +97,65 @@ function buildPosterSvg(o: BuildOpts): string {
     );
   }
   if (o.showLabels) {
+    const CHAR_W = 0.6; // širina znaka ≈ 0.6 × font-size
+    const LINE_H = 1.15;
+    const MARGIN = 0.05; // 5% margina unutar bboxa poligona
     for (const k of projected.kvarts) {
-      // Shrink-to-fit: ime ne smije "curiti" preko malog poligona. Širina
-      // teksta ≈ 0.6 × size × broj znakova; raspoloživa širina ≈ √area.
-      let size = Math.max(4.5, Math.min(16, Math.sqrt(k.areaPx) * 0.14)) * o.labelScale;
-      const availW = Math.sqrt(k.areaPx) * 1.45;
-      const estW = k.name.length * size * 0.6;
-      if (estW > availW) size = availW / (k.name.length * 0.6);
-      if (size < 4) continue; // premalo za čitanje — bolje bez labele
+      const fill = palette.fills[k.paletteIdx % palette.fills.length];
+      const color = labelColorFor(fill, palette); // kontrast prema svjetlini filla
+      const maxW = k.bw * (1 - 2 * MARGIN);
+      const maxH = k.bh * (1 - 2 * MARGIN);
+      const cap = Math.max(4.5, Math.min(16, Math.sqrt(k.areaPx) * 0.15)) * o.labelScale;
+
+      // Kandidat layouti: jedan redak, ili balansirani lom u 2 retka —
+      // biramo onaj koji dopušta najveći font unutar bboxa.
+      const words = k.name.split(" ");
+      const layouts: string[][] = [[k.name]];
+      if (words.length > 1) {
+        let best: string[] | null = null;
+        let bestLen = Infinity;
+        for (let i = 1; i < words.length; i++) {
+          const a = words.slice(0, i).join(" ");
+          const b = words.slice(i).join(" ");
+          const len = Math.max(a.length, b.length);
+          if (len < bestLen) {
+            bestLen = len;
+            best = [a, b];
+          }
+        }
+        if (best) layouts.push(best);
+      }
+
+      let lines: string[] = layouts[0];
+      let size = 0;
+      for (const cand of layouts) {
+        const maxLen = Math.max(...cand.map((l) => l.length));
+        const fit = Math.min(cap, maxW / (maxLen * CHAR_W), maxH / (cand.length * LINE_H));
+        if (fit > size) {
+          size = fit;
+          lines = cand;
+        }
+      }
+      if (size < 2.6) continue; // ispod ovoga je nečitljivo i na printu
+
+      // Clamp: text box (centriran) mora ostati unutar bboxa s marginom.
+      const textW = Math.max(...lines.map((l) => l.length)) * CHAR_W * size;
+      const textH = lines.length * LINE_H * size;
+      const clamp = (v: number, lo: number, hi: number) =>
+        hi < lo ? (lo + hi) / 2 : Math.min(hi, Math.max(lo, v));
+      const x = clamp(k.cx, k.bx + k.bw * MARGIN + textW / 2, k.bx + k.bw * (1 - MARGIN) - textW / 2);
+      const y = clamp(k.cy, k.by + k.bh * MARGIN + textH / 2, k.by + k.bh * (1 - MARGIN) - textH / 2);
+
+      const spans = lines
+        .map(
+          (l, i) =>
+            `<tspan x="${x.toFixed(1)}" y="${(y + (i - (lines.length - 1) / 2) * LINE_H * size).toFixed(1)}">${esc(l)}</tspan>`,
+        )
+        .join("");
       parts.push(
-        `<text x="${k.cx.toFixed(1)}" y="${k.cy.toFixed(1)}" text-anchor="middle" dominant-baseline="middle" font-family="${esc(
+        `<text text-anchor="middle" dominant-baseline="middle" font-family="${esc(
           font.family,
-        )}" font-weight="600" font-size="${size.toFixed(1)}" fill="${palette.text}" opacity="0.92">${esc(
-          k.name,
-        )}</text>`,
+        )}" font-weight="600" font-size="${size.toFixed(1)}" fill="${color}" opacity="0.95">${spans}</text>`,
       );
     }
   }

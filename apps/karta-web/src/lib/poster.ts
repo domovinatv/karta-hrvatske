@@ -26,6 +26,22 @@ export interface PosterPalette {
   text: string;
   /** Boja naslova/podnaslova. */
   title: string;
+  /** Boja imena kvarta na SVIJETLOM fillu (tamni tekst). */
+  labelDark: string;
+  /** Boja imena kvarta na TAMNOM fillu (svijetli tekst — inverz). */
+  labelLight: string;
+}
+
+/** Percepcijska svjetlina 0-1 iz #rrggbb. */
+export function luminance(hex: string): number {
+  const n = parseInt(hex.replace("#", ""), 16);
+  const r = (n >> 16) & 255, g = (n >> 8) & 255, b = n & 255;
+  return (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+}
+
+/** Kontrastna boja imena za dani fill: tamni tekst na svijetlom i obrnuto. */
+export function labelColorFor(fill: string, palette: PosterPalette): string {
+  return luminance(fill) > 0.45 ? palette.labelDark : palette.labelLight;
 }
 
 export const POSTER_PALETTES: PosterPalette[] = [
@@ -37,6 +53,8 @@ export const POSTER_PALETTES: PosterPalette[] = [
     stroke: "#f4f1ea",
     text: "#1d2d3a",
     title: "#22384a",
+    labelDark: "#1d2d3a",
+    labelLight: "#f4f1ea",
   },
   {
     key: "domovina",
@@ -46,6 +64,8 @@ export const POSTER_PALETTES: PosterPalette[] = [
     stroke: "#f7f5f0",
     text: "#001a40",
     title: "#002F6C",
+    labelDark: "#001a40",
+    labelLight: "#f7f5f0",
   },
   {
     key: "pastel",
@@ -55,6 +75,8 @@ export const POSTER_PALETTES: PosterPalette[] = [
     stroke: "#ffffff",
     text: "#4a4a48",
     title: "#3a3a38",
+    labelDark: "#3a3a38",
+    labelLight: "#ffffff",
   },
   {
     key: "noir",
@@ -64,6 +86,8 @@ export const POSTER_PALETTES: PosterPalette[] = [
     stroke: "#8a8a96",
     text: "#e8e8ee",
     title: "#ffffff",
+    labelDark: "#0c0c10",
+    labelLight: "#e8e8ee",
   },
   {
     key: "terra",
@@ -73,6 +97,8 @@ export const POSTER_PALETTES: PosterPalette[] = [
     stroke: "#efe6d8",
     text: "#3e2d20",
     title: "#5f4b38",
+    labelDark: "#33231a",
+    labelLight: "#f5ead9",
   },
 ];
 
@@ -151,6 +177,11 @@ interface ProjectedKvart {
   cy: number;
   /** Približna površina najveće komponente u SVG px² (za skaliranje fonta). */
   areaPx: number;
+  /** Bbox najveće komponente — okvir unutar kojeg labela MORA stati. */
+  bx: number;
+  by: number;
+  bw: number;
+  bh: number;
 }
 
 export interface ProjectedCity {
@@ -238,6 +269,7 @@ export function projectCity(
     let d = "";
     let bestArea = 0;
     let cx = 0, cy = 0;
+    let bx = 0, by = 0, bw = 0, bh = 0;
     const polys = f.geometry.type === "Polygon"
       ? [(f.geometry as GeoJSON.Polygon).coordinates]
       : (f.geometry as GeoJSON.MultiPolygon).coordinates;
@@ -247,6 +279,14 @@ export function projectCity(
       if (area > bestArea) {
         bestArea = area;
         [cx, cy] = ringCentroid(outer);
+        let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
+        for (const [x, y] of outer) {
+          if (x < x0) x0 = x;
+          if (x > x1) x1 = x;
+          if (y < y0) y0 = y;
+          if (y > y1) y1 = y;
+        }
+        bx = x0; by = y0; bw = x1 - x0; bh = y1 - y0;
       }
       for (const ringCoords of poly) {
         const pts = ringCoords.map(([lng, lat]) => project(lng, lat));
@@ -260,6 +300,10 @@ export function projectCity(
       cx,
       cy,
       areaPx: bestArea,
+      bx,
+      by,
+      bw,
+      bh,
     };
   });
 
