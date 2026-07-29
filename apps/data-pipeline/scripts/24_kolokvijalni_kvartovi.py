@@ -331,6 +331,35 @@ def main() -> None:
             })
         print(f"  + {len(vg)} VG četvrti kao kvartovi")
 
+    # Greedy graph coloring po JLS-u: palette_idx (0-3+) takav da susjedni
+    # kvartovi nikad ne dijele boju — temelj za poster palete ("anatomija
+    # grada" stil: 4 boje, susjedi uvijek različiti).
+    from shapely.geometry import shape as shp_shape
+    for jls_mb in {f["jls_maticni_broj"] for f in feats}:
+        group = [f for f in feats if f["jls_maticni_broj"] == jls_mb]
+        geoms = [shp_shape(f["geometry"]).buffer(0) for f in group]
+        n = len(group)
+        adj: list[set[int]] = [set() for _ in range(n)]
+        for i in range(n):
+            for j in range(i + 1, n):
+                if geoms[i].intersects(geoms[j]) and not geoms[i].touches(geoms[j]):
+                    # overlap (ne bi smjelo) — tretiraj kao susjede
+                    adj[i].add(j); adj[j].add(i)
+                elif geoms[i].touches(geoms[j]):
+                    adj[i].add(j); adj[j].add(i)
+        order = sorted(range(n), key=lambda k: -len(adj[k]))
+        colors: dict[int, int] = {}
+        for k in order:
+            used = {colors[m] for m in adj[k] if m in colors}
+            c = 0
+            while c in used:
+                c += 1
+            colors[k] = c
+        for k, f in enumerate(group):
+            f["palette_idx"] = colors[k]
+        n_colors = max(colors.values()) + 1 if colors else 0
+        print(f"  coloring {jls_mb}: {n} kvartova, {n_colors} boja")
+
     feats.sort(key=lambda f: (f["jls_maticni_broj"], f["name"]))
     features = []
     for fid, row in enumerate(feats, start=1):
