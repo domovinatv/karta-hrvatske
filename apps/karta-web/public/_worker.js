@@ -140,6 +140,18 @@ export default {
     // handles MIME types and 404s, we just patch cache headers on top.
     if (/\.\w{1,8}$/.test(path)) {
       const res = await env.ASSETS.fetch(request);
+      // Pages ASSETS.fetch za NEPOSTOJEĆI path vraća 200 index.html (SPA
+      // not_found_handling) — za file-like path to je otrov: modul dobije
+      // MIME text/html, a edge bi HTML cachirao pod asset URL-om s
+      // immutable headerom (deploy race). Vrati 404 no-store umjesto toga;
+      // klijentski lazyReload tada povuče svježi shell.
+      const ct = res.headers.get("content-type") || "";
+      if (ct.includes("text/html") && !/\.html?$/.test(path)) {
+        return new Response("Not found", {
+          status: 404,
+          headers: { "Cache-Control": "no-store" },
+        });
+      }
       return applyCacheHeaders(res, path);
     }
 
