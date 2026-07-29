@@ -68,6 +68,13 @@ out;
 ZG_JLS = {"jls_name": "Grad Zagreb", "jls_maticni_broj": "01333", "zupanija": "Grad Zagreb"}
 SIMPLIFY_M = 5.0
 
+# Park prirode Medvednica — OSM way (closed polygon). Planinski dijelovi
+# sjevernih kvartova (Markuševec drži i vrh Sljemena!) izrezuju se ovom
+# granicom u zaseban kvart "Sljeme" — kolokvijalno planina nije ničiji kvart.
+MEDVEDNICA_OSM_WAY = 435626488
+SLJEME_MIN_CARVE_KM2 = 0.3      # manji presjek se ne reže (rubni sliver)
+SLJEME_MIN_REMAINDER_KM2 = 0.2  # ako od kvarta ostane manje, cijeli ide u Sljeme
+
 TX_3765_TO_4326 = Transformer.from_crs("EPSG:3765", "EPSG:4326", always_xy=True)
 TX_4326_TO_3765 = Transformer.from_crs("EPSG:4326", "EPSG:3765", always_xy=True)
 
@@ -265,6 +272,67 @@ def build_auto_mapping(mos: list[dict], quarters: list[dict]) -> dict[str, list[
     return {k: sorted(v) for k, v in sorted(mapping_out.items())}
 
 
+def fetch_medvednica_polygon():
+    """Poligon PP Medvednica u EPSG:3765 (za carve u metrima)."""
+    from shapely.geometry import Polygon
+    cache = RAW_DIR / "medvednica_park.json"
+    if cache.exists():
+        payload = json.loads(cache.read_text())
+    else:
+        query = f"[out:json][timeout:60];way({MEDVEDNICA_OSM_WAY});out geom;"
+        payload = None
+        last_err: Exception | None = None
+        for attempt in range(4):
+            ep = OVERPASS_ENDPOINTS[attempt % len(OVERPASS_ENDPOINTS)]
+            print(f"  ↓ Overpass: PP Medvednica ({ep.split('/')[2]})")
+            try:
+                r = httpx.post(ep, data={"data": query}, headers=UA, timeout=120.0)
+                r.raise_for_status()
+                payload = r.json()
+                break
+            except Exception as e:
+                last_err = e
+                import time
+                time.sleep(5 * (attempt + 1))
+        if payload is None:
+            raise RuntimeError(f"Overpass nedostupan: {last_err}")
+        cache.write_text(json.dumps(payload, ensure_ascii=False))
+    way = next(e for e in payload["elements"] if e["type"] == "way")
+    ring = [(p["lon"], p["lat"]) for p in way["geometry"]]
+    poly = Polygon(ring).buffer(0)
+    return shp_transform(TX_4326_TO_3765.transform, poly)
+
+
+def carve_sljeme(kvart_geoms: dict[str, object]) -> dict[str, object]:
+    """Izreži planinski dio (unutar PP Medvednica) iz ZG kvartova → "Sljeme".
+
+    kvart_geoms: name -> geom u EPSG:3765; vraća ažurirani dict.
+    """
+    park = fetch_medvednica_polygon()
+    sljeme_parts = []
+    absorbed, trimmed = [], []
+    for name in list(kvart_geoms):
+        geom = kvart_geoms[name]
+        inter = geom.intersection(park)
+        if inter.area / 1e6 < SLJEME_MIN_CARVE_KM2:
+            continue
+        remainder = geom.difference(park)
+        if remainder.area / 1e6 < SLJEME_MIN_REMAINDER_KM2:
+            sljeme_parts.append(geom)
+            del kvart_geoms[name]
+            absorbed.append(name)
+        else:
+            sljeme_parts.append(inter)
+            kvart_geoms[name] = remainder
+            trimmed.append(name)
+    if sljeme_parts:
+        kvart_geoms["Sljeme"] = unary_union(sljeme_parts).buffer(0)
+        print(f"  Sljeme: {kvart_geoms['Sljeme'].area / 1e6:.1f} km² "
+              f"(izrezano iz {len(trimmed)} kvartova: {trimmed[:6]}…"
+              f"{'; apsorbirano: ' + str(absorbed) if absorbed else ''})")
+    return kvart_geoms
+
+
 def geom_to_feature_dict(geom_3765, name: str, idx: int, extra: dict) -> dict:
     geom = geom_3765.buffer(0).simplify(SIMPLIFY_M, preserve_topology=True)
     area_km2 = round(geom.area / 1e6, 2)
@@ -307,12 +375,26 @@ def main() -> None:
 
     print(f"▸ Dissolve {len(mos)} MO → {len(kvart_map)} kvartova")
     by_mb = {mo["mb"]: mo for mo in mos}
+    kvart_geoms: dict[str, object] = {}
+    mo_counts: dict[str, int] = {}
+    for kvart, mbs in kvart_map.items():
+        kvart_geoms[kvart] = unary_union([by_mb[mb]["geom"] for mb in mbs if mb in by_mb])
+        mo_counts[kvart] = len(mbs)
+
+    print("▸ Carve: Sljeme (PP Medvednica)")
+    kvart_geoms = carve_sljeme(kvart_geoms)
+    mo_counts["Sljeme"] = 0
+
     feats = []
-    for i, (kvart, mbs) in enumerate(kvart_map.items()):
-        merged = unary_union([by_mb[mb]["geom"] for mb in mbs if mb in by_mb])
+    for i, (kvart, geom) in enumerate(kvart_geoms.items()):
+        source = (
+            "derivirano: MO (data.zagreb.hr) + granica PP Medvednica (OSM)"
+            if kvart == "Sljeme"
+            else "derivirano: MO (data.zagreb.hr) + OSM imena"
+        )
         feats.append(geom_to_feature_dict(
-            merged, kvart, i,
-            {"mo_count": len(mbs), "source": "derivirano: MO (data.zagreb.hr) + OSM imena", **ZG_JLS},
+            geom, kvart, i,
+            {"mo_count": mo_counts.get(kvart, 0), "source": source, **ZG_JLS},
         ))
 
     # VG: četvrti su kvartovi — kopiraj iz outputa koraka 23.

@@ -97,8 +97,13 @@ function buildPosterSvg(o: BuildOpts): string {
   }
   if (o.showLabels) {
     for (const k of projected.kvarts) {
-      const size = Math.max(4.5, Math.min(16, Math.sqrt(k.areaPx) * 0.14)) * o.labelScale;
-      if (size < 3.5) continue;
+      // Shrink-to-fit: ime ne smije "curiti" preko malog poligona. Širina
+      // teksta ≈ 0.6 × size × broj znakova; raspoloživa širina ≈ √area.
+      let size = Math.max(4.5, Math.min(16, Math.sqrt(k.areaPx) * 0.14)) * o.labelScale;
+      const availW = Math.sqrt(k.areaPx) * 1.45;
+      const estW = k.name.length * size * 0.6;
+      if (estW > availW) size = availW / (k.name.length * 0.6);
+      if (size < 4) continue; // premalo za čitanje — bolje bez labele
       parts.push(
         `<text x="${k.cx.toFixed(1)}" y="${k.cy.toFixed(1)}" text-anchor="middle" dominant-baseline="middle" font-family="${esc(
           font.family,
@@ -153,6 +158,10 @@ export default function PosterView() {
   const [pointColor, setPointColor] = useState("#c8102e");
   const [exporting, setExporting] = useState<string | null>(null);
   const titleTouched = useRef(false);
+  // Preview zoom/pan — čisti CSS transform, ne dira SVG ni export.
+  const [zoom, setZoom] = useState(1);
+  const [pan, setPan] = useState({ x: 0, y: 0 });
+  const dragRef = useRef<{ startX: number; startY: number; panX: number; panY: number } | null>(null);
 
   useEffect(() => {
     document.title = "Poster generator — anatomija grada · DOMOVINA Karta";
@@ -379,20 +388,67 @@ export default function PosterView() {
         </p>
       </aside>
 
-      {/* Preview */}
+      {/* Preview — wheel = zoom, drag = pan */}
       <section
-        className="flex items-center justify-center overflow-auto p-6"
+        className="relative flex items-center justify-center overflow-hidden p-6"
         style={{ background: "var(--map-bg)" }}
+        onWheel={(e) => {
+          e.preventDefault();
+          setZoom((z) => Math.min(8, Math.max(1, z * (e.deltaY < 0 ? 1.15 : 1 / 1.15))));
+        }}
+        onPointerDown={(e) => {
+          dragRef.current = { startX: e.clientX, startY: e.clientY, panX: pan.x, panY: pan.y };
+          (e.target as HTMLElement).setPointerCapture?.(e.pointerId);
+        }}
+        onPointerMove={(e) => {
+          if (!dragRef.current) return;
+          setPan({
+            x: dragRef.current.panX + (e.clientX - dragRef.current.startX),
+            y: dragRef.current.panY + (e.clientY - dragRef.current.startY),
+          });
+        }}
+        onPointerUp={() => {
+          dragRef.current = null;
+        }}
       >
         {svg ? (
           <div
             className="max-h-full max-w-full shadow-2xl [&>svg]:h-auto [&>svg]:max-h-[calc(100vh-140px)] [&>svg]:w-auto [&>svg]:max-w-full"
+            style={{
+              transform: `translate(${pan.x}px, ${pan.y}px) scale(${zoom})`,
+              transformOrigin: "center",
+              cursor: dragRef.current ? "grabbing" : zoom > 1 ? "grab" : "default",
+            }}
             // eslint-disable-next-line react/no-danger
             dangerouslySetInnerHTML={{ __html: svg }}
           />
         ) : (
           <div className="font-mono text-sm text-muted">Učitavam kvartove…</div>
         )}
+        {/* Zoom kontrole */}
+        <div className="absolute bottom-4 right-4 flex flex-col gap-1">
+          {[
+            { t: "+", fn: () => setZoom((z) => Math.min(8, z * 1.4)) },
+            { t: "−", fn: () => setZoom((z) => Math.max(1, z / 1.4)) },
+            { t: "⌖", fn: () => { setZoom(1); setPan({ x: 0, y: 0 }); } },
+          ].map((b) => (
+            <button
+              key={b.t}
+              type="button"
+              onClick={b.fn}
+              className="h-8 w-8 rounded-md border font-mono text-sm"
+              style={{ background: "var(--overlay-strong)", borderColor: "var(--line)", color: "var(--text)" }}
+            >
+              {b.t}
+            </button>
+          ))}
+        </div>
+        <div
+          className="absolute bottom-4 left-4 font-mono text-[10px]"
+          style={{ color: "var(--muted)" }}
+        >
+          scroll = zoom · povuci = pomak · {Math.round(zoom * 100)}%
+        </div>
       </section>
     </main>
   );
