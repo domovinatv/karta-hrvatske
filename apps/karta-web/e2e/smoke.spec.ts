@@ -3,6 +3,21 @@ import { test, expect, type Page } from "@playwright/test";
 const BASE = process.env.BASE_URL || "http://localhost:5174";
 
 test.beforeEach(async ({ page }) => {
+  // Glyph fetchevi (cartocdn/openfreemap) u sandbox okruženju povremeno dođu
+  // bez CORS headera → "Failed to fetch" → tile-ovi sa symbol layerima se
+  // nikad ne dovrše i layer izgleda "mrtav". Proxy s ACAO headerom to
+  // deterministički eliminira (samo u testovima; prod nema taj problem).
+  await page.route("**/fonts/**", async (route) => {
+    try {
+      const resp = await route.fetch();
+      await route.fulfill({
+        response: resp,
+        headers: { ...resp.headers(), "access-control-allow-origin": "*" },
+      });
+    } catch {
+      await route.abort();
+    }
+  });
   page.on("console", (msg) => {
     const type = msg.type();
     if (type === "error" || type === "warning" || msg.text().includes("[gis-debug]")) {

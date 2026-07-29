@@ -27,8 +27,11 @@ export function useMapLibre({ container }: UseMapLibreOptions) {
     const map = new maplibregl.Map({
       container: container.current,
       style: theme === "dark" ? STYLE_DARK : STYLE_LIGHT,
-      center: [16.5, 44.5],
-      zoom: 6.5,
+      // Početna kamera preko constructor bounds — NE preko map.on("load")
+      // fitBounds: "load" zna doći sekundama kasnije (spori tile-ovi) i
+      // pregaziti deep-link fit ili korisnikov zoom.
+      bounds: HR_BOUNDS,
+      fitBoundsOptions: { padding: 25 },
       attributionControl: { compact: true },
       dragRotate: false,
       pitchWithRotate: false,
@@ -49,10 +52,6 @@ export function useMapLibre({ container }: UseMapLibreOptions) {
       setStyleRev((r) => r + 1);
     };
     map.on("style.load", handleStyleLoad);
-
-    map.on("load", () => {
-      map.fitBounds(HR_BOUNDS, { padding: 25, duration: 0 });
-    });
 
     mapRef.current = map;
     // Expose for e2e tests / debugging; harmless in production.
