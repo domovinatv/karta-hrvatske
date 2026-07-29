@@ -47,6 +47,8 @@ export interface KvartProperties {
   parent_mb?: string | null;
   /** razina="kvart": broj mjesnih odbora iz kojih je kvart dissolvean. */
   mo_count?: number;
+  /** razina="kvart": greedy coloring indeks — susjedi nikad ne dijele isti. */
+  palette_idx?: number;
   jls_name: string;
   jls_maticni_broj: string;
   zupanija: string;

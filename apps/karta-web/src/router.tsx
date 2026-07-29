@@ -4,6 +4,7 @@ import { RootLayout } from "./components/RootLayout";
 import { PageSpinner } from "./components/PageSpinner";
 
 const MapView = lazy(() => import("./routes/MapView"));
+const PosterView = lazy(() => import("./routes/PosterView"));
 const NotFound = lazy(() => import("./routes/NotFound"));
 
 const lazyRoute = (Cmp: LazyExoticComponent<() => JSX.Element>) => (
@@ -24,6 +25,7 @@ export const router = createBrowserRouter([
       { path: "klub/:slug", element: lazyRoute(MapView) },
       { path: "kampanje", element: lazyRoute(MapView) },
       { path: "jls/:slug", element: lazyRoute(MapView) },
+      { path: "poster", element: lazyRoute(PosterView) },
       { path: "zupanija/:slug", element: lazyRoute(MapView) },
       { path: "*", element: lazyRoute(NotFound) },
     ],

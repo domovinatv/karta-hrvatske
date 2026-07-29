@@ -27,8 +27,16 @@ export function MapHeader() {
           Karta Hrvatske
         </span>
       </h1>
+      <a
+        href="/poster"
+        className="ml-auto rounded-md border px-2.5 py-1 font-mono text-[11px] no-underline"
+        style={{ borderColor: "var(--line)", color: "var(--ui-accent)" }}
+        title="Poster generator — anatomija grada iz kvartova"
+      >
+        🖼 Poster
+      </a>
       <div
-        className="ml-auto hidden text-xs uppercase tracking-[0.18em] md:block"
+        className="hidden text-xs uppercase tracking-[0.18em] md:block"
         style={{ color: "var(--muted)" }}
       >
         556 JLS · 21 županija · WebGL
