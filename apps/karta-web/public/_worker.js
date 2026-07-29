@@ -43,6 +43,17 @@ function escapeHtml(s) {
 
 function applyCacheHeaders(res, path) {
   const headers = new Headers(res.headers);
+  if (!res.ok) {
+    // NIKAD ne cachiraj error odgovore: 404 tijekom deploy propagacije s
+    // immutable headerom otruje edge za taj URL (MIME text/html za .js
+    // module → mrtva stranica do evictiona).
+    headers.set("Cache-Control", "no-store");
+    return new Response(res.body, {
+      status: res.status,
+      statusText: res.statusText,
+      headers,
+    });
+  }
   if (path === "/sw.js" || /^\/workbox-.*\.js$/.test(path) || path === "/registerSW.js") {
     // Service worker skripte NIKAD ne smiju na edge/browser cache — inače
     // korisnici nakon deploya satima dobivaju stari precache manifest
