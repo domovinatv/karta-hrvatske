@@ -29,6 +29,7 @@ interface MapState {
   showClubs: boolean;
   showOrto: boolean;
   showPitches: boolean;
+  showCrkve: boolean;
   showStadiums: boolean;
   showAirports: boolean;
   showPinka: boolean;
@@ -53,6 +54,7 @@ interface MapStateActions {
   setShowClubs: (on: boolean) => void;
   setShowOrto: (on: boolean) => void;
   setShowPitches: (on: boolean) => void;
+  setShowCrkve: (on: boolean) => void;
   setShowStadiums: (on: boolean) => void;
   setShowAirports: (on: boolean) => void;
   setShowPinka: (on: boolean) => void;
@@ -88,6 +90,7 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
   const [showClubs, setShowClubs] = useState(false);
   const [showOrto, setShowOrto] = useState(false);
   const [showPitches, setShowPitches] = useState(false);
+  const [showCrkve, setShowCrkve] = useState(false);
   const [showStadiums, setShowStadiums] = useState(false);
   const [showAirports, setShowAirports] = useState(false);
   const [showPinka, setShowPinka] = useState(false);
@@ -139,6 +142,7 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
       showClubs,
       showOrto,
       showPitches,
+      showCrkve,
       showStadiums,
       showAirports,
       showPinka,
@@ -157,6 +161,7 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
       setShowClubs,
       setShowOrto,
       setShowPitches,
+      setShowCrkve,
       setShowStadiums,
       setShowAirports,
       setShowPinka,
@@ -179,6 +184,7 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
       showClubs,
       showOrto,
       showPitches,
+      showCrkve,
       showStadiums,
       showAirports,
       showPinka,

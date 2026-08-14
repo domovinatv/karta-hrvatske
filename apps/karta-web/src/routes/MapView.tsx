@@ -10,6 +10,7 @@ import { RouteHelmet } from "@/components/RouteHelmet";
 import { SearchBox } from "@/components/SearchBox";
 import { ZupList } from "@/components/ZupList";
 import { useClubsLayer } from "@/hooks/useClubsLayer";
+import { useCrkveLayer } from "@/hooks/useCrkveLayer";
 import { useGeojsonData } from "@/hooks/useGeojsonData";
 import { useJlsInteractions } from "@/hooks/useJlsInteractions";
 import { useJlsLayer } from "@/hooks/useJlsLayer";
@@ -79,6 +80,7 @@ export default function MapView() {
     naselja,
   });
   useOrtofotoLayer({ map: mapRef.current, loaded, styleRev });
+  useCrkveLayer({ map: mapRef.current, loaded, styleRev });
   usePitchesLayer({ map: mapRef.current, loaded, styleRev });
   useStadiumsLayer({ map: mapRef.current, loaded, styleRev });
   useAirportsLayer({ map: mapRef.current, loaded, styleRev });

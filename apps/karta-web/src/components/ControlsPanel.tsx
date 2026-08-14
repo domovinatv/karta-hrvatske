@@ -121,6 +121,14 @@ export function ControlsPanel({ variant = "desktop", onAction }: Props) {
         💶 Pinka kampanje
       </CtrlBtn>
       <CtrlBtn
+        active={s.showCrkve}
+        onClick={wrap(() => s.setShowCrkve(!s.showCrkve))}
+        shortcut="R"
+        title="Sve crkve, kapele, samostani, džamije i sinagoge u HR — katalog crkve.domovina.ai (lazy-loaded, vidljivo od zoom 7)"
+      >
+        ⛪ Crkve
+      </CtrlBtn>
+      <CtrlBtn
         active={s.showPitches}
         onClick={wrap(() => s.setShowPitches(!s.showPitches))}
         shortcut="P"

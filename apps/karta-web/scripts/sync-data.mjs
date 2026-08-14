@@ -58,6 +58,27 @@ if (existsSync(logosSrc)) {
   console.log(`  outputs/logos → public/logos (recursive)`);
 }
 
+// Tematski slojevi iz sestrinskih repozitorija (nisu iz data-pipelinea).
+// Svaki domenski repo generira svoj GeoJSON i drži ga kod sebe; ovdje se samo
+// preslika. public/data/ je gitignored, pa bez ovog koraka sloj nestane na
+// svježem checkoutu ili u CI-u. Ako repo nije kloniran — preskoči tiho.
+const SIBLING_LAYERS = [
+  ["../../../crkve.domovina.ai/data/exports", ["crkve.geojson", "zupe.geojson"]],
+];
+for (const [relDir, files] of SIBLING_LAYERS) {
+  const dir = resolve(KARTA_WEB, relDir);
+  for (const f of files) {
+    const src = join(dir, f);
+    if (!existsSync(src)) {
+      console.warn(`  skip ${f} (nema ${relDir} — pokreni tamo \`make export\`)`);
+      continue;
+    }
+    copyFileSync(src, join(targetData, f));
+    copied++;
+    console.log(`  ${relDir}/${f} → public/data/${f}`);
+  }
+}
+
 // version.json — bumped per sync so the SW can detect data refresh.
 const version = new Date().toISOString().replace(/[-:.TZ]/g, "").slice(0, 14);
 writeFileSync(join(targetData, "version.json"), JSON.stringify({ version }, null, 2));

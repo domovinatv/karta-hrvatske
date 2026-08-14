@@ -50,8 +50,19 @@ pip install -r requirements.txt
 ```
 data-pipeline (Python)  →  outputs/*.geojson + data/*.geojson
         │
-        └─ karta-web `npm run sync-data`  →  public/data/  →  Cloudflare Pages
+        ├─ karta-web `npm run sync-data`  →  public/data/  →  Cloudflare Pages
+        │                                        ▲
+tematski repoi (izvan ovog monorepoa)             │
+  ../crkve.domovina.ai  `make export`  →  data/exports/*.geojson
 ```
+
+Bazni slojevi (granice, naselja, klubovi, aerodromi) nastaju u `data-pipeline`.
+**Tematski slojevi imaju vlastite repozitorije** — `sync-data.mjs` ih pokupi iz
+`SIBLING_LAYERS` ako su klonirani pokraj ovoga:
+
+| Layer | Repo | Napomena |
+|---|---|---|
+| ⛪ Crkve i sakralni objekti | [`crkve.domovina.ai`](../crkve.domovina.ai) | ~6900 objekata; OSM + data.gov.hr + Wikidata |
 
 ## Deprecirani izvori (premješteni u `~/git/legacy/`, ne mergati natrag)
 

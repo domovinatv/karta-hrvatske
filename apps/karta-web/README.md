@@ -1,8 +1,18 @@
 # karta-web → gis.domovina.ai
 
-Production React/Vite frontend za **krovnu DOMOVINA GIS kartu**. Trenutni layeri: JLS granice + nogometni klubovi. Planirano dodavanje više layera kroz vrijeme (Phase 7 layer-registry refactor kad dosegne 3+ layera).
+Production React/Vite frontend za **krovnu DOMOVINA GIS kartu**. Trenutni layeri: JLS granice, naselja, četvrti, nogometni klubovi/igrališta/stadioni, zračne luke, pinka kampanje, **crkve i sakralni objekti**.
 
 Sibling `apps/data-pipeline` ostaje Python data pipeline + dev HTML.
+
+### Odakle dolaze podaci layera
+
+Bazni slojevi (granice, naselja, klubovi, aerodromi) dolaze iz `apps/data-pipeline`. **Tematski slojevi dolaze iz vlastitih repozitorija** i samo se preslikavaju u `public/data/` (koji je gitignored):
+
+| Layer | Repo | Datoteka |
+|---|---|---|
+| ⛪ Crkve | `../../../crkve.domovina.ai` | `crkve.geojson`, `zupe.geojson` |
+
+`scripts/sync-data.mjs` ih kopira automatski (`SIBLING_LAYERS`), pa `npm run deploy` radi bez ručnih koraka — ali samo ako je susjedni repo kloniran i u njemu pokrenut `make export`. Ako nije, sync ispiše `skip` i deploy prođe bez tog sloja.
 
 ## Stack
 

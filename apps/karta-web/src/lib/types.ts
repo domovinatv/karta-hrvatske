@@ -165,6 +165,47 @@ export interface PitchProperties {
 export type PitchFeature = GeoJSON.Feature<GeoJSON.Point, PitchProperties> & { id: number };
 export type PitchCollection = GeoJSON.FeatureCollection<GeoJSON.Point, PitchProperties>;
 
+// Crkve i sakralni objekti — generira ../../crkve.domovina.ai
+// (scripts/31_export_geojson.py → 33_sync_karta.py). Prazna polja izostavljena
+// iz GeoJSON-a radi veličine, pa je gotovo sve opcionalno.
+export interface CrkvaProperties {
+  id: number;
+  slug: string;
+  name: string;
+  /** crkva | kapela | katedrala | bazilika | svetiste | samostan |
+   *  pravoslavna-crkva | dzamija | sinagoga | poklonac | ostalo */
+  kind: string;
+  religion?: string;
+  denomination?: string;
+  titular?: string;
+  address?: string;
+  city?: string;
+  settlement?: string;
+  municipality?: string;
+  county?: string;
+  parish_id?: number;
+  parish_name?: string;
+  parish_slug?: string;
+  diocese?: string;
+  is_parish_church?: number;
+  osm_type?: "node" | "way" | "relation";
+  osm_id?: number;
+  wikidata_id?: string;
+  wikipedia_url?: string;
+  commons_image?: string;
+  heritage_id?: string;
+  heritage_status?: string;
+  year_built?: string;
+  architect?: string;
+  style?: string;
+  phone?: string;
+  email?: string;
+  website?: string;
+  source?: string[];
+}
+export type CrkvaFeature = GeoJSON.Feature<GeoJSON.Point, CrkvaProperties> & { id: number };
+export type CrkvaCollection = GeoJSON.FeatureCollection<GeoJSON.Point, CrkvaProperties>;
+
 export interface StadiumProperties {
   id: number;
   osm_type: "way" | "relation";
