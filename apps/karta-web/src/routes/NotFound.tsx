@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
 
 export default function NotFound() {
   return (
@@ -8,10 +9,10 @@ export default function NotFound() {
         <p className="mt-2 text-sm text-muted">Tražena stranica ne postoji.</p>
         <Link
           to="/"
-          className="mt-6 inline-block rounded-md border px-4 py-2 text-sm hover:text-[var(--accent-2)]"
+          className="mt-6 inline-flex items-center gap-1.5 rounded-lg border px-4 py-2 text-sm hover:text-[var(--ui-active)]"
           style={{ borderColor: "var(--line)", color: "var(--text)" }}
         >
-          ← Vrati se na kartu
+          <ArrowLeft size={15} /> Vrati se na kartu
         </Link>
       </div>
     </main>

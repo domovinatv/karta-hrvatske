@@ -278,6 +278,12 @@ test("klub click activates JLS + opens popup (no modal)", async ({ page }) => {
     { timeout: 10000 },
   );
 
+  // Sklopi panel slojeva prije klika na kartu. Panel je plutajući dock nad
+  // kartom, pa marker koji padne ispod njega nije klikabilan — što je i razlog
+  // zašto sklapanje postoji. Bez ovoga test ovisi o širini panela.
+  await page.locator('button[aria-label="Sklopi panel"]').click();
+  await expect(page.getByTestId("layers-panel")).toHaveCount(0);
+
   // Pick a club, zoom to it (so the circle is large enough to hit), then click.
   const pt = await page.evaluate(async () => {
     const w = window as unknown as { _gisMap?: import("maplibre-gl").Map };
@@ -299,4 +305,94 @@ test("klub click activates JLS + opens popup (no modal)", async ({ page }) => {
   // Expect popup to appear, modal stays closed
   await expect(page.locator(".maplibregl-popup-content .club-popup")).toBeVisible({ timeout: 5000 });
   await expect(page.locator(".club-modal")).toHaveCount(0);
+});
+
+// ─── Panel slojeva: dohvatljivost na niskim viewportima ──────────────────────
+//
+// Regresija koju ovi testovi čuvaju: panel je bio `absolute right-4 top-4` bez
+// max-heighta i bez overflowa, pa su s 18 kontrola donje tipke ispadale ispod
+// ruba ekrana i bile potpuno nedohvatljive. Mobilni popover je uz to imao i
+// auto-close nakon svakog toggla.
+
+test("desktop: zadnja kontrola u panelu dohvatljiva na niskom viewportu", async ({ page }) => {
+  await page.setViewportSize({ width: 1280, height: 620 });
+  await page.goto(BASE + "/");
+  await waitForMapIdle(page);
+
+  // Panel mora skrolati unutar sebe, a ne rasti preko dna prozora.
+  const panel = page.getByTestId("layers-panel");
+  const fit = page.locator("button", { hasText: /Fit Hrvatska/ }).first();
+
+  await fit.scrollIntoViewIfNeeded();
+  await expect(fit).toBeInViewport();
+  await fit.click();
+
+  // Kamera se stvarno vraća na cijelu Hrvatsku (prije je reset() samo brisao
+  // selekciju — HR_BOUNDS se koristio isključivo pri inicijalizaciji karte).
+  await page.waitForTimeout(1200);
+  const zoom = await page.evaluate(() => {
+    const w = window as unknown as { _gisMap?: import("maplibre-gl").Map };
+    return w._gisMap!.getZoom();
+  });
+  expect(zoom).toBeLessThan(9);
+  await expect(panel).toBeVisible();
+});
+
+test("desktop: svaka kontrola iz registra je dohvatljiva klikom", async ({ page }) => {
+  await page.setViewportSize({ width: 1280, height: 600 });
+  await page.goto(BASE + "/");
+  await waitForMapIdle(page);
+
+  for (const label of ["Ortofoto", "Naselja", "Crkve", "Biskupije", "Zračne luke"]) {
+    const btn = page.locator("button", { hasText: new RegExp(label) }).first();
+    await btn.scrollIntoViewIfNeeded();
+    await expect(btn, `kontrola "${label}" nije u viewportu`).toBeInViewport();
+  }
+});
+
+test("mobile: sheet slojeva skrola i ostaje otvoren nakon toggla", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 667 });
+  await page.goto(BASE + "/");
+  await waitForMapIdle(page);
+
+  await page.locator('button[aria-label="Slojevi"]').click();
+  const sheet = page.locator('div[role="dialog"][aria-label="Slojevi"]');
+  await expect(sheet).toBeVisible();
+
+  // Sheet ne smije biti viši od 72dvh — inače je opet izvan ekrana.
+  const box = await sheet.boundingBox();
+  expect(box!.height).toBeLessThanOrEqual(667 * 0.75);
+
+  const crkve = sheet.locator('[role="switch"]', { hasText: /Crkve/ }).first();
+  await crkve.scrollIntoViewIfNeeded();
+  await crkve.click();
+
+  // Ključno: prije se popover zatvarao nakon SVAKOG toggla.
+  await expect(sheet).toBeVisible();
+  await expect(crkve).toHaveAttribute("aria-checked", "true");
+
+  // Brojač aktivnih slojeva na FAB-u se osvježava.
+  await expect(page.locator('button[aria-label="Slojevi"]')).toContainText("1");
+});
+
+test("tipkovničke kratice stvarno rade (i ne otimaju tipkanje u pretragu)", async ({ page }) => {
+  await page.setViewportSize({ width: 1400, height: 900 });
+  await page.goto(BASE + "/");
+  await waitForMapIdle(page);
+
+  // Ciljamo role=switch, ne "button": naslov grupe "Naselja i kvartovi" je i sam
+  // <button>, pa bi ga hasText:/^Naselja/ uhvatio prije reda samog sloja.
+  const orto = page.locator('[role="switch"]', { hasText: /Ortofoto/ }).first();
+  await expect(orto).toHaveAttribute("aria-checked", "false");
+  await page.keyboard.press("s");
+  await expect(orto).toHaveAttribute("aria-checked", "true");
+
+  // Tipkanje u pretragu ne smije prebacivati slojeve.
+  const search = page.locator('input[placeholder*="Traži"]').first();
+  await search.fill("split");
+  await expect(orto).toHaveAttribute("aria-checked", "true");
+  const naselja = page.locator('[role="switch"]', { hasText: /Naselja/ }).first();
+  const before = await naselja.getAttribute("aria-checked");
+  await search.press("n");
+  await expect(naselja).toHaveAttribute("aria-checked", before!);
 });

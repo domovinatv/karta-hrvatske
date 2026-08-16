@@ -18,6 +18,11 @@
   --brand-red: #ff0000;
   --ui-accent: #ef4444;
   --ui-accent-tint: rgba(239, 68, 68, 0.12);
+  /* Aktivno stanje kontrola. Namjerno NIJE --ui-accent: crvena u UI-ju čita se
+     kao greška, pa je pet upaljenih slojeva izgledalo kao pet alarma. Crvena
+     ostaje za brand stripe i destruktivne akcije. */
+  --ui-active: #5b8dce;
+  --ui-active-tint: rgba(91, 141, 206, 0.16);
   --map-bg: #0a0e14;
   --overlay-strong: rgba(10, 14, 20, 0.92);
   --overlay-soft: rgba(10, 14, 20, 0.85);
@@ -37,6 +42,8 @@
   --ink: #001a40;
   --ui-accent: #dc2626;
   --ui-accent-tint: rgba(220, 38, 38, 0.08);
+  --ui-active: #002f6c;
+  --ui-active-tint: rgba(0, 47, 108, 0.1);
   --map-bg: #f5f7f9;
   --overlay-strong: rgba(255, 255, 255, 0.94);
   --overlay-soft: rgba(255, 255, 255, 0.88);

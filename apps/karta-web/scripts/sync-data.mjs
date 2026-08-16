@@ -63,7 +63,10 @@ if (existsSync(logosSrc)) {
 // preslika. public/data/ je gitignored, pa bez ovog koraka sloj nestane na
 // svježem checkoutu ili u CI-u. Ako repo nije kloniran — preskoči tiho.
 const SIBLING_LAYERS = [
-  ["../../../crkve.domovina.ai/data/exports", ["crkve.geojson", "zupe.geojson"]],
+  [
+    "../../../crkve.domovina.ai/data/exports",
+    ["crkve.geojson", "zupe.geojson", "biskupije.geojson"],
+  ],
 ];
 for (const [relDir, files] of SIBLING_LAYERS) {
   const dir = resolve(KARTA_WEB, relDir);

@@ -6,6 +6,7 @@ import maplibregl, {
 import { useMapState } from "@/lib/MapState";
 import { fetchPinkaCampaigns, PINKA_SITE } from "@/lib/pinka";
 import type { PinkaCampaignCollection, PinkaCampaignFeature, PinkaCampaignProperties } from "@/lib/types";
+import { svgArrowUpRight, svgMapPin } from "@/lib/svgIcons";
 
 // pinka.io brand coral (tailwind coral.DEFAULT u pinka repu)
 const PINKA_CORAL = "#E85D5D";
@@ -31,13 +32,13 @@ function popupHtml(p: PinkaCampaignProperties): string {
   return `
     <div class="pinka-popup">
       <div class="pk-name">${esc(p.title)}</div>
-      ${p.location_name ? `<div class="pk-loc">📍 ${esc(p.location_name)}</div>` : ""}
+      ${p.location_name ? `<div class="pk-loc">${svgMapPin()} ${esc(p.location_name)}</div>` : ""}
       ${pct !== null ? `<div class="pk-bar"><div style="width:${pct}%"></div></div>` : ""}
       <div class="pk-stats">
         <strong>${fmtEur(raised)} €</strong>${p.goal_cents ? ` od ${fmtEur(p.goal_cents)} € (${pct}%)` : " prikupljeno"}
         · ${p.contributor_count} ${supportersLabel(p.contributor_count)}
       </div>
-      <a class="pk-donate-btn" href="${PINKA_SITE}/c/${esc(p.slug)}" target="_blank" rel="noopener">Doniraj na pinka.io →</a>
+      <a class="pk-donate-btn" href="${PINKA_SITE}/c/${esc(p.slug)}" target="_blank" rel="noopener">Doniraj na pinka.io ${svgArrowUpRight(12)}</a>
     </div>`;
 }
 

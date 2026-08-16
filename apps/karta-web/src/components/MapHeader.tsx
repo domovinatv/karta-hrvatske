@@ -1,5 +1,7 @@
-// Compact header — collapses to single line on phone portrait via the
-// same CSS strategy as the legacy template (badges/subtitle hidden ≤640px).
+import { Image } from "lucide-react";
+
+// Kompaktno zaglavlje — na uskom ekranu se svodi na jednu liniju
+// (statistika je skrivena ispod md).
 export function MapHeader() {
   return (
     <header
@@ -29,17 +31,20 @@ export function MapHeader() {
       </h1>
       <a
         href="/poster"
-        className="ml-auto rounded-md border px-2.5 py-1 font-mono text-[11px] no-underline"
-        style={{ borderColor: "var(--line)", color: "var(--ui-accent)" }}
+        className="ml-auto flex items-center gap-1.5 rounded-lg border px-2.5 py-1.5 text-[11.5px] no-underline transition-colors hover:border-[var(--ui-active)]"
+        style={{ borderColor: "var(--line)", color: "var(--text)" }}
         title="Poster generator — anatomija grada iz kvartova"
       >
-        🖼 Poster
+        <Image size={14} />
+        Poster
       </a>
+      {/* "WEBGL" je bio interni tehnički detalj koji ništa ne prodaje — zamijenjen
+          opsegom dataseta, što je ono čime se karta zapravo razlikuje. */}
       <div
         className="hidden text-xs uppercase tracking-[0.18em] md:block"
         style={{ color: "var(--muted)" }}
       >
-        556 JLS · 21 županija · WebGL
+        556 JLS · 6.759 naselja · 21 županija
       </div>
     </header>
   );

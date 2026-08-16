@@ -1,10 +1,10 @@
-import { useCallback, useEffect, useMemo, useRef } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { BottomSheet } from "@/components/BottomSheet";
 import { ClubModal } from "@/components/ClubModal";
-import { ControlsPanel } from "@/components/ControlsPanel";
 import { DetailPanel } from "@/components/DetailPanel";
 import { LayersFab } from "@/components/LayersFab";
+import { LayersPanel } from "@/components/LayersPanel";
 import { MapHeader } from "@/components/MapHeader";
 import { RouteHelmet } from "@/components/RouteHelmet";
 import { SearchBox } from "@/components/SearchBox";
@@ -15,6 +15,7 @@ import { useGeojsonData } from "@/hooks/useGeojsonData";
 import { useJlsInteractions } from "@/hooks/useJlsInteractions";
 import { useJlsLayer } from "@/hooks/useJlsLayer";
 import { useJlsSelection } from "@/hooks/useJlsSelection";
+import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
 import { useMapLibre } from "@/hooks/useMapLibre";
 import { useKvartoviLayer } from "@/hooks/useKvartoviLayer";
 import { useNaseljaLayer } from "@/hooks/useNaseljaLayer";
@@ -27,14 +28,30 @@ import { useUrlSync } from "@/hooks/useUrlSync";
 import { useZupeLayer } from "@/hooks/useZupeLayer";
 import { useBiskupijeLayer } from "@/hooks/useBiskupijeLayer";
 import { useMapState } from "@/lib/MapState";
+import { HR_BOUNDS } from "@/lib/style";
 import type { JlsCollection, JlsFeature } from "@/lib/types";
 
 export default function MapView() {
   const containerRef = useRef<HTMLDivElement>(null);
   const { mapRef, loaded, styleRev } = useMapLibre({ container: containerRef });
   const { jls, zupanije, drzava, error } = useGeojsonData();
-  const { setSelectedJls, setFocusMode, setShowNaselja, setShowClubs, setShowPinka } =
-    useMapState();
+  const [layersOpen, setLayersOpen] = useState(false);
+  const {
+    reset,
+    setSelectedJls,
+    setFocusMode,
+    setShowNaselja,
+    setShowClubs,
+    setShowPinka,
+  } = useMapState();
+
+  // "Fit Hrvatska" je dosad zvao samo reset() — HR_BOUNDS se koristio isključivo
+  // pri inicijalizaciji karte, pa se kamera nikad nije vraćala. Sad i zaista fita.
+  const handleFitHome = useCallback(() => {
+    reset();
+    setLayersOpen(false);
+    mapRef.current?.fitBounds(HR_BOUNDS, { padding: 25, duration: 800 });
+  }, [reset, mapRef]);
 
   // Deep-link /kampanje[?c={slug}] — uključi pinka sloj; ?c fokusira kampanju.
   const routerLocation = useLocation();
@@ -98,6 +115,17 @@ export default function MapView() {
   });
   const ensureClubsOn = useCallback(() => setShowClubs(true), [setShowClubs]);
   useUrlSync({ map: mapRef.current, jls: jls as JlsCollection | null, clubs, ensureClubsOn });
+  useKeyboardShortcuts({ onFitHome: handleFitHome });
+
+  // Točni brojevi iz stvarno učitanih kolekcija — bolji od statičnih u registru,
+  // koji zastare čim se pipeline osvježi.
+  const layerCounts = useMemo(
+    () => ({
+      klubovi: clubs?.features.length,
+      naselja: naselja?.features.length,
+    }),
+    [clubs, naselja],
+  );
 
   // Search & sheet need a way to lazy-load naselja before user toggles the
   // layer button. setShowNaselja(true) triggers the fetch via useNaseljaLayer's
@@ -149,8 +177,13 @@ export default function MapView() {
             className="absolute inset-0"
             style={{ background: "var(--map-bg)" }}
           />
-          <ControlsPanel variant="desktop" />
-          <LayersFab />
+          <LayersPanel variant="desktop" counts={layerCounts} onFitHome={handleFitHome} />
+          <LayersFab
+            open={layersOpen}
+            onOpenChange={setLayersOpen}
+            counts={layerCounts}
+            onFitHome={handleFitHome}
+          />
           {error && (
             <div
               className="absolute inset-0 flex items-center justify-center px-6 text-center"

@@ -15,6 +15,7 @@ import {
   type PosterPoint,
 } from "@/lib/poster";
 import type { KvartCollection } from "@/lib/types";
+import { ArrowLeft, Crosshair, Download, Minus, Plus } from "lucide-react";
 
 // Piksela po centimetru u SVG koordinatnom sustavu (preview/viewBox skala).
 // PNG export skalira na 300 DPI neovisno o ovome.
@@ -302,8 +303,8 @@ export default function PosterView() {
       >
         <div className="flex items-baseline justify-between">
           <h1 className="m-0 font-display text-lg font-semibold text-ink">Poster generator</h1>
-          <Link to="/" className="font-mono text-[11px] text-muted hover:text-ink">
-            ← karta
+          <Link to="/" className="inline-flex items-center gap-1 font-mono text-[11px] text-muted hover:text-ink">
+            <ArrowLeft size={13} /> karta
           </Link>
         </div>
         <p className="mt-1 text-[12px] leading-snug text-muted">
@@ -413,19 +414,19 @@ export default function PosterView() {
             type="button"
             disabled={!svg || exporting !== null}
             onClick={() => doExport("svg")}
-            className="flex-1 rounded-md border px-3 py-2.5 font-mono text-[12px] font-semibold disabled:opacity-50"
+            className="flex flex-1 items-center justify-center gap-1.5 rounded-md border px-3 py-2.5 font-mono text-[12px] font-semibold disabled:opacity-50"
             style={{ background: "var(--ui-accent)", borderColor: "var(--ui-accent)", color: "#fff" }}
           >
-            {exporting === "svg" ? "…" : "⬇ SVG"}
+            {exporting === "svg" ? "…" : <><Download size={14} /> SVG</>}
           </button>
           <button
             type="button"
             disabled={!svg || exporting !== null}
             onClick={() => doExport("png")}
-            className="flex-1 rounded-md border px-3 py-2.5 font-mono text-[12px] font-semibold disabled:opacity-50"
+            className="flex flex-1 items-center justify-center gap-1.5 rounded-md border px-3 py-2.5 font-mono text-[12px] font-semibold disabled:opacity-50"
             style={{ background: "var(--overlay-strong)", borderColor: "var(--line)", color: "var(--text)" }}
           >
-            {exporting === "png" ? "renderiram…" : "⬇ PNG 300 dpi"}
+            {exporting === "png" ? "renderiram…" : <><Download size={14} /> PNG 300 dpi</>}
           </button>
         </div>
         <p className="mt-2 text-[10px] leading-snug text-muted">
@@ -474,18 +475,25 @@ export default function PosterView() {
         {/* Zoom kontrole */}
         <div className="absolute bottom-4 right-4 flex flex-col gap-1">
           {[
-            { t: "+", fn: () => setZoom((z) => Math.min(8, z * 1.4)) },
-            { t: "−", fn: () => setZoom((z) => Math.max(1, z / 1.4)) },
-            { t: "⌖", fn: () => { setZoom(1); setPan({ x: 0, y: 0 }); } },
+            { k: "in", label: "Približi", icon: Plus, fn: () => setZoom((z) => Math.min(8, z * 1.4)) },
+            { k: "out", label: "Oddalji", icon: Minus, fn: () => setZoom((z) => Math.max(1, z / 1.4)) },
+            {
+              k: "reset",
+              label: "Vrati prikaz",
+              icon: Crosshair,
+              fn: () => { setZoom(1); setPan({ x: 0, y: 0 }); },
+            },
           ].map((b) => (
             <button
-              key={b.t}
+              key={b.k}
               type="button"
               onClick={b.fn}
-              className="h-8 w-8 rounded-md border font-mono text-sm"
+              aria-label={b.label}
+              title={b.label}
+              className="flex h-8 w-8 items-center justify-center rounded-md border"
               style={{ background: "var(--overlay-strong)", borderColor: "var(--line)", color: "var(--text)" }}
             >
-              {b.t}
+              <b.icon size={15} />
             </button>
           ))}
         </div>

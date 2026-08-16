@@ -60,9 +60,9 @@ interface UseKvartoviLayerReturn {
 }
 
 // Dva sloja kvartova unutar gradova:
-//  - "kolokvijalni" (⌂ Kvartovi) — derivirani kvartovi (Jarun, Knežija…),
+//  - "kolokvijalni" ("Kvartovi") — derivirani kvartovi (Jarun, Knežija…),
 //    flagship sloj, auto-on na deep-link fokusiranog grada s podacima
-//  - "službeni" (▦ Četvrti i MO) — gradske četvrti fill+label od z8.5,
+//  - "službeni" ("Četvrti i MO") — gradske četvrti fill+label od z8.5,
 //    mjesni odbori dashed mreža od z12.5
 // Oba lazy-loadaju svoj geojson na prvi toggle, re-add nakon style swapa
 // preko styleRev, focus mode filtrira po jls_maticni_broj unutar hooka.
