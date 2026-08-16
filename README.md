@@ -64,6 +64,7 @@ Bazni slojevi (granice, naselja, klubovi, aerodromi) nastaju u `data-pipeline`.
 |---|---|---|
 | ⛪ Crkve i sakralni objekti | [`crkve.domovina.ai`](../crkve.domovina.ai) | ~6900 objekata; OSM + data.gov.hr + Wikidata |
 | 🏛 Župe i vjerske pravne osobe | [`crkve.domovina.ai`](../crkve.domovina.ai) | 2928 pravnih osoba; isti repo, drugi skup (građevina ≠ pravna osoba) |
+| ✝️ Biskupije | [`crkve.domovina.ai`](../crkve.domovina.ai) | 15 teritorija; DERIVIRANI iz sjedišta župa — službene granice ne postoje kao javna geometrija |
 
 ## Deprecirani izvori (premješteni u `~/git/legacy/`, ne mergati natrag)
 

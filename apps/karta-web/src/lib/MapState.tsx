@@ -32,6 +32,7 @@ interface MapState {
   showCrkve: boolean;
   /** Župe (vjerske pravne osobe) — NE županije, to je showZupBorders. */
   showZupe: boolean;
+  showBiskupije: boolean;
   showStadiums: boolean;
   showAirports: boolean;
   showPinka: boolean;
@@ -58,6 +59,7 @@ interface MapStateActions {
   setShowPitches: (on: boolean) => void;
   setShowCrkve: (on: boolean) => void;
   setShowZupe: (on: boolean) => void;
+  setShowBiskupije: (on: boolean) => void;
   setShowStadiums: (on: boolean) => void;
   setShowAirports: (on: boolean) => void;
   setShowPinka: (on: boolean) => void;
@@ -95,6 +97,7 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
   const [showPitches, setShowPitches] = useState(false);
   const [showCrkve, setShowCrkve] = useState(false);
   const [showZupe, setShowZupe] = useState(false);
+  const [showBiskupije, setShowBiskupije] = useState(false);
   const [showStadiums, setShowStadiums] = useState(false);
   const [showAirports, setShowAirports] = useState(false);
   const [showPinka, setShowPinka] = useState(false);
@@ -148,6 +151,7 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
       showPitches,
       showCrkve,
       showZupe,
+      showBiskupije,
       showStadiums,
       showAirports,
       showPinka,
@@ -168,6 +172,7 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
       setShowPitches,
       setShowCrkve,
       setShowZupe,
+      setShowBiskupije,
       setShowStadiums,
       setShowAirports,
       setShowPinka,
@@ -192,6 +197,7 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
       showPitches,
       showCrkve,
       showZupe,
+      showBiskupije,
       showStadiums,
       showAirports,
       showPinka,

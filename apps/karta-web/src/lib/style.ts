@@ -26,6 +26,9 @@ export const JLS_FILL_OPACITY_DEFAULT = [
   0.4,
 ] as never;
 
+// Prigušena JLS ispuna. Koristi je i sloj biskupija, ne samo ortofoto: kad je
+// na karti DRUGA teritorijalna podjela, JLS mora postati podloga — inače se
+// dvije podjele bore za istu boju i nijedna se ne čita.
 export const JLS_FILL_OPACITY_ORTO = [
   "case",
   ["boolean", ["feature-state", "hover"], false],

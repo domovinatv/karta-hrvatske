@@ -137,6 +137,14 @@ export function ControlsPanel({ variant = "desktop", onAction }: Props) {
         🏛 Župe
       </CtrlBtn>
       <CtrlBtn
+        active={s.showBiskupije}
+        onClick={wrap(() => s.setShowBiskupije(!s.showBiskupije))}
+        shortcut="D"
+        title="Teritoriji 15 latinskih (nad)biskupija. Granice su DERIVIRANE iz sjedišta župa preko granica naselja — službene ne postoje kao javna geometrija; slaganje s onima koje ima OSM je 96,6–98,6 % (lazy-loaded)"
+      >
+        ✝️ Biskupije
+      </CtrlBtn>
+      <CtrlBtn
         active={s.showPitches}
         onClick={wrap(() => s.setShowPitches(!s.showPitches))}
         shortcut="P"

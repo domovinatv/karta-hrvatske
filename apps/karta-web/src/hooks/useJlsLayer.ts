@@ -29,7 +29,8 @@ export function useJlsLayer({
   zupanije,
   drzava,
 }: UseJlsLayerOptions) {
-  const { theme, colorMode, showOrto, showZupBorders, showJlsBorders } = useMapState();
+  const { theme, colorMode, showOrto, showBiskupije, showZupBorders, showJlsBorders } =
+    useMapState();
   const dark = theme === "dark";
 
   // Add sources + layers. Guarded so we don't double-add when state changes
@@ -58,7 +59,8 @@ export function useJlsLayer({
                 TYPE_COLOR.Other,
               ] as never)
             : ["get", "color"],
-        "fill-opacity": showOrto ? JLS_FILL_OPACITY_ORTO : JLS_FILL_OPACITY_DEFAULT,
+        "fill-opacity":
+          showOrto || showBiskupije ? JLS_FILL_OPACITY_ORTO : JLS_FILL_OPACITY_DEFAULT,
       },
     });
     map.addLayer({
@@ -153,15 +155,17 @@ export function useJlsLayer({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [map, loaded, styleRev, jls, zupanije, drzava]);
 
-  // Toggle paint props when ortofoto / colorMode change.
+  // Toggle paint props when ortofoto / biskupije / colorMode change.
   useEffect(() => {
     if (!map?.getLayer("hr-fill")) return;
     map.setPaintProperty(
       "hr-fill",
       "fill-opacity",
-      (showOrto ? JLS_FILL_OPACITY_ORTO : JLS_FILL_OPACITY_DEFAULT) as never,
+      (showOrto || showBiskupije
+        ? JLS_FILL_OPACITY_ORTO
+        : JLS_FILL_OPACITY_DEFAULT) as never,
     );
-  }, [map, showOrto, styleRev]);
+  }, [map, showOrto, showBiskupije, styleRev]);
 
   useEffect(() => {
     if (!map) return;

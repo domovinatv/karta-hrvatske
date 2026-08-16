@@ -257,6 +257,37 @@ export interface ZupaProperties {
 export type ZupaFeature = GeoJSON.Feature<GeoJSON.Point, ZupaProperties> & { id: number };
 export type ZupaCollection = GeoJSON.FeatureCollection<GeoJSON.Point, ZupaProperties>;
 
+/**
+ * Teritorij (nad)biskupije — jedini poligoni iz crkve.domovina.ai i jedini
+ * DERIVIRANI sloj na karti: službene granice biskupija ne postoje kao javna
+ * geometrija (OSM ih ima 3 od 15, Wikidata nijednu), pa su izračunate iz
+ * sjedišta župa preko granica naselja. Zato `osm_agreement` — izmjereno
+ * slaganje s onim granicama koje u OSM-u postoje.
+ */
+export interface BiskupijaProperties {
+  id: number;
+  slug: string;
+  name: string;
+  /** nadbiskupija | biskupija */
+  kind: string;
+  seat?: string;
+  oib?: string;
+  area_km2?: number;
+  /** Stanovnika na području (DGU/DZS) — NE broj vjernika. */
+  population?: number;
+  settlement_count?: number;
+  parish_count?: number;
+  church_count?: number;
+  /** Kako je granica derivirana. */
+  method?: string;
+  /** % naselja koja se slažu s OSM granicom; izostaje kad je OSM nema. */
+  osm_agreement?: number;
+}
+export type BiskupijaCollection = GeoJSON.FeatureCollection<
+  GeoJSON.Polygon | GeoJSON.MultiPolygon,
+  BiskupijaProperties
+>;
+
 export interface StadiumProperties {
   id: number;
   osm_type: "way" | "relation";
