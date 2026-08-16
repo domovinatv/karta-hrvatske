@@ -6,9 +6,10 @@ import maplibregl, {
 import { useMapState } from "@/lib/MapState";
 import { v } from "@/lib/version";
 import type { ZupaCollection, ZupaProperties } from "@/lib/types";
+import { svgArrowUpRight, svgCheck } from "@/lib/svgIcons";
 
 // Župe i ostale vjerske PRAVNE OSOBE (~2900 u HR) — sestrinski sloj uz
-// useCrkveLayer, ali drugi skup: ⛪ Crkve su građevine, 🏛 Župe su pravni
+// useCrkveLayer, ali drugi skup: Crkve su građevine, Župe su pravni
 // subjekti iz državne evidencije (OIB, evidencijski broj, sjedište).
 // Podatke generira ../../crkve.domovina.ai (`make export` → `make sync-karta`
 // upiše public/data/zupe.geojson).
@@ -267,7 +268,11 @@ function popupHtml(p: ZupaProperties): string {
   const sub = [p.diocese, p.community].filter(Boolean).join(" · ");
 
   const church = p.church_name
-    ? `${esc(p.church_name)}${p.church_verified ? ' <span title="Google Places nezavisno potvrdio ovaj match" style="opacity:.7">✓</span>' : ""}`
+    ? `${esc(p.church_name)}${
+        p.church_verified
+          ? ` <span title="Google Places nezavisno potvrdio ovaj match" style="opacity:.7">${svgCheck(11)}</span>`
+          : ""
+      }`
     : `<span style="color:#f43f5e">nije spojena</span>`;
 
   const rows = [
@@ -317,7 +322,7 @@ function rowHtml(k: string, html: string): string {
 
 function link(href: string, label: string): string {
   return `<a href="${esc(href)}" target="_blank" rel="noopener noreferrer"
-     style="font-size:11px;text-decoration:underline;opacity:.85">${esc(label)} ↗</a>`;
+     style="font-size:11px;text-decoration:underline;opacity:.85">${esc(label)} ${svgArrowUpRight()}</a>`;
 }
 
 function esc(s: string): string {

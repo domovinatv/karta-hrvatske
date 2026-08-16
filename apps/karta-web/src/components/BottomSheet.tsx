@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Info, Map as MapIcon, Search } from "lucide-react";
 import type { Map as MapLibreMap } from "maplibre-gl";
 import { useMapState } from "@/lib/MapState";
 import type { JlsCollection, NaseljaCollection } from "@/lib/types";
@@ -17,9 +18,13 @@ interface Props {
   totalArea: number;
 }
 
-// Mobile-only bottom sheet with peek (~96px showing handle + tabs) and
-// expand (~78dvh) states. Auto-expands to the Detalji tab when JLS or
-// naselje is selected.
+// Bottom sheet s peek (~100px: ručka + tabovi) i expand (~78dvh) stanjem.
+// Auto-otvara Detalje kad se odabere JLS ili naselje.
+//
+// Vidljiv je do `lg`, ne do `md`: DetailPanel u desnom asideu pojavljuje se tek
+// na `lg`, pa je na širinama 768–1023 px odabir JLS-a prikazivao detalje
+// nigdje. Lijevi sidebar se u tom rasponu djelomično preklapa s tabovima
+// Pretraga/Županije, što je prihvatljivo — sheet je tad ionako u peek stanju.
 export function BottomSheet({
   map,
   jls,
@@ -51,7 +56,7 @@ export function BottomSheet({
 
   return (
     <div
-      className="fixed inset-x-0 bottom-0 z-[600] flex flex-col rounded-t-[14px] border-t shadow-2xl transition-transform duration-300 ease-out md:hidden"
+      className="fixed inset-x-0 bottom-0 z-[600] flex flex-col rounded-t-2xl border-t shadow-2xl transition-transform duration-300 ease-out lg:hidden"
       style={{
         background: "var(--bg-2)",
         borderColor: "var(--line)",
@@ -80,10 +85,10 @@ export function BottomSheet({
         style={{ borderColor: "var(--line)" }}
       >
         <TabBtn t="pretraga" active={tab} onClick={(t) => { setTab(t); setOpen(true); }}>
-          🔍 Pretraga
+          <Search size={14} /> Pretraga
         </TabBtn>
         <TabBtn t="zupanije" active={tab} onClick={(t) => { setTab(t); setOpen(true); }}>
-          🗺 Županije
+          <MapIcon size={14} /> Županije
         </TabBtn>
         <TabBtn
           t="detalji"
@@ -91,7 +96,7 @@ export function BottomSheet({
           disabled={!hasSelection}
           onClick={(t) => { setTab(t); setOpen(true); }}
         >
-          ℹ Detalji
+          <Info size={14} /> Detalji
         </TabBtn>
       </div>
       <div className="flex-1 overflow-y-auto" style={{ WebkitOverflowScrolling: "touch" }}>
@@ -133,7 +138,7 @@ function TabBtn({
       role="tab"
       disabled={disabled}
       onClick={() => !disabled && onClick(t)}
-      className="flex-1 rounded-lg border px-2 py-2.5 font-medium transition-colors"
+      className="flex flex-1 items-center justify-center gap-1.5 rounded-lg border px-2 py-2.5 font-medium transition-colors"
       style={{
         background: isActive ? "var(--bg-3)" : "transparent",
         borderColor: isActive ? "var(--line)" : "transparent",

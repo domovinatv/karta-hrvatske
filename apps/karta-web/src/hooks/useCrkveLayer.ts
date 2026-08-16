@@ -6,6 +6,7 @@ import maplibregl, {
 import { useMapState } from "@/lib/MapState";
 import { v } from "@/lib/version";
 import type { CrkvaCollection, CrkvaProperties } from "@/lib/types";
+import { svgArrowUpRight } from "@/lib/svgIcons";
 
 // Crkve i sakralni objekti (~6900 u HR). Podatke generira sestrinski repo
 // ../../crkve.domovina.ai (`make all` → `make sync-karta` upiše
@@ -261,7 +262,7 @@ function row(k: string, val?: string | number | null): string {
 
 function link(href: string, label: string): string {
   return `<a href="${esc(href)}" target="_blank" rel="noopener noreferrer"
-     style="font-size:11px;text-decoration:underline;opacity:.85">${esc(label)} ↗</a>`;
+     style="font-size:11px;text-decoration:underline;opacity:.85">${esc(label)} ${svgArrowUpRight()}</a>`;
 }
 
 function esc(s: string): string {

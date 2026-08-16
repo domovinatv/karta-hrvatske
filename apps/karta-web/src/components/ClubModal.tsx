@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useMapState } from "@/lib/MapState";
 import type { ClubProperties, ClubSeason } from "@/lib/types";
+import { ArrowUpRight, Check, X } from "lucide-react";
 
 const TIER_CHIP_COLOR: Record<number, string> = {
   1: "#d4322f",
@@ -64,7 +65,7 @@ export function ClubModal() {
             <div className="cm-short">{shortDiff ? `${shortDiff} · ${p.slug}` : p.slug}</div>
           </div>
           <button className="cm-close" aria-label="Zatvori" onClick={closeClubModal}>
-            ✕
+            <X size={15} />
           </button>
         </div>
 
@@ -160,7 +161,7 @@ function LokacijaSection({ p }: { p: ClubProperties }) {
           borderColor: "color-mix(in srgb, var(--good) 40%, transparent)",
         }}
       >
-        ✓ verified
+        <Check size={11} /> verified
       </span>
     ) : p.geo_source ? (
       <span className="cm-tag">{p.geo_source}</span>
@@ -196,7 +197,7 @@ function LokacijaSection({ p }: { p: ClubProperties }) {
               target="_blank"
               rel="noopener"
             >
-              Otvori u Google Maps →
+              Otvori u Google Maps <ArrowUpRight size={12} />
             </a>
           }
         />
