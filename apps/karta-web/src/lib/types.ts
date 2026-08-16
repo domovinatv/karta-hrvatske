@@ -206,6 +206,57 @@ export interface CrkvaProperties {
 export type CrkvaFeature = GeoJSON.Feature<GeoJSON.Point, CrkvaProperties> & { id: number };
 export type CrkvaCollection = GeoJSON.FeatureCollection<GeoJSON.Point, CrkvaProperties>;
 
+/**
+ * Vjerska PRAVNA OSOBA (župa, samostan, biskupija, crkvena općina, džemat) —
+ * drugi skup od CrkvaProperties, koje su građevine. Isti izvor podataka
+ * (crkve.domovina.ai), ali 1:N: župa ima župnu crkvu + filijale + kapele, a
+ * mnoga crkva nema župu.
+ *
+ * PAŽNJA na naziv: `Zup*` drugdje u ovom repou (`activeZup`, `showZupBorders`,
+ * `ZupList`) znači ŽUPANIJA. `Zupa*` je župa — vjerska pravna osoba.
+ */
+export interface ZupaProperties {
+  id: number;
+  slug: string;
+  /** Puni naziv iz državne evidencije, VELIKIM SLOVIMA. */
+  name: string;
+  /** Naziv bez prefiksa "ŽUPA", title-case — za prikaz. */
+  short_name?: string;
+  /** zupa | samostan | crkvena-opcina | provincija | biskupija | eparhija |
+   *  parohija | dzemat | caritas | svetiste | ostalo */
+  kind: string;
+  religion?: string;
+  denomination?: string;
+  titular?: string;
+  oib?: string;
+  diocese?: string;
+  /** Naziv vjerske zajednice — popunjeno za nekatoličke pravne osobe. */
+  community?: string;
+  address?: string;
+  city?: string;
+  county?: string;
+  /** church = koordinate spojene crkve (najtočnije) | places | naselje-centroid */
+  geocode_source?: string;
+  registry_no?: string;
+  registry_status?: string;
+  leader_title?: string;
+  phone?: string;
+  email?: string;
+  website?: string;
+  google_maps_uri?: string;
+  /** Broj građevina spojenih na ovu pravnu osobu. 0 je nalaz, ne "nema podatka". */
+  church_count: number;
+  /** Župna crkva — izostaje kad je matcher nije našao (489 župa). */
+  church_slug?: string;
+  church_name?: string;
+  church_kind?: string;
+  /** 1 = Google Places nezavisno potvrdio taj match. */
+  church_verified?: number;
+  source?: string[];
+}
+export type ZupaFeature = GeoJSON.Feature<GeoJSON.Point, ZupaProperties> & { id: number };
+export type ZupaCollection = GeoJSON.FeatureCollection<GeoJSON.Point, ZupaProperties>;
+
 export interface StadiumProperties {
   id: number;
   osm_type: "way" | "relation";

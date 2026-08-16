@@ -129,6 +129,14 @@ export function ControlsPanel({ variant = "desktop", onAction }: Props) {
         ⛪ Crkve
       </CtrlBtn>
       <CtrlBtn
+        active={s.showZupe}
+        onClick={wrap(() => s.setShowZupe(!s.showZupe))}
+        shortcut="Ž"
+        title="Vjerske pravne osobe — 1563 katoličke župe, samostani, biskupije, crkvene općine, džemati (data.gov.hr). Crveni prsten = župa kojoj u katalogu nije spojena župna crkva (lazy-loaded)"
+      >
+        🏛 Župe
+      </CtrlBtn>
+      <CtrlBtn
         active={s.showPitches}
         onClick={wrap(() => s.setShowPitches(!s.showPitches))}
         shortcut="P"
