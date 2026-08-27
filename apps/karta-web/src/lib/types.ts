@@ -332,3 +332,66 @@ export interface ApproachProperties {
   glide_slope_deg: number;
 }
 export type ApproachCollection = GeoJSON.FeatureCollection<GeoJSON.LineString, ApproachProperties>;
+
+/**
+ * Odgojno-obrazovna ustanova — škola, vrtić ili ustanova kao pravna osoba.
+ * Generira ../../oou.domovina.ai (scripts/31_export_geojson.py →
+ * 33_sync_karta.py). Prazna polja izostavljena iz GeoJSON-a radi veličine,
+ * pa je gotovo sve opcionalno.
+ *
+ * Jedan tip za sva tri sloja (skole/vrtici/ustanove) jer dijele shemu: sloj
+ * Ustanove je isti zapis viđen kao PRAVNA OSOBA, ne drukčiji objekt.
+ *
+ * PAŽNJA na `src`: feature nastaje iz OSM/CARNET OBJEKTA (`"objekt"`) ili iz
+ * državnog popisa USTANOVA (`"ustanova"`), ovisno o tome što je za tu točku
+ * dostupno. Kombinacija je namjerna — nijedan izvor sam nije potpun.
+ */
+export interface OouProperties {
+  id: number;
+  slug: string;
+  name: string;
+  /** objekt | ustanova — koji je izvor dao ovu točku. */
+  src?: "objekt" | "ustanova";
+  /** vrtic | osnovna-skola | srednja-skola | glazbena-skola |
+   *  posebna-ustanova | ucenicki-dom | skola-nepoznata-razina |
+   *  predskolski-program */
+  kind: string;
+  /** samo srednje: gimnazija | strukovna | umjetnicka | mjesovita */
+  program?: string;
+  /** maticna | podrucna | objekt | dom */
+  facility_kind?: string;
+  /** javna | privatna | vjerska */
+  operator_type?: string;
+  founder?: string;
+  /** Šifra ustanove iz e-Matice, format ŽŽ-OOO-NNN. Područne škole nose
+   *  šifru svoje matične. */
+  mzo_code?: string;
+  oib?: string;
+  address?: string;
+  settlement?: string;
+  municipality?: string;
+  county?: string;
+  postal_code?: string;
+  /** Kako je koordinata dobivena: zgrada | dgu-adresa | dgu-ulica-fuzzy |
+   *  naselje. Sloj crta „naselje" prigušeno — točnost je razine mjesta. */
+  geo_source?: string;
+  phone?: string;
+  email?: string;
+  website?: string;
+  capacity?: number;
+  wheelchair?: string;
+  osm_type?: "node" | "way" | "relation";
+  osm_id?: number;
+  wikidata_id?: string;
+  wikipedia_url?: string;
+  /** Naziv pravne osobe kojoj objekt pripada (kad se razlikuje od `name`). */
+  ustanova?: string;
+  ustanova_slug?: string;
+  /** Samo u sloju Ustanove. NULA JE NALAZ („OSM nema nijednu zgradu ove
+   *  ustanove"), ne odsutan podatak — zato se ne izostavlja iz GeoJSON-a. */
+  objekt_count?: number;
+  match_method?: string;
+  source?: string[];
+}
+export type OouFeature = GeoJSON.Feature<GeoJSON.Point, OouProperties> & { id: number };
+export type OouCollection = GeoJSON.FeatureCollection<GeoJSON.Point, OouProperties>;

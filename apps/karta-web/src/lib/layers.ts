@@ -1,8 +1,11 @@
 import {
+  Baby,
   Blocks,
+  Building2,
   Church,
   Cross,
   Focus,
+  GraduationCap,
   HeartHandshake,
   House,
   LandPlot,
@@ -33,6 +36,7 @@ export type LayerGroupId =
   | "granice"
   | "naselja"
   | "vjera"
+  | "obrazovanje"
   | "sport"
   | "infrastruktura";
 
@@ -41,6 +45,7 @@ export const GROUPS: { id: LayerGroupId; label: string }[] = [
   { id: "granice", label: "Administrativne granice" },
   { id: "naselja", label: "Naselja i kvartovi" },
   { id: "vjera", label: "Vjerski objekti" },
+  { id: "obrazovanje", label: "Odgoj i obrazovanje" },
   { id: "sport", label: "Sport" },
   { id: "infrastruktura", label: "Infrastruktura" },
 ];
@@ -58,6 +63,9 @@ export type LayerStateKey =
   | "showCrkve"
   | "showZupe"
   | "showBiskupije"
+  | "showSkole"
+  | "showVrtici"
+  | "showUstanove"
   | "showAirports"
   | "showPinka"
   | "showOrto"
@@ -75,6 +83,9 @@ export type LayerId =
   | "crkve"
   | "zupe"
   | "biskupije"
+  | "skole"
+  | "vrtici"
+  | "ustanove"
   | "zracne-luke"
   | "pinka"
   | "ortofoto"
@@ -277,6 +288,57 @@ export const CONTROLS: Control[] = [
     blurb:
       "Teritoriji 15 latinskih (nad)biskupija. Granice su DERIVIRANE iz sjedišta župa preko granica naselja — službene ne postoje kao javna geometrija. Slaganje s granicama koje ima OpenStreetMap iznosi 96,6 – 98,6 %.",
     source: { label: "derivirano — crkve.domovina.ai" },
+  },
+
+  // ── Odgoj i obrazovanje ──────────────────────────────────────────────────
+  {
+    kind: "toggle",
+    id: "skole",
+    group: "obrazovanje",
+    label: "Škole",
+    icon: GraduationCap,
+    stateKey: "showSkole",
+    shortcut: "Š",
+    lazy: true,
+    blurb:
+      "Osnovne i srednje škole, glazbene i umjetničke škole, centri za odgoj i obrazovanje te učenički domovi — uključujući PODRUČNE škole po selima, kojih u državnim otvorenim podacima nema. Vidljivo od zoom razine 7.",
+    source: { label: "oou.domovina.ai — MZO, OpenStreetMap, CARNET" },
+    legend: [
+      { color: "#2563eb", label: "osnovna škola" },
+      { color: "#7c3aed", label: "srednja škola" },
+      { color: "#db2777", label: "glazbena / umjetnička" },
+      { color: "#ea580c", label: "centar za odgoj i obrazovanje" },
+      { color: "#0891b2", label: "učenički dom" },
+    ],
+  },
+  {
+    kind: "toggle",
+    id: "vrtici",
+    group: "obrazovanje",
+    label: "Vrtići",
+    icon: Baby,
+    stateKey: "showVrtici",
+    shortcut: "Đ",
+    lazy: true,
+    blurb:
+      "Dječji vrtići i jaslice, s pojedinačnim objektima gdje ih OpenStreetMap ima. Prigušene točke stoje na težištu naselja, ne na adresi — vrtići su jedina kategorija bez ijednog službenog identifikatora, pa im je i geokodiranje najslabije.",
+    source: { label: "oou.domovina.ai — MZO, OpenStreetMap" },
+  },
+  {
+    kind: "toggle",
+    id: "ustanove",
+    group: "obrazovanje",
+    label: "Ustanove",
+    icon: Building2,
+    stateKey: "showUstanove",
+    shortcut: "U",
+    lazy: true,
+    blurb:
+      "Odgojno-obrazovne ustanove kao PRAVNE OSOBE — sjedišta, sa šifrom ustanove i osnivačem. Drugi skup od sloja Škole, koji crta zgrade: jedna ustanova ima matičnu zgradu i do desetak područnih. Crveni prsten označava ustanovu kojoj u OpenStreetMapu nema nijedne mapirane zgrade.",
+    source: { label: "data.gov.hr — MZO", href: "https://data.gov.hr" },
+    legend: [
+      { color: "#ef4444", label: "zgrada nije mapirana u OSM-u" },
+    ],
   },
 
   // ── Sport ────────────────────────────────────────────────────────────────

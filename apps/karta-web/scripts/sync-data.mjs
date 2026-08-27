@@ -67,6 +67,10 @@ const SIBLING_LAYERS = [
     "../../../crkve.domovina.ai/data/exports",
     ["crkve.geojson", "zupe.geojson", "biskupije.geojson"],
   ],
+  [
+    "../../../oou.domovina.ai/data/exports",
+    ["skole.geojson", "vrtici.geojson", "ustanove.geojson"],
+  ],
 ];
 for (const [relDir, files] of SIBLING_LAYERS) {
   const dir = resolve(KARTA_WEB, relDir);

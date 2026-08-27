@@ -27,6 +27,7 @@ import { useAirportsLayer } from "@/hooks/useAirportsLayer";
 import { useUrlSync } from "@/hooks/useUrlSync";
 import { useZupeLayer } from "@/hooks/useZupeLayer";
 import { useBiskupijeLayer } from "@/hooks/useBiskupijeLayer";
+import { useSkoleLayer, useUstanoveLayer, useVrticiLayer } from "@/hooks/useOouLayer";
 import { useMapState } from "@/lib/MapState";
 import { HR_BOUNDS } from "@/lib/style";
 import type { JlsCollection, JlsFeature } from "@/lib/types";
@@ -102,6 +103,9 @@ export default function MapView() {
   useCrkveLayer({ map: mapRef.current, loaded, styleRev });
   useZupeLayer({ map: mapRef.current, loaded, styleRev });
   useBiskupijeLayer({ map: mapRef.current, loaded, styleRev });
+  useSkoleLayer({ map: mapRef.current, loaded, styleRev });
+  useVrticiLayer({ map: mapRef.current, loaded, styleRev });
+  useUstanoveLayer({ map: mapRef.current, loaded, styleRev });
   usePitchesLayer({ map: mapRef.current, loaded, styleRev });
   useStadiumsLayer({ map: mapRef.current, loaded, styleRev });
   useAirportsLayer({ map: mapRef.current, loaded, styleRev });

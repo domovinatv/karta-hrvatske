@@ -33,6 +33,11 @@ interface MapState {
   /** Župe (vjerske pravne osobe) — NE županije, to je showZupBorders. */
   showZupe: boolean;
   showBiskupije: boolean;
+  /** Škole — osnovne, srednje, glazbene, posebne ustanove, učenički domovi. */
+  showSkole: boolean;
+  showVrtici: boolean;
+  /** Odgojno-obrazovne ustanove kao PRAVNE OSOBE (drugi skup od showSkole). */
+  showUstanove: boolean;
   showStadiums: boolean;
   showAirports: boolean;
   showPinka: boolean;
@@ -60,6 +65,9 @@ interface MapStateActions {
   setShowCrkve: (on: boolean) => void;
   setShowZupe: (on: boolean) => void;
   setShowBiskupije: (on: boolean) => void;
+  setShowSkole: (on: boolean) => void;
+  setShowVrtici: (on: boolean) => void;
+  setShowUstanove: (on: boolean) => void;
   setShowStadiums: (on: boolean) => void;
   setShowAirports: (on: boolean) => void;
   setShowPinka: (on: boolean) => void;
@@ -98,6 +106,9 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
   const [showCrkve, setShowCrkve] = useState(false);
   const [showZupe, setShowZupe] = useState(false);
   const [showBiskupije, setShowBiskupije] = useState(false);
+  const [showSkole, setShowSkole] = useState(false);
+  const [showVrtici, setShowVrtici] = useState(false);
+  const [showUstanove, setShowUstanove] = useState(false);
   const [showStadiums, setShowStadiums] = useState(false);
   const [showAirports, setShowAirports] = useState(false);
   const [showPinka, setShowPinka] = useState(false);
@@ -152,6 +163,9 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
       showCrkve,
       showZupe,
       showBiskupije,
+      showSkole,
+      showVrtici,
+      showUstanove,
       showStadiums,
       showAirports,
       showPinka,
@@ -173,6 +187,9 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
       setShowCrkve,
       setShowZupe,
       setShowBiskupije,
+      setShowSkole,
+      setShowVrtici,
+      setShowUstanove,
       setShowStadiums,
       setShowAirports,
       setShowPinka,
@@ -198,6 +215,9 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
       showCrkve,
       showZupe,
       showBiskupije,
+      showSkole,
+      showVrtici,
+      showUstanove,
       showStadiums,
       showAirports,
       showPinka,
