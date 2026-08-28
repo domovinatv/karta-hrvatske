@@ -2,10 +2,15 @@
 // kvartovi-kolokvijalni.geojson, bez MapLibrea. Print-ready: SVG download +
 // PNG rasterizacija @300 DPI s embedanim fontovima.
 
+import posterCities from "./poster-cities.json";
 import type { KvartCollection, KvartFeature } from "./types";
 
 export interface PosterCity {
-  key: string;
+  /**
+   * Identitet grada I segment javnog URL-a (/poster/<slug>). NE mijenjati —
+   * sherani linkovi (WhatsApp) ovise o njemu.
+   */
+  slug: string;
   label: string;
   jlsMb: string;
   title: string;
@@ -21,26 +26,19 @@ export interface PosterCity {
   samplePoints: string;
 }
 
-export const POSTER_CITIES: PosterCity[] = [
-  {
-    key: "zagreb",
-    label: "Zagreb",
-    jlsMb: "01333",
-    title: "ZAGREB",
-    attribution: "podaci: data.zagreb.hr (OD) · © OpenStreetMap (ODbL)",
-    sources: "data.zagreb.hr (Otvorena dozvola), OpenStreetMap (ODbL)",
-    samplePoints: "45.807, 15.967, Moj ured\n45.796, 15.937, Podružnica Jarun",
-  },
-  {
-    key: "velika-gorica",
-    label: "Velika Gorica",
-    jlsMb: "05410",
-    title: "VELIKA GORICA",
-    attribution: "podaci: © OpenStreetMap (ODbL)",
-    sources: "OpenStreetMap (ODbL)",
-    samplePoints: "45.712, 16.076, Moj ured\n45.733, 16.068, Skladište Kurilovec",
-  },
-];
+/**
+ * Registar živi u JSON-u jer ga uz app čitaju i build skripte (lookup za OG
+ * injection u workeru, sitemap). Jedan izvor istine — novi grad se dodaje
+ * SAMO ovdje.
+ */
+export const POSTER_CITIES: PosterCity[] = posterCities;
+
+export const DEFAULT_CITY_SLUG = POSTER_CITIES[0].slug;
+
+/** Grad po URL slugu; nepoznat slug → null (ruta tada redirecta na default). */
+export function cityBySlug(slug: string | undefined): PosterCity | null {
+  return POSTER_CITIES.find((c) => c.slug === slug) ?? null;
+}
 
 export interface PosterPalette {
   key: string;

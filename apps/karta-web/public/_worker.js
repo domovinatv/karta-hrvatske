@@ -16,6 +16,7 @@ const SITE = "https://gis.domovina.ai";
 let LOOKUP_CLUBS = null;
 let LOOKUP_JLS = null;
 let LOOKUP_ZUP = null;
+let LOOKUP_POSTER = null;
 
 function fetchLookup(env, name) {
   return env.ASSETS.fetch(new Request(`${SITE}/data/lookup-${name}.json`))
@@ -33,6 +34,10 @@ function loadJlsLookup(env) {
 function loadZupLookup(env) {
   if (!LOOKUP_ZUP) LOOKUP_ZUP = fetchLookup(env, "zupanije");
   return LOOKUP_ZUP;
+}
+function loadPosterLookup(env) {
+  if (!LOOKUP_POSTER) LOOKUP_POSTER = fetchLookup(env, "poster");
+  return LOOKUP_POSTER;
 }
 
 function escapeHtml(s) {
@@ -167,6 +172,12 @@ export default {
       if (meta) return serveWithOg(env, request, meta);
     } else if ((m = path.match(/^\/zupanija\/([^/]+)\/?$/))) {
       const lookup = await loadZupLookup(env);
+      const meta = lookup[decodeURIComponent(m[1])];
+      if (meta) return serveWithOg(env, request, meta);
+    } else if ((m = path.match(/^\/poster\/([^/]+)\/?$/))) {
+      // Plakat po gradu se dijeli linkom (WhatsApp) — bez ovoga kartica
+      // pokazuje generički naslov cijele karte, ne grad iz URL-a.
+      const lookup = await loadPosterLookup(env);
       const meta = lookup[decodeURIComponent(m[1])];
       if (meta) return serveWithOg(env, request, meta);
     }

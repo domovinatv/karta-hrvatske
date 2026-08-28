@@ -19,6 +19,13 @@ const now = new Date().toISOString().split("T")[0];
 const urls = [];
 urls.push(urlEntry(`${SITE}/`, 1.0, "weekly"));
 
+// Poster generator — jedna ruta po gradu (isti registar kao app i worker).
+for (const c of JSON.parse(
+  readFileSync(resolve(__dirname, "../src/lib/poster-cities.json"), "utf-8"),
+)) {
+  urls.push(urlEntry(`${SITE}/poster/${c.slug}`, 0.8, "monthly"));
+}
+
 if (existsSync(join(PUBLIC_DATA, "lookup-jls.json"))) {
   const lk = JSON.parse(readFileSync(join(PUBLIC_DATA, "lookup-jls.json"), "utf-8"));
   for (const slug of Object.keys(lk)) {

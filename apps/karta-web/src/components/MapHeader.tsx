@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Image } from "lucide-react";
 
 // Kompaktno zaglavlje — na uskom ekranu se svodi na jednu liniju
@@ -29,15 +30,15 @@ export function MapHeader() {
           Karta Hrvatske
         </span>
       </h1>
-      <a
-        href="/poster"
+      <Link
+        to="/poster"
         className="ml-auto flex items-center gap-1.5 rounded-lg border px-2.5 py-1.5 text-[11.5px] no-underline transition-colors hover:border-[var(--ui-active)]"
         style={{ borderColor: "var(--line)", color: "var(--text)" }}
         title="Poster generator — anatomija grada iz kvartova"
       >
         <Image size={14} />
         Poster
-      </a>
+      </Link>
       {/* "WEBGL" je bio interni tehnički detalj koji ništa ne prodaje — zamijenjen
           opsegom dataseta, što je ono čime se karta zapravo razlikuje. */}
       <div

@@ -43,7 +43,10 @@ export const router = createBrowserRouter([
       { path: "klub/:slug", element: lazyRoute(MapView) },
       { path: "kampanje", element: lazyRoute(MapView) },
       { path: "jls/:slug", element: lazyRoute(MapView) },
+      // /poster redirecta na /poster/<default>; grad je u putanji da se
+      // link na konkretan plakat može sherati (WhatsApp/OG).
       { path: "poster", element: lazyRoute(PosterView) },
+      { path: "poster/:grad", element: lazyRoute(PosterView) },
       { path: "zupanija/:slug", element: lazyRoute(MapView) },
       { path: "*", element: lazyRoute(NotFound) },
     ],

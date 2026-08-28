@@ -100,3 +100,40 @@ if (existsSync(clubsPath)) {
 }
 
 console.log("\nLookups built.");
+
+// ── Poster lookup ──────────────────────────────────────────────────────────
+// Gradovi generatora plakata (/poster/<slug>) — čita ISTI registar koji koristi
+// app (src/lib/poster-cities.json), da se OG kartica i dropdown ne raziđu.
+const posterCities = JSON.parse(
+  readFileSync(resolve(__dirname, "../src/lib/poster-cities.json"), "utf-8"),
+);
+const kvartoviPath = join(PUBLIC_DATA, "kvartovi-kolokvijalni.geojson");
+const kvartCount = {};
+if (existsSync(kvartoviPath)) {
+  const kv = JSON.parse(readFileSync(kvartoviPath, "utf-8"));
+  for (const f of kv.features) {
+    const mb = f.properties.jls_maticni_broj;
+    kvartCount[mb] = (kvartCount[mb] ?? 0) + 1;
+  }
+}
+// Hrvatska sklonidba uz broj: 1 kvart, 2-4 kvarta, 5+ kvartova (11-14 iznimka).
+function kvartPlural(n) {
+  const d = n % 10;
+  const dd = n % 100;
+  if (d === 1 && dd !== 11) return "kvart";
+  if (d >= 2 && d <= 4 && (dd < 12 || dd > 14)) return "kvarta";
+  return "kvartova";
+}
+const posterLookup = {};
+for (const c of posterCities) {
+  const n = kvartCount[c.jlsMb];
+  const koliko = n ? `${n} ${kvartPlural(n)} ${c.labelGenitive}` : `Kvartovi ${c.labelGenitive}`;
+  posterLookup[c.slug] = {
+    title: `${c.label} — anatomija grada · DOMOVINA GIS`,
+    description:
+      `${koliko} kao print-ready poster: SVG i PNG 300 dpi, besplatno. ` +
+      `Izvori: ${c.sources}.`,
+  };
+}
+writeFileSync(join(PUBLIC_DATA, "lookup-poster.json"), JSON.stringify(posterLookup));
+console.log(`  lookup-poster.json (${Object.keys(posterLookup).length} entries)`);

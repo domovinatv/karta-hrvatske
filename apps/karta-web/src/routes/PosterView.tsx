@@ -1,8 +1,10 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 import { v } from "@/lib/version";
 import {
+  DEFAULT_CITY_SLUG,
   POSTER_CITIES,
+  cityBySlug,
   POSTER_FONTS,
   POSTER_FORMATS,
   POSTER_PALETTES,
@@ -23,7 +25,7 @@ const PX_PER_CM = 10;
 
 interface BuildOpts {
   fc: KvartCollection;
-  cityKey: string;
+  citySlug: string;
   paletteKey: string;
   fontKey: string;
   formatKey: string;
@@ -44,7 +46,7 @@ function esc(s: string): string {
 }
 
 function buildPosterSvg(o: BuildOpts): string {
-  const city = POSTER_CITIES.find((c) => c.key === o.cityKey) ?? POSTER_CITIES[0];
+  const city = cityBySlug(o.citySlug) ?? POSTER_CITIES[0];
   const palette = POSTER_PALETTES.find((p) => p.key === o.paletteKey) ?? POSTER_PALETTES[0];
   const font = POSTER_FONTS.find((f) => f.key === o.fontKey) ?? POSTER_FONTS[0];
   const format = POSTER_FORMATS.find((f) => f.key === o.formatKey) ?? POSTER_FORMATS[0];
@@ -192,12 +194,15 @@ function buildPosterSvg(o: BuildOpts): string {
 }
 
 export default function PosterView() {
+  const { grad } = useParams();
+  const navigate = useNavigate();
+  // Grad je stanje RUTE, ne komponente — /poster/zagreb je shareable permalink.
+  const city = cityBySlug(grad);
   const [fc, setFc] = useState<KvartCollection | null>(null);
-  const [cityKey, setCityKey] = useState("zagreb");
   const [paletteKey, setPaletteKey] = useState("retro");
   const [fontKey, setFontKey] = useState("fraunces");
   const [formatKey, setFormatKey] = useState("kvadrat");
-  const [title, setTitle] = useState("Zagreb");
+  const [title, setTitle] = useState(city?.label ?? "Zagreb");
   const [subtitle, setSubtitle] = useState("anatomija grada · kvartovi");
   const [showLabels, setShowLabels] = useState(true);
   const [labelScale, setLabelScale] = useState(1);
@@ -211,8 +216,15 @@ export default function PosterView() {
   const dragRef = useRef<{ startX: number; startY: number; panX: number; panY: number } | null>(null);
 
   useEffect(() => {
-    document.title = "Poster generator — anatomija grada · DOMOVINA Karta";
-  }, []);
+    if (!city) return;
+    document.title = `${city.label} — anatomija grada · DOMOVINA Karta`;
+  }, [city]);
+
+  // Naslov plakata prati grad dok ga korisnik ne prepiše — sada i kad se grad
+  // promijeni navigacijom (back/forward, sherani link), ne samo dropdownom.
+  useEffect(() => {
+    if (city && !titleTouched.current) setTitle(city.label);
+  }, [city]);
 
   useEffect(() => {
     fetch(v("/data/kvartovi-kolokvijalni.geojson"))
@@ -221,22 +233,14 @@ export default function PosterView() {
       .catch((e: unknown) => console.error("kvartovi fetch failed", e));
   }, []);
 
-  // Promjena grada mijenja default naslov dok ga korisnik ne dira.
-  const onCityChange = (key: string) => {
-    setCityKey(key);
-    if (!titleTouched.current) {
-      setTitle(POSTER_CITIES.find((c) => c.key === key)?.label ?? key);
-    }
-  };
-
-  const city = POSTER_CITIES.find((c) => c.key === cityKey) ?? POSTER_CITIES[0];
+  const citySlug = city?.slug ?? DEFAULT_CITY_SLUG;
   const points = useMemo(() => parsePoints(pointsText), [pointsText]);
 
   const svg = useMemo(() => {
     if (!fc) return null;
     return buildPosterSvg({
       fc,
-      cityKey,
+      citySlug,
       paletteKey,
       fontKey,
       formatKey,
@@ -247,7 +251,7 @@ export default function PosterView() {
       points,
       pointColor,
     });
-  }, [fc, cityKey, paletteKey, fontKey, formatKey, title, subtitle, showLabels, labelScale, points, pointColor]);
+  }, [fc, citySlug, paletteKey, fontKey, formatKey, title, subtitle, showLabels, labelScale, points, pointColor]);
 
   const doExport = async (kind: "svg" | "png") => {
     if (!fc || exporting) return;
@@ -257,7 +261,7 @@ export default function PosterView() {
       const embeddedCss = await fontFaceCss(font);
       const full = buildPosterSvg({
         fc,
-        cityKey,
+        citySlug,
         paletteKey,
         fontKey,
         formatKey,
@@ -269,7 +273,7 @@ export default function PosterView() {
         pointColor,
         embeddedCss,
       });
-      const base = `${cityKey}-kvartovi-${formatKey}`;
+      const base = `${citySlug}-kvartovi-${formatKey}`;
       if (kind === "svg") {
         downloadBlob(new Blob([full], { type: "image/svg+xml" }), `${base}.svg`);
       } else {
@@ -286,6 +290,10 @@ export default function PosterView() {
       setExporting(null);
     }
   };
+
+  // /poster bez grada i nepoznat slug → kanonski URL, da sherani link uvijek
+  // pokazuje koji je grad. replace: ne trujemo back gumb.
+  if (!city) return <Navigate to={`/poster/${DEFAULT_CITY_SLUG}`} replace />;
 
   const field = "w-full rounded-md border px-2.5 py-1.5 font-mono text-[12px]";
   const fieldStyle = {
@@ -314,9 +322,14 @@ export default function PosterView() {
         </p>
 
         <label className={label}>Grad</label>
-        <select className={field} style={fieldStyle} value={cityKey} onChange={(e) => onCityChange(e.target.value)}>
+        <select
+          className={field}
+          style={fieldStyle}
+          value={city.slug}
+          onChange={(e) => navigate(`/poster/${e.target.value}`)}
+        >
           {POSTER_CITIES.map((c) => (
-            <option key={c.key} value={c.key}>{c.label}</option>
+            <option key={c.slug} value={c.slug}>{c.label}</option>
           ))}
         </select>
 
