@@ -237,11 +237,14 @@ interface ProjectedKvart {
   ring: Ring;
 }
 
+/** Razine koje se BOJE; ostale ("jls", "regija") su samo obrisi. */
+const UNIT_RAZINE = ["kvart", "cetvrt", "naselje"];
+
 export interface ProjectedSubject {
   /** Jedinice koje se boje: kvartovi, gradske četvrti ili naselja. */
   units: ProjectedKvart[];
-  /** Granice JLS-a (razina="jls") — crtaju se preko jedinica, samo obrisi. */
-  outlines: { name: string; d: string }[];
+  /** Obrisi preko jedinica: granice JLS-a i vanjski obuhvat regije. */
+  outlines: { name: string; d: string; razina: "jls" | "regija" }[];
   /** Projekcija točke (lat/lng → SVG px) za custom točke. */
   project: (lng: number, lat: number) => [number, number];
   width: number;
@@ -319,11 +322,15 @@ export function projectSubject(
   const inSubject = (f: PosterFeature) =>
     subject.jlsMb.includes(f.properties.jls_maticni_broj);
   const feats = (fc.features as PosterFeature[]).filter(
-    (f) => f.properties.razina !== "jls" && inSubject(f),
+    (f) => UNIT_RAZINE.includes(f.properties.razina) && inSubject(f),
   );
+  // Obuhvat regije (razina="regija") nije vezan uz jedan JLS pa ne prolazi
+  // inSubject — nosi jls_maticni_broj "*".
   const borderFeats = subject.showJlsBorders
     ? (fc.features as PosterFeature[]).filter(
-        (f) => f.properties.razina === "jls" && inSubject(f),
+        (f) =>
+          f.properties.razina === "regija" ||
+          (f.properties.razina === "jls" && inSubject(f)),
       )
     : [];
 
@@ -418,7 +425,11 @@ export function projectSubject(
         d += `M${pts.map(([x, y]) => `${x.toFixed(1)} ${y.toFixed(1)}`).join("L")}Z`;
       }
     }
-    return { name: f.properties.name, d };
+    return {
+      name: f.properties.name,
+      d,
+      razina: f.properties.razina as "jls" | "regija",
+    };
   });
 
   return { units: kvarts, outlines, project, width, height };

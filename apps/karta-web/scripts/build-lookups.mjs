@@ -122,7 +122,8 @@ for (const [key, file] of Object.entries(POSTER_SOURCE_FILES)) {
     continue;
   }
   for (const f of JSON.parse(readFileSync(path, "utf-8")).features) {
-    if (f.properties.razina === "jls") continue; // granica, nije jedinica
+    // granice ("jls") i vanjski obuhvat ("regija") nisu jedinice
+    if (f.properties.razina === "jls" || f.properties.razina === "regija") continue;
     const mb = f.properties.jls_maticni_broj;
     unitCount[key][mb] = (unitCount[key][mb] ?? 0) + 1;
   }

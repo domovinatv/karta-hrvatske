@@ -43,18 +43,18 @@ import sys
 from pathlib import Path
 
 try:
-    from pyproj import Transformer
     from shapely.geometry import mapping, shape
-    from shapely.ops import transform as shp_transform, unary_union
+    from shapely.ops import unary_union
 except ImportError as e:
-    print(f"Missing dependency ({e}). pip install pyproj shapely", file=sys.stderr)
+    print(f"Missing dependency ({e}). pip install shapely", file=sys.stderr)
     sys.exit(1)
 
 OUT_DIR = Path("data")
 NASELJA = OUT_DIR / "hr_canonical_naselja.geojson"
 OUT = OUT_DIR / "hr_turopolje_naselja.geojson"
 
-# Redoslijed određuje redoslijed u outputu; VG prva jer je najveća.
+# Jezgra: JLS-ovi koji CIJELI ulaze u Turopolje. Redoslijed = redoslijed u
+# outputu; VG prva jer je najveća.
 TUROPOLJE_JLS = {
     "05410": "Velika Gorica",
     "05444": "Pokupsko",
@@ -62,10 +62,93 @@ TUROPOLJE_JLS = {
     "05452": "Kravarsko",
 }
 
-SIMPLIFY_M = 5.0  # isto kao kvartovi — na plakatu neprimjetno, file 2× manji
+# Rub regije: JLS-ovi koji ulaze SAMO pojedinim naseljima. Turopolje je
+# povijesna regija, a današnje granice JLS-ova su je presjekle — južni rub
+# Zagreba i sjever Lekenika su turopoljski, ali Zagreb i Lekenik kao cjeline
+# nisu.
+#
+# OPSEG PO IZVORU: Mladen Klemenčić, "Turopolje uzduž i poprijeko", Studia
+# lexicographica 15(2021)29, 141-151 — urednik Turopoljskog leksikona (LZMK,
+# 2021) objašnjava kako je uredništvo omeđilo regiju: 4 JLS u cijelosti plus
+# "15 naselja iz sastava Grada Zagreba" i "sjeverni dio [općine Lekenik] s
+# ukupno osam naselja". https://doi.org/10.33604/sl.15.29.8
+#
+# Imena su DGU RPJ pisanje, provjereno protiv hr_canonical_naselja.geojson.
+# Homonimi postoje (Buzin i u Skradu, Veliko Polje u Lukaču), zato se par
+# (jls_mb, name) uvijek koristi zajedno.
+TUROPOLJE_NASELJA = {
+    "01333": (  # Grad Zagreb, južno od Save — Klemenčićevih 15
+        # Jezgra stare općine Odra / kotara Velika Gorica.
+        "Odra",              # sastanci turopoljskih plemića do XV. st.
+        "Hrašće Turopoljsko",  # sučija "Hrašće" Plemenite opčine
+        "Mala Mlaka",        # referentna točka SZ međe (Šenoa 1910)
+        "Odranski Obrež",    # "na zapadnoj medji turopoljskog kotara"
+        "Gornji Čehi",       # SZ međa = crta Čehi - Mala Mlaka
+        "Donji Čehi",
+        "Buzin",
+        "Veliko Polje",
+        "Hudi Bitek",
+        "Zadvorsko",
+        "Strmec",            # izdvojen iz općine Odra 1952., kao Odr. Obrež
+        # Sučije/naselja Plemenite opčine turopoljske (Šenoa 1910: 8) koja su
+        # danas u Zagrebu — povijesno jača veza od Buzina ili Zadvorskog.
+        "Donji Dragonožec",  # sučija Dragonožec (Vrhovlje)
+        "Gornji Dragonožec",
+        "Lipnica",
+        "Havidić Selo",
+    ),
+    "02283": (  # Općina Lekenik — sjeverni dio, 8 naselja
+        # Kriterij: područje župe Pešćenica, stare turopoljske crkvene
+        # jedinice; općina Lekenik bila je 1871-1875. u kotaru Velika Gorica.
+        "Lekenik",
+        "Pešćenica",  # NE "Peščenica" — DGU piše Pešćenica
+        "Donji Vukojevac",
+        "Gornji Vukojevac",
+        "Brežane Lekeničke",
+        "Poljana Lekenička",
+        "Cerje Letovanićko",
+        "Dužica",
+    ),
+}
 
-TX_4326_TO_3765 = Transformer.from_crs("EPSG:4326", "EPSG:3765", always_xy=True)
-TX_3765_TO_4326 = Transformer.from_crs("EPSG:3765", "EPSG:4326", always_xy=True)
+# NAMJERNO IZOSTAVLJENO (fact-check protiv literature):
+#
+#   Brezovica (Zagreb) — Klemenčić je izrijekom isključuje zajedno sa Svetom
+#     Klarom i Jakuševcem; iz općine Odra izdvojena je već 1913., a povijesno
+#     pripada okićkom, ne turopoljskom području.
+#   Vrh Letovanićki, Palanjek Pokupski (Lekenik) — nema izvora koji ih veže uz
+#     Turopolje; u JUŽNOJ su trećini općine (45,51° N, dok je 8 sjevernih
+#     između 45,55 i 45,61) i nisu u župi Pešćenica. Uz to su bila odvojena od
+#     ostatka regije, pa je obuhvat ispadao u dva dijela.
+#   Lučko, Sveta Klara, Trnsko, Savski gaj, Jakuševec i ostatak Novog Zagreba
+#     — sjeverno od zagrebačke obilaznice (1981.), koju Klemenčić uzima kao
+#     praktičnu sjevernu crtu; većina ionako nisu DGU naselja nego dijelovi
+#     naselja Zagreb.
+#   Južni Lekenik (Letovanić, Žažina, Šišinec, Stari Brod, Stari Farkašić,
+#     Brkiševina, Pokupsko Vratečko, Petrovec) — Pokuplje / sisačka Posavina.
+#   Greda, Sela, Odra Sisačka (Sisak) — "jugoistočni dio Turopolja" po
+#     Proleksisu, ali izvan definicije Turopoljskog leksikona; prijelazna zona
+#     prema donjem Pokuplju.
+
+# Cerovski Vrh se u popisima zna svrstati pod Lekenik, ali po DGU-u je naselje
+# Grada Velike Gorice — dakle već je u jezgri, ne dodaje se posebno.
+
+JLS_LABELS = {**{mb: name for mb, name in TUROPOLJE_JLS.items()},
+              "01333": "Grad Zagreb", "02283": "Lekenik"}
+
+# Podregija ide u properties da se dijelovi mogu razlikovati na karti.
+ZONE = {
+    **{mb: "Jezgra Turopolja" for mb in TUROPOLJE_JLS},
+    "01333": "Zagrebački dio",
+    "02283": "Lekenički dio",
+}
+
+# Geometrija se NE pojednostavljuje. simplify() reže vrhove neovisno na svakoj
+# strani zajedničkog ruba, pa unija susjednih naselja dobije slivere: prvi
+# pokušaj s tolerancijom 5 m dao je 20 rupa u obuhvatu regije. Uz to je bio i
+# VEĆI (0.37 vs 0.23 MB) — DGU naselja su već pojednostavljena u koraku 18, pa
+# se nema što dobiti. Rezanje koordinata na 6 decimala je topološki sigurno
+# (isti ulazni vrh → isti izlazni) i dovoljno smanjuje file.
 
 
 def round_coords(obj, nd=6):
@@ -78,11 +161,9 @@ def round_coords(obj, nd=6):
     return obj
 
 
-def simplify_wgs84(geom):
-    """Pojednostavi u metarskom CRS-u (tolerancija u metrima ima smisla)."""
-    m = shp_transform(TX_4326_TO_3765.transform, geom)
-    m = m.buffer(0).simplify(SIMPLIFY_M, preserve_topology=True)
-    return shp_transform(TX_3765_TO_4326.transform, m)
+def clean(geom):
+    """buffer(0) — popravlja self-intersectione koje DGU zna imati."""
+    return geom.buffer(0)
 
 
 def greedy_coloring(geoms: list) -> dict[int, int]:
@@ -114,17 +195,35 @@ def main() -> None:
         sys.exit(1)
 
     nas = json.loads(NASELJA.read_text())
+
     sel = [f for f in nas["features"] if f["properties"].get("jls_maticni_broj") in TUROPOLJE_JLS]
     if not sel:
         print("Nijedno naselje nije matchalo Turopolje JLS-ove.", file=sys.stderr)
         sys.exit(1)
 
+    # Rubna naselja po imenu — svako se MORA naći, inače je popis promašio
+    # (preimenovanje, dijakritik, homonim u drugoj JLS). Tiho preskakanje bi
+    # dalo kartu s rupom koju nitko ne bi primijetio.
+    missing = []
+    for mb, names in TUROPOLJE_NASELJA.items():
+        for name in names:
+            hit = [f for f in nas["features"]
+                   if f["properties"].get("jls_maticni_broj") == mb
+                   and f["properties"]["name"] == name]
+            if not hit:
+                missing.append(f"{name} (JLS {mb})")
+                continue
+            sel.extend(hit)
+    if missing:
+        print("Nema u DGU naseljima: " + ", ".join(missing), file=sys.stderr)
+        sys.exit(1)
+
     # Stabilan redoslijed: JLS kako je nabrojan, pa naselja abecedno.
-    jls_order = list(TUROPOLJE_JLS)
+    jls_order = list(TUROPOLJE_JLS) + list(TUROPOLJE_NASELJA)
     sel.sort(key=lambda f: (jls_order.index(f["properties"]["jls_maticni_broj"]),
                             f["properties"]["name"]))
 
-    geoms = [simplify_wgs84(shape(f["geometry"])) for f in sel]
+    geoms = [clean(shape(f["geometry"])) for f in sel]
     colors = greedy_coloring(geoms)
     print(f"  coloring: {len(sel)} naselja, {max(colors.values()) + 1} boja")
 
@@ -140,30 +239,71 @@ def main() -> None:
             "area_km2": p.get("area_km2"),  # DGU površina, ne iz pojednostavljene geometrije
             "stanovnistvo": p.get("stanovnistvo"),
             "palette_idx": colors[i],
+            "historical_zone": ZONE[p["jls_maticni_broj"]],
             "source": p.get("source", "DGU rpj:naselje"),
             "geometry": {"type": g.geom_type, "coordinates": round_coords(mapping(g)["coordinates"])},
         })
 
-    # Granice JLS-a = unija njihovih naselja (isti izvor, nema rasparivanja
-    # rubova kao kad bi se miješao drugi dataset).
-    for mb, name in TUROPOLJE_JLS.items():
+    # Granice po JLS-u = unija UKLJUČENIH naselja tog JLS-a (isti izvor, nema
+    # rasparivanja rubova kao kad bi se miješao drugi dataset). Za Zagreb i
+    # Lekenik to NIJE granica JLS-a nego njegovog turopoljskog dijela —
+    # `partial` to označava da se ne čita krivo.
+    for mb in jls_order:
         idx = [i for i, f in enumerate(sel) if f["properties"]["jls_maticni_broj"] == mb]
+        if not idx:
+            continue
         u = unary_union([geoms[i] for i in idx])
         pop = sum(sel[i]["properties"].get("stanovnistvo") or 0 for i in idx)
+        partial = mb in TUROPOLJE_NASELJA
         feats.append({
             "razina": "jls",
-            "name": name,
-            "jls_name": name,
+            "name": JLS_LABELS[mb],
+            "jls_name": JLS_LABELS[mb],
             "jls_maticni_broj": mb,
             "zupanija": sel[idx[0]]["properties"]["zupanija"],
             "area_km2": round(sum(sel[i]["properties"].get("area_km2") or 0 for i in idx), 4),
             "stanovnistvo": pop,
             "naselja_count": len(idx),
+            "partial": partial,
+            "historical_zone": ZONE[mb],
             "palette_idx": 0,
             "source": "DGU rpj:naselje (unija naselja)",
             "geometry": {"type": u.geom_type, "coordinates": round_coords(mapping(u)["coordinates"])},
         })
-        print(f"  {name:14} {len(idx):3} naselja  {feats[-1]['area_km2']:8.1f} km²  {pop:6} st.")
+        flag = " (dio)" if partial else ""
+        print(f"  {JLS_LABELS[mb] + flag:22} {len(idx):3} naselja  "
+              f"{feats[-1]['area_km2']:8.1f} km²  {pop:6} st.")
+
+    # Vanjski obuhvat cijele regije — jedan dissolve svih naselja. Služi kao
+    # najdeblji obris na plakatu i kao provjera: ako unija nije JEDAN poligon
+    # ili ima rupe, popis naselja nije susjedan i karta bi imala prazninu.
+    region = unary_union(geoms)
+    holes = 0
+    parts = [region] if region.geom_type == "Polygon" else list(region.geoms)
+    for g in parts:
+        holes += len(g.interiors)
+    if len(parts) > 1 or holes:
+        print(f"  ⚠ obuhvat nije jedinstven: {len(parts)} dijelova, {holes} rupa",
+              file=sys.stderr)
+    else:
+        print("  ✓ obuhvat je jedan povezan poligon, bez rupa")
+    feats.append({
+        "razina": "regija",
+        "name": "Turopolje",
+        "jls_name": "Turopolje",
+        "jls_maticni_broj": "*",
+        "zupanija": "Zagrebačka, Grad Zagreb, Sisačko-moslavačka",
+        "area_km2": round(sum(f["properties"].get("area_km2") or 0 for f in sel), 4),
+        "stanovnistvo": sum(f["properties"].get("stanovnistvo") or 0 for f in sel),
+        "naselja_count": len(sel),
+        "parts": len(parts),
+        "holes": holes,
+        "palette_idx": 0,
+        "historical_zone": "Turopolje",
+        "source": "DGU rpj:naselje (dissolve svih naselja)",
+        "geometry": {"type": region.geom_type,
+                     "coordinates": round_coords(mapping(region)["coordinates"])},
+    })
 
     features = []
     for fid, row in enumerate(feats, start=1):
@@ -176,7 +316,9 @@ def main() -> None:
     OUT.write_text(json.dumps({"type": "FeatureCollection", "features": features},
                               ensure_ascii=False))
     n_nas = sum(1 for f in features if f["properties"]["razina"] == "naselje")
-    print(f"✔ {OUT} — {n_nas} naselja + 4 JLS granice, {OUT.stat().st_size / 1e6:.2f} MB")
+    n_jls = sum(1 for f in features if f["properties"]["razina"] == "jls")
+    print(f"✔ {OUT} — {n_nas} naselja + {n_jls} granica + obuhvat, "
+          f"{OUT.stat().st_size / 1e6:.2f} MB")
 
 
 if __name__ == "__main__":

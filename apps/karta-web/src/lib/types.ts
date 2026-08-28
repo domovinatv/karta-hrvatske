@@ -66,7 +66,7 @@ export type KvartCollection = GeoJSON.FeatureCollection<GeoJSON.Geometry, KvartP
 // plakatu. `color` se ovdje NE koristi; boja dolazi iz palette_idx + palete.
 export interface PosterUnitProperties {
   id: number;
-  razina: "kvart" | "cetvrt" | "naselje" | "jls";
+  razina: "kvart" | "cetvrt" | "naselje" | "jls" | "regija";
   name: string;
   /** Greedy coloring indeks — susjedi nikad ne dijele isti. */
   palette_idx?: number;
@@ -76,6 +76,10 @@ export interface PosterUnitProperties {
   area_km2: number;
   stanovnistvo?: number | null;
   naselja_count?: number;
+  /** razina="jls": true kad u regiju ulazi samo DIO tog JLS-a (Zagreb, Lekenik). */
+  partial?: boolean;
+  /** "Jezgra Turopolja" | "Zagrebački dio" | "Lekenički dio". */
+  historical_zone?: string;
   source: string;
 }
 

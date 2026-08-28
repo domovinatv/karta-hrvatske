@@ -6,8 +6,14 @@
     "menuLabel": "Zagreb",
     "subtitle": "anatomija grada · kvartovi",
     "source": "kvartovi",
-    "jlsMb": ["01333"],
-    "unit": ["kvart", "kvarta", "kvartova"],
+    "jlsMb": [
+      "01333"
+    ],
+    "unit": [
+      "kvart",
+      "kvarta",
+      "kvartova"
+    ],
     "attribution": "podaci: data.zagreb.hr (OD) · © OpenStreetMap (ODbL)",
     "sources": "data.zagreb.hr (Otvorena dozvola), OpenStreetMap (ODbL)",
     "samplePoints": "45.807, 15.967, Moj ured\n45.796, 15.937, Podružnica Jarun"
@@ -19,8 +25,14 @@
     "menuLabel": "Velika Gorica",
     "subtitle": "anatomija grada · naselja",
     "source": "turopolje",
-    "jlsMb": ["05410"],
-    "unit": ["naselje", "naselja", "naselja"],
+    "jlsMb": [
+      "05410"
+    ],
+    "unit": [
+      "naselje",
+      "naselja",
+      "naselja"
+    ],
     "attribution": "podaci: DGU Registar prostornih jedinica",
     "sources": "DGU Registar prostornih jedinica (naselja)",
     "samplePoints": "45.712, 16.076, Moj ured\n45.733, 16.068, Skladište Kurilovec"
@@ -32,8 +44,14 @@
     "menuLabel": "Velika Gorica — gradske četvrti",
     "subtitle": "anatomija grada · gradske četvrti",
     "source": "kvartovi",
-    "jlsMb": ["05410"],
-    "unit": ["gradska četvrt", "gradske četvrti", "gradskih četvrti"],
+    "jlsMb": [
+      "05410"
+    ],
+    "unit": [
+      "gradska četvrt",
+      "gradske četvrti",
+      "gradskih četvrti"
+    ],
     "attribution": "podaci: © OpenStreetMap (ODbL)",
     "sources": "OpenStreetMap (ODbL)",
     "samplePoints": "45.712, 16.076, Moj ured\n45.733, 16.068, Skladište Kurilovec"
@@ -45,8 +63,14 @@
     "menuLabel": "Kravarsko",
     "subtitle": "anatomija kraja · naselja",
     "source": "turopolje",
-    "jlsMb": ["05452"],
-    "unit": ["naselje", "naselja", "naselja"],
+    "jlsMb": [
+      "05452"
+    ],
+    "unit": [
+      "naselje",
+      "naselja",
+      "naselja"
+    ],
     "attribution": "podaci: DGU Registar prostornih jedinica",
     "sources": "DGU Registar prostornih jedinica (naselja)",
     "samplePoints": "45.641, 16.045, Kravarsko"
@@ -58,8 +82,14 @@
     "menuLabel": "Pokupsko",
     "subtitle": "anatomija kraja · naselja",
     "source": "turopolje",
-    "jlsMb": ["05444"],
-    "unit": ["naselje", "naselja", "naselja"],
+    "jlsMb": [
+      "05444"
+    ],
+    "unit": [
+      "naselje",
+      "naselja",
+      "naselja"
+    ],
     "attribution": "podaci: DGU Registar prostornih jedinica",
     "sources": "DGU Registar prostornih jedinica (naselja)",
     "samplePoints": "45.578, 16.033, Pokupsko"
@@ -71,8 +101,14 @@
     "menuLabel": "Orle",
     "subtitle": "anatomija kraja · naselja",
     "source": "turopolje",
-    "jlsMb": ["05428"],
-    "unit": ["naselje", "naselja", "naselja"],
+    "jlsMb": [
+      "05428"
+    ],
+    "unit": [
+      "naselje",
+      "naselja",
+      "naselja"
+    ],
     "attribution": "podaci: DGU Registar prostornih jedinica",
     "sources": "DGU Registar prostornih jedinica (naselja)",
     "samplePoints": "45.700, 16.201, Orle"
@@ -81,14 +117,25 @@
     "slug": "turopolje",
     "label": "Turopolje",
     "labelGenitive": "Turopolja",
-    "menuLabel": "Turopolje — sve 4 JLS",
-    "subtitle": "anatomija kraja · Velika Gorica, Kravarsko, Pokupsko, Orle",
+    "menuLabel": "Turopolje — povijesna regija",
+    "subtitle": "anatomija kraja · povijesna regija",
     "source": "turopolje",
-    "jlsMb": ["05410", "05444", "05428", "05452"],
-    "unit": ["naselje", "naselja", "naselja"],
+    "jlsMb": [
+      "05410",
+      "05444",
+      "05428",
+      "05452",
+      "01333",
+      "02283"
+    ],
+    "unit": [
+      "naselje",
+      "naselja",
+      "naselja"
+    ],
     "showJlsBorders": true,
-    "attribution": "podaci: DGU Registar prostornih jedinica",
-    "sources": "DGU Registar prostornih jedinica (naselja)",
-    "samplePoints": "45.712, 16.076, Velika Gorica\n45.641, 16.045, Kravarsko"
+    "attribution": "podaci: DGU RPJ · opseg: Turopoljski leksikon (LZMK, 2021)",
+    "sources": "DGU Registar prostornih jedinica (naselja); opseg regije po Turopoljskom leksikonu (LZMK, 2021)",
+    "samplePoints": "45.712, 16.076, Velika Gorica\n45.598, 16.185, Lekenik"
   }
 ]

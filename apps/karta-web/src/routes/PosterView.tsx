@@ -211,14 +211,19 @@ function buildPosterSvg(o: BuildOpts): string {
       );
     }
   }
-  // Granice JLS-a — samo na objedinjenom plakatu (Turopolje). Idu PREKO
-  // naselja i imena da se vidi od kojih je JLS-ova regija složena.
-  for (const o2 of projected.outlines) {
-    parts.push(
-      `<path d="${o2.d}" fill="none" stroke="${palette.text}" stroke-width="${(
-        W * 0.0045
-      ).toFixed(1)}" stroke-linejoin="round" opacity="0.75"/>`,
-    );
+  // Obrisi preko naselja i imena — samo na objedinjenom plakatu (Turopolje):
+  // tanje granice JLS-ova od kojih je regija složena, pa deblji vanjski
+  // obuhvat cijele regije preko svega. Obuhvat ide zadnji da ga granice ne
+  // presijecaju na rubu.
+  for (const razina of ["jls", "regija"] as const) {
+    for (const o2 of projected.outlines.filter((x) => x.razina === razina)) {
+      const isRegion = razina === "regija";
+      parts.push(
+        `<path d="${o2.d}" fill="none" stroke="${palette.text}" stroke-width="${(
+          W * (isRegion ? 0.008 : 0.0035)
+        ).toFixed(1)}" stroke-linejoin="round" opacity="${isRegion ? 0.9 : 0.55}"/>`,
+      );
+    }
   }
 
   // Custom točke.
@@ -318,7 +323,7 @@ export default function PosterView() {
     if (!fc || !subject) return null;
     const units = fc.features.filter(
       (f) =>
-        f.properties.razina !== "jls" &&
+        ["kvart", "cetvrt", "naselje"].includes(f.properties.razina) &&
         subject.jlsMb.includes(f.properties.jls_maticni_broj),
     );
     return {
