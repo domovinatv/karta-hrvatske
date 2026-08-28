@@ -121,6 +121,21 @@ nisu riješile tri stvari koje nemaju veze s poligonima:
    previsoko. Sada se atribut ne koristi: `y` svakog `tspan`-a **je** pismovna
    linija, a blok se centrira po izmjerenoj tinti (`dyEm`).
 
+### Odbačeno i otvoreno
+
+Za naselja u koja natpis ne stane razmatrane su tri izlazne strategije:
+**leader line** u bjelinu izvan poligona, **broj u poligonu + numerirana
+legenda**, i **niži prag čitljivosti**. Odabran je treći — plakat je vektor i
+na 300 dpi printu je i milimetarski natpis čitljiv, a prve dvije unose
+grafiku koja plakat čini nemirnijim nego što problem zaslužuje. Nakon
+upisanog pravokutnika + rotacije ispada da je izbor jeftin: fallback treba
+samo najsitnijim zagrebačkim mjesnim odborima.
+
+Otvoreno: na zagrebačkom plakatu 3–6 mjesnih odbora s dugim imenima
+(„Nadbiskup Antun Bauer", „Hrvatski narodni vladari") padne ispod
+`MIN_LABEL = 0.8` mm i preskoči se. Odluka je uređivačka — spuštanje praga ih
+sve vraća, ali kao vrlo sitan tekst.
+
 ### Provjera je automatska, ne na oko
 
 `e2e/poster-labels.spec.ts` uzima ono što je stvarno nacrtano (`tspan` x/y,
