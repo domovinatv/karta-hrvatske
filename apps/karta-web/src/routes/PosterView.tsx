@@ -13,23 +13,99 @@ import {
   labelColorFor,
   parsePoints,
   pluralUnit,
-  spanAt,
   projectSubject,
   subjectBySlug,
   svgToPng,
   type PosterPoint,
   type PosterSubject,
 } from "@/lib/poster";
+import { fitLabel, type LabelFit, type LineInk } from "@/lib/label-fit";
+import {
+  LINE_H,
+  MIN_LABEL,
+  labelCap,
+  posterFrame,
+  type ProjectedSubject,
+} from "@/lib/poster-geom";
 import type { PosterCollection } from "@/lib/types";
 import { ArrowLeft, Crosshair, Download, Minus, Plus } from "lucide-react";
 
-// Piksela po centimetru u SVG koordinatnom sustavu (preview/viewBox skala).
-// PNG export skalira na 300 DPI neovisno o ovome.
-const PX_PER_CM = 10;
+
+
+/**
+ * Mjerenje retka STVARNIM fontom.
+ *
+ * Prva verzija je pretpostavljala 0.6 × font-size po znaku i redak visok
+ * 1.15 em; za Fraunces je oboje bilo krivo pa su duga imena izlazila iz
+ * poligona. Mjeri se canvasom, i to NA VELIČINI NA KOJOJ SE CRTA: Fraunces je
+ * varijabilni font s optičkom osi (opsz), pa su mu glifovi na 4 px osjetno
+ * širi nego na 40 px i mjera s jedne veličine ne vrijedi za drugu.
+ */
+function makeMeasurer(family: string): (line: string, size: number) => LineInk {
+  const ctx = document.createElement("canvas").getContext("2d");
+  const css = family.includes(",") ? family : `"${family}"`;
+  const cache = new Map<string, LineInk>();
+  if (!ctx) return (line) => ({ w: line.length * 0.6, asc: 0.7, desc: 0.2 });
+  ctx.textBaseline = "alphabetic";
+  return (line: string, size: number) => {
+    // Zaokruženo na 0.1 px zbog cachea; mjere se ionako traže iterativno.
+    const px = Math.max(0.5, Math.round(size * 10) / 10);
+    const key = `${px}|${line}`;
+    const hit = cache.get(key);
+    if (hit) return hit;
+    ctx.font = `600 ${px}px ${css}`;
+    const m = ctx.measureText(line);
+    const ink: LineInk = {
+      w: m.width / px,
+      asc: m.actualBoundingBoxAscent / px,
+      desc: m.actualBoundingBoxDescent / px,
+    };
+    cache.set(key, ink);
+    return ink;
+  };
+}
+
+/** Projekcija + smješteni natpisi; računa se jednom po (subjekt, format, font). */
+export interface PosterLayout {
+  projected: ProjectedSubject;
+  /** Poravnato s projected.units; null ako oblik nije primio ni jedno slovo. */
+  labels: (LabelFit | null)[];
+}
+
+/**
+ * Za svako naselje traži najveći natpis koji stane U SAM OBLIK (label-fit.ts).
+ *
+ * Klizač veličine ulazi u sam fit, a ne u naknadno skaliranje: kod fonta s
+ * optičkom osi mjere nisu proporcionalne veličini, pa bi natpis smanjen nakon
+ * fita bio relativno širi i mogao bi izaći iz poligona.
+ */
+export function layoutPoster(
+  fc: PosterCollection,
+  subject: PosterSubject,
+  formatKey: string,
+  fontKey: string,
+  hasTitle: boolean,
+  labelScale: number,
+): PosterLayout {
+  const format = POSTER_FORMATS.find((f) => f.key === formatKey) ?? POSTER_FORMATS[0];
+  const font = POSTER_FONTS.find((f) => f.key === fontKey) ?? POSTER_FONTS[0];
+  const { mapW, mapH } = posterFrame(format, hasTitle);
+  const projected = projectSubject(fc, subject, mapW, mapH);
+  const measure = makeMeasurer(font.family);
+  const labels = projected.units.map((k) =>
+    fitLabel(k.rings, k.name, {
+      measure,
+      lineHeight: LINE_H,
+      maxSize: labelCap(k.areaPx) * labelScale,
+    }),
+  );
+  return { projected, labels };
+}
 
 interface BuildOpts {
   fc: PosterCollection;
   subject: PosterSubject;
+  layout: PosterLayout;
   paletteKey: string;
   fontKey: string;
   formatKey: string;
@@ -39,6 +115,12 @@ interface BuildOpts {
   labelScale: number;
   points: PosterPoint[];
   pointColor: string;
+  /**
+   * Je li font stvarno učitan kad su se natpisi mjerili. Ide u SVG kao
+   * data-labels, pa se izvana (e2e, screenshot servis) zna kad je plakat
+   * gotov, umjesto da se pogađa tajmerom.
+   */
+  fontMeasured: boolean;
   /** Embedani @font-face CSS (samo za export; preview koristi web fontove). */
   embeddedCss?: string;
 }
@@ -55,21 +137,17 @@ function buildPosterSvg(o: BuildOpts): string {
   const font = POSTER_FONTS.find((f) => f.key === o.fontKey) ?? POSTER_FONTS[0];
   const format = POSTER_FORMATS.find((f) => f.key === o.formatKey) ?? POSTER_FORMATS[0];
 
-  const W = format.wCm * PX_PER_CM;
-  const H = format.hCm * PX_PER_CM;
-  const margin = W * 0.06;
   const hasTitle = o.title.trim().length > 0;
-  const titleBlockH = hasTitle ? H * 0.13 : H * 0.03;
-  const mapX = margin;
-  const mapY = hasTitle ? titleBlockH : margin;
-  const mapW = W - margin * 2;
-  const mapH = H - mapY - margin * 1.4;
-
-  const projected = projectSubject(o.fc, subject, mapW, mapH);
+  const { W, H, margin, titleBlockH, mapX, mapY, mapW, mapH } = posterFrame(format, hasTitle);
+  // Projekcija i smještaj natpisa dolaze predračunati (layoutPoster) — isti
+  // objekt koristi i preview i export, da se ne razlikuju ni za piksel.
+  const projected = o.layout.projected;
 
   const parts: string[] = [];
   parts.push(
-    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}">`,
+    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" data-labels="${
+      o.fontMeasured ? "measured" : "pending"
+    }">`,
   );
   if (o.embeddedCss) parts.push(`<style>${o.embeddedCss}</style>`);
   parts.push(`<rect width="${W}" height="${H}" fill="${palette.bg}"/>`);
@@ -109,117 +187,42 @@ function buildPosterSvg(o: BuildOpts): string {
     }
   }
 
-  // Kvartovi.
+  // Kvartovi. data-unit povezuje poligon i njegov natpis — po tome e2e test
+  // provjerava da nijedno slovo nije izašlo van (isPointInFill).
   parts.push(`<g transform="translate(${mapX} ${mapY})">`);
-  for (const k of projected.units) {
+  projected.units.forEach((k, i) => {
     const fill = palette.fills[k.paletteIdx % palette.fills.length];
     parts.push(
-      `<path d="${k.d}" fill="${fill}" stroke="${palette.stroke}" stroke-width="1.2" stroke-linejoin="round"/>`,
+      `<path data-unit="${i}" d="${k.d}" fill="${fill}" stroke="${palette.stroke}" stroke-width="1.2" stroke-linejoin="round"/>`,
     );
-  }
+  });
   if (o.showLabels) {
-    const CHAR_W = 0.6; // širina znaka ≈ 0.6 × font-size
-    const LINE_H = 1.15;
-    const MARGIN = 0.05; // 5% margina unutar bboxa poligona
-    for (const k of projected.units) {
+    for (let i = 0; i < projected.units.length; i++) {
+      const k = projected.units[i];
+      const fit = o.layout.labels[i];
+      if (!fit) continue;
+      // fit.size je već konačna veličina (klizač je ušao u fit).
+      const size = fit.size;
+      if (size < MIN_LABEL) continue;
       const fill = palette.fills[k.paletteIdx % palette.fills.length];
       const color = labelColorFor(fill, palette); // kontrast prema svjetlini filla
-      const maxW = k.bw * (1 - 2 * MARGIN);
-      const maxH = k.bh * (1 - 2 * MARGIN);
-      const cap = Math.max(4.5, Math.min(16, Math.sqrt(k.areaPx) * 0.15)) * o.labelScale;
-
-      // Kandidat layouti: jedan redak, ili balansirani lom u 2 retka —
-      // biramo onaj koji dopušta najveći font unutar bboxa.
-      const words = k.name.split(" ");
-      const layouts: string[][] = [[k.name]];
-      if (words.length > 1) {
-        let best: string[] | null = null;
-        let bestLen = Infinity;
-        for (let i = 1; i < words.length; i++) {
-          const a = words.slice(0, i).join(" ");
-          const b = words.slice(i).join(" ");
-          const len = Math.max(a.length, b.length);
-          if (len < bestLen) {
-            bestLen = len;
-            best = [a, b];
-          }
-        }
-        if (best) layouts.push(best);
-      }
-
-      // Za svaki kandidat layout traži najveći font koji stane u STVARNI
-      // oblik, ne u bbox: širina raspoloživa na retku teksta je vodoravni
-      // presjek poligona na toj visini. Veličina i pozicija ovise jedna o
-      // drugoj (viši font → drugi retci → druga širina), pa par iteracija
-      // fiksne točke; konvergira u 2-3 koraka.
-      const clamp = (v: number, lo: number, hi: number) =>
-        hi < lo ? (lo + hi) / 2 : Math.min(hi, Math.max(lo, v));
-      let lines: string[] = layouts[0];
-      let size = 0;
-      let lx = k.cx;
-      let ly = k.cy;
-      for (const cand of layouts) {
-        const maxLen = Math.max(...cand.map((l) => l.length));
-        let sz = Math.min(cap, maxW / (maxLen * CHAR_W), maxH / (cand.length * LINE_H));
-        let cx = k.cx;
-        let cy = k.cy;
-        for (let iter = 0; iter < 3 && sz > 0; iter++) {
-          const textH = cand.length * LINE_H * sz;
-          cy = clamp(k.cy, k.by + k.bh * MARGIN + textH / 2, k.by + k.bh * (1 - MARGIN) - textH / 2);
-          let avail = Infinity;
-          const mid = (cand.length - 1) / 2;
-          for (let i = 0; i < cand.length; i++) {
-            const rowY = cy + (i - mid) * LINE_H * sz;
-            const sp = spanAt(k.ring, rowY, k.cx);
-            if (!sp) { avail = 0; break; }
-            avail = Math.min(avail, sp[1] - sp[0]);
-            // Centar uzmi sa srednjeg retka — kod dijagonalnih oblika je to
-            // bliže sredini natpisa nego centroid.
-            if (i === Math.round(mid)) cx = (sp[0] + sp[1]) / 2;
-          }
-          if (!Number.isFinite(avail)) avail = maxW;
-          const next = Math.min(
-            cap,
-            (avail * (1 - 2 * MARGIN)) / (maxLen * CHAR_W),
-            maxH / (cand.length * LINE_H),
-          );
-          if (Math.abs(next - sz) < 0.05) { sz = next; break; }
-          sz = next;
-        }
-        if (sz > size) {
-          size = sz;
-          lines = cand;
-          lx = cx;
-          ly = cy;
-        }
-      }
-      if (size < 2.6) continue; // ispod ovoga je nečitljivo i na printu
-
-      // Zadnji clamp u bbox — presjek je uzet na retku, ali zaokruživanja ne
-      // smiju gurnuti natpis van okvira poligona.
-      const textW = Math.max(...lines.map((l) => l.length)) * CHAR_W * size;
-      const textH = lines.length * LINE_H * size;
-      const x = clamp(lx, k.bx + k.bw * MARGIN + textW / 2, k.bx + k.bw * (1 - MARGIN) - textW / 2);
-      const y = clamp(ly, k.by + k.bh * MARGIN + textH / 2, k.by + k.bh * (1 - MARGIN) - textH / 2);
-
-      // Svaki redak se dodatno clampa u presjek NA SVOJOJ visini. Font je već
-      // biran tako da najuži redak stane, ali kod dijagonalnih oblika retci
-      // nisu poravnati — bez ovoga gornji redak "Barbarići Kravarski" izlazi
-      // u susjedno naselje. Clamp, ne centriranje: redak ostaje na sredini
-      // bloka i pomiče se tek koliko mora.
-      const spans = lines
-        .map((l, i) => {
-          const rowY = y + (i - (lines.length - 1) / 2) * LINE_H * size;
-          const lineW = l.length * CHAR_W * size;
-          const sp = spanAt(k.ring, rowY, k.cx);
-          const rx = sp
-            ? clamp(x, sp[0] + lineW / 2, sp[1] - lineW / 2)
-            : x;
-          return `<tspan x="${rx.toFixed(1)}" y="${rowY.toFixed(1)}">${esc(l)}</tspan>`;
-        })
+      // y je PISMOVNA LINIJA retka: središte pravokutnika pomaknuto tako da
+      // tinta sjedne po sredini (dyEm), pa svaki sljedeći redak za LINE_H
+      // niže. Bez dominant-baselinea — v. label-fit.ts.
+      const spans = fit.lines
+        .map(
+          (l, j) =>
+            `<tspan x="${fit.x.toFixed(2)}" y="${(
+              fit.y + (fit.dyEm + j * LINE_H) * size
+            ).toFixed(2)}">${esc(l)}</tspan>`,
+        )
         .join("");
+      // Rotacija oko središta bloka — isti kut pod kojim je okvir nađen.
+      const rot = fit.angle
+        ? ` transform="rotate(${fit.angle} ${fit.x.toFixed(1)} ${fit.y.toFixed(1)})"`
+        : "";
       parts.push(
-        `<text text-anchor="middle" dominant-baseline="middle" font-family="${esc(
+        `<text data-unit="${i}"${rot} text-anchor="middle" font-family="${esc(
           font.family,
         )}" font-weight="600" font-size="${size.toFixed(1)}" fill="${color}" opacity="0.95">${spans}</text>`,
       );
@@ -291,6 +294,10 @@ export default function PosterView() {
   const [pointsText, setPointsText] = useState("");
   const [pointColor, setPointColor] = useState("#c8102e");
   const [exporting, setExporting] = useState<string | null>(null);
+  // Natpisi se fitaju izmjerenom širinom teksta. Dok Fraunces nije stvarno
+  // učitan, canvas mjeri zamjenski serif — oko 20 % uže — pa natpisi ispadnu
+  // preveliki i izađu iz poligona. Drži se koji je font POTVRĐENO spreman.
+  const [fontReadyKey, setFontReadyKey] = useState<string | null>(null);
   const titleTouched = useRef(false);
   const subtitleTouched = useRef(false);
   // Preview zoom/pan — čisti CSS transform, ne dira SVG ni export.
@@ -329,7 +336,35 @@ export default function PosterView() {
       });
   }, [sourceKey]);
 
+  useEffect(() => {
+    const f = POSTER_FONTS.find((x) => x.key === fontKey) ?? POSTER_FONTS[0];
+    const family = f.family.includes(",") ? f.family : `"${f.family}"`;
+    let live = true;
+    // fonts.load() je bitan: fonts.ready čeka samo font koji je NEŠTO već
+    // zatražilo, a canvas mjerenje ga samo po sebi ne zatraži.
+    Promise.resolve(document.fonts?.load(`600 100px ${family}`))
+      .catch(() => undefined)
+      .then(() => {
+        if (live) setFontReadyKey(fontKey);
+      });
+    return () => {
+      live = false;
+    };
+  }, [fontKey]);
+
   const points = useMemo(() => parsePoints(pointsText), [pointsText]);
+
+  // Skup: rasterizacija svakog poligona po 7 kutova. Ovisi SAMO o geometriji,
+  // fontu i formatu — ne o paleti, naslovu ni klizaču veličine, pa se ne
+  // ponavlja pri svakoj promjeni boje.
+  const hasTitle = title.trim().length > 0;
+  const layout = useMemo(() => {
+    if (!fc || !subject) return null;
+    return layoutPoster(fc, subject, formatKey, fontKey, hasTitle, labelScale);
+    // fontReadyKey nije pročitan u tijelu, ali mijenja mjere teksta — namjerno
+    // je u depsu da se natpisi preračunaju kad font stvarno stigne.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [fc, subject, formatKey, fontKey, hasTitle, labelScale, fontReadyKey]);
 
   // Brojke ispod dropdowna — potvrda da plakat pokriva ono što misliš da
   // pokriva (VG po naseljima je 327 km², po četvrtima 37 km²).
@@ -354,9 +389,11 @@ export default function PosterView() {
   const svg = useMemo(() => {
     if (!fc) return null;
     if (!subject) return null;
+    if (!layout) return null;
     return buildPosterSvg({
       fc,
       subject,
+      layout,
       paletteKey,
       fontKey,
       formatKey,
@@ -366,11 +403,12 @@ export default function PosterView() {
       labelScale,
       points,
       pointColor,
+      fontMeasured: fontReadyKey === fontKey,
     });
-  }, [fc, subject, paletteKey, fontKey, formatKey, title, subtitle, showLabels, labelScale, points, pointColor]);
+  }, [fc, subject, layout, fontReadyKey, paletteKey, fontKey, formatKey, title, subtitle, showLabels, labelScale, points, pointColor]);
 
   const doExport = async (kind: "svg" | "png") => {
-    if (!fc || !subject || exporting) return;
+    if (!fc || !subject || !layout || exporting) return;
     setExporting(kind);
     try {
       const font = POSTER_FONTS.find((f) => f.key === fontKey) ?? POSTER_FONTS[0];
@@ -378,6 +416,7 @@ export default function PosterView() {
       const full = buildPosterSvg({
         fc,
         subject,
+        layout,
         paletteKey,
         fontKey,
         formatKey,
@@ -387,6 +426,7 @@ export default function PosterView() {
         labelScale,
         points,
         pointColor,
+        fontMeasured: fontReadyKey === fontKey,
         embeddedCss,
       });
       const base = `${subject.slug}-${formatKey}`;

@@ -63,27 +63,77 @@ Kad je dodan `unitFilter`, lookup ga nije poštovao pa je OG kartica za
 Plemenitu opčinu javljala *115 naselja* za plakat koji crta *26*. Ako mijenjaš
 filtar, mijenjaj ga na sva tri mjesta.
 
-## Imena se fitaju u oblik, ne u bounding box
+## Imena se fitaju u oblik: upisani pravokutnik + rotacija
 
-Prva verzija je birala font tako da natpis stane u bbox poligona. Na
-izduženim i dijagonalnim naseljima to pukne: „Barbarići Kravarski" je ležao
-preko susjedne Podvornice, jer je stao u *okvir* svog poligona ali ne i u sam
-poligon.
+Prva verzija je birala font tako da natpis stane u **bbox** poligona, druga u
+**vodoravni presjek na visini retka** (`spanAt()`). Oboje je bilo polovično:
 
-Sada:
+- „Barbarići Kravarski" je ležao preko susjedne Podvornice — stao je u okvir
+  svog poligona, ali ne i u sam poligon;
+- Donja Lomnica (3,8 × 10,6 km, usko u sredini) i Podvornica **nisu dobile
+  ime uopće** — sidro je bio centroid, a on kod takvih oblika pada u struk, pa
+  je font pao ispod praga i natpis se tiho preskočio.
 
-1. **Raspoloživa širina je vodoravni presjek poligona na visini retka**
-   (`spanAt()` u `poster.ts` — even-odd presjeci horizontale s rubovima,
-   uzima se raspon koji sadrži centroid).
-2. Veličina i pozicija ovise jedna o drugoj (veći font → drugi retci → druga
-   širina), pa ide **fiksna točka, 3 iteracije**; konvergira u 2-3.
-3. Svaki se redak još **clampa u svoj** presjek. Clamp, ne centriranje —
-   redak ostaje na sredini bloka i pomiče se tek koliko mora, pa natpis ne
-   izgleda razbacano.
-4. Ispod `size < 2.6` (SVG px pri `PX_PER_CM = 10`) labela se preskače —
-   nečitljiva je i na 300 dpi printu.
+Od 2026-08-28 to radi `src/lib/label-fit.ts`, determinističkim postupkom bez
+heuristike — naselje po naselje, neovisno o susjedima:
 
-Popravak je poboljšao i postojeći zagrebački plakat, ne samo nove.
+1. **Rasterizacija.** Poligon (vanjski prsten + rupe) u binarnu masku, ~128
+   ćelija po duljoj stranici. Ćelija je „unutra" samo ako je *cijela* unutra:
+   presjeci se računaju na **oba vodoravna ruba retka** i presijecaju, pa se
+   maska još erodira za jednu ćeliju. Presjek samo na sredini retka propušta
+   kosi rub koji zasiječe ćeliju — upravo su tako curila tanka dijagonalna
+   naselja.
+2. **Svi maksimalni upisani pravokutnici** maske, klasičnim „largest rectangle
+   in histogram" postupkom sa stogom, O(redaka × stupaca).
+3. **Kandidati loma imena** u 1–3 retka (sve particije po riječima); svaki lom
+   daje svoj omjer stranica, pa i svoj najveći font u danom pravokutniku.
+4. **Kutovi** 0°, ±15°, ±30°, ±45°: poligon se zarotira, pravokutnik ostaje
+   osno poravnat, natpis se na kraju vrati u izvorni okvir.
+
+Pobjeđuje najveći font, uz `tiltCost` (0.35) koji favorizira vodoravno i
+blagu prednost pravokutniku bliže sredini oblika. Mjerenje na Turopolju (115
+naselja): bez kazne za nagib 5 vodoravnih natpisa i prosjek 5,72 mm, s
+kaznom ~90 vodoravnih i prosjek 5,6 mm — dakle mirniji plakat praktički
+besplatno.
+
+Rezultat: **1296 natpisa** (8 plakata × 3 formata), nijedan ne izlazi iz svog
+poligona i nijedno naselje nije bez imena osim par najsitnijih zagrebačkih
+mjesnih odbora s dugim imenima (`MIN_LABEL = 0.8` mm).
+
+### Tri zamke oko mjerenja teksta, sve tri su rušile fit
+
+Geometrija je bila lakši dio. Natpisi su i dalje izlazili iz poligona dok se
+nisu riješile tri stvari koje nemaju veze s poligonima:
+
+1. **`document.fonts.ready` ne čeka font koji nitko nije zatražio.** Natpisi
+   su se mjerili prije nego što je Fraunces stigao, dakle zamjenskim serifom
+   (~20 % uže), pa su ispali preveliki. Treba `document.fonts.load()`, a
+   renderer javlja stanje kroz `data-labels="measured|pending"` — po tome e2e
+   test zna kad je plakat gotov, umjesto da čeka tajmerom.
+2. **Fraunces je varijabilni font s optičkom osi (`opsz`).** Glifovi na 4 px
+   su osjetno širi nego na 40 px, pa mjera uzeta na jednoj veličini ne vrijedi
+   za drugu. Zato `measure(line, size)` mjeri na veličini na kojoj se crta,
+   fit se na kraju dotjeruje iteracijom, a klizač „Imena" ulazi **u sam fit**
+   umjesto da naknadno skalira gotov natpis.
+3. **`dominant-baseline="middle"` nije pouzdana referenca.** Browser taj pomak
+   računa ovisno o kontekstu iscrtavanja — u CSS-skaliranom pregledu plakata
+   ispao je drukčiji nego u pomoćnom elementu, pa je natpis sjedao ~0,2 em
+   previsoko. Sada se atribut ne koristi: `y` svakog `tspan`-a **je** pismovna
+   linija, a blok se centrira po izmjerenoj tinti (`dyEm`).
+
+### Provjera je automatska, ne na oko
+
+`e2e/poster-labels.spec.ts` uzima ono što je stvarno nacrtano (`tspan` x/y,
+font-size, rotacija), izmjeri otisak slova canvasom i svaki vrh te kutije
+testira s `SVGGeometryElement.isPointInFill` nad poligonom istog naselja —
+par se poznaje po `data-unit` atributu. Ide preko tri plakata × tri formata,
+plus sva tri fonta i krajnji položaji klizača.
+
+`node scripts/audit-poster-labels.mjs [--all] [slug]` vrti isti engine u
+nodeu (bez preglednika — `label-fit.ts` i `poster-geom.ts` namjerno nemaju
+runtime importe) i ispisuje kut, broj redaka i veličinu za svako naselje.
+Širine su ondje procijenjene iz tablice, pa je to izvještaj o geometriji
+(„koje je naselje tijesno"), a mjerodavan render je preglednik.
 
 Naslov i podnaslov se od 2026-08-28 skaliraju **i po širini**:
 „PLEMENITA OPČINA TUROPOLJSKA" je dvostruko duži od „ZAGREB" i prije bi
