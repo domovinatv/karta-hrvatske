@@ -109,7 +109,73 @@ Ključno je da se **korak E čita**, a ne samo završna linija `Synced N geojson
 
 ---
 
+## 4. Service worker koji se nikad ne instalira (2026-08-28)
+
+Najtiši kvar dosad: **precache manifest je sadržavao `_worker.js`, koji Pages nikad ne servira kao asset.**
+
+`vite-plugin-pwa` globa `**/*.{js,css,html,svg,ico}` nad `dist/`, a `dist/_worker.js` je Advanced Mode skripta — Pages je pojede kao worker i ne izlaže na `/`. Naš vlastiti worker povrh toga vraća 404 za file-like path koji dođe kao `text/html`. Rezultat: `curl /_worker.js` → **404**.
+
+Workbox precache je all-or-nothing. Jedan 404 ruši `install`, SW se ne aktivira, a kako cleanup starog cachea ide tek u `activate` — smeće se gomila. Zatečeno u pregledniku prije popravka:
+
+| mjera | vrijednost |
+|---|---|
+| `navigator.serviceWorker.getRegistrations()` | **0** |
+| revizija `index.html` u `workbox-precache-v2` | **7** |
+| `_worker.js` u manifestu | da |
+
+### Kako se manifestiralo
+
+Prijava je bila: *navigiram s `/` na `/poster` — 404; refresham `/poster` — radi.* Server je za `/poster` cijelo vrijeme vraćao **200 `index.html`** (provjereno curlom), pa SPA fallback nije bio kriv. Preglednik koji je SW registrirao prije regresa zaglavi na starom app shellu **zauvijek**, jer novi SW ne može preuzeti. Stari shell nosi stari router, pa ruta dodana kasnije izgleda kao 404, a reload koji zaobiđe SW pokaže pravu stranicu.
+
+### Popravak
+
+```js
+// vite.config.ts, workbox:
+globIgnores: ["**/_worker.js", "**/_headers", "**/_redirects"],
+```
+
+Nakon deploya, prvi put ikad: `active: "activated"`, a revizije `index.html` pale sa 7 na 1 — cleanup se konačno izvršio.
+
+### Provjera koja ovo hvata
+
+Manifest s produkcije ne smije sadržavati `_worker.js`:
+
+```bash
+curl -s https://gis.domovina.ai/sw.js -o /tmp/sw.js && node -e "
+const s=require('fs').readFileSync('/tmp/sw.js','utf8');
+const m=s.match(/\[\{[^\]]*revision[^\]]*\}\]/);
+const l=JSON.parse(m[0].replace(/url:/g,'\"url\":').replace(/revision:/g,'\"revision\":'));
+console.log('entries:',l.length,'| _worker.js:', l.some(e=>e.url.includes('_worker')));"
+```
+
+U pregledniku, na produkciji:
+
+```js
+(await navigator.serviceWorker.getRegistrations()).map(r => r.active?.state)
+// ocekivano: ["activated"], ne []
+```
+
+### Otvoreno: `sw.js` ide u browser cache na 4 sata
+
+Worker eksplicitno postavlja `no-cache, must-revalidate` za `/sw.js` (`public/_worker.js`, grana za SW skripte), ali produkcija vraća:
+
+```
+cache-control: max-age=14400, must-revalidate
+```
+
+14400 s = 4 h = Cloudflareov **default Browser Cache TTL**. Nešto iznad workera prepisuje header, pa preglednik novu verziju SW-a možda ne primijeti do 4 sata nakon deploya. To je multiplikator za svaki stale-shell problem.
+
+Uz to, i s ispravnim SW-om **prvo učitavanje nakon deploya poslužuje prethodni shell** — `navigateFallback` servira precachirani `index.html`, pa je navigacija uvijek jednu verziju iza. Potvrđeno 2026-08-28: prvo otvaranje `/poster/turopolje` odmah nakon deploya redirectalo je na `/poster/zagreb` (stari registar), drugo je bilo ispravno.
+
+Dva popravka, nijedan još nije napravljen:
+
+1. **Cache Rule u CF dashboardu** za `/sw.js` i `/workbox-*.js`, da se update uopće otkrije. Jeftinije i važnije.
+2. **NetworkFirst za navigacije** umjesto `navigateFallback` — dokument je 1,8 kB i worker mu ionako daje `max-age=300`. Mijenja PWA offline ponašanje za rute koje korisnik nije posjetio, pa traži zaseban prolaz.
+
+---
+
 ## Vezani dokumenti
 
+- [`2026-08-28-poster-generator.md`](./2026-08-28-poster-generator.md) — generator plakata: registar subjekata, fit imena, izvori za Turopolje
 - [`ui-refactor-plan.md`](./ui-refactor-plan.md) — plan UI refactora u pet faza, dijagnoza i status
 - `README.md` (odjeljak „Odakle dolaze podaci layera") — tablica sloj → sibling repo
