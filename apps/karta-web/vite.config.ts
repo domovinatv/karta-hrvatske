@@ -41,6 +41,12 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ["**/*.{js,css,html,svg,ico}"],
+        // _worker.js je Pages Advanced Mode skripta — Pages je NE servira kao
+        // asset (/_worker.js = 404). Ako uđe u precache manifest, workbox
+        // install padne na tom 404, SW se nikad ne aktivira i u cacheu ostaju
+        // orphan revizije index.html-a. Bez ovoga: stari app shell ostaje
+        // zauvijek jer novi SW ne može preuzeti.
+        globIgnores: ["**/_worker.js", "**/_headers", "**/_redirects"],
         maximumFileSizeToCacheInBytes: 4 * 1024 * 1024,
         navigateFallback: "/index.html",
         navigateFallbackDenylist: [/^\/data\//, /^\/logos\//],
