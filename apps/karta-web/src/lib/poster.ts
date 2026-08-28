@@ -2,42 +2,69 @@
 // kvartovi-kolokvijalni.geojson, bez MapLibrea. Print-ready: SVG download +
 // PNG rasterizacija @300 DPI s embedanim fontovima.
 
-import posterCities from "./poster-cities.json";
-import type { KvartCollection, KvartFeature } from "./types";
+import posterSubjects from "./poster-subjects.json";
+import type { PosterCollection, PosterFeature } from "./types";
 
-export interface PosterCity {
+/** Iz kojeg se sloja crta — mapira se na file u /data/. */
+export const POSTER_SOURCES: Record<string, string> = {
+  kvartovi: "/data/kvartovi-kolokvijalni.geojson",
+  turopolje: "/data/turopolje-naselja.geojson",
+};
+
+export interface PosterSubject {
   /**
-   * Identitet grada I segment javnog URL-a (/poster/<slug>). NE mijenjati —
+   * Identitet subjekta I segment javnog URL-a (/poster/<slug>). NE mijenjati —
    * sherani linkovi (WhatsApp) ovise o njemu.
    */
   slug: string;
+  /** Ime u naslovu plakata. */
   label: string;
-  jlsMb: string;
-  title: string;
+  /** Genitiv za OG opis ("8 naselja Velike Gorice"). */
+  labelGenitive: string;
+  /** Ime u dropdownu — razlikuje varijante istog grada. */
+  menuLabel: string;
+  subtitle: string;
+  /** Ključ u POSTER_SOURCES. */
+  source: string;
+  /** JLS-ovi koji ulaze u plakat; više njih = objedinjeni plakat (Turopolje). */
+  jlsMb: string[];
+  /** Sklonidba jedinice: [1, 2-4, 5+] — "1 kvart, 2 kvarta, 5 kvartova". */
+  unit: [string, string, string] | string[];
+  /** Crtaj granice JLS-a preko jedinica (ima smisla samo kad ih je više). */
+  showJlsBorders?: boolean;
   /**
-   * Izvor poligona — po gradu, jer se razlikuje: ZG kvartovi su derivirani iz
-   * mjesnih odbora (data.zagreb.hr), VG četvrti dolaze čisto iz OSM-a. Ide u
-   * footer plakata pa mora pratiti odabrani grad, ne biti hardkodiran.
+   * Izvor poligona — po subjektu, jer se razlikuje: ZG kvartovi su derivirani
+   * iz mjesnih odbora (data.zagreb.hr), VG četvrti iz OSM-a, naselja iz DGU
+   * RPJ-a. Ide u footer plakata pa mora pratiti subjekt, ne biti hardkodiran.
    */
   attribution: string;
   /** Isti izvor, duži oblik za tekst u kontrolama. */
   sources: string;
-  /** Placeholder za "tvoje točke" — koordinate unutar tog grada. */
+  /** Placeholder za "tvoje točke" — koordinate unutar tog područja. */
   samplePoints: string;
 }
 
 /**
  * Registar živi u JSON-u jer ga uz app čitaju i build skripte (lookup za OG
- * injection u workeru, sitemap). Jedan izvor istine — novi grad se dodaje
- * SAMO ovdje.
+ * injection u workeru, sitemap). Jedan izvor istine — novi plakat se dodaje
+ * SAMO ovdje (+ sloj u POSTER_SOURCES ako dolazi iz novog filea).
  */
-export const POSTER_CITIES: PosterCity[] = posterCities;
+export const POSTER_SUBJECTS: PosterSubject[] = posterSubjects;
 
-export const DEFAULT_CITY_SLUG = POSTER_CITIES[0].slug;
+export const DEFAULT_SUBJECT_SLUG = POSTER_SUBJECTS[0].slug;
 
-/** Grad po URL slugu; nepoznat slug → null (ruta tada redirecta na default). */
-export function cityBySlug(slug: string | undefined): PosterCity | null {
-  return POSTER_CITIES.find((c) => c.slug === slug) ?? null;
+/** Subjekt po URL slugu; nepoznat slug → null (ruta tada redirecta na default). */
+export function subjectBySlug(slug: string | undefined): PosterSubject | null {
+  return POSTER_SUBJECTS.find((s) => s.slug === slug) ?? null;
+}
+
+/** Hrvatska sklonidba uz broj: 1 kvart, 2-4 kvarta, 5+ kvartova (11-14 iznimka). */
+export function pluralUnit(n: number, forms: string[]): string {
+  const d = n % 10;
+  const dd = n % 100;
+  if (d === 1 && dd !== 11) return forms[0];
+  if (d >= 2 && d <= 4 && (dd < 12 || dd > 14)) return forms[1];
+  return forms[2];
 }
 
 export interface PosterPalette {
@@ -206,14 +233,49 @@ interface ProjectedKvart {
   by: number;
   bw: number;
   bh: number;
+  /** Vanjski prsten najveće komponente (SVG px) — za fit labele u sam oblik. */
+  ring: Ring;
 }
 
-export interface ProjectedCity {
-  kvarts: ProjectedKvart[];
+export interface ProjectedSubject {
+  /** Jedinice koje se boje: kvartovi, gradske četvrti ili naselja. */
+  units: ProjectedKvart[];
+  /** Granice JLS-a (razina="jls") — crtaju se preko jedinica, samo obrisi. */
+  outlines: { name: string; d: string }[];
   /** Projekcija točke (lat/lng → SVG px) za custom točke. */
   project: (lng: number, lat: number) => [number, number];
   width: number;
   height: number;
+}
+
+/**
+ * Vodoravni presjek poligona na visini y — vraća [x0, x1] raspona koji
+ * sadrži xHint (ili najširi, ako ga nijedan ne sadrži).
+ *
+ * Zašto: labela fitana u bounding box ispada izvan izduženih/dijagonalnih
+ * oblika ("Barbarići Kravarski" preko susjednog naselja). Bbox je gornja
+ * ograda, stvarna širina na retku teksta je ova.
+ */
+export function spanAt(ring: Ring, y: number, xHint: number): [number, number] | null {
+  const xs: number[] = [];
+  for (let i = 0; i < ring.length - 1; i++) {
+    const [x1, y1] = ring[i];
+    const [x2, y2] = ring[i + 1];
+    if ((y1 <= y && y2 > y) || (y2 <= y && y1 > y)) {
+      xs.push(x1 + ((y - y1) / (y2 - y1)) * (x2 - x1));
+    }
+  }
+  if (xs.length < 2) return null;
+  xs.sort((a, b) => a - b);
+  // Parovi presjeka su naizmjence unutar/izvan poligona (even-odd).
+  for (let i = 0; i + 1 < xs.length; i += 2) {
+    if (xs[i] <= xHint && xHint <= xs[i + 1]) return [xs[i], xs[i + 1]];
+  }
+  let best: [number, number] | null = null;
+  for (let i = 0; i + 1 < xs.length; i += 2) {
+    if (!best || xs[i + 1] - xs[i] > best[1] - best[0]) best = [xs[i], xs[i + 1]];
+  }
+  return best;
 }
 
 function ringArea(ring: Ring): number {
@@ -240,19 +302,30 @@ function ringCentroid(ring: Ring): [number, number] {
 }
 
 /**
- * Projicira kvartove grada u SVG koordinate: equirectangular s cos(lat0)
- * korekcijom (na gradskoj skali vizualno identično TM projekciji), fit u
+ * Projicira jedinice subjekta u SVG koordinate: equirectangular s cos(lat0)
+ * korekcijom (na ovoj skali vizualno identično TM projekciji), fit u
  * width×height box.
+ *
+ * Bbox se računa SAMO iz jedinica koje se boje. Granice JLS-a su njihova
+ * unija pa ionako ne mogu proširiti okvir, a da se računaju zajedno,
+ * objedinjeni plakat bi se drukčije skalirao od pojedinačnih.
  */
-export function projectCity(
-  fc: KvartCollection,
-  jlsMb: string,
+export function projectSubject(
+  fc: PosterCollection,
+  subject: PosterSubject,
   width: number,
   height: number,
-): ProjectedCity {
-  const feats = (fc.features as KvartFeature[]).filter(
-    (f) => f.properties.jls_maticni_broj === jlsMb,
+): ProjectedSubject {
+  const inSubject = (f: PosterFeature) =>
+    subject.jlsMb.includes(f.properties.jls_maticni_broj);
+  const feats = (fc.features as PosterFeature[]).filter(
+    (f) => f.properties.razina !== "jls" && inSubject(f),
   );
+  const borderFeats = subject.showJlsBorders
+    ? (fc.features as PosterFeature[]).filter(
+        (f) => f.properties.razina === "jls" && inSubject(f),
+      )
+    : [];
 
   // Bounding box u "metarskim" koordinatama.
   let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
@@ -294,6 +367,7 @@ export function projectCity(
     let bestArea = 0;
     let cx = 0, cy = 0;
     let bx = 0, by = 0, bw = 0, bh = 0;
+    let bestRing: Ring = [];
     const polys = f.geometry.type === "Polygon"
       ? [(f.geometry as GeoJSON.Polygon).coordinates]
       : (f.geometry as GeoJSON.MultiPolygon).coordinates;
@@ -311,6 +385,7 @@ export function projectCity(
           if (y > y1) y1 = y;
         }
         bx = x0; by = y0; bw = x1 - x0; bh = y1 - y0;
+        bestRing = outer;
       }
       for (const ringCoords of poly) {
         const pts = ringCoords.map(([lng, lat]) => project(lng, lat));
@@ -328,10 +403,25 @@ export function projectCity(
       by,
       bw,
       bh,
+      ring: bestRing,
     };
   });
 
-  return { kvarts, project, width, height };
+  const outlines = borderFeats.map((f) => {
+    let d = "";
+    const polys = f.geometry.type === "Polygon"
+      ? [(f.geometry as GeoJSON.Polygon).coordinates]
+      : (f.geometry as GeoJSON.MultiPolygon).coordinates;
+    for (const poly of polys) {
+      for (const ringCoords of poly) {
+        const pts = ringCoords.map(([lng, lat]) => project(lng, lat));
+        d += `M${pts.map(([x, y]) => `${x.toFixed(1)} ${y.toFixed(1)}`).join("L")}Z`;
+      }
+    }
+    return { name: f.properties.name, d };
+  });
+
+  return { units: kvarts, outlines, project, width, height };
 }
 
 function forEachRing(geom: GeoJSON.Geometry, cb: (ring: Ring) => void) {

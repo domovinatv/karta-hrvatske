@@ -60,6 +60,28 @@ export interface KvartProperties {
 export type KvartFeature = GeoJSON.Feature<GeoJSON.Geometry, KvartProperties> & { id: number };
 export type KvartCollection = GeoJSON.FeatureCollection<GeoJSON.Geometry, KvartProperties>;
 
+// Jedinica koju poster boja. Namjerno šira od KvartProperties: isti render
+// crta kvartove (Zagreb), gradske četvrti (VG) i naselja (Turopolje), plus
+// razina="jls" — granice JLS-a koje idu preko naselja na objedinjenom
+// plakatu. `color` se ovdje NE koristi; boja dolazi iz palette_idx + palete.
+export interface PosterUnitProperties {
+  id: number;
+  razina: "kvart" | "cetvrt" | "naselje" | "jls";
+  name: string;
+  /** Greedy coloring indeks — susjedi nikad ne dijele isti. */
+  palette_idx?: number;
+  jls_name: string;
+  jls_maticni_broj: string;
+  zupanija: string;
+  area_km2: number;
+  stanovnistvo?: number | null;
+  naselja_count?: number;
+  source: string;
+}
+
+export type PosterFeature = GeoJSON.Feature<GeoJSON.Geometry, PosterUnitProperties>;
+export type PosterCollection = GeoJSON.FeatureCollection<GeoJSON.Geometry, PosterUnitProperties>;
+
 export interface ClubSeason {
   league: string;
   tier?: number;

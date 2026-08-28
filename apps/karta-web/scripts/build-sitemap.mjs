@@ -21,7 +21,7 @@ urls.push(urlEntry(`${SITE}/`, 1.0, "weekly"));
 
 // Poster generator — jedna ruta po gradu (isti registar kao app i worker).
 for (const c of JSON.parse(
-  readFileSync(resolve(__dirname, "../src/lib/poster-cities.json"), "utf-8"),
+  readFileSync(resolve(__dirname, "../src/lib/poster-subjects.json"), "utf-8"),
 )) {
   urls.push(urlEntry(`${SITE}/poster/${c.slug}`, 0.8, "monthly"));
 }

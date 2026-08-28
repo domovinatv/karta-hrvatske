@@ -102,34 +102,50 @@ if (existsSync(clubsPath)) {
 console.log("\nLookups built.");
 
 // ── Poster lookup ──────────────────────────────────────────────────────────
-// Gradovi generatora plakata (/poster/<slug>) — čita ISTI registar koji koristi
-// app (src/lib/poster-cities.json), da se OG kartica i dropdown ne raziđu.
-const posterCities = JSON.parse(
-  readFileSync(resolve(__dirname, "../src/lib/poster-cities.json"), "utf-8"),
+// Subjekti generatora plakata (/poster/<slug>) — čita ISTI registar koji
+// koristi app (src/lib/poster-subjects.json), da se OG kartica i dropdown ne
+// raziđu. Brojke jedinica se broje iz istog sloja iz kojeg ih poster crta.
+const posterSubjects = JSON.parse(
+  readFileSync(resolve(__dirname, "../src/lib/poster-subjects.json"), "utf-8"),
 );
-const kvartoviPath = join(PUBLIC_DATA, "kvartovi-kolokvijalni.geojson");
-const kvartCount = {};
-if (existsSync(kvartoviPath)) {
-  const kv = JSON.parse(readFileSync(kvartoviPath, "utf-8"));
-  for (const f of kv.features) {
+const POSTER_SOURCE_FILES = {
+  kvartovi: "kvartovi-kolokvijalni.geojson",
+  turopolje: "turopolje-naselja.geojson",
+};
+// { "kvartovi": { "01333": 191 }, "turopolje": { "05410": 58, ... } }
+const unitCount = {};
+for (const [key, file] of Object.entries(POSTER_SOURCE_FILES)) {
+  const path = join(PUBLIC_DATA, file);
+  unitCount[key] = {};
+  if (!existsSync(path)) {
+    console.warn(`  skip poster counts for "${key}" (${file} not found)`);
+    continue;
+  }
+  for (const f of JSON.parse(readFileSync(path, "utf-8")).features) {
+    if (f.properties.razina === "jls") continue; // granica, nije jedinica
     const mb = f.properties.jls_maticni_broj;
-    kvartCount[mb] = (kvartCount[mb] ?? 0) + 1;
+    unitCount[key][mb] = (unitCount[key][mb] ?? 0) + 1;
   }
 }
+
 // Hrvatska sklonidba uz broj: 1 kvart, 2-4 kvarta, 5+ kvartova (11-14 iznimka).
-function kvartPlural(n) {
+// Mora se poklapati s pluralUnit() u src/lib/poster.ts.
+function pluralUnit(n, forms) {
   const d = n % 10;
   const dd = n % 100;
-  if (d === 1 && dd !== 11) return "kvart";
-  if (d >= 2 && d <= 4 && (dd < 12 || dd > 14)) return "kvarta";
-  return "kvartova";
+  if (d === 1 && dd !== 11) return forms[0];
+  if (d >= 2 && d <= 4 && (dd < 12 || dd > 14)) return forms[1];
+  return forms[2];
 }
+
 const posterLookup = {};
-for (const c of posterCities) {
-  const n = kvartCount[c.jlsMb];
-  const koliko = n ? `${n} ${kvartPlural(n)} ${c.labelGenitive}` : `Kvartovi ${c.labelGenitive}`;
+for (const c of posterSubjects) {
+  const n = c.jlsMb.reduce((a, mb) => a + (unitCount[c.source]?.[mb] ?? 0), 0);
+  const koliko = n
+    ? `${n} ${pluralUnit(n, c.unit)} ${c.labelGenitive}`
+    : `${c.label} — ${c.subtitle}`;
   posterLookup[c.slug] = {
-    title: `${c.label} — anatomija grada · DOMOVINA GIS`,
+    title: `${c.label} — ${c.subtitle} · DOMOVINA GIS`,
     description:
       `${koliko} kao print-ready poster: SVG i PNG 300 dpi, besplatno. ` +
       `Izvori: ${c.sources}.`,

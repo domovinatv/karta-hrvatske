@@ -2,21 +2,25 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 import { v } from "@/lib/version";
 import {
-  DEFAULT_CITY_SLUG,
-  POSTER_CITIES,
-  cityBySlug,
+  DEFAULT_SUBJECT_SLUG,
   POSTER_FONTS,
   POSTER_FORMATS,
   POSTER_PALETTES,
+  POSTER_SOURCES,
+  POSTER_SUBJECTS,
   downloadBlob,
   fontFaceCss,
   labelColorFor,
   parsePoints,
-  projectCity,
+  pluralUnit,
+  spanAt,
+  projectSubject,
+  subjectBySlug,
   svgToPng,
   type PosterPoint,
+  type PosterSubject,
 } from "@/lib/poster";
-import type { KvartCollection } from "@/lib/types";
+import type { PosterCollection } from "@/lib/types";
 import { ArrowLeft, Crosshair, Download, Minus, Plus } from "lucide-react";
 
 // Piksela po centimetru u SVG koordinatnom sustavu (preview/viewBox skala).
@@ -24,8 +28,8 @@ import { ArrowLeft, Crosshair, Download, Minus, Plus } from "lucide-react";
 const PX_PER_CM = 10;
 
 interface BuildOpts {
-  fc: KvartCollection;
-  citySlug: string;
+  fc: PosterCollection;
+  subject: PosterSubject;
   paletteKey: string;
   fontKey: string;
   formatKey: string;
@@ -46,7 +50,7 @@ function esc(s: string): string {
 }
 
 function buildPosterSvg(o: BuildOpts): string {
-  const city = cityBySlug(o.citySlug) ?? POSTER_CITIES[0];
+  const subject = o.subject;
   const palette = POSTER_PALETTES.find((p) => p.key === o.paletteKey) ?? POSTER_PALETTES[0];
   const font = POSTER_FONTS.find((f) => f.key === o.fontKey) ?? POSTER_FONTS[0];
   const format = POSTER_FORMATS.find((f) => f.key === o.formatKey) ?? POSTER_FORMATS[0];
@@ -61,7 +65,7 @@ function buildPosterSvg(o: BuildOpts): string {
   const mapW = W - margin * 2;
   const mapH = H - mapY - margin * 1.4;
 
-  const projected = projectCity(o.fc, city.jlsMb, mapW, mapH);
+  const projected = projectSubject(o.fc, subject, mapW, mapH);
 
   const parts: string[] = [];
   parts.push(
@@ -93,7 +97,7 @@ function buildPosterSvg(o: BuildOpts): string {
 
   // Kvartovi.
   parts.push(`<g transform="translate(${mapX} ${mapY})">`);
-  for (const k of projected.kvarts) {
+  for (const k of projected.units) {
     const fill = palette.fills[k.paletteIdx % palette.fills.length];
     parts.push(
       `<path d="${k.d}" fill="${fill}" stroke="${palette.stroke}" stroke-width="1.2" stroke-linejoin="round"/>`,
@@ -103,7 +107,7 @@ function buildPosterSvg(o: BuildOpts): string {
     const CHAR_W = 0.6; // širina znaka ≈ 0.6 × font-size
     const LINE_H = 1.15;
     const MARGIN = 0.05; // 5% margina unutar bboxa poligona
-    for (const k of projected.kvarts) {
+    for (const k of projected.units) {
       const fill = palette.fills[k.paletteIdx % palette.fills.length];
       const color = labelColorFor(fill, palette); // kontrast prema svjetlini filla
       const maxW = k.bw * (1 - 2 * MARGIN);
@@ -129,31 +133,76 @@ function buildPosterSvg(o: BuildOpts): string {
         if (best) layouts.push(best);
       }
 
+      // Za svaki kandidat layout traži najveći font koji stane u STVARNI
+      // oblik, ne u bbox: širina raspoloživa na retku teksta je vodoravni
+      // presjek poligona na toj visini. Veličina i pozicija ovise jedna o
+      // drugoj (viši font → drugi retci → druga širina), pa par iteracija
+      // fiksne točke; konvergira u 2-3 koraka.
+      const clamp = (v: number, lo: number, hi: number) =>
+        hi < lo ? (lo + hi) / 2 : Math.min(hi, Math.max(lo, v));
       let lines: string[] = layouts[0];
       let size = 0;
+      let lx = k.cx;
+      let ly = k.cy;
       for (const cand of layouts) {
         const maxLen = Math.max(...cand.map((l) => l.length));
-        const fit = Math.min(cap, maxW / (maxLen * CHAR_W), maxH / (cand.length * LINE_H));
-        if (fit > size) {
-          size = fit;
+        let sz = Math.min(cap, maxW / (maxLen * CHAR_W), maxH / (cand.length * LINE_H));
+        let cx = k.cx;
+        let cy = k.cy;
+        for (let iter = 0; iter < 3 && sz > 0; iter++) {
+          const textH = cand.length * LINE_H * sz;
+          cy = clamp(k.cy, k.by + k.bh * MARGIN + textH / 2, k.by + k.bh * (1 - MARGIN) - textH / 2);
+          let avail = Infinity;
+          const mid = (cand.length - 1) / 2;
+          for (let i = 0; i < cand.length; i++) {
+            const rowY = cy + (i - mid) * LINE_H * sz;
+            const sp = spanAt(k.ring, rowY, k.cx);
+            if (!sp) { avail = 0; break; }
+            avail = Math.min(avail, sp[1] - sp[0]);
+            // Centar uzmi sa srednjeg retka — kod dijagonalnih oblika je to
+            // bliže sredini natpisa nego centroid.
+            if (i === Math.round(mid)) cx = (sp[0] + sp[1]) / 2;
+          }
+          if (!Number.isFinite(avail)) avail = maxW;
+          const next = Math.min(
+            cap,
+            (avail * (1 - 2 * MARGIN)) / (maxLen * CHAR_W),
+            maxH / (cand.length * LINE_H),
+          );
+          if (Math.abs(next - sz) < 0.05) { sz = next; break; }
+          sz = next;
+        }
+        if (sz > size) {
+          size = sz;
           lines = cand;
+          lx = cx;
+          ly = cy;
         }
       }
       if (size < 2.6) continue; // ispod ovoga je nečitljivo i na printu
 
-      // Clamp: text box (centriran) mora ostati unutar bboxa s marginom.
+      // Zadnji clamp u bbox — presjek je uzet na retku, ali zaokruživanja ne
+      // smiju gurnuti natpis van okvira poligona.
       const textW = Math.max(...lines.map((l) => l.length)) * CHAR_W * size;
       const textH = lines.length * LINE_H * size;
-      const clamp = (v: number, lo: number, hi: number) =>
-        hi < lo ? (lo + hi) / 2 : Math.min(hi, Math.max(lo, v));
-      const x = clamp(k.cx, k.bx + k.bw * MARGIN + textW / 2, k.bx + k.bw * (1 - MARGIN) - textW / 2);
-      const y = clamp(k.cy, k.by + k.bh * MARGIN + textH / 2, k.by + k.bh * (1 - MARGIN) - textH / 2);
+      const x = clamp(lx, k.bx + k.bw * MARGIN + textW / 2, k.bx + k.bw * (1 - MARGIN) - textW / 2);
+      const y = clamp(ly, k.by + k.bh * MARGIN + textH / 2, k.by + k.bh * (1 - MARGIN) - textH / 2);
 
+      // Svaki redak se dodatno clampa u presjek NA SVOJOJ visini. Font je već
+      // biran tako da najuži redak stane, ali kod dijagonalnih oblika retci
+      // nisu poravnati — bez ovoga gornji redak "Barbarići Kravarski" izlazi
+      // u susjedno naselje. Clamp, ne centriranje: redak ostaje na sredini
+      // bloka i pomiče se tek koliko mora.
       const spans = lines
-        .map(
-          (l, i) =>
-            `<tspan x="${x.toFixed(1)}" y="${(y + (i - (lines.length - 1) / 2) * LINE_H * size).toFixed(1)}">${esc(l)}</tspan>`,
-        )
+        .map((l, i) => {
+          const rowY = y + (i - (lines.length - 1) / 2) * LINE_H * size;
+          const lineW = l.length * CHAR_W * size;
+          const sp = spanAt(k.ring, rowY, k.cx);
+          const rx = sp
+            ? clamp(x, sp[0] + lineW / 2, sp[1] - lineW / 2)
+            : x;
+          return `<tspan x="${rx.toFixed(1)}" y="${rowY.toFixed(1)}">${esc(l)}</tspan>`;
+        })
         .join("");
       parts.push(
         `<text text-anchor="middle" dominant-baseline="middle" font-family="${esc(
@@ -162,6 +211,16 @@ function buildPosterSvg(o: BuildOpts): string {
       );
     }
   }
+  // Granice JLS-a — samo na objedinjenom plakatu (Turopolje). Idu PREKO
+  // naselja i imena da se vidi od kojih je JLS-ova regija složena.
+  for (const o2 of projected.outlines) {
+    parts.push(
+      `<path d="${o2.d}" fill="none" stroke="${palette.text}" stroke-width="${(
+        W * 0.0045
+      ).toFixed(1)}" stroke-linejoin="round" opacity="0.75"/>`,
+    );
+  }
+
   // Custom točke.
   for (const p of o.points) {
     const [x, y] = projected.project(p.lng, p.lat);
@@ -187,7 +246,7 @@ function buildPosterSvg(o: BuildOpts): string {
   parts.push(
     `<text x="${W - margin * 0.5}" y="${H - margin * 0.45}" text-anchor="end" font-family="${esc(
       font.family,
-    )}" font-size="${(W * 0.011).toFixed(1)}" fill="${palette.text}" opacity="0.55">gis.domovina.ai · ${esc(city.attribution)}</text>`,
+    )}" font-size="${(W * 0.011).toFixed(1)}" fill="${palette.text}" opacity="0.55">gis.domovina.ai · ${esc(subject.attribution)}</text>`,
   );
   parts.push(`</svg>`);
   return parts.join("");
@@ -196,51 +255,85 @@ function buildPosterSvg(o: BuildOpts): string {
 export default function PosterView() {
   const { grad } = useParams();
   const navigate = useNavigate();
-  // Grad je stanje RUTE, ne komponente — /poster/zagreb je shareable permalink.
-  const city = cityBySlug(grad);
-  const [fc, setFc] = useState<KvartCollection | null>(null);
+  // Subjekt je stanje RUTE, ne komponente — /poster/turopolje je shareable
+  // permalink.
+  const subject = subjectBySlug(grad);
+  // Sloj se lazy-loada po subjektu i ostaje u memoriji: prebacivanje
+  // Zagreb ↔ Turopolje ne skida isti file dvaput.
+  const [sources, setSources] = useState<Record<string, PosterCollection>>({});
+  const requested = useRef<Record<string, boolean>>({});
   const [paletteKey, setPaletteKey] = useState("retro");
   const [fontKey, setFontKey] = useState("fraunces");
   const [formatKey, setFormatKey] = useState("kvadrat");
-  const [title, setTitle] = useState(city?.label ?? "Zagreb");
-  const [subtitle, setSubtitle] = useState("anatomija grada · kvartovi");
+  const [title, setTitle] = useState(subject?.label ?? "Zagreb");
+  const [subtitle, setSubtitle] = useState(subject?.subtitle ?? "");
   const [showLabels, setShowLabels] = useState(true);
   const [labelScale, setLabelScale] = useState(1);
   const [pointsText, setPointsText] = useState("");
   const [pointColor, setPointColor] = useState("#c8102e");
   const [exporting, setExporting] = useState<string | null>(null);
   const titleTouched = useRef(false);
+  const subtitleTouched = useRef(false);
   // Preview zoom/pan — čisti CSS transform, ne dira SVG ni export.
   const [zoom, setZoom] = useState(1);
   const [pan, setPan] = useState({ x: 0, y: 0 });
   const dragRef = useRef<{ startX: number; startY: number; panX: number; panY: number } | null>(null);
 
-  useEffect(() => {
-    if (!city) return;
-    document.title = `${city.label} — anatomija grada · DOMOVINA Karta`;
-  }, [city]);
-
-  // Naslov plakata prati grad dok ga korisnik ne prepiše — sada i kad se grad
-  // promijeni navigacijom (back/forward, sherani link), ne samo dropdownom.
-  useEffect(() => {
-    if (city && !titleTouched.current) setTitle(city.label);
-  }, [city]);
+  const sourceKey = subject?.source ?? "";
+  const fc = sources[sourceKey] ?? null;
 
   useEffect(() => {
-    fetch(v("/data/kvartovi-kolokvijalni.geojson"))
+    if (!subject) return;
+    document.title = `${subject.label} — ${subject.subtitle} · DOMOVINA Karta`;
+  }, [subject]);
+
+  // Naslov i podnaslov prate subjekt dok ih korisnik ne prepiše — i kad se
+  // subjekt promijeni navigacijom (back/forward, sherani link), ne samo
+  // dropdownom.
+  useEffect(() => {
+    if (!subject) return;
+    if (!titleTouched.current) setTitle(subject.label);
+    if (!subtitleTouched.current) setSubtitle(subject.subtitle);
+  }, [subject]);
+
+  // requested ref umjesto `sources` u depsu: sources se mijenja svakim
+  // učitavanjem, pa bi efekt s njim u depsu vrtio novi fetch za svaki sloj.
+  useEffect(() => {
+    if (!sourceKey || requested.current[sourceKey]) return;
+    requested.current[sourceKey] = true;
+    fetch(v(POSTER_SOURCES[sourceKey]))
       .then((r) => r.json())
-      .then((d: KvartCollection) => setFc(d))
-      .catch((e: unknown) => console.error("kvartovi fetch failed", e));
-  }, []);
+      .then((d: PosterCollection) => setSources((prev) => ({ ...prev, [sourceKey]: d })))
+      .catch((e: unknown) => {
+        requested.current[sourceKey] = false; // dopusti retry na sljedeći render
+        console.error("poster source fetch failed", sourceKey, e);
+      });
+  }, [sourceKey]);
 
-  const citySlug = city?.slug ?? DEFAULT_CITY_SLUG;
   const points = useMemo(() => parsePoints(pointsText), [pointsText]);
+
+  // Brojke ispod dropdowna — potvrda da plakat pokriva ono što misliš da
+  // pokriva (VG po naseljima je 327 km², po četvrtima 37 km²).
+  const stats = useMemo(() => {
+    if (!fc || !subject) return null;
+    const units = fc.features.filter(
+      (f) =>
+        f.properties.razina !== "jls" &&
+        subject.jlsMb.includes(f.properties.jls_maticni_broj),
+    );
+    return {
+      n: units.length,
+      km2: units.reduce((a, f) => a + (f.properties.area_km2 ?? 0), 0),
+      pop: units.reduce((a, f) => a + (f.properties.stanovnistvo ?? 0), 0),
+    };
+  }, [fc, subject]);
 
   const svg = useMemo(() => {
     if (!fc) return null;
+    if (!subject) return null;
     return buildPosterSvg({
       fc,
-      citySlug,
+      subject,
       paletteKey,
       fontKey,
       formatKey,
@@ -251,17 +344,17 @@ export default function PosterView() {
       points,
       pointColor,
     });
-  }, [fc, citySlug, paletteKey, fontKey, formatKey, title, subtitle, showLabels, labelScale, points, pointColor]);
+  }, [fc, subject, paletteKey, fontKey, formatKey, title, subtitle, showLabels, labelScale, points, pointColor]);
 
   const doExport = async (kind: "svg" | "png") => {
-    if (!fc || exporting) return;
+    if (!fc || !subject || exporting) return;
     setExporting(kind);
     try {
       const font = POSTER_FONTS.find((f) => f.key === fontKey) ?? POSTER_FONTS[0];
       const embeddedCss = await fontFaceCss(font);
       const full = buildPosterSvg({
         fc,
-        citySlug,
+        subject,
         paletteKey,
         fontKey,
         formatKey,
@@ -273,7 +366,7 @@ export default function PosterView() {
         pointColor,
         embeddedCss,
       });
-      const base = `${citySlug}-kvartovi-${formatKey}`;
+      const base = `${subject.slug}-${formatKey}`;
       if (kind === "svg") {
         downloadBlob(new Blob([full], { type: "image/svg+xml" }), `${base}.svg`);
       } else {
@@ -291,9 +384,9 @@ export default function PosterView() {
     }
   };
 
-  // /poster bez grada i nepoznat slug → kanonski URL, da sherani link uvijek
-  // pokazuje koji je grad. replace: ne trujemo back gumb.
-  if (!city) return <Navigate to={`/poster/${DEFAULT_CITY_SLUG}`} replace />;
+  // /poster bez subjekta i nepoznat slug → kanonski URL, da sherani link
+  // uvijek pokazuje što prikazuje. replace: ne trujemo back gumb.
+  if (!subject) return <Navigate to={`/poster/${DEFAULT_SUBJECT_SLUG}`} replace />;
 
   const field = "w-full rounded-md border px-2.5 py-1.5 font-mono text-[12px]";
   const fieldStyle = {
@@ -317,21 +410,28 @@ export default function PosterView() {
           </Link>
         </div>
         <p className="mt-1 text-[12px] leading-snug text-muted">
-          Anatomija grada — kvartovi kao print-ready vektorska karta. Odaberi grad, paletu i
-          tipografiju, dodaj svoje točke, skini SVG ili PNG (300 dpi) i nosi u tiskaru.
+          Anatomija grada i kraja — kvartovi, gradske četvrti i naselja kao print-ready
+          vektorska karta. Odaberi područje, paletu i tipografiju, dodaj svoje točke, skini
+          SVG ili PNG (300 dpi) i nosi u tiskaru.
         </p>
 
-        <label className={label}>Grad</label>
+        <label className={label}>Područje</label>
         <select
           className={field}
           style={fieldStyle}
-          value={city.slug}
+          value={subject.slug}
           onChange={(e) => navigate(`/poster/${e.target.value}`)}
         >
-          {POSTER_CITIES.map((c) => (
-            <option key={c.slug} value={c.slug}>{c.label}</option>
+          {POSTER_SUBJECTS.map((c) => (
+            <option key={c.slug} value={c.slug}>{c.menuLabel}</option>
           ))}
         </select>
+        <p className="mt-1 font-mono text-[10px] text-muted">
+          {stats
+            ? `${stats.n} ${pluralUnit(stats.n, subject.unit)} · ${stats.km2.toFixed(0)} km²` +
+              (stats.pop ? ` · ${stats.pop.toLocaleString("hr-HR")} st.` : "")
+            : "učitavam…"}
+        </p>
 
         <label className={label}>Paleta</label>
         <div className="flex flex-col gap-1">
@@ -384,7 +484,7 @@ export default function PosterView() {
         <label className={label}>Podnaslov</label>
         <input className={field} style={fieldStyle} value={subtitle} onChange={(e) => setSubtitle(e.target.value)} />
 
-        <label className={label}>Imena kvartova</label>
+        <label className={label}>Imena ({subject.unit[1]})</label>
         <div className="flex items-center gap-3">
           <button
             type="button"
@@ -414,7 +514,7 @@ export default function PosterView() {
         <textarea
           className={field}
           style={{ ...fieldStyle, minHeight: 84 }}
-          placeholder={city.samplePoints}
+          placeholder={subject.samplePoints}
           value={pointsText}
           onChange={(e) => setPointsText(e.target.value)}
         />
@@ -445,7 +545,7 @@ export default function PosterView() {
         </div>
         <p className="mt-2 text-[10px] leading-snug text-muted">
           SVG = vektor za tiskare i dizajnere · PNG = 300 dpi raster spreman za print. Izvori:
-          {" "}{city.sources}.
+          {" "}{subject.sources}.
         </p>
       </aside>
 
