@@ -185,7 +185,7 @@ function buildPosterSvg(o: BuildOpts): string {
   parts.push(
     `<text x="${W - margin * 0.5}" y="${H - margin * 0.45}" text-anchor="end" font-family="${esc(
       font.family,
-    )}" font-size="${(W * 0.011).toFixed(1)}" fill="${palette.text}" opacity="0.55">gis.domovina.ai · podaci: data.zagreb.hr (OD) · © OpenStreetMap (ODbL)</text>`,
+    )}" font-size="${(W * 0.011).toFixed(1)}" fill="${palette.text}" opacity="0.55">gis.domovina.ai · ${esc(city.attribution)}</text>`,
   );
   parts.push(`</svg>`);
   return parts.join("");
@@ -229,6 +229,7 @@ export default function PosterView() {
     }
   };
 
+  const city = POSTER_CITIES.find((c) => c.key === cityKey) ?? POSTER_CITIES[0];
   const points = useMemo(() => parsePoints(pointsText), [pointsText]);
 
   const svg = useMemo(() => {
@@ -400,7 +401,7 @@ export default function PosterView() {
         <textarea
           className={field}
           style={{ ...fieldStyle, minHeight: 84 }}
-          placeholder={"45.807, 15.967, Moj ured\n45.796, 15.937, Podružnica Jarun"}
+          placeholder={city.samplePoints}
           value={pointsText}
           onChange={(e) => setPointsText(e.target.value)}
         />
@@ -431,7 +432,7 @@ export default function PosterView() {
         </div>
         <p className="mt-2 text-[10px] leading-snug text-muted">
           SVG = vektor za tiskare i dizajnere · PNG = 300 dpi raster spreman za print. Izvori:
-          data.zagreb.hr (Otvorena dozvola), OpenStreetMap (ODbL).
+          {" "}{city.sources}.
         </p>
       </aside>
 

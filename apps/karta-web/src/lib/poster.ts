@@ -9,11 +9,37 @@ export interface PosterCity {
   label: string;
   jlsMb: string;
   title: string;
+  /**
+   * Izvor poligona — po gradu, jer se razlikuje: ZG kvartovi su derivirani iz
+   * mjesnih odbora (data.zagreb.hr), VG četvrti dolaze čisto iz OSM-a. Ide u
+   * footer plakata pa mora pratiti odabrani grad, ne biti hardkodiran.
+   */
+  attribution: string;
+  /** Isti izvor, duži oblik za tekst u kontrolama. */
+  sources: string;
+  /** Placeholder za "tvoje točke" — koordinate unutar tog grada. */
+  samplePoints: string;
 }
 
 export const POSTER_CITIES: PosterCity[] = [
-  { key: "zagreb", label: "Zagreb", jlsMb: "01333", title: "ZAGREB" },
-  { key: "velika-gorica", label: "Velika Gorica", jlsMb: "05410", title: "VELIKA GORICA" },
+  {
+    key: "zagreb",
+    label: "Zagreb",
+    jlsMb: "01333",
+    title: "ZAGREB",
+    attribution: "podaci: data.zagreb.hr (OD) · © OpenStreetMap (ODbL)",
+    sources: "data.zagreb.hr (Otvorena dozvola), OpenStreetMap (ODbL)",
+    samplePoints: "45.807, 15.967, Moj ured\n45.796, 15.937, Podružnica Jarun",
+  },
+  {
+    key: "velika-gorica",
+    label: "Velika Gorica",
+    jlsMb: "05410",
+    title: "VELIKA GORICA",
+    attribution: "podaci: © OpenStreetMap (ODbL)",
+    sources: "OpenStreetMap (ODbL)",
+    samplePoints: "45.712, 16.076, Moj ured\n45.733, 16.068, Skladište Kurilovec",
+  },
 ];
 
 export interface PosterPalette {
