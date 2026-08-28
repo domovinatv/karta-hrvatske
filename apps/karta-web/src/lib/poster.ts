@@ -30,8 +30,14 @@ export interface PosterSubject {
   jlsMb: string[];
   /** Sklonidba jedinice: [1, 2-4, 5+] — "1 kvart, 2 kvarta, 5 kvartova". */
   unit: [string, string, string] | string[];
-  /** Crtaj granice JLS-a preko jedinica (ima smisla samo kad ih je više). */
-  showJlsBorders?: boolean;
+  /**
+   * Dodatni uvjet na jedinicu — ime boolean propertyja koji mora biti true.
+   * Tako se iz istog sloja izdvaja podskup koji ne prati granice JLS-a
+   * (Plemenita opčina turopoljska).
+   */
+  unitFilter?: string;
+  /** Koje obrise crtati preko jedinica: granice JLS-a i/ili obuhvat regije. */
+  outlines?: ("jls" | "regija")[];
   /**
    * Izvor poligona — po subjektu, jer se razlikuje: ZG kvartovi su derivirani
    * iz mjesnih odbora (data.zagreb.hr), VG četvrti iz OSM-a, naselja iz DGU
@@ -49,7 +55,8 @@ export interface PosterSubject {
  * injection u workeru, sitemap). Jedan izvor istine — novi plakat se dodaje
  * SAMO ovdje (+ sloj u POSTER_SOURCES ako dolazi iz novog filea).
  */
-export const POSTER_SUBJECTS: PosterSubject[] = posterSubjects;
+// JSON import daje široke tipove (string[] umjesto unije), zato cast.
+export const POSTER_SUBJECTS = posterSubjects as PosterSubject[];
 
 export const DEFAULT_SUBJECT_SLUG = POSTER_SUBJECTS[0].slug;
 
@@ -309,9 +316,10 @@ function ringCentroid(ring: Ring): [number, number] {
  * korekcijom (na ovoj skali vizualno identično TM projekciji), fit u
  * width×height box.
  *
- * Bbox se računa SAMO iz jedinica koje se boje. Granice JLS-a su njihova
- * unija pa ionako ne mogu proširiti okvir, a da se računaju zajedno,
- * objedinjeni plakat bi se drukčije skalirao od pojedinačnih.
+ * Bbox se računa iz jedinica I obrisa. Kod objedinjenog plakata to je isto
+ * (obrisi su unija jedinica), ali kad je subjekt podskup — Plemenita opčina
+ * crta 26 naselja preko obuhvata cijele regije — obuhvat je ŠIRI od jedinica
+ * pa bi inače izlazio iz okvira papira.
  */
 export function projectSubject(
   fc: PosterCollection,
@@ -322,22 +330,26 @@ export function projectSubject(
   const inSubject = (f: PosterFeature) =>
     subject.jlsMb.includes(f.properties.jls_maticni_broj);
   const feats = (fc.features as PosterFeature[]).filter(
-    (f) => UNIT_RAZINE.includes(f.properties.razina) && inSubject(f),
+    (f) =>
+      UNIT_RAZINE.includes(f.properties.razina) &&
+      inSubject(f) &&
+      (!subject.unitFilter ||
+        (f.properties as unknown as Record<string, unknown>)[subject.unitFilter] === true),
   );
   // Obuhvat regije (razina="regija") nije vezan uz jedan JLS pa ne prolazi
   // inSubject — nosi jls_maticni_broj "*".
-  const borderFeats = subject.showJlsBorders
-    ? (fc.features as PosterFeature[]).filter(
-        (f) =>
-          f.properties.razina === "regija" ||
-          (f.properties.razina === "jls" && inSubject(f)),
-      )
-    : [];
+  const want = subject.outlines ?? [];
+  const borderFeats = (fc.features as PosterFeature[]).filter(
+    (f) =>
+      (want.includes("regija") && f.properties.razina === "regija") ||
+      (want.includes("jls") && f.properties.razina === "jls" && inSubject(f)),
+  );
+  const extent = [...feats, ...borderFeats];
 
   // Bounding box u "metarskim" koordinatama.
   let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
   let latSum = 0, latN = 0;
-  for (const f of feats) {
+  for (const f of extent) {
     forEachRing(f.geometry, (ring) => {
       for (const pt of ring) {
         latSum += pt[1];
@@ -350,7 +362,7 @@ export function projectSubject(
   const ky = 110.57;
   const toXY = (lng: number, lat: number): [number, number] => [lng * kx, -lat * ky];
 
-  for (const f of feats) {
+  for (const f of extent) {
     forEachRing(f.geometry, (ring) => {
       for (const [lng, lat] of ring) {
         const [x, y] = toXY(lng, lat);

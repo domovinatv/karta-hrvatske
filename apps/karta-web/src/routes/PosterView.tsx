@@ -76,7 +76,16 @@ function buildPosterSvg(o: BuildOpts): string {
 
   // Naslov + podnaslov.
   if (hasTitle) {
-    const titleSize = Math.min(W * 0.09, titleBlockH * 0.52);
+    // Naslov se skalira i po ŠIRINI, ne samo po visini bloka: "PLEMENITA
+    // OPČINA TUROPOLJSKA" je dvostruko duži od "ZAGREB" i bez ovoga bi
+    // jednostavno izašao iz papira. 0.72 = širina znaka (0.6) + letter-spacing
+    // (0.12), oboje izraženo u jedinicama font-sizea niže.
+    const titleChars = Math.max(o.title.trim().length, 1);
+    const titleSize = Math.min(
+      W * 0.09,
+      titleBlockH * 0.52,
+      (W - margin * 2) / (titleChars * 0.72),
+    );
     parts.push(
       `<text x="${W / 2}" y="${titleBlockH * 0.52}" text-anchor="middle" font-family="${esc(
         font.family,
@@ -85,11 +94,16 @@ function buildPosterSvg(o: BuildOpts): string {
       ).toFixed(1)}" fill="${palette.title}">${esc(o.title.toUpperCase())}</text>`,
     );
     if (o.subtitle.trim()) {
+      // Isti fit za podnaslov — on zna biti duži od naslova.
+      const subSize = Math.min(
+        titleSize * 0.22,
+        (W - margin * 2) / (o.subtitle.trim().length * 0.87),
+      );
       parts.push(
         `<text x="${W / 2}" y="${(titleBlockH * 0.78).toFixed(1)}" text-anchor="middle" font-family="${esc(
           font.family,
-        )}" font-weight="600" font-size="${(titleSize * 0.22).toFixed(1)}" letter-spacing="${(
-          titleSize * 0.06
+        )}" font-weight="600" font-size="${subSize.toFixed(1)}" letter-spacing="${(
+          subSize * 0.27
         ).toFixed(1)}" fill="${palette.text}">${esc(o.subtitle.toUpperCase())}</text>`,
       );
     }
@@ -324,7 +338,11 @@ export default function PosterView() {
     const units = fc.features.filter(
       (f) =>
         ["kvart", "cetvrt", "naselje"].includes(f.properties.razina) &&
-        subject.jlsMb.includes(f.properties.jls_maticni_broj),
+        subject.jlsMb.includes(f.properties.jls_maticni_broj) &&
+        // Mora zrcaliti filtar iz projectSubject(), inače brojke ispod
+        // dropdowna opisuju nešto što plakat ne crta.
+        (!subject.unitFilter ||
+          (f.properties as unknown as Record<string, unknown>)[subject.unitFilter] === true),
     );
     return {
       n: units.length,

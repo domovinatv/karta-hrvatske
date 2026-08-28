@@ -80,6 +80,10 @@ export interface PosterUnitProperties {
   partial?: boolean;
   /** "Jezgra Turopolja" | "Zagrebački dio" | "Lekenički dio". */
   historical_zone?: string;
+  /** Naselje Plemenite opčine turopoljske (povijesna jezgra unutar regije). */
+  plemenita_opcina?: boolean;
+  /** "Polje" | "Vrhovlje" | "Pridružena naselja". */
+  po_skupina?: string;
   source: string;
 }
 

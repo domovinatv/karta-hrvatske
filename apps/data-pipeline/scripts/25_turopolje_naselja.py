@@ -130,6 +130,57 @@ TUROPOLJE_NASELJA = {
 #     Proleksisu, ali izvan definicije Turopoljskog leksikona; prijelazna zona
 #     prema donjem Pokuplju.
 
+# ---------------------------------------------------------------------------
+# Plemenita opčina turopoljska — povijesna jezgra unutar regije.
+#
+# 22 sučije po Šenoi (1910: 8), preslikane na današnji DGU registar. Nije isto
+# što i regija: Klemenčić (2021: 144) izrijekom upozorava da se označavanjem
+# samo "plemenitaških" naselja "ne dobije prostorno homogeno i posve zaokruženo
+# područje" — među njima ima i naselja koja nisu bila u sastavu Opčine. Zato
+# ovo ide kao ZASEBAN sloj preko regije, ne kao njezina granica.
+#
+# Pet sučija nema današnjeg parnjaka: Mala Gorica, Kurilovec, Pleso, Rakarje i
+# Kušanec danas su gradske četvrti unutar naselja Velika Gorica (vidi
+# kvartovi sloj) — grad ih je apsorbirao. Pokriva ih naselje Velika Gorica,
+# koje je ionako bilo sučija.
+PLEMENITA_OPCINA = {
+    # sučije "u Polju" (13)
+    "Polje": (
+        ("05410", "Buševec"),
+        ("05410", "Velika Gorica"),  # + Mala Gorica, Kurilovec, Pleso, Rakarje, Kušanec
+        ("01333", "Hrašće Turopoljsko"),
+        ("05410", "Kobilić"),
+        ("05410", "Kuče"),
+        ("05410", "Donja Lomnica"),
+        ("05410", "Lukavec"),  # Šenoa: "Gornji i Donji Lukavec", danas jedno naselje
+        ("05410", "Velika Mlaka"),
+        ("05410", "Mraclin"),
+        ("05410", "Rakitovec"),
+    ),
+    # sučije "u Vrhovlju" (8)
+    "Vrhovlje": (
+        ("05410", "Bukovčak"),
+        ("05410", "Cerovski Vrh"),
+        ("05410", "Cvetković Brdo"),
+        ("01333", "Donji Dragonožec"),  # Šenoa: "Dragonožec", danas dva naselja
+        ("01333", "Gornji Dragonožec"),
+        ("05410", "Dubranec"),
+        ("05410", "Gustelnica"),
+        ("05410", "Prvonožina"),
+        ("05410", "Vukomerić"),
+    ),
+    # naselja Opčine uz sučije
+    "Pridružena naselja": (
+        ("05410", "Gornja Lomnica"),
+        ("05410", "Lazi Turopoljski"),   # Šenoa: "Lazi"
+        ("01333", "Lipnica"),
+        ("05410", "Markuševec Turopoljski"),  # Šenoa: "Markuševec"
+        ("01333", "Havidić Selo"),
+        ("05410", "Petravec"),           # Šenoa: "Petravci"
+        ("05410", "Jerebić"),            # Šenoa: "Jarebić"
+    ),
+}
+
 # Cerovski Vrh se u popisima zna svrstati pod Lekenik, ali po DGU-u je naselje
 # Grada Velike Gorice — dakle već je u jezgri, ne dodaje se posebno.
 
@@ -159,6 +210,15 @@ def round_coords(obj, nd=6):
             return [round(float(c), nd) for c in obj]
         return [round_coords(o, nd) for o in obj]
     return obj
+
+
+PO_INDEX = {key: skupina for skupina, keys in PLEMENITA_OPCINA.items() for key in keys}
+
+
+def po_props(mb: str, name: str) -> dict:
+    """Oznaka pripadnosti Plemenitoj opčini; prazno ako naselje nije njezino."""
+    skupina = PO_INDEX.get((mb, name))
+    return {"plemenita_opcina": True, "po_skupina": skupina} if skupina else {}
 
 
 def clean(geom):
@@ -223,6 +283,15 @@ def main() -> None:
     sel.sort(key=lambda f: (jls_order.index(f["properties"]["jls_maticni_broj"]),
                             f["properties"]["name"]))
 
+    # Svaki unos PO popisa MORA se naći među odabranim naseljima — inače je
+    # sloj tiho nepotpun (preimenovanje, dijakritik, naselje izvan regije).
+    have = {(f["properties"]["jls_maticni_broj"], f["properties"]["name"]) for f in sel}
+    lost = [f"{n} (JLS {mb})" for (mb, n) in PO_INDEX if (mb, n) not in have]
+    if lost:
+        print("Plemenita opčina — nema među naseljima regije: " + ", ".join(lost),
+              file=sys.stderr)
+        sys.exit(1)
+
     geoms = [clean(shape(f["geometry"])) for f in sel]
     colors = greedy_coloring(geoms)
     print(f"  coloring: {len(sel)} naselja, {max(colors.values()) + 1} boja")
@@ -240,6 +309,7 @@ def main() -> None:
             "stanovnistvo": p.get("stanovnistvo"),
             "palette_idx": colors[i],
             "historical_zone": ZONE[p["jls_maticni_broj"]],
+            **po_props(p["jls_maticni_broj"], p["name"]),
             "source": p.get("source", "DGU rpj:naselje"),
             "geometry": {"type": g.geom_type, "coordinates": round_coords(mapping(g)["coordinates"])},
         })
@@ -317,6 +387,9 @@ def main() -> None:
                               ensure_ascii=False))
     n_nas = sum(1 for f in features if f["properties"]["razina"] == "naselje")
     n_jls = sum(1 for f in features if f["properties"]["razina"] == "jls")
+    n_po = sum(1 for f in features if f["properties"].get("plemenita_opcina"))
+    print(f"  Plemenita opčina: {n_po} naselja "
+          f"({', '.join(f'{k} {sum(1 for x in v if x in PO_INDEX)}' for k, v in PLEMENITA_OPCINA.items())})")
     print(f"✔ {OUT} — {n_nas} naselja + {n_jls} granica + obuhvat, "
           f"{OUT.stat().st_size / 1e6:.2f} MB")
 

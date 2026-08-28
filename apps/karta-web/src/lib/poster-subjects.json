@@ -133,9 +133,40 @@
       "naselja",
       "naselja"
     ],
-    "showJlsBorders": true,
     "attribution": "podaci: DGU RPJ · opseg: Turopoljski leksikon (LZMK, 2021)",
     "sources": "DGU Registar prostornih jedinica (naselja); opseg regije po Turopoljskom leksikonu (LZMK, 2021)",
-    "samplePoints": "45.712, 16.076, Velika Gorica\n45.598, 16.185, Lekenik"
+    "samplePoints": "45.712, 16.076, Velika Gorica\n45.598, 16.185, Lekenik",
+    "outlines": [
+      "jls",
+      "regija"
+    ]
+  },
+  {
+    "slug": "plemenita-opcina",
+    "label": "Plemenita opčina turopoljska",
+    "labelGenitive": "Plemenite opčine turopoljske",
+    "menuLabel": "Plemenita opčina turopoljska",
+    "subtitle": "sučije i naselja · Šenoa 1910",
+    "source": "turopolje",
+    "jlsMb": [
+      "05410",
+      "05444",
+      "05428",
+      "05452",
+      "01333",
+      "02283"
+    ],
+    "unitFilter": "plemenita_opcina",
+    "outlines": [
+      "regija"
+    ],
+    "unit": [
+      "naselje",
+      "naselja",
+      "naselja"
+    ],
+    "attribution": "podaci: DGU RPJ · sučije: Šenoa 1910 · opseg: Turopoljski leksikon (LZMK, 2021)",
+    "sources": "DGU Registar prostornih jedinica (naselja); popis sučija po M. Šenoa, “Turopolje” (1910); opseg regije po Turopoljskom leksikonu (LZMK, 2021)",
+    "samplePoints": "45.712, 16.076, Velika Gorica\n45.669, 15.976, Lukavec"
   }
 ]

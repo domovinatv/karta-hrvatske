@@ -112,21 +112,28 @@ const POSTER_SOURCE_FILES = {
   kvartovi: "kvartovi-kolokvijalni.geojson",
   turopolje: "turopolje-naselja.geojson",
 };
-// { "kvartovi": { "01333": 191 }, "turopolje": { "05410": 58, ... } }
-const unitCount = {};
+const sourceFeatures = {};
 for (const [key, file] of Object.entries(POSTER_SOURCE_FILES)) {
   const path = join(PUBLIC_DATA, file);
-  unitCount[key] = {};
+  sourceFeatures[key] = [];
   if (!existsSync(path)) {
     console.warn(`  skip poster counts for "${key}" (${file} not found)`);
     continue;
   }
-  for (const f of JSON.parse(readFileSync(path, "utf-8")).features) {
+  sourceFeatures[key] = JSON.parse(readFileSync(path, "utf-8")).features.filter(
     // granice ("jls") i vanjski obuhvat ("regija") nisu jedinice
-    if (f.properties.razina === "jls" || f.properties.razina === "regija") continue;
-    const mb = f.properties.jls_maticni_broj;
-    unitCount[key][mb] = (unitCount[key][mb] ?? 0) + 1;
-  }
+    (f) => f.properties.razina !== "jls" && f.properties.razina !== "regija",
+  );
+}
+
+// Mora zrcaliti filtar iz projectSubject() — inače OG kartica javi broj koji
+// se ne poklapa s onim što plakat crta (115 umjesto 26 za Plemenitu opčinu).
+function countUnits(subject) {
+  return (sourceFeatures[subject.source] ?? []).filter(
+    (f) =>
+      subject.jlsMb.includes(f.properties.jls_maticni_broj) &&
+      (!subject.unitFilter || f.properties[subject.unitFilter] === true),
+  ).length;
 }
 
 // Hrvatska sklonidba uz broj: 1 kvart, 2-4 kvarta, 5+ kvartova (11-14 iznimka).
@@ -141,7 +148,7 @@ function pluralUnit(n, forms) {
 
 const posterLookup = {};
 for (const c of posterSubjects) {
-  const n = c.jlsMb.reduce((a, mb) => a + (unitCount[c.source]?.[mb] ?? 0), 0);
+  const n = countUnits(c);
   const koliko = n
     ? `${n} ${pluralUnit(n, c.unit)} ${c.labelGenitive}`
     : `${c.label} — ${c.subtitle}`;
