@@ -298,11 +298,16 @@ npx tsc -b --force        # ili npm run build, koji ionako vrti tsc -b
 `node_modules/.bin`. Nije blokirajuće jer build vrti `tsc -b`, ali lint
 zapravo nikad ne prolazi.
 
-## Deploy 2026-08-29
+## Deploy
 
-Engine je na produkciji (`gis.domovina.ai`, CF Pages projekt `gis-domovina`).
-Verificiran mjerenjem na živoj domeni, ne screenshotom — postupak i brojke u
+Engine je na produkciji (`gis.domovina.ai`, CF Pages projekt `gis-domovina`)
+od 2026-08-29, sisački plakati od 2026-08-30. Verificirano mjerenjem na živoj
+domeni, ne screenshotom — postupak i brojke u
 `2026-08-17-deploy-verifikacija.md`, poglavlje „Grafika koja se računa".
+
+Produkcijski prolaz za Sisak (bundle `index-D3p89x4s.js`, isti hash kao lokalni
+`dist/`): `sisak` 36 natpisa i `sisak-okolica` 92 natpisa u sva tri formata —
+**0 izvan poligona**, najmanji font 1,2 px SVG-a na pejzažu.
 
 ## Vezani dokumenti
 
