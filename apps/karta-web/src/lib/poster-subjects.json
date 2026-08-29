@@ -168,5 +168,49 @@
     "attribution": "podaci: DGU RPJ · sučije: Šenoa 1910 · opseg: Turopoljski leksikon (LZMK, 2021)",
     "sources": "DGU Registar prostornih jedinica (naselja); popis sučija po M. Šenoa, “Turopolje” (1910); opseg regije po Turopoljskom leksikonu (LZMK, 2021)",
     "samplePoints": "45.712, 16.076, Velika Gorica\n45.669, 15.976, Lukavec"
+  },
+  {
+    "slug": "sisak",
+    "label": "Sisak",
+    "labelGenitive": "Siska",
+    "menuLabel": "Sisak",
+    "subtitle": "anatomija grada · naselja",
+    "source": "sisak",
+    "jlsMb": [
+      "03913"
+    ],
+    "unit": [
+      "naselje",
+      "naselja",
+      "naselja"
+    ],
+    "attribution": "podaci: DGU Registar prostornih jedinica",
+    "sources": "DGU Registar prostornih jedinica (naselja)",
+    "samplePoints": "45.485, 16.374, Moj ured\n45.475, 16.391, Sisak"
+  },
+  {
+    "slug": "sisak-okolica",
+    "label": "Sisak i okolica",
+    "labelGenitive": "Siska i okolice",
+    "menuLabel": "Sisak i okolica — urbano područje",
+    "subtitle": "anatomija kraja · urbano područje",
+    "source": "sisak",
+    "jlsMb": [
+      "03913",
+      "04260",
+      "02593"
+    ],
+    "unit": [
+      "naselje",
+      "naselja",
+      "naselja"
+    ],
+    "outlines": [
+      "jls",
+      "regija"
+    ],
+    "attribution": "podaci: DGU RPJ · obuhvat: Urbano područje Sisak (2022)",
+    "sources": "DGU Registar prostornih jedinica (naselja); obuhvat po Odluci o sastavu Urbanog područja Sisak (Gradsko vijeće Grada Siska, 19. 10. 2022.)",
+    "samplePoints": "45.475, 16.391, Sisak\n45.369, 16.572, Sunja\n45.580, 16.382, Martinska Ves"
   }
 ]

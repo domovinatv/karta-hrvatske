@@ -86,8 +86,11 @@ async function openPoster(page: Page, slug: string) {
 }
 
 // Turopolje je najgori slučaj (115 naselja, od toga par tankih dijagonalnih),
-// Kravarsko je nekad prelijevalo "Barbarići Kravarski" u susjeda.
-for (const slug of ["kravarsko", "velika-gorica", "turopolje"]) {
+// Kravarsko je nekad prelijevalo "Barbarići Kravarski" u susjeda. Sisak i
+// okolica dodaje drugi oblik problema: posavska naselja uz Savu su uske
+// trake okomite na rijeku ("Lijevo Trebarjevo", "Desno Željezno"), pa im
+// natpis ovisi o rotaciji, a Grad Sisak se proteže u Lonjsko polje.
+for (const slug of ["kravarsko", "velika-gorica", "turopolje", "sisak-okolica"]) {
   test(`plakat ${slug}: nijedan natpis ne izlazi iz poligona`, async ({ page }) => {
     await openPoster(page, slug);
     for (const format of ["kvadrat", "portret", "pejzaz"]) {

@@ -1,10 +1,10 @@
 # Generator plakata — registar subjekata, fit imena, izvori
 
-Stanje na 2026-08-28. Generator je narastao s 2 grada na **8 subjekata**, a s
+Stanje na 2026-08-29. Generator je narastao s 2 grada na **10 subjekata**, a s
 njima su došla tri problema koja se ne vide iz koda: kako se subjekt definira,
-kako ime naselja stane u svoj poligon, i po čemu je Turopolje ovako omeđeno.
+kako ime naselja stane u svoj poligon, i po čemu je područje ovako omeđeno.
 
-## Osam plakata
+## Deset plakata
 
 | ruta | jedinice | km² | stanovnika | sloj |
 |---|---|---|---|---|
@@ -16,11 +16,14 @@ kako ime naselja stane u svoj poligon, i po čemu je Turopolje ovako omeđeno.
 | `/poster/orle` | 10 naselja | 59 | 1.765 | `turopolje` |
 | `/poster/turopolje` | 115 naselja | 762 | 83.714 | `turopolje` |
 | `/poster/plemenita-opcina` | 26 naselja | 194 | 45.005 | `turopolje` |
+| `/poster/sisak` | 36 naselja | 424 | 40.245 | `sisak` |
+| `/poster/sisak-okolica` | 92 naselja | 843 | 47.430 | `sisak` |
 
 Pravilo koje drži model dosljednim: **goli slug je uvijek cijela JLS u svojoj
 prirodnoj jedinici** (Zagreb kvartovi, ostali naselja). Varijante dobivaju
-eksplicitan sufiks (`-cetvrti`). Zato `/poster/velika-gorica` znači cijelu
-JLS, a ne 8 gradskih četvrti kao u prvoj verziji.
+eksplicitan sufiks (`-cetvrti`, `-okolica`). Zato `/poster/velika-gorica`
+znači cijelu JLS, a ne 8 gradskih četvrti kao u prvoj verziji, a
+`/poster/sisak` Grad Sisak, ne njegovo urbano područje.
 
 ## Registar je jedan JSON, čitaju ga tri mjesta
 
@@ -35,8 +38,8 @@ flowchart LR
     R --> C["build-sitemap.mjs<br/>/poster/&lt;slug&gt; URL-ovi"]
     A --> D["PosterView.tsx<br/>dropdown + SVG render"]
     B --> E["_worker.js<br/>OG meta za WhatsApp"]
-    P["25_turopolje_naselja.py"] --> F["hr_turopolje_naselja.geojson"]
-    F -- "sync-data" --> G["public/data/turopolje-naselja.geojson"]
+    P["25_turopolje_naselja.py<br/>26_sisak_naselja.py"] --> F["hr_*_naselja.geojson"]
+    F -- "sync-data" --> G["public/data/*-naselja.geojson"]
     G --> D
     G --> B
 ```
@@ -96,7 +99,7 @@ naselja): bez kazne za nagib 5 vodoravnih natpisa i prosjek 5,72 mm, s
 kaznom ~90 vodoravnih i prosjek 5,6 mm — dakle mirniji plakat praktički
 besplatno.
 
-Rezultat: **1296 natpisa** (8 plakata × 3 formata), nijedan ne izlazi iz svog
+Rezultat: **1680 natpisa** (10 plakata × 3 formata), nijedan ne izlazi iz svog
 poligona i nijedno naselje nije bez imena osim par najsitnijih zagrebačkih
 mjesnih odbora s dugim imenima (`MIN_LABEL = 0.8` mm).
 
@@ -240,6 +243,47 @@ posljedice:
 
 Ostalo je samo rezanje koordinata na 6 decimala (~10 cm), što je topološki
 sigurno jer isti ulazni vrh daje isti izlazni.
+
+## Sisak: obuhvat je akt, ne procjena
+
+Dva plakata iz jednog sloja (`26_sisak_naselja.py` → `sisak-naselja.geojson`),
+istim obrascem kao Turopolje, ali bez uredničkog popisa naselja — jer za
+"Sisak i okolicu" postoji službena definicija:
+
+| | JLS | naselja | km² | stanovnika |
+|---|---|---|---|---|
+| `/poster/sisak` | Sisak (03913) | 36 | 424 | 40.245 |
+| `/poster/sisak-okolica` | + Sunja (04260), Martinska Ves (02593) | 92 | 843 | 47.430 |
+
+**Sisak i okolica = Urbano područje Sisak.** Grad Sisak je središte, Sunja i
+Martinska Ves članice. Ministarstvo regionalnoga razvoja i fondova EU
+očitovalo se na konačni prijedlog obuhvata 28. 10. 2020., članice su
+11. 8. 2021. sklopile Sporazum o suradnji na izradi i provedbi Strategije
+razvoja Urbanog područja Sisak 2021.–2027., a Gradsko vijeće Grada Siska
+donijelo je **Odluku o sastavu Urbanog područja Sisak 19. 10. 2022.**
+<https://sisak.hr/itu-mehanizam/uspostava-urbanog-podrucja-sisak/>
+
+Zašto ne „Sisak + sve susjedne JLS": Sisak graniči s **devet** JLS-ova, jer se
+njegovo područje proteže na istok kroz Lonjsko polje (do 16,78° E). Među
+susjedima su tako i Kutina, Popovača, Lipovljani i Velika Ludina — Moslavina,
+koja nije sisačka okolica. Svaki bi rez tu bio naša procjena; ovaj ima potpis,
+pa footer nosi `obuhvat: Urbano područje Sisak (2022)`.
+
+Razlika prema Turopolju je poučna: ondje je obuhvat morao biti izveden iz
+literature naselje po naselje (`TUROPOLJE_NASELJA`), jer povijesna regija nema
+službenu granicu. Ovdje su granice JLS-a **jesu** definicija, pa skripta nema
+popis imena — ali zato ima provjeru broja naselja po JLS-u
+(`EXPECT_NASELJA` 36/40/16): ako se DGU registar promijeni, korak padne
+umjesto da tiho izbaci drukčiji plakat.
+
+### Što je bilo neizvjesno u smještaju natpisa
+
+Posavska naselja uz Savu su uske trake okomite na rijeku (Lijevo/Desno
+Trebarjevo, Lijevo/Desno Željezno) — točno onaj oblik na kojem je centroidni
+smještaj padao. Upisani pravokutnik + rotacija to rješava bez iznimke: svih
+92 naselja dobije ime u sva tri formata, najsitnije je „Lijevo Željezno" na
+1,42 mm (pejzaž), dakle iznad `MIN_LABEL`. Zato je `sisak-okolica` dodan u
+`e2e/poster-labels.spec.ts` uz Turopolje.
 
 ## Zamka u alatu: `tsc -p tsconfig.json` ne provjerava ništa
 

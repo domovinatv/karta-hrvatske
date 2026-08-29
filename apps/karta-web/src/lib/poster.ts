@@ -13,6 +13,7 @@ export type { ProjectedKvart, ProjectedSubject, Ring } from "./poster-geom";
 export const POSTER_SOURCES: Record<string, string> = {
   kvartovi: "/data/kvartovi-kolokvijalni.geojson",
   turopolje: "/data/turopolje-naselja.geojson",
+  sisak: "/data/sisak-naselja.geojson",
 };
 
 export interface PosterSubject {

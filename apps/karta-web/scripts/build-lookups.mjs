@@ -111,6 +111,7 @@ const posterSubjects = JSON.parse(
 const POSTER_SOURCE_FILES = {
   kvartovi: "kvartovi-kolokvijalni.geojson",
   turopolje: "turopolje-naselja.geojson",
+  sisak: "sisak-naselja.geojson",
 };
 const sourceFeatures = {};
 for (const [key, file] of Object.entries(POSTER_SOURCE_FILES)) {
