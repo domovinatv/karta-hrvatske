@@ -254,6 +254,12 @@ npx tsc -b --force        # ili npm run build, koji ionako vrti tsc -b
 `node_modules/.bin`. Nije blokirajuće jer build vrti `tsc -b`, ali lint
 zapravo nikad ne prolazi.
 
+## Deploy 2026-08-29
+
+Engine je na produkciji (`gis.domovina.ai`, CF Pages projekt `gis-domovina`).
+Verificiran mjerenjem na živoj domeni, ne screenshotom — postupak i brojke u
+`2026-08-17-deploy-verifikacija.md`, poglavlje „Grafika koja se računa".
+
 ## Vezani dokumenti
 
 - [`2026-08-17-deploy-verifikacija.md`](./2026-08-17-deploy-verifikacija.md) —

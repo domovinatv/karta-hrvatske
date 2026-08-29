@@ -82,6 +82,28 @@ const sc = panel.querySelector('.overflow-y-auto');
 });
 ```
 
+### Grafika koja se računa: mjeri je na produkciji, ne gledaj (2026-08-29)
+
+Plakati su generirani SVG — provjera „izgleda dobro" na screenshotu ne hvata
+natpis koji za pola milimetra prelazi granicu poligona. Deploy engine-a za
+smještaj natpisa (v. `2026-08-28-poster-generator.md`) verificiran je tako da
+je isti `isPointInFill` test iz `e2e/poster-labels.spec.ts` odvrtjen protiv
+**žive domene**:
+
+```js
+// za svaki text[data-unit] na https://gis.domovina.ai/poster/<slug>
+// izmjeri otisak slova canvasom i testiraj vrhove nad path[data-unit] istog naselja
+```
+
+Rezultat prvog produkcijskog prolaza: turopolje 115, velika-gorica 58,
+kravarsko 10 natpisa — **0 izvan poligona**, uz podudaran bundle hash
+(`index-phRDu6rE.js`). Test traži `svg[data-labels="measured"]`, pa usput
+dokazuje i da je font stvarno stigao na produkciji, a ne samo lokalno.
+
+Pravilo: kad je izlaz rezultat izračuna (SVG, canvas, tile), verifikacija na
+produkciji mora biti **mjerenje istim kriterijem kao test**, a screenshot je
+samo dodatak.
+
 ---
 
 ## 3. Redoslijed koji radi
