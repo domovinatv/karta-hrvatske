@@ -389,6 +389,12 @@ Produkcijski prolaz za Sisak (bundle `index-D3p89x4s.js`, isti hash kao lokalni
 `dist/`): `sisak` 36 natpisa i `sisak-okolica` 92 natpisa u sva tri formata —
 **0 izvan poligona**, najmanji font 1,2 px SVG-a na pejzažu.
 
+Osam plakata iz 2026-08-30 (Petrinja, Split, Split-kotari, Osijek, Rijeka,
+Varaždin, Dubrovnik, Pula i okolica), bundle `index-D7evMRKt.js`:
+**786 natpisa × 3 formata, 0 izvan poligona.** Najtjesnije je priobalje —
+Dubrovnik 1,3 px i Pula 1,3 px na pejzažu — dakle Elafiti i Brijuni su donja
+granica, a ne kopnena naselja.
+
 ## Vezani dokumenti
 
 - [`2026-08-17-deploy-verifikacija.md`](./2026-08-17-deploy-verifikacija.md) —
