@@ -14,6 +14,9 @@ export const POSTER_SOURCES: Record<string, string> = {
   kvartovi: "/data/kvartovi-kolokvijalni.geojson",
   turopolje: "/data/turopolje-naselja.geojson",
   sisak: "/data/sisak-naselja.geojson",
+  gradovi: "/data/gradovi-naselja.geojson",
+  pula: "/data/pula-naselja.geojson",
+  kotari: "/data/grad-kotari.geojson",
 };
 
 export interface PosterSubject {

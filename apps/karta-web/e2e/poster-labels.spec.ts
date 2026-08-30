@@ -90,7 +90,12 @@ async function openPoster(page: Page, slug: string) {
 // okolica dodaje drugi oblik problema: posavska naselja uz Savu su uske
 // trake okomite na rijeku ("Lijevo Trebarjevo", "Desno Željezno"), pa im
 // natpis ovisi o rotaciji, a Grad Sisak se proteže u Lonjsko polje.
-for (const slug of ["kravarsko", "velika-gorica", "turopolje", "sisak-okolica"]) {
+// Dubrovnik i pula-okolica dodaju priobalje: otoci su sitni poligoni s
+// razvedenim rubom, gdje upisani pravokutnik ostaje minijaturan.
+// Rijeka je prvi sloj iz OSM-a izvan Zagreba/VG — druga geometrija
+// (mjesni odbori, ne naselja) i drugi izvor rubova.
+for (const slug of ["kravarsko", "velika-gorica", "turopolje", "sisak-okolica",
+                    "dubrovnik", "rijeka", "pula-okolica"]) {
   test(`plakat ${slug}: nijedan natpis ne izlazi iz poligona`, async ({ page }) => {
     await openPoster(page, slug);
     for (const format of ["kvadrat", "portret", "pejzaz"]) {

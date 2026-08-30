@@ -212,5 +212,168 @@
     "attribution": "podaci: DGU RPJ · obuhvat: Urbano područje Sisak (2022)",
     "sources": "DGU Registar prostornih jedinica (naselja); obuhvat po Odluci o sastavu Urbanog područja Sisak (Gradsko vijeće Grada Siska, 19. 10. 2022.)",
     "samplePoints": "45.475, 16.391, Sisak\n45.369, 16.572, Sunja\n45.580, 16.382, Martinska Ves"
+  },
+  {
+    "slug": "petrinja",
+    "label": "Petrinja",
+    "labelGenitive": "Petrinje",
+    "menuLabel": "Petrinja",
+    "subtitle": "anatomija grada · naselja",
+    "source": "gradovi",
+    "jlsMb": [
+      "03280"
+    ],
+    "unit": [
+      "naselje",
+      "naselja",
+      "naselja"
+    ],
+    "attribution": "podaci: DGU Registar prostornih jedinica",
+    "sources": "DGU Registar prostornih jedinica (naselja)",
+    "samplePoints": "45.425, 16.305, Petrinja\n45.399, 16.272, Hrastovica"
+  },
+  {
+    "slug": "split",
+    "label": "Split",
+    "labelGenitive": "Splita",
+    "menuLabel": "Split",
+    "subtitle": "anatomija grada · naselja",
+    "source": "gradovi",
+    "jlsMb": [
+      "04090"
+    ],
+    "unit": [
+      "naselje",
+      "naselja",
+      "naselja"
+    ],
+    "attribution": "podaci: DGU Registar prostornih jedinica",
+    "sources": "DGU Registar prostornih jedinica (naselja)",
+    "samplePoints": "43.515, 16.464, Split\n43.505, 16.519, Stobreč"
+  },
+  {
+    "slug": "split-kotari",
+    "label": "Split",
+    "labelGenitive": "Splita",
+    "menuLabel": "Split — gradski kotari",
+    "subtitle": "anatomija grada · gradski kotari",
+    "source": "kotari",
+    "jlsMb": [
+      "04090"
+    ],
+    "unit": [
+      "gradski kotar",
+      "gradska kotara",
+      "gradskih kotara"
+    ],
+    "attribution": "podaci: © OpenStreetMap (ODbL)",
+    "sources": "OpenStreetMap (ODbL) — boundary=administrative, admin_level=9",
+    "samplePoints": "43.511, 16.439, Grad\n43.506, 16.495, Žnjan"
+  },
+  {
+    "slug": "osijek",
+    "label": "Osijek",
+    "labelGenitive": "Osijeka",
+    "menuLabel": "Osijek",
+    "subtitle": "anatomija grada · naselja",
+    "source": "gradovi",
+    "jlsMb": [
+      "03123"
+    ],
+    "unit": [
+      "naselje",
+      "naselja",
+      "naselja"
+    ],
+    "attribution": "podaci: DGU Registar prostornih jedinica",
+    "sources": "DGU Registar prostornih jedinica (naselja)",
+    "samplePoints": "45.547, 18.690, Osijek\n45.484, 18.772, Tenja"
+  },
+  {
+    "slug": "rijeka",
+    "label": "Rijeka",
+    "labelGenitive": "Rijeke",
+    "menuLabel": "Rijeka",
+    "subtitle": "anatomija grada · mjesni odbori",
+    "source": "kotari",
+    "jlsMb": [
+      "03735"
+    ],
+    "unit": [
+      "mjesni odbor",
+      "mjesna odbora",
+      "mjesnih odbora"
+    ],
+    "attribution": "podaci: © OpenStreetMap (ODbL)",
+    "sources": "OpenStreetMap (ODbL) — boundary=administrative, admin_level=9",
+    "samplePoints": "45.345, 14.384, Zamet\n45.331, 14.463, Trsat"
+  },
+  {
+    "slug": "varazdin",
+    "label": "Varaždin",
+    "labelGenitive": "Varaždina",
+    "menuLabel": "Varaždin",
+    "subtitle": "anatomija grada · naselja",
+    "source": "gradovi",
+    "jlsMb": [
+      "04723"
+    ],
+    "unit": [
+      "naselje",
+      "naselja",
+      "naselja"
+    ],
+    "attribution": "podaci: DGU Registar prostornih jedinica",
+    "sources": "DGU Registar prostornih jedinica (naselja)",
+    "samplePoints": "46.313, 16.343, Varaždin\n46.264, 16.340, Črnec Biškupečki"
+  },
+  {
+    "slug": "dubrovnik",
+    "label": "Dubrovnik",
+    "labelGenitive": "Dubrovnika",
+    "menuLabel": "Dubrovnik",
+    "subtitle": "anatomija grada · naselja",
+    "source": "gradovi",
+    "jlsMb": [
+      "00981"
+    ],
+    "unit": [
+      "naselje",
+      "naselja",
+      "naselja"
+    ],
+    "attribution": "podaci: DGU Registar prostornih jedinica",
+    "sources": "DGU Registar prostornih jedinica (naselja)",
+    "samplePoints": "42.649, 18.095, Dubrovnik\n42.736, 17.870, Šipanska Luka"
+  },
+  {
+    "slug": "pula-okolica",
+    "label": "Pula i okolica",
+    "labelGenitive": "Pule i okolice",
+    "menuLabel": "Pula i okolica — urbano područje",
+    "subtitle": "anatomija kraja · urbano područje",
+    "source": "pula",
+    "jlsMb": [
+      "03590",
+      "05029",
+      "06190",
+      "02631",
+      "02356",
+      "02542",
+      "00060",
+      "04359"
+    ],
+    "unit": [
+      "naselje",
+      "naselja",
+      "naselja"
+    ],
+    "outlines": [
+      "jls",
+      "regija"
+    ],
+    "attribution": "podaci: DGU RPJ · obuhvat: Urbano područje Pula",
+    "sources": "DGU Registar prostornih jedinica (naselja); obuhvat po Strategiji razvoja Urbanog područja Pula (Grad Pula-Pola)",
+    "samplePoints": "44.868, 13.849, Pula\n44.830, 13.932, Medulin\n44.956, 13.959, Marčana"
   }
 ]

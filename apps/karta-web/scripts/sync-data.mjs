@@ -35,6 +35,9 @@ const fileMap = [
   ["hr_kvartovi_kolokvijalni.geojson", "kvartovi-kolokvijalni.geojson"],
   ["hr_turopolje_naselja.geojson", "turopolje-naselja.geojson"],
   ["hr_sisak_naselja.geojson", "sisak-naselja.geojson"],
+  ["hr_gradovi_naselja.geojson", "gradovi-naselja.geojson"],
+  ["hr_pula_naselja.geojson", "pula-naselja.geojson"],
+  ["hr_grad_kotari.geojson", "grad-kotari.geojson"],
 ];
 
 // hr_canonical.geojson lives in apps/data-pipeline/data/, not outputs/. Look in both.

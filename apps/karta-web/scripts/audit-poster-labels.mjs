@@ -38,6 +38,9 @@ const SOURCES = {
   kvartovi: "public/data/kvartovi-kolokvijalni.geojson",
   turopolje: "public/data/turopolje-naselja.geojson",
   sisak: "public/data/sisak-naselja.geojson",
+  gradovi: "public/data/gradovi-naselja.geojson",
+  pula: "public/data/pula-naselja.geojson",
+  kotari: "public/data/grad-kotari.geojson",
 };
 
 // Približne mjere za serif 600 (Fraunces) — node nema canvas. Gruba, ali

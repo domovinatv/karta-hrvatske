@@ -112,6 +112,9 @@ const POSTER_SOURCE_FILES = {
   kvartovi: "kvartovi-kolokvijalni.geojson",
   turopolje: "turopolje-naselja.geojson",
   sisak: "sisak-naselja.geojson",
+  gradovi: "gradovi-naselja.geojson",
+  pula: "pula-naselja.geojson",
+  kotari: "grad-kotari.geojson",
 };
 const sourceFeatures = {};
 for (const [key, file] of Object.entries(POSTER_SOURCE_FILES)) {
