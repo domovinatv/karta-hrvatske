@@ -284,6 +284,76 @@ test("Inkubatori toggle: sloj se učita, renderira i popup otvara", async ({ pag
   await expect(page.locator(".club-popup .club-league").first()).not.toContainText("object");
 });
 
+test("Privatni ekosustav: kurirani sloj se učita i popup nosi oznaku izvora", async ({
+  page,
+}) => {
+  await page.goto(BASE + "/");
+  await waitForMapIdle(page);
+
+  const btn = page.locator("button", { hasText: /Privatni ekosustav/ }).first();
+  const reqPromise = page.waitForRequest((req) => req.url().includes("/data/ekosustav.geojson"));
+  await btn.click();
+  expect((await (await reqPromise).response())?.status()).toBe(200);
+
+  await page.waitForFunction(
+    () => {
+      const w = window as unknown as { _gisMap?: import("maplibre-gl").Map };
+      const map = w._gisMap;
+      if (!map?.getLayer("hr-ekosustav-circle")) return false;
+      return map.queryRenderedFeatures({ layers: ["hr-ekosustav-circle"] } as never).length > 0;
+    },
+    { timeout: 10000 },
+  );
+
+  await page.locator('button[aria-label="Sklopi panel"]').click();
+  await expect(page.getByTestId("layers-panel")).toHaveCount(0);
+
+  const pt = await page.evaluate(async () => {
+    const w = window as unknown as { _gisMap?: import("maplibre-gl").Map };
+    const map = w._gisMap!;
+    const feats = map.queryRenderedFeatures({ layers: ["hr-ekosustav-circle"] } as never);
+    if (!feats.length) return null;
+    const f = feats[0];
+    const coords = (f.geometry as GeoJSON.Point).coordinates as [number, number];
+    map.jumpTo({ center: coords, zoom: 13 });
+    await new Promise((r) => setTimeout(r, 600));
+    const px = map.project(coords);
+    const rect = map.getCanvas().getBoundingClientRect();
+    return {
+      x: rect.left + px.x,
+      y: rect.top + px.y,
+      brand: (f.properties as { brand: string }).brand,
+    };
+  });
+  expect(pt).not.toBeNull();
+  await page.mouse.click(pt!.x, pt!.y);
+
+  await expect(page.locator(".maplibregl-popup-content .club-popup")).toBeVisible({
+    timeout: 5000,
+  });
+  await expect(page.locator(".club-popup .club-name").first()).toHaveText(pt!.brand);
+  // Provenijencija mora biti vidljiva: ovo nije registar i popup to mora reći.
+  await expect(page.locator(".club-popup .club-league").first()).toContainText("kurirano");
+});
+
+// Dva sloja u grupi Gospodarstvo drže odvojene izvore i ne smiju se
+// preklapati — isti subjekt na obje karte je dvostruko brojanje. Provjeru radi
+// i pipeline (33_fetch_ppi_privatni.py izađe s 1), ovo je druga brana.
+test("Inkubatori i Privatni ekosustav nemaju zajednički OIB", async ({ page }) => {
+  await page.goto(BASE + "/");
+  const [a, b] = await Promise.all([
+    page.evaluate(() => fetch("/data/inkubatori.geojson").then((r) => r.json())),
+    page.evaluate(() => fetch("/data/ekosustav.geojson").then((r) => r.json())),
+  ]);
+  const oibsA = new Set(
+    (a.features as { properties: { oib?: string } }[]).map((f) => f.properties.oib),
+  );
+  const preklop = (b.features as { properties: { oib?: string; brand: string } }[])
+    .filter((f) => oibsA.has(f.properties.oib))
+    .map((f) => f.properties.brand);
+  expect(preklop).toEqual([]);
+});
+
 test("Zračne luke toggle loads airports + runways + approaches", async ({ page }) => {
   await page.goto(BASE + "/");
   await waitForMapIdle(page);
@@ -401,7 +471,7 @@ test("desktop: svaka kontrola iz registra je dohvatljiva klikom", async ({ page 
   await page.goto(BASE + "/");
   await waitForMapIdle(page);
 
-  for (const label of ["Ortofoto", "Naselja", "Crkve", "Biskupije", "Inkubatori", "Zračne luke"]) {
+  for (const label of ["Ortofoto", "Naselja", "Crkve", "Biskupije", "Inkubatori", "Privatni ekosustav", "Zračne luke"]) {
     const btn = page.locator("button", { hasText: new RegExp(label) }).first();
     await btn.scrollIntoViewIfNeeded();
     await expect(btn, `kontrola "${label}" nije u viewportu`).toBeInViewport();

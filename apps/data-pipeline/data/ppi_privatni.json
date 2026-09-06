@@ -1,0 +1,98 @@
+{
+  "_opis": "Privatni dio startup ekosustava — subjekti kojih NEMA u JRPI-ju. Za razliku od sloja Inkubatori, ovo nije registar nego kurirani popis: netko ga je sastavio i netko ga mora održavati.",
+  "_metoda": "Identitet je OIB, ne ime. Adresa, pravni naziv i status NE upisuju se ovdje nego se dohvaćaju iz FINA info.BIZ-a po OIB-u (scripts/33_fetch_ppi_privatni.py), pa je popis otporan na preseljenje i preimenovanje. OIB-evi su nađeni u info.BIZ indeksu i provjereni protiv naziva subjekta.",
+  "_kategorije": {
+    "fond": "VC ili investicijski fond",
+    "inkubator": "privatni inkubator ili akcelerator izvan JRPI-ja",
+    "zajednica": "udruga koja okuplja tehnološku zajednicu",
+    "hub": "privatni coworking / hub",
+    "korporativni": "korporativni startup program"
+  },
+  "subjekti": [
+    {
+      "oib": "91054466414",
+      "brand": "Fil Rouge Capital",
+      "kategorija": "fond",
+      "website": "https://filrougecapital.com/",
+      "napomena": "Najaktivniji VC u Hrvatskoj, 170+ ulaganja, vodi i akcelerator dvaput godišnje. OIB 91054466414 je podružnica ciparskog subjekta i u info.BIZ-u nosi ciparsku adresu (Strovolos), a upravljanje fondom je luksemburško (FRC Fund Management S.à r.l.). Zato `adresa_override`: zagrebački ured s njihove vlastite kontakt stranice, provjereno 2026-09-06. Agregatori (Crunchbase, ZoomInfo) navode Jurišićevu 24 — zastarjelo, službeni izvor ima prednost.",
+      "adresa_override": "Trg Kralja Tomislava 15, 10000 Zagreb"
+    },
+    {
+      "oib": "89112739620",
+      "brand": "Feelsgood Capital",
+      "kategorija": "fond",
+      "website": "https://www.feelsgoodcapital.com/",
+      "napomena": "Prvi hrvatski fond za društveni učinak."
+    },
+    {
+      "oib": "31486520098",
+      "brand": "AYMO Ventures",
+      "kategorija": "fond",
+      "website": "https://aymo.vc/",
+      "napomena": "EIF-om podržana platforma; akceleratorski i growth fond su zasebni luksemburški SCSP-ovi, ovdje stoji hrvatski upravljački subjekt."
+    },
+    {
+      "oib": "67553092393",
+      "brand": "StartupVG",
+      "kategorija": "inkubator",
+      "website": "https://startupvg.hr/",
+      "napomena": "Poduzetnički inkubator Velika Gorica. Nosi ime inkubatora, ali NIJE upisan u JRPI — točno razlog zašto ovaj sloj postoji."
+    },
+    {
+      "oib": "06519815245",
+      "brand": "Osijek Software City",
+      "kategorija": "zajednica",
+      "website": "https://softwarecity.hr/",
+      "napomena": "Udruga koja okuplja slavonsku IT scenu; OIB potvrđen u podnožju vlastite stranice."
+    },
+    {
+      "oib": "27758798266",
+      "brand": "Split Tech City",
+      "kategorija": "zajednica",
+      "website": "https://split-techcity.com/",
+      "napomena": "Pravni naziv je „STARTUP — udruga za poticanje i razvoj IT sektora Splita i regije“; brend se u registru nigdje ne pojavljuje."
+    },
+    {
+      "oib": "43145355545",
+      "brand": "Cro Startup",
+      "kategorija": "zajednica",
+      "website": "https://crostartup.org/",
+      "napomena": "Nacionalna startup udruga."
+    },
+    {
+      "oib": "73034297151",
+      "brand": "Startup Šibenik",
+      "kategorija": "zajednica",
+      "website": null,
+      "napomena": "Udruga za poticanje i razvoj poduzetništva. Šibenik u JRPI-ju već ima Trokut i PODI — ovo je zajednica uz njih."
+    },
+    {
+      "oib": "53336141612",
+      "brand": "HUB385 (udruga)",
+      "kategorija": "zajednica",
+      "website": "https://www.hub385.com/",
+      "napomena": "Udruga iza HUB385 zajednice. Prostor vodi NEST 01 d.o.o., koji JE u JRPI-ju — ovo je drugi pravni subjekt, moguće na istoj adresi."
+    },
+    {
+      "oib": "64759014334",
+      "brand": "WESPA Spaces",
+      "kategorija": "hub",
+      "website": "https://wespa.hr/",
+      "napomena": "Privatni coworking, Radnička cesta."
+    },
+    {
+      "oib": "29756659895",
+      "brand": "Infobip Startup Tribe",
+      "kategorija": "korporativni",
+      "website": "https://www.infobip.com/startups",
+      "napomena": "Korporativni startup program, ne zasebna pravna osoba — točka stoji na sjedištu Infobipa (kampus Vodnjan)."
+    }
+  ],
+  "_izostavljeni": [
+    {
+      "oib": "57959339966",
+      "brand": "Startup Croatia",
+      "razlog": "FINA status „Neaktivan/izbrisan“ — udruga je raspuštena. Sloj Inkubatori zadržava mrtve subjekte jer vjerno prikazuje registar; kurirani popis nema tu obvezu i prikazuje samo ono što danas postoji. Zapisano ovdje da se ne vrati na popis bez razmišljanja."
+    }
+  ]
+}

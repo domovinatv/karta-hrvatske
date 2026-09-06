@@ -1,0 +1,364 @@
+{
+ "type": "FeatureCollection",
+ "name": "hr_ppi_privatni",
+ "metadata": {
+  "izvor": "kurirani popis + FINA info.BIZ (naziv, adresa, status)",
+  "napomena": "Nije registar. Subjekti kojih nema u JRPI-ju.",
+  "provjereno": "2026-09-06",
+  "subjekata": 11
+ },
+ "features": [
+  {
+   "type": "Feature",
+   "id": 91054466414,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.977845,
+     45.806242
+    ]
+   },
+   "properties": {
+    "id": 91054466414,
+    "brand": "Fil Rouge Capital",
+    "naziv": "FIL ROUGE CAPITAL LIMITED",
+    "kategorija": "fond",
+    "kategorija_naziv": "Fond / investitor",
+    "oib": "91054466414",
+    "adresa": "Trg Kralja Tomislava 15, 10000 Zagreb",
+    "mjesto": "Zagreb",
+    "website": "https://filrougecapital.com/",
+    "napomena": "Najaktivniji VC u Hrvatskoj, 170+ ulaganja, vodi i akcelerator dvaput godišnje. OIB 91054466414 je podružnica ciparskog subjekta i u info.BIZ-u nosi ciparsku adresu (Strovolos), a upravljanje fondom je luksemburško (FRC Fund Management S.à r.l.). Zato `adresa_override`: zagrebački ured s njihove vlastite kontakt stranice, provjereno 2026-09-06. Agregatori (Crunchbase, ZoomInfo) navode Jurišićevu 24 — zastarjelo, službeni izvor ima prednost.",
+    "pravni_oblik": null,
+    "nkd": "9999 - Nepoznata djelatnost",
+    "fina_status": "Aktivan",
+    "fina_velicina": null,
+    "fina_zaposleni": null,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/fil-rouge-capital-limited/OIB-91054466414",
+    "fina_aktivan": true,
+    "geo_source": "dgu-adresa",
+    "izvor": "kurirano"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 89112739620,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.975741,
+     45.812943
+    ]
+   },
+   "properties": {
+    "id": 89112739620,
+    "brand": "Feelsgood Capital",
+    "naziv": "FEELSGOOD CAPITAL PARTNERS društvo s ograničenom odgovornošću za upravljanje alternativnim investicijskim fondovima",
+    "kategorija": "fond",
+    "kategorija_naziv": "Fond / investitor",
+    "oib": "89112739620",
+    "adresa": "Ilica 1/A, 10000 Zagreb",
+    "mjesto": "Zagreb",
+    "website": "https://www.feelsgoodcapital.com/",
+    "napomena": "Prvi hrvatski fond za društveni učinak.",
+    "pravni_oblik": "Društvo s ograničenom odgovornošću",
+    "nkd": "6630 - Djelatnosti upravljanja fondovima",
+    "fina_status": "Aktivan",
+    "fina_velicina": "Veliki",
+    "fina_zaposleni": null,
+    "fina_url": "https://infobiz.fina.hr/financije/feelsgood-capital-partners-d-o-o/OIB-89112739620",
+    "fina_aktivan": true,
+    "geo_source": "dgu-adresa",
+    "izvor": "kurirano"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 31486520098,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.969566,
+     45.797919
+    ]
+   },
+   "properties": {
+    "id": 31486520098,
+    "brand": "AYMO Ventures",
+    "naziv": "AYMO Ventures d.o.o. za poslovno savjetovanje",
+    "kategorija": "fond",
+    "kategorija_naziv": "Fond / investitor",
+    "oib": "31486520098",
+    "adresa": "Ulica Alexandera von Humboldta 4/B, 10000 Zagreb",
+    "mjesto": "Zagreb",
+    "website": "https://aymo.vc/",
+    "napomena": "EIF-om podržana platforma; akceleratorski i growth fond su zasebni luksemburški SCSP-ovi, ovdje stoji hrvatski upravljački subjekt.",
+    "pravni_oblik": "Društvo s ograničenom odgovornošću",
+    "nkd": "7022 - Savjetovanje u vezi s poslovanjem i ostalim upravljanjem",
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 4,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/aymo-ventures-d-o-o/OIB-31486520098",
+    "fina_aktivan": true,
+    "geo_source": "dgu-adresa",
+    "izvor": "kurirano"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 67553092393,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.076046,
+     45.720253
+    ]
+   },
+   "properties": {
+    "id": 67553092393,
+    "brand": "StartupVG",
+    "naziv": "StartupVG poduzetnički inkubator d.o.o. za razvoj i poticanje poduzetništva",
+    "kategorija": "inkubator",
+    "kategorija_naziv": "Privatni inkubator",
+    "oib": "67553092393",
+    "adresa": "Podložnica 6, 10410 Velika Gorica",
+    "mjesto": "Velika Gorica",
+    "website": "https://startupvg.hr/",
+    "napomena": "Poduzetnički inkubator Velika Gorica. Nosi ime inkubatora, ali NIJE upisan u JRPI — točno razlog zašto ovaj sloj postoji.",
+    "pravni_oblik": "Društvo s ograničenom odgovornošću",
+    "nkd": "7022 - Savjetovanje u vezi s poslovanjem i ostalim upravljanjem",
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 0,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/startupvg-poduzetnicki-inkubator-d-o-o/OIB-67553092393",
+    "fina_aktivan": true,
+    "geo_source": "dgu-adresa",
+    "izvor": "kurirano"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 6519815245,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     18.678087,
+     45.56001
+    ]
+   },
+   "properties": {
+    "id": 6519815245,
+    "brand": "Osijek Software City",
+    "naziv": "OSIJEK SOFTWARE CITY",
+    "kategorija": "zajednica",
+    "kategorija_naziv": "Tehnološka zajednica",
+    "oib": "06519815245",
+    "adresa": "TRG SLOBODE 6, 31000 OSIJEK",
+    "mjesto": "Osijek",
+    "website": "https://softwarecity.hr/",
+    "napomena": "Udruga koja okuplja slavonsku IT scenu; OIB potvrđen u podnožju vlastite stranice.",
+    "pravni_oblik": "Nepoznato",
+    "nkd": "9499 - Djelatnosti ostalih članskih organizacija, d. n.",
+    "fina_status": "Aktivan",
+    "fina_velicina": null,
+    "fina_zaposleni": null,
+    "fina_url": "https://infobiz.fina.hr/neprofitni/osc/OIB-06519815245",
+    "fina_aktivan": true,
+    "geo_source": "dgu-adresa",
+    "izvor": "kurirano"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 27758798266,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.461669,
+     43.505843
+    ]
+   },
+   "properties": {
+    "id": 27758798266,
+    "brand": "Split Tech City",
+    "naziv": "Startup- udruga za poticanje i razvoj IT sektora Splita i regije",
+    "kategorija": "zajednica",
+    "kategorija_naziv": "Tehnološka zajednica",
+    "oib": "27758798266",
+    "adresa": "POLJIČKA CESTA 26/B, 21000 SPLIT",
+    "mjesto": "Split",
+    "website": "https://split-techcity.com/",
+    "napomena": "Pravni naziv je „STARTUP — udruga za poticanje i razvoj IT sektora Splita i regije“; brend se u registru nigdje ne pojavljuje.",
+    "pravni_oblik": "Nepoznato",
+    "nkd": "9499 - Djelatnosti ostalih članskih organizacija, d. n.",
+    "fina_status": "Aktivan",
+    "fina_velicina": null,
+    "fina_zaposleni": null,
+    "fina_url": "https://infobiz.fina.hr/neprofitni/startup-udruga-za-poticanje-i-razvoj-it-sektora-splita-i-regije/OIB-27758798266",
+    "fina_aktivan": true,
+    "geo_source": "dgu-adresa",
+    "izvor": "kurirano"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 43145355545,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.972189,
+     45.802897
+    ]
+   },
+   "properties": {
+    "id": 43145355545,
+    "brand": "Cro Startup",
+    "naziv": "CRO STARTUP EKOSUSTAV ZA PROMICANJE INOVATIVNOSTI",
+    "kategorija": "zajednica",
+    "kategorija_naziv": "Tehnološka zajednica",
+    "oib": "43145355545",
+    "adresa": "BEDNJANSKA ULICA 8, 10000 ZAGREB",
+    "mjesto": "Zagreb",
+    "website": "https://crostartup.org/",
+    "napomena": "Nacionalna startup udruga.",
+    "pravni_oblik": "Nepoznato",
+    "nkd": "9499 - Djelatnosti ostalih članskih organizacija, d. n.",
+    "fina_status": "Aktivan",
+    "fina_velicina": null,
+    "fina_zaposleni": null,
+    "fina_url": "https://infobiz.fina.hr/neprofitni/cro-startup/OIB-43145355545",
+    "fina_aktivan": true,
+    "geo_source": "dgu-adresa",
+    "izvor": "kurirano"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 73034297151,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.904642,
+     43.729208
+    ]
+   },
+   "properties": {
+    "id": 73034297151,
+    "brand": "Startup Šibenik",
+    "naziv": "STARTUP ŠIBENIK - UDRUGA ZA POTICANJE I RAZVOJ PODUZETNIŠTVA I STARTUP ZAJEDNICE U ŠIBENIKU I REGIJI",
+    "kategorija": "zajednica",
+    "kategorija_naziv": "Tehnološka zajednica",
+    "oib": "73034297151",
+    "adresa": "Trg Andrije Hebranga 11, 22000 Šibenik",
+    "mjesto": "Šibenik",
+    "website": null,
+    "napomena": "Udruga za poticanje i razvoj poduzetništva. Šibenik u JRPI-ju već ima Trokut i PODI — ovo je zajednica uz njih.",
+    "pravni_oblik": null,
+    "nkd": "9499 - Djelatnosti ostalih članskih organizacija, d. n.",
+    "fina_status": "Aktivan",
+    "fina_velicina": null,
+    "fina_zaposleni": null,
+    "fina_url": "https://infobiz.fina.hr/neprofitni/udruga-za-poticanje-i-razvoj-poduzetnistva-startup-sibenik/OIB-73034297151",
+    "fina_aktivan": true,
+    "geo_source": "dgu-adresa",
+    "izvor": "kurirano"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 53336141612,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.957033,
+     45.808166
+    ]
+   },
+   "properties": {
+    "id": 53336141612,
+    "brand": "HUB385 (udruga)",
+    "naziv": "HUB385 ZA PROMICANJE REGIONALNOG RAZVOJA",
+    "kategorija": "zajednica",
+    "kategorija_naziv": "Tehnološka zajednica",
+    "oib": "53336141612",
+    "adresa": "FRANJE PETRAČIĆA 4, 10000 Zagreb",
+    "mjesto": "Zagreb",
+    "website": "https://www.hub385.com/",
+    "napomena": "Udruga iza HUB385 zajednice. Prostor vodi NEST 01 d.o.o., koji JE u JRPI-ju — ovo je drugi pravni subjekt, moguće na istoj adresi.",
+    "pravni_oblik": "Nepoznato",
+    "nkd": "9499 - Djelatnosti ostalih članskih organizacija, d. n.",
+    "fina_status": "Aktivan",
+    "fina_velicina": null,
+    "fina_zaposleni": null,
+    "fina_url": "https://infobiz.fina.hr/neprofitni/hub385/OIB-53336141612",
+    "fina_aktivan": true,
+    "geo_source": "dgu-adresa",
+    "izvor": "kurirano"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 64759014334,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.001996,
+     45.802674
+    ]
+   },
+   "properties": {
+    "id": 64759014334,
+    "brand": "WESPA Spaces",
+    "naziv": "WESPA SPACES d.o.o. za usluge i trgovinu",
+    "kategorija": "hub",
+    "kategorija_naziv": "Coworking / hub",
+    "oib": "64759014334",
+    "adresa": "Radnička cesta 50, 10000 Zagreb",
+    "mjesto": "Zagreb",
+    "website": "https://wespa.hr/",
+    "napomena": "Privatni coworking, Radnička cesta.",
+    "pravni_oblik": "Društvo s ograničenom odgovornošću",
+    "nkd": "6820 - Iznajmljivanje i upravljanje vlastitim nekretninama ili nekretninama uzetim u zakup (leasing)",
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mali",
+    "fina_zaposleni": 15,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/wespa-spaces-d-o-o/OIB-64759014334",
+    "fina_aktivan": true,
+    "geo_source": "dgu-adresa",
+    "izvor": "kurirano"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 29756659895,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.856454,
+     44.95302
+    ]
+   },
+   "properties": {
+    "id": 29756659895,
+    "brand": "Infobip Startup Tribe",
+    "naziv": "INFOBIP d.o.o. za informatičke usluge",
+    "kategorija": "korporativni",
+    "kategorija_naziv": "Korporativni program",
+    "oib": "29756659895",
+    "adresa": "Istarska ulica - Via dell'Istria 157, 52215 Vodnjan",
+    "mjesto": "Vodnjan",
+    "website": "https://www.infobip.com/startups",
+    "napomena": "Korporativni startup program, ne zasebna pravna osoba — točka stoji na sjedištu Infobipa (kampus Vodnjan).",
+    "pravni_oblik": "Društvo s ograničenom odgovornošću",
+    "nkd": "6311 - Obrada podataka, usluge poslužitelja i djelatnosti povezane s njima",
+    "fina_status": "Aktivan",
+    "fina_velicina": "Veliki",
+    "fina_zaposleni": 1192,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/infobip-d-o-o/OIB-29756659895",
+    "fina_aktivan": true,
+    "geo_source": "dgu-adresa",
+    "izvor": "kurirano"
+   }
+  }
+ ]
+}

@@ -373,6 +373,39 @@ export type InkubatorCollection = GeoJSON.FeatureCollection<
   InkubatorProperties
 >;
 
+/**
+ * Subjekt privatnog startup ekosustava — kurirano, NIJE registar.
+ * Naziv, adresa i status dolaze iz FINA info.BIZ-a po OIB-u; brend,
+ * kategorija i napomena su ljudska prosudba (`data/ppi_privatni.json`).
+ */
+export interface EkosustavProperties {
+  id: number;
+  brand: string;
+  /** Pravni naziv iz FINA-e; zna se bitno razlikovati od brenda. */
+  naziv?: string;
+  kategorija: "fond" | "inkubator" | "zajednica" | "hub" | "korporativni";
+  kategorija_naziv: string;
+  oib: string;
+  adresa?: string;
+  mjesto?: string;
+  website?: string;
+  /** Zašto je subjekt na kuriranom popisu. Prikazuje se u popupu. */
+  napomena?: string;
+  pravni_oblik?: string;
+  nkd?: string;
+  fina_status?: string;
+  fina_velicina?: string;
+  fina_zaposleni?: number;
+  fina_url?: string;
+  fina_aktivan?: boolean | null;
+  geo_source?: string;
+  izvor: "kurirano";
+}
+export type EkosustavCollection = GeoJSON.FeatureCollection<
+  GeoJSON.Point,
+  EkosustavProperties
+>;
+
 export interface AirportProperties {
   id: string;
   osm_type: string;

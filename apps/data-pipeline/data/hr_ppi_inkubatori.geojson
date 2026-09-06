@@ -390,7 +390,7 @@
      28
     ],
     "fina_status": "Aktivan",
-    "fina_velicina": "-",
+    "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/proracun/razvojni-centar-licko-senjske-zupanije/OIB-29442545888",
     "fina_aktivan": true
@@ -1009,7 +1009,7 @@
      61
     ],
     "fina_status": "Aktivan",
-    "fina_velicina": "-",
+    "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/proracun/centar-za-razvoj-i-edukaciju-policnik/OIB-57446489473",
     "fina_aktivan": true
@@ -1892,7 +1892,7 @@
      113
     ],
     "fina_status": "Aktivan",
-    "fina_velicina": "-",
+    "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/proracun/ustanova-cekom-3lj/OIB-35341410291",
     "fina_aktivan": true
@@ -2327,7 +2327,7 @@
      142
     ],
     "fina_status": "Aktivan",
-    "fina_velicina": "-",
+    "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/proracun/razvojno-inovacijski-centar-alutech/OIB-34431614153",
     "fina_aktivan": true
@@ -2816,7 +2816,7 @@
      166
     ],
     "fina_status": "Aktivan",
-    "fina_velicina": "-",
+    "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/neprofitni/ag/OIB-17942508126",
     "fina_aktivan": true
@@ -3144,7 +3144,7 @@
      191
     ],
     "fina_status": "Aktivan",
-    "fina_velicina": "-",
+    "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/neprofitni/cepor/OIB-35209595692",
     "fina_aktivan": true
@@ -3201,7 +3201,7 @@
      196
     ],
     "fina_status": "Aktivan",
-    "fina_velicina": "-",
+    "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/proracun/istarsko-veleuciliste-universita-istriana-di-scienze-applicate/OIB-79550001298",
     "fina_aktivan": true
@@ -3477,7 +3477,7 @@
      211
     ],
     "fina_status": "Aktivan",
-    "fina_velicina": "-",
+    "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/proracun/panonski-drvni-centar-kompetencija-viroviticko-podravske-zupanije/OIB-64368206963",
     "fina_aktivan": true
@@ -3586,7 +3586,7 @@
      237
     ],
     "fina_status": "Aktivan",
-    "fina_velicina": "-",
+    "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/neprofitni/icent/OIB-48640028500",
     "fina_aktivan": true

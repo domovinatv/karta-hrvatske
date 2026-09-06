@@ -14,6 +14,7 @@ import {
   Maximize,
   MapPinHouse,
   Palette,
+  Network,
   Plane,
   Rocket,
   Satellite,
@@ -64,6 +65,7 @@ export type LayerStateKey =
   | "showPitches"
   | "showStadiums"
   | "showInkubatori"
+  | "showEkosustav"
   | "showCrkve"
   | "showZupe"
   | "showBiskupije"
@@ -85,6 +87,7 @@ export type LayerId =
   | "igralista"
   | "stadioni"
   | "inkubatori"
+  | "ekosustav"
   | "crkve"
   | "zupe"
   | "biskupije"
@@ -409,6 +412,28 @@ export const CONTROLS: Control[] = [
       { color: "#ea580c", label: "znanstveno-tehnologijski park" },
       { color: "#16a34a", label: "centar kompetencije" },
       { color: "#ef4444", label: "u likvidaciji / stečaju / brisan" },
+    ],
+  },
+
+  {
+    kind: "toggle",
+    id: "ekosustav",
+    group: "gospodarstvo",
+    label: "Privatni ekosustav",
+    icon: Network,
+    stateKey: "showEkosustav",
+    shortcut: "E",
+    count: 11,
+    lazy: true,
+    blurb:
+      "VC fondovi, privatni inkubatori, coworkinzi i udruge koje drže tehnološku zajednicu — Fil Rouge, Feelsgood, AYMO, Osijek Software City, Split Tech City, WESPA. Ovo NIJE registar nego kurirani popis: država ove subjekte ne vodi na jednom mjestu, pa ga netko mora održavati ručno. Naziv, adresa i status dolaze iz FINA info.BIZ-a po OIB-u.",
+    source: { label: "kurirano + FINA info.BIZ", href: "https://infobiz.fina.hr" },
+    legend: [
+      { color: "#f59e0b", label: "fond / investitor" },
+      { color: "#e11d48", label: "privatni inkubator" },
+      { color: "#14b8a6", label: "tehnološka zajednica" },
+      { color: "#8b5cf6", label: "coworking / hub" },
+      { color: "#64748b", label: "korporativni program" },
     ],
   },
 

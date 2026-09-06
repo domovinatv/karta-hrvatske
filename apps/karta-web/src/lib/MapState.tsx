@@ -41,6 +41,8 @@ interface MapState {
   showStadiums: boolean;
   /** Inkubatori, akceleratori i tehnološki parkovi (JRPI). */
   showInkubatori: boolean;
+  /** Privatni ekosustav — kurirano, nije registar. */
+  showEkosustav: boolean;
   showAirports: boolean;
   showPinka: boolean;
   showZupBorders: boolean;
@@ -72,6 +74,7 @@ interface MapStateActions {
   setShowUstanove: (on: boolean) => void;
   setShowStadiums: (on: boolean) => void;
   setShowInkubatori: (on: boolean) => void;
+  setShowEkosustav: (on: boolean) => void;
   setShowAirports: (on: boolean) => void;
   setShowPinka: (on: boolean) => void;
   toggleZupBorders: () => void;
@@ -114,6 +117,7 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
   const [showUstanove, setShowUstanove] = useState(false);
   const [showStadiums, setShowStadiums] = useState(false);
   const [showInkubatori, setShowInkubatori] = useState(false);
+  const [showEkosustav, setShowEkosustav] = useState(false);
   const [showAirports, setShowAirports] = useState(false);
   const [showPinka, setShowPinka] = useState(false);
   const [showZupBorders, setShowZupBorders] = useState(true);
@@ -172,6 +176,7 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
       showUstanove,
       showStadiums,
       showInkubatori,
+      showEkosustav,
       showAirports,
       showPinka,
       showZupBorders,
@@ -197,6 +202,7 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
       setShowUstanove,
       setShowStadiums,
       setShowInkubatori,
+      setShowEkosustav,
       setShowAirports,
       setShowPinka,
       toggleZupBorders,
@@ -226,6 +232,7 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
       showUstanove,
       showStadiums,
       showInkubatori,
+      showEkosustav,
       showAirports,
       showPinka,
       showZupBorders,
