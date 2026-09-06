@@ -1,0 +1,544 @@
+                                                                                                         
+PRIJEDLOG
+
+Na temelju članka 4. alineje 3. Zakona o državnim potporama (Narodne novine 47/14 i 69/17) i članka 41. točke 6. Statuta Grada Zagreba (Službeni glasnik Grada Zagreba 23/16, 2/18, 23/18, 3/20, 3/21, 11/21 - pročišćeni tekst i 16/22), Gradska skupština Grada Zagreba, na _____. sjednici, _______2024., donijela je
+
+
+
+PROGRAM
+potpore male vrijednosti za sufinanciranje projekata korištenja otvorenih podataka u 2024. i 2025. 
+
+
+	
+1. Cilj dodjele potpore male vrijednosti
+
+Programom potpore male vrijednosti za sufinanciranje projekata korištenja otvorenih podataka za razdoblje 2024. - 2025. (dalje u tekstu: Program) utvrđuju se uvjeti, kriteriji i postupak dodjele potpore male vrijednosti za sufinanciranje projekata korištenja otvorenih podataka koji su od interesa za Grad Zagreb.
+Potpore male vrijednosti (de minimis potpore) koje se odobravaju i dodjeljuju  subjektima na temelju ovoga programa su potpore uređene Uredbom Komisije (EU) 2023/2831 оd 13. prosinca 2023. o primjeni članaka 107. i 108. Ugovora o funkcioniranju Europske unije na de minimis potpore (dalje u tekstu: Uredba), a koje zbog svoga iznosa ne narušavaju ili ne prijete narušavanju tržišnog natjecanja i ne utječu na trgovinu između država članica Europske unije te ne predstavljaju državnu potporu iz članka 107. stavka 1. Ugovora o funkcioniraju Europske unije.
+Cilj dodjele potpora male vrijednosti je proizvodnja i objava programskih sadržaja - kvalitetnih istraživanja, programskih aplikacija ili mrežnih stranica koje koriste otvorene podatke u informativne, obrazovne, kulturne, umjetničke, stručne, znanstvene i druge svrhe.
+
+2. Davatelj potpore male vrijednosti
+
+Grad Zagreb
+Služba za informacijski sustav i tehničke poslove, Trg Stjepana Radića 1, 10000 Zagreb.
+
+3. Pravna osnova
+
+Politika otvorenih podataka Vlade Republike Hrvatske, od srpnja 2018.,
+Zakon o državnim potporama (Narodne novine 47/14 i 69/17),
+Direktiva (EU) 2019/1024 Europskog parlamenta i vijeća od 20. lipnja 2019. o otvorenim podatcima i ponovnoj uporabi informacija javnog sektora (SL EU, L172, od 26. lipnja 2019.),
+Uredba Komisije (EU) 2023/2831 оd 13. prosinca 2023. o primjeni članaka 107. i 108. Ugovora o funkcioniranju Europske unije na de minimis potpore (SL EU, L2023/2831 od 15. prosinca 2023.).
+
+4. Naziv potpore male vrijednosti
+
+Potpora male vrijednosti za sufinanciranje projekata korištenja otvorenih podataka u 2024. i 2025. 
+
+5. Korisnici
+
+	Pravo na dodjelu potpore male vrijednosti po ovome programu mogu ostvariti organizacije civilnog društva, sindikati, društva s ograničenom odgovornošću, jednostavna društva s ograničenom odgovornošću, obrti, umjetničke organizacije i zadruge, a u skladu s ciljem navedenim u točci 1. ovog programa.
+Pravo na dodjelu ove potpore male vrijednosti ne mogu ostvariti subjekti:
+-	koji su u likvidaciji, u stečajnom ili predstečajnom postupku;
+-	koji imaju nepodmirenih obveza prema Gradu Zagrebu;
+-	koji imaju nepodmirenih obveza prema zaposlenicima.
+Pravo na dodjelu potpore male vrijednosti nemaju subjekti koji djeluju u sektorima iz članka 1. stavka 1. Uredbe.
+Pravo na dodjelu potpore male vrijednosti ne mogu ostvariti subjekti koji su za isti projekt ostvarili potporu iz drugih izvora.
+Pravo na dodjelu ove potpore male vrijednosti može se ostvariti samo za projekte čiji su rezultati nenaplatno dostupni javnosti.
+
+6. Trajanje Programa
+
+Ovaj program primjenjuje se osmi dan od dana objave u Službenom glasniku Grada Zagreba do 31. prosinca 2025.
+
+7. Iznos potpore male vrijednosti i kumulacija potpora
+
+Sredstva potpore male vrijednosti za 2024. osigurana su u Proračunu Grada Zagreba za 2024. 
+Za cjelokupno razdoblje od 2024. do 2025. planira se iznos do 600.000,00 eura.
+Sredstva za 2024. planirana su u Proračunu Grada Zagreba za 2024. u Razdjelu 3301. Služba za informacijski sustav i tehničke poslove, u iznosu od 300.000,00 eura.
+Pojedinačni projekt može zatražiti najmanje 5.000,00 eura, a najviše 30.000,00 eura.
+Sukladno članku 3. stavku 2. Uredbe, ukupan iznos potpore male vrijednosti koja se po državi članici dodjeljuje jednom subjektu ne smije premašiti 300.000,00 eura tijekom bilo kojeg trogodišnjeg razdoblja. Pri tome se uzimaju u obzir sve potpore male vrijednosti bez obzira na njihov oblik ili na cilj koji se namjerava postići te neovisno o tome financira li se potpora koju dodjeljuje država članica u cijelosti ili djelomično iz sredstava koja potječu iz Europske unije. 
+Za izračun iznosa potpore svi iznosi koji se primjenjuju su bruto iznosi, tj. iznosi prije odbitka poreza i drugih naknada.
+Potpore koje se isplaćuju u više obroka diskontiraju se na vrijednost potpore u trenutku njezine dodjele. Kamatna stopa koja se primjenjuje pri diskontiranju je diskontna kamatna stopa koja se primjenjuje u trenutku dodjele.
+Potpore male vrijednosti koje se dodjeljuju na temelju ovoga programa mogu se pribrajati s potporama male vrijednosti dodijeljenima u skladu s drugim uredbama o potporama male vrijednosti/de minimis potporama do odgovarajuće gornje granice iz stavka 5. ove točke.
+
+
+
+Jednim subjektom u svrhu poštivanja propisane gornje granice za dodjelu potpore male vrijednosti smatraju se subjekti koji su barem u jednom od odnosa navedenim u članku 2. stavku 2. Uredbe.
+Također, u vezi s poštivanjem propisane gornje granice za dodjelu potpore male vrijednosti uzimaju se u obzir i odredbe o statusnim podjelama poduzetnika (spajanje, preuzimanje, podjela) iz članka 3. stavaka 8. i 9. Uredbe.
+Potpora male vrijednosti smatra se dodijeljenom u trenutku kada subjekt stekne zakonsko pravo na primanje potpore neovisno o datumu njezine isplate.
+
+8. Provedba programa
+
+Radi provedbe ovoga programa za svaku proračunsku godinu objavit će se barem jedan javni poziv, a Grad Zagreb će ocijeniti svaku zaprimljenu prijavu te ako prijava zadovoljava uvjete iz Programa, donijet će odluku o dodjeli potpora male vrijednosti.
+Grad Zagreb će radi transparentnosti osigurati dostupnost cjelovitog teksta Programa za cijelo vrijeme njegova trajanja, na internetskim stranicama Grada Zagreba (www.zagreb.hr).
+Grad Zagreb će bez odgode dostavljati podatke o dodijeljenim državnim potporama Ministarstvu financija putem internetske aplikacije Registra državnih potpora i potpora male vrijednosti, kako to propisuje članak 5. Pravilnika o dostavi prijedloga državnih potpora, podataka o državnim potporama i potporama male vrijednosti te registru državnih potpora i potpora male vrijednosti (Narodne novine 125/17).
+Grad Zagreb će voditi evidenciju o dodijeljenim potporama male vrijednosti po pojedinim korisnicima i čuvati podatke o dodijeljenim potporama male vrijednosti deset godina od dana dodjele posljednje potpore na temelju ovoga programa.
+
+9. Javni poziv
+
+I. Uvjeti
+
+Gradonačelnik Grada Zagreba raspisuje Javni poziv za dodjelu potpora male vrijednosti za sufinanciranje projekata korištenja otvorenih podataka koji se objavljuje na internetskoj stranici Grada Zagreba, a obavijest o objavi Javnog poziva objavljuje se u dnevnom tisku i na društvenim mrežama Grada Zagreba.
+U Javnom pozivu objavljuje se predmet javnog poziva, vrsta i visina potpore male vrijednosti, sadržaj prijave, način, rok i mjesto podnošenja prijave, obavijest o tome koje se prijave neće razmatrati, obavijest o odabiru i načinu procjene programskog sadržaja, obavijest o objavi zaključka o odabiru korisnika potpore male vrijednosti, obavijest o potpisivanju ugovora o dodjeli potpore male vrijednosti te po potrebi i druge informacije.
+Pod programskim sadržajem u smislu ovog programa podrazumijevaju se projekti koji se prijavljuju na javni poziv, a koji su od interesa za Grad Zagreb i promiču cilj programa.
+Subjekt može na javni poziv prijaviti jedan ili više projekata.
+Pravo na dodjelu potpore male vrijednosti neće moći ostvariti subjekti sukladno odredbama točke 5. stavcima 2. i 3. ovoga programa te subjekti koji bi dodjelom potpore premašili propisanu gornju granicu za dodjelu potpore male vrijednosti sukladno odredbama točke 7. stavaka 5. i 8. ovoga programa.
+
+II. Sadržaj prijave na javni poziv
+
+Prijava za dodjelu potpora male vrijednosti podnosi se Povjerenstvu za dodjelu potpora male vrijednosti za sufinanciranje projekata korištenja otvorenih podataka (u daljnjem tekstu: Povjerenstvo), preko Službe za informacijski sustav i tehničke poslove na obrascu - Prijava za dodjelu potpore male vrijednosti, koji je sastavni dio ovoga programa (Prilog 2., Obrazac 1.).
+Svaki projekt zasebno se obrazlaže i opisuje (Prilog 3., Obrazac 2.2.) te se za svaki pojedinačno podnosi Financijski plan i izračun troškova projekta na obrascu koji je sastavni dio ovog programa (Prilog 4., Obrazac 3.), dok se prijava na javni poziv (Prilog 2., Obrazac 1.) i obrazac o osnovnim podacima o prijavitelju programskog sadržaja (Prilog 3., Obrazac 2.1.) podnose isključivo u jednom primjerku.
+Prijava i svi obrasci koji se predaju uz prijavu na javni poziv moraju biti jasni i razumljivi i sastavljeni na hrvatskom jeziku i latiničnom pismu.
+Prijava i svi obrasci koji se predaju uz prijavu na javni poziv popunjavaju se na računalu.
+
+III. Rok i mjesto za podnošenje prijave
+
+Prijava se podnosi isključivo u elektroničkom obliku putem online servisa e-Pisarnice koji se nalazi na internetskim stranicama Grada Zagreba www.zagreb.hr, link:
+ HYPERLINK "https://e-pisarnica.zagreb.hr/ePisarnica/eIsprave2" https://e-pisarnica.zagreb.hr/ePisarnica/eIsprave2.
+
+Podnositelji prijava svoje programske sadržaje, odnosno projekte moraju prijaviti na propisanim obrascima u elektroničkom obliku, prema na njima istaknutim uputama i sukladno Uputama za prijavitelje na Javni poziv koje su sastavni dio natječajne dokumentacije. 
+
+Prijavu mora podnijeti osoba ovlaštena za zastupanje podnositelja prijave, koja da bi mogla pristupiti formi za popunjavanje prijave – ePrijavnica, prethodno treba aktivirati korisnički račun za pristup NIAS-u (Nacionalnom identifikacijskom i autentifikacijskom sustavu).
+
+IV. Kriteriji za dodjelu potpore male vrijednosti
+
+Kriteriji za dodjelu potpore male vrijednosti određeni su Listom kriterija za procjenu programskih sadržaja (bodovima) koja je sastavni dio ovoga programa (Prilog 1.). 
+Programski sadržaji rangiraju se prema ostvarenim bodovima sukladno Listi kriterija za procjenu programskih sadržaja.
+Pojedinačne projekte boduje svaki član Povjerenstva zasebno prema Listi kriterija za procjenu programskih sadržaja (bodovima) iz Priloga 1.
+Najveći mogući broj bodova za svaki projekt nakon provedenog bodovanja je 100. 
+Nakon bodovanja svih projekata, svaki član Povjerenstva izrađuje osobnu rang-listu tako da je projekt s najvećim brojem bodova prvi na listi, a zatim ga redom slijede projekti s manjim brojem bodova do kraja liste gdje je projekt s najmanjim brojem bodova. Rezultat je da u osobnoj rang-listi projekti imaju slijedan rang 1, 2, 3, 4, ... itd. 
+Predsjednik Povjerenstva zatim izrađuje zajedničku rang-listu. U prvom koraku za svaki projekt zbraja rangove iz osobnih rang-listi svih članova Povjerenstva. Potom u drugom koraku za svaki projekt definira novi rang na način da je najmanji zbroj rangova iz osobnih rang-list prvi na listi, a zatim ih redom slijede projekti s višim zbrojem, sve do kraja liste gdje je projekti s najvišim zbrojem. 
+U slučaju izjednačenja pozicije na zajedničkoj rang-listi, Povjerenstvo će glasati o poretku tih projekata, zabilježiti to u zapisniku i na taj način formirati završnu rang-listu. Rezultat je da u zajedničkoj rang-listi projekti imaju slijedan rang 1, 2, 3, 4, ... itd.
+Zatražena sredstva se raspoređuju projektima na temelju zajedničke rang-liste, a dodjeljuju se do visine sredstava osiguranih za tu svrhu u proračunu Grada Zagreba za aktualnu godinu.
+	Ako su preostala sredstva u proračunu Grada Zagreba za aktualnu godinu manja od zatraženih sredstava idućeg projekta na rang listi, tom projektu i svim projektima ispod tog projekta na rang-listi se ne dodjeljuju sredstva.
+
+
+V. Odabir korisnika
+
+Postupak odabira korisnika potpora male vrijednosti provest će Povjerenstvo.
+Povjerenstvo ima predsjednika/predsjednicu i četiri člana/članice koje imenuje gradonačelnik Grada Zagreba, a odabiru se među osobama čiji je profesionalni rad ili iskustvo vezano za područja otvorenih podataka, informacijske tehnologije, komunikologije i civilno-društveno polje.
+Članovi povjerenstva ne mogu biti osobe koje su u upravljačkoj ili vlasničkoj strukturi subjekata koji se prijavljuju na ovaj poziv.
+Zadaće Povjerenstva su:
+-	prikupljanje i razmatranje prijava, procjena, ocjenjivanje i odabir programskih sadržaja;
+-	sukladno završnoj rang listi predlaganje Liste programskih sadržaja za dodjelu potpore male vrijednosti (koja obvezno sadrži naziv subjekta, naziv projekta, broj ukupno ostvarenih bodova i iznos potpore male vrijednosti).
+Služba za informacijski sustav i tehničke poslove obavlja administrativnu provjeru zaprimljenih prijava s pripadajućom dokumentacijom te Povjerenstvu dostavlja prijave koje se uzimaju u razmatranje.
+Gradonačelnik Grada Zagreba, na prijedlog Povjerenstva, donosi zaključak o odabiru korisnika potpore male vrijednosti te odobrava iznose potpora.
+Neće biti uzeta u razmatranje prijava na javni poziv koja:
+-	ne zadovoljava uvjete za prijavu na javni poziv iz ovoga programa;
+-	ne sadrži svu potrebnu dokumentaciju koja je u pozivu navedena kao obvezna;
+-	nije dostavljena na način koji je određen ovim programom;
+-	nije podnesena u roku koji je naveden u ovom programu; 
+- sadrži financijski plan i izračun troškova projekta suprotan iznosu navedenom u točki 7. stavku 4. programa.
+Rezultati javnog poziva bit će objavljeni na internetskoj stranici Grada Zagreba (www.zagreb.hr) u roku od (8) osam dana od donošenja zaključka o odabiru.
+
+VI. Pravo prigovora
+
+Subjekt koji je sudjelovao u javnom pozivu za dodjelu potpore male vrijednosti može podnijeti prigovor na zaključak o odabiru korisnika potpore male vrijednosti.
+Prigovor se podnosi gradonačelniku Grada Zagreba preko Službe za informacijski sustav i tehničke poslove u roku od osam (8) dana od dana objave zaključka o odabiru korisnika potpore male vrijednosti.
+O prigovoru odlučuje gradonačelnik Grada Zagreba.
+
+VII. Potpisivanje ugovora
+
+Subjekti kojima se odobri potpora male vrijednosti sklopit će s Gradom Zagrebom ugovor o dodjeli potpore male vrijednosti kojim će se regulirati međusobna prava i obveze korisnika potpore male vrijednosti i Grada Zagreba (dinamika, visina, rok i način isplate potpore male vrijednosti, rok za proizvodnju i objavu programskog sadržaja, način i dinamika izvješćivanja o provođenju proizvodnje i objave programskog sadržaja, obveza vraćanja neutrošenih sredstava, obveze subjekta u slučaju nenamjenskog trošenja sredstava potpore i drugo).
+
+10. Ovaj program stupa na snagu osmoga dana od dana objave u Službenom glasniku Grada Zagreba.
+
+
+KLASA: 
+URBROJ: 
+Zagreb, ___________ 2024.
+
+                                                                                 PREDSJEDNIK 
+                                                                                    GRADSKE SKUPŠTINE 
+
+                                                                                     Joško Klisović
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Prilog 1.
+
+
+LISTA KRITERIJA ZA PROCJENU PROGRAMSKIH SADRŽAJA
+
+Evaluacijski kriterij
+Broj bodova
+Prethodno iskustvo prijavitelja u provedbi razvojnih ili istraživačkih programa   
+0 - 15
+Kapacitet prijavitelja da kvalitetno provede predloženi program  
+0 - 15
+Tehnička izvedivost predloženog programa  
+0 - 20
+Društvena korist predloženog programa   
+0 - 30
+Inovativnost predloženog programa   
+0 - 20
+UKUPNO
+0 - 100
+
+
+Prilog 2.
+
+
+Obrazac 1. - PRIJAVA ZA DODJELU POTPORE MALE VRIJEDNOSTI
+
+
+PRIJAVITELJ PROGRAMSKOG SADRŽAJA
+(upisati puni naziv prijavitelja)
+Naziv projekta
+(upisati puni naziv projekta)
+
+
+Mjesto i datum
+
+Potpis odgovorne osobe
+
+M.P.
+
+
+
+Prilog 3.
+
+
+Obrazac 2.1. - OSNOVNI PODACI O PRIJAVITELJU PROGRAMSKOG SADRŽAJA
+
+2.1. OSNOVNI PODACI O PRIJAVITELJU 
+2.1.1.	Puni naziv
+
+2.1.2.	Organizacijski oblik
+
+2.1.3.	OIB (osobni identifikacijski broj)
+
+2.1.4.	MBS (matični broj subjekta)
+
+2.1.5.	Adresa (ulica, broj, mjesto, poštanski broj)
+
+2.1.6.	Broj telefona
+
+2.1.7.	Broj mobilnog telefona
+
+2.1.8.	Adresa e-pošte
+
+2.1.9.	Broj žiro-računa (IBAN)
+
+2.1.10.	Naziv banke kod koje je žiro-račun otvoren
+
+2.1.11.	Ime i prezime i funkcija odgovorne osobe podnositelja
+
+2.1.12.	Ime i prezime i funkcija osobe za kontakt podnositelja 
+
+2.1.13.	Prethodno iskustvo prijavitelja u provedbi razvojnih ili istraživačkih programa  
+
+
+Mjesto i datum
+
+Potpis odgovorne osobe
+
+M.P.
+
+
+
+Obrazac 2.2. - OSNOVNI PODACI O PROJEKTU
+
+2.2. OSNOVNI PODACI O PROGRAMSKOM SADRŽAJU ZA KOJI SE PODNOSI PRIJAVA ZA DODJELU POTPORE MALE VRIJEDNOSTI 
+2.2.1.	Vrsta projekta (moguće odabrati više  točaka)
+1. programska aplikacija
+2. istraživanje
+3. mrežna stranica
+2.2.2.	Naziv projekta
+
+2.2.3.	Kratki opis projekta
+
+2.2.4.	Ciljna skupina kojoj je projekt namijenjen
+
+2.2.5.	Kapacitet prijavitelja da kvalitetno provede predloženi program  
+
+2.2.6.	Način provedbe, dinamika i datum realizacije projekta 
+
+2.2.7.	Tehnička izvedivost predloženog programa  
+
+2.2.8.	Društvena korist predloženog programa   
+
+2.2.9.	Inovativnost predloženog programa  
+
+2.2.11.	Detaljan opis projekta
+
+
+Mjesto i datum
+
+Potpis odgovorne osobe
+
+M.P.
+
+
+
+
+
+Prilog 4.
+
+Obrazac 3. - FINANCIJSKI PLAN I IZRAČUN TROŠKOVA PROJEKTA
+
+Vrsta troškova
+Vrijednost opravdanih troškova
+Opis troškova
+
+
+
+
+
+1. Troškovi zaposlenih
+
+
+Navedite troškove rada za sve zaposlene i broj osoba koje rade na projektu.
+
+Navedite broj sati cjelokupnog rada.
+2. Troškovi vanjskih suradnika
+
+
+Navedite troškove vanjskih suradnika i broj osoba koje rade na projektu kao vanjski suradnici.
+3. Troškovi promidžbe
+
+
+Navedite tipove i iznose troškova promidžbe.
+4. Troškovi licenci i druge nematerijalne imovine
+
+
+Navedite tipove i iznose troškova licenci i druge nematerijalne imovine.
+5. Troškovi opreme i druge materijalne imovine
+
+
+Navedite tipove i iznose troškova opreme i druge nematerijalne imovine.
+
+
+
+
+UKUPNA VRIJEDNOST SVIH TROŠKOVA (BEZ PDV‑a)
+
+
+
+
+Mjesto i datum
+
+Potpis odgovorne osobe
+
+M.P.
+
+
+
+
+
+Prilog 5.
+
+
+IZJAVA
+
+kojom ja, ______________________________________________________________ (ime i prezime, adresa, OIB, funkcija odgovorne osobe podnositelja), a radi prijave na Javni poziv za dodjelu potpora male vrijednosti za sufinanciranje proizvodnje i objave kvalitetnih istraživanja, programskih aplikacija ili mrežnih stranica koje koriste otvorene podatke u informativne, obrazovne, kulturne, umjetničke, stručne, znanstvene i druge svrhe za _________ godinu, pod punom materijalnom i kaznenom odgovornošću
+
+IZJAVLJUJEM I POTVRĐUJEM
+
+da podnositelj prijave - subjekt ________________________________________________ (puni naziv, sjedište, OIB, upisan u sudski ili drugi odgovarajući registar _______________ u Zagrebu pod brojem ____________)
+
+- nije u likvidaciji, stečajnom ili predstečajnom postupku u skladu sa Stečajnim zakonom (Narodne novine 71/15, 104/17, 36/22 i 27/24),
+- nema nepodmirene obveze prema zaposlenicima.
+
+
+Potpisom ove izjave potvrđujem da su svi podaci iz ove izjave istiniti, točni i potpuni.
+
+
+Mjesto i datum
+
+Potpis odgovorne osobe
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+M.P.
+
+
+Prilog 6.a
+
+
+IZJAVA
+
+kojom ja, ______________________________________________________________ (ime i prezime, adresa, OIB, funkcija odgovorne osobe podnositelja), a radi prijave na Javni poziv za dodjelu potpora male vrijednosti za sufinanciranje projekata korištenja otvorenih podataka za _________ godinu, pod punom materijalnom i kaznenom odgovornošću
+
+IZJAVLJUJEM I POTVRĐUJEM
+
+- da je podnositelj prijave - subjekt _____________________________________________ (puni naziv, sjedište, OIB, upisan u sudski ili drugi odgovarajući registar _______________ u Zagrebu pod brojem ____________) tijekom tekuće fiskalne godine i tijekom prethodne dvije fiskalne godine, neovisno o vrsti i razini davatelja potpora male vrijednosti, zaprimio druge potpore male vrijednosti/de minimis potpore obuhvaćene Uredbom Komisije (EU) 2023/2831 оd 13. prosinca 2023. o primjeni članaka 107. i 108. Ugovora o funkcioniranju Europske unije na de minimis potpore ili drugim uredbama o potporama male vrijednosti/de minimis potporama u ukupnom iznosu od ________________ eura, i to:
+
+U_____
+godini
+Nazivi davatelja potpore male vrijednosti (državnih tijela ili pravnih osoba koje su odobrile potpore)
+Naziv programa potpore male vrijednosti
+Iznosi potpora
+u eurima
+Datumi dodjele potpora
+Dodijeljene potpore smo opravdali i namjenski iskoristili (DA/NE)
+
+
+
+
+
+
+
+- da je/nije podnositelj prijave - subjekt povezan s drugim subjektom  __________________________________ (puni naziv, sjedište, OIB, upisan u sudski ili drugi odgovarajući registar _____________ u __________ pod brojem ____________) tako da se može smatrati "jednim poduzetnikom" u smislu Uredbe
+(ako je povezan s drugim subjektom, potrebno je navesti koliko je potpora male vrijednosti u tekućoj i prethodne dvije fiskalne godine dobio subjekt koji se smatra "jednim subjektom").
+
+Potpisom ove izjave potvrđujem da su svi podaci iz ove izjave istiniti, točni i potpuni.
+
+
+Mjesto i datum
+
+Potpis odgovorne osobe
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+M.P.
+Prilog 6.b
+
+
+IZJAVA
+
+kojom ja, ______________________________________________________________ (ime i prezime, adresa, OIB, funkcija odgovorne osobe podnositelja), a radi prijave na Javni poziv za dodjelu potpora male vrijednosti za sufinanciranje projekata korištenja otvorenih podataka za _________ godinu, pod punom materijalnom i kaznenom odgovornošću
+
+IZJAVLJUJEM I POTVRĐUJEM
+
+- da podnositelj prijave – subjekt  _______________________________________________ (puni naziv, sjedište, OIB, upisan u sudski ili drugi odgovarajući registar _______________ u Zagrebu pod brojem ____________) tijekom tekuće fiskalne godine i tijekom prethodne dvije fiskalne godine, neovisno o vrsti i razini davatelja potpora male vrijednosti, nije zaprimio druge potpore male vrijednosti / de minimis potpore obuhvaćene Uredbom Komisije (EU) 2023/2831 оd 13. prosinca 2023. o primjeni članaka 107. i 108. Ugovora o funkcioniranju Europske unije na de minimis potpore ili drugim uredbama o potporama male vrijednosti /de minimis potporama.
+
+
+Potpisom ove izjave potvrđujem da su svi podaci iz ove izjave istiniti, točni i potpuni.
+
+
+Mjesto i datum
+
+Potpis odgovorne osobe
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+M.P.
+
+
+Prilog 7.
+
+
+IZJAVA
+
+kojom ja, ______________________________________________________________ (ime i prezime, adresa, OIB, funkcija odgovorne osobe podnositelja), a radi prijave na Javni poziv za dodjelu potpora male vrijednosti za sufinanciranje projekata korištenja otvorenih podataka za _________ godinu, pod punom materijalnom i kaznenom odgovornošću
+
+IZJAVLJUJEM I POTVRĐUJEM
+
+da podnositelju prijave - subjektu ______________________________________________ (puni naziv, sjedište, OIB, upisan u sudski ili drugi odgovarajući registar ____________________ u Zagrebu pod brojem ____________) i osobi ovlaštenoj po zakonu za zastupanje
+
+- nije izrečena pravomoćna osuđujuća presuda za jedno ili više sljedećih kaznenih djela: primanje mita u gospodarskom poslovanju, davanje mita u gospodarskom poslovanju, zlouporabu položaja i ovlasti, primanje mita, davanje mita, prijevaru, računalnu prijevaru, prijevaru u gospodarskom poslovanju, pranje novca i subvencijsku prijevaru.
+
+
+Potpisom ove izjave potvrđujem da su svi podaci iz ove izjave istiniti, točni i potpuni.
+
+
+Mjesto i datum
+
+Potpis odgovorne osobe
+ 
+
+
+ 
+
+
+ 
+
+
+ 
+
+M.P.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ PAGE 16
+
+
+
