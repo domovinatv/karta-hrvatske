@@ -50,16 +50,27 @@ Ovo nisu ilustracije nego nalazi koje reproducira `32_zg_portal_report.py`:
   Zagrebačku županiju, HŽ stajalište Velika Gorica je u Velikoj Gorici,
   knjižnica u Zaprešiću je u Zaprešiću. Skupovi Grada Zagreba nisu ograničeni
   na Grad Zagreb, a nigdje ne piše da nisu.
-- **Portal nema nijedan skup sa stanovništvom po gradskoj četvrti.** Bez toga
-  se nijedan pokazatelj ne može izraziti *po stanovniku* — samo apsolutno. To
-  je najveća pojedinačna rupa za svakoga tko želi mjeriti dostupnost usluga.
+- **Stanovništvo po gradskoj četvrti postoji, ali je iz 2011.** Skup
+  `mjesni-odbori` nosi stupac *Broj stanovnika* po mjesnom odboru, koji se
+  zbraja na gradsku četvrt — pa pokazatelji *po stanovniku* jesu izvedivi.
+  Ali zbroj tog stupca je **790.017**, točno popis 2011. za Grad Zagreb
+  (popis 2021: 767.131), a skup nigdje ne navodi na koju se godinu odnosi.
+  Tko ga uzme zdravo za gotovo, računa po petnaest godina starom nazivniku.
+  *(Ispravak izvorne tvrdnje iz ovog dokumenta da takvog skupa nema —
+  provjereno 6.9.2026., v. [Projekt C](./projekt-c-mjesni-odbori.md).)*
 
 Ovo je materijal za prijavu: pokazuje da je posao već započet, i pokazuje da
 prijavitelj zna gdje su granice izvora.
 
 ---
 
-## 2. Prijava: dva projekta
+## 2. Prijava: dva projekta ovdje, treći u sestrinskom repozitoriju
+
+Ovaj dokument razrađuje **A** i **B**. Treći projekt — [**C — „Zagreb po
+mjesnim odborima"**](./projekt-c-mjesni-odbori.md), 12.000 € — stoji na
+kodu iz `izbori.domovina.ai` i spaja DIP arhivu s registrom mjesne samouprave
+Grada Zagreba. Ne preklapa se ni s A ni s B: A koristi geoprostorne skupove
+Grada, B mjeri sam portal, C spaja izborne rezultate s gradskom geografijom.
 
 Preporuka je prijaviti **dva projekta**, ne jedan. Obrasci 1. i 2.1. predaju se
 jednom bez obzira na broj projekata; svaki projekt dodatno traži samo Obrazac
@@ -174,6 +185,8 @@ najmanje od svih 14.
 ---
 
 ## 3. Kako se prijave preslikavaju na bodovnu listu
+
+Bodovna usporedba za Projekt C je u [njegovom dokumentu](./projekt-c-mjesni-odbori.md#6-kako-se-preslikava-na-bodovnu-listu).
 
 | Kriterij | Bod. | Projekt A | Projekt B |
 |---|---:|---|---|

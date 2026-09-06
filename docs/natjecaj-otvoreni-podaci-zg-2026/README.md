@@ -186,7 +186,8 @@ vegetacija / vode), povijesne granice grada, ZG3D 3D model po gradskim četvrtim
 ```
 docs/natjecaj-otvoreni-podaci-zg-2026/
 ├── README.md                                   ← ovaj dosje
-├── prijedlog-projekta.md                       ← prijedlog funkcionalnosti
+├── prijedlog-projekta.md                       ← projekti A i B
+├── projekt-c-mjesni-odbori.md                  ← projekt C (izbori.domovina.ai)
 ├── TODO-prijava.md                             ← radna lista do 16.9.
 ├── dokumenti/
 │   ├── javni-poziv-otvoreni-podaci-2026.docx   ← službeni tekst poziva
@@ -210,7 +211,8 @@ docs/natjecaj-otvoreni-podaci-zg-2026/
 
 ## Vezani dokumenti
 
-- [prijedlog-projekta.md](./prijedlog-projekta.md) — dva projekta za prijavu
+- [prijedlog-projekta.md](./prijedlog-projekta.md) — projekti A i B
+- [projekt-c-mjesni-odbori.md](./projekt-c-mjesni-odbori.md) — projekt C, iz repozitorija `izbori.domovina.ai`
 - [TODO-prijava.md](./TODO-prijava.md) — radna lista do 16.9.2026.
 - [../2026-09-06-zagrebacki-otvoreni-podaci.md](../2026-09-06-zagrebacki-otvoreni-podaci.md) — mehanika harvestera, odbačene alternative, zamke portala
 

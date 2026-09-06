@@ -2,6 +2,8 @@
 
 Radna lista. Poredak je po ovisnostima, ne po važnosti: sve u koraku 1 blokira
 sve ostalo, a ništa iz koraka 4 ne može početi prije nego je poznat prijavitelj.
+Prijavljuju se **tri projekta** — A i B iz ovog repozitorija, C iz
+`izbori.domovina.ai`.
 
 Legenda: `[ ]` otvoreno · `[x]` gotovo · `[—]` ne primjenjuje se
 
@@ -27,7 +29,7 @@ Legenda: `[ ]` otvoreno · `[x]` gotovo · `[—]` ne primjenjuje se
 - [ ] **Provjeriti de minimis kvotu** subjekta: zbroj svih potpora male
       vrijednosti u tekućoj i prethodne dvije fiskalne godine mora ostati ispod
       300.000 €. Ako ne — prijava otpada bez obzira na bodove.
-- [ ] **Provjeriti dvostruko financiranje**: nijedan od dva projekta ne smije
+- [ ] **Provjeriti dvostruko financiranje**: nijedan od tri projekta ne smije
       biti već financiran iz državnog, EU ili gradskog proračuna.
 - [ ] **Pitati Grad kojim se kanalom predaje** — `otvoreni.podaci@zagreb.hr`.
       Tekst poziva kaže e-Pisarnica + NIAS, priložene upute su za SOM Natječaj.
@@ -88,7 +90,8 @@ bi se koristili**. Po jedan dokument za svaki projekt.
 - [ ] **Popis otvorenih podataka** — izvoz iz `apps/data-pipeline/data/zg_provenance.json`
       (33 skupa s URL-om, licencom i datumom) + planirano proširenje na ~108
 - [ ] Poveznice na već napravljeno: gis.domovina.ai, javni repozitorij, obje licence
-- [ ] Priznati ograničenje: nema stanovništva po četvrti → pokazatelji nisu *per capita*
+- [ ] Priznati ograničenje: stanovništvo po MO postoji, ali je iz popisa 2011.
+      → *per capita* pokazatelji nose tu ogradu, ili se traži noviji podatak od Grada
 
 ### Projekt B — „Termometar otvorenih podataka" (8.000 €)
 
@@ -103,17 +106,44 @@ bi se koristili**. Po jedan dokument za svaki projekt.
       zamijenjeni stupci u spremnicima
 - [ ] Obrazložiti zašto se traži 8.000 a ne 20.000 (jezgra već radi)
 
+### Projekt C — „Zagreb po mjesnim odborima" (12.000 €)
+
+Razrada: [`projekt-c-mjesni-odbori.md`](./projekt-c-mjesni-odbori.md). Kod je u
+sestrinskom repozitoriju `github.com/domovinatv/izbori.domovina.ai`.
+
+- [ ] Popis funkcionalnosti (6 isporuka iz `projekt-c-mjesni-odbori.md` §3)
+- [ ] Profil korisnika: vijeća mjesnih odbora i gradskih četvrti, novinari,
+      istraživači, gradska uprava, stranke
+- [ ] Tip rješenja: istraživanje + programska aplikacija + mrežna stranica
+- [ ] Obrazloženje interesa za Grad: prva izborna statistika na razini mjesne
+      samouprave, spojena sa sredstvima koja Grad dodjeljuje toj razini
+- [ ] **Popis otvorenih podataka** — `mjesni-odbori`,
+      `geoportal-mjesna-samouprava`, `clanovi-vijeca-mjesnih-odbora`,
+      `clanovi-vijeca-gradskih-cetvrti`, `predsjednici-*`,
+      `gradska-skupstina-grada-zagreba`, `sredstva-mjesne-samouprave-2001-2023`,
+      `raspodjela-sredstava-ms-2023` (URL-ovi u
+      `sifarnici/zagreb_mjesna_samouprava.json` i `podaci/ckan-inventar.csv`)
+- [ ] **Kontrolna tablica kao prilog** — `data/zagreb/izvjestaj.md`:
+      218/218 imena, 13/15 utrka na birača točno protiv službenog agregata
+- [ ] Priznati ograničenja: stanovništvo po MO iz 2011., dva ciklusa na 99,4 %
+      pokrivenosti, MO od 56 do 12.249 birača
+- [ ] Razgraničiti prema Gongovom „Parlametru Zagreb" (financiran 2024.)
+
 ---
 
 ## 5. Uskladiti kod s prijavom (kad je prijavitelj poznat)
 
 - [ ] `LICENSE` — nositelj autorskog prava na pravni subjekt koji prijavljuje
-      (sada stoji „Matija Stepanić")
+      (sada stoji „Matija Stepanić") — **u oba repozitorija**, `karta-hrvatske`
+      i `izbori.domovina.ai`
 - [ ] README repozitorija — dodati odjeljak s poveznicom na natječaj i licence,
       da recenzent na `github.com/domovinatv/karta-hrvatske` odmah vidi dokaz
       za kriterij open-source
 - [ ] Provjeriti da je sloj „Zagreb — otvoreni podaci" **na produkciji**
       (`npm run deploy`) — prijava linka živu stranicu, ne lokalni dev
+- [ ] Za projekt C: `python3 scripts/build_index.py` u `izbori.domovina.ai`
+      (novopreuzeta zagrebačka biračka mjesta 2024./2025. još nisu u indeksu)
+- [ ] Za projekt C: ponuditi izvedeni skup Gradu za `data.zagreb.hr`
 
 ---
 
