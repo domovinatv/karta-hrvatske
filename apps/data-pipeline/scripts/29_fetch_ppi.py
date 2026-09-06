@@ -141,6 +141,40 @@ def fetch_kontakti() -> dict[int, list[dict]]:
 
 
 # ---------------------------------------------------------------------------
+# OIB
+# ---------------------------------------------------------------------------
+def oib_ok(oib: str) -> bool:
+    """Kontrolna znamenka OIB-a (ISO 7064, MOD 11,10)."""
+    if not re.fullmatch(r"\d{11}", oib):
+        return False
+    r = 10
+    for ch in oib[:10]:
+        r = (r + int(ch)) % 10 or 10
+        r = (r * 2) % 11
+    return (11 - r) % 10 == int(oib[10])
+
+
+def normalize_oib(raw: object) -> str | None:
+    """JRPI-ju znaju otpasti VODEĆE NULE — negdje se OIB drži kao broj.
+
+    U registru su tri takva: „9496667599" je zapravo 09496667599 (Evolve Uni
+    Tech, potvrđeno u FINA info.BIZ-u). Bez nadopune sudreg poveznica u popupu
+    vodi u prazno, a spajanje na FINA-u tiho promaši.
+
+    Nadopunjava se samo ako kontrolna znamenka NAKON toga prolazi — inače je
+    posrijedi nešto drugo i broj se vraća kakav jest, da se greška vidi.
+    """
+    o = re.sub(r"\D", "", str(raw or ""))
+    if not o:
+        return None
+    if len(o) < 11:
+        padded = o.zfill(11)
+        if oib_ok(padded):
+            return padded
+    return o
+
+
+# ---------------------------------------------------------------------------
 # Adresa
 # ---------------------------------------------------------------------------
 # „Rakovac  6, Karlovac 47000" → ulica / broj / mjesto / pbr.
@@ -323,12 +357,18 @@ def locate(idx, ov: dict, adr: dict, jls: str | None):
     # Seoske adrese nemaju ulicu: „Bobovje 52G, Krapina" znači kućni broj 52G
     # u naselju Bobovje, a ne ulicu Bobovje u Krapini. Registar u polje mjesta
     # upiše najbliži grad, pa se „ulica" mora probati kao naselje.
+    # `return` unutar petlje je izlazio u PRVOJ iteraciji, pa se drugi kandidat
+    # nikad nije probao — petlja je izgledala kao da prolazi sve, a radila je
+    # `if kandidati: uzmi prvog`. Točno protiv toga postoji rangiranje
+    # kandidata; centroid je fallback TEK kad nijedna adresa ne pogodi.
     if adr["ulica"]:
-        for n in settlement_candidates(idx, adr["ulica"], jls):
+        seoski = settlement_candidates(idx, adr["ulica"], jls)
+        for n in seoski:
             hit = dgu.geocode(n.rpj_naziv, None, adr["broj"])
             if hit:
                 return hit.lat, hit.lng, "dgu-adresa"
-            return n.lat, n.lng, "naselje"
+        if seoski:
+            return seoski[0].lat, seoski[0].lng, "naselje"
 
     if kandidati:
         return kandidati[0].lat, kandidati[0].lng, "naselje"
@@ -360,10 +400,19 @@ def main() -> int:
     uzi = [r for r in svi if r["vrsta_ppi_id"] in STARTUP_VRSTE]
     print(f"  uži izbor (vrste {sorted(STARTUP_VRSTE)}): {len(uzi)} zapisa")
 
+    popravljeni = [
+        (r["naziv"], r["oib_po_osoba"], normalize_oib(r["oib_po_osoba"]))
+        for r in uzi
+        if normalize_oib(r["oib_po_osoba"]) != str(r["oib_po_osoba"])
+    ]
+    for naziv, prije, poslije in popravljeni:
+        print(f"    OIB nadopunjen: {prije} → {poslije}  ({naziv[:44]})")
+
     # ── Dedup po (OIB, adresa) ────────────────────────────────────────────
     grupe: dict[tuple[str, str], list[dict]] = defaultdict(list)
     for r in uzi:
-        grupe[(r.get("oib_po_osoba") or "?", norm_key(r.get("adresa")))].append(r)
+        r["oib_po_osoba"] = normalize_oib(r.get("oib_po_osoba")) or "?"
+        grupe[(r["oib_po_osoba"], norm_key(r.get("adresa")))].append(r)
     print(f"  nakon spajanja po (OIB, adresa): {len(grupe)} subjekata")
 
     idx = load_naselja_index()

@@ -37,8 +37,6 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from shapely.geometry import shape  # noqa: F401  (koristi ga load_naselja_index)
-
 from src import dgu, infobiz
 from src.normalize import strip_diacritics
 
@@ -74,12 +72,16 @@ def locate(idx, s: dict, adr: dict):
         hit = dgu.geocode(ime, adr["ulica"], adr["broj"])
         if hit:
             return hit.lat, hit.lng, hit.source
+    # Vidi isti popravak u 29_fetch_ppi.py: `return` unutar petlje izlazio je
+    # u prvoj iteraciji i drugi kandidat naselja nikad nije dobio priliku.
     if adr["ulica"]:
-        for n in settlement_candidates(idx, adr["ulica"], adr["mjesto"]):
+        seoski = settlement_candidates(idx, adr["ulica"], adr["mjesto"])
+        for n in seoski:
             hit = dgu.geocode(n.rpj_naziv, None, adr["broj"])
             if hit:
                 return hit.lat, hit.lng, "dgu-adresa"
-            return n.lat, n.lng, "naselje"
+        if seoski:
+            return seoski[0].lat, seoski[0].lng, "naselje"
     if kandidati:
         return kandidati[0].lat, kandidati[0].lng, "naselje"
     return None, None, None
@@ -106,6 +108,14 @@ def main() -> int:
         print(f"  preklapanja s JRPI slojem: nema ({len(jrpi_oibs)} provjereno)")
     else:
         print("  ! nema hr_ppi_inkubatori.geojson — preklapanje NIJE provjereno")
+
+    # Kurirani popis piše čovjek; neispravan OIB znači krivu tvrtku na karti.
+    losi = [s for s in subjekti if not _m.oib_ok(s["oib"])]
+    if losi:
+        print("  ! neispravna kontrolna znamenka OIB-a:")
+        for s in losi:
+            print(f"      {s['oib']}  {s['brand']}")
+        return 1
 
     urls = infobiz.load_index({s["oib"] for s in subjekti})
     if not urls:
