@@ -1,0 +1,297 @@
+{
+  "_": [
+    "Kurirani opseg zagrebačkog CKAN-a za sloj `zg_gradski_sadrzaji`.",
+    "",
+    "`dataset` je CKAN `name` na data.zagreb.hr — NE URL resursa. URL-ovi se",
+    "razrješavaju u vrijeme dohvata preko package_show, jer ArcGIS Hub mijenja",
+    "potpise datoteka, a katalog zna krivo deklarirati format (v. skriptu).",
+    "",
+    "`naziv` / `adresa` / `gc` prisutni su samo kad pogađanje po kandidatima",
+    "ne bi dalo dobar rezultat. `detalji` je bijela lista polja koja preživljavaju",
+    "u izlaz — sve ostalo se odbacuje da datoteka ostane upotrebljiva u pregledniku."
+  ],
+  "skupine": {
+    "obrazovanje": "Odgoj i obrazovanje",
+    "zdravlje": "Zdravlje i skrb",
+    "kretanje": "Kretanje gradom",
+    "svakodnevno": "Svakodnevni grad",
+    "otpad": "Otpad i okoliš",
+    "sigurnost": "Sigurnost"
+  },
+  "skupovi": [
+    {
+      "dataset": "geoportal-djecji-vrtici",
+      "kategorija": "vrtic",
+      "label": "Dječji vrtić",
+      "skupina": "obrazovanje",
+      "gc": "grad_cetvr",
+      "detalji": { "vrsta": "vr_vrtica", "tip": "tip_vrtica", "telefon": "telefon", "web": "web", "email": "email" }
+    },
+    {
+      "dataset": "geoportal-osnovne-skole",
+      "kategorija": "osnovna-skola",
+      "label": "Osnovna škola",
+      "skupina": "obrazovanje",
+      "gc": "GRAD_CETVRT",
+      "detalji": { "ucenika": "br_uc", "razreda": "br_raz", "smjenski_rad": "smjenski_rad", "produzeni_boravak": "produzeni_boravak", "sportska_dvorana": "sport_dvor", "telefon": "telefon", "web": "web" }
+    },
+    {
+      "dataset": "geoportal-srednje-skole",
+      "kategorija": "srednja-skola",
+      "label": "Srednja škola",
+      "skupina": "obrazovanje",
+      "gc": "GRAD_CETVRT",
+      "detalji": { "ucenika": "Broj_uceni", "vrsta_programa": "vr_ob_pr", "sportska_dvorana": "sport_dvor", "telefon": "telefon", "web": "web" }
+    },
+    {
+      "dataset": "geoportal-visokoskolske-ustanove",
+      "kategorija": "visoko-uciliste",
+      "label": "Visoko učilište",
+      "skupina": "obrazovanje",
+      "detalji": { "vrsta": "vrsta", "osnivac": "osnivac", "kampus": "kampus", "web": "web" }
+    },
+    {
+      "dataset": "geoportal-ucenicki-domovi",
+      "kategorija": "ucenicki-dom",
+      "label": "Učenički dom",
+      "skupina": "obrazovanje",
+      "gc": "GRAD_CETVRT",
+      "detalji": { "korisnika": "Broj_koris", "telefon": "telefon", "web": "web" }
+    },
+    {
+      "dataset": "geoportal-studentska-naselja",
+      "kategorija": "studentski-dom",
+      "label": "Studentsko naselje",
+      "skupina": "obrazovanje",
+      "detalji": { "kreveta": "br_kreveta", "paviljona": "br_paviljona", "sadrzaji": "popratni_sadrzaji", "web": "web" }
+    },
+
+    {
+      "dataset": "geoportal-ljekarne",
+      "kategorija": "ljekarna",
+      "label": "Ljekarna",
+      "skupina": "zdravlje",
+      "detalji": { "telefon": "telefon", "web": "web", "email": "email" }
+    },
+    {
+      "dataset": "geoportal-domovi-zdravlja",
+      "kategorija": "dom-zdravlja",
+      "label": "Dom zdravlja / ambulanta",
+      "skupina": "zdravlje",
+      "naziv": "Domovi_zdravlja_naziv",
+      "adresa": "Domovi_zdravlja_adresa",
+      "detalji": { "telefon": "Domovi_zdravlja_telefon", "web": "Domovi_zdravlja_web" }
+    },
+    {
+      "dataset": "geoportal-zdravstvene-ustanove",
+      "kategorija": "zdravstvena-ustanova",
+      "label": "Zdravstvena ustanova",
+      "skupina": "zdravlje",
+      "detalji": { "telefon": "telefon", "web": "web" }
+    },
+    {
+      "dataset": "geoportal-domovi-za-starije-osobe",
+      "kategorija": "dom-za-starije",
+      "label": "Dom za starije osobe",
+      "skupina": "zdravlje",
+      "gc": "gradska_cetvrt",
+      "detalji": { "vrsta": "vrsta", "kapacitet": "kapacitet", "osnivac": "osnivac", "telefon": "telefon", "web": "web" }
+    },
+
+    {
+      "dataset": "autobusna-stajalista-zet",
+      "kategorija": "bus-stajaliste",
+      "label": "Autobusno stajalište ZET",
+      "skupina": "kretanje",
+      "naziv": "Naziv_stajališta",
+      "detalji": { "linije": "Linije", "nadstresnica": "Nadstresnica", "klupa": "Klupa", "displej": "Displej", "pristup_rampa": "PristupRampa", "taktilna_crta": "TaktilnaCrta", "stajaliste_u_razini": "StajalisteURazini" }
+    },
+    {
+      "dataset": "geoportal-tramvajska-stajalista-zet",
+      "kategorija": "tram-stajaliste",
+      "label": "Tramvajsko stajalište ZET",
+      "skupina": "kretanje",
+      "naziv": "Naziv_stajališta",
+      "detalji": { "linije": "Linije", "opis": "Opis" }
+    },
+    {
+      "dataset": "zeljeznicka-stajalista-hz",
+      "kategorija": "vlak-stajaliste",
+      "label": "Željezničko stajalište HŽ",
+      "skupina": "kretanje",
+      "naziv": "Naziv",
+      "detalji": { "vrsta": "Vrsta", "peron": "Peron", "displej": "Displej", "parking": "Parking", "pristup_rampa": "PristupRampa" }
+    },
+    {
+      "dataset": "geoportal-sustav-javnih-bicikala",
+      "kategorija": "javni-bicikli",
+      "label": "Stanica javnih bicikala",
+      "skupina": "kretanje",
+      "adresa": "lokacija",
+      "detalji": { "stalaka": "broj_stalaka" }
+    },
+    {
+      "dataset": "geoportal-javna-parkiralista-za-bicikle",
+      "kategorija": "bicikl-parking",
+      "label": "Parkiralište za bicikle",
+      "skupina": "kretanje",
+      "adresa": "lokacija",
+      "gc": "GRADSKA_CETVRT",
+      "detalji": { "vrsta": "vrsta", "stalaka": "broj_stalaka", "bicikala": "broj_bicikala", "godina": "godina_postavljanja" }
+    },
+    {
+      "dataset": "geoportal-javne-garaze",
+      "kategorija": "javna-garaza",
+      "label": "Javna garaža",
+      "skupina": "kretanje",
+      "detalji": { "kapacitet": "kapacitet", "invalidska_mjesta": "invalidska_mj", "punionica_ev": "punionica_za_EV", "parkiraliste_za_bicikle": "parkiraliste_za_bic", "vlasnistvo": "vlasnistvo", "telefon": "telefon" }
+    },
+    {
+      "dataset": "geoportal-elektricne-punionice",
+      "kategorija": "punionica-ev",
+      "label": "Električna punionica",
+      "skupina": "kretanje",
+      "naziv": "NAZIV",
+      "adresa": "ADRESA",
+      "detalji": { "uticnica": "BROJ_UTICNICA", "tip_uticnice": "TIP_UTICNICE" }
+    },
+    {
+      "dataset": "geoportal-taxi-stajalista",
+      "kategorija": "taxi",
+      "label": "Taxi stajalište",
+      "skupina": "kretanje",
+      "naziv": "lokacija"
+    },
+
+    {
+      "dataset": "geoportal-gradske-trznice",
+      "kategorija": "trznica",
+      "label": "Gradska tržnica",
+      "skupina": "svakodnevno",
+      "detalji": { "radno_vrijeme": "radno_vrijeme", "telefon": "telefon", "web": "web" }
+    },
+    {
+      "dataset": "geoportal-javna-igralista",
+      "kategorija": "igraliste",
+      "label": "Javno sportsko igralište",
+      "skupina": "svakodnevno",
+      "naziv": "Vrsta_objekta",
+      "adresa": "lokacija",
+      "gc": "Gradska_cetvrt",
+      "detalji": { "mjesni_odbor_izvor": "Mjesni_odbor" }
+    },
+    {
+      "dataset": "geoportal-sportski-objekti",
+      "kategorija": "sportski-objekt",
+      "label": "Sportski objekt",
+      "skupina": "svakodnevno",
+      "detalji": { "kategorija_objekta": "kategorija", "sportovi": "sportovi", "upravljac": "upravljac", "web": "web" }
+    },
+    {
+      "dataset": "geoportal-kulturne-ustanove",
+      "kategorija": "kultura",
+      "label": "Kulturna ustanova",
+      "skupina": "svakodnevno",
+      "detalji": { "vrsta": "ustanove", "radno_vrijeme": "radno_vrijeme", "osnivac": "osnivac", "web": "web" }
+    },
+    {
+      "dataset": "geoportal-gradski-vrt-point",
+      "kategorija": "gradski-vrt",
+      "label": "Gradski vrt",
+      "skupina": "svakodnevno",
+      "gc": "grad_cetvrt",
+      "detalji": { "parcela": "br_vr_parcela", "korisnika": "br_korisnika", "otvoren": "godina_otvaranja" }
+    },
+    {
+      "dataset": "geoportal-javne-povrsine-za-pse",
+      "kategorija": "povrsina-za-pse",
+      "label": "Javna površina za pse",
+      "skupina": "svakodnevno",
+      "naziv": "Vrsta",
+      "adresa": "Lokacija",
+      "gc": "GC"
+    },
+    {
+      "dataset": "geoportal_javni_zdenci",
+      "kategorija": "zdenac",
+      "label": "Javni zdenac",
+      "skupina": "svakodnevno",
+      "naziv": "tip_zdenca",
+      "adresa": "lokacija",
+      "gc": "naziv_gc",
+      "detalji": { "aktivan": "aktivan_da_ne", "upravitelj": "upravitelj", "status_odrzavanja": "status_odrz" }
+    },
+    {
+      "dataset": "pojilice-sa-pitkom-vodom",
+      "kategorija": "pojilica",
+      "label": "Pojilica s pitkom vodom",
+      "skupina": "svakodnevno"
+    },
+    {
+      "dataset": "javni-wc-i",
+      "kategorija": "javni-wc",
+      "label": "Javni WC",
+      "skupina": "svakodnevno",
+      "detalji": { "naplata": "naplata" }
+    },
+    {
+      "dataset": "geoportal-besplatna-wifi-mreza",
+      "kategorija": "wifi",
+      "label": "Besplatna WiFi točka",
+      "skupina": "svakodnevno",
+      "naziv": "Lokacija",
+      "gc": "IME_GC",
+      "detalji": { "godina": "godina" }
+    },
+
+    {
+      "dataset": "reciklazna-dvorista-grada-zagreba1",
+      "kategorija": "reciklazno-dvoriste",
+      "label": "Reciklažno dvorište",
+      "skupina": "otpad",
+      "naziv": "NAZIV",
+      "adresa": "ADRESA_LOK",
+      "detalji": { "vrsta": "VRSTA", "radno_vrijeme": "RADNO_VRIJ", "telefon": "TELEFON", "web": "WEB" }
+    },
+    {
+      "dataset": "geoportal_podzemni_spremnik",
+      "kategorija": "podzemni-spremnik",
+      "label": "Podzemni spremnik za otpad",
+      "skupina": "otpad",
+      "naziv": "Spremnik",
+      "gc": "JMS_IME_1",
+      "detalji": { "status": "Status", "mjesni_odbor_izvor": "JMS_IME" }
+    },
+    {
+      "_": [
+        "PAŽNJA: dva sestrinska skupa imaju ZAMIJENJENA značenja istoimenih",
+        "stupaca. Kod `geoportal_podzemni_spremnik` JMS_IME je mjesni odbor a",
+        "JMS_IME_1 gradska četvrt; ovdje je točno obrnuto. Provjereno na podacima",
+        "2026-09-06 — ne 'ispravljati' u isto mapiranje."
+      ],
+      "dataset": "polupodzemni_spremnik",
+      "kategorija": "polupodzemni-spremnik",
+      "label": "Polupodzemni spremnik za otpad",
+      "skupina": "otpad",
+      "adresa": "adrese",
+      "gc": "JMS_IME",
+      "detalji": { "status": "status", "mjesni_odbor_izvor": "JMS_IME_1" }
+    },
+
+    {
+      "dataset": "geoportal-vatrogasci",
+      "kategorija": "vatrogasci",
+      "label": "Vatrogasna postrojba",
+      "skupina": "sigurnost",
+      "gc": "grad_cetv",
+      "detalji": { "telefon": "telefon", "web": "web" }
+    },
+    {
+      "dataset": "geoportal-policija",
+      "kategorija": "policija",
+      "label": "Policijska postaja",
+      "skupina": "sigurnost",
+      "detalji": { "telefon": "telefon", "web": "web" }
+    }
+  ]
+}

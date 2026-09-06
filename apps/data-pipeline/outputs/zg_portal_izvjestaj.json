@@ -1,0 +1,2980 @@
+{
+ "portal": "https://data.zagreb.hr/",
+ "snimljeno": "2026-09-06",
+ "skupova": 199,
+ "svjezina": {
+  "do 3 mjeseca": 14,
+  "3–12 mjeseci": 13,
+  "1–2 godine": 73,
+  "preko 2 godine": 99
+ },
+ "formati_resursa": {
+  "CSV": 249,
+  "XLSX": 232,
+  "GEOJSON": 108,
+  "SHP": 101,
+  "KML": 79,
+  "FGDB": 38,
+  "GDB": 31,
+  "PDF": 18,
+  "XLS": 10,
+  "JSON": 6,
+  "XML": 6,
+  "XSLX": 1
+ },
+ "bez_licence": [
+  "katastarska-opcina-katastarska-prostorna-jedinica-za-podrucje-grada-zagreba"
+ ],
+ "bez_strojno_citljivog_resursa": [],
+ "duplikati_isti_arcgis_izvor": {
+  "83db22aeb39441ec84911ee94f26e746_0": [
+   "geoportal-kulturne-ustanove",
+   "geoportal-kultura"
+  ]
+ },
+ "isti_naslov_pod_vise_imena": {
+  "podrucni odsjeci": [
+   "podrucni_odsjeci",
+   "geoportal-podrucni-odsjeci"
+  ],
+  "autobusna stajalista zet": [
+   "autobusna-stajalista-zet",
+   "geoportal-autobusna-stajalista-zet"
+  ],
+  "zeljeznicka stajalista hz": [
+   "zeljeznicka-stajalista-hz",
+   "geoportal-zeljeznicka-stajalista-hz"
+  ]
+ },
+ "resursi_s_problemom": [
+  {
+   "name": "proracun-grada-zagreba-2026",
+   "naslov": "Proračun Grada Zagreba 2026.",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2026-01-21",
+   "starost_dana": 228,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": [
+    {
+     "format": "CSV",
+     "status": "neslaganje",
+     "detalj": "deklarirano CSV, posluženo ZIP",
+     "url": "https://data.zagreb.hr/dataset/8e77f94c-863d-4053-a6c1-88b45a5f2d11/resource/eb90e18a-2a01-4787-8c3d-f9645c904136/download/projekcija-prihodi-2027-csv.xlsx"
+    }
+   ]
+  },
+  {
+   "name": "geoportal-djecji-vrtici",
+   "naslov": "Geoportal Dječji vrtići",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "CSV",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": [
+    {
+     "format": "GEOJSON",
+     "status": "neslaganje",
+     "detalj": "deklarirano GEOJSON, posluženo ZIP",
+     "url": "https://opendata.arcgis.com/api/v3/datasets/49bb07d4efc34bd5bacc1d330dc28a07_0/downloads/data?format=fgdb&spatialRefId=4326&where=1%3D1"
+    }
+   ]
+  },
+  {
+   "name": "geoportal-vjerske-zajednice",
+   "naslov": "Geoportal Vjerske zajednice",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-06",
+   "starost_dana": 943,
+   "formati": [
+    "CSV",
+    "GDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": [
+    {
+     "format": "GEOJSON",
+     "status": "greška",
+     "detalj": "UnsupportedProtocol (u 3 pokušaja)",
+     "url": "hhttps://opendata.arcgis.com/api/v3/datasets/26e9553b2fb34513ac2f8e4468d6b652_0/downloads/data?format=shp&spatialRefId=4326&where=1%3D1"
+    }
+   ]
+  }
+ ],
+ "skupovi": [
+  {
+   "name": "prometnice",
+   "naslov": "Zatvaranje prometnica na području Grada Zagreba",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2026-09-06",
+   "starost_dana": 0,
+   "formati": [
+    "CSV",
+    "JSON",
+    "XML"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "prostori-mjesne-samouprave-grada-zagreba",
+   "naslov": "Prostori mjesne samouprave Grada Zagreba",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2026-09-05",
+   "starost_dana": 1,
+   "formati": [
+    "CSV",
+    "JSON",
+    "XML"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "komunalne_aktivnosti",
+   "naslov": "Plan komunalnih aktivnosti",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2026-09-05",
+   "starost_dana": 1,
+   "formati": [
+    "CSV",
+    "JSON",
+    "XML"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal_javni_zdenci",
+   "naslov": "Geoportal Javni zdenci",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2026-09-05",
+   "starost_dana": 1,
+   "formati": [
+    "GEOJSON"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "privatni-vjerski-obrti-gz-kontakt-podaci",
+   "naslov": "Privatni i vjerski vrtići te obrti za čuvanje djece Grada Zagreba - kontakt podaci",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2026-09-02",
+   "starost_dana": 4,
+   "formati": [
+    "CSV",
+    "JSON",
+    "XML"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "gradski_vrtici_grada_zagreba",
+   "naslov": "Gradski vrtići Grada Zagreba - kontakt podaci",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2026-09-02",
+   "starost_dana": 4,
+   "formati": [
+    "CSV",
+    "JSON",
+    "XML"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "podrucni_odsjeci",
+   "naslov": "Geoportal Područni odsjeci",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2026-08-27",
+   "starost_dana": 10,
+   "formati": [
+    "GEOJSON"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "polupodzemni_spremnik",
+   "naslov": "Geoportal Polupodzemni spremnik",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2026-08-26",
+   "starost_dana": 11,
+   "formati": [
+    "GEOJSON"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal_podzemni_spremnik",
+   "naslov": "Geoportal Podzemni spremnik",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2026-08-26",
+   "starost_dana": 11,
+   "formati": [
+    "GEOJSON"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "autobusna-stajalista-zet",
+   "naslov": "Geoportal Autobusna stajališta ZET",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2026-08-01",
+   "starost_dana": 36,
+   "formati": [
+    "GEOJSON"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "zeljeznicka-stajalista-hz",
+   "naslov": "Geoportal Željeznička stajališta HŽ",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2026-08-01",
+   "starost_dana": 36,
+   "formati": [
+    "GEOJSON"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-studentski-restoran",
+   "naslov": "Geoportal Studentski restoran",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2026-07-30",
+   "starost_dana": 38,
+   "formati": [
+    "GEOJSON"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-studentsko-naselje",
+   "naslov": "Geoportal Studentsko naselje",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2026-07-30",
+   "starost_dana": 38,
+   "formati": [
+    "GEOJSON"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "gradska-skupstina-grada-zagreba",
+   "naslov": "Gradska skupština Grada Zagreba",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2026-07-10",
+   "starost_dana": 58,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "dobitnici-nagrade-grada-zagreba",
+   "naslov": "Dobitnici Nagrade Grada Zagreba",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2026-04-24",
+   "starost_dana": 135,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "plavi-ceker",
+   "naslov": "Projekt Plavi ceker",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2026-04-02",
+   "starost_dana": 157,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "dobitnice-nagrade-grada-zagreba",
+   "naslov": "Dobitnice Nagrade Zagrepčanka godine",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2026-02-25",
+   "starost_dana": 193,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "proracun-grada-zagreba-2026",
+   "naslov": "Proračun Grada Zagreba 2026.",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2026-01-21",
+   "starost_dana": 228,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": [
+    {
+     "format": "CSV",
+     "status": "neslaganje",
+     "detalj": "deklarirano CSV, posluženo ZIP",
+     "url": "https://data.zagreb.hr/dataset/8e77f94c-863d-4053-a6c1-88b45a5f2d11/resource/eb90e18a-2a01-4787-8c3d-f9645c904136/download/projekcija-prihodi-2027-csv.xlsx"
+    }
+   ]
+  },
+  {
+   "name": "proracun",
+   "naslov": "Proračun Grada Zagreba 2022. - 2025.",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2026-01-21",
+   "starost_dana": 228,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "lista-sluzbenih-vozila-gradske-uprave",
+   "naslov": "Registar službenih vozila gradske uprave",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2026-01-09",
+   "starost_dana": 240,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "ukupan-promet-nekretnina",
+   "naslov": "Izvješće o tržištu nekretnina Grada Zagreba",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-12-30",
+   "starost_dana": 250,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "prazni-poslovni-prostori",
+   "naslov": "Prazni poslovni prostori",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-12-30",
+   "starost_dana": 250,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "imovinsko-pravni-ugovori-2022",
+   "naslov": "Imovinsko-pravni ugovori",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-12-30",
+   "starost_dana": 250,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "registar-ugovora-o-zakupu-koristenju-poslovnih-prostora",
+   "naslov": "Registar ugovora o zakupu / korištenju poslovnih prostora",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-12-30",
+   "starost_dana": 250,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "ugovori-o-zakupu-zemljista-2022",
+   "naslov": "Ugovori o zakupu zemljišta",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-12-30",
+   "starost_dana": 250,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "ugovori-o-najmu-stanova-2022",
+   "naslov": "Ugovori o najmu stanova",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-12-30",
+   "starost_dana": 250,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "dobitnici-nagrade-luka-ritz-nasilje-nije-hrabrost",
+   "naslov": "Dobitnici Nagrade Luka Ritz - Nasilje nije hrabrost",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-10-17",
+   "starost_dana": 324,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "predsjednici_gradskih_cetvrti_grada_zagreba_2025",
+   "naslov": "Predsjednici Gradskih četvrti Grada Zagreba 2025. -",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-07-09",
+   "starost_dana": 424,
+   "formati": [
+    "CSV",
+    "JSON",
+    "XML"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "clanovi-vijeca-mjesnih-odbora",
+   "naslov": "Članovi Vijeća mjesnih odbora Grada Zagreba 2021. - 2025.",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-07-09",
+   "starost_dana": 424,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "predsjednici-gradskih-cetvrti-grada-zagreba",
+   "naslov": "Predsjednici Gradskih četvrti Grada Zagreba 2021. - 2025.",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-07-09",
+   "starost_dana": 424,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-domovi-za-djecu",
+   "naslov": "Geoportal Domovi za djecu",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-05-20",
+   "starost_dana": 474,
+   "formati": [
+    "CSV",
+    "GEOJSON",
+    "KML",
+    "SHP",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "zg3d-2022-3d-model-gz",
+   "naslov": "ZG3D 2022 3D model Grada Zagreba",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-05-07",
+   "starost_dana": 487,
+   "formati": [
+    "CSV",
+    "FGDB",
+    "GEOJSON",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "zg3d-gradska-cetvrt-novi-zagreb-istok-2022",
+   "naslov": "ZG3D Gradska četvrt Novi Zagreb istok 2022",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-05-07",
+   "starost_dana": 487,
+   "formati": [
+    "CSV",
+    "FGDB",
+    "GEOJSON",
+    "SHP",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "zg3d-gradska-cetvrt-podsused-vrapce-2022",
+   "naslov": "ZG3D Gradska četvrt Podsused Vrapče 2022",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-05-07",
+   "starost_dana": 487,
+   "formati": [
+    "CSV",
+    "FGDB",
+    "GEOJSON",
+    "SHP",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "zg3d-gradska-cetvrt-tresnjevka-sjever-2022",
+   "naslov": "ZG3D Gradska četvrt Trešnjevka sjever 2022",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-05-07",
+   "starost_dana": 487,
+   "formati": [
+    "CSV",
+    "FGDB",
+    "GEOJSON",
+    "SHP",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "zg3d-gradska-cetvrt-novi-zagreb-zapad-2022",
+   "naslov": "ZG3D Gradska četvrt Novi Zagreb zapad 2022",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-05-07",
+   "starost_dana": 487,
+   "formati": [
+    "CSV",
+    "FGDB",
+    "GEOJSON",
+    "SHP",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "zg3d-gradska-cetvrt-gornja-dubrava-2022",
+   "naslov": "ZG3D Gradska četvrt Gornja Dubrava 2022",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-05-07",
+   "starost_dana": 487,
+   "formati": [
+    "CSV",
+    "FGDB",
+    "GEOJSON",
+    "SHP",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "zg3d-gradska-cetvrt-pescenica-zitnjak-2022",
+   "naslov": "ZG3D Gradska četvrt Peščenica Žitnjak 2022",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-05-07",
+   "starost_dana": 487,
+   "formati": [
+    "CSV",
+    "FGDB",
+    "GEOJSON",
+    "SHP",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "zg3d-gradska-cetvrt-trnje-2022",
+   "naslov": "ZG3D Gradska četvrt Trnje 2022",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-05-07",
+   "starost_dana": 487,
+   "formati": [
+    "CSV",
+    "FGDB",
+    "GEOJSON",
+    "SHP",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "zg3d-gradska-cetvrt-sesvete",
+   "naslov": "ZG3D Gradska četvrt Sesvete 2022",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-05-07",
+   "starost_dana": 487,
+   "formati": [
+    "CSV",
+    "FGDB",
+    "GEOJSON",
+    "SHP",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "ewdaw",
+   "naslov": "Bolnice Grada Zagreba",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-05-07",
+   "starost_dana": 487,
+   "formati": [
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "zg3d-gradska-cetvrt-podsljeme-2022",
+   "naslov": "ZG3D Gradska četvrt Podsljeme 2022",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-05-07",
+   "starost_dana": 487,
+   "formati": [
+    "CSV",
+    "FGDB",
+    "GEOJSON",
+    "SHP",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "zg3d-gradska-cetvrt-maksimir-2022",
+   "naslov": "ZG3D Gradska četvrt Maksimir 2022",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-05-07",
+   "starost_dana": 487,
+   "formati": [
+    "CSV",
+    "FGDB",
+    "GEOJSON",
+    "SHP",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "zg3d-gradska-cetvrt-stenjevec-2022",
+   "naslov": "ZG3D Gradska četvrt Stenjevec 2022",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-05-07",
+   "starost_dana": 487,
+   "formati": [
+    "CSV",
+    "FGDB",
+    "GEOJSON",
+    "SHP",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "zg3d-gradska-cetvrt-tresnjevka-jug-2022",
+   "naslov": "ZG3D Gradska četvrt Trešnjevka jug 2022",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-05-07",
+   "starost_dana": 487,
+   "formati": [
+    "CSV",
+    "FGDB",
+    "GEOJSON",
+    "SHP",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "zg3d-gradska-cetvrt-donji-grad-2022",
+   "naslov": "ZG3D Gradska četvrt Donji Grad 2022",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-05-07",
+   "starost_dana": 487,
+   "formati": [
+    "CSV",
+    "FGDB",
+    "GEOJSON",
+    "SHP",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "zg3d-gradska-cetvrt-donja-dubrava-2022",
+   "naslov": "ZG3D Gradska četvrt Donja Dubrava 2022",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-05-07",
+   "starost_dana": 487,
+   "formati": [
+    "CSV",
+    "FGDB",
+    "GEOJSON",
+    "SHP",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "zg3d-gradska-cetvrt-crnomerec-2022",
+   "naslov": "ZG3D Gradska četvrt Črnomerec 2022",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-05-07",
+   "starost_dana": 487,
+   "formati": [
+    "CSV",
+    "FGDB",
+    "GEOJSON",
+    "SHP",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "zg3d-gradska-cetvrt-brezovica-2022",
+   "naslov": "ZG3D Gradska četvrt Brezovica 2022",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-05-07",
+   "starost_dana": 487,
+   "formati": [
+    "CSV",
+    "FGDB",
+    "GEOJSON",
+    "SHP",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "zg3d-gradska-cetvrt-gornji-grad-2022",
+   "naslov": "ZG3D Gradska četvrt Gornji Grad 2022",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-05-07",
+   "starost_dana": 487,
+   "formati": [
+    "CSV",
+    "FGDB",
+    "GEOJSON",
+    "SHP",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "predsjednici-mjesnih-odbora-grada-zagreba",
+   "naslov": "Predsjednici mjesnih odbora Grada Zagreba",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-04-30",
+   "starost_dana": 494,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "clanovi-vijeca-gradskih-cetvrti",
+   "naslov": "Članovi Vijeća Gradskih četvrti Grada Zagreba",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-04-30",
+   "starost_dana": 494,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "izgradene-ceste-u-gradu-zagrebu",
+   "naslov": "Izgrađene prometnice u Gradu Zagrebu",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-04-29",
+   "starost_dana": 495,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "zastupljenost-zena-u-javnim-tijelima-grada-zagreba",
+   "naslov": "Zastupljenost žena u javnim tijelima Grada Zagreba",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-03-12",
+   "starost_dana": 543,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "knjiznice-grada-zagreba1",
+   "naslov": "Knjižnice Grada Zagreba",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-03-07",
+   "starost_dana": 548,
+   "formati": [
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "holding-podruznice",
+   "naslov": "Holding podružnice",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-03-07",
+   "starost_dana": 548,
+   "formati": [
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "pucke-kuhinje-dodatne-tocke-podjele-obroka",
+   "naslov": "Pučke kuhinje - dodatne točke podjele obroka",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-03-07",
+   "starost_dana": 548,
+   "formati": [
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "izdvojene-ordinacije-za-pregled-bolesnika-pod-sumnjom-na-zarazenost-koronavirusom",
+   "naslov": "Izdvojene ordinacije za pregled bolesnika pod sumnjom na zaraženost koronavirusom",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-03-07",
+   "starost_dana": 548,
+   "formati": [
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "policijske-postaje1",
+   "naslov": "Policijske postaje",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-03-07",
+   "starost_dana": 548,
+   "formati": [
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "djecji-vrtici-grada-zagreba",
+   "naslov": "Dječji vrtići Grada Zagreba",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-03-07",
+   "starost_dana": 548,
+   "formati": [
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "ljekarne-grada-zagreba",
+   "naslov": "Ljekarne Grada Zagreba",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-03-07",
+   "starost_dana": 548,
+   "formati": [
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-pjesacka-zona",
+   "naslov": "Geoportal pješačka zona",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-03-07",
+   "starost_dana": 548,
+   "formati": [
+    "CSV",
+    "FGDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "vgc-i-mo-gz",
+   "naslov": "Vijeća gradskih četvrti i Mjesni odbori grada Zagreba",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-03-07",
+   "starost_dana": 548,
+   "formati": [
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "bestplatne-wifi-pristupne-tocke-grada-zagreba",
+   "naslov": "Besplatne WIFI pristupne točke Grada Zagreba",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-03-06",
+   "starost_dana": 549,
+   "formati": [
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "muzeji-grada-zagreba-svi",
+   "naslov": "Muzeji Grada Zagreba",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-03-06",
+   "starost_dana": 549,
+   "formati": [
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "registar-naziva-ulica-adresna-prostorna-jedinica-za-podrucje-grada-zagreba",
+   "naslov": "Registar naziva ulica - adresna prostorna jedinica za područje Grada Zagreba",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-02-18",
+   "starost_dana": 565,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "podaci-o-potrosnji-i-trosku-za-objekte-grada-zagreba",
+   "naslov": "Podaci o potrošnji i trošku za objekte Grada Zagreba",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-02-17",
+   "starost_dana": 566,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-ustanove-za-osobe-s-invaliditetom",
+   "naslov": "Geoportal Ustanove za osobe s invaliditetom",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-02-12",
+   "starost_dana": 571,
+   "formati": [
+    "CSV",
+    "GEOJSON",
+    "KML",
+    "SHP",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "popis-skupova-podataka-grada-zagreba-asset-lista",
+   "naslov": "Popis skupova podataka Grada Zagreba (Asset lista)",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-02-06",
+   "starost_dana": 577,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "katastarska-opcina-katastarska-prostorna-jedinica-za-podrucje-grada-zagreba",
+   "naslov": "Katastarska općina - katastarska prostorna jedinica za područje Grada Zagreba",
+   "licenca": null,
+   "azurirano": "2025-02-04",
+   "starost_dana": 579,
+   "formati": [
+    "CSV"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "naselja-adresna-prostorna-jedinice-za-podrucje-grada-zagreba",
+   "naslov": "Naselja - adresna prostorna jedinice za područje Grada Zagreba",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-02-03",
+   "starost_dana": 580,
+   "formati": [
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "mjesni-odbori-prostorna-jedinica-mjesne-samouprave-za-podrucje-grada-zagreba",
+   "naslov": "Mjesni odbori - prostorna jedinica mjesne samouprave za područje Grada Zagreba",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-02-03",
+   "starost_dana": 580,
+   "formati": [
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "gradske-cetvrti-prostorna-jedinica-mjesne-samouprave-za-podrucje-grada-zagreba",
+   "naslov": "Gradske četvrti - prostorna jedinica mjesne samouprave za područje Grada Zagreba",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-02-03",
+   "starost_dana": 580,
+   "formati": [
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "grad-zagreb-prostorna-jedinica",
+   "naslov": "Grad Zagreb - prostorna jedinica područne (regionalne) samouprave",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-02-03",
+   "starost_dana": 580,
+   "formati": [
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "zborna-mjesta-civilne-zastite-grada-zagreba",
+   "naslov": "Zborna mjesta civilne zaštite Grada Zagreba",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-01-02",
+   "starost_dana": 612,
+   "formati": [
+    "GEOJSON"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "evakuacijske-povrsine",
+   "naslov": "Evakuacijske površine Grada Zagreba",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-01-02",
+   "starost_dana": 612,
+   "formati": [
+    "GEOJSON"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "slobodna-mjesta-u-vrticima-i-obrtima-za-cuvanje-djece-grada-zagreba",
+   "naslov": "Slobodna mjesta u vrtićima i obrtima za čuvanje djece Grada Zagreba",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2025-01-02",
+   "starost_dana": 612,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "pocasni-gradani-grada-zagreba",
+   "naslov": "Počasni građani Grada Zagreba",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-12-23",
+   "starost_dana": 622,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-centar-za-socijalnu-skrb",
+   "naslov": "Geoportal Hrvatski zavod za socijalni rad",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-10-29",
+   "starost_dana": 677,
+   "formati": [
+    "CSV",
+    "GEOJSON",
+    "KML",
+    "SHP",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "nadlezne-institucije-socijalne-zastite",
+   "naslov": "Geoportal Nadležne institucije socijalne zaštite",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-10-29",
+   "starost_dana": 677,
+   "formati": [
+    "CSV",
+    "GEOJSON",
+    "KML",
+    "SHP",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-ostale-djelatnosti-socijalne-skrbi",
+   "naslov": "Geoportal Ostale djelatnosti socijalne skrbi",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-10-29",
+   "starost_dana": 677,
+   "formati": [
+    "CSV",
+    "GEOJSON",
+    "KML",
+    "SHP",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-ustanove-za-branitelje",
+   "naslov": "Geoportal Ustanove za branitelje",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-10-29",
+   "starost_dana": 677,
+   "formati": [
+    "CSV",
+    "GEOJSON",
+    "KML",
+    "SHP",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-ustanove-za-beskucnike",
+   "naslov": "Geoportal Ustanove za beskućnike",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-10-29",
+   "starost_dana": 677,
+   "formati": [
+    "CSV",
+    "GEOJSON",
+    "KML",
+    "SHP",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-domovi-za-starije-osobe",
+   "naslov": "Geoportal Domovi za starije osobe",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-10-28",
+   "starost_dana": 678,
+   "formati": [
+    "CSV",
+    "GEOJSON",
+    "KML",
+    "SHP",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "registar-slobodnih-upisnih-mjesta-u-gradskim-privatnim-i-vjerskim-djecjim-vrticima",
+   "naslov": "Registar slobodnih upisnih mjesta u dječjim vrtićima",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-09-23",
+   "starost_dana": 713,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "odgojno-obrazovni-objekti-grada-zagreba",
+   "naslov": "Odgojno - obrazovni objekti Grada Zagreba",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-09-20",
+   "starost_dana": 716,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "fond-solidarnosti-popis-sklopljenih-ugovora",
+   "naslov": "Fond solidarnosti - popis sklopljenih ugovora",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-09-19",
+   "starost_dana": 717,
+   "formati": [
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-smjestajni-objekti",
+   "naslov": "Geoportal Smještajni objekti",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-09-17",
+   "starost_dana": 719,
+   "formati": [
+    "CSV",
+    "GEOJSON",
+    "KML",
+    "SHP",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "stvarno-koristenje-povrsina-2020",
+   "naslov": "Stvarno korištenje površina 2020.",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-09-17",
+   "starost_dana": 719,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "kapitalna-ulaganja-2024",
+   "naslov": "Kapitalna ulaganja 2024.",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-09-17",
+   "starost_dana": 719,
+   "formati": [
+    "CSV",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-gradevinsko-zemljiste-1959-i-1984",
+   "naslov": "Geoportal Građevinsko zemljište 1959. i 1984.",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-09-17",
+   "starost_dana": 719,
+   "formati": [
+    "CSV",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "pojilice-sa-pitkom-vodom",
+   "naslov": "Pojilice sa pitkom vodom",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-09-16",
+   "starost_dana": 720,
+   "formati": [
+    "CSV",
+    "GEOJSON",
+    "SHP",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "javni-wc-i",
+   "naslov": "Javni WC-i",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-09-16",
+   "starost_dana": 720,
+   "formati": [
+    "CSV",
+    "GEOJSON",
+    "KML",
+    "SHP",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-reklamne-zone",
+   "naslov": "Geoportal reklamne zone",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-09-16",
+   "starost_dana": 720,
+   "formati": [
+    "CSV",
+    "GEOJSON",
+    "KML",
+    "SHP",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-podrucni-odsjeci",
+   "naslov": "Geoportal Područni odsjeci",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-09-16",
+   "starost_dana": 720,
+   "formati": [
+    "CSV",
+    "GEOJSON",
+    "KML",
+    "SHP",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "topografska-osnova-2018-vegetacija-i-vrste-zemljista",
+   "naslov": "Topografska osnova 2018. Vegetacija i vrste zemljišta",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-09-16",
+   "starost_dana": 720,
+   "formati": [
+    "CSV",
+    "GEOJSON",
+    "KML",
+    "SHP",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "topografska-osnova-2018-objekti",
+   "naslov": "Topografska osnova 2018. Objekti",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-09-16",
+   "starost_dana": 720,
+   "formati": [
+    "CSV",
+    "GEOJSON",
+    "KML",
+    "SHP",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "topografska-osnova-2018-vode",
+   "naslov": "Topografska osnova 2018. Vode",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-09-16",
+   "starost_dana": 720,
+   "formati": [
+    "CSV",
+    "GEOJSON",
+    "KML",
+    "SHP",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "topografska-osnova-2018-promet",
+   "naslov": "Topografska osnova 2018. Promet",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-09-16",
+   "starost_dana": 720,
+   "formati": [
+    "CSV",
+    "GEOJSON",
+    "KML",
+    "SHP",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-planirana-namjena-2023",
+   "naslov": "Geoportal planirana namjena 2023",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-09-13",
+   "starost_dana": 723,
+   "formati": [
+    "CSV",
+    "GEOJSON",
+    "KML",
+    "SHP",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "vatrogasne-postaje-dvd",
+   "naslov": "Vatrogasne postaje/DVD",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-04-15",
+   "starost_dana": 874,
+   "formati": [
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-gradska-trgovacka-drustva",
+   "naslov": "Geoportal gradska trgovačka društva",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-03-21",
+   "starost_dana": 899,
+   "formati": [
+    "CSV",
+    "FGDB",
+    "GEOJSON",
+    "KML",
+    "SHP",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "rezultati-javnih-poziva-za-predlaganje-programa-u-kulturi",
+   "naslov": "Rezultati Javnih poziva za predlaganje programa u kulturi",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-03-19",
+   "starost_dana": 901,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "projekti-europske-unije",
+   "naslov": "Projekti Europske Unije u provedbi",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-03-12",
+   "starost_dana": 908,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "raspodjela-sredstava-ms-2023",
+   "naslov": "Raspodjela sredstava mjesne samouprave",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-03-12",
+   "starost_dana": 908,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "sredstva-mjesne-samouprave-2001-2023",
+   "naslov": "Sredstva mjesne samouprave 2001-2024.",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-03-12",
+   "starost_dana": 908,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "provedeni-eu-projekti-u-razdoblju-od-2007-do-2021",
+   "naslov": "Provedeni EU projekti (2007. - 2023.)",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-03-08",
+   "starost_dana": 912,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "raskrizja-sa-zvucnim-signalizatorima",
+   "naslov": "Raskrižja sa zvučnim signalizatorima",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-03-08",
+   "starost_dana": 912,
+   "formati": [
+    "CSV",
+    "XLSX",
+    "XSLX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-druge-javne-ustanove",
+   "naslov": "Geoportal druge javne ustanove",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "CSV",
+    "GDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-zone-rezerviranih-parkiralisnih-mjesta",
+   "naslov": "Geoportal zone rezerviranih parkirališnih mjesta",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "CSV",
+    "FGDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "podaci-o-kvaliteti-zraka-u-gradu-zagrebu-dordiceva-2023",
+   "naslov": "Podaci o kvaliteti zraka u Gradu Zagrebu - MP Đorđićeva ulica 2023",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "podaci-o-kvaliteti-zraka-u-gradu-zagrebu-ksaver-2023",
+   "naslov": "Podaci o kvaliteti zraka u Gradu Zagrebu - MP Ksaverska cesta 2023",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-javne-garaze",
+   "naslov": "Geoportal Javne garaže",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "CSV",
+    "GDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-kulturne-ustanove",
+   "naslov": "Geoportal Kulturne ustanove",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "CSV",
+    "GDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-osnovne-skole",
+   "naslov": "Geoportal Osnovne škole",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "CSV",
+    "GDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-zdravstvene-ustanove",
+   "naslov": "Geoportal Zdravstvene ustanove",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "CSV",
+    "GDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-autobusna-stajalista-zet",
+   "naslov": "Geoportal autobusna stajališta ZET",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "CSV",
+    "GDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-besplatna-wifi-mreza",
+   "naslov": "Geoportal besplatna WiFi mreža",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "CSV",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-djecji-vrtici",
+   "naslov": "Geoportal Dječji vrtići",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "CSV",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": [
+    {
+     "format": "GEOJSON",
+     "status": "neslaganje",
+     "detalj": "deklarirano GEOJSON, posluženo ZIP",
+     "url": "https://opendata.arcgis.com/api/v3/datasets/49bb07d4efc34bd5bacc1d330dc28a07_0/downloads/data?format=fgdb&spatialRefId=4326&where=1%3D1"
+    }
+   ]
+  },
+  {
+   "name": "geoportal-gradski-vrt",
+   "naslov": "Geoportal gradski vrt",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "CSV",
+    "GDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-granice-dopustenog-drzanja-domacih-zivotinja",
+   "naslov": "Geoportal granice dopuštenog držanja domaćih životinja",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "CSV",
+    "GDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-sjedista-gradskih-cetvrti",
+   "naslov": "Geoportal Sjedišta gradskih četvrti",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "CSV",
+    "GDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-domovi-zdravlja",
+   "naslov": "Geoportal Domovi zdravlja",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "CSV",
+    "GDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-ljekarne",
+   "naslov": "Geoportal Ljekarne",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "CSV",
+    "GDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-mjesna-samouprava",
+   "naslov": "Geoportal Mjesna samouprava",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "CSV",
+    "GDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-crkve-rimokatolicke-zupe",
+   "naslov": "Geoportal Crkve (Rimokatoličke Župe)",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "CSV",
+    "GDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-javna-parkiralista-za-bicikle",
+   "naslov": "Geoportal Javna parkirališta za bicikle",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "CSV",
+    "GDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-sustav-javnih-bicikala",
+   "naslov": "Geoportal Sustav javnih bicikala",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "CSV",
+    "GDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-biciklisticke-staze",
+   "naslov": "Geoportal biciklističke staze",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "CSV",
+    "FGDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-podrucni-uredi",
+   "naslov": "Geoportal Područni uredi",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "CSV",
+    "GDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-gradske-trznice",
+   "naslov": "Geoportal gradske tržnice",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "CSV",
+    "FGDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-gradski-vrt-point",
+   "naslov": "Geoportal gradski vrt Point",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "CSV",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-nadzorne-kamere",
+   "naslov": "Geoportal Nadzorne kamere",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "CSV",
+    "GDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-odmorko",
+   "naslov": "Geoportal Odmorko",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "CSV",
+    "GDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "reciklazna-dvorista-grada-zagreba1",
+   "naslov": "Geoportal Reciklažna dvorišta grada Zagreba",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "CSV",
+    "GDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-zajednicka-lovista",
+   "naslov": "Geoportal zajednička lovišta",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "CSV",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-urbanisticka-dokumentacija-1995",
+   "naslov": "Geoportal urbanistička dokumentacija 1995.",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "CSV",
+    "FGDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-taxi-stajalista",
+   "naslov": "Geoportal taxi stajališta",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "CSV",
+    "FGDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-program-zastite-divljaci",
+   "naslov": "Geoportal program zaštite divljači",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "CSV",
+    "FGDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "povijesne-granice-grada-zagreba",
+   "naslov": "Povijesne granice grada Zagreba",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "CSV",
+    "FGDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "kapitalna-ulaganja-2023",
+   "naslov": "Kapitalna ulaganja 2023",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "CSV",
+    "FGDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "financijski-izvjestaji-za-razdoblje-od-01-sijecnja-do-30-lipnja-2016",
+   "naslov": "Financijski izvještaji za razdoblje od 01. siječnja do 30. lipnja 2016",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "CSV",
+    "PDF",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "financijski-izvjestaji-za-razdoblje-od-01-sijecnja-do-31-prosinca-2014",
+   "naslov": "Financijski izvještaji za razdoblje od 01. siječnja do 31. prosinca 2014",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "CSV",
+    "PDF",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "potpore-za-poticanje-razvoja-turizma-u-gradu-zagrebu",
+   "naslov": "Potpore za poticanje razvoja turizma u Gradu Zagrebu",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "zagrebacka-nadbiskupija-teritorijalna-struktura",
+   "naslov": "Zagrebačka nadbiskupija - teritorijalna struktura",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "gerontoloski-centri-grada-zagreba",
+   "naslov": "Gerontološki centri Grada Zagreba",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "lokacije-zelenih-otoka",
+   "naslov": "Lokacije zelenih otoka",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "dimnjacarske-koncesije",
+   "naslov": "Dimnjačarske koncesije",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "hitne-intervencije-na-podrucju-grada-zagreba",
+   "naslov": "Hitne intervencije na području Grada Zagreba",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "ugostiteljski-objekti-nekategorizirani-turisticke-agencije-i-vodici",
+   "naslov": "Ugostiteljski objekti, nekategorizirani, turističke agencije i vodiči",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "struktura-obrta-grada-zagreba",
+   "naslov": "Struktura obrta Grada Zagreba",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "potpore-inovatorima-grada-zagreba",
+   "naslov": "Potpore inovatorima Grada Zagreba",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "popis-autoprijevoznika-u-gradu-zagrebu",
+   "naslov": "Popis autoprijevoznika u Gradu Zagrebu",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "CSV",
+    "XLS"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "karta-sigurnih-zona-u-slucaju-potresa",
+   "naslov": "Karta sigurnih zona u slučaju potresa",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "centri-za-socijalnu-skrb",
+   "naslov": "Centri za socijalnu skrb",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "galerije",
+   "naslov": "Galerije grada Zagreba",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-28",
+   "starost_dana": 921,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-nacionalne-manjine",
+   "naslov": "Geoportal nacionalne manjine",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-06",
+   "starost_dana": 943,
+   "formati": [
+    "CSV",
+    "FGDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-kultura",
+   "naslov": "Geoportal kultura",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-06",
+   "starost_dana": 943,
+   "formati": [
+    "CSV",
+    "FGDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "telekomunikacijski-razvodni-ormarici",
+   "naslov": "Telekomunikacijski razvodni ormarići",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-06",
+   "starost_dana": 943,
+   "formati": [
+    "CSV",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "osnovne-skole-grad-zagreb",
+   "naslov": "Osnovne škole Grad Zagreb",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-06",
+   "starost_dana": 943,
+   "formati": [
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "planirana-namjena-1971",
+   "naslov": "Planirana namjena 1971",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-06",
+   "starost_dana": 943,
+   "formati": [
+    "CSV",
+    "FGDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-granice-opcine-1981",
+   "naslov": "Geoportal granice općine 1981.",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-06",
+   "starost_dana": 943,
+   "formati": [
+    "CSV",
+    "FGDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-javne-povrsine-za-pse",
+   "naslov": "Geoportal Javne površine za pse",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-06",
+   "starost_dana": 943,
+   "formati": [
+    "CSV",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "registar-sportskih-djelatnosti",
+   "naslov": "Registar sportskih djelatnosti",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-06",
+   "starost_dana": 943,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "godisnji-izvjestaj-o-izvrsenju-proracuna-grada-zagreba-za-2017",
+   "naslov": "Godišnji izvještaj o izvršenju proračuna Grada Zagreba za 2017.",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-06",
+   "starost_dana": 943,
+   "formati": [
+    "CSV",
+    "PDF",
+    "XLS"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "godisnji-izvjestaj-o-izvrsenju-proracuna-grada-zagreba-za-2016",
+   "naslov": "Godišnji izvještaj o izvršenju proračuna Grada Zagreba za 2016.",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-06",
+   "starost_dana": 943,
+   "formati": [
+    "CSV",
+    "PDF",
+    "XLS"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "podaci-o-kvaliteti-zraka-u-gradu-zagrebu-siget-2023",
+   "naslov": "Podaci o kvaliteti zraka u Gradu Zagrebu - MP Siget 2023",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-06",
+   "starost_dana": 943,
+   "formati": [
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "podaci-o-kvaliteti-zraka-u-gradu-zagrebu-pescenica-2023",
+   "naslov": "Podaci o kvaliteti zraka u Gradu Zagrebu - MP Peščenica 2023",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-06",
+   "starost_dana": 943,
+   "formati": [
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "podaci-o-kvaliteti-zraka-u-gradu-zagrebu-susedgrad-2023",
+   "naslov": "Podaci o kvaliteti zraka u Gradu Zagrebu - MP Susedgrad 2023",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-06",
+   "starost_dana": 943,
+   "formati": [
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-javna-igralista",
+   "naslov": "Geoportal javna sportska igrališta",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-06",
+   "starost_dana": 943,
+   "formati": [
+    "CSV",
+    "FGDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-kvaliteta-zraka",
+   "naslov": "Geoportal Kvaliteta zraka",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-06",
+   "starost_dana": 943,
+   "formati": [
+    "CSV",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-policija",
+   "naslov": "Geoportal policija",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-06",
+   "starost_dana": 943,
+   "formati": [
+    "CSV",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-nadlezna-institucija",
+   "naslov": "Geoportal nadležna institucija",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-06",
+   "starost_dana": 943,
+   "formati": [
+    "CSV",
+    "FGDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "javni-urbanisticko-arhitektonski-natjecaji",
+   "naslov": "Javni urbanističko - arhitektonski natječaji",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-06",
+   "starost_dana": 943,
+   "formati": [
+    "CSV",
+    "FGDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "brownfield-povrsine",
+   "naslov": "Brownfield površine",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-06",
+   "starost_dana": 943,
+   "formati": [
+    "CSV",
+    "FGDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-vjerske-zajednice",
+   "naslov": "Geoportal Vjerske zajednice",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-06",
+   "starost_dana": 943,
+   "formati": [
+    "CSV",
+    "GDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": [
+    {
+     "format": "GEOJSON",
+     "status": "greška",
+     "detalj": "UnsupportedProtocol (u 3 pokušaja)",
+     "url": "hhttps://opendata.arcgis.com/api/v3/datasets/26e9553b2fb34513ac2f8e4468d6b652_0/downloads/data?format=shp&spatialRefId=4326&where=1%3D1"
+    }
+   ]
+  },
+  {
+   "name": "geoportal-elektricne-punionice",
+   "naslov": "Geoportal električne punionice",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-06",
+   "starost_dana": 943,
+   "formati": [
+    "CSV",
+    "GDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-visokoskolske-ustanove",
+   "naslov": "Geoportal Visokoškolske ustanove",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-06",
+   "starost_dana": 943,
+   "formati": [
+    "CSV",
+    "GDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-sportski-objekti",
+   "naslov": "Geoportal Sportski objekti",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-06",
+   "starost_dana": 943,
+   "formati": [
+    "CSV",
+    "GDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-tramvajska-stajalista-zet",
+   "naslov": "Geoportal Tramvajska stajališta ZET",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-06",
+   "starost_dana": 943,
+   "formati": [
+    "CSV",
+    "GDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-ucenicki-domovi",
+   "naslov": "Geoportal Učenički domovi",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-06",
+   "starost_dana": 943,
+   "formati": [
+    "CSV",
+    "GDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-urbanisticki-planovi-uredenja",
+   "naslov": "Geoportal Urbanistički planovi uređenja",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-06",
+   "starost_dana": 943,
+   "formati": [
+    "CSV",
+    "GDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-srednje-skole",
+   "naslov": "Geoportal Srednje škole",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-06",
+   "starost_dana": 943,
+   "formati": [
+    "CSV",
+    "GDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "o-d-matrica-putovanja",
+   "naslov": "O/D matrica putovanja",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-06",
+   "starost_dana": 943,
+   "formati": [
+    "CSV"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-urbanisticka-dokumentacija-1985",
+   "naslov": "Geoportal urbanistička dokumentacija 1985.",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-06",
+   "starost_dana": 943,
+   "formati": [
+    "CSV",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-zeljeznicka-stajalista-hz",
+   "naslov": "Geoportal željeznička stajališta HŽ",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-06",
+   "starost_dana": 943,
+   "formati": [
+    "CSV",
+    "FGDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "mjesni-odbori",
+   "naslov": "Mjesni odbori",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-06",
+   "starost_dana": 943,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "planirana-namjena-1986",
+   "naslov": "Planirana namjena 1986",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-06",
+   "starost_dana": 943,
+   "formati": [
+    "CSV",
+    "FGDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "srednje-skole-grad-zagreb",
+   "naslov": "Srednje Škole Grad Zagreb",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-06",
+   "starost_dana": 943,
+   "formati": [
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "podaci-o-kvaliteti-zraka-u-gradu-zagrebu-prilaz-baruna-filipovica-2023",
+   "naslov": "Podaci o kvaliteti zraka u Gradu Zagrebu - MP Prilaz baruna Filipovića 2023",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-06",
+   "starost_dana": 943,
+   "formati": [
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "plan-komunalnih-akcija-grada-zagreba",
+   "naslov": "Plan komunalnih akcija Grada Zagreba",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-06",
+   "starost_dana": 943,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "grafiti-na-javnim-povrsinama",
+   "naslov": "Grafiti na javnim i privatnim površinama",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-06",
+   "starost_dana": 943,
+   "formati": [
+    "CSV"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-studentska-naselja",
+   "naslov": "Geoportal Studentska naselja",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-06",
+   "starost_dana": 943,
+   "formati": [
+    "CSV",
+    "GDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "broj-smjestajnih-objekata-grada-zagreba",
+   "naslov": "Broj smještajnih objekata Grada Zagreba",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-06",
+   "starost_dana": 943,
+   "formati": [
+    "CSV",
+    "XLS"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "financijski-izvjestaji-za-razdoblje-od-01-sijecnja-do-31-prosinca-2015",
+   "naslov": "Financijski izvještaji za razdoblje od 01. siječnja do 31. prosinca 2015",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-06",
+   "starost_dana": 943,
+   "formati": [
+    "CSV",
+    "PDF",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "evidencija-telekomunikacijskih-ormarica",
+   "naslov": "Evidencija telekomunikacijskih ormarića Digitalnog grada",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-06",
+   "starost_dana": 943,
+   "formati": [
+    "CSV",
+    "XLSX"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-tijela-drzavne-uprave",
+   "naslov": "Geoportal Tijela državne uprave",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-06",
+   "starost_dana": 943,
+   "formati": [
+    "CSV",
+    "GDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-vatrogasci",
+   "naslov": "Geoportal vatrogasci",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2024-02-06",
+   "starost_dana": 943,
+   "formati": [
+    "CSV",
+    "GDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  },
+  {
+   "name": "geoportal-benzinske-postaje",
+   "naslov": "Geoportal benzinske postaje",
+   "licenca": "Otvorena dozvola (OD)",
+   "azurirano": "2023-12-19",
+   "starost_dana": 992,
+   "formati": [
+    "CSV",
+    "GDB",
+    "GEOJSON",
+    "KML",
+    "SHP"
+   ],
+   "strojno_citljiv": true,
+   "problemi": []
+  }
+ ]
+}
