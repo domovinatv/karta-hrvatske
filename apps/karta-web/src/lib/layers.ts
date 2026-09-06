@@ -7,20 +7,25 @@ import {
   Focus,
   GraduationCap,
   HeartHandshake,
+  Hospital,
   House,
   LandPlot,
   Landmark,
   Map as MapIcon,
-  Maximize,
   MapPinHouse,
-  Palette,
+  Maximize,
   Network,
+  Palette,
   Plane,
+  Recycle,
   Rocket,
   Satellite,
+  School,
   Shield,
+  ShoppingBasket,
   SquareDashed,
   SunMoon,
+  TramFront,
   Trophy,
   type LucideIcon,
 } from "lucide-react";
@@ -41,6 +46,7 @@ export type LayerGroupId =
   | "obrazovanje"
   | "sport"
   | "gospodarstvo"
+  | "zagreb"
   | "infrastruktura";
 
 export const GROUPS: { id: LayerGroupId; label: string }[] = [
@@ -51,6 +57,7 @@ export const GROUPS: { id: LayerGroupId; label: string }[] = [
   { id: "obrazovanje", label: "Odgoj i obrazovanje" },
   { id: "sport", label: "Sport" },
   { id: "gospodarstvo", label: "Gospodarstvo i poduzetništvo" },
+  { id: "zagreb", label: "Zagreb — otvoreni podaci" },
   { id: "infrastruktura", label: "Infrastruktura" },
 ];
 
@@ -65,6 +72,12 @@ export type LayerStateKey =
   | "showPitches"
   | "showStadiums"
   | "showInkubatori"
+  | "showZgObrazovanje"
+  | "showZgZdravlje"
+  | "showZgKretanje"
+  | "showZgSvakodnevno"
+  | "showZgOtpad"
+  | "showZgSigurnost"
   | "showEkosustav"
   | "showCrkve"
   | "showZupe"
@@ -87,6 +100,12 @@ export type LayerId =
   | "igralista"
   | "stadioni"
   | "inkubatori"
+  | "zg-obrazovanje"
+  | "zg-zdravlje"
+  | "zg-kretanje"
+  | "zg-svakodnevno"
+  | "zg-otpad"
+  | "zg-sigurnost"
   | "ekosustav"
   | "crkve"
   | "zupe"
@@ -435,6 +454,90 @@ export const CONTROLS: Control[] = [
       { color: "#8b5cf6", label: "coworking / hub" },
       { color: "#64748b", label: "korporativni program" },
     ],
+  },
+
+  // ── Zagreb — otvoreni podaci ─────────────────────────────────────────────
+  // Šest prekidača nad JEDNOM datotekom (`zagreb-sadrzaji.geojson`, 33 skupa
+  // s data.zagreb.hr). Ne šest slojeva: useZagrebLayer ih pretvara u filtar
+  // po polju `skupina`. Sve točke su unutar Grada Zagreba osim 24 koje izvor
+  // sam vodi izvan granica (ZET vozi u Zagrebačku županiju, HŽ stajalište
+  // Velika Gorica je u Velikoj Gorici).
+  {
+    kind: "toggle",
+    id: "zg-obrazovanje",
+    group: "zagreb",
+    label: "ZG odgoj i obrazovanje",
+    icon: School,
+    stateKey: "showZgObrazovanje",
+    count: 686,
+    lazy: true,
+    blurb:
+      "Dječji vrtići, osnovne i srednje škole, visoka učilišta, učenički domovi i studentska naselja iz gradskog portala. Popup vodi na izvorni skup podataka.",
+    source: { label: "data.zagreb.hr (Otvorena dozvola)", href: "https://data.zagreb.hr/" },
+  },
+  {
+    kind: "toggle",
+    id: "zg-zdravlje",
+    group: "zagreb",
+    label: "ZG zdravlje i skrb",
+    icon: Hospital,
+    stateKey: "showZgZdravlje",
+    count: 511,
+    lazy: true,
+    blurb:
+      "Ljekarne, domovi zdravlja i ambulante, zdravstvene ustanove i domovi za starije osobe.",
+    source: { label: "data.zagreb.hr (Otvorena dozvola)", href: "https://data.zagreb.hr/" },
+  },
+  {
+    kind: "toggle",
+    id: "zg-kretanje",
+    group: "zagreb",
+    label: "ZG kretanje gradom",
+    icon: TramFront,
+    stateKey: "showZgKretanje",
+    count: 2726,
+    lazy: true,
+    blurb:
+      "Autobusna i tramvajska stajališta ZET-a, željeznička stajališta HŽ-a, javni bicikli i parkirališta za bicikle, javne garaže, električne punionice, taxi stajališta. Popup stajališta nosi i podatke o pristupačnosti (rampa, taktilna crta, stajalište u razini).",
+    source: { label: "data.zagreb.hr (Otvorena dozvola)", href: "https://data.zagreb.hr/" },
+  },
+  {
+    kind: "toggle",
+    id: "zg-svakodnevno",
+    group: "zagreb",
+    label: "ZG svakodnevni grad",
+    icon: ShoppingBasket,
+    stateKey: "showZgSvakodnevno",
+    count: 1082,
+    lazy: true,
+    blurb:
+      "Tržnice, javna igrališta i sportski objekti, kulturne ustanove, gradski vrtovi, površine za pse, javni zdenci, pojilice s pitkom vodom, javni WC-i i besplatne WiFi točke.",
+    source: { label: "data.zagreb.hr (Otvorena dozvola)", href: "https://data.zagreb.hr/" },
+  },
+  {
+    kind: "toggle",
+    id: "zg-otpad",
+    group: "zagreb",
+    label: "ZG otpad",
+    icon: Recycle,
+    stateKey: "showZgOtpad",
+    count: 273,
+    lazy: true,
+    blurb:
+      "Reciklažna dvorišta te podzemni i polupodzemni spremnici. Dva spremnička skupa imaju zamijenjena značenja istoimenih stupaca u izvoru — ovdje su razriješena.",
+    source: { label: "data.zagreb.hr (Otvorena dozvola)", href: "https://data.zagreb.hr/" },
+  },
+  {
+    kind: "toggle",
+    id: "zg-sigurnost",
+    group: "zagreb",
+    label: "ZG sigurnost",
+    icon: Shield,
+    stateKey: "showZgSigurnost",
+    count: 76,
+    lazy: true,
+    blurb: "Vatrogasne postrojbe i policijske postaje na području Grada Zagreba.",
+    source: { label: "data.zagreb.hr (Otvorena dozvola)", href: "https://data.zagreb.hr/" },
   },
 
   // ── Infrastruktura ───────────────────────────────────────────────────────

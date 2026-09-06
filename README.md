@@ -70,3 +70,19 @@ Bazni slojevi (granice, naselja, klubovi, aerodromi) nastaju u `data-pipeline`.
 
 - `map.domovina.ai` — standalone Flutter preteča, u cijelosti migrirana u `apps/karta-mobile` (zadnji commit: *"DEPRECATED on arrival"*).
 - Upstream izvori za referencu: `domovina/draft_karta_rh` (→ data-pipeline).
+
+## Licenca
+
+Kod je pod [MIT licencom](./LICENSE). Generirani GeoJSON-ovi, izvedeni
+pokazatelji i plakati su pod **CC BY 4.0**, uz jednu iznimku: slojevi izvedeni
+iz OpenStreetMapa ostaju pod **ODbL**-om. Detalji po izvoru — i jedan slučaj
+gdje su dvije licence u istoj datoteci — u [LICENSE-PODACI.md](./LICENSE-PODACI.md).
+
+## Zagrebački otvoreni podaci
+
+`apps/data-pipeline/scripts/31_fetch_zg_open_data.py` dohvaća 33 kurirana skupa
+s [data.zagreb.hr](https://data.zagreb.hr/) i svodi ih na jednu shemu
+(`zg_gradski_sadrzaji.geojson`, 5354 točke, grupa slojeva „Zagreb — otvoreni
+podaci"). `32_zg_portal_report.py` mjeri sam portal — svježinu, licence,
+neispravne resurse i duplikate; zadnji nalaz je u
+`apps/data-pipeline/outputs/zg_portal_izvjestaj.md`.

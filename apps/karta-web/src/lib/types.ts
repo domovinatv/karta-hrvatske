@@ -503,3 +503,35 @@ export interface OouProperties {
 }
 export type OouFeature = GeoJSON.Feature<GeoJSON.Point, OouProperties> & { id: number };
 export type OouCollection = GeoJSON.FeatureCollection<GeoJSON.Point, OouProperties>;
+
+/**
+ * Gradski sadržaj Zagreba iz portala otvorenih podataka (33 skupa svedena na
+ * jednu shemu). Gradi `apps/data-pipeline/scripts/31_fetch_zg_open_data.py`.
+ */
+export interface ZgSadrzajProperties {
+  id: number;
+  /** Strojni ključ vrste, npr. `vrtic`, `bus-stajaliste`, `zdenac`. */
+  kategorija: string;
+  /** Vidljivo ime vrste, npr. „Dječji vrtić". */
+  label: string;
+  /** obrazovanje | zdravlje | kretanje | svakodnevno | otpad | sigurnost */
+  skupina: string;
+  naziv: string;
+  adresa?: string | null;
+  /** Prostorno izračunato iz RPJ-a, ne preuzeto iz izvora. */
+  gradska_cetvrt?: string | null;
+  mjesni_odbor?: string | null;
+  /**
+   * Četvrt kako je piše IZVOR. Zadržana zasebno da se neslaganje s prostornim
+   * izračunom može izmjeriti umjesto zataškati — 5 zapisa se stvarno ne slaže.
+   */
+  gc_izvor?: string | null;
+  /** Polja specifična za vrstu; ključevi su iz manifesta. */
+  detalji?: Record<string, string | number> | null;
+  /** CKAN `name` skupa na data.zagreb.hr — popup od njega gradi poveznicu. */
+  dataset: string;
+}
+export type ZgSadrzajCollection = GeoJSON.FeatureCollection<
+  GeoJSON.Point,
+  ZgSadrzajProperties
+>;

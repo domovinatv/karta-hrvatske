@@ -466,12 +466,100 @@ test("desktop: zadnja kontrola u panelu dohvatljiva na niskom viewportu", async 
   await expect(panel).toBeVisible();
 });
 
+test("Zagreb otvoreni podaci: filtar po skupini, popup, poveznica na izvor", async ({ page }) => {
+  await page.goto(BASE + "/");
+  await waitForMapIdle(page);
+
+  // Šest prekidača dijeli JEDNU datoteku. Prvi klik je mora dohvatiti,
+  // drugi (druga skupina) NE SMIJE ponovno — inače je hook napravio šest
+  // izvora umjesto jednog filtra.
+  let fetcheva = 0;
+  page.on("request", (req) => {
+    if (req.url().includes("/data/zagreb-sadrzaji.geojson")) fetcheva++;
+  });
+
+  const obrazovanje = page.locator("button", { hasText: /ZG odgoj i obrazovanje/ }).first();
+  await obrazovanje.scrollIntoViewIfNeeded();
+  const reqPromise = page.waitForRequest((req) =>
+    req.url().includes("/data/zagreb-sadrzaji.geojson"),
+  );
+  await obrazovanje.click();
+  const resp = await (await reqPromise).response();
+  expect(resp?.status()).toBe(200);
+
+  await page.waitForFunction(
+    () => {
+      const w = window as unknown as { _gisMap?: import("maplibre-gl").Map };
+      const map = w._gisMap;
+      if (!map?.getLayer("hr-zg-sadrzaji-circle")) return false;
+      return map.queryRenderedFeatures({ layers: ["hr-zg-sadrzaji-circle"] } as never).length > 0;
+    },
+    { timeout: 15000 },
+  );
+
+  // Upaljena je samo jedna skupina — ništa drugo se ne smije crtati.
+  const skupine = await page.evaluate(() => {
+    const w = window as unknown as { _gisMap?: import("maplibre-gl").Map };
+    const map = w._gisMap!;
+    map.jumpTo({ center: [15.98, 45.81], zoom: 12 });
+    return map
+      .queryRenderedFeatures({ layers: ["hr-zg-sadrzaji-circle"] } as never)
+      .map((f) => (f.properties as { skupina: string }).skupina);
+  });
+  expect(skupine.length).toBeGreaterThan(0);
+  expect([...new Set(skupine)]).toEqual(["obrazovanje"]);
+
+  await page.locator("button", { hasText: /ZG otpad/ }).first().click();
+  await page.waitForFunction(
+    () => {
+      const w = window as unknown as { _gisMap?: import("maplibre-gl").Map };
+      const map = w._gisMap!;
+      const s = map
+        .queryRenderedFeatures({ layers: ["hr-zg-sadrzaji-circle"] } as never)
+        .map((f) => (f.properties as { skupina: string }).skupina);
+      return new Set(s).size === 2;
+    },
+    { timeout: 10000 },
+  );
+  expect(fetcheva, "druga skupina je ponovno dohvatila istu datoteku").toBe(1);
+
+  await page.locator('button[aria-label="Sklopi panel"]').click();
+  await expect(page.getByTestId("layers-panel")).toHaveCount(0);
+
+  const pt = await page.evaluate(async () => {
+    const w = window as unknown as { _gisMap?: import("maplibre-gl").Map };
+    const map = w._gisMap!;
+    const feats = map.queryRenderedFeatures({ layers: ["hr-zg-sadrzaji-circle"] } as never);
+    if (!feats.length) return null;
+    const f = feats[0];
+    const coords = (f.geometry as GeoJSON.Point).coordinates as [number, number];
+    map.jumpTo({ center: coords, zoom: 16 });
+    await new Promise((r) => setTimeout(r, 600));
+    const px = map.project(coords);
+    const rect = map.getCanvas().getBoundingClientRect();
+    const p = f.properties as { naziv: string; dataset: string };
+    return { x: rect.left + px.x, y: rect.top + px.y, naziv: p.naziv, dataset: p.dataset };
+  });
+  expect(pt).not.toBeNull();
+  await page.mouse.click(pt!.x, pt!.y);
+
+  const popup = page.locator(".maplibregl-popup-content .club-popup");
+  await expect(popup).toBeVisible({ timeout: 5000 });
+  await expect(popup.locator(".club-name").first()).toHaveText(pt!.naziv);
+  // `detalji` je ugniježđeni objekt — MapLibre ga provuče kao JSON string.
+  // Ako se ne raspakira, popup ispiše `[object Object]`.
+  await expect(popup).not.toContainText("object Object");
+  await expect(
+    popup.locator(`a[href="https://data.zagreb.hr/dataset/${pt!.dataset}"]`),
+  ).toHaveCount(1);
+});
+
 test("desktop: svaka kontrola iz registra je dohvatljiva klikom", async ({ page }) => {
   await page.setViewportSize({ width: 1280, height: 600 });
   await page.goto(BASE + "/");
   await waitForMapIdle(page);
 
-  for (const label of ["Ortofoto", "Naselja", "Crkve", "Biskupije", "Inkubatori", "Privatni ekosustav", "Zračne luke"]) {
+  for (const label of ["Ortofoto", "Naselja", "Crkve", "Biskupije", "Inkubatori", "Privatni ekosustav", "ZG kretanje gradom", "Zračne luke"]) {
     const btn = page.locator("button", { hasText: new RegExp(label) }).first();
     await btn.scrollIntoViewIfNeeded();
     await expect(btn, `kontrola "${label}" nije u viewportu`).toBeInViewport();

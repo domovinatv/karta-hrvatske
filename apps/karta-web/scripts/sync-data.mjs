@@ -39,6 +39,7 @@ const fileMap = [
   ["hr_pula_naselja.geojson", "pula-naselja.geojson"],
   ["hr_grad_kotari.geojson", "grad-kotari.geojson"],
   ["hr_ppi_inkubatori.geojson", "inkubatori.geojson"],
+  ["zg_gradski_sadrzaji.geojson", "zagreb-sadrzaji.geojson"],
   ["hr_ppi_privatni.geojson", "ekosustav.geojson"],
 ];
 

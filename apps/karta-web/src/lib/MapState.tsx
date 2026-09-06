@@ -41,6 +41,16 @@ interface MapState {
   showStadiums: boolean;
   /** Inkubatori, akceleratori i tehnološki parkovi (JRPI). */
   showInkubatori: boolean;
+  /**
+   * Gradski sadržaji Zagreba iz data.zagreb.hr. Šest zastavica nad JEDNOM
+   * datotekom — hook ih pretvara u `filter` po skupini, ne u šest izvora.
+   */
+  showZgObrazovanje: boolean;
+  showZgZdravlje: boolean;
+  showZgKretanje: boolean;
+  showZgSvakodnevno: boolean;
+  showZgOtpad: boolean;
+  showZgSigurnost: boolean;
   /** Privatni ekosustav — kurirano, nije registar. */
   showEkosustav: boolean;
   showAirports: boolean;
@@ -74,6 +84,12 @@ interface MapStateActions {
   setShowUstanove: (on: boolean) => void;
   setShowStadiums: (on: boolean) => void;
   setShowInkubatori: (on: boolean) => void;
+  setShowZgObrazovanje: (on: boolean) => void;
+  setShowZgZdravlje: (on: boolean) => void;
+  setShowZgKretanje: (on: boolean) => void;
+  setShowZgSvakodnevno: (on: boolean) => void;
+  setShowZgOtpad: (on: boolean) => void;
+  setShowZgSigurnost: (on: boolean) => void;
   setShowEkosustav: (on: boolean) => void;
   setShowAirports: (on: boolean) => void;
   setShowPinka: (on: boolean) => void;
@@ -117,6 +133,12 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
   const [showUstanove, setShowUstanove] = useState(false);
   const [showStadiums, setShowStadiums] = useState(false);
   const [showInkubatori, setShowInkubatori] = useState(false);
+  const [showZgObrazovanje, setShowZgObrazovanje] = useState(false);
+  const [showZgZdravlje, setShowZgZdravlje] = useState(false);
+  const [showZgKretanje, setShowZgKretanje] = useState(false);
+  const [showZgSvakodnevno, setShowZgSvakodnevno] = useState(false);
+  const [showZgOtpad, setShowZgOtpad] = useState(false);
+  const [showZgSigurnost, setShowZgSigurnost] = useState(false);
   const [showEkosustav, setShowEkosustav] = useState(false);
   const [showAirports, setShowAirports] = useState(false);
   const [showPinka, setShowPinka] = useState(false);
@@ -176,6 +198,12 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
       showUstanove,
       showStadiums,
       showInkubatori,
+      showZgObrazovanje,
+      showZgZdravlje,
+      showZgKretanje,
+      showZgSvakodnevno,
+      showZgOtpad,
+      showZgSigurnost,
       showEkosustav,
       showAirports,
       showPinka,
@@ -202,6 +230,12 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
       setShowUstanove,
       setShowStadiums,
       setShowInkubatori,
+      setShowZgObrazovanje,
+      setShowZgZdravlje,
+      setShowZgKretanje,
+      setShowZgSvakodnevno,
+      setShowZgOtpad,
+      setShowZgSigurnost,
       setShowEkosustav,
       setShowAirports,
       setShowPinka,
@@ -232,6 +266,12 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
       showUstanove,
       showStadiums,
       showInkubatori,
+      showZgObrazovanje,
+      showZgZdravlje,
+      showZgKretanje,
+      showZgSvakodnevno,
+      showZgOtpad,
+      showZgSigurnost,
       showEkosustav,
       showAirports,
       showPinka,
