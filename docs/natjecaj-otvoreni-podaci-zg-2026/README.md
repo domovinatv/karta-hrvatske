@@ -208,6 +208,12 @@ docs/natjecaj-otvoreni-podaci-zg-2026/
 > Za ispunjavanje ih treba pretipkati — tekstualne verzije istih obrazaca iz 2024.
 > su u `referenca-program-otvoreni-podaci-2024.txt` i strukturno su gotovo identične.
 
+## Vezani dokumenti
+
+- [prijedlog-projekta.md](./prijedlog-projekta.md) — dva projekta za prijavu
+- [TODO-prijava.md](./TODO-prijava.md) — radna lista do 16.9.2026.
+- [../2026-09-06-zagrebacki-otvoreni-podaci.md](../2026-09-06-zagrebacki-otvoreni-podaci.md) — mehanika harvestera, odbačene alternative, zamke portala
+
 ## Izvori
 
 - [Otvoren javni poziv za sufinanciranje projekata korištenja otvorenih podataka za 2026. — zagreb.hr](https://zagreb.hr/otvoren-javni-poziv-za-sufinanciranje-projekata-ko/222515)
