@@ -1,0 +1,82 @@
+{
+  "_opis": "Ručne ispravke nad JRPI zapisima. Ključ je `unit_id` iz registra (najmanji u spojenoj grupi) — stabilan je preko pokretanja i vidljiv u properties.id izlaznog GeoJSON-a.",
+  "_polja": {
+    "naziv": "samo za ljudsko čitanje, skripta ga ignorira",
+    "brand": "ime pod kojim subjekt nastupa, kad ga pravni naziv skriva",
+    "lat/lng": "koordinata kad geokoder odbije ili nema adrese",
+    "napomena": "zašto je ručno — obavezno, da se za godinu dana zna"
+  },
+  "subjekti": {
+    "51": {
+      "brand": "ZICER",
+      "naziv": "ZAGREBAČKI INOVACIJSKI CENTAR d.o.o.",
+      "napomena": "Puni naziv je točan, ali subjekt je javno poznat isključivo kao ZICER (zicer.hr)."
+    },
+    "61": {
+      "naziv": "CENTAR ZA RAZVOJ I EDUKACIJU POLIČNIK",
+      "lat": 44.174213,
+      "lng": 15.35897,
+      "napomena": "Adresa je 'Grabi 26, Poličnik' — Grabi je zaselak, ne ulica, i nije zasebno naselje u RPJ-u. DGU ima 'Grabi 26' i 'Grabi P-9 26' u naselju Poličnik; uzeta je prva, bez oznake parcele."
+    },
+    "73": {
+      "brand": "Algebra LAB",
+      "naziv": "DigiBoost d.o.o.",
+      "napomena": "Pravni naziv skriva brend — algebra.hr/lab."
+    },
+    "76": {
+      "brand": "BIZ Košnica",
+      "naziv": "Avantes plus d.o.o.",
+      "napomena": "Pravni naziv skriva brend — bizkoshnica.biz."
+    },
+    "99": {
+      "naziv": "CroTechHub (Poduzetničko potporni centar)",
+      "lat": 45.828666,
+      "lng": 16.009604,
+      "napomena": "Jedini zapis u registru BEZ adrese. Bukovačka cesta 105, Zagreb — s vlastite stranice crotechhub.com, pa geokodirano preko DGU-a (točan pogodak na kućni broj)."
+    },
+    "107": {
+      "naziv": "Poduzetnički inkubator Donji Čaglić (LIRA)",
+      "lat": 45.386791,
+      "lng": 17.156809,
+      "napomena": "Registar piše 'Roberta Žilija 94, Lipik', ali ta ulica u Lipiku ne postoji — adresa je u naselju Donji Čaglić ('Ulica Roberta Žilija 94'). Lipik je JLS, ne naselje."
+    },
+    "116": {
+      "naziv": "Core Inkubator",
+      "lat": 45.827031,
+      "lng": 16.010658,
+      "napomena": "Bukovačka cesta 42, Zagreb. Geokoder je odbio: ILIKE '%Bukov%' vraća i 'Bukovac 42' i 'Gornji Bukovac 42', pa pravilo razlikovnosti nema pobjednika. Odbijanje je ispravno — ovo je pogodak potvrđen ručno."
+    },
+    "117": {
+      "brand": "HUB385",
+      "naziv": "NEST 01 d.o.o.",
+      "napomena": "Pravni naziv skriva brend — hub385.com."
+    },
+    "156": {
+      "brand": "Inkubator Đurđevac",
+      "naziv": "STARI GRAD d.o.o.",
+      "napomena": "Pravni naziv skriva brend — inkubator-djurdjevac.hr."
+    },
+    "180": {
+      "brand": "Impact Hub Zagreb",
+      "naziv": "Pokreni ideju j.d.o.o.",
+      "napomena": "Pravni naziv skriva brend — zagreb.impacthub.net."
+    },
+    "191": {
+      "naziv": "CEPOR",
+      "lat": 45.815056,
+      "lng": 16.011816,
+      "napomena": "Registar piše 'Trg J.F.Kennedya 7', RPJ ima 'Trg Johna Fitzgeralda Kennedyja 7'. Inicijali bez razmaka ne prolaze ILIKE. Zgrada Ekonomskog fakulteta."
+    },
+    "268": {
+      "naziv": "ENTER KOPRIVNICA",
+      "lat": 46.162569,
+      "lng": 16.832223,
+      "napomena": "'Zrinski trg 1/I' — /I je kat, a ne slovni podbroj; geokoder ga je pročitao kao ulaz I i promašio. RPJ adresa je 'Zrinski trg 1'."
+    },
+    "291": {
+      "brand": "Invento Capital Partners",
+      "naziv": "Optimizacija d.o.o.",
+      "napomena": "Pravni naziv ne govori ništa — inventocapitalpartners.eu."
+    }
+  }
+}

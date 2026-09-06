@@ -39,6 +39,8 @@ interface MapState {
   /** Odgojno-obrazovne ustanove kao PRAVNE OSOBE (drugi skup od showSkole). */
   showUstanove: boolean;
   showStadiums: boolean;
+  /** Inkubatori, akceleratori i tehnološki parkovi (JRPI). */
+  showInkubatori: boolean;
   showAirports: boolean;
   showPinka: boolean;
   showZupBorders: boolean;
@@ -69,6 +71,7 @@ interface MapStateActions {
   setShowVrtici: (on: boolean) => void;
   setShowUstanove: (on: boolean) => void;
   setShowStadiums: (on: boolean) => void;
+  setShowInkubatori: (on: boolean) => void;
   setShowAirports: (on: boolean) => void;
   setShowPinka: (on: boolean) => void;
   toggleZupBorders: () => void;
@@ -110,6 +113,7 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
   const [showVrtici, setShowVrtici] = useState(false);
   const [showUstanove, setShowUstanove] = useState(false);
   const [showStadiums, setShowStadiums] = useState(false);
+  const [showInkubatori, setShowInkubatori] = useState(false);
   const [showAirports, setShowAirports] = useState(false);
   const [showPinka, setShowPinka] = useState(false);
   const [showZupBorders, setShowZupBorders] = useState(true);
@@ -167,6 +171,7 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
       showVrtici,
       showUstanove,
       showStadiums,
+      showInkubatori,
       showAirports,
       showPinka,
       showZupBorders,
@@ -191,6 +196,7 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
       setShowVrtici,
       setShowUstanove,
       setShowStadiums,
+      setShowInkubatori,
       setShowAirports,
       setShowPinka,
       toggleZupBorders,
@@ -219,6 +225,7 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
       showVrtici,
       showUstanove,
       showStadiums,
+      showInkubatori,
       showAirports,
       showPinka,
       showZupBorders,

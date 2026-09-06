@@ -1,0 +1,4542 @@
+{
+ "type": "FeatureCollection",
+ "name": "hr_ppi_inkubatori",
+ "metadata": {
+  "izvor": "JRPI — Jedinstveni registar poduzetničke infrastrukture (MINGO)",
+  "url": "https://jrpi.mingo.gov.hr/",
+  "opseg": [
+   "Digitalni inovacijski centar",
+   "Poduzetnički inkubator",
+   "Inkubator za nove tehnologije",
+   "Poduzetnički akcelerator",
+   "Znanstveno-tehnologijski park",
+   "Centar kompetencije"
+  ],
+  "zapisa_u_registru": 236,
+  "zapisa_u_opsegu": 89,
+  "subjekata": 82,
+  "fina_provjereno": "2026-09-06"
+ },
+ "features": [
+  {
+   "type": "Feature",
+   "id": 18,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     17.06574,
+     45.802123
+    ]
+   },
+   "properties": {
+    "id": 18,
+    "brand": "Poduzetnički park Velika Pisanica",
+    "naziv": "Poduzetnički park Velika Pisanica društvo s ograničenom odgovornošću za razvoj i ulaganja",
+    "vrste": [
+     {
+      "id": 7,
+      "naziv": "Poduzetnički inkubator"
+     }
+    ],
+    "vrsta_primarna": 7,
+    "vrsta_primarna_naziv": "Poduzetnički inkubator",
+    "oib": "2918693275",
+    "mbs": "1005569",
+    "godina_osnivanja": 2004,
+    "osnivac": "Općina Velika Pisanica",
+    "oib_osnivaca": "18872765530",
+    "upravitelj": null,
+    "adresa": "Trg hrvatskih branitelja 3, Velika Pisanica 43271",
+    "mjesto": "Velika Pisanica",
+    "jls": "VELIKA PISANICA",
+    "zupanija": "Bjelovarsko-bilogorska županija",
+    "website": null,
+    "emails": [
+     "poduzetnicki-park-velika-pisanica@bj.t-com.hr"
+    ],
+    "telefoni": [],
+    "kontakt_osobe": [
+     "Antonela Šimić"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     18
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 19,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     17.209481,
+     45.454966
+    ]
+   },
+   "properties": {
+    "id": 19,
+    "brand": "PODUZETNIČKI INKUBATOR PAKRAC",
+    "naziv": "Poduzetnički centar Pakrac d. o. o., Podružnica PODUZETNIČKI INKUBATOR PAKRAC",
+    "vrste": [
+     {
+      "id": 7,
+      "naziv": "Poduzetnički inkubator"
+     }
+    ],
+    "vrsta_primarna": 7,
+    "vrsta_primarna_naziv": "Poduzetnički inkubator",
+    "oib": "24926977965",
+    "mbs": "50032150",
+    "godina_osnivanja": 2003,
+    "osnivac": "Poduzetnički centar Pakrac d.o.o.",
+    "oib_osnivaca": "24926977965",
+    "upravitelj": null,
+    "adresa": "Zona male privrede 5, Pakrac 34550",
+    "mjesto": "Pakrac",
+    "jls": "PAKRAC",
+    "zupanija": "Požeško-slavonska županija",
+    "website": "https://www.pc-pakrac.hr",
+    "emails": [
+     "vgazic86@gmail.com"
+    ],
+    "telefoni": [
+     "034290650",
+     "0994743722",
+     "034290659"
+    ],
+    "kontakt_osobe": [
+     "Vladimir Gazić"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     19
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mali",
+    "fina_zaposleni": 9,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/poduzetnicki-centar-pakrac-i-turisticka-agencija-d-o-o/OIB-24926977965",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 20,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.44181,
+     45.327702
+    ]
+   },
+   "properties": {
+    "id": 20,
+    "brand": "Visoka poslovna škola PAR",
+    "naziv": "Visoka poslovna škola PAR",
+    "vrste": [
+     {
+      "id": 7,
+      "naziv": "Poduzetnički inkubator"
+     }
+    ],
+    "vrsta_primarna": 7,
+    "vrsta_primarna_naziv": "Poduzetnički inkubator",
+    "oib": "89694105768",
+    "mbs": "040280221",
+    "godina_osnivanja": 2012,
+    "osnivac": "Visoka poslovna škola PAR",
+    "oib_osnivaca": "89694105768",
+    "upravitelj": null,
+    "adresa": "Trg Riječke rezolucije 4, Rijeka 51000",
+    "mjesto": "Rijeka",
+    "jls": "RIJEKA",
+    "zupanija": "Primorsko-goranska županija",
+    "website": "https://www.par.hr",
+    "emails": [
+     "dekanat@par.hr"
+    ],
+    "telefoni": [
+     "915097 934"
+    ],
+    "kontakt_osobe": [
+     "Gordana Nikolić"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     20
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mali",
+    "fina_zaposleni": 17,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/par/OIB-89694105768",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 21,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.44181,
+     45.327702
+    ]
+   },
+   "properties": {
+    "id": 21,
+    "brand": "P.A.R.",
+    "naziv": "P. A. R. društvo s ograničenom odgovornošću za pružanje usluga",
+    "vrste": [
+     {
+      "id": 7,
+      "naziv": "Poduzetnički inkubator"
+     }
+    ],
+    "vrsta_primarna": 7,
+    "vrsta_primarna_naziv": "Poduzetnički inkubator",
+    "oib": "50876356002",
+    "mbs": "040238586",
+    "godina_osnivanja": 2007,
+    "osnivac": "P.A.R. d.o.o.",
+    "oib_osnivaca": "?",
+    "upravitelj": null,
+    "adresa": "Trg Riječke rezolucije 4, Rijeka 51000",
+    "mjesto": "Rijeka",
+    "jls": "RIJEKA",
+    "zupanija": "Primorsko-goranska županija",
+    "website": "https://www.par.hr",
+    "emails": [
+     "info@par.hr"
+    ],
+    "telefoni": [
+     "5097934"
+    ],
+    "kontakt_osobe": [
+     "Gordana Nikolić"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     21
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 0,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/p-a-r-d-o-o/OIB-50876356002",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 22,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.523358,
+     43.560977
+    ]
+   },
+   "properties": {
+    "id": 22,
+    "brand": "PI KLIS",
+    "naziv": "PODUZETNIČKI INKUBATOR KLIS d.o.o. za razvoj poduzetništva, Klis",
+    "vrste": [
+     {
+      "id": 7,
+      "naziv": "Poduzetnički inkubator"
+     }
+    ],
+    "vrsta_primarna": 7,
+    "vrsta_primarna_naziv": "Poduzetnički inkubator",
+    "oib": "79976084797",
+    "mbs": "06030843",
+    "godina_osnivanja": 2014,
+    "osnivac": "Općina Klis",
+    "oib_osnivaca": "71670874269",
+    "upravitelj": null,
+    "adresa": "Iza Grada 4, Klis 21231",
+    "mjesto": "Klis",
+    "jls": "KLIS",
+    "zupanija": "Splitsko-dalmatinska županija",
+    "website": "https://www.pi-klis.hr",
+    "emails": [
+     "sanja.uvodic@pi-klis.hr"
+    ],
+    "telefoni": [
+     "0922634831",
+     "0995254027",
+     "021/240-075"
+    ],
+    "kontakt_osobe": [
+     "SANJA UVODIĆ"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     22
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 6,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/poduzetnicki-inkubator-klis-d-o-o/OIB-79976084797",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 27,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.483828,
+     45.264798
+    ]
+   },
+   "properties": {
+    "id": 27,
+    "brand": "Poduzetnički inkubator Donji Kukuruzari",
+    "naziv": "Poduzetnički inkubator Donji Kukuruzari društvo s ograničenom odgovornošću za savjetovanje i upravljanje",
+    "vrste": [
+     {
+      "id": 7,
+      "naziv": "Poduzetnički inkubator"
+     }
+    ],
+    "vrsta_primarna": 7,
+    "vrsta_primarna_naziv": "Poduzetnički inkubator",
+    "oib": "05322263060",
+    "mbs": "081374087",
+    "godina_osnivanja": 2021,
+    "osnivac": "Općina Donji Kukuruzari",
+    "oib_osnivaca": "68881952354",
+    "upravitelj": null,
+    "adresa": "Ulica don Ante Lizatovića 2, Donji Kukuruzari 44431",
+    "mjesto": "Donji Kukuruzari",
+    "jls": "DONJI KUKURUZARI",
+    "zupanija": "Sisačko-moslavačka županija",
+    "website": null,
+    "emails": [
+     "pi.d.kukuruzari@gmail.com"
+    ],
+    "telefoni": [],
+    "kontakt_osobe": [
+     "Ana Čivić"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     27
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 1,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/poduzetnicki-inkubator-donji-kukuruzari-d-o-o/OIB-05322263060",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 28,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.371433,
+     44.552824
+    ]
+   },
+   "properties": {
+    "id": 28,
+    "brand": "Razvojni centar Ličko-senjske županije",
+    "naziv": "Razvojni centar Ličko-senjske županije",
+    "vrste": [
+     {
+      "id": 7,
+      "naziv": "Poduzetnički inkubator"
+     }
+    ],
+    "vrsta_primarna": 7,
+    "vrsta_primarna_naziv": "Poduzetnički inkubator",
+    "oib": "29442545888",
+    "mbs": "040429068",
+    "godina_osnivanja": 2021,
+    "osnivac": "Ličko-senjska županija",
+    "oib_osnivaca": "40774389207",
+    "upravitelj": null,
+    "adresa": "Pazariška ulica 36, Gospić 53000",
+    "mjesto": "Gospić",
+    "jls": "GOSPIĆ",
+    "zupanija": "Ličko-senjska županija",
+    "website": "https://www.rc.licko-senjska.hr/",
+    "emails": [
+     "razvojni.centar@licko-senjska.hr"
+    ],
+    "telefoni": [],
+    "kontakt_osobe": [
+     "Mile Milković"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     28
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "-",
+    "fina_zaposleni": null,
+    "fina_url": "https://infobiz.fina.hr/proracun/razvojni-centar-licko-senjske-zupanije/OIB-29442545888",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 29,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.401784,
+     45.335759
+    ]
+   },
+   "properties": {
+    "id": 29,
+    "brand": "Riječka razvojna agencija PORIN",
+    "naziv": "RIJEČKA RAZVOJNA AGENCIJA PORIN društvo s ograničenom odgovornošću za istraživanje, razvoj i ostale poslovne djelatnosti",
+    "vrste": [
+     {
+      "id": 7,
+      "naziv": "Poduzetnički inkubator"
+     }
+    ],
+    "vrsta_primarna": 7,
+    "vrsta_primarna_naziv": "Poduzetnički inkubator",
+    "oib": "29183761133",
+    "mbs": "40035447",
+    "godina_osnivanja": 1996,
+    "osnivac": "Grad Rijeka",
+    "oib_osnivaca": "54382731928",
+    "upravitelj": null,
+    "adresa": "Milutina Barača  62/66, Rijeka 51000",
+    "mjesto": "Rijeka",
+    "jls": "RIJEKA",
+    "zupanija": "Primorsko-goranska županija",
+    "website": "https://www.porin.hr",
+    "emails": [
+     "rraporin@porin.hr"
+    ],
+    "telefoni": [],
+    "kontakt_osobe": [
+     "Nenad Antolović"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     29
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 8,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/rijecka-razvojna-agencija-porin-d-o-o/OIB-29183761133",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 30,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     17.809974,
+     45.283102
+    ]
+   },
+   "properties": {
+    "id": 30,
+    "brand": "Poduzetnički inkubator Pleternica",
+    "naziv": "Poduzetnički inkubator Pleternica",
+    "vrste": [
+     {
+      "id": 7,
+      "naziv": "Poduzetnički inkubator"
+     }
+    ],
+    "vrsta_primarna": 7,
+    "vrsta_primarna_naziv": "Poduzetnički inkubator",
+    "oib": "92000327865",
+    "mbs": "50039908",
+    "godina_osnivanja": 2012,
+    "osnivac": "Poduzetnički centar Pleternica d.o.o.",
+    "oib_osnivaca": "92000327865",
+    "upravitelj": null,
+    "adresa": "Ante Starčevića 35, Pleternica 34310",
+    "mjesto": "Pleternica",
+    "jls": "PLETERNICA",
+    "zupanija": "Požeško-slavonska županija",
+    "website": "https://www.plink.hr",
+    "emails": [
+     "info@plink.hr"
+    ],
+    "telefoni": [
+     "034/252-125",
+     "098/165-0187",
+     "034/252-152"
+    ],
+    "kontakt_osobe": [
+     "Barbara Rudež"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     30
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 10,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/poduzetnicki-centar-pleternica-d-o-o/OIB-92000327865",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 34,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.871867,
+     46.145374
+    ]
+   },
+   "properties": {
+    "id": 34,
+    "brand": "PC KZŽ",
+    "naziv": "Poduzetnički centar Krapinsko-zagorske županije d.o.o.",
+    "vrste": [
+     {
+      "id": 7,
+      "naziv": "Poduzetnički inkubator"
+     },
+     {
+      "id": 8,
+      "naziv": "Inkubator za nove tehnologije"
+     },
+     {
+      "id": 9,
+      "naziv": "Poduzetnički akcelerator"
+     }
+    ],
+    "vrsta_primarna": 9,
+    "vrsta_primarna_naziv": "Poduzetnički akcelerator",
+    "oib": "63625874835",
+    "mbs": "80202268",
+    "godina_osnivanja": 2020,
+    "osnivac": "Krapinsko-zagorska županija",
+    "oib_osnivaca": "20042466298",
+    "upravitelj": null,
+    "adresa": "Bobovje  52G, Krapina 49000",
+    "mjesto": "Krapina",
+    "jls": "KRAPINA",
+    "zupanija": "Krapinsko-zagorska županija",
+    "website": "https://www.poduzetnickicentar-kzz.hr",
+    "emails": [
+     "info@poduzetnickicentar-kzz.hr"
+    ],
+    "telefoni": [
+     "049 354 695",
+     "099 393 7029",
+     "049 301 290"
+    ],
+    "kontakt_osobe": [
+     "Denis Ranogajec"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     34,
+     35,
+     195
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 10,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/poduzetnicki-centar-krapinsko-zagorske-zupanije-d-o-o/OIB-63625874835",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 38,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     18.635384,
+     45.564565
+    ]
+   },
+   "properties": {
+    "id": 38,
+    "brand": "BIOS",
+    "naziv": "Poduzetnički inkubator BIOS d.o.o.",
+    "vrste": [
+     {
+      "id": 8,
+      "naziv": "Inkubator za nove tehnologije"
+     }
+    ],
+    "vrsta_primarna": 8,
+    "vrsta_primarna_naziv": "Inkubator za nove tehnologije",
+    "oib": "21055328609",
+    "mbs": "030033658",
+    "godina_osnivanja": 1996,
+    "osnivac": "Grad Osijek",
+    "oib_osnivaca": "30050049642",
+    "upravitelj": null,
+    "adresa": "J. J. Strossmayera  341, Osijek 31000",
+    "mjesto": "Osijek",
+    "jls": "OSIJEK",
+    "zupanija": "Osječko-baranjska županija",
+    "website": "https://www.inkubator.hr",
+    "emails": [
+     "uprava@inkubator.hr"
+    ],
+    "telefoni": [
+     "031209955",
+     "0997002323"
+    ],
+    "kontakt_osobe": [
+     "Tatjana Čepo"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     38
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 5,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/poduzetnicki-inkubator-bios-d-o-o/OIB-21055328609",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 41,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.955553,
+     45.782349
+    ]
+   },
+   "properties": {
+    "id": 41,
+    "brand": "Crane",
+    "naziv": "Crane d.o.o. za savjetovanje",
+    "vrste": [
+     {
+      "id": 9,
+      "naziv": "Poduzetnički akcelerator"
+     }
+    ],
+    "vrsta_primarna": 9,
+    "vrsta_primarna_naziv": "Poduzetnički akcelerator",
+    "oib": "10017762759",
+    "mbs": "81025746",
+    "godina_osnivanja": 2016,
+    "osnivac": "Hrvatska mreža poslovnih anđela HMPA",
+    "oib_osnivaca": "67014273482",
+    "upravitelj": null,
+    "adresa": "Remetinečka cesta 7, Zagreb 10000",
+    "mjesto": "Zagreb",
+    "jls": "GRAD ZAGREB",
+    "zupanija": "Grad Zagreb",
+    "website": "https://crane.hr",
+    "emails": [
+     "info@crane.hr"
+    ],
+    "telefoni": [],
+    "kontakt_osobe": [
+     "Miriam Belar"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     41
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 43,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.448018,
+     43.511136
+    ]
+   },
+   "properties": {
+    "id": 43,
+    "brand": "Poduzetnički potporni centar",
+    "naziv": "Poduzetnički potporni centar d.o.o., za poslovno savjetovanje i usluge",
+    "vrste": [
+     {
+      "id": 7,
+      "naziv": "Poduzetnički inkubator"
+     }
+    ],
+    "vrsta_primarna": 7,
+    "vrsta_primarna_naziv": "Poduzetnički inkubator",
+    "oib": "61662545155",
+    "mbs": "060354298",
+    "godina_osnivanja": 2016,
+    "osnivac": "Montanense d.o.o., Interligo d.o.o., Financial office j.d.o.o.",
+    "oib_osnivaca": "57373245393;59543941730;39789584793",
+    "upravitelj": null,
+    "adresa": "Kvaternikova 5, Split 21000",
+    "mjesto": "Split",
+    "jls": "SPLIT",
+    "zupanija": "Splitsko-dalmatinska županija",
+    "website": null,
+    "emails": [
+     "ivana@montanense.com"
+    ],
+    "telefoni": [],
+    "kontakt_osobe": [
+     "Ivana Prodan"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     43
+    ],
+    "fina_status": "Likvidacija",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 0,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/poduzetnicki-potporni-centar-d-o-o-u-likvidaciji/OIB-61662545155",
+    "fina_aktivan": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 47,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.451621,
+     45.327215
+    ]
+   },
+   "properties": {
+    "id": 47,
+    "brand": "Mediteransko edukacijski komorski centar inovacija",
+    "naziv": "Mediteransko edukacijski komorski centar inovacija d. o. o. za usluge",
+    "vrste": [
+     {
+      "id": 9,
+      "naziv": "Poduzetnički akcelerator"
+     }
+    ],
+    "vrsta_primarna": 9,
+    "vrsta_primarna_naziv": "Poduzetnički akcelerator",
+    "oib": "70109681205",
+    "mbs": "040036904",
+    "godina_osnivanja": 1996,
+    "osnivac": "HRVATSKA GOSPODARSKA KOMORA",
+    "oib_osnivaca": "85167032587",
+    "upravitelj": null,
+    "adresa": "Bulevar oslobođenja 23, Rijeka 51000",
+    "mjesto": "Rijeka",
+    "jls": "RIJEKA",
+    "zupanija": "Primorsko-goranska županija",
+    "website": "https://www.mekci.eu",
+    "emails": [
+     "ispahic@hgk.hr"
+    ],
+    "telefoni": [],
+    "kontakt_osobe": [
+     "Irena Spahić"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     47
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 0,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/hgk-hoteli-d-o-o/OIB-70109681205",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 50,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     18.405301,
+     45.684365
+    ]
+   },
+   "properties": {
+    "id": 50,
+    "brand": "PODUZETNIČKI INKUBATOR POLET",
+    "naziv": "PODUZETNIČKI INKUBATOR POLET d.o.o. za razvoj poduzetništva",
+    "vrste": [
+     {
+      "id": 7,
+      "naziv": "Poduzetnički inkubator"
+     }
+    ],
+    "vrsta_primarna": 7,
+    "vrsta_primarna_naziv": "Poduzetnički inkubator",
+    "oib": "42974081816",
+    "mbs": "4148312",
+    "godina_osnivanja": 2013,
+    "osnivac": "GRAD BELIŠĆE",
+    "oib_osnivaca": "70663673307",
+    "upravitelj": null,
+    "adresa": "Željeznička 10A, Belišće 31551",
+    "mjesto": "Belišće",
+    "jls": "BELIŠĆE",
+    "zupanija": "Osječko-baranjska županija",
+    "website": "https://www.polet.com.hr",
+    "emails": [
+     "polet.belisce@gmail.com"
+    ],
+    "telefoni": [],
+    "kontakt_osobe": [
+     "KAROLINA ŠTEFAN BUGARINOVIĆ"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     50
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 6,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/poduzetnicki-inkubator-polet-d-o-o/OIB-42974081816",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 51,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.968076,
+     45.779902
+    ]
+   },
+   "properties": {
+    "id": 51,
+    "brand": "ZICER",
+    "naziv": "ZAGREBAČKI INOVACIJSKI CENTAR društvo s ograničenom odgovornošću za promicanje inovativnog poduzetništa",
+    "vrste": [
+     {
+      "id": 7,
+      "naziv": "Poduzetnički inkubator"
+     },
+     {
+      "id": 8,
+      "naziv": "Inkubator za nove tehnologije"
+     },
+     {
+      "id": 9,
+      "naziv": "Poduzetnički akcelerator"
+     }
+    ],
+    "vrsta_primarna": 9,
+    "vrsta_primarna_naziv": "Poduzetnički akcelerator",
+    "oib": "53921712112",
+    "mbs": "80655731",
+    "godina_osnivanja": 2008,
+    "osnivac": "Grad Zagreb",
+    "oib_osnivaca": "61817894937",
+    "upravitelj": null,
+    "adresa": "Avenija Dubrovnik 15, Zagreb 10000",
+    "mjesto": "Zagreb",
+    "jls": "GRAD ZAGREB",
+    "zupanija": "Grad Zagreb",
+    "website": "https://www.zicer.hr",
+    "emails": [
+     "info@zicer.hr",
+     "bok@zicer.hr"
+    ],
+    "telefoni": [
+     "+38513667101",
+     "+385959400336",
+     "+38513667102",
+     "+385989007504"
+    ],
+    "kontakt_osobe": [
+     "Tomislav Budimir"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     51,
+     90,
+     303
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mali",
+    "fina_zaposleni": 22,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/zagrebacki-inovacijski-centar-d-o-o/OIB-53921712112",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 60,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.452951,
+     43.502044
+    ]
+   },
+   "properties": {
+    "id": 60,
+    "brand": "INTEGRAL STRUCTURES",
+    "naziv": "INTEGRAL STRUCTURES d.o.o. za poslovno savjetovanje",
+    "vrste": [
+     {
+      "id": 9,
+      "naziv": "Poduzetnički akcelerator"
+     }
+    ],
+    "vrsta_primarna": 9,
+    "vrsta_primarna_naziv": "Poduzetnički akcelerator",
+    "oib": "94900482568",
+    "mbs": "060427516",
+    "godina_osnivanja": 2021,
+    "osnivac": "Grbić Daniel , Maglica Mate ",
+    "oib_osnivaca": "0;0",
+    "upravitelj": null,
+    "adresa": "Hektorovićeva 25, Split 21000",
+    "mjesto": "Split",
+    "jls": "SPLIT",
+    "zupanija": "Splitsko-dalmatinska županija",
+    "website": "https://www.integralstructures.hr",
+    "emails": [
+     "danielgrbic89@gmail.com"
+    ],
+    "telefoni": [
+     "0977713211"
+    ],
+    "kontakt_osobe": [
+     "Daniel Grbic"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     60
+    ],
+    "fina_status": "Neaktivan/izbrisan",
+    "fina_velicina": null,
+    "fina_zaposleni": 2,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/integral-structures-d-o-o-u-stecaju/OIB-94900482568",
+    "fina_aktivan": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 61,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.35897,
+     44.174213
+    ]
+   },
+   "properties": {
+    "id": 61,
+    "brand": "CENTAR ZA RAZVOJ I EDUKACIJU POLIČNIK",
+    "naziv": "CENTAR ZA RAZVOJ I EDUKACIJU POLIČNIK",
+    "vrste": [
+     {
+      "id": 7,
+      "naziv": "Poduzetnički inkubator"
+     }
+    ],
+    "vrsta_primarna": 7,
+    "vrsta_primarna_naziv": "Poduzetnički inkubator",
+    "oib": "57446489473",
+    "mbs": "5280095",
+    "godina_osnivanja": 2020,
+    "osnivac": "OPĆINA POLIČNIK",
+    "oib_osnivaca": "87120007882",
+    "upravitelj": "CENTAR POLIČNIK",
+    "adresa": "Grabi  26, Poličnik 23241",
+    "mjesto": "Poličnik",
+    "jls": "POLIČNIK",
+    "zupanija": "Zadarska županija",
+    "website": "https://www.centar-policnik.hr",
+    "emails": [
+     "info@centar-policnik.eu"
+    ],
+    "telefoni": [
+     "023204933"
+    ],
+    "kontakt_osobe": [
+     "SANJA GLAVAN"
+    ],
+    "povrsina_m2": 1388,
+    "povrsina_poduzetnici_m2": 986,
+    "geo_source": "rucno",
+    "jrpi_unit_ids": [
+     61
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "-",
+    "fina_zaposleni": null,
+    "fina_url": "https://infobiz.fina.hr/proracun/centar-za-razvoj-i-edukaciju-policnik/OIB-57446489473",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 65,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     18.80482,
+     45.287305
+    ]
+   },
+   "properties": {
+    "id": 65,
+    "brand": "TEHNOLOŠKI PARK VINKOVCI",
+    "naziv": "TEHNOLOŠKI PARK VINKOVCI d.o.o. za inkubaciju inovativnih tehnologijskih poduzeća",
+    "vrste": [
+     {
+      "id": 8,
+      "naziv": "Inkubator za nove tehnologije"
+     }
+    ],
+    "vrsta_primarna": 8,
+    "vrsta_primarna_naziv": "Inkubator za nove tehnologije",
+    "oib": "72762511425",
+    "mbs": "2819848",
+    "godina_osnivanja": 2011,
+    "osnivac": "Grad Vinkovci",
+    "oib_osnivaca": "67648791479",
+    "upravitelj": null,
+    "adresa": "Vatrogasna 5, Vinkovci 32100",
+    "mjesto": "Vinkovci",
+    "jls": "VINKOVCI",
+    "zupanija": "Vukovarsko-srijemska županija",
+    "website": "https://www.tp-vk.hr",
+    "emails": [
+     "info@tp-vk.hr"
+    ],
+    "telefoni": [
+     "032/331-060",
+     "098/383-203",
+     "032/331-047"
+    ],
+    "kontakt_osobe": [
+     "Branka Mišić"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     65
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 8,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/tehnoloski-park-vinkovci-d-o-o/OIB-72762511425",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 68,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.908938,
+     43.714845
+    ]
+   },
+   "properties": {
+    "id": 68,
+    "brand": "Podi Šibenik",
+    "naziv": "PODI ŠIBENIK društvo s ograničenom odgovornošću za poslovne usluge",
+    "vrste": [
+     {
+      "id": 7,
+      "naziv": "Poduzetnički inkubator"
+     }
+    ],
+    "vrsta_primarna": 7,
+    "vrsta_primarna_naziv": "Poduzetnički inkubator",
+    "oib": "56846309370",
+    "mbs": "60047925",
+    "godina_osnivanja": 1997,
+    "osnivac": "Grad Šibenik, ADRIAL PLUS d.o.o. za usluge i trgovinu",
+    "oib_osnivaca": "55644094063;62244399525",
+    "upravitelj": null,
+    "adresa": "Velimira Škorpika 17B, Šibenik 22000",
+    "mjesto": "Šibenik",
+    "jls": "ŠIBENIK",
+    "zupanija": "Šibensko-kninska županija",
+    "website": "https://www.podi-sibenik.com",
+    "emails": [
+     "anita.auzina@podi-sibenik.com"
+    ],
+    "telefoni": [
+     "022 200 947",
+     "0992180800",
+     "022200948"
+    ],
+    "kontakt_osobe": [
+     "Anita Aužina"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     68
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 5,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/podi-sibenik-d-o-o/OIB-56846309370",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 70,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.448989,
+     46.391434
+    ]
+   },
+   "properties": {
+    "id": 70,
+    "brand": "Tehnološko-inovacijski centar Međimurje",
+    "naziv": "Tehnološko-inovacijski centar Međimurje društvo s ograničenom odgovornošću za potporu tehnološki utemeljenom i inovativnom poduzetništvu",
+    "vrste": [
+     {
+      "id": 7,
+      "naziv": "Poduzetnički inkubator"
+     },
+     {
+      "id": 8,
+      "naziv": "Inkubator za nove tehnologije"
+     },
+     {
+      "id": 9,
+      "naziv": "Poduzetnički akcelerator"
+     }
+    ],
+    "vrsta_primarna": 9,
+    "vrsta_primarna_naziv": "Poduzetnički akcelerator",
+    "oib": "93523116875",
+    "mbs": "70099471",
+    "godina_osnivanja": 2011,
+    "osnivac": "Međimurska županija",
+    "oib_osnivaca": "09161580297",
+    "upravitelj": null,
+    "adresa": "Bana Josipa Jelačića  22B, Čakovec 40000",
+    "mjesto": "Čakovec",
+    "jls": "ČAKOVEC",
+    "zupanija": "Međimurska županija",
+    "website": "https://www.ticm.hr",
+    "emails": [
+     "info@ticm.hr",
+     "igor.kovacic@ticm.hr"
+    ],
+    "telefoni": [
+     "+385 40 499",
+     "+385 99 212",
+     "+385 40 395"
+    ],
+    "kontakt_osobe": [
+     "Igor Kovačić"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     70,
+     210,
+     249
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 5,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/tehnolosko-inovacijski-centar-meimurje-d-o-o/OIB-93523116875",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 73,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.941007,
+     45.8102
+    ]
+   },
+   "properties": {
+    "id": 73,
+    "brand": "Algebra LAB",
+    "naziv": "DigiBoost društvo s ograničenom odgovornošću za usluge",
+    "vrste": [
+     {
+      "id": 8,
+      "naziv": "Inkubator za nove tehnologije"
+     }
+    ],
+    "vrsta_primarna": 8,
+    "vrsta_primarna_naziv": "Inkubator za nove tehnologije",
+    "oib": "10843368196",
+    "mbs": "080906885",
+    "godina_osnivanja": 2014,
+    "osnivac": "Visoko učilište Algebra",
+    "oib_osnivaca": "14575159920",
+    "upravitelj": null,
+    "adresa": "Gradišćanska  24, GRAD ZAGREB 10000",
+    "mjesto": "Zagreb",
+    "jls": "GRAD ZAGREB",
+    "zupanija": "Grad Zagreb",
+    "website": "https://www.algebra.hr/lab/",
+    "emails": [
+     "maja.brkljacic@algebra.hr"
+    ],
+    "telefoni": [],
+    "kontakt_osobe": [
+     "Maja Brkljačić"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     73
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 0,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/digiboost-d-o-o/OIB-10843368196",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 76,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.964952,
+     45.812491
+    ]
+   },
+   "properties": {
+    "id": 76,
+    "brand": "BIZ Košnica",
+    "naziv": "Avantes plus društvo s ograničenom odgovornošću za informatičke usluge",
+    "vrste": [
+     {
+      "id": 7,
+      "naziv": "Poduzetnički inkubator"
+     }
+    ],
+    "vrsta_primarna": 7,
+    "vrsta_primarna_naziv": "Poduzetnički inkubator",
+    "oib": "50902229713",
+    "mbs": "080540931",
+    "godina_osnivanja": 2005,
+    "osnivac": "Udruga - Institut za kreativno obrazovanje",
+    "oib_osnivaca": "09570136662",
+    "upravitelj": null,
+    "adresa": "Ilica 71, Zagreb 10000",
+    "mjesto": "Zagreb",
+    "jls": "GRAD ZAGREB",
+    "zupanija": "Grad Zagreb",
+    "website": "https://www.bizkoshnica.biz",
+    "emails": [
+     "mirela@bizkoshnica.biz"
+    ],
+    "telefoni": [
+     "+385997002007",
+     "+38598730225"
+    ],
+    "kontakt_osobe": [
+     "Mirela Marović Omerzu"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     76
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 3,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/avantes-plus-d-o-o/OIB-50902229713",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 78,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.488835,
+     43.53757
+    ]
+   },
+   "properties": {
+    "id": 78,
+    "brand": "Inkubator Solin",
+    "naziv": "Inkubator Solin d.o.o. za usluge",
+    "vrste": [
+     {
+      "id": 7,
+      "naziv": "Poduzetnički inkubator"
+     }
+    ],
+    "vrsta_primarna": 7,
+    "vrsta_primarna_naziv": "Poduzetnički inkubator",
+    "oib": "67539968843",
+    "mbs": "060308736",
+    "godina_osnivanja": 2013,
+    "osnivac": "Grad Solin",
+    "oib_osnivaca": "40642464411",
+    "upravitelj": null,
+    "adresa": "Stjepana Radića  42, Solin 21210",
+    "mjesto": "Solin",
+    "jls": "SOLIN",
+    "zupanija": "Splitsko-dalmatinska županija",
+    "website": "http://www.inkubator-solin.hr/",
+    "emails": [
+     "inkubator@solin.hr"
+    ],
+    "telefoni": [
+     "021555219",
+     "0981718426",
+     "021211120"
+    ],
+    "kontakt_osobe": [
+     "Zvonimir Grubišić"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     78
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 81,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.444034,
+     43.517585
+    ]
+   },
+   "properties": {
+    "id": 81,
+    "brand": "PODUZETNIČKI AKCELERATOR SPLIT",
+    "naziv": "PODUZETNIČKI AKCELERATOR SPLIT d.o.o. za razvoj poduzetništva",
+    "vrste": [
+     {
+      "id": 9,
+      "naziv": "Poduzetnički akcelerator"
+     }
+    ],
+    "vrsta_primarna": 9,
+    "vrsta_primarna_naziv": "Poduzetnički akcelerator",
+    "oib": "07925158825",
+    "mbs": "60192294",
+    "godina_osnivanja": 2003,
+    "osnivac": "UHY SAVJETOVANJE d.o.o.",
+    "oib_osnivaca": "16139571061",
+    "upravitelj": null,
+    "adresa": "Hrvatske mornarice  1h, Split 21000",
+    "mjesto": "Split",
+    "jls": "SPLIT",
+    "zupanija": "Splitsko-dalmatinska županija",
+    "website": "https://www.europskifondovi.eu",
+    "emails": [
+     "boris.pekic@uhy.hr"
+    ],
+    "telefoni": [
+     "021/612-673",
+     "091/722-7676",
+     "021/612-672"
+    ],
+    "kontakt_osobe": [
+     "Boris Pekić"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     81
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 3,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/poduzetnicki-akcelerator-split-d-o-o/OIB-07925158825",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 84,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.344017,
+     46.295181
+    ]
+   },
+   "properties": {
+    "id": 84,
+    "brand": "Tehnološki park Varaždin",
+    "naziv": "Tehnološki park Varaždin d.o.o. za inkubaciju inovativnih tehnologijskih poduzeća",
+    "vrste": [
+     {
+      "id": 8,
+      "naziv": "Inkubator za nove tehnologije"
+     }
+    ],
+    "vrsta_primarna": 8,
+    "vrsta_primarna_naziv": "Inkubator za nove tehnologije",
+    "oib": "18115028597",
+    "mbs": "70077626",
+    "godina_osnivanja": 2007,
+    "osnivac": "Grad Varaždin, Fakultet organizacije i informatike Varaždin, Sveučilište Sjever",
+    "oib_osnivaca": "13269011531;02024882310;59624928052",
+    "upravitelj": null,
+    "adresa": "Zagrebačka  89, Varaždin 42000",
+    "mjesto": "Varaždin",
+    "jls": "VARAŽDIN",
+    "zupanija": "Varaždinska županija",
+    "website": "https://www.techpark.hr",
+    "emails": [
+     "info@techpark.hr"
+    ],
+    "telefoni": [],
+    "kontakt_osobe": [
+     "Vedran Bubalo"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     84
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 6,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/tehnoloski-park-varazdin-d-o-o/OIB-18115028597",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 86,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     17.376296,
+     45.227539
+    ]
+   },
+   "properties": {
+    "id": 86,
+    "brand": "Poduzetnički inkubator Industrijski park Nova Gradiška",
+    "naziv": "Poduzetnički inkubator Industrijski park Nova Gradiška",
+    "vrste": [
+     {
+      "id": 7,
+      "naziv": "Poduzetnički inkubator"
+     }
+    ],
+    "vrsta_primarna": 7,
+    "vrsta_primarna_naziv": "Poduzetnički inkubator",
+    "oib": "58802471410",
+    "mbs": "5003920",
+    "godina_osnivanja": 2006,
+    "osnivac": "Grad Nova Gradiška",
+    "oib_osnivaca": "08658615403",
+    "upravitelj": null,
+    "adresa": "II Industrijski odvojak  2, Nova Gradiška 35400",
+    "mjesto": "Nova Gradiška",
+    "jls": "NOVA GRADIŠKA",
+    "zupanija": "Brodsko-posavska županija",
+    "website": "https://www.ipng.hr",
+    "emails": [
+     "vesna.dapic@ipng.hr"
+    ],
+    "telefoni": [],
+    "kontakt_osobe": [
+     "Vesna Đapić"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     86
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 8,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/industrijski-park-nova-gradiska-d-o-o/OIB-58802471410",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 87,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.402072,
+     45.335945
+    ]
+   },
+   "properties": {
+    "id": 87,
+    "brand": "Riječka razvojna agencija PORIN",
+    "naziv": "RIJEČKA RAZVOJNA AGENCIJA PORIN društvo s ograničenom odgovornošću za istraživanje, razvoj i ostale poslovne djelatnosti",
+    "vrste": [
+     {
+      "id": 7,
+      "naziv": "Poduzetnički inkubator"
+     }
+    ],
+    "vrsta_primarna": 7,
+    "vrsta_primarna_naziv": "Poduzetnički inkubator",
+    "oib": "29183761133",
+    "mbs": "40035447",
+    "godina_osnivanja": 1996,
+    "osnivac": "Grad Rijeka",
+    "oib_osnivaca": "54382731928",
+    "upravitelj": null,
+    "adresa": "Milutina Barača 60, Rijeka 51000",
+    "mjesto": "Rijeka",
+    "jls": "RIJEKA",
+    "zupanija": "Primorsko-goranska županija",
+    "website": "https://www.porin.hr",
+    "emails": [
+     "rraporin@porin.hr"
+    ],
+    "telefoni": [],
+    "kontakt_osobe": [
+     "Nenad Antolović"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     87
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 8,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/rijecka-razvojna-agencija-porin-d-o-o/OIB-29183761133",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 99,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.009604,
+     45.828666
+    ]
+   },
+   "properties": {
+    "id": 99,
+    "brand": "CroTechHub",
+    "naziv": "Poduzetničko potporni centar CroTechHub",
+    "vrste": [
+     {
+      "id": 8,
+      "naziv": "Inkubator za nove tehnologije"
+     }
+    ],
+    "vrsta_primarna": 8,
+    "vrsta_primarna_naziv": "Inkubator za nove tehnologije",
+    "oib": "55186936061",
+    "mbs": "081210370",
+    "godina_osnivanja": 2019,
+    "osnivac": "Tehnološko inovacijski hub",
+    "oib_osnivaca": "55186936061",
+    "upravitelj": null,
+    "adresa": null,
+    "mjesto": null,
+    "jls": "GRAD ZAGREB",
+    "zupanija": "Grad Zagreb",
+    "website": "https://www.crotechhub.com",
+    "emails": [
+     "emil.peric@crotechhub.com"
+    ],
+    "telefoni": [
+     "+385923269706"
+    ],
+    "kontakt_osobe": [
+     "Emil-Ilija Perić"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "rucno",
+    "jrpi_unit_ids": [
+     99
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 0,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/tehnolosko-inovacijski-hub/OIB-55186936061",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 105,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.594919,
+     45.226319
+    ]
+   },
+   "properties": {
+    "id": 105,
+    "brand": "PODUZETNIČKI INKUBATOR POREČ",
+    "naziv": "PODUZETNIČKI INKUBATOR POREČ d.o.o.",
+    "vrste": [
+     {
+      "id": 7,
+      "naziv": "Poduzetnički inkubator"
+     }
+    ],
+    "vrsta_primarna": 7,
+    "vrsta_primarna_naziv": "Poduzetnički inkubator",
+    "oib": "49204296358",
+    "mbs": "4421779",
+    "godina_osnivanja": 2015,
+    "osnivac": "GRAD POREČ-PAERENZO",
+    "oib_osnivaca": "41303906494",
+    "upravitelj": null,
+    "adresa": "OBALA MARŠALA TITA  5/1, Poreč 52440",
+    "mjesto": "Poreč",
+    "jls": "POREČ - PARENZO",
+    "zupanija": "Istarska županija",
+    "website": "https://www.porec.hr",
+    "emails": [
+     "ured.gradonacelnika@porec.hr"
+    ],
+    "telefoni": [],
+    "kontakt_osobe": [
+     "Morena Mičetić"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     105
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 0,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/poduzetnicki-inkubator-porec-d-o-o/OIB-49204296358",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 107,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     17.156809,
+     45.386791
+    ]
+   },
+   "properties": {
+    "id": 107,
+    "brand": "Poduzetnički inkubator Donji Čaglić",
+    "naziv": "Lipička razvojna agencija LIRA d.o.o. ( PI Donji Čaglić)",
+    "vrste": [
+     {
+      "id": 7,
+      "naziv": "Poduzetnički inkubator"
+     }
+    ],
+    "vrsta_primarna": 7,
+    "vrsta_primarna_naziv": "Poduzetnički inkubator",
+    "oib": "54639446953",
+    "mbs": "30136617",
+    "godina_osnivanja": 2013,
+    "osnivac": "Grad Lipik",
+    "oib_osnivaca": "26289199529",
+    "upravitelj": null,
+    "adresa": "Roberta Žilija  94, Lipik 34551",
+    "mjesto": "Lipik",
+    "jls": "LIPIK",
+    "zupanija": "Požeško-slavonska županija",
+    "website": "https://www.lipik.hr",
+    "emails": [
+     "veronika.prhal@lipik.hr"
+    ],
+    "telefoni": [
+     "034314831",
+     "098884090",
+     "034421031"
+    ],
+    "kontakt_osobe": [
+     "Veronika Prhal"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "rucno",
+    "jrpi_unit_ids": [
+     107
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mali",
+    "fina_zaposleni": 13,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/lipicka-razvojna-i-turisticka-agencija-lira-d-o-o/OIB-54639446953",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 108,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.952868,
+     45.810254
+    ]
+   },
+   "properties": {
+    "id": 108,
+    "brand": "VRH - Poduzetnički inkubator",
+    "naziv": "VRH - Poduzetnički inkubator d.o.o. za savjetovanje i upravljanje",
+    "vrste": [
+     {
+      "id": 7,
+      "naziv": "Poduzetnički inkubator"
+     }
+    ],
+    "vrsta_primarna": 7,
+    "vrsta_primarna_naziv": "Poduzetnički inkubator",
+    "oib": "44282030126",
+    "mbs": "081059674",
+    "godina_osnivanja": 2016,
+    "osnivac": "Zajednica udruga i članova HVIDRA Grada Zagreba, Proizvodno uslužna zadruga MODRO ZELENA",
+    "oib_osnivaca": "24433844878;?",
+    "upravitelj": null,
+    "adresa": "Slovenska  21, Zagreb 10110",
+    "mjesto": "Zagreb",
+    "jls": "GRAD ZAGREB",
+    "zupanija": "Grad Zagreb",
+    "website": "https://www.dopvrhinkubator.hr",
+    "emails": [
+     "ivan.skaric@hotmail.com"
+    ],
+    "telefoni": [],
+    "kontakt_osobe": [
+     "Ivan Škarić"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     108
+    ],
+    "fina_status": "otvoren stečajni postupak",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 0,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/vrh-poduzetnicki-inkubator-d-o-o/OIB-44282030126",
+    "fina_aktivan": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 112,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.392276,
+     43.54916
+    ]
+   },
+   "properties": {
+    "id": 112,
+    "brand": "IRI centar",
+    "naziv": "IRI centar d.o.o. za istraživanje, razvoj i inovacije",
+    "vrste": [
+     {
+      "id": 9,
+      "naziv": "Poduzetnički akcelerator"
+     }
+    ],
+    "vrsta_primarna": 9,
+    "vrsta_primarna_naziv": "Poduzetnički akcelerator",
+    "oib": "70926422788",
+    "mbs": "060332957",
+    "godina_osnivanja": 2015,
+    "osnivac": "Zaklada za istraživanje. razvoj i inovacije",
+    "oib_osnivaca": "05252556581",
+    "upravitelj": null,
+    "adresa": "Cesta Dr. F. Tuđmana  273, Kaštel Gomilica 21213",
+    "mjesto": "Kaštel Gomilica",
+    "jls": "KAŠTELA",
+    "zupanija": "Splitsko-dalmatinska županija",
+    "website": "https://www.iricentar.hr",
+    "emails": [
+     "bosko.ljubenkov@iricentar.hr"
+    ],
+    "telefoni": [],
+    "kontakt_osobe": [
+     "Boško Ljubenkov"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     112
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 3,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/iri-centar-d-o-o/OIB-70926422788",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 113,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.740618,
+     43.576792
+    ]
+   },
+   "properties": {
+    "id": 113,
+    "brand": "CEKOM 3LJ",
+    "naziv": "Ustanova za istraživanje i širenje znanja u području prehrane i zdravlja CEKOM 3LJ",
+    "vrste": [
+     {
+      "id": 12,
+      "naziv": "Centar kompetencije"
+     }
+    ],
+    "vrsta_primarna": 12,
+    "vrsta_primarna_naziv": "Centar kompetencije",
+    "oib": "35341410291",
+    "mbs": "060343336",
+    "godina_osnivanja": 2016,
+    "osnivac": "Grad Trilj",
+    "oib_osnivaca": "91648398574",
+    "upravitelj": null,
+    "adresa": "Ugljane 115  C, Trilj 21240",
+    "mjesto": "Trilj",
+    "jls": "TRILJ",
+    "zupanija": "Splitsko-dalmatinska županija",
+    "website": "https://www.trilj.hr",
+    "emails": [
+     "agata.bosnjak@cekom3lj.hr"
+    ],
+    "telefoni": [],
+    "kontakt_osobe": [
+     "Agata Bošnjak"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     113
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "-",
+    "fina_zaposleni": null,
+    "fina_url": "https://infobiz.fina.hr/proracun/ustanova-cekom-3lj/OIB-35341410291",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 116,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.010658,
+     45.827031
+    ]
+   },
+   "properties": {
+    "id": 116,
+    "brand": "Core Inkubator",
+    "naziv": "CORE INKUBATOR društvo s ograničenom odgovornošću za pružanje usluga savjetovanja",
+    "vrste": [
+     {
+      "id": 7,
+      "naziv": "Poduzetnički inkubator"
+     }
+    ],
+    "vrsta_primarna": 7,
+    "vrsta_primarna_naziv": "Poduzetnički inkubator",
+    "oib": "49006615598",
+    "mbs": "080826756",
+    "godina_osnivanja": 2012,
+    "osnivac": "Core Commercial Investments LLC. Abu Dhabi",
+    "oib_osnivaca": "49006615598",
+    "upravitelj": null,
+    "adresa": "Bukovačka  42, GRAD ZAGREB 10000",
+    "mjesto": "Zagreb",
+    "jls": "GRAD ZAGREB",
+    "zupanija": "Grad Zagreb",
+    "website": "https://coreincubator.com",
+    "emails": [
+     "goran.dautovic@coreincubator.com"
+    ],
+    "telefoni": [
+     "+385 91 4483"
+    ],
+    "kontakt_osobe": [
+     "Goran Dautović"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "rucno",
+    "jrpi_unit_ids": [
+     116
+    ],
+    "fina_status": "Likvidacija",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": null,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/core-inkubator-d-o-o-u-likvidaciji/OIB-49006615598",
+    "fina_aktivan": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 117,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.957033,
+     45.808166
+    ]
+   },
+   "properties": {
+    "id": 117,
+    "brand": "HUB385",
+    "naziv": "NEST 01 d.o.o. za usluge",
+    "vrste": [
+     {
+      "id": 7,
+      "naziv": "Poduzetnički inkubator"
+     }
+    ],
+    "vrsta_primarna": 7,
+    "vrsta_primarna_naziv": "Poduzetnički inkubator",
+    "oib": "26585064925",
+    "mbs": "081003277",
+    "godina_osnivanja": 2015,
+    "osnivac": "Udruga HUB385 za promicanje regionalnog razvoja",
+    "oib_osnivaca": "53336141612",
+    "upravitelj": null,
+    "adresa": "Petračićeva  4, GRAD ZAGREB 10000",
+    "mjesto": "Zagreb",
+    "jls": "GRAD ZAGREB",
+    "zupanija": "Grad Zagreb",
+    "website": "https://www.hub385.com",
+    "emails": [
+     "ante@hub385.com"
+    ],
+    "telefoni": [],
+    "kontakt_osobe": [
+     "Luka Sučić"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     117
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 5,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/nest-01-d-o-o/OIB-26585064925",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 127,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.439449,
+     45.32753
+    ]
+   },
+   "properties": {
+    "id": 127,
+    "brand": "INOVACIJE I RAZVOJ",
+    "naziv": "INOVACIJE I RAZVOJ društvo s ograničenom odgovornošću za usluge",
+    "vrste": [
+     {
+      "id": 9,
+      "naziv": "Poduzetnički akcelerator"
+     }
+    ],
+    "vrsta_primarna": 9,
+    "vrsta_primarna_naziv": "Poduzetnički akcelerator",
+    "oib": "16395694522",
+    "mbs": "04159381",
+    "godina_osnivanja": 2022,
+    "osnivac": "INOVACIJE I RAZVOJ d.o.o.",
+    "oib_osnivaca": "16395694522",
+    "upravitelj": null,
+    "adresa": "Jadranski trg 1, Rijeka 51000",
+    "mjesto": "Rijeka",
+    "jls": "RIJEKA",
+    "zupanija": "Primorsko-goranska županija",
+    "website": "https://www.inoviraj.com",
+    "emails": [
+     "bojan.bajic@inoviraj.com"
+    ],
+    "telefoni": [
+     "0981791952",
+     "016458330"
+    ],
+    "kontakt_osobe": [
+     "Bojan Bajić"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     127
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 2,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/inovacije-i-razvoj-d-o-o/OIB-16395694522",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 136,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.44263,
+     43.936404
+    ]
+   },
+   "properties": {
+    "id": 136,
+    "brand": "Poduzetnički inkubator Biograd na Moru",
+    "naziv": "Poduzetnički inkubator Biograd na Moru društvo s ograničenom odgovornošću za poticanje i razvoj poduzetništva",
+    "vrste": [
+     {
+      "id": 7,
+      "naziv": "Poduzetnički inkubator"
+     }
+    ],
+    "vrsta_primarna": 7,
+    "vrsta_primarna_naziv": "Poduzetnički inkubator",
+    "oib": "31169062945",
+    "mbs": "110029946",
+    "godina_osnivanja": 2012,
+    "osnivac": "Grad Biograd na Moru",
+    "oib_osnivaca": "95603491861",
+    "upravitelj": null,
+    "adresa": "Trg Kralja Tomislava 5, Biograd na Moru 23210",
+    "mjesto": "Biograd na Moru",
+    "jls": "BIOGRAD NA MORU",
+    "zupanija": "Zadarska županija",
+    "website": "https://www.biogradnamoru.hr",
+    "emails": [
+     "davor.ivanovic@biogradnamoru.hr"
+    ],
+    "telefoni": [],
+    "kontakt_osobe": [
+     "Davor Ivanović"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     136
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 3,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/poduzetnicki-inkubator-biograd-na-moru-d-o-o/OIB-31169062945",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 137,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.01243,
+     45.802351
+    ]
+   },
+   "properties": {
+    "id": 137,
+    "brand": "LSH inovacije",
+    "naziv": "LSH inovacije d.o.o.",
+    "vrste": [
+     {
+      "id": 8,
+      "naziv": "Inkubator za nove tehnologije"
+     }
+    ],
+    "vrsta_primarna": 8,
+    "vrsta_primarna_naziv": "Inkubator za nove tehnologije",
+    "oib": "15157711542",
+    "mbs": "081405646",
+    "godina_osnivanja": 2024,
+    "osnivac": "LSH inovacije d.o.o.",
+    "oib_osnivaca": "15157711542",
+    "upravitelj": null,
+    "adresa": "Ulica grada Vukovara 284, Zagreb 10000",
+    "mjesto": "Zagreb",
+    "jls": "GRAD ZAGREB",
+    "zupanija": "Grad Zagreb",
+    "website": "https://www.smion.com",
+    "emails": [
+     "filip@smion.com"
+    ],
+    "telefoni": [
+     "+385981720641"
+    ],
+    "kontakt_osobe": [
+     "Filip Stipančić"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     137
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 4,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/lsh-inovacije-d-o-o/OIB-15157711542",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 138,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     18.797017,
+     45.295496
+    ]
+   },
+   "properties": {
+    "id": 138,
+    "brand": "Centar kompetencija",
+    "naziv": "Centar kompetencija d.o.o. za istraživanje i razvoj",
+    "vrste": [
+     {
+      "id": 12,
+      "naziv": "Centar kompetencije"
+     }
+    ],
+    "vrsta_primarna": 12,
+    "vrsta_primarna_naziv": "Centar kompetencije",
+    "oib": "91571971823",
+    "mbs": "030174879",
+    "godina_osnivanja": 2016,
+    "osnivac": "Vukovarsko-srijemska županija",
+    "oib_osnivaca": "74724110709",
+    "upravitelj": null,
+    "adresa": "Ohridska 17, Vinkovci 32100",
+    "mjesto": "Vinkovci",
+    "jls": "VINKOVCI",
+    "zupanija": "Vukovarsko-srijemska županija",
+    "website": "https://www.cekom.hr",
+    "emails": [
+     "cekom@cekom.hr"
+    ],
+    "telefoni": [],
+    "kontakt_osobe": [
+     "Ana Bošković"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     138
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mali",
+    "fina_zaposleni": 19,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/centar-kompetencija-d-o-o/OIB-91571971823",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 140,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.955553,
+     45.782349
+    ]
+   },
+   "properties": {
+    "id": 140,
+    "brand": "Poduzetnički inkubator ZIP",
+    "naziv": "Poduzetnički inkubator ZIP društvo s ograničenom odgovornošću za usluge",
+    "vrste": [
+     {
+      "id": 9,
+      "naziv": "Poduzetnički akcelerator"
+     }
+    ],
+    "vrsta_primarna": 9,
+    "vrsta_primarna_naziv": "Poduzetnički akcelerator",
+    "oib": "10843368196",
+    "mbs": "080906885",
+    "godina_osnivanja": 2014,
+    "osnivac": "Udruga Zagrebački inkubator poduzetništva",
+    "oib_osnivaca": "?",
+    "upravitelj": null,
+    "adresa": "Remetinečka cesta 7, Zagreb 10000",
+    "mjesto": "Zagreb",
+    "jls": "GRAD ZAGREB",
+    "zupanija": "Grad Zagreb",
+    "website": "http://zipzg.com/",
+    "emails": [
+     "tihana.marelja@gmail.com"
+    ],
+    "telefoni": [],
+    "kontakt_osobe": [
+     "Tihana Marelja"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     140
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 0,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/digiboost-d-o-o/OIB-10843368196",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 142,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.908787,
+     43.713348
+    ]
+   },
+   "properties": {
+    "id": 142,
+    "brand": "Centar kompetencija AluTech",
+    "naziv": "Centar kompetencija AluTech ustanova za istraživanje i širenje znanja",
+    "vrste": [
+     {
+      "id": 12,
+      "naziv": "Centar kompetencije"
+     }
+    ],
+    "vrsta_primarna": 12,
+    "vrsta_primarna_naziv": "Centar kompetencije",
+    "oib": "34431614153",
+    "mbs": "110064458",
+    "godina_osnivanja": 2016,
+    "osnivac": "Šibensko-kninska županija",
+    "oib_osnivaca": "99395814920",
+    "upravitelj": null,
+    "adresa": "Velimira Škorpika 6, Šibenik 22000",
+    "mjesto": "Šibenik",
+    "jls": "ŠIBENIK",
+    "zupanija": "Šibensko-kninska županija",
+    "website": "https://www.alutech.hr",
+    "emails": [
+     "zoran.belak@alutech.hr"
+    ],
+    "telefoni": [
+     "022/200 474",
+     "098 337 979",
+     "022 217 114"
+    ],
+    "kontakt_osobe": [
+     "Zoran Belak"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     142
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "-",
+    "fina_zaposleni": null,
+    "fina_url": "https://infobiz.fina.hr/proracun/razvojno-inovacijski-centar-alutech/OIB-34431614153",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 148,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.944323,
+     45.801153
+    ]
+   },
+   "properties": {
+    "id": 148,
+    "brand": "BIZ – Poduzetnički inkubator",
+    "naziv": "BIZ – Poduzetnički inkubator d.o.o. za savjetovanje i upravljanje",
+    "vrste": [
+     {
+      "id": 7,
+      "naziv": "Poduzetnički inkubator"
+     }
+    ],
+    "vrsta_primarna": 7,
+    "vrsta_primarna_naziv": "Poduzetnički inkubator",
+    "oib": "19791206019",
+    "mbs": "081057007",
+    "godina_osnivanja": 2016,
+    "osnivac": "Visoka škola za ekonomiju. poduzetništvo i upravljanje Nikola Šubić Zrinski",
+    "oib_osnivaca": "19740832748",
+    "upravitelj": null,
+    "adresa": "Selska cesta 119, Zagreb 10110",
+    "mjesto": "Zagreb",
+    "jls": "GRAD ZAGREB",
+    "zupanija": "Grad Zagreb",
+    "website": null,
+    "emails": [
+     "dimitrije.milojevic@zrinski.org"
+    ],
+    "telefoni": [],
+    "kontakt_osobe": [
+     "Dimitrije Milojević"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     148
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 0,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/biz-poduzetnicki-inkubator-d-o-o/OIB-19791206019",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 149,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.842585,
+     45.899546
+    ]
+   },
+   "properties": {
+    "id": 149,
+    "brand": "TEHNOLOŠKI PARK BJELOVAR",
+    "naziv": "TEHNOLOŠKI PARK BJELOVAR društvo s ograničenom odgovornošću za poduzetništvo, razvoj i primjenu novih tehnologija",
+    "vrste": [
+     {
+      "id": 8,
+      "naziv": "Inkubator za nove tehnologije"
+     }
+    ],
+    "vrsta_primarna": 8,
+    "vrsta_primarna_naziv": "Inkubator za nove tehnologije",
+    "oib": "11115410290",
+    "mbs": "4321006",
+    "godina_osnivanja": 2014,
+    "osnivac": "Grad Bjelovar, Visoka tehnička škola u Bjelovaru",
+    "oib_osnivaca": "18970641692;16575582886",
+    "upravitelj": null,
+    "adresa": "Trg Eugena Kvaternika 6, Bjelovar 43000",
+    "mjesto": "Bjelovar",
+    "jls": "BJELOVAR",
+    "zupanija": "Bjelovarsko-bilogorska županija",
+    "website": "https://www.tpbj.hr",
+    "emails": [
+     "tajnica@tpbj.hr"
+    ],
+    "telefoni": [
+     "043/221-590",
+     "098/9234385",
+     "043/638-154"
+    ],
+    "kontakt_osobe": [
+     "Klaudija Mamić"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     149
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 3,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/tehnoloski-park-bjelovar-d-o-o/OIB-11115410290",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 154,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     17.397232,
+     45.821721
+    ]
+   },
+   "properties": {
+    "id": 154,
+    "brand": "PODUZETNIČKI INKUBATOR VIROVITIČKO-PODRAVSKE ŽUPANIJE",
+    "naziv": "PODUZETNIČKI INKUBATOR VIROVITIČKO-PODRAVSKE ŽUPANIJE društvo s ograničenom odgovornošću za savjetovanje i upravljanje",
+    "vrste": [
+     {
+      "id": 7,
+      "naziv": "Poduzetnički inkubator"
+     }
+    ],
+    "vrsta_primarna": 7,
+    "vrsta_primarna_naziv": "Poduzetnički inkubator",
+    "oib": "67202112648",
+    "mbs": "10059093",
+    "godina_osnivanja": 2005,
+    "osnivac": "VIROVITIČKO-PODRAVSKA ŽUPANIJA",
+    "oib_osnivaca": "93362201007",
+    "upravitelj": null,
+    "adresa": "Ulica Poduzetnička zona II 18, Virovitica 33000",
+    "mjesto": "Virovitica",
+    "jls": "VIROVITICA",
+    "zupanija": "Virovitičko-podravska županija",
+    "website": "https://inkubatorivpz.hr/",
+    "emails": [
+     "info@inkubatorivpz.hr"
+    ],
+    "telefoni": [],
+    "kontakt_osobe": [
+     "Neda Martić"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     154
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 12,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/poduzetnicki-inkubator-viroviticko-podravske-zupanije-d-o-o/OIB-67202112648",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 155,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     18.188808,
+     45.757055
+    ]
+   },
+   "properties": {
+    "id": 155,
+    "brand": "Poduzetnički inkubator Osvit - zadruga",
+    "naziv": "Poduzetnička zadruga Osvit - Poduzetnički inkubator za podršku razvoju poduzetništva",
+    "vrste": [
+     {
+      "id": 7,
+      "naziv": "Poduzetnički inkubator"
+     }
+    ],
+    "vrsta_primarna": 7,
+    "vrsta_primarna_naziv": "Poduzetnički inkubator",
+    "oib": "39693206416",
+    "mbs": "30075819",
+    "godina_osnivanja": 2003,
+    "osnivac": "Grad Donji Miholjac, Općina Magadenovac, Miholjački poduzetnički centar -lokalna razvojna agencija, zaposlenici",
+    "oib_osnivaca": "49744793900;47221079851;20354292894;?",
+    "upravitelj": null,
+    "adresa": "Vukovarska 142, Donji Miholjac 31540",
+    "mjesto": "Donji Miholjac",
+    "jls": "DONJI MIHOLJAC",
+    "zupanija": "Osječko-baranjska županija",
+    "website": "https://www.osvit.biz",
+    "emails": [
+     "inkubator@osvit.biz"
+    ],
+    "telefoni": [
+     "031 630 738",
+     "095 903 8089"
+    ],
+    "kontakt_osobe": [
+     "Boris Poslon"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     155
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 3,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/poduzetnicki-inkubator-osvit-zadruga/OIB-39693206416",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 156,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     17.068792,
+     46.041156
+    ]
+   },
+   "properties": {
+    "id": 156,
+    "brand": "Inkubator Đurđevac",
+    "naziv": "STARI GRAD društvo s ograničenom odgovornošću za ugostiteljstvo i turizam",
+    "vrste": [
+     {
+      "id": 7,
+      "naziv": "Poduzetnički inkubator"
+     }
+    ],
+    "vrsta_primarna": 7,
+    "vrsta_primarna_naziv": "Poduzetnički inkubator",
+    "oib": "87648815827",
+    "mbs": "070100167",
+    "godina_osnivanja": 2012,
+    "osnivac": "Grad Đurđevac",
+    "oib_osnivaca": "98691330244",
+    "upravitelj": "Stari grad d.o.o.",
+    "adresa": "Stjepana Radića  1, Đurđevac 48350",
+    "mjesto": "Đurđevac",
+    "jls": "ĐURĐEVAC",
+    "zupanija": "Koprivničko-križevačka županija",
+    "website": "https://inkubator-djurdjevac.hr/",
+    "emails": [
+     "inkubator@djurdjevac.hr"
+    ],
+    "telefoni": [
+     "048/811-052"
+    ],
+    "kontakt_osobe": [
+     "Matija Bažulić"
+    ],
+    "povrsina_m2": 625,
+    "povrsina_poduzetnici_m2": 439,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     156
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mali",
+    "fina_zaposleni": 36,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/stari-grad-d-o-o/OIB-87648815827",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 159,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.968219,
+     45.40617
+    ]
+   },
+   "properties": {
+    "id": 159,
+    "brand": "Plzet",
+    "naziv": "Plzet društvo s ograničenom odgovornošću za izgradnju, trgovinu i upravljanje nekretninama",
+    "vrste": [
+     {
+      "id": 7,
+      "naziv": "Poduzetnički inkubator"
+     }
+    ],
+    "vrsta_primarna": 7,
+    "vrsta_primarna_naziv": "Poduzetnički inkubator",
+    "oib": "16882121210",
+    "mbs": "01225251",
+    "godina_osnivanja": 2016,
+    "osnivac": "Grad Buzet",
+    "oib_osnivaca": "77489969256",
+    "upravitelj": "Plzet d.o.o.",
+    "adresa": "Trg Josipa Fabijančića  7, Buzet 52420",
+    "mjesto": "Buzet",
+    "jls": "BUZET",
+    "zupanija": "Istarska županija",
+    "website": "https://www.plzet.hr",
+    "emails": [
+     "info@plzet.hr"
+    ],
+    "telefoni": [
+     "091 288 7276",
+     "091 623 0495"
+    ],
+    "kontakt_osobe": [
+     "Sebastjan Grabar"
+    ],
+    "povrsina_m2": 464,
+    "povrsina_poduzetnici_m2": 236,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     159
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 2,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/plzet-d-o-o/OIB-16882121210",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 160,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.962826,
+     45.775311
+    ]
+   },
+   "properties": {
+    "id": 160,
+    "brand": "PL EUROPA",
+    "naziv": "PL EUROPA društvo s ograničenom odgovornošću za usluge i trgovinu",
+    "vrste": [
+     {
+      "id": 7,
+      "naziv": "Poduzetnički inkubator"
+     }
+    ],
+    "vrsta_primarna": 7,
+    "vrsta_primarna_naziv": "Poduzetnički inkubator",
+    "oib": "13063728041",
+    "mbs": "080902280",
+    "godina_osnivanja": 2016,
+    "osnivac": "PL Europa d.o.o.",
+    "oib_osnivaca": "13063728041",
+    "upravitelj": null,
+    "adresa": "Trnsko 14B, Zagreb 10020",
+    "mjesto": "Zagreb",
+    "jls": "GRAD ZAGREB",
+    "zupanija": "Grad Zagreb",
+    "website": "http://pleuropa.pl/",
+    "emails": [
+     "jurica.zorman@egk.hr"
+    ],
+    "telefoni": [],
+    "kontakt_osobe": [
+     "Jurica Zorman"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     160
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 165,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.464974,
+     43.511078
+    ]
+   },
+   "properties": {
+    "id": 165,
+    "brand": "E.C.H.R.",
+    "naziv": "E.C.H.R. d.o.o.",
+    "vrste": [
+     {
+      "id": 9,
+      "naziv": "Poduzetnički akcelerator"
+     }
+    ],
+    "vrsta_primarna": 9,
+    "vrsta_primarna_naziv": "Poduzetnički akcelerator",
+    "oib": "44275724266",
+    "mbs": "04696905",
+    "godina_osnivanja": 2017,
+    "osnivac": "E.C.H.R. d.o.o.",
+    "oib_osnivaca": "44275724266",
+    "upravitelj": null,
+    "adresa": "Matice hrvatske 15, Split 21000",
+    "mjesto": "Split",
+    "jls": "SPLIT",
+    "zupanija": "Splitsko-dalmatinska županija",
+    "website": "http://www.echr.hr",
+    "emails": [
+     "M.Mimica@echr.hr"
+    ],
+    "telefoni": [
+     "+385 99 503"
+    ],
+    "kontakt_osobe": [
+     "Marko Mimica"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     165
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 4,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/e-c-h-r-d-o-o/OIB-44275724266",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 166,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.448989,
+     46.391434
+    ]
+   },
+   "properties": {
+    "id": 166,
+    "brand": "ACT Grupa",
+    "naziv": "ACT Grupa",
+    "vrste": [
+     {
+      "id": 9,
+      "naziv": "Poduzetnički akcelerator"
+     }
+    ],
+    "vrsta_primarna": 9,
+    "vrsta_primarna_naziv": "Poduzetnički akcelerator",
+    "oib": "17942508126",
+    "mbs": "04149297",
+    "godina_osnivanja": 2013,
+    "osnivac": "Socijalna zadruga Humana Nova, Centar za pomoć u kući Međimurske županije, ACT Printlab d.o.o., ACT Konto d.o.o., Poljoprivredna zadruga Najbolje lokalno",
+    "oib_osnivaca": "27711345503;23336781267;21285804919;09031046973;32275516169",
+    "upravitelj": null,
+    "adresa": "Ulica bana Josipa Jelačića 22B, Čakovec 40000",
+    "mjesto": "Čakovec",
+    "jls": "ČAKOVEC",
+    "zupanija": "Međimurska županija",
+    "website": "https://act-grupa.hr",
+    "emails": [
+     "info@act-grupa.hr"
+    ],
+    "telefoni": [
+     "040 390 047",
+     "098 819 149"
+    ],
+    "kontakt_osobe": [
+     "Stjepan Mikec"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     166
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "-",
+    "fina_zaposleni": null,
+    "fina_url": "https://infobiz.fina.hr/neprofitni/ag/OIB-17942508126",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 167,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     17.113401,
+     46.025659
+    ]
+   },
+   "properties": {
+    "id": 167,
+    "brand": "MEVAL",
+    "naziv": "MEVAL društvo s ograničenom odgovornošću za poslovno savjetovanje",
+    "vrste": [
+     {
+      "id": 9,
+      "naziv": "Poduzetnički akcelerator"
+     }
+    ],
+    "vrsta_primarna": 9,
+    "vrsta_primarna_naziv": "Poduzetnički akcelerator",
+    "oib": "94784659061",
+    "mbs": "010067727",
+    "godina_osnivanja": 2021,
+    "osnivac": "MEVAL d.o.o.",
+    "oib_osnivaca": "94784659061",
+    "upravitelj": null,
+    "adresa": "Dravska 5, Kalinovac 48361",
+    "mjesto": "Kalinovac",
+    "jls": "KALINOVAC",
+    "zupanija": "Koprivničko-križevačka županija",
+    "website": null,
+    "emails": [
+     "info@meval.hr"
+    ],
+    "telefoni": [
+     "091 444 1610"
+    ],
+    "kontakt_osobe": [
+     "Valentina Međurečan Krčmar"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     167
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 6,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/meval-d-o-o/OIB-94784659061",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 171,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.385306,
+     45.451411
+    ]
+   },
+   "properties": {
+    "id": 171,
+    "brand": "PISAK",
+    "naziv": "Poduzetnički inkubator Sisak - PISAK",
+    "vrste": [
+     {
+      "id": 7,
+      "naziv": "Poduzetnički inkubator"
+     }
+    ],
+    "vrsta_primarna": 7,
+    "vrsta_primarna_naziv": "Poduzetnički inkubator",
+    "oib": "68726943543",
+    "mbs": "120003942",
+    "godina_osnivanja": 2014,
+    "osnivac": "Applied Ceramics d.o.o.",
+    "oib_osnivaca": "68726943543",
+    "upravitelj": null,
+    "adresa": "Capraška ulica 12, Sisak 44010",
+    "mjesto": "Sisak",
+    "jls": "SISAK",
+    "zupanija": "Sisačko-moslavačka županija",
+    "website": "https://www.pisak.biz",
+    "emails": [
+     "krunoslava@apceramics.com"
+    ],
+    "telefoni": [
+     "044 520100",
+     "099 2185932"
+    ],
+    "kontakt_osobe": [
+     "Krunoslava Kosina - Milutinović"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     171
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Srednji",
+    "fina_zaposleni": 156,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/applied-ceramics-d-o-o/OIB-68726943543",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 172,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.497553,
+     43.525511
+    ]
+   },
+   "properties": {
+    "id": 172,
+    "brand": "Razvojna agencija Split - RaST",
+    "naziv": "Razvojna agencija Split-RaST d.o.o. za usluge i razvoj",
+    "vrste": [
+     {
+      "id": 8,
+      "naziv": "Inkubator za nove tehnologije"
+     }
+    ],
+    "vrsta_primarna": 8,
+    "vrsta_primarna_naziv": "Inkubator za nove tehnologije",
+    "oib": "66492874014",
+    "mbs": "060218245",
+    "godina_osnivanja": 2006,
+    "osnivac": "Grad Split",
+    "oib_osnivaca": "78755598868",
+    "upravitelj": null,
+    "adresa": "Dračevac 3D, Split 21000",
+    "mjesto": "Split",
+    "jls": "SPLIT",
+    "zupanija": "Splitsko-dalmatinska županija",
+    "website": "https://tps.com.hr/",
+    "emails": [
+     "tps@agencija-rast.hr"
+    ],
+    "telefoni": [],
+    "kontakt_osobe": [
+     "Lana Ugrčić"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     172
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 11,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/razvojna-agencija-split-rast-d-o-o/OIB-66492874014",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 180,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.979498,
+     45.80939
+    ]
+   },
+   "properties": {
+    "id": 180,
+    "brand": "Impact Hub Zagreb",
+    "naziv": "Pokreni ideju j.d.o.o. za usluge",
+    "vrste": [
+     {
+      "id": 7,
+      "naziv": "Poduzetnički inkubator"
+     }
+    ],
+    "vrsta_primarna": 7,
+    "vrsta_primarna_naziv": "Poduzetnički inkubator",
+    "oib": "09490822315",
+    "mbs": "80832825",
+    "godina_osnivanja": 2013,
+    "osnivac": "Pokreni ideju - udruga za promicanje socijalnih inovacija (Impact Hub Zagreb)",
+    "oib_osnivaca": "?",
+    "upravitelj": null,
+    "adresa": "Boškovićeva  2, GRAD ZAGREB 10000",
+    "mjesto": "Zagreb",
+    "jls": "GRAD ZAGREB",
+    "zupanija": "Grad Zagreb",
+    "website": "https://zagreb.impacthub.net",
+    "emails": [
+     "zagreb.hosts@impacthub.net"
+    ],
+    "telefoni": [
+     "2092953",
+     "099/8250999"
+    ],
+    "kontakt_osobe": [
+     "Hermes Arriaga"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     180
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 0,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/pokreni-ideju-j-d-o-o/OIB-09490822315",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 182,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.039742,
+     45.8111
+    ]
+   },
+   "properties": {
+    "id": 182,
+    "brand": "BICRO BIOCENTAR",
+    "naziv": "BICRO BIOCENTAR, društvo s ograničenom odgovornošću za transfer i komercijalizaciju biotehnologije",
+    "vrste": [
+     {
+      "id": 8,
+      "naziv": "Inkubator za nove tehnologije"
+     }
+    ],
+    "vrsta_primarna": 8,
+    "vrsta_primarna_naziv": "Inkubator za nove tehnologije",
+    "oib": "47298210538",
+    "mbs": "080766776",
+    "godina_osnivanja": 2011,
+    "osnivac": "SVEUČILIŠTE U ZAGREBU.Zagreb, Trg maršala Tita 14, GRAD ZAGREB, Zagreb, Trg Stjepana Radića 1, HRVATSKA AGENCIJA ZA MALO GOSPODARSTVO, INOVACIJE I INVESTICIJE, Zagreb, Ksaver 208",
+    "oib_osnivaca": "36612267447;61817894937;25609559342",
+    "upravitelj": null,
+    "adresa": "Borongajska cesta 83  H, GRAD ZAGREB 10000",
+    "mjesto": "Zagreb",
+    "jls": "GRAD ZAGREB",
+    "zupanija": "Grad Zagreb",
+    "website": "https://www.biocentre.hr",
+    "emails": [
+     "info@biocentre.hr"
+    ],
+    "telefoni": [],
+    "kontakt_osobe": [
+     "Marina Gajski Živčec"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     182
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mali",
+    "fina_zaposleni": 18,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/bicro-biocentar-d-o-o/OIB-47298210538",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 191,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.011816,
+     45.815056
+    ]
+   },
+   "properties": {
+    "id": 191,
+    "brand": "CEPOR",
+    "naziv": "CEPOR - Centar za politiku razvoja malih i srednjih poduzeća i poduzetništva",
+    "vrste": [
+     {
+      "id": 12,
+      "naziv": "Centar kompetencije"
+     }
+    ],
+    "vrsta_primarna": 12,
+    "vrsta_primarna_naziv": "Centar kompetencije",
+    "oib": "35209595692",
+    "mbs": "1597655",
+    "godina_osnivanja": 2001,
+    "osnivac": "Ekonomski institut Zagreb. Sveučilište Josipa Jurja Strossmayera u Osijeku, Ekonomski fakultet u Osijeku, Institut za me",
+    "oib_osnivaca": "?",
+    "upravitelj": null,
+    "adresa": "Trg J.F.Kennedya  7, GRAD ZAGREB 10000",
+    "mjesto": "Zagreb",
+    "jls": "GRAD ZAGREB",
+    "zupanija": "Grad Zagreb",
+    "website": "https://www.cepor.hr",
+    "emails": [
+     "deterovic@cepor.hr"
+    ],
+    "telefoni": [
+     "098 9815"
+    ],
+    "kontakt_osobe": [
+     "Danica Eterović"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "rucno",
+    "jrpi_unit_ids": [
+     191
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "-",
+    "fina_zaposleni": null,
+    "fina_url": "https://infobiz.fina.hr/neprofitni/cepor/OIB-35209595692",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 196,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.84258,
+     44.871275
+    ]
+   },
+   "properties": {
+    "id": 196,
+    "brand": "ISTARSKO VELEUČILIŠTE",
+    "naziv": "ISTARSKO VELEUČILIŠTE-UNIVERSITA ISTRIANA DI SCIENZE APPLICATE",
+    "vrste": [
+     {
+      "id": 12,
+      "naziv": "Centar kompetencije"
+     }
+    ],
+    "vrsta_primarna": 12,
+    "vrsta_primarna_naziv": "Centar kompetencije",
+    "oib": "79550001298",
+    "mbs": "040159322",
+    "godina_osnivanja": 2002,
+    "osnivac": "Istarska županija",
+    "oib_osnivaca": "90017522601",
+    "upravitelj": null,
+    "adresa": "RIVA  6, Pula 52100",
+    "mjesto": "Pula",
+    "jls": "PULA - POLA",
+    "zupanija": "Istarska županija",
+    "website": "https://www.iv.hr",
+    "emails": [
+     "dekanat@iv.hr"
+    ],
+    "telefoni": [
+     "(052) 381412",
+     "091 531 8076",
+     "(052) 388 111"
+    ],
+    "kontakt_osobe": [
+     "Andrea Vareško"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     196
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "-",
+    "fina_zaposleni": null,
+    "fina_url": "https://infobiz.fina.hr/proracun/istarsko-veleuciliste-universita-istriana-di-scienze-applicate/OIB-79550001298",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 199,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     17.820633,
+     45.148935
+    ]
+   },
+   "properties": {
+    "id": 199,
+    "brand": "PPI BS",
+    "naziv": "Poljoprivredno - poduzetnički inkubator Brodski Stupnik d.o.o. za usluge",
+    "vrste": [
+     {
+      "id": 7,
+      "naziv": "Poduzetnički inkubator"
+     }
+    ],
+    "vrsta_primarna": 7,
+    "vrsta_primarna_naziv": "Poduzetnički inkubator",
+    "oib": "97649617026",
+    "mbs": "030289305",
+    "godina_osnivanja": 2024,
+    "osnivac": "Općina Brodski Stupnik",
+    "oib_osnivaca": "92052545477",
+    "upravitelj": null,
+    "adresa": "Mrsunjska  7, Brodski Stupnik 35253",
+    "mjesto": "Brodski Stupnik",
+    "jls": "BRODSKI STUPNIK",
+    "zupanija": "Brodsko-posavska županija",
+    "website": "https://ppi-brodski-stupnik.hr/",
+    "emails": [
+     "ppi@brodski-stupnik.hr"
+    ],
+    "telefoni": [],
+    "kontakt_osobe": [
+     "Goran Jelinić"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     199
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 2,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/ppi-bs-d-o-o/OIB-97649617026",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 203,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.963209,
+     45.825663
+    ]
+   },
+   "properties": {
+    "id": 203,
+    "brand": "Rain Technologies",
+    "naziv": "Rain Technologies d.o.o. za trgovinu i usluge",
+    "vrste": [
+     {
+      "id": 8,
+      "naziv": "Inkubator za nove tehnologije"
+     }
+    ],
+    "vrsta_primarna": 8,
+    "vrsta_primarna_naziv": "Inkubator za nove tehnologije",
+    "oib": "69726038215",
+    "mbs": "080417419",
+    "godina_osnivanja": 2023,
+    "osnivac": "Lučić Nikolina ",
+    "oib_osnivaca": "0",
+    "upravitelj": null,
+    "adresa": "Vale Vouka  11, GRAD ZAGREB 10000",
+    "mjesto": "Zagreb",
+    "jls": "GRAD ZAGREB",
+    "zupanija": "Grad Zagreb",
+    "website": "https://www.rain-tech.hr",
+    "emails": [
+     "info@rain-tech.hr"
+    ],
+    "telefoni": [
+     "0914420441",
+     "0914420442"
+    ],
+    "kontakt_osobe": [
+     "Alan Lučić"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     203
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 3,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/rain-technologies-d-o-o/OIB-69726038215",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 205,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     17.376296,
+     45.227539
+    ]
+   },
+   "properties": {
+    "id": 205,
+    "brand": "CENTAR KOMPETENCIJA ZA NAPREDNO INŽENJERSTVO NOVA GRADIŠKA",
+    "naziv": "CENTAR KOMPETENCIJA ZA NAPREDNO INŽENJERSTVO NOVA GRADIŠKA društvo s ograničenom odgovornošću",
+    "vrste": [
+     {
+      "id": 12,
+      "naziv": "Centar kompetencije"
+     }
+    ],
+    "vrsta_primarna": 12,
+    "vrsta_primarna_naziv": "Centar kompetencije",
+    "oib": "28916802302",
+    "mbs": "030178494",
+    "godina_osnivanja": 2016,
+    "osnivac": "INDUSTRIJSKI PARK NOVA GRADIŠKA d.o.o. za razvoj i ulaganje",
+    "oib_osnivaca": "58802471410",
+    "upravitelj": null,
+    "adresa": "II Industrijski odvojak  2, Nova Gradiška 35400",
+    "mjesto": "Nova Gradiška",
+    "jls": "NOVA GRADIŠKA",
+    "zupanija": "Brodsko-posavska županija",
+    "website": "https://www.cekomng.hr",
+    "emails": [
+     "adam.djanic@cekomng.hr"
+    ],
+    "telefoni": [
+     "035359910",
+     "0995262834",
+     "035359911"
+    ],
+    "kontakt_osobe": [
+     "Adam Đanić"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     205
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mali",
+    "fina_zaposleni": 15,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/centar-kompetencija-za-napredno-inzenjerstvo-nova-gradiska-d-o-o/OIB-28916802302",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 209,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.97925,
+     43.985584
+    ]
+   },
+   "properties": {
+    "id": 209,
+    "brand": "Poduzetnički inkubator Krka Kistanje",
+    "naziv": "Poduzetnički inkubator Krka Kistanje d.o.o. za lokalni razvoj, poticanje i razvoj poduzetništva",
+    "vrste": [
+     {
+      "id": 7,
+      "naziv": "Poduzetnički inkubator"
+     }
+    ],
+    "vrsta_primarna": 7,
+    "vrsta_primarna_naziv": "Poduzetnički inkubator",
+    "oib": "90156774425",
+    "mbs": "5564743",
+    "godina_osnivanja": 2022,
+    "osnivac": "Općina Kistanje",
+    "oib_osnivaca": "41783102203",
+    "upravitelj": null,
+    "adresa": "Ul.Franje Tuđmana  106A, Kistanje 22305",
+    "mjesto": "Kistanje",
+    "jls": "KISTANJE",
+    "zupanija": "Šibensko-kninska županija",
+    "website": "https://inkubator-krka.eu/",
+    "emails": [
+     "opcina@kistanje.hr"
+    ],
+    "telefoni": [],
+    "kontakt_osobe": [
+     "Sandra Ardalić"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-ulica-fuzzy",
+    "jrpi_unit_ids": [
+     209
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 4,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/ruralni-poduzetnicki-inkubator-krka-kistanje-d-o-o/OIB-90156774425",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 211,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     17.396741,
+     45.822193
+    ]
+   },
+   "properties": {
+    "id": 211,
+    "brand": "Panonski drvni centar kompetencija Virovitičko - podravske županije",
+    "naziv": "Panonski drvni centar kompetencija Virovitičko-podravske županije",
+    "vrste": [
+     {
+      "id": 12,
+      "naziv": "Centar kompetencije"
+     }
+    ],
+    "vrsta_primarna": 12,
+    "vrsta_primarna_naziv": "Centar kompetencije",
+    "oib": "64368206963",
+    "mbs": "01011702",
+    "godina_osnivanja": 2020,
+    "osnivac": "Virovitičko - podravska županija",
+    "oib_osnivaca": "93362201007",
+    "upravitelj": null,
+    "adresa": "Poduzetnička zona II  16, Virovitica 33000",
+    "mjesto": "Virovitica",
+    "jls": "VIROVITICA",
+    "zupanija": "Virovitičko-podravska županija",
+    "website": "https://www.pdck.hr",
+    "emails": [
+     "denis.validzic@pdck.hr"
+    ],
+    "telefoni": [
+     "098589029",
+     "0955005555",
+     "033/722-465"
+    ],
+    "kontakt_osobe": [
+     "DENIS VALIDŽIĆ"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     211
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "-",
+    "fina_zaposleni": null,
+    "fina_url": "https://infobiz.fina.hr/proracun/panonski-drvni-centar-kompetencija-viroviticko-podravske-zupanije/OIB-64368206963",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 229,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.851665,
+     44.868064
+    ]
+   },
+   "properties": {
+    "id": 229,
+    "brand": "PI \"Izazov\"",
+    "naziv": "Istarska razvojna agencija d.o.o. (PI \"Izazov\")",
+    "vrste": [
+     {
+      "id": 7,
+      "naziv": "Poduzetnički inkubator"
+     }
+    ],
+    "vrsta_primarna": 7,
+    "vrsta_primarna_naziv": "Poduzetnički inkubator",
+    "oib": "90084809413",
+    "mbs": "4015470",
+    "godina_osnivanja": 1999,
+    "osnivac": "Istarska županija, Grad Buje, Grad Buzet, Grad Labin, Grad Novigrad, Grad Pazin, Grad Poreč, Grad Pula, Grad Rovinj, Grad Umag, Grad Vodnjan",
+    "oib_osnivaca": "90017522601;19611257971;77489969256;19041331726;53785741678;07969842379;41303906494;79517841355;25677819890;84097228497;15554218499",
+    "upravitelj": null,
+    "adresa": "Mletačka  12/IV, Pula 52100",
+    "mjesto": "Pula",
+    "jls": "PULA - POLA",
+    "zupanija": "Istarska županija",
+    "website": "https://www.inkubator-izazov.com",
+    "emails": [
+     "ida-uprava@ida.hr"
+    ],
+    "telefoni": [
+     "+385 52 381",
+     "+385 99 228"
+    ],
+    "kontakt_osobe": [
+     "Tamara Kiršić"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     229
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 7,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/ida-d-o-o/OIB-90084809413",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 237,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.970907,
+     45.801135
+    ]
+   },
+   "properties": {
+    "id": 237,
+    "brand": "ICENT",
+    "naziv": "INOVACIJSKI CENTAR NIKOLA TESLA",
+    "vrste": [
+     {
+      "id": 12,
+      "naziv": "Centar kompetencije"
+     }
+    ],
+    "vrsta_primarna": 12,
+    "vrsta_primarna_naziv": "Centar kompetencije",
+    "oib": "48640028500",
+    "mbs": "080998844",
+    "godina_osnivanja": 2015,
+    "osnivac": "Sveučilište u Zagrebu Fakultet elektrotehnike i računarstva",
+    "oib_osnivaca": "57029260362",
+    "upravitelj": null,
+    "adresa": "Unska  3, GRAD ZAGREB 10000",
+    "mjesto": "Zagreb",
+    "jls": "GRAD ZAGREB",
+    "zupanija": "Grad Zagreb",
+    "website": "https://www.icent.hr",
+    "emails": [
+     "mirjana.dozan@icent.hr"
+    ],
+    "telefoni": [],
+    "kontakt_osobe": [
+     "prof. dr. sc. Nedjeljko Pe"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     237
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "-",
+    "fina_zaposleni": null,
+    "fina_url": "https://infobiz.fina.hr/neprofitni/icent/OIB-48640028500",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 244,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.467827,
+     45.327128
+    ]
+   },
+   "properties": {
+    "id": 244,
+    "brand": "STEP RI",
+    "naziv": "STEP RI Znanstveno-tehnologijski park Sveučilišta u Rijeci d. o. o.",
+    "vrste": [
+     {
+      "id": 7,
+      "naziv": "Poduzetnički inkubator"
+     },
+     {
+      "id": 11,
+      "naziv": "Znanstveno-tehnologijski park"
+     }
+    ],
+    "vrsta_primarna": 11,
+    "vrsta_primarna_naziv": "Znanstveno-tehnologijski park",
+    "oib": "70410022758",
+    "mbs": "40251068",
+    "godina_osnivanja": 2008,
+    "osnivac": "Sveučilište u Rijeci",
+    "oib_osnivaca": "64218323816",
+    "upravitelj": null,
+    "adresa": "Radmile Matejčić  10, Rijeka 51000",
+    "mjesto": "Rijeka",
+    "jls": "RIJEKA",
+    "zupanija": "Primorsko-goranska županija",
+    "website": "https://www.step.uniri.hr",
+    "emails": [
+     "step-ri@uniri.hr"
+    ],
+    "telefoni": [
+     "051 265 961",
+     "099 2269",
+     "051 265 999"
+    ],
+    "kontakt_osobe": [
+     "Jana Blažević Marčelja"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     244,
+     265
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mali",
+    "fina_zaposleni": 10,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/step-ri-d-o-o/OIB-70410022758",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 253,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.71577,
+     42.961387
+    ]
+   },
+   "properties": {
+    "id": 253,
+    "brand": "Poduzetnički inkubator Vela Luka",
+    "naziv": "Poduzetnički inkubator Vela Luka društvo s ograničenom odgovornošću za razvoj poduzetništva i posredničke usluge",
+    "vrste": [
+     {
+      "id": 7,
+      "naziv": "Poduzetnički inkubator"
+     }
+    ],
+    "vrsta_primarna": 7,
+    "vrsta_primarna_naziv": "Poduzetnički inkubator",
+    "oib": "72498634048",
+    "mbs": "5590680",
+    "godina_osnivanja": 2022,
+    "osnivac": "Općina Vela Luka",
+    "oib_osnivaca": "00935002462",
+    "upravitelj": null,
+    "adresa": "Obala 3 br.  19, Vela Luka 20270",
+    "mjesto": "Vela Luka",
+    "jls": "VELA LUKA",
+    "zupanija": "Dubrovačko-neretvanska županija",
+    "website": "https://www.pi-velaluka.hr",
+    "emails": [
+     "poduzetnicki.inkubator@velaluka.hr"
+    ],
+    "telefoni": [],
+    "kontakt_osobe": [
+     "Barbara Mirošević"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     253
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 1,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/poduzetnicki-inkubator-vela-luka-d-o-o/OIB-72498634048",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 257,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.907752,
+     43.716245
+    ]
+   },
+   "properties": {
+    "id": 257,
+    "brand": "INKUBATOR ZA NOVE TEHNOLOGIJE TROKUT ŠIBENIK",
+    "naziv": "INKUBATOR ZA NOVE TEHNOLOGIJE TROKUT ŠIBENIK d.o.o. za djelatnost uvođenja novih tehnologija",
+    "vrste": [
+     {
+      "id": 8,
+      "naziv": "Inkubator za nove tehnologije"
+     }
+    ],
+    "vrsta_primarna": 8,
+    "vrsta_primarna_naziv": "Inkubator za nove tehnologije",
+    "oib": "27994297593",
+    "mbs": "110101281",
+    "godina_osnivanja": 2020,
+    "osnivac": "Grad Šibenik",
+    "oib_osnivaca": "55644094063",
+    "upravitelj": null,
+    "adresa": "Velimira Škorpika  7/A, Šibenik 22000",
+    "mjesto": "Šibenik",
+    "jls": "ŠIBENIK",
+    "zupanija": "Šibensko-kninska županija",
+    "website": "https://trokut.eu/",
+    "emails": [
+     "info@trokut.eu"
+    ],
+    "telefoni": [],
+    "kontakt_osobe": [
+     "Diana Mudrinić"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     257
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 7,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/inkubator-za-nove-tehnologije-trokut-sibenik-d-o-o/OIB-27994297593",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 266,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     18.797374,
+     45.286072
+    ]
+   },
+   "properties": {
+    "id": 266,
+    "brand": "TEHNOLOŠKI PARK VINKOVCI",
+    "naziv": "TEHNOLOŠKI PARK VINKOVCI d.o.o. za inkubaciju inovativnih tehnologijskih poduzeća, PODRUŽNICA PODUZETNIČKI INKUBATOR VINKOVCI za inkubaciju inovativnih tehnologijskih poduzeća",
+    "vrste": [
+     {
+      "id": 7,
+      "naziv": "Poduzetnički inkubator"
+     }
+    ],
+    "vrsta_primarna": 7,
+    "vrsta_primarna_naziv": "Poduzetnički inkubator",
+    "oib": "72762511425",
+    "mbs": "030116644",
+    "godina_osnivanja": 2020,
+    "osnivac": "Grad Vinkovci",
+    "oib_osnivaca": "67648791479",
+    "upravitelj": null,
+    "adresa": "Dragutina Žanića Karle  16, Vinkovci 32100",
+    "mjesto": "Vinkovci",
+    "jls": "VINKOVCI",
+    "zupanija": "Vukovarsko-srijemska županija",
+    "website": "https://www.inkubator.vinkovci.hr",
+    "emails": [
+     "info@tp-vk.hr"
+    ],
+    "telefoni": [],
+    "kontakt_osobe": [
+     "Branka Mišić"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     266
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 8,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/tehnoloski-park-vinkovci-d-o-o/OIB-72762511425",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 267,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.466553,
+     43.507974
+    ]
+   },
+   "properties": {
+    "id": 267,
+    "brand": "MOSAIC INCUBATOR",
+    "naziv": "MOSAIC INCUBATOR d.o.o. za poslovne usluge",
+    "vrste": [
+     {
+      "id": 8,
+      "naziv": "Inkubator za nove tehnologije"
+     }
+    ],
+    "vrsta_primarna": 8,
+    "vrsta_primarna_naziv": "Inkubator za nove tehnologije",
+    "oib": "28711286175",
+    "mbs": "060272503",
+    "godina_osnivanja": 2011,
+    "osnivac": "Ultimativa d.o.o.",
+    "oib_osnivaca": "06389913244",
+    "upravitelj": null,
+    "adresa": "RUĐERA BOŠKOVIĆA  15, Split 21000",
+    "mjesto": "Split",
+    "jls": "SPLIT",
+    "zupanija": "Splitsko-dalmatinska županija",
+    "website": "https://www.ultimativa.com",
+    "emails": [
+     "info@ultimativa.com"
+    ],
+    "telefoni": [
+     "021555406",
+     "0913529074",
+     "021555418"
+    ],
+    "kontakt_osobe": [
+     "ANTONELA ALVIR"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     267
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 1,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/mosaic-incubator-d-o-o/OIB-28711286175",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 268,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.832223,
+     46.162569
+    ]
+   },
+   "properties": {
+    "id": 268,
+    "brand": "ENTER KOPRIVNICA",
+    "naziv": "ENTER KOPRIVNICA društvo s ograničenom odgovornošću za usluge, trgovinu i posredovanje za poduzetnike",
+    "vrste": [
+     {
+      "id": 7,
+      "naziv": "Poduzetnički inkubator"
+     }
+    ],
+    "vrsta_primarna": 7,
+    "vrsta_primarna_naziv": "Poduzetnički inkubator",
+    "oib": "74249041153",
+    "mbs": "10047864",
+    "godina_osnivanja": 2001,
+    "osnivac": "Grad Koprivnica",
+    "oib_osnivaca": "62112914641",
+    "upravitelj": null,
+    "adresa": "Zrinski trg  1/I, Koprivnica 48000",
+    "mjesto": "Koprivnica",
+    "jls": "KOPRIVNICA",
+    "zupanija": "Koprivničko-križevačka županija",
+    "website": "https://www.enterkoprivnica.hr",
+    "emails": [
+     "info@enterkoprivnica.hr"
+    ],
+    "telefoni": [
+     "048222338",
+     "0955203327",
+     "048617792"
+    ],
+    "kontakt_osobe": [
+     "Aldijana Matić Horvat"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "rucno",
+    "jrpi_unit_ids": [
+     268
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 11,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/enter-koprivnica-d-o-o/OIB-74249041153",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 270,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     18.897489,
+     44.905531
+    ]
+   },
+   "properties": {
+    "id": 270,
+    "brand": "Poljoprivredno poduzetnički inkubator Drenovci",
+    "naziv": "Poljoprivredno poduzetnički inkubator Drenovci d.o.o., za usluge",
+    "vrste": [
+     {
+      "id": 7,
+      "naziv": "Poduzetnički inkubator"
+     }
+    ],
+    "vrsta_primarna": 7,
+    "vrsta_primarna_naziv": "Poduzetnički inkubator",
+    "oib": "16511102030",
+    "mbs": "030173556",
+    "godina_osnivanja": 2016,
+    "osnivac": "Općina Drenovci",
+    "oib_osnivaca": "97589925435",
+    "upravitelj": null,
+    "adresa": "Vladimira Nazora 131, Drenovci 32257",
+    "mjesto": "Drenovci",
+    "jls": "DRENOVCI",
+    "zupanija": "Vukovarsko-srijemska županija",
+    "website": "https://www.ppinkubator-drenovci.hr",
+    "emails": [
+     "info@ppinkubator-drenovci.hr"
+    ],
+    "telefoni": [],
+    "kontakt_osobe": [
+     "Matej Brnić"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     270
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 12,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/poljoprivredno-poduzetnicki-inkubator-drenovci-d-o-o/OIB-16511102030",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 271,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.425586,
+     43.514438
+    ]
+   },
+   "properties": {
+    "id": 271,
+    "brand": "UNIST TEHNOLOŠKI PARK",
+    "naziv": "UNIST TEHNOLOŠKI PARK d.o.o. za unapređenje poduzetničke infrastrukture",
+    "vrste": [
+     {
+      "id": 8,
+      "naziv": "Inkubator za nove tehnologije"
+     }
+    ],
+    "vrsta_primarna": 8,
+    "vrsta_primarna_naziv": "Inkubator za nove tehnologije",
+    "oib": "51860740266",
+    "mbs": "060351385",
+    "godina_osnivanja": 2016,
+    "osnivac": "Sveučilište u Splitu",
+    "oib_osnivaca": "64218323816",
+    "upravitelj": null,
+    "adresa": "Matoševa 56, Split 21000",
+    "mjesto": "Split",
+    "jls": "SPLIT",
+    "zupanija": "Splitsko-dalmatinska županija",
+    "website": "https://www.unist.hr",
+    "emails": [
+     "kresimir.budisa@unist.hr"
+    ],
+    "telefoni": [
+     "021612673",
+     "0917227676",
+     "021612672"
+    ],
+    "kontakt_osobe": [
+     "Krešimir Budiša"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     271
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 2,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/unist-tehnoloski-park-d-o-o/OIB-51860740266",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 274,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.450703,
+     43.523174
+    ]
+   },
+   "properties": {
+    "id": 274,
+    "brand": "Tehnološki centar Split",
+    "naziv": "Tehnološki centar Split, društvo s ograničenom ogovornošću za promicanje novih tehnologija, inovacija i poduzetništva",
+    "vrste": [
+     {
+      "id": 7,
+      "naziv": "Poduzetnički inkubator"
+     }
+    ],
+    "vrsta_primarna": 7,
+    "vrsta_primarna_naziv": "Poduzetnički inkubator",
+    "oib": "63209602141",
+    "mbs": "60051877",
+    "godina_osnivanja": 1997,
+    "osnivac": "ŽUPANIJA SPLITSKO-DALMATINSKA, REPUBLIKA HRVATSKA, Hrvatski Telekom d.d., SVEUČILIŠTE U SPLITU, Dalma, dioničko društvo za turizam, ugostiteljstvo, promet i usluge",
+    "oib_osnivaca": "40781519492;52634238587;81793146560;29845096215;64479860853",
+    "upravitelj": null,
+    "adresa": "Kopilica 5, Split 21000",
+    "mjesto": "Split",
+    "jls": "SPLIT",
+    "zupanija": "Splitsko-dalmatinska županija",
+    "website": "https://www.tcs.hr",
+    "emails": [
+     "ivan.spar@gmail.com"
+    ],
+    "telefoni": [
+     "021393333",
+     "0989497574",
+     "021490682"
+    ],
+    "kontakt_osobe": [
+     "Ivan Špar"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     274
+    ],
+    "fina_status": "Neaktivan/izbrisan",
+    "fina_velicina": null,
+    "fina_zaposleni": 0,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/tehnoloski-centar-split-d-o-o-u-likvidaciji/OIB-63209602141",
+    "fina_aktivan": false
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 280,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.854531,
+     44.867697
+    ]
+   },
+   "properties": {
+    "id": 280,
+    "brand": "TI PULA",
+    "naziv": "Istarska razvojna agencija d.o.o. (TI PULA)",
+    "vrste": [
+     {
+      "id": 8,
+      "naziv": "Inkubator za nove tehnologije"
+     }
+    ],
+    "vrsta_primarna": 8,
+    "vrsta_primarna_naziv": "Inkubator za nove tehnologije",
+    "oib": "90084809413",
+    "mbs": "4015470",
+    "godina_osnivanja": 2013,
+    "osnivac": "Istarska županija, Grad Buje, Grad Buzet, Grad Labin, Grad Novigrad, Grad Pazin, Grad Poreč, Grad Pula, Grad Rovinj, Grad Umag, Grad Vodnjan",
+    "oib_osnivaca": "90017522601;19611257971;77489969256;19041331726;53785741678;07969842379;41303906494;79517841355;25677819890;84097228497;15554218499",
+    "upravitelj": null,
+    "adresa": "Zagrebačka  30, Pula 52100",
+    "mjesto": "Pula",
+    "jls": "PULA - POLA",
+    "zupanija": "Istarska županija",
+    "website": "https://www.tehnoloski-inkubator.com",
+    "emails": [
+     "ida-uprava@ida.hr"
+    ],
+    "telefoni": [
+     "+385 52 381",
+     "+385 99 2280"
+    ],
+    "kontakt_osobe": [
+     "Tamara Kiršić"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     280
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 7,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/ida-d-o-o/OIB-90084809413",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 284,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.542476,
+     46.019322
+    ]
+   },
+   "properties": {
+    "id": 284,
+    "brand": "KPC",
+    "naziv": "Križevački poduzetnički centar d.o.o. za razvoj poduzetništva",
+    "vrste": [
+     {
+      "id": 7,
+      "naziv": "Poduzetnički inkubator"
+     }
+    ],
+    "vrsta_primarna": 7,
+    "vrsta_primarna_naziv": "Poduzetnički inkubator",
+    "oib": "26534484950",
+    "mbs": "010046659",
+    "godina_osnivanja": 2020,
+    "osnivac": "Grad Križevci",
+    "oib_osnivaca": "35435239132",
+    "upravitelj": null,
+    "adresa": "Franje Tuđmana  20, Križevci 48260",
+    "mjesto": "Križevci",
+    "jls": "KRIŽEVCI",
+    "zupanija": "Koprivničko-križevačka županija",
+    "website": "https://www.kpc.hr",
+    "emails": [
+     "tomislav.geric@kpc.hr"
+    ],
+    "telefoni": [],
+    "kontakt_osobe": [
+     "Tomislav Gerić"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     284
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 12,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/krizevacki-poduzetnicki-centar-d-o-o/OIB-26534484950",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 288,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.234846,
+     44.147276
+    ]
+   },
+   "properties": {
+    "id": 288,
+    "brand": "INOVATIVNI ZADAR",
+    "naziv": "INOVATIVNI ZADAR d.o.o. za poticanje i razvoj poduzetništva, informacijskih i komunikacijskih tehnologija",
+    "vrste": [
+     {
+      "id": 7,
+      "naziv": "Poduzetnički inkubator"
+     }
+    ],
+    "vrsta_primarna": 7,
+    "vrsta_primarna_naziv": "Poduzetnički inkubator",
+    "oib": "33061586626",
+    "mbs": "01697285",
+    "godina_osnivanja": 2003,
+    "osnivac": "Grad Zadar",
+    "oib_osnivaca": "09933651854",
+    "upravitelj": null,
+    "adresa": "Grgura Budislavića  99, Zadar 23000",
+    "mjesto": "Zadar",
+    "jls": "ZADAR",
+    "zupanija": "Zadarska županija",
+    "website": "https://www.inzad.hr",
+    "emails": [
+     "info@inzad.hr",
+     "ana.odvitovic@inzad.hr"
+    ],
+    "telefoni": [
+     "+385 23 627",
+     "+385 99 535",
+     "+385 75 801"
+    ],
+    "kontakt_osobe": [
+     "Ana Odvitović"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     288
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mali",
+    "fina_zaposleni": 12,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/inovativni-zadar-d-o-o/OIB-33061586626",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 291,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.911982,
+     45.796617
+    ]
+   },
+   "properties": {
+    "id": 291,
+    "brand": "Invento Capital Partners",
+    "naziv": "Optimizacija d.o.o.",
+    "vrste": [
+     {
+      "id": 9,
+      "naziv": "Poduzetnički akcelerator"
+     }
+    ],
+    "vrsta_primarna": 9,
+    "vrsta_primarna_naziv": "Poduzetnički akcelerator",
+    "oib": "73636385372",
+    "mbs": "080529899",
+    "godina_osnivanja": 2005,
+    "osnivac": "Optimizacija d.o.o.",
+    "oib_osnivaca": "73636385372",
+    "upravitelj": null,
+    "adresa": "Ulica Roberta Frangeša Mihanovića  9, GRAD ZAGREB 10000",
+    "mjesto": "Zagreb",
+    "jls": "GRAD ZAGREB",
+    "zupanija": "Grad Zagreb",
+    "website": "http://inventocapitalpartners.eu/",
+    "emails": [
+     "ivana.culjak@optimizacija.hr"
+    ],
+    "telefoni": [
+     "099/317 9554"
+    ],
+    "kontakt_osobe": [
+     "Ivana Čuljak"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     291
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 6,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/optimizacija-d-o-o/OIB-73636385372",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 302,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.971337,
+     45.79564
+    ]
+   },
+   "properties": {
+    "id": 302,
+    "brand": "CTT",
+    "naziv": "Centar za transfer tehnologije d.o.o.",
+    "vrste": [
+     {
+      "id": 8,
+      "naziv": "Inkubator za nove tehnologije"
+     }
+    ],
+    "vrsta_primarna": 8,
+    "vrsta_primarna_naziv": "Inkubator za nove tehnologije",
+    "oib": "81725143201",
+    "mbs": "1219073",
+    "godina_osnivanja": 1996,
+    "osnivac": "Fakultet strojarstva i brodogradnje",
+    "oib_osnivaca": "?",
+    "upravitelj": null,
+    "adresa": "Ivana Lučića  5, GRAD ZAGREB 10000",
+    "mjesto": "Zagreb",
+    "jls": "GRAD ZAGREB",
+    "zupanija": "Grad Zagreb",
+    "website": "https://www.ctt.hr",
+    "emails": [
+     "ctt@fsb.hr"
+    ],
+    "telefoni": [],
+    "kontakt_osobe": [
+     "Boris Ćosić"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     302
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 8,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/centar-za-transfer-tehnologije-d-o-o/OIB-81725143201",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 311,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     18.684743,
+     45.557882
+    ]
+   },
+   "properties": {
+    "id": 311,
+    "brand": "TERA TEHNOPOLIS",
+    "naziv": "TERA TEHNOPOLIS društvo s ograničenom odgovornošću za promicanje novih tehnologija, inovacija i poduzetništva",
+    "vrste": [
+     {
+      "id": 7,
+      "naziv": "Poduzetnički inkubator"
+     }
+    ],
+    "vrsta_primarna": 7,
+    "vrsta_primarna_naziv": "Poduzetnički inkubator",
+    "oib": "39077073015",
+    "mbs": "30073690",
+    "godina_osnivanja": 2002,
+    "osnivac": "Sveučilište J. J. Strossmayera u Osijeku, Osječko-baranjska županija, Grad Osijek",
+    "oib_osnivaca": "78808975734;10383308860;30050049642",
+    "upravitelj": null,
+    "adresa": "Trg Ljudevita Gaja 6, Osijek 31000",
+    "mjesto": "Osijek",
+    "jls": "OSIJEK",
+    "zupanija": "Osječko-baranjska županija",
+    "website": "https://www.tera.unios.hr",
+    "emails": [
+     "ured@tera.hr"
+    ],
+    "telefoni": [
+     "031251000",
+     "0912233221",
+     "031251005"
+    ],
+    "kontakt_osobe": [
+     "Ana Nikšić"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     311
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 10,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/tera-tehnopolis-d-o-o/OIB-39077073015",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 316,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.467385,
+     43.509453
+    ]
+   },
+   "properties": {
+    "id": 316,
+    "brand": "DIGITALNA DALMACIJA",
+    "naziv": "DIGITALNA DALMACIJA d.o.o. za razvoj inovativnog i poduzetničkog okruženja",
+    "vrste": [
+     {
+      "id": 9,
+      "naziv": "Poduzetnički akcelerator"
+     }
+    ],
+    "vrsta_primarna": 9,
+    "vrsta_primarna_naziv": "Poduzetnički akcelerator",
+    "oib": "20854526848",
+    "mbs": "060452663",
+    "godina_osnivanja": 2022,
+    "osnivac": "Splitsko- dalmatinska županija",
+    "oib_osnivaca": "40781519492",
+    "upravitelj": null,
+    "adresa": "R. Boškovića 25, Split 0",
+    "mjesto": "Split",
+    "jls": "SPLIT",
+    "zupanija": "Splitsko-dalmatinska županija",
+    "website": "http://www.ictzupanija.hr/IT-Business/Digitalna-Dalmacija",
+    "emails": [
+     "damir.brcic@gmail.com"
+    ],
+    "telefoni": [
+     "021400212",
+     "0992291519",
+     "021400166"
+    ],
+    "kontakt_osobe": [
+     "Damir Brčić"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     316
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 0,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/digitalna-dalmacija-d-o-o/OIB-20854526848",
+    "fina_aktivan": true
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 317,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.908651,
+     45.795552
+    ]
+   },
+   "properties": {
+    "id": 317,
+    "brand": "PROJEKT JEDNAKO RAZVOJ",
+    "naziv": "PROJEKT JEDNAKO RAZVOJ, društvo s ograničenom odgovornošću za poslovno savjetovanje",
+    "vrste": [
+     {
+      "id": 9,
+      "naziv": "Poduzetnički akcelerator"
+     }
+    ],
+    "vrsta_primarna": 9,
+    "vrsta_primarna_naziv": "Poduzetnički akcelerator",
+    "oib": "09575099931",
+    "mbs": "080709969",
+    "godina_osnivanja": 2020,
+    "osnivac": "Fresl Ana ",
+    "oib_osnivaca": "0",
+    "upravitelj": null,
+    "adresa": "Petrovaradinska  1, GRAD ZAGREB 10000",
+    "mjesto": "Zagreb",
+    "jls": "GRAD ZAGREB",
+    "zupanija": "Grad Zagreb",
+    "website": "https://www.pjr.hr",
+    "emails": [
+     "info@pjr.hr"
+    ],
+    "telefoni": [
+     "091 2505"
+    ],
+    "kontakt_osobe": [
+     "Adriana Marušić"
+    ],
+    "povrsina_m2": null,
+    "povrsina_poduzetnici_m2": null,
+    "geo_source": "dgu-adresa",
+    "jrpi_unit_ids": [
+     317
+    ],
+    "fina_status": "Aktivan",
+    "fina_velicina": "Mali",
+    "fina_zaposleni": 19,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/projekt-jednako-razvoj-civitta-d-o-o/OIB-09575099931",
+    "fina_aktivan": true
+   }
+  }
+ ]
+}

@@ -328,6 +328,51 @@ export interface StadiumProperties {
 export type StadiumFeature = GeoJSON.Feature<GeoJSON.Point, StadiumProperties> & { id: number };
 export type StadiumCollection = GeoJSON.FeatureCollection<GeoJSON.Point, StadiumProperties>;
 
+/** Poduzetnička potporna institucija iz JRPI-ja (uži izbor — vidi 29_fetch_ppi.py). */
+export interface InkubatorProperties {
+  id: number;
+  /** Ime pod kojim subjekt nastupa; `naziv` je pravni naziv iz registra. */
+  brand: string;
+  naziv: string;
+  vrste: { id: number; naziv: string }[];
+  /** Vrsta koja određuje boju kad ih subjekt ima više. */
+  vrsta_primarna: number;
+  vrsta_primarna_naziv: string;
+  oib?: string;
+  mbs?: string;
+  godina_osnivanja?: number;
+  osnivac?: string;
+  oib_osnivaca?: string;
+  upravitelj?: string;
+  adresa?: string;
+  mjesto?: string;
+  jls?: string;
+  zupanija?: string;
+  website?: string;
+  emails?: string[];
+  telefoni?: string[];
+  kontakt_osobe?: string[];
+  povrsina_m2?: number;
+  povrsina_poduzetnici_m2?: number;
+  /** 'rucno' | 'dgu-adresa' | 'dgu-ulica-fuzzy' | 'naselje' */
+  geo_source?: string;
+  jrpi_unit_ids?: number[];
+  /** FINA info.BIZ — izostaje kad subjekta ondje nema. */
+  fina_status?: string;
+  fina_velicina?: string;
+  fina_zaposleni?: number;
+  fina_url?: string;
+  /** false = u likvidaciji / stečaju / brisan. null-ish = nepoznato. */
+  fina_aktivan?: boolean | null;
+}
+export type InkubatorFeature = GeoJSON.Feature<GeoJSON.Point, InkubatorProperties> & {
+  id: number;
+};
+export type InkubatorCollection = GeoJSON.FeatureCollection<
+  GeoJSON.Point,
+  InkubatorProperties
+>;
+
 export interface AirportProperties {
   id: string;
   osm_type: string;

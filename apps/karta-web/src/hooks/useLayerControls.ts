@@ -32,6 +32,7 @@ export function useLayerControls() {
       showClubs: { value: s.showClubs, set: s.setShowClubs },
       showPitches: { value: s.showPitches, set: s.setShowPitches },
       showStadiums: { value: s.showStadiums, set: s.setShowStadiums },
+      showInkubatori: { value: s.showInkubatori, set: s.setShowInkubatori },
       showCrkve: { value: s.showCrkve, set: s.setShowCrkve },
       showZupe: { value: s.showZupe, set: s.setShowZupe },
       showBiskupije: { value: s.showBiskupije, set: s.setShowBiskupije },

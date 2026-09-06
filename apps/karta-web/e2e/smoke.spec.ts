@@ -226,6 +226,64 @@ test("Stadioni toggle loads stadiums and renders at HR zoom", async ({ page }) =
   );
 });
 
+test("Inkubatori toggle: sloj se učita, renderira i popup otvara", async ({ page }) => {
+  await page.goto(BASE + "/");
+  await waitForMapIdle(page);
+
+  const btn = page.locator("button", { hasText: /Inkubatori/ }).first();
+  const reqPromise = page.waitForRequest((req) => req.url().includes("/data/inkubatori.geojson"));
+  await btn.click();
+  const resp = await (await reqPromise).response();
+  expect(resp?.status()).toBe(200);
+
+  await page.waitForFunction(
+    () => {
+      const w = window as unknown as { _gisMap?: import("maplibre-gl").Map };
+      const map = w._gisMap;
+      if (!map?.getLayer("hr-inkubatori-circle")) return false;
+      return map.queryRenderedFeatures({ layers: ["hr-inkubatori-circle"] } as never).length > 0;
+    },
+    { timeout: 10000 },
+  );
+
+  // Popup mora izdržati `vrste` kao polje objekata: MapLibre ga kroz izraze
+  // provuče kao JSON string, pa je ovo test za `normalize()`, ne kozmetika.
+  //
+  // Isti obrazac kao kod klubova: panel je plutajući dock nad kartom, pa se
+  // prvo sklapa, a onda se skoči na točku da krug bude dovoljno velik za
+  // pogodak. Klik se računa od bounding recta canvasa, ne od ishodišta stranice.
+  await page.locator('button[aria-label="Sklopi panel"]').click();
+  await expect(page.getByTestId("layers-panel")).toHaveCount(0);
+
+  const pt = await page.evaluate(async () => {
+    const w = window as unknown as { _gisMap?: import("maplibre-gl").Map };
+    const map = w._gisMap!;
+    const feats = map.queryRenderedFeatures({ layers: ["hr-inkubatori-circle"] } as never);
+    if (!feats.length) return null;
+    const f = feats[0];
+    const coords = (f.geometry as GeoJSON.Point).coordinates as [number, number];
+    map.jumpTo({ center: coords, zoom: 13 });
+    await new Promise((r) => setTimeout(r, 600));
+    const px = map.project(coords);
+    const rect = map.getCanvas().getBoundingClientRect();
+    return {
+      x: rect.left + px.x,
+      y: rect.top + px.y,
+      brand: (f.properties as { brand: string }).brand,
+    };
+  });
+  expect(pt).not.toBeNull();
+  await page.mouse.click(pt!.x, pt!.y);
+
+  await expect(page.locator(".maplibregl-popup-content .club-popup")).toBeVisible({
+    timeout: 5000,
+  });
+  await expect(page.locator(".club-popup .club-name").first()).toHaveText(pt!.brand);
+  // `vrste` je stiglo kao JSON string i mora biti raspakirano u čitljiv niz,
+  // a ne ispisano kao `[object Object]`.
+  await expect(page.locator(".club-popup .club-league").first()).not.toContainText("object");
+});
+
 test("Zračne luke toggle loads airports + runways + approaches", async ({ page }) => {
   await page.goto(BASE + "/");
   await waitForMapIdle(page);
@@ -343,7 +401,7 @@ test("desktop: svaka kontrola iz registra je dohvatljiva klikom", async ({ page 
   await page.goto(BASE + "/");
   await waitForMapIdle(page);
 
-  for (const label of ["Ortofoto", "Naselja", "Crkve", "Biskupije", "Zračne luke"]) {
+  for (const label of ["Ortofoto", "Naselja", "Crkve", "Biskupije", "Inkubatori", "Zračne luke"]) {
     const btn = page.locator("button", { hasText: new RegExp(label) }).first();
     await btn.scrollIntoViewIfNeeded();
     await expect(btn, `kontrola "${label}" nije u viewportu`).toBeInViewport();

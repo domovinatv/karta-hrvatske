@@ -22,6 +22,7 @@ import { useNaseljaLayer } from "@/hooks/useNaseljaLayer";
 import { useOrtofotoLayer } from "@/hooks/useOrtofotoLayer";
 import { usePinkaLayer } from "@/hooks/usePinkaLayer";
 import { usePitchesLayer } from "@/hooks/usePitchesLayer";
+import { useInkubatoriLayer } from "@/hooks/useInkubatoriLayer";
 import { useStadiumsLayer } from "@/hooks/useStadiumsLayer";
 import { useAirportsLayer } from "@/hooks/useAirportsLayer";
 import { useUrlSync } from "@/hooks/useUrlSync";
@@ -108,6 +109,7 @@ export default function MapView() {
   useUstanoveLayer({ map: mapRef.current, loaded, styleRev });
   usePitchesLayer({ map: mapRef.current, loaded, styleRev });
   useStadiumsLayer({ map: mapRef.current, loaded, styleRev });
+  useInkubatoriLayer({ map: mapRef.current, loaded, styleRev });
   useAirportsLayer({ map: mapRef.current, loaded, styleRev });
   usePinkaLayer({ map: mapRef.current, loaded, styleRev, focusSlug: pinkaFocusSlug });
   const { clubs } = useClubsLayer({

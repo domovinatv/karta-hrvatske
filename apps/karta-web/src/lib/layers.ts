@@ -15,6 +15,7 @@ import {
   MapPinHouse,
   Palette,
   Plane,
+  Rocket,
   Satellite,
   Shield,
   SquareDashed,
@@ -38,6 +39,7 @@ export type LayerGroupId =
   | "vjera"
   | "obrazovanje"
   | "sport"
+  | "gospodarstvo"
   | "infrastruktura";
 
 export const GROUPS: { id: LayerGroupId; label: string }[] = [
@@ -47,6 +49,7 @@ export const GROUPS: { id: LayerGroupId; label: string }[] = [
   { id: "vjera", label: "Vjerski objekti" },
   { id: "obrazovanje", label: "Odgoj i obrazovanje" },
   { id: "sport", label: "Sport" },
+  { id: "gospodarstvo", label: "Gospodarstvo i poduzetništvo" },
   { id: "infrastruktura", label: "Infrastruktura" },
 ];
 
@@ -60,6 +63,7 @@ export type LayerStateKey =
   | "showClubs"
   | "showPitches"
   | "showStadiums"
+  | "showInkubatori"
   | "showCrkve"
   | "showZupe"
   | "showBiskupije"
@@ -80,6 +84,7 @@ export type LayerId =
   | "klubovi"
   | "igralista"
   | "stadioni"
+  | "inkubatori"
   | "crkve"
   | "zupe"
   | "biskupije"
@@ -378,6 +383,33 @@ export const CONTROLS: Control[] = [
     lazy: true,
     blurb: "Svi stadioni iz OpenStreetMapa.",
     source: { label: "OpenStreetMap" },
+  },
+
+  // ── Gospodarstvo i poduzetništvo ─────────────────────────────────────────
+  {
+    kind: "toggle",
+    id: "inkubatori",
+    group: "gospodarstvo",
+    label: "Inkubatori",
+    icon: Rocket,
+    stateKey: "showInkubatori",
+    shortcut: "I",
+    count: 82,
+    lazy: true,
+    blurb:
+      "Poduzetnički inkubatori, inkubatori za nove tehnologije, akceleratori, znanstveno-tehnologijski parkovi i centri kompetencije — uži izbor iz Jedinstvenog registra poduzetničke infrastrukture. Registar nema koordinate (5 od 236 zapisa), pa su točke geokodirane iz adrese preko DGU-a. Prsten označava subjekt koji prema FINA-i više ne posluje.",
+    source: {
+      label: "JRPI — Ministarstvo gospodarstva + FINA info.BIZ",
+      href: "https://jrpi.mingo.gov.hr/",
+    },
+    legend: [
+      { color: "#0891b2", label: "poduzetnički inkubator" },
+      { color: "#7c3aed", label: "inkubator za nove tehnologije" },
+      { color: "#db2777", label: "poduzetnički akcelerator" },
+      { color: "#ea580c", label: "znanstveno-tehnologijski park" },
+      { color: "#16a34a", label: "centar kompetencije" },
+      { color: "#ef4444", label: "u likvidaciji / stečaju / brisan" },
+    ],
   },
 
   // ── Infrastruktura ───────────────────────────────────────────────────────
