@@ -187,6 +187,7 @@ vegetacija / vode), povijesne granice grada, ZG3D 3D model po gradskim četvrtim
 docs/natjecaj-otvoreni-podaci-zg-2026/
 ├── README.md                                   ← ovaj dosje
 ├── prijedlog-projekta.md                       ← prijedlog funkcionalnosti
+├── TODO-prijava.md                             ← radna lista do 16.9.
 ├── dokumenti/
 │   ├── javni-poziv-otvoreni-podaci-2026.docx   ← službeni tekst poziva
 │   ├── javni-poziv-otvoreni-podaci-2026.txt    ← ekstrahiran tekst

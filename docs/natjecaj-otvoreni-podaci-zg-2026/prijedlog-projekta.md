@@ -182,7 +182,7 @@ najmanje od svih 14.
 | Tehnička izvedivost | 10 | harvester i sloj su gotovi i commitani | izvještaj se već generira |
 | **Društvena korist** | **30** | karta manjka vrtića/ljekarni/igrališta po kvartu; pristupačnost stajališta | bolji podaci za sve buduće korisnike portala |
 | **Inovativnost** | **20** | presjek stotinjak skupova, pješačka a ne zračna udaljenost | nitko ne mjeri sam portal |
-| **Open source** | **10** | MIT + CC BY 4.0, javni repozitorij, skupovi vraćeni Gradu | isto |
+| **Open source** | **10** | javni repozitorij od 20.5.2026., MIT + CC BY 4.0, skupovi vraćeni Gradu | isto |
 | Kvaliteta fin. plana | 10 | razrađen po pet kategorija, bez PDV-a | traži se manje od stropa, obrazloženo |
 
 ---
@@ -194,10 +194,12 @@ najmanje od svih 14.
    registarskim izvatkom, BON-1 i BON-2. Fizička osoba ne može. O tome ovisi i
    ime u `LICENSE` (sada stoji „Matija Stepanić" — ako prijavljuje tvrtka,
    nositelj autorskog prava trebao bi biti ona).
-2. **Repozitorij mora postati javan.** Deset bodova nosi kriterij „konačni
-   proizvod dostupan pod licencom otvorenog koda". Licence su dodane, ali
-   `github.com/domovinatv/karta-hrvatske` je i dalje privatan — sam MIT tekst
-   u privatnom repozitoriju ne dokazuje ništa.
+2. **Kriterij open-source je pokriven.** `github.com/domovinatv/karta-hrvatske`
+   javan je od 20.5.2026., a od 6.9.2026. ima i `LICENSE` (MIT) i
+   `LICENSE-PODACI.md` (CC BY 4.0). U prijavi se navodi izravna poveznica na
+   repozitorij i na obje licence — to je cijelih 10 bodova, bez daljnjeg posla.
+   Ostaje samo uskladiti nositelja autorskog prava u `LICENSE` s prijaviteljem
+   (v. točka 1).
 3. **Preklapanje s drugim financiranjem.** Isti projekt ne smije biti financiran
    iz drugog izvora; potpisuje se izjava (Prilog 5.).
 4. **Zagreb kao izlog, ne kao izuzetak.** Karta je nacionalna, a poziv financira
@@ -216,7 +218,6 @@ Tekst projekta nije usko grlo. **Vanjske potvrde jesu.**
 | odmah | naručiti **BON-1 i BON-2** (FINA), **potvrdu GSKG-a** o nepostojanju duga prema Gradu, **potvrdu Porezne uprave** — sve „ne starije od 30 dana od objave poziva" (objava 1.9.2026.) |
 | odmah | pitati `otvoreni.podaci@zagreb.hr` predaje li se prijava kroz **e-Pisarnicu (NIAS)** ili kroz **SOM Natječaj** — dokumentacija si proturječi (dosje, §4) |
 | odmah | aktivirati **NIAS** račun osobe ovlaštene za zastupanje |
-| odmah | odlučiti o javnom repozitoriju (točka 4.2 gore) — bez toga se 10 bodova ne može tražiti |
 | do ~12.9. | pretipkati Priloge 2.–7. iz skeniranog PDF-a (tekstualne verzije iz 2024. su u `dokumenti/referenca-program-otvoreni-podaci-2024.txt` i strukturno su gotovo iste) |
 | do ~14.9. | **pisani prijedlog projekta u Word obliku** za svaki projekt — popis funkcionalnosti, profil korisnika, tip rješenja, obrazloženje interesa za Grad Zagreb i **poimenični popis otvorenih podataka** (izvoz iz `podaci/ckan-inventar.csv`, a za Projekt A doslovno iz `apps/data-pipeline/data/zg_provenance.json`) |
 | 15.9. | predaja — **naknadna dopuna nije moguća** |
