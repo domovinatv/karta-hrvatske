@@ -1,0 +1,43 @@
+--- word/document.xml ---
+Prilog 4.
+
+Obrazac 3. - FINANCIJSKI PLAN I IZRAČUN TROŠKOVA PROJEKTA
+
+Vrsta troškova
+ | Vrijednost opravdanih troškova
+ | Opis troškova
+ |
+ |
+ |
+ |
+ |
+ | 1. Troškovi zaposlenih
+ |
+ |
+ | Navedite troškove rada za sve zaposlene i broj osoba koje rade na projektu.
+
+Navedite broj sati cjelokupnog rada.
+ | 2. Troškovi vanjskih suradnika
+ |
+ |
+ | Navedite troškove vanjskih suradnika i broj osoba koje rade na projektu kao vanjski suradnici.
+ | 3. Troškovi promidžbe (mora biti utrošeno najmanje 5% od odobrenih sredstava)
+
+ |
+ |
+ | Navedite tipove i iznose troškova promidžbe.
+ | 4. Troškovi licenci i druge nematerijalne imovine
+ |
+ |
+ | Navedite tipove i iznose troškova licenci i druge nematerijalne imovine.
+ | 5. Troškovi opreme i druge materijalne imovine
+ |
+ |
+ | Navedite tipove i iznose troškova opreme i druge nematerijalne imovine.
+ |
+ |
+ |
+ |
+ | UKUPNA VRIJEDNOST SVIH TROŠKOVA (BEZ PDVa)
+ |
+ |

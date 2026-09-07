@@ -1,0 +1,31 @@
+--- word/document.xml ---
+Obrazac 2.2. - OSNOVNI PODACI O PROJEKTU
+
+2.2. OSNOVNI PODACI O PROGRAMSKOM SADRŽAJU ZA KOJI SE PODNOSI PRIJAVA ZA DODJELU POTPORE MALE VRIJEDNOSTI
+ | 2.2.1.	Vrsta projekta (moguće odabrati više  točaka)
+ | 1. programska aplikacija
+2. istraživanje
+3. mrežna stranica
+ | 2.2.2.	Naziv projekta
+ |
+ | 2.2.3.	Kratki opis projekta
+ |
+ | 2.2.4.	Ciljna skupina kojoj je projekt namijenjen
+ |
+ | 2.2.5.	Kapacitet prijavitelja da kvalitetno provede predloženi program 
+ |
+ | 2.2.6.	Način provedbe, dinamika i datum realizacije projekta
+ |
+ | 2.2.7.	Tehnička izvedivost predloženog programa 
+ |
+ | 2.2.8.	Društvena korist predloženog programa  
+ |
+ | 2.2.9.	Inovativnost predloženog programa 
+ |
+ | 2.2.10. Konačni proizvod je dostupan pod licencom otvorenog koda ili u slobodnoj domeni
+ |
+DA
+ |
+NE
+ | 2.2.11.	Detaljan opis projekta
+ |

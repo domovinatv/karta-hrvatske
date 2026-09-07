@@ -1,0 +1,32 @@
+--- word/document.xml ---
+Prilog 3.
+
+Obrazac 2.1. - OSNOVNI PODACI O PRIJAVITELJU PROGRAMSKOG SADRŽAJA
+
+2.1. OSNOVNI PODACI O PRIJAVITELJU
+ | 2.1.1.	Puni naziv
+ |
+ | 2.1.2.	Organizacijski oblik
+ |
+ | 2.1.3.	OIB (osobni identifikacijski broj)
+ |
+ | 2.1.4.	MBS (matični broj subjekta)
+ |
+ | 2.1.5.	Adresa (ulica, broj, mjesto, poštanski broj)
+ |
+ | 2.1.6.	Broj telefona
+ |
+ | 2.1.7.	Broj mobilnog telefona
+ |
+ | 2.1.8.	Adresa e-pošte
+ |
+ | 2.1.9.	Broj žiro-računa (IBAN)
+ |
+ | 2.1.10.	Naziv banke kod koje je žiro-račun otvoren
+ |
+ | 2.1.11.	Ime i prezime i funkcija odgovorne osobe podnositelja
+ |
+ | 2.1.12.	Ime i prezime i funkcija osobe za kontakt podnositelja
+ |
+ | 2.1.13.	Prethodno iskustvo prijavitelja u provedbi razvojnih ili istraživačkih programa 
+ |

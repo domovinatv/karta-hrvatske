@@ -1,0 +1,10 @@
+--- word/document.xml ---
+Prilog 2.
+
+Obrazac 1. - PRIJAVA ZA DODJELU POTPORE MALE VRIJEDNOSTI
+
+PRIJAVITELJ PROGRAMSKOG SADRŽAJA
+ | (upisati puni naziv prijavitelja)
+ | Naziv projekta
+ | (upisati puni naziv projekta)
+ |

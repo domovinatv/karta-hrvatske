@@ -1,0 +1,28 @@
+Prilog 1.
+
+
+LISTA KRITERIJA ZA PROCJENU PROGRAMSKIH SADRŽAJA
+
+
+Evaluacijski kriterij                                                  Broj bodova
+
+Prethodno iskustvo prijavitelja u provedbi razvojnih ili istraživačkih
+                                                                       0 - 10
+programa
+
+Kapacitet prijavitelja da kvalitetno provede predloženi program        0 - 10
+
+Tehnička izvedivost predloženog programa                               0 - 10
+
+Društvena korist predloženog programa                                  0 - 30
+
+Inovativnost predloženog programa                                      0 - 20
+
+Konačni proizvod je dostupan pod licencom otvorenog koda ili u
+                                                               0 - 10
+slobodnoj domeni
+
+Kvaliteta financijskog plana i opravdanost troškova                    0 - 10
+
+UKUPNO                                                                 0 - 100
+
