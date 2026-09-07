@@ -31,11 +31,15 @@ Legenda: `[ ]` otvoreno · `[x]` gotovo · `[—]` ne primjenjuje se
       300.000 €. Ako ne — prijava otpada bez obzira na bodove.
 - [ ] **Provjeriti dvostruko financiranje**: nijedan od tri projekta ne smije
       biti već financiran iz državnog, EU ili gradskog proračuna.
-- [ ] **Pitati Grad kojim se kanalom predaje** — `otvoreni.podaci@zagreb.hr`.
-      Tekst poziva kaže e-Pisarnica + NIAS, priložene upute su za SOM Natječaj.
-      Poslati kratko pitanje, odgovor sačuvati.
-- [ ] **Aktivirati NIAS** za osobu ovlaštenu za zastupanje (ako ide e-Pisarnica).
-      Ovo zna trajati — ne ostavljati za 15.9.
+- [x] **Kanal predaje utvrđen 7.9.2026.** — prijava se predaje kroz **SOM
+      Natječaj**, `https://natjecaji.zagreb.hr`, javni poziv **40**, forma
+      `/applicant/tenders/40/bid-create`. Matija je registriran i prijavljen,
+      forma se otvara i radi. Tekst poziva i dalje spominje e-Pisarnicu —
+      kontradikcija ostaje, ali praksa je jasna.
+- [ ] **Poslati mail Gradu** (`otvoreni.podaci@zagreb.hr`) s dva pitanja:
+      (1) potvrda da je SOM jedini kanal, (2) **dinamika isplate** — doznačuje
+      li se potpora unaprijed pa pravda, ili je refundacija po utrošku.
+      Drugo pitanje je bitno jer o njemu ovisi treba li predfinancirati projekt.
 
 ---
 
@@ -44,11 +48,21 @@ Legenda: `[ ]` otvoreno · `[x]` gotovo · `[—]` ne primjenjuje se
 Sve „ne starije od 30 dana od objave Javnog poziva". **Objava je 1.9.2026.**,
 dakle ne smiju biti izdane prije 2.8.2026. Naručiti sve odjednom.
 
-- [ ] **BON-1** (FINA) — ili potvrda FINA-e o razlozima neizdavanja
-- [ ] **BON-2** (FINA)
-- [ ] **Potvrda GSKG d.o.o.** o nepostojanju duga prema Gradu Zagrebu — **original**
-- [ ] **Potvrda Porezne uprave** o stanju duga (porez + MIO/ZO) — **original**
-- [ ] **Aktualni izvadak iz registra** (sudski / obrtni / registar udruga)
+- [ ] **BON-1** (FINA) — poslovnica 38,75 €, online kroz WEB BON / Info.BIZ
+      28,94 €, ili mail na `bonplus@fina.hr`; ako nema predan GFI, FINA izdaje
+      „Potvrdu o razlozima neizdavanja" (10,75 €) i poziv je prihvaća
+- [ ] **BON-2** (FINA, isti obrazac „Zahtjev za izdavanje informacije o
+      bonitetu/solventnosti", ili banka kao SOL-2)
+- [ ] **Potvrda GSKG d.o.o.** o nepostojanju duga prema Gradu Zagrebu —
+      GSKG, Savska cesta 1, centrala 01/4565-811. **Treba je i onaj tko nije
+      obveznik plaćanja** — tada u njoj piše da subjekt nije obveznik
+- [x] **Potvrda Porezne uprave** o stanju duga — zatražena 7.9.2026. kroz
+      ePorezna, svrha izdavanja „prijava na javni poziv" (šifra 58)
+- [ ] **Aktualni izvadak iz registra** — za d.o.o. besplatno i odmah s
+      `sudreg.pravosudje.hr`, elektronički s potpisom
+
+> „Original" ne znači papir: točka 5. Javnog poziva prihvaća elektroničke isprave
+> koje sadrže podatke za provjeru vjerodostojnosti.
 
 > Bez ijednog od ovih prijava se ne razmatra, a **naknadna dopuna nije moguća**.
 
@@ -56,20 +70,28 @@ dakle ne smiju biti izdane prije 2.8.2026. Naručiti sve odjednom.
 
 ## 3. Obrasci i izjave (do ~12.9.)
 
-Prilozi 2.–7. postoje samo unutar skeniranog `dokumenti/program-potpore-2026-2027.pdf`
-— treba ih pretipkati. Tekstualne verzije istih obrazaca iz 2024. su u
-`dokumenti/referenca-program-otvoreni-podaci-2024.txt` i strukturno su gotovo
-identične; poslužiti se njima kao predloškom, ali **provjeriti razlike prema
-verziji 2026.**
+**Pretipkavanje otpada.** Svi obrasci su preuzeti kao izvorni `.docx` s prijavne
+forme SOM-a i stoje u `obrasci/` (uz `.txt` ekstrakt svakoga). Popunjava se
+izravno u Wordu.
+
+Dvije stvari koje su obrasci otkrili, a tekst poziva ne kaže:
+- **Obrazac 2.2. je bodovna lista** — polja 2.2.5, 2.2.7, 2.2.8, 2.2.9 i 2.2.10
+  su doslovno kriteriji iz Priloga 1. Ta četiri opisna polja nose 70 od 100
+  bodova; pisati ih kao odgovore na kriterij, ne kao opći opis.
+- **Promidžba mora biti ≥ 5 % odobrenih sredstava** (napomena u Obrascu 3.).
+  Provjeriti: A 1.500/20.000 = 7,5 % ✓, B 500/8.000 = 6,25 % ✓,
+  C 700/12.000 = 5,8 % — na rubu, **podići na 800 €**.
 
 - [ ] Obrazac 1. — Prijava za dodjelu potpore (Prilog 2.) — **jedan primjerak**
 - [ ] Obrazac 2.1. — osnovni podaci o prijavitelju (Prilog 3.) — **jedan primjerak**
 - [ ] Obrazac 2.2. — osnovni podaci o projektu (Prilog 3.) — **po jedan za svaki projekt**
 - [ ] Obrazac 3. — financijski plan (Prilog 4.) — **po jedan za svaki projekt**, bez PDV-a
+      (promidžba ≥ 5 %; ukupno mora ostati u rasponu 5.000–20.000 €, inače je
+      prijava odbačena po točki 7.)
 - [ ] Izjava o nefinanciranju iz drugih proračuna (Prilog 5.)
 - [ ] Izjava o nepostojanju likvidacije/stečaja i duga prema zaposlenicima (Prilog 6.)
 - [ ] Izjava o svim de minimis potporama (Prilozi 7.a i 7.b)
-- [ ] Izjava o nekažnjavanju subjekta i osobe ovlaštene za zastupanje
+- [ ] Izjava o nekažnjavanju subjekta i osobe ovlaštene za zastupanje (**Prilog 8.**)
 
 Sve potpisati i ovjeriti, na hrvatskom, popunjeno na računalu.
 

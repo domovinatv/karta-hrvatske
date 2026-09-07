@@ -110,11 +110,22 @@ Struktura troškova (Obrazac 3., pet kategorija): troškovi zaposlenih, vanjskih
 suradnika, promidžbe, licenci i druge nematerijalne imovine, opreme i druge
 materijalne imovine. Ukupna vrijednost **bez PDV‑a**.
 
-**Nedosljednost u dokumentaciji koju treba provjeriti mailom:** tekst Javnog
-poziva upućuje na e-Pisarnicu + NIAS, a priložene „Upute za prijavitelje“ su
-zapravo upute za aplikaciju **SOM Natječaj** (registracija, „Natječaji/Javni
-pozivi“ → „Prijavi se“, podrška podrska@som-system.com). Vijest na zagreb.hr
-linka „online obrazac“ na `https://e-pisarnica.zagreb.hr/ePisarnica`.
+**Nedosljednost u dokumentaciji — riješena promatranjem, 7.9.2026.:** tekst
+Javnog poziva i dalje upućuje na e-Pisarnicu + NIAS i ima **prazno mjesto za
+datum roka** („zaključno sa ______ 2026."), ali stvarna prijava živi u aplikaciji
+**SOM Natječaj** na `https://natjecaji.zagreb.hr`. Ondje je poziv objavljen kao
+natječaj **40**, s rokom „Prijave do: 16.09.2026. 23:59", svim datotekama i
+radnom formom za prijavu (`/applicant/tenders/40/bid-create`). Kad prijavitelj
+otvori formu, ona već sadrži obrasce 2.1., 2.2. i 3., izjave i mjesto za upload
+potpisane prijave, uz gumbe „Spremi prijavu" / „Pošalji prijavu".
+
+Praktično: **predaje se kroz SOM**, ne kroz e-Pisarnicu. Kontradikcija u tekstu
+poziva ostaje i vrijedi je potvrditi mailom, ali kao formalnost, ne kao blokadu.
+
+Zamke portala: duboke poveznice (`/applicant/tenders/40`) preusmjere na
+`dashboard` — do poziva se dolazi kroz izbornik „Natječaji/Javni pozivi".
+Datoteke nisu `<a>` linkovi nego ikone preuzimanja na desnom rubu svakog retka
+tablice, pa se ne mogu pokupiti iz DOM-a nego se moraju kliknuti.
 
 ---
 
@@ -197,6 +208,11 @@ docs/natjecaj-otvoreni-podaci-zg-2026/
 │   ├── upute-som-natjecaj.pdf / .txt           ← upute za aplikaciju SOM
 │   ├── referenca-program-otvoreni-podaci-2024.doc / .txt  ← program 2024. (tekstualan, čitljivi obrasci)
 │   └── rezultati-2024-lista-odobrenih.pdf / .txt          ← lista odobrenih 2024. (OCR)
+├── obrasci/                                    ← 13 datoteka s prijavne forme SOM-a + .txt ekstrakt uz svaku
+│   ├── Tekst FINAL_ JAVNI POZIV … .docx        ← isti tekst kao u dokumenti/, ali izvorni
+│   ├── Prilog 1. – Lista kriterija … .pdf      ← bodovna lista (potvrđuje §3)
+│   ├── Prilog 2.–8. … .docx                    ← IZVORNI Word obrasci i izjave
+│   └── Upute za korisnike aplikacije SOM … .pdf
 ├── izvori/                                     ← HTML snimke zagreb.hr stranica
 └── podaci/
     ├── ckan-package-list.json                  ← 199 imena skupova
@@ -205,9 +221,66 @@ docs/natjecaj-otvoreni-podaci-zg-2026/
     └── resursi-geojson-csv-json.csv            ← 363 izravna URL‑a resursa (GeoJSON/CSV/JSON)
 ```
 
-> Obrasci (Prilozi 2.–7.) postoje samo unutar skeniranog `program-potpore-2026-2027.pdf`.
-> Za ispunjavanje ih treba pretipkati — tekstualne verzije istih obrazaca iz 2024.
-> su u `referenca-program-otvoreni-podaci-2024.txt` i strukturno su gotovo identične.
+> ~~Obrasci postoje samo unutar skeniranog PDF-a i treba ih pretipkati.~~
+> **Netočno od 7.9.2026.** — svi obrasci su preuzeti kao izvorni `.docx` s
+> prijavne forme SOM-a i stoje u `obrasci/`. Pretipkavanje otpada.
+
+### Što su obrasci pokazali, a tekst poziva ne kaže
+
+- **Prilog 8.** postoji kao zaseban obrazac (izjava o nekažnjavanju). Tekst
+  poziva ga navodi kao stavku 14., ali ga ne numerira kao prilog, pa ga raniji
+  popis priloga nije imao.
+- **Obrazac 2.2. je doslovno bodovna lista.** Polja: 2.2.5 kapacitet, 2.2.7
+  tehnička izvedivost, 2.2.8 društvena korist, 2.2.9 inovativnost, 2.2.10
+  open source (DA/NE). Svaki kriterij se boduje iz jednog polja koje prijavitelj
+  napiše — 70 od 100 bodova leži u četiri polja obrasca 2.2.
+- **Obrazac 3. propisuje da promidžba mora biti najmanje 5 % odobrenih
+  sredstava.** Provjeriti svaki financijski plan prema tome (A 7,5 %, B 6,25 %,
+  C 5,8 % — C je na rubu).
+- **Obrazac 2.1. traži IBAN i banku**, MBS, te u polju 2.1.13 „prethodno
+  iskustvo prijavitelja" — to je prvi bodovni kriterij i piše se ovdje, jednom
+  za sve prijavljene projekte.
+
+### Razlozi odbacivanja (točka 7. Javnog poziva)
+
+Prijava se neće razmatrati ako: ne zadovoljava uvjete za prijavu; **ne sadrži svu
+obveznu dokumentaciju**; nije dostavljena na propisan način; nije podnesena u
+roku; ili ima financijski plan izvan raspona **5.000–20.000 €** (točka 7. st. 4.
+Programa).
+
+### Što NIJE razlog isključenja
+
+Popis isključenja (točka 3. Programa) je zatvoren: likvidacija/stečaj/predstečaj,
+nepodmirene obveze prema Gradu Zagrebu, nepodmirene obveze prema zaposlenicima,
+pravomoćna osuđujuća presuda, isključeni sektori, prekoračenje de minimis granice
+i isti projekt financiran drugdje. **Na tom popisu nema nelikvidnosti, blokade
+računa, niskog stanja računa ni poreznog duga** — BON‑1, BON‑2 i porezna potvrda
+su dokumentacija, a ne prag. Jedino mjesto gdje slab bonitet može posredno
+naškoditi je kriterij „kapacitet prijavitelja" (0–10 bodova).
+
+### Elektroničke isprave su prihvatljive
+
+Točka 5. Javnog poziva: *„Dokumente koje izdavatelji izdaju u obliku elektroničke
+isprave mogu biti dostavljeni kao dokazno sredstvo pod uvjetom da istovremeno
+sadrže i podatke na temelju kojih se može provjeriti vjerodostojnost, odnosno
+istovjetnost isprave."* Dakle potvrda iz ePorezne s kontrolnim brojem i
+elektronički izvadak iz sudskog registra prolaze — riječ „original" u stavkama
+12. i 13. ne znači papir.
+
+### Gdje se nabavljaju vanjske potvrde
+
+| Dokument | Izdavatelj | Kanal | Cijena / rok |
+|---|---|---|---|
+| BON‑1 | FINA | poslovnica, `bonplus@fina.hr`, WEB BON, Info.BIZ | 38,75 € poslovnica / 28,94 € online; ažurira se pon–sri–pet |
+| BON‑1 zamjena (nema GFI) | FINA | poslovnica | „Potvrda o razlozima neizdavanja", 10,75 € |
+| BON‑2 | FINA (isti obrazac) ili banka (SOL‑2) | poslovnica / mail | po cjeniku; banka isti dan |
+| Potvrda GSKG | GSKG d.o.o., Savska cesta 1, 01/4565‑811 | zahtjev | usporediv obrazac Holdinga: 3 radna dana, `financije.direkcija@zgh.hr` |
+| Potvrda Porezne | ePorezna → Zahtjevi → potvrda o stanju duga | online, svrha izdavanja „prijava na javni poziv" (šifra 58) | odmah, besplatno |
+| Izvadak iz registra | sudreg.pravosudje.hr | online, elektronički s potpisom | odmah, besplatno |
+
+**Zamka kod GSKG‑a:** i tko *nije obveznik* plaćanja prema GSKG‑u mora priložiti
+njihovu potvrdu — samo će u njoj pisati da subjekt nije obveznik. Grad to
+izrijekom traži (v. Izvori, odgovor na pitanje o udrugama bez prostora).
 
 ## Vezani dokumenti
 

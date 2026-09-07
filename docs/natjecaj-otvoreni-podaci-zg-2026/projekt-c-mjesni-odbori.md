@@ -191,10 +191,12 @@ ispod 50 %, u kojim mjesnim odborima i za koje izbore.
 |---|---:|---|
 | 1. Troškovi zaposlenih | 6.800 € | spoj i normalizacija svih ciklusa, stranačka normalizacija, profili MO/GČ, kontrola pokrivenosti |
 | 2. Vanjski suradnici | 2.700 € | kartografski dizajn, lektura, recenzija metodologije (izborna statistika) |
-| 3. Promidžba | 700 € | objava skupa i izvještaja, materijal za vijeća mjesnih odbora |
+| 3. Promidžba | 800 € | objava skupa i izvještaja, materijal za vijeća mjesnih odbora |
 | 4. Licence i nematerijalna imovina | 1.000 € | hosting, tile hosting, nadzor osvježavanja |
-| 5. Oprema | 800 € | — |
+| 5. Oprema | 700 € | — |
 | **Ukupno (bez PDV-a)** | **12.000 €** | |
+
+Promidžba je 6,7 % — Obrazac 3. traži najmanje 5 % odobrenih sredstava.
 
 Traži se manje od stropa i to je namjerno: iz liste za 2024. vidi se da bodovi
 ne prate cijenu — projekt s rangom 1 tražio je 14.963 €, najmanje od svih 14.
@@ -202,6 +204,10 @@ ne prate cijenu — projekt s rangom 1 tražio je 14.963 €, najmanje od svih 1
 ---
 
 ## 6. Kako se preslikava na bodovnu listu
+
+Bodovi se ne dodjeljuju iz općeg dojma: polja 2.2.5, 2.2.7, 2.2.8, 2.2.9 i
+2.2.10 Obrasca 2.2. **jesu** kriteriji, jedno polje po kriteriju. Donja tablica
+je zato ujedno nacrt sadržaja tih polja.
 
 | Kriterij | Bod. | Čime se dokazuje |
 |---|---:|---|
