@@ -42,6 +42,7 @@ export function useLayerControls() {
       showEkosustav: { value: s.showEkosustav, set: s.setShowEkosustav },
       showCrkve: { value: s.showCrkve, set: s.setShowCrkve },
       showZupe: { value: s.showZupe, set: s.setShowZupe },
+      showUdruge: { value: s.showUdruge, set: s.setShowUdruge },
       showBiskupije: { value: s.showBiskupije, set: s.setShowBiskupije },
       showSkole: { value: s.showSkole, set: s.setShowSkole },
       showVrtici: { value: s.showVrtici, set: s.setShowVrtici },

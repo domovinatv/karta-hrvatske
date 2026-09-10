@@ -288,6 +288,52 @@ export type ZupaFeature = GeoJSON.Feature<GeoJSON.Point, ZupaProperties> & { id:
 export type ZupaCollection = GeoJSON.FeatureCollection<GeoJSON.Point, ZupaProperties>;
 
 /**
+ * Katolička UDRUGA — treći skup grupe „vjera": nije građevina (Crkve) ni
+ * crkvena pravna osoba (Župe) nego udruga iz Registra udruga (ili vjerničko
+ * društvo iz crkvene evidencije). Izvor: ../../udruge.domovina.ai.
+ * Katoličnost je PROSUDBA tog projekta (`catholic_confidence`), ne polje registra.
+ */
+export interface UdrugaProperties {
+  id: number;
+  slug: string;
+  name: string;
+  display_name?: string;
+  short_name?: string;
+  /** registar-udruga | strane-udruge | evidencija-kc */
+  registry: string;
+  oib?: string;
+  /** AKTIVAN | BRISAN | PRESTANAK DJELOVANJA (strane: AKTIVNA) */
+  status?: string;
+  /** 1 = aktivna; 0 = ugašena (ostaje na karti, blijeda). */
+  active: 0 | 1;
+  /** molitvena | karitativna | bratovstina | glazba | pokret | … | ostalo */
+  category: string;
+  category_label?: string;
+  address?: string;
+  city?: string;
+  settlement?: string;
+  municipality?: string;
+  county?: string;
+  postal_code?: string;
+  /** dgu-adresa | dgu-ulica-fuzzy | naselje-teziste */
+  geo_source?: string;
+  diocese?: string;
+  diocese_source?: string;
+  email?: string;
+  website?: string;
+  phone_e164?: string;
+  president?: string;
+  president_role?: string;
+  founded_at?: string;
+  registered_at?: string;
+  /** visoka | srednja — niska nije u exportu. */
+  catholic_confidence: string;
+  catholic_score?: number;
+  source?: string[];
+}
+export type UdrugaCollection = GeoJSON.FeatureCollection<GeoJSON.Point, UdrugaProperties>;
+
+/**
  * Teritorij (nad)biskupije — jedini poligoni iz crkve.domovina.ai i jedini
  * DERIVIRANI sloj na karti: službene granice biskupija ne postoje kao javna
  * geometrija (OSM ih ima 3 od 15, Wikidata nijednu), pa su izračunate iz

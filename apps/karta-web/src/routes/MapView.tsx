@@ -29,6 +29,7 @@ import { useStadiumsLayer } from "@/hooks/useStadiumsLayer";
 import { useAirportsLayer } from "@/hooks/useAirportsLayer";
 import { useUrlSync } from "@/hooks/useUrlSync";
 import { useZupeLayer } from "@/hooks/useZupeLayer";
+import { useUdrugeLayer } from "@/hooks/useUdrugeLayer";
 import { useBiskupijeLayer } from "@/hooks/useBiskupijeLayer";
 import { useSkoleLayer, useUstanoveLayer, useVrticiLayer } from "@/hooks/useOouLayer";
 import { useMapState } from "@/lib/MapState";
@@ -105,6 +106,7 @@ export default function MapView() {
   useOrtofotoLayer({ map: mapRef.current, loaded, styleRev });
   useCrkveLayer({ map: mapRef.current, loaded, styleRev });
   useZupeLayer({ map: mapRef.current, loaded, styleRev });
+  useUdrugeLayer({ map: mapRef.current, loaded, styleRev });
   useBiskupijeLayer({ map: mapRef.current, loaded, styleRev });
   useSkoleLayer({ map: mapRef.current, loaded, styleRev });
   useVrticiLayer({ map: mapRef.current, loaded, styleRev });

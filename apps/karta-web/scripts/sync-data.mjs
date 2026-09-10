@@ -75,6 +75,7 @@ const SIBLING_LAYERS = [
     "../../../crkve.domovina.ai/data/exports",
     ["crkve.geojson", "zupe.geojson", "biskupije.geojson"],
   ],
+  ["../../../udruge.domovina.ai/data/exports", ["udruge.geojson"]],
   [
     "../../../oou.domovina.ai/data/exports",
     ["skole.geojson", "vrtici.geojson", "ustanove.geojson"],

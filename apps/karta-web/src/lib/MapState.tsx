@@ -32,6 +32,8 @@ interface MapState {
   showCrkve: boolean;
   /** Župe (vjerske pravne osobe) — NE županije, to je showZupBorders. */
   showZupe: boolean;
+  /** Katoličke udruge (udruge.domovina.ai) — treći sloj grupe „vjera". */
+  showUdruge: boolean;
   showBiskupije: boolean;
   /** Škole — osnovne, srednje, glazbene, posebne ustanove, učenički domovi. */
   showSkole: boolean;
@@ -78,6 +80,7 @@ interface MapStateActions {
   setShowPitches: (on: boolean) => void;
   setShowCrkve: (on: boolean) => void;
   setShowZupe: (on: boolean) => void;
+  setShowUdruge: (on: boolean) => void;
   setShowBiskupije: (on: boolean) => void;
   setShowSkole: (on: boolean) => void;
   setShowVrtici: (on: boolean) => void;
@@ -127,6 +130,7 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
   const [showPitches, setShowPitches] = useState(false);
   const [showCrkve, setShowCrkve] = useState(false);
   const [showZupe, setShowZupe] = useState(false);
+  const [showUdruge, setShowUdruge] = useState(false);
   const [showBiskupije, setShowBiskupije] = useState(false);
   const [showSkole, setShowSkole] = useState(false);
   const [showVrtici, setShowVrtici] = useState(false);
@@ -192,6 +196,7 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
       showPitches,
       showCrkve,
       showZupe,
+      showUdruge,
       showBiskupije,
       showSkole,
       showVrtici,
@@ -224,6 +229,7 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
       setShowPitches,
       setShowCrkve,
       setShowZupe,
+      setShowUdruge,
       setShowBiskupije,
       setShowSkole,
       setShowVrtici,
@@ -260,6 +266,7 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
       showPitches,
       showCrkve,
       showZupe,
+      showUdruge,
       showBiskupije,
       showSkole,
       showVrtici,

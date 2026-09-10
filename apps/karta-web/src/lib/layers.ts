@@ -81,6 +81,7 @@ export type LayerStateKey =
   | "showEkosustav"
   | "showCrkve"
   | "showZupe"
+  | "showUdruge"
   | "showBiskupije"
   | "showSkole"
   | "showVrtici"
@@ -109,6 +110,7 @@ export type LayerId =
   | "ekosustav"
   | "crkve"
   | "zupe"
+  | "udruge"
   | "biskupije"
   | "skole"
   | "vrtici"
@@ -300,6 +302,27 @@ export const CONTROLS: Control[] = [
     source: { label: "data.gov.hr", href: "https://data.gov.hr" },
     legend: [
       { color: "#ef4444", label: "župna crkva nije spojena" },
+    ],
+  },
+  {
+    kind: "toggle",
+    id: "udruge",
+    group: "vjera",
+    label: "Katoličke udruge",
+    icon: HeartHandshake,
+    stateKey: "showUdruge",
+    count: 861,
+    lazy: true,
+    blurb:
+      "Katoličke udruge, bratovštine, molitvene zajednice, zborovi i pokreti — iz Registra udruga, Registra stranih udruga i crkvene evidencije. Nijedan registar nema polje „vjera”: katoličnost je bodovana prosudba, i sloj crta samo visoku i srednju pouzdanost. Prsten = srednja pouzdanost; blijeda točka = ugašena udruga.",
+    source: { label: "katalog udruge.domovina.ai", href: "https://udruge.domovina.ai" },
+    legend: [
+      { color: "#4a5da8", label: "molitvena zajednica" },
+      { color: "#b4442a", label: "karitativna" },
+      { color: "#8a5a1f", label: "bratovština" },
+      { color: "#5c6bb5", label: "zbor" },
+      { color: "#7c3aed", label: "pokret" },
+      { color: "#ef4444", label: "prsten: srednja pouzdanost" },
     ],
   },
   {
