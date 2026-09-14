@@ -196,6 +196,63 @@ function buildPosterSvg(o: BuildOpts): string {
       `<path data-unit="${i}" d="${k.d}" fill="${fill}" stroke="${palette.stroke}" stroke-width="1.2" stroke-linejoin="round"/>`,
     );
   });
+  // Obrisi: tanje granice JLS-ova od kojih je regija složena, pa deblji
+  // vanjski obuhvat cijele regije. Idu ISPOD imena — dok su išli preko njih,
+  // granica je gutala natpise malih jedinica koje leže na samoj među
+  // (Zablatje Posavsko na međi Orle/Velika Gorica, Čakanec na međi
+  // Kravarsko/Pokupsko). Obuhvat i dalje ide nakon granica, da ga one ne
+  // presijecaju na rubu.
+  //
+  // SVG ne zna poravnanje poteza — uvijek crta sredinom po liniji. Vanjski
+  // obuhvat je zato pola svoje debljine padao U kartu i prekrivao imena
+  // rubnih jedinica (Mičevec, Trnje, Zadvorsko...), to gore što su i obuhvat
+  // i slova u palette.text. Rješenje: potez dvostruke debljine + maska koja
+  // skriva unutrašnjost, pa ostane samo vanjska polovica — pravi outline,
+  // ništa ne ulazi u kartu.
+  const regijaD = projected.outlines
+    .filter((x) => x.razina === "regija")
+    .map((x) => x.d)
+    .join(" ");
+  const jlsOutlines = projected.outlines.filter((x) => x.razina === "jls");
+  const swJls = W * 0.0035;
+  const swReg = W * 0.008;
+  if (regijaD) {
+    const pad = W * 0.1;
+    parts.push(
+      `<defs>` +
+        // Vani se vidi, unutra ne. Uz samu granicu se vraća tanka vrpca: bez
+        // nje kroz spoj procuri pozadina, jer jedinice imaju svijetli casing,
+        // a obuhvat (dissolve) nije na tisućinku isti kao njihovi rubovi.
+        `<mask id="poster-izvan-regije" maskUnits="userSpaceOnUse" x="${-pad}" y="${-pad}" ` +
+        `width="${mapW + 2 * pad}" height="${mapH + 2 * pad}">` +
+        `<rect x="${-pad}" y="${-pad}" width="${mapW + 2 * pad}" height="${mapH + 2 * pad}" fill="#fff"/>` +
+        `<path d="${regijaD}" fill="#000"/>` +
+        `<path d="${regijaD}" fill="none" stroke="#fff" stroke-width="${(W * 0.0017).toFixed(2)}"/>` +
+        `</mask>` +
+        // Granice JLS-a samo unutar regije, i bez pojasa uz sam vanjski rub:
+        // ondje se granica JLS-a poklapa s obuhvatom, pa bi se odmah do njega
+        // crtala još jedna, tanja crta i rub bi izgledao dvostruk.
+        `<mask id="poster-unutar-regije" maskUnits="userSpaceOnUse" x="${-pad}" y="${-pad}" ` +
+        `width="${mapW + 2 * pad}" height="${mapH + 2 * pad}">` +
+        `<path d="${regijaD}" fill="#fff"/>` +
+        `<path d="${regijaD}" fill="none" stroke="#000" stroke-width="${(swJls * 2).toFixed(2)}"/>` +
+        `</mask>` +
+        `</defs>`,
+    );
+  }
+  if (jlsOutlines.length) {
+    const mask = regijaD ? ` mask="url(#poster-unutar-regije)"` : "";
+    parts.push(`<g${mask} fill="none" stroke="${palette.text}" stroke-width="${swJls.toFixed(1)}" stroke-linejoin="round" opacity="0.55">`);
+    for (const o2 of jlsOutlines) parts.push(`<path d="${o2.d}"/>`);
+    parts.push(`</g>`);
+  }
+  if (regijaD) {
+    parts.push(
+      `<path d="${regijaD}" mask="url(#poster-izvan-regije)" fill="none" stroke="${palette.text}" ` +
+        `stroke-width="${(swReg * 2).toFixed(1)}" stroke-linejoin="round" opacity="0.9"/>`,
+    );
+  }
+
   if (o.showLabels) {
     for (let i = 0; i < projected.units.length; i++) {
       const k = projected.units[i];
@@ -221,24 +278,17 @@ function buildPosterSvg(o: BuildOpts): string {
       const rot = fit.angle
         ? ` transform="rotate(${fit.angle} ${fit.x.toFixed(1)} ${fit.y.toFixed(1)})"`
         : "";
+      // Unutarnja granica JLS-a se ne može izmaknuti — ona po definiciji leži
+      // između dvije jedinice, pa nema stranu na koju bi se maknula. Zato ime
+      // dobiva obrub u boji SVOJE jedinice: preko vlastite ispune je
+      // nevidljiv, a ondje gdje granica prolazi ispod slova odvaja ih od nje.
+      // paint-order stavlja obrub ispod slova pa im ne stanjuje oblik.
       parts.push(
         `<text data-unit="${i}"${rot} text-anchor="middle" font-family="${esc(
           font.family,
-        )}" font-weight="600" font-size="${size.toFixed(1)}" fill="${color}" opacity="0.95">${spans}</text>`,
-      );
-    }
-  }
-  // Obrisi preko naselja i imena — samo na objedinjenom plakatu (Turopolje):
-  // tanje granice JLS-ova od kojih je regija složena, pa deblji vanjski
-  // obuhvat cijele regije preko svega. Obuhvat ide zadnji da ga granice ne
-  // presijecaju na rubu.
-  for (const razina of ["jls", "regija"] as const) {
-    for (const o2 of projected.outlines.filter((x) => x.razina === razina)) {
-      const isRegion = razina === "regija";
-      parts.push(
-        `<path d="${o2.d}" fill="none" stroke="${palette.text}" stroke-width="${(
-          W * (isRegion ? 0.008 : 0.0035)
-        ).toFixed(1)}" stroke-linejoin="round" opacity="${isRegion ? 0.9 : 0.55}"/>`,
+        )}" font-weight="600" font-size="${size.toFixed(1)}" fill="${color}" stroke="${fill}" stroke-width="${(
+          size * 0.18
+        ).toFixed(2)}" stroke-linejoin="round" paint-order="stroke" opacity="0.95">${spans}</text>`,
       );
     }
   }
