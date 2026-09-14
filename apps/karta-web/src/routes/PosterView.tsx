@@ -29,6 +29,7 @@ import {
 } from "@/lib/poster-geom";
 import type { PosterCollection } from "@/lib/types";
 import { ArrowLeft, Crosshair, Download, Minus, Plus } from "lucide-react";
+import { SubjectPicker } from "@/components/SubjectPicker";
 
 
 
@@ -123,6 +124,53 @@ interface BuildOpts {
   fontMeasured: boolean;
   /** Embedani @font-face CSS (samo za export; preview koristi web fontove). */
   embeddedCss?: string;
+}
+
+/**
+ * Segmentirana kontrola — za skupove s malo fiksnih opcija (tipografija,
+ * format). Bolja od <select> jer se sve opcije vide odjednom i biraju jednim
+ * klikom; za područje to ne bi radilo, ondje ide SubjectPicker s pretragom.
+ */
+function Segmented<T extends { key: string; label: string }>({
+  name,
+  options,
+  value,
+  onChange,
+}: {
+  /** data-control hook — e2e bira kontrolu po imenu, ne po rednom broju. */
+  name: string;
+  options: readonly T[];
+  value: string;
+  onChange: (key: string) => void;
+}) {
+  return (
+    <div
+      className="flex gap-0.5 rounded-md border p-0.5"
+      style={{ background: "var(--overlay-strong)", borderColor: "var(--line)" }}
+      role="group"
+      data-control={name}
+    >
+      {options.map((o) => {
+        const on = o.key === value;
+        return (
+          <button
+            key={o.key}
+            type="button"
+            onClick={() => onChange(o.key)}
+            aria-pressed={on}
+            data-key={o.key}
+            className="flex-1 truncate rounded px-1.5 py-1 font-mono text-[11px]"
+            style={{
+              background: on ? "var(--ui-active)" : "transparent",
+              color: on ? "#fff" : "var(--text)",
+            }}
+          >
+            {o.label}
+          </button>
+        );
+      })}
+    </div>
+  );
 }
 
 function esc(s: string): string {
@@ -508,6 +556,14 @@ export default function PosterView() {
     color: "var(--text)",
   } as const;
   const label = "mb-1 mt-3 block font-mono text-[10px] uppercase tracking-wider text-muted";
+  const Section = ({ children }: { children: string }) => (
+    <div
+      className="mt-6 mb-1 border-t pt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted"
+      style={{ borderColor: "var(--line)" }}
+    >
+      {children}
+    </div>
+  );
 
   return (
     <main className="grid flex-1 overflow-hidden md:grid-cols-[320px_1fr]">
@@ -529,16 +585,11 @@ export default function PosterView() {
         </p>
 
         <label className={label}>Područje</label>
-        <select
-          className={field}
-          style={fieldStyle}
-          value={subject.slug}
-          onChange={(e) => navigate(`/poster/${e.target.value}`)}
-        >
-          {POSTER_SUBJECTS.map((c) => (
-            <option key={c.slug} value={c.slug}>{c.menuLabel}</option>
-          ))}
-        </select>
+        <SubjectPicker
+          subjects={POSTER_SUBJECTS}
+          value={subject}
+          onPick={(slug) => navigate(`/poster/${slug}`)}
+        />
         <p className="mt-1 font-mono text-[10px] text-muted">
           {stats
             ? `${stats.n} ${pluralUnit(stats.n, subject.unit)} · ${stats.km2.toFixed(0)} km²` +
@@ -546,6 +597,7 @@ export default function PosterView() {
             : "učitavam…"}
         </p>
 
+        <Section>Izgled</Section>
         <label className={label}>Paleta</label>
         <div className="flex flex-col gap-1">
           {POSTER_PALETTES.map((p) => (
@@ -556,8 +608,8 @@ export default function PosterView() {
               className="flex items-center gap-2 rounded-md border px-2.5 py-1.5 text-left font-mono text-[11px]"
               style={{
                 background: "var(--overlay-strong)",
-                borderColor: paletteKey === p.key ? "var(--ui-accent)" : "var(--line)",
-                color: paletteKey === p.key ? "var(--ui-accent)" : "var(--text)",
+                borderColor: paletteKey === p.key ? "var(--ui-active)" : "var(--line)",
+                color: paletteKey === p.key ? "var(--ui-active)" : "var(--text)",
               }}
             >
               <span className="flex gap-0.5">
@@ -571,19 +623,17 @@ export default function PosterView() {
         </div>
 
         <label className={label}>Tipografija</label>
-        <select className={field} style={fieldStyle} value={fontKey} onChange={(e) => setFontKey(e.target.value)}>
-          {POSTER_FONTS.map((f) => (
-            <option key={f.key} value={f.key}>{f.label}</option>
-          ))}
-        </select>
+        <Segmented
+          name="font"
+          options={POSTER_FONTS.map((f) => ({ key: f.key, label: f.label.split(" ")[0] }))}
+          value={fontKey}
+          onChange={setFontKey}
+        />
 
         <label className={label}>Format</label>
-        <select className={field} style={fieldStyle} value={formatKey} onChange={(e) => setFormatKey(e.target.value)}>
-          {POSTER_FORMATS.map((f) => (
-            <option key={f.key} value={f.key}>{f.label}</option>
-          ))}
-        </select>
+        <Segmented name="format" options={POSTER_FORMATS} value={formatKey} onChange={setFormatKey} />
 
+        <Section>Tekst</Section>
         <label className={label}>Naslov</label>
         <input
           className={field}
@@ -605,8 +655,8 @@ export default function PosterView() {
             className="rounded-md border px-2.5 py-1.5 font-mono text-[11px]"
             style={{
               background: "var(--overlay-strong)",
-              borderColor: showLabels ? "var(--ui-accent)" : "var(--line)",
-              color: showLabels ? "var(--ui-accent)" : "var(--text)",
+              borderColor: showLabels ? "var(--ui-active)" : "var(--line)",
+              color: showLabels ? "var(--ui-active)" : "var(--text)",
             }}
           >
             {showLabels ? "uključena" : "isključena"}
@@ -621,9 +671,13 @@ export default function PosterView() {
             className="flex-1"
             title="Veličina imena"
           />
+          <span className="w-8 shrink-0 text-right font-mono text-[10px] text-muted">
+            {labelScale.toFixed(1)}×
+          </span>
         </div>
 
-        <label className={label}>Tvoje točke (lat, lng, naziv — po retku)</label>
+        <Section>Tvoje točke</Section>
+        <label className={label}>lat, lng, naziv — po retku</label>
         <textarea
           className={field}
           style={{ ...fieldStyle, minHeight: 84 }}
@@ -636,13 +690,14 @@ export default function PosterView() {
           <input type="color" value={pointColor} onChange={(e) => setPointColor(e.target.value)} />
         </div>
 
-        <div className="mt-5 flex gap-2">
+        <Section>Izvoz</Section>
+        <div className="mt-2 flex gap-2">
           <button
             type="button"
             disabled={!svg || exporting !== null}
             onClick={() => doExport("svg")}
             className="flex flex-1 items-center justify-center gap-1.5 rounded-md border px-3 py-2.5 font-mono text-[12px] font-semibold disabled:opacity-50"
-            style={{ background: "var(--ui-accent)", borderColor: "var(--ui-accent)", color: "#fff" }}
+            style={{ background: "var(--ui-active)", borderColor: "var(--ui-active)", color: "#fff" }}
           >
             {exporting === "svg" ? "…" : <><Download size={14} /> SVG</>}
           </button>

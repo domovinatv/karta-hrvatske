@@ -165,3 +165,19 @@ for (const c of posterSubjects) {
 }
 writeFileSync(join(PUBLIC_DATA, "lookup-poster.json"), JSON.stringify(posterLookup));
 console.log(`  lookup-poster.json (${Object.keys(posterLookup).length} entries)`);
+
+// ── JLS meta za poster picker ──────────────────────────────────────────────
+// Grupiranje i pretraga u dropdownu trebaju županiju i tip (Grad/Općina) za
+// svaki subjekt. Izvor je jls.geojson, ali on je 6.9 MB i gitignoran, pa se
+// ovdje cijedi u kompaktnu tablicu koja ide U BUNDLE (src/lib/), ne u
+// public/. Ključ je matični broj, isti onaj u subject.jlsMb — pa kad se doda
+// svih 556 JLS-ova, grupa im dolazi sama, bez ručnog upisivanja.
+const jlsMeta = {};
+for (const f of jls.features) {
+  const p = f.properties;
+  if (!p.maticni_broj) continue;
+  jlsMeta[p.maticni_broj] = [p.name, p.type, p.zupanija];
+}
+const metaPath = resolve(__dirname, "../src/lib/jls-meta.json");
+writeFileSync(metaPath, JSON.stringify(jlsMeta, null, 0) + "\n");
+console.log(`  src/lib/jls-meta.json (${Object.keys(jlsMeta).length} JLS)`);

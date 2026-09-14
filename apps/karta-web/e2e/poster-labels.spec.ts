@@ -99,7 +99,7 @@ for (const slug of ["kravarsko", "velika-gorica", "turopolje", "sisak-okolica",
   test(`plakat ${slug}: nijedan natpis ne izlazi iz poligona`, async ({ page }) => {
     await openPoster(page, slug);
     for (const format of ["kvadrat", "portret", "pejzaz"]) {
-      await page.selectOption("select >> nth=2", format);
+      await page.click(`[data-control="format"] [data-key="${format}"]`);
       await waitForPoster(page);
       const r = await checkLabels(page);
       expect(r.total, `${slug}/${format}: nema natpisa`).toBeGreaterThan(0);
@@ -111,7 +111,7 @@ for (const slug of ["kravarsko", "velika-gorica", "turopolje", "sisak-okolica",
 test("svako naselje dobije ime na svim fontovima i veličinama", async ({ page }) => {
   await openPoster(page, "velika-gorica");
   for (const font of ["fraunces", "mono", "sans"]) {
-    await page.selectOption("select >> nth=1", font);
+    await page.click(`[data-control="font"] [data-key="${font}"]`);
     await waitForPoster(page);
     for (const scale of ["0.5", "1", "1.8"]) {
       await page.locator('input[type="range"]').fill(scale);
