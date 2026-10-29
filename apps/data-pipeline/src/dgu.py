@@ -137,6 +137,12 @@ def _fetch(cql: str, count: int = 200) -> list[dict[str, Any]]:
             logger.warning("DGU %d, retry %d", r.status_code, attempt + 1)
             time.sleep(2 * (attempt + 1))
             continue
+        # Ispad servisa također stiže kao XML s 200 („Service WFS is disabled",
+        # izmjereno 2026-10-29). To NIJE prazan rezultat i ne smije u keš —
+        # inače svaka adresa iz tog ispada zauvijek ostane bez točke.
+        if "ServiceUnavailable" in r.text[:600]:
+            logger.warning("DGU WFS nedostupan (ServiceUnavailable), ne keširam")
+            return []
         try:
             feats = r.json().get("features", [])
         except json.JSONDecodeError:

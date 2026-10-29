@@ -15,6 +15,7 @@ import {
   MapPinHouse,
   Maximize,
   Network,
+  BrainCircuit,
   Palette,
   Plane,
   Recycle,
@@ -79,6 +80,7 @@ export type LayerStateKey =
   | "showZgOtpad"
   | "showZgSigurnost"
   | "showEkosustav"
+  | "showCroai"
   | "showCrkve"
   | "showZupe"
   | "showUdruge"
@@ -108,6 +110,7 @@ export type LayerId =
   | "zg-otpad"
   | "zg-sigurnost"
   | "ekosustav"
+  | "croai"
   | "crkve"
   | "zupe"
   | "udruge"
@@ -476,6 +479,25 @@ export const CONTROLS: Control[] = [
       { color: "#14b8a6", label: "tehnološka zajednica" },
       { color: "#8b5cf6", label: "coworking / hub" },
       { color: "#64748b", label: "korporativni program" },
+    ],
+  },
+  {
+    kind: "toggle",
+    id: "croai",
+    group: "gospodarstvo",
+    label: "AI ekosustav (CroAI)",
+    icon: BrainCircuit,
+    stateKey: "showCroai",
+    count: 301,
+    lazy: true,
+    blurb:
+      "Croatian AI Landscape — imenik hrvatskih AI tvrtki, startupa, investitora, istraživača, konferencija i ranih korisnika koji vodi udruga CroAI na map.croai.org. Imenik NIJE popis članova udruge, i nema adresa: točka postoji samo za subjekt čiji je OIB nađen u impresumu njegova weba ili jednoznačno po imenu u info.BIZ-u, pa sloj prikazuje 301 od 565 upisa. Adresa i status dolaze iz FINA-e.",
+    source: { label: "map.croai.org + FINA info.BIZ", href: "https://map.croai.org" },
+    legend: [
+      { color: "#2563eb", label: "AI tvrtke i startupi" },
+      { color: "#dc2626", label: "ekosustav (fondovi, istraživanje, mediji, događaji)" },
+      { color: "#525252", label: "rani korisnici AI-ja" },
+      { color: "#ef4444", label: "prsten: ne posluje (FINA)" },
     ],
   },
 

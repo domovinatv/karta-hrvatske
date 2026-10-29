@@ -55,6 +55,8 @@ interface MapState {
   showZgSigurnost: boolean;
   /** Privatni ekosustav — kurirano, nije registar. */
   showEkosustav: boolean;
+  /** Croatian AI Landscape (map.croai.org) — imenik, ne članstvo. */
+  showCroai: boolean;
   showAirports: boolean;
   showPinka: boolean;
   showZupBorders: boolean;
@@ -94,6 +96,7 @@ interface MapStateActions {
   setShowZgOtpad: (on: boolean) => void;
   setShowZgSigurnost: (on: boolean) => void;
   setShowEkosustav: (on: boolean) => void;
+  setShowCroai: (on: boolean) => void;
   setShowAirports: (on: boolean) => void;
   setShowPinka: (on: boolean) => void;
   toggleZupBorders: () => void;
@@ -144,6 +147,7 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
   const [showZgOtpad, setShowZgOtpad] = useState(false);
   const [showZgSigurnost, setShowZgSigurnost] = useState(false);
   const [showEkosustav, setShowEkosustav] = useState(false);
+  const [showCroai, setShowCroai] = useState(false);
   const [showAirports, setShowAirports] = useState(false);
   const [showPinka, setShowPinka] = useState(false);
   const [showZupBorders, setShowZupBorders] = useState(true);
@@ -210,6 +214,7 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
       showZgOtpad,
       showZgSigurnost,
       showEkosustav,
+      showCroai,
       showAirports,
       showPinka,
       showZupBorders,
@@ -243,6 +248,7 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
       setShowZgOtpad,
       setShowZgSigurnost,
       setShowEkosustav,
+      setShowCroai,
       setShowAirports,
       setShowPinka,
       toggleZupBorders,
@@ -280,6 +286,7 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
       showZgOtpad,
       showZgSigurnost,
       showEkosustav,
+      showCroai,
       showAirports,
       showPinka,
       showZupBorders,

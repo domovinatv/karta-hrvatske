@@ -452,6 +452,35 @@ export type EkosustavCollection = GeoJSON.FeatureCollection<
   EkosustavProperties
 >;
 
+/**
+ * Subjekt Croatian AI Landscapea (map.croai.org) — imenik, NE članstvo CroAI-ja.
+ * Ime, kategorije, opis i web su CroAI-jevi; OIB je našla skripta 34 (impresum
+ * weba ili slug u info.BIZ-u), a adresa i status dolaze iz FINA-e po njemu.
+ */
+export interface CroaiProperties {
+  id: number;
+  name: string;
+  grupa: "tvrtke" | "ekosustav" | "korisnici";
+  grupa_naziv: string;
+  /** Potkategorije iz imenika, spojene zarezom. */
+  kategorije?: string;
+  about?: string;
+  website?: string;
+  year?: number;
+  oib?: string;
+  /** Kako je OIB nađen: web, web+ime, ime u info.BIZ-u, ručno. */
+  oib_izvor?: string;
+  naziv?: string;
+  adresa?: string;
+  mjesto?: string;
+  fina_status?: string;
+  fina_aktivan?: boolean | null;
+  fina_velicina?: string;
+  fina_zaposleni?: number;
+  fina_url?: string;
+  geo_source?: string;
+}
+
 export interface AirportProperties {
   id: string;
   osm_type: string;

@@ -40,6 +40,7 @@ export function useLayerControls() {
       showZgOtpad: { value: s.showZgOtpad, set: s.setShowZgOtpad },
       showZgSigurnost: { value: s.showZgSigurnost, set: s.setShowZgSigurnost },
       showEkosustav: { value: s.showEkosustav, set: s.setShowEkosustav },
+      showCroai: { value: s.showCroai, set: s.setShowCroai },
       showCrkve: { value: s.showCrkve, set: s.setShowCrkve },
       showZupe: { value: s.showZupe, set: s.setShowZupe },
       showUdruge: { value: s.showUdruge, set: s.setShowUdruge },

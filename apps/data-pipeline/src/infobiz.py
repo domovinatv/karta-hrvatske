@@ -26,6 +26,7 @@ Izmjereno 2026-09-06 na stvarnim profilima: „Aktivan", „Likvidacija",
 from __future__ import annotations
 
 import html
+import os
 import re
 import time
 from pathlib import Path
@@ -34,7 +35,16 @@ import httpx
 
 ROOT = Path(__file__).resolve().parent.parent
 CACHE = ROOT / "data" / "raw" / "fina"
-INDEX = ROOT / "../../../company-details-api/data/cache/infobiz/oib-index.tsv"
+# Sestrinski repo nije uvijek pokraj ovog: karta-hrvatske živi i na vanjskom
+# disku, a company-details-api samo u ~/git. Prvi postojeći pobjeđuje;
+# INFOBIZ_INDEX ima prednost pred oba.
+_INDEX_CANDIDATES = [
+    Path(p) for p in (os.environ.get("INFOBIZ_INDEX"),) if p
+] + [
+    ROOT / "../../../company-details-api/data/cache/infobiz/oib-index.tsv",
+    Path.home() / "git/domovinatv/company-details-api/data/cache/infobiz/oib-index.tsv",
+]
+INDEX = next((p for p in _INDEX_CANDIDATES if p.exists()), _INDEX_CANDIDATES[0])
 
 UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/124 Safari/537.36")

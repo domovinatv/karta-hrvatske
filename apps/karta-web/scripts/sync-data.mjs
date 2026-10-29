@@ -41,6 +41,7 @@ const fileMap = [
   ["hr_ppi_inkubatori.geojson", "inkubatori.geojson"],
   ["zg_gradski_sadrzaji.geojson", "zagreb-sadrzaji.geojson"],
   ["hr_ppi_privatni.geojson", "ekosustav.geojson"],
+  ["hr_croai.geojson", "croai.geojson"],
 ];
 
 // hr_canonical.geojson lives in apps/data-pipeline/data/, not outputs/. Look in both.
