@@ -479,6 +479,9 @@ export interface CroaiProperties {
   fina_zaposleni?: number;
   fina_url?: string;
   geo_source?: string;
+  /** Google po imenu + isti web: potvrda / sukob s FINA sjedištem / jedini izvor. */
+  provjera?: "google-potvrda" | "google-sukob" | "google-web" | null;
+  google_maps?: string;
 }
 
 export interface AirportProperties {

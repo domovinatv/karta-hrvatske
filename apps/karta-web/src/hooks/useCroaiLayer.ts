@@ -38,6 +38,14 @@ const RADIUS_EXPR = [
   15, 12,
 ];
 
+// Što kaže neovisna provjera preko Google Placesa (pogodak po imenu vrijedi
+// samo ako Google vodi isti web kao CroAI imenik).
+const PROVJERA: Record<string, string> = {
+  "google-potvrda": "Google potvrđuje sjedište",
+  "google-sukob": "Google: ured je drugdje",
+  "google-web": "samo Google (nema OIB-a)",
+};
+
 // Prsten samo kad FINA kaže da subjekt ne posluje; null = ne zna se.
 const MRTAV_FILTER = ["==", ["get", "fina_aktivan"], false];
 
@@ -79,6 +87,7 @@ function popupHtml(p: CroaiProperties): string {
     row("Adresa", p.adresa),
     // DGU/Nominatim nisu našli kuću — točka je središte mjesta, ne sjedište.
     p.geo_source === "naselje" ? row("Točnost", "središte mjesta") : "",
+    p.provjera ? row("Provjera", PROVJERA[p.provjera]) : "",
     row("Osnovano", p.year),
     row("OIB", p.oib),
     row("Veličina", p.fina_velicina),
@@ -96,6 +105,7 @@ function popupHtml(p: CroaiProperties): string {
   const links = [
     p.website ? link(p.website, "Web") : "",
     p.fina_url ? link(p.fina_url, "FINA") : "",
+    p.google_maps ? link(p.google_maps, "Google Maps") : "",
     link("https://map.croai.org", "CroAI mapa"),
   ]
     .filter(Boolean)

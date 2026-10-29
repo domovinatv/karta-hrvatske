@@ -17,3 +17,6 @@ outputs/hrvatska_naselja.geojson
 # Keširani sirovi odgovori (regenerabilno: scripts/29_fetch_ppi.py,
 # scripts/30_enrich_ppi_fina.py). DGU adresni upiti, JRPI JSON, FINA profili.
 data/raw/
+
+# Tajne (GOOGLE_MAPS_API_KEY za src/places.py)
+.env

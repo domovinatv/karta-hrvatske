@@ -33,8 +33,20 @@ Zamka kod (2): podnožje često nosi OIB agencije koja je radila web
 čiji info.BIZ slug liči na ime ili domenu subjekta, pa tek onda onaj uz
 oznaku „OIB".
 
-Adresa, naziv i status dolaze iz info.BIZ-a, geokodiranje je isto kao u
-koraku 33 (DGU adresa → težište naselja).
+Adresa, naziv i status dolaze iz info.BIZ-a. Točka: Google Places po FINA
+adresi → DGU → težište naselja (Nominatim je izbačen, griješio je).
+
+## Dvostruka provjera preko Googlea
+
+Uz adresu se Places pita i po IMENU subjekta, a pogodak vrijedi samo ako
+Google za njega vodi isti web kao CroAI. Ta točka dolazi iz izvora koji nije
+sudjelovao u pronalasku OIB-a, pa je neovisna provjera:
+
+  * ≤ 1 km od FINA sjedišta → `provjera: google-potvrda`;
+  * dalje → `google-sukob`, točka ostaje FINA sjedište, par ide u
+    `geo_conflicts` izvještaja (sjedište kod knjigovođe, ili krivi OIB);
+  * subjekt BEZ OIB-a dobije Googleovu točku samo uz istu potvrdu weba
+    (`provjera: google-web`).
 
 Output: `data/hr_croai.geojson` + `data/croai_report.json` (što nije
 razriješeno i zašto — ulaz za ručne overridee).
@@ -55,7 +67,7 @@ import httpx
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from src import infobiz
+from src import infobiz, places
 from src.normalize import strip_diacritics
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -256,42 +268,48 @@ def name_index(path: Path) -> dict[str, list[tuple[str, str]]]:
     return out
 
 
-# ---------------------------------------------------------------- Nominatim
+# ---------------------------------------------------------------- Google Places
 
 
-_last_nominatim = [0.0]
+def same_site(a: str | None, b: str | None) -> bool:
+    """Isti web? Uspoređuje host bez www i bez puta — „corporate.sofascore.com"
+    i „sofascore.com" su isti subjekt, „q.agency" i „agency.hr" nisu."""
+    ha, hb = host_of(a or ""), host_of(b or "")
+    if not ha or not hb:
+        return False
+    return ha == hb or ha.endswith("." + hb) or hb.endswith("." + ha)
 
 
-def nominatim(adr: dict) -> tuple[float, float] | None:
-    """Rezerva kad DGU ne nađe adresu (ili je WFS u ispadu) — inače sve što
-    padne na težište naselja leži u jednoj točki usred Zagreba. Strukturirani
-    upit, samo HR, 1 req/s po pravilima OSMF-a, keš po adresi."""
-    key = f"{adr['ulica']} {adr['broj']}, {adr['pbr']} {adr['mjesto']}"
-    cache = RAW / "nominatim" / (re.sub(r"[^\w]+", "_", strip_diacritics(key)).strip("_")[:120] + ".json")
-    if cache.exists():
-        res = json.loads(cache.read_text())
-    else:
-        wait = 1.1 - (time.time() - _last_nominatim[0])
-        if wait > 0:
-            time.sleep(wait)
-        _last_nominatim[0] = time.time()
-        try:
-            r = httpx.get("https://nominatim.openstreetmap.org/search", params={
-                "street": f"{adr['broj']} {adr['ulica']}", "city": adr["mjesto"],
-                "postalcode": adr["pbr"], "countrycodes": "hr", "format": "jsonv2", "limit": 1,
-            }, headers={"User-Agent": "domovina-ai-gis/0.1 (stepanic.matija@gmail.com)"}, timeout=30)
-            r.raise_for_status()
-            res = r.json()
-        except (httpx.HTTPError, ValueError):
-            return None
-        cache.parent.mkdir(parents=True, exist_ok=True)
-        cache.write_text(json.dumps(res, ensure_ascii=False))
-    # Samo pogodak na razini kuće/zgrade; ulica ili mjesto nisu bolji od
-    # težišta naselja koje već imamo.
-    if res and res[0].get("addresstype") in {"building", "house", "place", "amenity", "office"} \
-            or res and res[0].get("category") in {"building", "office", "amenity"}:
-        return float(res[0]["lat"]), float(res[0]["lon"])
+def places_by_name(pl: places.Places, e: dict, naziv: str | None) -> dict | None:
+    """Places pogodak za subjekt, ali SAMO ako Google za njega vodi isti web
+    kao CroAI imenik. To je neovisna potvrda identiteta: Text Search uvijek
+    nešto vrati, a ime „Orka" ili „Spona" samo po sebi ne znači ništa."""
+    queries = [e["name"]]
+    if naziv and core(naziv) != core(e["name"]):
+        queries.append(naziv.split(" d.o.o")[0].split(" društvo")[0])
+    for q in queries:
+        for r in pl.search(q):
+            if same_site(r["website"], e["website"]):
+                return r
     return None
+
+
+def places_by_address(pl: places.Places, adr: dict) -> dict | None:
+    """FINA adresa → točka. Prihvaća se samo rezultat s istim poštanskim
+    brojem, inače Text Search za nepoznatu ulicu vrati središte grada."""
+    if not adr["ulica"] or not adr["pbr"]:
+        return None
+    q = f"{adr['ulica']} {adr['broj']}, {adr['pbr']} {adr['mjesto']}, Hrvatska"
+    for r in pl.search(q, max_results=1):
+        if adr["pbr"] in (r["address"] or "") and "route" not in r["types"] and "locality" not in r["types"]:
+            return r
+    return None
+
+
+# Iznad ovoga FINA sjedište i Googleova točka po imenu nisu ista lokacija.
+# Česti legitimni razlog: sjedište kod knjigovođe ili u stanu osnivača, ured
+# drugdje. Zato se ne odbacuje nego bilježi u `geo_conflicts`.
+CONFLICT_M = 1000.0
 
 
 # ---------------------------------------------------------------- main
@@ -320,7 +338,7 @@ def main() -> int:
     by_name = name_index(infobiz.INDEX.resolve())
 
     resolved: dict[str, tuple[str, str]] = {}
-    report, stats = [], Counter()
+    report, stats, bez_oib, conflicts = [], Counter(), [], []
     for e in entities:
         cid = e["croai_id"]
         ov = overrides.get(cid, {})
@@ -347,16 +365,35 @@ def main() -> int:
         if oib:
             resolved[cid] = (oib, why)
         else:
-            stats["bez OIB-a"] += 1
-            report.append({"croai_id": cid, "name": e["name"], "website": e["website"],
-                           "grupa": e["grupa_src"], "kategorije": e["kategorije"], "razlog": why})
+            bez_oib.append((e, why))
 
     missing = {o for o, _ in resolved.values() if o and o not in urls}
     urls.update(infobiz.load_index(missing))
 
     idx = load_naselja_index()
+    pl = places.Places()
     features = []
     by_id = {e["croai_id"]: e for e in entities}
+
+    def feature(e, lat, lng, props):
+        key, label = GRUPE.get(e["grupa_src"], ("ostalo", e["grupa_src"] or "?"))
+        return {
+            "type": "Feature",
+            "id": int(e["croai_id"]),
+            "geometry": {"type": "Point", "coordinates": [round(lng, 6), round(lat, 6)]},
+            "properties": {
+                "id": int(e["croai_id"]),
+                "name": e["name"],
+                "grupa": key,
+                "grupa_naziv": label,
+                "kategorije": ", ".join(e["kategorije"]) or None,
+                "about": e["about"],
+                "website": e["website"],
+                "year": e["year"],
+                **props,
+            },
+        }
+
     for cid, (oib, oib_src) in resolved.items():
         e, ov = by_id[cid], overrides.get(cid, {})
         d = {"naziv": None, "adresa": None, "status": None, "aktivan": None,
@@ -367,51 +404,81 @@ def main() -> int:
                 d = infobiz.parse(page)
         adr = ov.get("adresa_override") or d["adresa"]
         parsed = infobiz.parse_adresa(adr)
-        lat, lng, geo_source = locate(idx, ov, parsed)
-        if geo_source == "naselje" and parsed["ulica"]:
-            hit = nominatim(parsed)
-            if hit:
-                lat, lng, geo_source = *hit, "nominatim"
+        # Redom: ručno → Google po FINA adresi → DGU → težište naselja.
+        g_adr = None if ov.get("lat") is not None else places_by_address(pl, parsed)
+        if g_adr:
+            lat, lng, geo_source = g_adr["lat"], g_adr["lng"], "google-adresa"
+        else:
+            lat, lng, geo_source = locate(idx, ov, parsed)
+        # Dvostruka provjera: Google po IMENU, potvrđen istim webom. Kad se
+        # slaže s adresom, OIB je potvrđen iz izvora koji nije sudjelovao u
+        # njegovom pronalasku. Kad se ne slaže, FINA sjedište ostaje točka, a
+        # razlika ide u izvještaj.
+        g_ime = places_by_name(pl, e, d["naziv"]) if e["website"] else None
+        provjera = None
+        if g_ime and lat is not None:
+            dist = places.haversine_m(lat, lng, g_ime["lat"], g_ime["lng"])
+            provjera = "google-potvrda" if dist <= CONFLICT_M else "google-sukob"
+            if dist > CONFLICT_M:
+                conflicts.append({"croai_id": cid, "name": e["name"], "oib": oib,
+                                  "naziv": d["naziv"], "fina_adresa": adr,
+                                  "google_adresa": g_ime["address"], "km": round(dist / 1000, 1)})
+            elif geo_source in ("naselje", None):
+                lat, lng, geo_source = g_ime["lat"], g_ime["lng"], "google-ime"
+        elif g_ime:
+            lat, lng, geo_source = g_ime["lat"], g_ime["lng"], "google-ime"
+        stats[f"provjera: {provjera or 'nema Google pogotka po imenu'}"] += 1
         if lat is None:
             stats["OIB bez lokacije"] += 1
             report.append({"croai_id": cid, "name": e["name"], "website": e["website"],
                            "oib": oib, "adresa": adr, "razlog": "nema geokoda"})
             continue
         stats[f"OIB: {oib_src}"] += 1
-        key, label = GRUPE.get(e["grupa_src"], ("ostalo", e["grupa_src"] or "?"))
-        features.append({
-            "type": "Feature",
-            "id": int(cid),
-            "geometry": {"type": "Point", "coordinates": [round(lng, 6), round(lat, 6)]},
-            "properties": {
-                "id": int(cid),
-                "name": e["name"],
-                "grupa": key,
-                "grupa_naziv": label,
-                "kategorije": ", ".join(e["kategorije"]) or None,
-                "about": e["about"],
-                "website": e["website"],
-                "year": e["year"],
-                "oib": oib,
-                "oib_izvor": oib_src,
-                "naziv": d["naziv"],
-                "adresa": adr,
-                "mjesto": parsed["mjesto"],
-                "fina_status": d["status"],
-                "fina_aktivan": d["aktivan"],
-                "fina_velicina": d["velicina"],
-                "fina_zaposleni": d["zaposleni"],
-                "fina_url": urls.get(oib) if oib else None,
-                "geo_source": geo_source,
-            },
-        })
+        features.append(feature(e, lat, lng, {
+            "oib": oib,
+            "oib_izvor": oib_src,
+            "naziv": d["naziv"],
+            "adresa": adr,
+            "mjesto": parsed["mjesto"],
+            "fina_status": d["status"],
+            "fina_aktivan": d["aktivan"],
+            "fina_velicina": d["velicina"],
+            "fina_zaposleni": d["zaposleni"],
+            "fina_url": urls.get(oib) if oib else None,
+            "geo_source": geo_source,
+            "provjera": provjera,
+            "google_maps": g_ime["maps_url"] if g_ime else None,
+        }))
+
+    # Bez OIB-a: na kartu samo ako Google za to ime vodi ISTI web kao CroAI.
+    # Adresa je tada Googleova, i popup to kaže — nije registarski podatak.
+    for e, why in bez_oib:
+        g = places_by_name(pl, e, None) if e["website"] else None
+        if not g:
+            stats["bez OIB-a i bez Google potvrde"] += 1
+            report.append({"croai_id": e["croai_id"], "name": e["name"], "website": e["website"],
+                           "grupa": e["grupa_src"], "kategorije": e["kategorije"], "razlog": why})
+            continue
+        stats["bez OIB-a, Google po imenu + webu"] += 1
+        adresa = re.sub(r",\s*(Hrvatska|Croatia)$", "", g["address"] or "")
+        m = re.search(r"\b\d{5}\s+([^,]+)", adresa)
+        features.append(feature(e, g["lat"], g["lng"], {
+            "oib": None,
+            "oib_izvor": None,
+            "adresa": adresa or None,
+            "mjesto": m.group(1).strip() if m else None,
+            "geo_source": "google-ime",
+            "provjera": "google-web",
+            "google_maps": g["maps_url"],
+        }))
+    print(f"  Google Places: {pl.calls} novih poziva, {pl.cache_hits} iz keša")
 
     features.sort(key=lambda f: f["id"])
     OUT.write_text(json.dumps({
         "type": "FeatureCollection",
         "name": "hr_croai",
         "metadata": {
-            "izvor": "map.croai.org (Croatian AI Landscape) + FINA info.BIZ (naziv, adresa, status)",
+            "izvor": "map.croai.org (Croatian AI Landscape) + FINA info.BIZ (naziv, adresa, status) + Google Places (geokod, provjera)",
             "napomena": "Imenik AI ekosustava, NE popis članova udruge CroAI.",
             "provjereno": date.today().isoformat(),
             "u_imeniku": len(entities),
@@ -419,8 +486,10 @@ def main() -> int:
         },
         "features": features,
     }, ensure_ascii=False, indent=1))
-    REPORT.write_text(json.dumps(sorted(report, key=lambda r: r["name"].lower()),
-                                 ensure_ascii=False, indent=1))
+    REPORT.write_text(json.dumps({
+        "nerazrijeseno": sorted(report, key=lambda r: r["name"].lower()),
+        "geo_conflicts": sorted(conflicts, key=lambda r: -r["km"]),
+    }, ensure_ascii=False, indent=1))
 
     print(f"\n  → {OUT.name}: {len(features)}/{len(entities)} na karti")
     for k, v in stats.most_common():

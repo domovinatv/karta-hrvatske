@@ -2,7 +2,7 @@
  "type": "FeatureCollection",
  "name": "hr_croai",
  "metadata": {
-  "izvor": "map.croai.org (Croatian AI Landscape) + FINA info.BIZ (naziv, adresa, status)",
+  "izvor": "map.croai.org (Croatian AI Landscape) + FINA info.BIZ (naziv, adresa, status) + Google Places (geokod, provjera)",
   "napomena": "Imenik AI ekosustava, NE popis članova udruge CroAI.",
   "provjereno": "2026-10-29",
   "u_imeniku": 565,
@@ -15,8 +15,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.013514,
-     45.809062
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -38,7 +38,9 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 63,
     "fina_url": "https://infobiz.fina.hr/tvrtka/all-eyes-on-screens-d-o-o/OIB-80736801367",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -47,8 +49,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.995344,
-     45.794969
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -70,7 +72,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 5,
     "fina_url": "https://infobiz.fina.hr/tvrtka/binx-games-d-o-o/OIB-13082110576",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -79,8 +83,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.999082,
-     45.738812
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -102,7 +106,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 3,
     "fina_url": "https://infobiz.fina.hr/tvrtka/cloudonia-d-o-o/OIB-69464212320",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -134,7 +140,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 55,
     "fina_url": "https://infobiz.fina.hr/tvrtka/cognism-d-o-o/OIB-72843059121",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -166,7 +174,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 3,
     "fina_url": "https://infobiz.fina.hr/tvrtka/digital-media-d-o-o/OIB-37059015660",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -175,8 +185,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.995013,
-     45.814428
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -198,7 +208,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 3,
     "fina_url": "https://infobiz.fina.hr/tvrtka/briefing-mediji-d-o-o/OIB-05129429603",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -207,8 +219,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.012593,
-     45.797208
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -230,7 +242,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/peekator-d-o-o/OIB-35737697564",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -262,7 +276,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/recogno-d-o-o/OIB-41559546689",
-    "geo_source": "dgu-adresa"
+    "geo_source": "dgu-adresa",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -294,7 +310,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 50,
     "fina_url": "https://infobiz.fina.hr/tvrtka/uber-d-o-o/OIB-88526453580",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -303,8 +321,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.91108,
-     45.795485
+     13.748749,
+     45.341896
     ]
    },
    "properties": {
@@ -326,7 +344,9 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 217,
     "fina_url": "https://infobiz.fina.hr/tvrtka/sofa-it-d-o-o/OIB-96366258208",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -358,7 +378,9 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 337,
     "fina_url": "https://infobiz.fina.hr/tvrtka/happening-d-o-o/OIB-32669869063",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -390,7 +412,9 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/tvrtka/televend-d-o-o/OIB-56713858511",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -399,8 +423,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.960786,
-     45.800913
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -422,7 +446,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 6,
     "fina_url": "https://infobiz.fina.hr/tvrtka/tvbeat-j-d-o-o/OIB-22020304358",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -431,8 +457,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.994982,
-     45.830072
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -454,7 +480,9 @@
     "fina_velicina": null,
     "fina_zaposleni": 0,
     "fina_url": "https://infobiz.fina.hr/tvrtka/you-intelligence-d-o-o/OIB-13884382664",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -486,7 +514,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 5,
     "fina_url": "https://infobiz.fina.hr/tvrtka/funestra-d-o-o/OIB-87939378078",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -518,7 +548,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 0,
     "fina_url": "https://infobiz.fina.hr/tvrtka/new-machines-d-o-o/OIB-51727369841",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -550,7 +582,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 6,
     "fina_url": "https://infobiz.fina.hr/tvrtka/top-digital-d-o-o/OIB-72317551155",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -582,7 +616,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/hubbig-d-o-o/OIB-01968403237",
-    "geo_source": "dgu-adresa"
+    "geo_source": "dgu-adresa",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -614,7 +650,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/veemee-d-o-o/OIB-02837824881",
-    "geo_source": "dgu-adresa"
+    "geo_source": "dgu-adresa",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -623,8 +661,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.474706,
-     43.52156
+     16.46435,
+     43.514693
     ]
    },
    "properties": {
@@ -646,7 +684,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 3,
     "fina_url": "https://infobiz.fina.hr/tvrtka/waveform-j-d-o-o/OIB-14335928185",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -655,8 +695,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.952238,
-     45.793771
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -678,7 +718,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 8,
     "fina_url": "https://infobiz.fina.hr/tvrtka/green-energy-pal-d-o-o/OIB-73177945676",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -710,7 +752,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 57,
     "fina_url": "https://infobiz.fina.hr/tvrtka/hidrocibalae-d-o-o/OIB-38874770240",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -719,8 +763,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.959282,
-     45.799459
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -742,7 +786,9 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 53,
     "fina_url": "https://infobiz.fina.hr/tvrtka/bulb-d-o-o/OIB-84622104798",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -751,8 +797,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.717701,
-     45.814039
+     15.718428,
+     45.803396
     ]
    },
    "properties": {
@@ -774,7 +820,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/mastroy-d-o-o/OIB-29706761450",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -783,8 +831,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.03323,
-     45.793337
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -806,7 +854,9 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": 210,
     "fina_url": "https://infobiz.fina.hr/tvrtka/dok-ing-d-o-o/OIB-39982657045",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -838,7 +888,9 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 79,
     "fina_url": "https://infobiz.fina.hr/tvrtka/inetec-institut-za-nuklearnu-tehnologiju-d-o-o/OIB-69707113052",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -847,8 +899,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.059855,
-     45.77698
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -870,7 +922,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 9,
     "fina_url": "https://infobiz.fina.hr/tvrtka/proton-el-d-o-o/OIB-79590554595",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -902,7 +956,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 15,
     "fina_url": "https://infobiz.fina.hr/tvrtka/robotic-process-automation-d-o-o/OIB-04678927848",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -911,8 +967,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.96503,
-     45.790314
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -934,7 +990,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 13,
     "fina_url": "https://infobiz.fina.hr/tvrtka/visor-d-o-o/OIB-87108765199",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -966,7 +1024,9 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": 1192,
     "fina_url": "https://infobiz.fina.hr/tvrtka/infobip-d-o-o/OIB-29756659895",
-    "geo_source": "dgu-adresa"
+    "geo_source": "dgu-adresa",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -975,8 +1035,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.995013,
-     45.814428
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -998,7 +1058,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 4,
     "fina_url": "https://infobiz.fina.hr/tvrtka/newton-technologies-adria-d-o-o/OIB-11678791686",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -1007,8 +1069,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.960946,
-     45.812456
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -1030,7 +1092,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 3,
     "fina_url": "https://infobiz.fina.hr/tvrtka/sendbee-d-o-o/OIB-15025865688",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -1062,7 +1126,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 2,
     "fina_url": "https://infobiz.fina.hr/tvrtka/3topia-d-o-o/OIB-72262528289",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -1071,8 +1137,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.003637,
-     45.803513
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -1094,7 +1160,9 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 165,
     "fina_url": "https://infobiz.fina.hr/tvrtka/reversinglabs-d-o-o/OIB-40902945776",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -1103,8 +1171,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.027543,
-     45.815894
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -1126,7 +1194,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 0,
     "fina_url": "https://infobiz.fina.hr/tvrtka/con4com-usluge-d-o-o/OIB-87120797438",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -1135,8 +1205,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.998342,
-     45.810074
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -1158,7 +1228,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 30,
     "fina_url": "https://infobiz.fina.hr/tvrtka/alfatec-group-d-o-o/OIB-28951396962",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -1167,8 +1239,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.961833,
-     45.783461
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -1190,7 +1262,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 25,
     "fina_url": "https://infobiz.fina.hr/tvrtka/atomic-intelligence-d-o-o/OIB-18242987707",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -1199,8 +1273,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.994501,
-     45.811069
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -1222,7 +1296,9 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/tvrtka/beyond-merrity-j-d-o-o/OIB-64363893908",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -1231,8 +1307,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.979627,
-     45.76335
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -1254,7 +1330,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 26,
     "fina_url": "https://infobiz.fina.hr/tvrtka/comminus-d-o-o/OIB-06217151753",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -1263,8 +1341,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.999249,
-     45.794271
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -1286,7 +1364,9 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 190,
     "fina_url": "https://infobiz.fina.hr/tvrtka/croz-d-o-o/OIB-86132384544",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -1295,8 +1375,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.934112,
-     45.801612
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -1318,7 +1398,9 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 126,
     "fina_url": "https://infobiz.fina.hr/tvrtka/neos-d-o-o/OIB-77018181695",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -1327,8 +1409,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.956454,
-     45.807914
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -1350,7 +1432,9 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 108,
     "fina_url": "https://infobiz.fina.hr/tvrtka/solvership-d-o-o/OIB-65570189449",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -1359,8 +1443,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.980767,
-     45.806291
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -1382,7 +1466,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 4,
     "fina_url": "https://infobiz.fina.hr/tvrtka/qualia-poslovna-rjesenja-d-o-o/OIB-39031322823",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -1391,8 +1477,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.721773,
-     45.800459
+     15.718428,
+     45.803396
     ]
    },
    "properties": {
@@ -1414,7 +1500,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 3,
     "fina_url": "https://infobiz.fina.hr/tvrtka/sparky-solution-d-o-o/OIB-75796160484",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -1423,8 +1511,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.969625,
-     45.793773
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -1446,7 +1534,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 70,
     "fina_url": "https://infobiz.fina.hr/tvrtka/syntio-d-o-o/OIB-88942753905",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -1455,8 +1545,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.946271,
-     45.793581
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -1478,7 +1568,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 46,
     "fina_url": "https://infobiz.fina.hr/tvrtka/true-north-d-o-o/OIB-44581061901",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -1510,7 +1602,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 25,
     "fina_url": "https://infobiz.fina.hr/tvrtka/agilos-it-d-o-o/OIB-32160662087",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -1519,8 +1613,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.999222,
-     45.802509
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -1542,7 +1636,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 19,
     "fina_url": "https://infobiz.fina.hr/tvrtka/fistnet-d-o-o/OIB-14549555348",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -1574,7 +1670,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 6,
     "fina_url": "https://infobiz.fina.hr/tvrtka/suprabit-d-o-o/OIB-94738438819",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -1583,8 +1681,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.002038,
-     45.802469
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -1606,7 +1704,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 9,
     "fina_url": "https://infobiz.fina.hr/tvrtka/deegloo-d-o-o/OIB-62004514019",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -1638,7 +1738,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 7,
     "fina_url": "https://infobiz.fina.hr/tvrtka/appliment-d-o-o/OIB-32696391835",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -1647,8 +1749,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.99759,
-     45.804035
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -1670,7 +1772,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 14,
     "fina_url": "https://infobiz.fina.hr/tvrtka/strategio-d-o-o/OIB-11783260615",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -1679,8 +1783,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     14.482985,
-     45.322714
+     14.413079,
+     45.345819
     ]
    },
    "properties": {
@@ -1702,7 +1806,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 9,
     "fina_url": "https://infobiz.fina.hr/tvrtka/e-glas-d-o-o/OIB-01085855307",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -1734,7 +1840,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 7,
     "fina_url": "https://infobiz.fina.hr/tvrtka/stemi-d-o-o/OIB-91713184849",
-    "geo_source": "dgu-adresa"
+    "geo_source": "dgu-adresa",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -1766,7 +1874,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 3,
     "fina_url": "https://infobiz.fina.hr/tvrtka/omolab-komunikacije-d-o-o/OIB-54157626144",
-    "geo_source": "dgu-adresa"
+    "geo_source": "dgu-adresa",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -1798,7 +1908,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 19,
     "fina_url": "https://infobiz.fina.hr/tvrtka/abc-tech-zagreb-d-o-o/OIB-05293531061",
-    "geo_source": "dgu-adresa"
+    "geo_source": "dgu-adresa",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -1807,8 +1919,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.008661,
-     45.802851
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -1830,7 +1942,9 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": 121,
     "fina_url": "https://infobiz.fina.hr/tvrtka/aircash-d-o-o/OIB-99833713101",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -1862,7 +1976,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 2,
     "fina_url": "https://infobiz.fina.hr/tvrtka/blocksize-d-o-o/OIB-87772227261",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -1871,8 +1987,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.973365,
-     45.809187
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -1894,7 +2010,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 12,
     "fina_url": "https://infobiz.fina.hr/tvrtka/oradian-d-o-o/OIB-98019965582",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -1926,7 +2044,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/pinkdroids-d-o-o/OIB-08652241354",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -1935,8 +2055,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.909417,
-     45.792443
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -1958,7 +2078,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 4,
     "fina_url": "https://infobiz.fina.hr/tvrtka/vis-solutions-d-o-o/OIB-55893106593",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -1990,7 +2112,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 3,
     "fina_url": "https://infobiz.fina.hr/tvrtka/ancora-ai-d-o-o/OIB-08549716528",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -1999,8 +2123,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     18.688988,
-     45.547829
+     18.690399,
+     45.547175
     ]
    },
    "properties": {
@@ -2022,7 +2146,9 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 155,
     "fina_url": "https://infobiz.fina.hr/tvrtka/mono-d-o-o/OIB-99545162665",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -2031,8 +2157,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.969625,
-     45.793773
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -2054,7 +2180,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 19,
     "fina_url": "https://infobiz.fina.hr/tvrtka/ronna-medical-d-o-o/OIB-75065707106",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -2063,8 +2191,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.99988,
-     45.807617
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -2086,7 +2214,9 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 62,
     "fina_url": "https://infobiz.fina.hr/tvrtka/shimadzu-d-o-o/OIB-16214531266",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -2118,7 +2248,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/silver-technologies-d-o-o/OIB-72359638540",
-    "geo_source": "dgu-adresa"
+    "geo_source": "dgu-adresa",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -2127,8 +2259,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.837058,
-     46.093974
+     15.842407,
+     46.095207
     ]
    },
    "properties": {
@@ -2150,7 +2282,9 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 284,
     "fina_url": "https://infobiz.fina.hr/tvrtka/magdalena/OIB-51835157380",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -2159,8 +2293,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.965011,
-     45.796242
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -2182,7 +2316,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/umo-neuroscience-d-o-o/OIB-07829084025",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -2214,7 +2350,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 2,
     "fina_url": "https://infobiz.fina.hr/tvrtka/digicyte-digitalne-tehnologije-d-o-o/OIB-81391694106",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -2223,8 +2361,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.94577,
-     45.774744
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -2246,7 +2384,9 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/tvrtka/sanitas-analytica-j-d-o-o/OIB-45471124192",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -2278,7 +2418,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 18,
     "fina_url": "https://infobiz.fina.hr/tvrtka/insky-solutions-d-o-o/OIB-33138362623",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -2310,7 +2452,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 24,
     "fina_url": "https://infobiz.fina.hr/tvrtka/infosit-d-o-o/OIB-13375007367",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -2342,7 +2486,9 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 92,
     "fina_url": "https://infobiz.fina.hr/tvrtka/lemax-d-o-o/OIB-05099173092",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -2351,8 +2497,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.989338,
-     45.803653
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -2374,7 +2520,9 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 83,
     "fina_url": "https://infobiz.fina.hr/tvrtka/alma-career-croatia-d-o-o/OIB-14273924910",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -2406,7 +2554,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 8,
     "fina_url": "https://infobiz.fina.hr/tvrtka/adoptotech-d-o-o/OIB-57168930727",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -2415,8 +2565,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.067002,
-     45.827576
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -2438,7 +2588,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 4,
     "fina_url": "https://infobiz.fina.hr/tvrtka/testdome-d-o-o/OIB-72303741144",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -2447,8 +2599,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.004189,
-     45.795631
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -2470,7 +2622,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 5,
     "fina_url": "https://infobiz.fina.hr/tvrtka/ding-applications-d-o-o/OIB-52935850171",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -2502,7 +2656,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 23,
     "fina_url": "https://infobiz.fina.hr/tvrtka/aether-signum-d-o-o/OIB-20089061095",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -2534,7 +2690,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 3,
     "fina_url": "https://infobiz.fina.hr/tvrtka/ai-power-d-o-o/OIB-81627436690",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -2543,8 +2701,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.909873,
-     45.794406
+     17.418814,
+     45.185173
     ]
    },
    "properties": {
@@ -2566,7 +2724,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 9,
     "fina_url": "https://infobiz.fina.hr/tvrtka/citus-d-o-o/OIB-64959301921",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -2598,7 +2758,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 17,
     "fina_url": "https://infobiz.fina.hr/tvrtka/delta-x-d-o-o/OIB-47614915143",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -2630,7 +2792,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 16,
     "fina_url": "https://infobiz.fina.hr/tvrtka/inin-informaticki-inzenjering-d-o-o/OIB-52909770220",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -2639,8 +2803,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.985018,
-     45.812947
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -2662,7 +2826,9 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 95,
     "fina_url": "https://infobiz.fina.hr/tvrtka/microblink-d-o-o/OIB-21173725829",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -2694,7 +2860,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/piculjan-technologies-d-o-o/OIB-60438620418",
-    "geo_source": "dgu-adresa"
+    "geo_source": "dgu-adresa",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -2703,8 +2871,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     18.4072,
-     45.686217
+     18.416433,
+     45.680623
     ]
    },
    "properties": {
@@ -2726,7 +2894,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 19,
     "fina_url": "https://infobiz.fina.hr/tvrtka/protostar-labs-d-o-o/OIB-46675049527",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -2735,8 +2905,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.011698,
-     45.797187
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -2758,7 +2928,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 4,
     "fina_url": "https://infobiz.fina.hr/tvrtka/redai-solutions-d-o-o/OIB-62203975264",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -2767,8 +2939,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.006773,
-     45.785209
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -2790,7 +2962,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 3,
     "fina_url": "https://infobiz.fina.hr/tvrtka/subpixel-d-o-o/OIB-70828559078",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -2822,7 +2996,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 13,
     "fina_url": "https://infobiz.fina.hr/tvrtka/velebit-umjetna-inteligencija-d-o-o/OIB-71703116019",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -2831,8 +3007,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.970033,
-     45.798438
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -2854,7 +3030,9 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 148,
     "fina_url": "https://infobiz.fina.hr/tvrtka/visage-technologies-d-o-o/OIB-11883765066",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -2886,7 +3064,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 4,
     "fina_url": "https://infobiz.fina.hr/tvrtka/brodbot-d-o-o/OIB-02054488318",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -2895,8 +3075,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.438525,
-     43.510107
+     16.46435,
+     43.514693
     ]
    },
    "properties": {
@@ -2918,7 +3098,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 3,
     "fina_url": "https://infobiz.fina.hr/tvrtka/galiot-aero-d-o-o/OIB-25904834269",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -2950,7 +3132,9 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 122,
     "fina_url": "https://infobiz.fina.hr/tvrtka/porsche-ebike-performance-d-o-o/OIB-03627403593",
-    "geo_source": "dgu-adresa"
+    "geo_source": "dgu-adresa",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -2982,7 +3166,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 20,
     "fina_url": "https://infobiz.fina.hr/tvrtka/parklio-d-o-o/OIB-60755958894",
-    "geo_source": "dgu-adresa"
+    "geo_source": "dgu-adresa",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -3014,7 +3200,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 2,
     "fina_url": "https://infobiz.fina.hr/tvrtka/make-it-easy-d-o-o/OIB-36694319971",
-    "geo_source": "dgu-adresa"
+    "geo_source": "dgu-adresa",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -3023,8 +3211,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.969642,
-     45.792319
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -3046,7 +3234,9 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/proracun/srce/OIB-34016189309",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -3055,8 +3245,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962511,
-     45.808203
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -3078,7 +3268,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 10,
     "fina_url": "https://infobiz.fina.hr/tvrtka/vsite/OIB-28017824635",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -3110,7 +3302,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 4,
     "fina_url": "https://infobiz.fina.hr/tvrtka/osjecka-radionica-kvalitetnih-aplikacija-d-o-o-za-racunalne-aktivnosti-i-trgovin/OIB-77396594560",
-    "geo_source": "dgu-adresa"
+    "geo_source": "dgu-adresa",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -3142,7 +3336,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 6,
     "fina_url": "https://infobiz.fina.hr/tvrtka/aisoft-technology-d-o-o/OIB-19685905917",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -3174,7 +3370,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 72,
     "fina_url": "https://infobiz.fina.hr/tvrtka/barrage-d-o-o/OIB-63896222880",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -3183,8 +3381,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.989338,
-     45.803653
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -3206,7 +3404,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 70,
     "fina_url": "https://infobiz.fina.hr/tvrtka/be-terna-d-o-o/OIB-41289820841",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -3238,7 +3438,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 5,
     "fina_url": "https://infobiz.fina.hr/tvrtka/codebooq-d-o-o/OIB-37552301313",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -3270,7 +3472,9 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 202,
     "fina_url": "https://infobiz.fina.hr/tvrtka/infinum-d-o-o/OIB-97147456048",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -3302,7 +3506,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/iteo-expert-ai-d-o-o/OIB-22697605551",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -3311,8 +3517,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     14.472732,
-     45.315698
+     14.413079,
+     45.345819
     ]
    },
    "properties": {
@@ -3334,7 +3540,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 2,
     "fina_url": "https://infobiz.fina.hr/tvrtka/logit-internet-usluge-d-o-o/OIB-81592331325",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -3366,7 +3574,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/megatrend-poslovna-rjesenja-d-o-o/OIB-94495978018",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -3375,8 +3585,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.957954,
-     45.7928
+     16.42353,
+     45.86832
     ]
    },
    "properties": {
@@ -3398,7 +3608,9 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 54,
     "fina_url": "https://infobiz.fina.hr/tvrtka/multicom-d-o-o/OIB-02956250698",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -3407,8 +3619,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.039099,
-     45.796028
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -3430,7 +3642,9 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": 130,
     "fina_url": "https://infobiz.fina.hr/tvrtka/storm-computers-d-o-o/OIB-20142998436",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -3439,8 +3653,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.001971,
-     45.810772
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -3462,7 +3676,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 77,
     "fina_url": "https://infobiz.fina.hr/tvrtka/tis-grupa-d-o-o/OIB-62434408100",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -3471,8 +3687,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.982803,
-     45.760254
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -3494,7 +3710,9 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 111,
     "fina_url": "https://infobiz.fina.hr/tvrtka/njuskalo-d-o-o/OIB-94718723416",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -3526,7 +3744,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 42,
     "fina_url": "https://infobiz.fina.hr/tvrtka/hivetech-d-o-o/OIB-25454144336",
-    "geo_source": "dgu-adresa"
+    "geo_source": "dgu-adresa",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -3535,8 +3755,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.953319,
-     45.806613
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -3558,7 +3778,9 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 95,
     "fina_url": "https://infobiz.fina.hr/tvrtka/infodom-d-o-o/OIB-99054430142",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -3590,7 +3812,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 61,
     "fina_url": "https://infobiz.fina.hr/tvrtka/serengeti-d-o-o/OIB-80860195039",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -3599,8 +3823,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.945856,
-     45.802936
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -3622,7 +3846,9 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": 2683,
     "fina_url": "https://infobiz.fina.hr/tvrtka/ericsson-nikola-tesla-d-d/OIB-84214771175",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -3654,7 +3880,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/marrow-labs-d-o-o/OIB-85448395794",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -3663,8 +3891,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.953383,
-     45.793003
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -3686,7 +3914,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 13,
     "fina_url": "https://infobiz.fina.hr/tvrtka/software-sauna-d-o-o/OIB-42941941828",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -3695,8 +3925,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.970092,
-     45.793271
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -3718,7 +3948,9 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": 250,
     "fina_url": "https://infobiz.fina.hr/tvrtka/in2-d-o-o/OIB-68195665956",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -3727,8 +3959,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.994257,
-     45.747835
+     14.874522,
+     45.433715
     ]
    },
    "properties": {
@@ -3750,7 +3982,9 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": 458,
     "fina_url": "https://infobiz.fina.hr/tvrtka/king-ict-d-o-o/OIB-67001695549",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -3759,8 +3993,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.915051,
-     45.788316
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -3782,7 +4016,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 3,
     "fina_url": "https://infobiz.fina.hr/tvrtka/hashcode-d-o-o/OIB-49637449593",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -3814,7 +4050,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 2,
     "fina_url": "https://infobiz.fina.hr/tvrtka/em2-d-o-o/OIB-41061598603",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -3823,8 +4061,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.999249,
-     45.794271
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -3846,7 +4084,9 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 190,
     "fina_url": "https://infobiz.fina.hr/tvrtka/croz-d-o-o/OIB-86132384544",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -3878,7 +4118,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 16,
     "fina_url": "https://infobiz.fina.hr/tvrtka/leapwise-d-o-o/OIB-92559664038",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -3887,8 +4129,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.942676,
-     45.80442
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -3910,7 +4152,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 4,
     "fina_url": "https://infobiz.fina.hr/tvrtka/ai-technologies-d-o-o/OIB-23235987672",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -3942,7 +4186,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/include-d-o-o/OIB-87239495136",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -3951,8 +4197,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.994277,
-     45.816063
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -3974,7 +4220,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 36,
     "fina_url": "https://infobiz.fina.hr/tvrtka/uprise-d-o-o/OIB-54026168821",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -4006,7 +4254,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 5,
     "fina_url": "https://infobiz.fina.hr/tvrtka/poduzetnicki-inkubator-bios-d-o-o/OIB-21055328609",
-    "geo_source": "dgu-adresa"
+    "geo_source": "dgu-adresa",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -4015,8 +4265,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.003246,
-     45.801966
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -4038,7 +4288,9 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/neprofitni/hmpa/OIB-67014273482",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -4047,8 +4299,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     18.104298,
-     42.642434
+     18.09484,
+     42.648625
     ]
    },
    "properties": {
@@ -4070,7 +4322,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 15,
     "fina_url": "https://infobiz.fina.hr/tvrtka/dubrovacka-razvojna-agencija-dura-d-o-o/OIB-80026201761",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -4079,8 +4333,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.977772,
-     45.808195
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -4102,7 +4356,9 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/financije/hbor/OIB-26702280390",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -4134,7 +4390,9 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/neprofitni/hub385/OIB-53336141612",
-    "geo_source": "dgu-adresa"
+    "geo_source": "dgu-adresa",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -4166,7 +4424,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 3,
     "fina_url": "https://infobiz.fina.hr/tvrtka/poduzetnicki-inkubator-osvit-zadruga/OIB-39693206416",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -4198,7 +4458,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 0,
     "fina_url": "https://infobiz.fina.hr/tvrtka/zicer-j-d-o-o/OIB-46781982801",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -4230,7 +4492,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/mosaic-incubator-d-o-o/OIB-28711286175",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -4239,8 +4503,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.935512,
-     45.815204
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -4262,7 +4526,9 @@
     "fina_velicina": null,
     "fina_zaposleni": 0,
     "fina_url": "https://infobiz.fina.hr/tvrtka/pitchsee-d-o-o/OIB-92561119699",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -4271,8 +4537,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.998342,
-     45.810074
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -4294,7 +4560,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 18,
     "fina_url": "https://infobiz.fina.hr/tvrtka/impuls-savjetovanje-d-o-o/OIB-30259958677",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -4326,7 +4594,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 10,
     "fina_url": "https://infobiz.fina.hr/tvrtka/poduzetnicki-centar-krapinsko-zagorske-zupanije-d-o-o/OIB-63625874835",
-    "geo_source": "dgu-ulica-fuzzy"
+    "geo_source": "dgu-ulica-fuzzy",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -4358,7 +4628,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 3,
     "fina_url": "https://infobiz.fina.hr/tvrtka/poduzetnicki-akcelerator-split-d-o-o/OIB-07925158825",
-    "geo_source": "dgu-adresa"
+    "geo_source": "dgu-adresa",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -4390,7 +4662,9 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/proracun/sveuciliste-u-osijeku/OIB-78808975734",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -4399,8 +4673,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     18.102872,
-     42.642061
+     18.09484,
+     42.648625
     ]
    },
    "properties": {
@@ -4422,7 +4696,9 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/neprofitni/rit-croatia/OIB-24958681731",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -4431,8 +4707,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.969874,
-     45.795379
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -4454,7 +4730,9 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/proracun/tvz/OIB-08814003451",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -4486,7 +4764,9 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/proracun/sveuciliste-u-splitu/OIB-29845096215",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -4518,7 +4798,9 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/proracun/sveuciliste-u-zagrebu/OIB-36612267447",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -4527,8 +4809,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962511,
-     45.808203
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -4550,7 +4832,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 10,
     "fina_url": "https://infobiz.fina.hr/tvrtka/vsite/OIB-28017824635",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -4582,7 +4866,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 42,
     "fina_url": "https://infobiz.fina.hr/tvrtka/zagrebacka-skola-ekonomije-i-managementa/OIB-96760515998",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -4591,8 +4877,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.009094,
-     45.815806
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -4614,7 +4900,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 20,
     "fina_url": "https://infobiz.fina.hr/tvrtka/effectus-veleuciliste/OIB-47182242398",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -4646,7 +4934,9 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/proracun/veleuciliste-u-sibeniku/OIB-61727512157",
-    "geo_source": "dgu-adresa"
+    "geo_source": "dgu-adresa",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -4678,7 +4968,9 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/proracun/medimursko-veleuciliste-u-cakovcu/OIB-31444990605",
-    "geo_source": "dgu-adresa"
+    "geo_source": "dgu-adresa",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -4687,8 +4979,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.981439,
-     45.805922
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -4710,7 +5002,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 74,
     "fina_url": "https://infobiz.fina.hr/tvrtka/sveuciliste-vern/OIB-22341026596",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -4719,8 +5013,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.997629,
-     45.813849
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -4742,7 +5036,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 2,
     "fina_url": "https://infobiz.fina.hr/tvrtka/cohres-d-o-o/OIB-42093279660",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -4751,8 +5047,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.987951,
-     45.829622
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -4774,7 +5070,9 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/proracun/irb/OIB-69715301002",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -4783,8 +5081,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.969642,
-     45.792319
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -4806,7 +5104,9 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/proracun/srce/OIB-34016189309",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -4815,8 +5115,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.952045,
-     45.787379
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -4838,7 +5138,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 2,
     "fina_url": "https://infobiz.fina.hr/tvrtka/ured-za-napredno-racunarstvo-d-o-o/OIB-70115824092",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -4847,8 +5149,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.95696,
-     45.807546
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -4870,7 +5172,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/parser-compliance-d-o-o/OIB-59211267966",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -4902,7 +5206,9 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/proracun/sveuciliste-u-zagrebu-fakultet-strojarstva-i-brodogradnje/OIB-22910368449",
-    "geo_source": "dgu-adresa"
+    "geo_source": "dgu-adresa",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -4911,8 +5217,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.986014,
-     45.801029
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -4934,7 +5240,9 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/proracun/ministarstvo-pravosua-uprave-i-digitalne-transformacije/OIB-72910430276",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -4966,7 +5274,9 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/proracun/ministarstvo-zdravstva/OIB-88362248492",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -4975,8 +5285,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.956509,
-     45.802109
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -4998,7 +5308,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/eventa-nulajedan-d-o-o/OIB-68383496496",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -5007,8 +5319,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.957315,
-     45.810028
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -5030,7 +5342,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 6,
     "fina_url": "https://infobiz.fina.hr/tvrtka/pepermint-d-o-o/OIB-13120899290",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -5039,8 +5353,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.99988,
-     45.807617
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -5062,7 +5376,9 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/neprofitni/hrvatska-udruga-ui/OIB-29213482736",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -5071,8 +5387,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.99988,
-     45.807617
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -5094,7 +5410,9 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/neprofitni/hrvatska-udruga-ui/OIB-29213482736",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -5126,7 +5444,9 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/neprofitni/njhitk/OIB-18509652133",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -5135,8 +5455,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.99988,
-     45.807617
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -5158,7 +5478,9 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/neprofitni/hrvatska-udruga-ui/OIB-29213482736",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -5167,8 +5489,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.91108,
-     45.795485
+     13.748749,
+     45.341896
     ]
    },
    "properties": {
@@ -5190,7 +5512,9 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/neprofitni/unit-hrvatska/OIB-56261414492",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -5199,8 +5523,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.97613,
-     45.812647
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -5222,7 +5546,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 8,
     "fina_url": "https://infobiz.fina.hr/tvrtka/rud-pedersen-croatia-d-o-o/OIB-80786916470",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -5254,7 +5580,9 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/neprofitni/hdi/OIB-38835255149",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -5263,8 +5591,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.002038,
-     45.802469
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -5286,7 +5614,9 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/neprofitni/hup/OIB-80978339255",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -5318,7 +5648,9 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/neprofitni/irim/OIB-29139223214",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -5350,7 +5682,9 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/neprofitni/osc/OIB-06519815245",
-    "geo_source": "dgu-adresa"
+    "geo_source": "dgu-adresa",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -5359,8 +5693,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.544635,
-     46.021476
+     16.544903,
+     46.030252
     ]
    },
    "properties": {
@@ -5382,7 +5716,9 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/neprofitni/p-o-i-n-t/OIB-75093177043",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -5414,7 +5750,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 10,
     "fina_url": "https://infobiz.fina.hr/tvrtka/step-ri-d-o-o/OIB-70410022758",
-    "geo_source": "dgu-adresa"
+    "geo_source": "dgu-adresa",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -5423,8 +5761,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.935985,
-     45.809025
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -5446,7 +5784,9 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/neprofitni/institut-za-inovacije/OIB-23825867367",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -5455,8 +5795,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.988386,
-     45.810519
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -5478,7 +5818,9 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/neprofitni/alice-in-blockchains-udruga-za-fintech-kriptovalute-i-blockchain/OIB-45632684298",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -5510,7 +5852,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/cbbs-d-o-o/OIB-53112231425",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -5542,7 +5886,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/bello-consulting-j-d-o-o/OIB-01545357551",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -5551,8 +5897,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.990079,
-     45.804018
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -5574,7 +5920,9 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/neprofitni/agk/OIB-91127208369",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -5606,7 +5954,9 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 115,
     "fina_url": "https://infobiz.fina.hr/tvrtka/24sata-d-o-o/OIB-78093047651",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -5615,8 +5965,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.959935,
-     45.802243
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -5638,7 +5988,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 10,
     "fina_url": "https://infobiz.fina.hr/tvrtka/b-u-g-d-o-o/OIB-05461674840",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -5647,8 +5999,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.997218,
-     45.766939
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -5670,7 +6022,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 4,
     "fina_url": "https://infobiz.fina.hr/tvrtka/optimus-prime-informatika-d-o-o/OIB-94235177665",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -5702,7 +6056,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 0,
     "fina_url": "https://infobiz.fina.hr/tvrtka/netokracija-d-o-o/OIB-36474827436",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -5711,8 +6067,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.95589,
-     45.789316
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -5734,7 +6090,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 0,
     "fina_url": "https://infobiz.fina.hr/tvrtka/racunalni-i-ekonomski-poslovi-rep-d-o-o/OIB-97663697990",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -5766,7 +6124,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 62,
     "fina_url": "https://infobiz.fina.hr/tvrtka/presshaus-d-o-o/OIB-36974788949",
-    "geo_source": "dgu-adresa"
+    "geo_source": "dgu-adresa",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -5798,7 +6158,9 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 142,
     "fina_url": "https://infobiz.fina.hr/tvrtka/vecernji-list-d-o-o/OIB-92276133102",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -5807,8 +6169,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.909495,
-     45.796653
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -5830,7 +6192,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 6,
     "fina_url": "https://infobiz.fina.hr/tvrtka/vidi-to-d-o-o/OIB-24523816042",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -5862,7 +6226,9 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": 3926,
     "fina_url": "https://infobiz.fina.hr/tvrtka/ht-d-d/OIB-81793146560",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -5894,7 +6260,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/bradbury-d-o-o/OIB-35016494441",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -5903,8 +6271,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.020398,
-     45.795239
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -5926,7 +6294,9 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 41,
     "fina_url": "https://infobiz.fina.hr/tvrtka/hd-win-arena-sport-d-o-o/OIB-75150106632",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -5935,8 +6305,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.001767,
-     45.800393
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -5958,7 +6328,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 5,
     "fina_url": "https://infobiz.fina.hr/tvrtka/hashnet-d-o-o/OIB-61833745918",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -5967,8 +6339,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     14.450098,
-     45.337646
+     14.413079,
+     45.345819
     ]
    },
    "properties": {
@@ -5990,7 +6362,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 3,
     "fina_url": "https://infobiz.fina.hr/tvrtka/poduzetnik-d-o-o/OIB-31281910909",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -6022,7 +6396,9 @@
     "fina_velicina": null,
     "fina_zaposleni": 0,
     "fina_url": "https://infobiz.fina.hr/tvrtka/repetitio-d-o-o/OIB-17512910277",
-    "geo_source": "dgu-adresa"
+    "geo_source": "dgu-adresa",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -6054,7 +6430,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 4,
     "fina_url": "https://infobiz.fina.hr/tvrtka/sea-cras-d-o-o/OIB-70844303390",
-    "geo_source": "dgu-adresa"
+    "geo_source": "dgu-adresa",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -6063,8 +6441,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.970097,
-     45.776273
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -6086,7 +6464,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 3,
     "fina_url": "https://infobiz.fina.hr/tvrtka/arkensight-d-o-o/OIB-67884668432",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -6095,8 +6475,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.969625,
-     45.793773
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -6118,7 +6498,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 5,
     "fina_url": "https://infobiz.fina.hr/tvrtka/tensorpix-d-o-o/OIB-95953325784",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -6150,7 +6532,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/crobotic-solutions-d-o-o/OIB-78329868460",
-    "geo_source": "dgu-adresa"
+    "geo_source": "dgu-adresa",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -6159,8 +6543,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.991449,
-     45.755659
+     14.874522,
+     45.433715
     ]
    },
    "properties": {
@@ -6182,7 +6566,9 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 96,
     "fina_url": "https://infobiz.fina.hr/tvrtka/project-3-mobility-d-o-o/OIB-49842564886",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -6191,8 +6577,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.951026,
-     45.773005
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -6214,7 +6600,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 0,
     "fina_url": "https://infobiz.fina.hr/tvrtka/alti-agro-d-o-o/OIB-93381415653",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -6223,8 +6611,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.002038,
-     45.802469
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -6246,7 +6634,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 9,
     "fina_url": "https://infobiz.fina.hr/tvrtka/deegloo-d-o-o/OIB-62004514019",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -6255,8 +6645,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.446255,
-     43.519449
+     16.46435,
+     43.514693
     ]
    },
    "properties": {
@@ -6278,7 +6668,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 40,
     "fina_url": "https://infobiz.fina.hr/tvrtka/aspira/OIB-14885934105",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -6287,8 +6679,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.934112,
-     45.801612
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -6310,7 +6702,9 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": 586,
     "fina_url": "https://infobiz.fina.hr/tvrtka/koncar-d-d/OIB-45050126417",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -6319,8 +6713,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.946271,
-     45.793581
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -6342,7 +6736,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 20,
     "fina_url": "https://infobiz.fina.hr/tvrtka/hypefy-world-d-o-o/OIB-89393159477",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -6351,8 +6747,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.003338,
-     45.802948
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -6374,7 +6770,9 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 89,
     "fina_url": "https://infobiz.fina.hr/tvrtka/nanobit-d-o-o/OIB-56906077918",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -6406,7 +6804,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 4,
     "fina_url": "https://infobiz.fina.hr/tvrtka/cyberarrange-security-solutions-d-o-o/OIB-22364187135",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -6438,7 +6838,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 2,
     "fina_url": "https://infobiz.fina.hr/tvrtka/petchat-j-d-o-o/OIB-27980872045",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -6470,7 +6872,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 2,
     "fina_url": "https://infobiz.fina.hr/tvrtka/venduetech-j-d-o-o/OIB-91547407253",
-    "geo_source": "dgu-adresa"
+    "geo_source": "dgu-adresa",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -6502,7 +6906,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 5,
     "fina_url": "https://infobiz.fina.hr/tvrtka/once-sport-d-o-o/OIB-22886137161",
-    "geo_source": "dgu-adresa"
+    "geo_source": "dgu-adresa",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -6511,8 +6917,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.983223,
-     45.778703
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -6534,7 +6940,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 27,
     "fina_url": "https://infobiz.fina.hr/tvrtka/devot-solutions-d-o-o/OIB-03252244054",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -6543,8 +6951,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.957303,
-     45.802628
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -6566,7 +6974,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 14,
     "fina_url": "https://infobiz.fina.hr/tvrtka/amplibit-d-o-o/OIB-48004514574",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -6575,8 +6985,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.003637,
-     45.803513
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -6598,7 +7008,9 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 86,
     "fina_url": "https://infobiz.fina.hr/tvrtka/404-d-o-o/OIB-95664694376",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -6607,8 +7019,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.031568,
-     45.785463
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -6630,7 +7042,9 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": 1653,
     "fina_url": "https://infobiz.fina.hr/tvrtka/a1-hrvatska-d-o-o/OIB-29524210204",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -6639,8 +7053,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.969625,
-     45.793773
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -6662,7 +7076,9 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/financije/addiko-bank-d-d/OIB-14036333877",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -6694,7 +7110,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 21,
     "fina_url": "https://infobiz.fina.hr/tvrtka/adris-grupa-d-d/OIB-82023167977",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -6703,8 +7121,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.007369,
-     45.804586
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -6726,7 +7144,9 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/financije/allianz-hrvatska-d-d/OIB-23759810849",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -6735,8 +7155,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.974716,
-     45.802216
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -6758,7 +7178,9 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 172,
     "fina_url": "https://infobiz.fina.hr/tvrtka/atlantic-grupa-d-d/OIB-71149912416",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -6767,8 +7189,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.972509,
-     45.799413
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -6790,7 +7212,9 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": 2331,
     "fina_url": "https://infobiz.fina.hr/tvrtka/fina/OIB-85821130368",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -6799,8 +7223,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.033766,
-     45.802239
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -6822,7 +7246,9 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 103,
     "fina_url": "https://infobiz.fina.hr/tvrtka/fortenova-grupa-d-d/OIB-88035992407",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -6831,8 +7257,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.729418,
-     45.823422
+     15.734729,
+     45.821918
     ]
    },
    "properties": {
@@ -6854,7 +7280,9 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": 613,
     "fina_url": "https://infobiz.fina.hr/tvrtka/klimaoprema-d-o-o/OIB-34383404032",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -6863,8 +7291,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.837058,
-     46.093974
+     15.842407,
+     46.095207
     ]
    },
    "properties": {
@@ -6886,7 +7314,9 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 284,
     "fina_url": "https://infobiz.fina.hr/tvrtka/magdalena/OIB-51835157380",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -6895,8 +7325,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.450167,
-     43.520132
+     16.46435,
+     43.514693
     ]
    },
    "properties": {
@@ -6918,7 +7348,9 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/financije/otp-banka-d-d/OIB-52508873833",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -6927,8 +7359,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.998972,
-     45.815389
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -6950,7 +7382,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/poliklinika-terapija-d-o-o/OIB-49343876478",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -6959,8 +7393,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.949869,
-     45.808618
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -6982,7 +7416,9 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/financije/raiffeisenbank-austria-d-d/OIB-53056966535",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -7014,7 +7450,9 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": 632,
     "fina_url": "https://infobiz.fina.hr/tvrtka/telemach-hrvatska-d-o-o/OIB-70133616033",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -7046,7 +7484,9 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": 1098,
     "fina_url": "https://infobiz.fina.hr/tvrtka/tokic-d-d/OIB-74867487620",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -7078,7 +7518,9 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": 6095,
     "fina_url": "https://infobiz.fina.hr/tvrtka/studenac-d-o-o/OIB-02023029348",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -7110,7 +7552,9 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": 3211,
     "fina_url": "https://infobiz.fina.hr/tvrtka/podravka-d-d/OIB-18928523252",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -7119,8 +7563,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.020398,
-     45.795239
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -7142,7 +7586,9 @@
     "fina_velicina": null,
     "fina_zaposleni": 2,
     "fina_url": "https://infobiz.fina.hr/tvrtka/freshbooks-d-o-o/OIB-91938817383",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -7174,7 +7620,9 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": 781,
     "fina_url": "https://infobiz.fina.hr/tvrtka/jgl-d-d/OIB-20950636972",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -7206,7 +7654,9 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": 2514,
     "fina_url": "https://infobiz.fina.hr/tvrtka/maistra-d-d/OIB-25190869349",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -7215,8 +7665,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.974045,
-     45.811095
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -7238,7 +7688,9 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/financije/interkapital-vrijednosni-papiri-d-o-o/OIB-68481874507",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -7247,8 +7699,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.90514,
-     45.791018
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -7270,7 +7722,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/sonder-innovations-d-o-o/OIB-95631264068",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -7302,7 +7756,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/reach-the-sea-d-o-o/OIB-23182591050",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -7311,8 +7767,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     18.689629,
-     45.556061
+     18.690399,
+     45.547175
     ]
    },
    "properties": {
@@ -7334,7 +7790,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 50,
     "fina_url": "https://infobiz.fina.hr/tvrtka/gauss-d-o-o/OIB-07575902160",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -7343,8 +7801,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.954536,
-     45.812316
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -7366,7 +7824,9 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 220,
     "fina_url": "https://infobiz.fina.hr/tvrtka/q-d-o-o/OIB-78082062075",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -7375,8 +7835,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.008661,
-     45.802851
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -7398,7 +7858,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 4,
     "fina_url": "https://infobiz.fina.hr/tvrtka/drap-d-o-o/OIB-41437879613",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -7430,7 +7892,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/yure-ai-d-o-o/OIB-67671630475",
-    "geo_source": "dgu-adresa"
+    "geo_source": "dgu-adresa",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -7439,8 +7903,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.992959,
-     45.821112
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -7462,7 +7926,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/kalphatech-d-o-o/OIB-73948612072",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -7494,7 +7960,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 4,
     "fina_url": "https://infobiz.fina.hr/tvrtka/calirad-d-o-o/OIB-78901718890",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -7503,8 +7971,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.445444,
-     43.508282
+     16.46435,
+     43.514693
     ]
    },
    "properties": {
@@ -7526,7 +7994,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 24,
     "fina_url": "https://infobiz.fina.hr/tvrtka/code-vibe-d-o-o/OIB-81542490027",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -7558,7 +8028,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 2,
     "fina_url": "https://infobiz.fina.hr/tvrtka/textiloop-d-o-o/OIB-30087764103",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -7567,8 +8039,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.915563,
-     45.78815
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -7590,7 +8062,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 58,
     "fina_url": "https://infobiz.fina.hr/tvrtka/ingemark-d-o-o/OIB-02854892746",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -7599,8 +8073,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     14.36982,
-     45.391046
+     14.347927,
+     45.377111
     ]
    },
    "properties": {
@@ -7622,7 +8096,9 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 184,
     "fina_url": "https://infobiz.fina.hr/tvrtka/montelektro-d-o-o/OIB-45522650856",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -7654,7 +8130,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 17,
     "fina_url": "https://infobiz.fina.hr/tvrtka/cb-control-systems-d-o-o/OIB-17382526547",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -7663,8 +8141,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.956412,
-     45.791581
+     16.42353,
+     45.86832
     ]
    },
    "properties": {
@@ -7686,7 +8164,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 97,
     "fina_url": "https://infobiz.fina.hr/tvrtka/pontis-technology-d-o-o/OIB-68533008080",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -7695,8 +8175,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.991819,
-     45.812573
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -7718,7 +8198,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 4,
     "fina_url": "https://infobiz.fina.hr/tvrtka/romb-technologies-d-o-o/OIB-34690437344",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -7750,7 +8232,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 13,
     "fina_url": "https://infobiz.fina.hr/tvrtka/size-d-o-o/OIB-88183612525",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -7782,7 +8266,9 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": 3658,
     "fina_url": "https://infobiz.fina.hr/tvrtka/valamar-riviera-d-d/OIB-36201212847",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -7791,8 +8277,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.957204,
-     45.809404
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -7814,7 +8300,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 90,
     "fina_url": "https://infobiz.fina.hr/tvrtka/notch-software-solutions-d-o-o/OIB-99895959831",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -7823,8 +8311,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     18.713877,
-     45.543385
+     18.690399,
+     45.547175
     ]
    },
    "properties": {
@@ -7846,7 +8334,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 12,
     "fina_url": "https://infobiz.fina.hr/tvrtka/alpha-score-d-o-o/OIB-89870478875",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -7855,8 +8345,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.007369,
-     45.804586
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -7878,7 +8368,9 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 136,
     "fina_url": "https://infobiz.fina.hr/tvrtka/comping-d-o-o/OIB-09201087238",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -7887,8 +8379,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.989921,
-     45.810623
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -7910,7 +8402,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 9,
     "fina_url": "https://infobiz.fina.hr/tvrtka/nephos-d-o-o/OIB-45593438856",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -7942,7 +8436,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/ideas4ai-d-o-o/OIB-38990012017",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -7951,8 +8447,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     18.681971,
-     45.55306
+     18.690399,
+     45.547175
     ]
    },
    "properties": {
@@ -7974,7 +8470,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 32,
     "fina_url": "https://infobiz.fina.hr/tvrtka/prototyp-d-o-o/OIB-69410380024",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -8006,7 +8504,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/sintelly-d-o-o/OIB-06225773987",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -8038,7 +8538,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 3,
     "fina_url": "https://infobiz.fina.hr/tvrtka/daidream-d-o-o/OIB-61952123215",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -8047,8 +8549,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.234047,
-     45.759016
+     16.238424,
+     45.757449
     ]
    },
    "properties": {
@@ -8070,7 +8572,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 19,
     "fina_url": "https://infobiz.fina.hr/tvrtka/scoop-technologies-d-o-o/OIB-06936315682",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -8102,7 +8606,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/riskoria-advising-professional-services-d-o-o/OIB-84611853622",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -8111,8 +8617,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.939033,
-     45.784323
+     15.728932,
+     46.031521
     ]
    },
    "properties": {
@@ -8134,7 +8640,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 18,
     "fina_url": "https://infobiz.fina.hr/tvrtka/cinnamon-d-o-o/OIB-48144159998",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -8143,8 +8651,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.005752,
-     45.802537
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -8166,7 +8674,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 73,
     "fina_url": "https://infobiz.fina.hr/tvrtka/decode-hq-d-o-o/OIB-20903022276",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -8198,7 +8708,9 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/neprofitni/shpigl/OIB-50169343345",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -8230,7 +8742,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 20,
     "fina_url": "https://infobiz.fina.hr/tvrtka/aduro-ideja-d-o-o/OIB-99145666903",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -8262,7 +8776,9 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 202,
     "fina_url": "https://infobiz.fina.hr/tvrtka/infinum-d-o-o/OIB-97147456048",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -8294,7 +8810,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 10,
     "fina_url": "https://infobiz.fina.hr/tvrtka/tera-tehnopolis-d-o-o/OIB-39077073015",
-    "geo_source": "dgu-adresa"
+    "geo_source": "dgu-adresa",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -8326,7 +8844,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 2,
     "fina_url": "https://infobiz.fina.hr/tvrtka/unist-tehnoloski-park-d-o-o/OIB-51860740266",
-    "geo_source": "dgu-adresa"
+    "geo_source": "dgu-adresa",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -8335,8 +8855,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.940616,
-     45.811624
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -8358,7 +8878,9 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/neprofitni/lauba/OIB-23248350988",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -8390,7 +8912,9 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/neprofitni/slo-cro-gospodarska-komora/OIB-07441699232",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -8422,7 +8946,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/little-bag-j-d-o-o/OIB-78489934738",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -8431,8 +8957,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.953698,
-     45.787604
+     16.42353,
+     45.86832
     ]
    },
    "properties": {
@@ -8454,7 +8980,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 28,
     "fina_url": "https://infobiz.fina.hr/tvrtka/netgen-d-o-o/OIB-56703914419",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -8463,8 +8991,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.007369,
-     45.804586
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -8486,7 +9014,9 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 128,
     "fina_url": "https://infobiz.fina.hr/tvrtka/porsche-digital-croatia-d-o-o/OIB-58734276843",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -8495,8 +9025,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.998233,
-     45.793849
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -8518,7 +9048,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 3,
     "fina_url": "https://infobiz.fina.hr/tvrtka/bruncin-d-o-o/OIB-29863640528",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -8550,7 +9082,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 11,
     "fina_url": "https://infobiz.fina.hr/tvrtka/helmholz-sistemi-d-o-o/OIB-76758762210",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -8559,8 +9093,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.020644,
-     45.818748
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -8582,7 +9116,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 0,
     "fina_url": "https://infobiz.fina.hr/tvrtka/mediartem-ai-d-o-o/OIB-72757755615",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -8591,8 +9127,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.893824,
-     43.733829
+     15.898512,
+     43.741252
     ]
    },
    "properties": {
@@ -8614,7 +9150,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 2,
     "fina_url": "https://infobiz.fina.hr/tvrtka/need-appd-o-o/OIB-39287030332",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -8646,7 +9184,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/saastanak-d-o-o/OIB-40801114584",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -8678,7 +9218,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 4,
     "fina_url": "https://infobiz.fina.hr/tvrtka/aymo-ventures-d-o-o/OIB-31486520098",
-    "geo_source": "dgu-adresa"
+    "geo_source": "dgu-adresa",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -8687,8 +9229,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.02597,
-     45.816434
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -8710,7 +9252,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 0,
     "fina_url": "https://infobiz.fina.hr/tvrtka/game-changer-d-o-o/OIB-67067915661",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -8742,7 +9286,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 5,
     "fina_url": "https://infobiz.fina.hr/tvrtka/lexi-d-o-o/OIB-38647156795",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -8774,7 +9320,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 30,
     "fina_url": "https://infobiz.fina.hr/tvrtka/rentlio-d-o-o/OIB-27842617105",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -8783,8 +9331,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.907097,
-     45.801128
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -8806,7 +9354,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 2,
     "fina_url": "https://infobiz.fina.hr/tvrtka/judge0-d-o-o/OIB-37135718819",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -8815,8 +9365,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.984738,
-     45.794755
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -8838,7 +9388,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 11,
     "fina_url": "https://infobiz.fina.hr/tvrtka/neuralab-d-o-o/OIB-63401934653",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -8870,7 +9422,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 25,
     "fina_url": "https://infobiz.fina.hr/tvrtka/plus-hosting-grupa-d-o-o/OIB-25444746329",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -8902,7 +9456,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 7,
     "fina_url": "https://infobiz.fina.hr/tvrtka/swen-hospitality-d-o-o/OIB-27238984889",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -8934,7 +9490,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 20,
     "fina_url": "https://infobiz.fina.hr/tvrtka/determ-d-o-o/OIB-78206544075",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -8943,8 +9501,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.989338,
-     45.803653
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -8966,7 +9524,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 4,
     "fina_url": "https://infobiz.fina.hr/tvrtka/forvis-mazars-digital-d-o-o/OIB-41111767612",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -8975,8 +9535,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.002038,
-     45.802469
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -8998,7 +9558,9 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 27,
     "fina_url": "https://infobiz.fina.hr/tvrtka/go2digital-d-o-o/OIB-81297941099",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -9030,7 +9592,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 5,
     "fina_url": "https://infobiz.fina.hr/tvrtka/bornfight-d-o-o/OIB-64834048134",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -9039,8 +9603,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.899113,
-     45.808098
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -9062,7 +9626,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/get-digital-d-o-o/OIB-95334959847",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -9094,7 +9660,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 9,
     "fina_url": "https://infobiz.fina.hr/tvrtka/loop-d-o-o/OIB-93207816519",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -9126,7 +9694,9 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": 311,
     "fina_url": "https://infobiz.fina.hr/tvrtka/skolska-knjiga-d-d/OIB-38967655335",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -9158,7 +9728,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 24,
     "fina_url": "https://infobiz.fina.hr/tvrtka/autegra-d-o-o/OIB-27496223500",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -9190,7 +9762,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 10,
     "fina_url": "https://infobiz.fina.hr/tvrtka/nobula-technologies-d-o-o/OIB-09209716270",
-    "geo_source": "dgu-ulica-fuzzy"
+    "geo_source": "dgu-ulica-fuzzy",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -9199,8 +9773,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     13.694212,
-     45.06167
+     13.685302,
+     45.076484
     ]
    },
    "properties": {
@@ -9222,7 +9796,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 0,
     "fina_url": "https://infobiz.fina.hr/tvrtka/smart-hospitality-d-o-o/OIB-82718673214",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -9254,7 +9830,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 15,
     "fina_url": "https://infobiz.fina.hr/tvrtka/own-solutions-d-o-o/OIB-74958794545",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -9286,7 +9864,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 35,
     "fina_url": "https://infobiz.fina.hr/tvrtka/byte-lab-grupa-d-o-o/OIB-90076939291",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -9295,8 +9875,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.728181,
-     45.795531
+     15.718428,
+     45.803396
     ]
    },
    "properties": {
@@ -9318,7 +9898,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 5,
     "fina_url": "https://infobiz.fina.hr/tvrtka/for-automation-d-o-o/OIB-90316762748",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -9327,8 +9909,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.969957,
-     45.768395
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -9350,7 +9932,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 3,
     "fina_url": "https://infobiz.fina.hr/tvrtka/skai-labs-d-o-o/OIB-12285322295",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -9359,8 +9943,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.455659,
-     43.510621
+     16.46435,
+     43.514693
     ]
    },
    "properties": {
@@ -9382,7 +9966,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 4,
     "fina_url": "https://infobiz.fina.hr/tvrtka/workspace-d-o-o/OIB-21261099784",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -9391,8 +9977,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.969625,
-     45.793773
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -9414,7 +10000,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 37,
     "fina_url": "https://infobiz.fina.hr/tvrtka/margins-d-o-o/OIB-30100320285",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -9423,8 +10011,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.992762,
-     45.801545
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -9446,7 +10034,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 0,
     "fina_url": "https://infobiz.fina.hr/tvrtka/odonata-technologies-d-o-o/OIB-42173437282",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -9455,8 +10045,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.969625,
-     45.793773
+     15.962103,
+     45.842803
     ]
    },
    "properties": {
@@ -9478,7 +10068,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 37,
     "fina_url": "https://infobiz.fina.hr/tvrtka/margins-d-o-o/OIB-30100320285",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -9487,8 +10079,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     14.466156,
-     45.334357
+     14.413079,
+     45.345819
     ]
    },
    "properties": {
@@ -9510,7 +10102,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 3,
     "fina_url": "https://infobiz.fina.hr/tvrtka/alphawave-d-o-o/OIB-59896838619",
-    "geo_source": "nominatim"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -9542,7 +10136,9 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 25,
     "fina_url": "https://infobiz.fina.hr/tvrtka/istra-tech-d-o-o/OIB-94114100359",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -9574,7 +10170,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/animone-studio-d-o-o/OIB-49095610069",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -9606,7 +10204,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/optimus-consulting-d-o-o/OIB-31457975319",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   },
   {
@@ -9638,7 +10238,9 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/ostendo-consulting-d-o-o/OIB-86090645922",
-    "geo_source": "naselje"
+    "geo_source": "naselje",
+    "provjera": null,
+    "google_maps": null
    }
   }
  ]
