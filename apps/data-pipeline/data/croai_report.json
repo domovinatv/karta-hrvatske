@@ -1,14 +1,6 @@
 {
  "nerazrijeseno": [
   {
-   "croai_id": "545",
-   "name": "57hours",
-   "website": "https://57hours.com/",
-   "oib": "01470501076",
-   "adresa": "16192 COASTAL HIGHWAY 0, LEWES",
-   "razlog": "nema geokoda"
-  },
-  {
    "croai_id": "359",
    "name": "ADRAe",
    "website": "https://adra-e.eu/",
@@ -39,16 +31,6 @@
    "razlog": "web: nema OIB-a"
   },
   {
-   "croai_id": "56",
-   "name": "Agrivi",
-   "website": "https://www.agrivi.com/en",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Agriculture & Greentech"
-   ],
-   "razlog": "web: nema OIB-a; ime: 2 profila"
-  },
-  {
    "croai_id": "557",
    "name": "AI Art Singularity",
    "website": "https://artexpo.ai/",
@@ -65,26 +47,6 @@
    "grupa": "Enablers & Extended Ecosystem",
    "kategorije": [
     "Conferences & Meetups"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "304",
-   "name": "AI Center Lipik",
-   "website": "http://lipik.ai/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Public"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "283",
-   "name": "AI Lab @FOI",
-   "website": "http://ai.foi.hr/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Research"
    ],
    "razlog": "web: nema OIB-a"
   },
@@ -119,16 +81,6 @@
    "razlog": "web: nema OIB-a"
   },
   {
-   "croai_id": "226",
-   "name": "AIR-RMLD (Zicer startup)",
-   "website": "https://www.air-rmld.com/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Smart Cities & Homes"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
    "croai_id": "293",
    "name": "AIRI Centre for Artificial Intelligence and Cybersecurity",
    "website": "https://airi.uniri.hr/",
@@ -139,41 +91,11 @@
    "razlog": "web: nema OIB-a"
   },
   {
-   "croai_id": "120",
-   "name": "Airt",
-   "website": "https://airt.ai/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "FinTech & Insurtech"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
    "croai_id": "555",
    "name": "Aleph Croatia",
    "website": "https://alephholding.com/",
    "grupa": "Early Adopters",
    "kategorije": [],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "267",
-   "name": "Algebra Bernays University",
-   "website": "https://www.algebra.hr/visoko-uciliste/en/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Universities & Educational Institutions"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "232",
-   "name": "Algebra LAB",
-   "website": "https://www.algebra.hr/lab/en/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Accelerators & Incubators & Investors"
-   ],
    "razlog": "web: nema OIB-a"
   },
   {
@@ -197,34 +119,6 @@
    "razlog": "web: nema OIB-a"
   },
   {
-   "croai_id": "426",
-   "name": "Aminess hotels & campsites",
-   "website": "https://www.aminess.com/",
-   "grupa": "Early Adopters",
-   "kategorije": [],
-   "razlog": "web: više OIB-a (58935879058, 87429101081)"
-  },
-  {
-   "croai_id": "121",
-   "name": "Amodo",
-   "website": "https://www.amodo.eu/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "FinTech & Insurtech"
-   ],
-   "razlog": "web: nema OIB-a; ime: kratko i strana domena (amodo-inc)"
-  },
-  {
-   "croai_id": "122",
-   "name": "AMPnet",
-   "website": "https://ampnet.io/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "FinTech & Insurtech"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
    "croai_id": "133",
    "name": "Ani Biome",
    "website": "https://anibiome.ai/",
@@ -233,16 +127,6 @@
     "Healthcare & Life Sciences"
    ],
    "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "556",
-   "name": "ANIQ",
-   "website": "https://aniq.tech/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Service Providers"
-   ],
-   "razlog": "web: nema OIB-a; ime: kratko i strana domena (aniq-d-o-o)"
   },
   {
    "croai_id": "66",
@@ -255,79 +139,9 @@
    "razlog": "web: nema OIB-a"
   },
   {
-   "croai_id": "69",
-   "name": "Ascalia",
-   "website": "https://ascalia.io/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Automation"
-   ],
-   "razlog": "web: nema OIB-a; ime: 2 profila"
-  },
-  {
-   "croai_id": "211",
-   "name": "ASEE",
-   "website": "https://see.asseco.com/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Service Providers"
-   ],
-   "razlog": "web: nema OIB-a; ime: kratko i strana domena (asee-d-o-o)"
-  },
-  {
-   "croai_id": "590",
-   "name": "AskHandle",
-   "website": "https://hr.askhandle.com/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Customer Communication"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
    "croai_id": "565",
    "name": "Astro Synapse",
    "website": "https://astrosynapse.ai/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Service Providers"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "192",
-   "name": "Atos",
-   "website": "https://atos.net/hr/hrvatska",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Service Providers"
-   ],
-   "razlog": "web: nema OIB-a; ime: kratko i strana domena (atos-d-o-o)"
-  },
-  {
-   "croai_id": "171",
-   "name": "Atron",
-   "website": "https://www.atron.com/en/home",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Mobility"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "180",
-   "name": "AVL",
-   "website": "https://www.avl.com/en",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Mobility"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "421",
-   "name": "Axians",
-   "website": "https://www.axians.hr/",
    "grupa": "Startups & Companies",
    "kategorije": [
     "Service Providers"
@@ -371,47 +185,9 @@
    "razlog": "web: nema OIB-a"
   },
   {
-   "croai_id": "234",
-   "name": "BIRD inkubator za analitiku i AI",
-   "website": "https://bird-incubator.com/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Accelerators & Incubators & Investors"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "419",
-   "name": "Bizarro Fintech Solutions",
-   "website": "https://www.bizarrofintech.com/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "FinTech & Insurtech"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
    "croai_id": "317",
    "name": "Bounding Box",
    "website": "https://bounding-box.ai/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Conferences & Meetups"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "434",
-   "name": "Bruketa&Žinić&Grey",
-   "website": "https://bruketa-zinic.com/",
-   "grupa": "Early Adopters",
-   "kategorije": [],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "309",
-   "name": "Bug Future Show",
-   "website": "https://bfs.bug.hr/",
    "grupa": "Enablers & Extended Ecosystem",
    "kategorije": [
     "Conferences & Meetups"
@@ -479,36 +255,6 @@
    "razlog": "web: nema OIB-a"
   },
   {
-   "croai_id": "306",
-   "name": "CARNET",
-   "website": "www.carnet.hr",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Public"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "310",
-   "name": "Carnet Users Conference",
-   "website": "https://www.carnet.hr/en/usluga/carnet-users-conference-cuc/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Conferences & Meetups"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "332",
-   "name": "Centar za društvene inovacije i održivi razvoj (CEDIOR)",
-   "website": "https://cedior.org/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Organizations & Communities"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
    "croai_id": "295",
    "name": "Centre for research of digital transformation - CREDO",
    "website": "https://credo.unidu.hr/index.php/en/",
@@ -517,26 +263,6 @@
     "Research"
    ],
    "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "560",
-   "name": "Chatbot",
-   "website": "https://chatbot.hr",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "EduTech"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "113",
-   "name": "Circuitmess",
-   "website": "https://circuitmess.com/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "EduTech"
-   ],
-   "razlog": "web: nema OIB-a; ime: 2 profila"
   },
   {
    "croai_id": "61",
@@ -569,44 +295,6 @@
    "razlog": "web: nema OIB-a"
   },
   {
-   "croai_id": "146",
-   "name": "Coffee Cloud",
-   "website": "https://www.coffeecloud.co/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Hospitality & Tourism"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "424",
-   "name": "Compass AI",
-   "website": "https://compassapp.ai/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "FinTech & Insurtech"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "582",
-   "name": "Comsysto Reply",
-   "website": "https://www.comsystoreply.de/en",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Service Providers"
-   ],
-   "razlog": "web: nema OIB-a; ime: 2 profila"
-  },
-  {
-   "croai_id": "435",
-   "name": "Croatia osiguranje",
-   "website": "https://crosig.hr/",
-   "grupa": "Early Adopters",
-   "kategorije": [],
-   "razlog": "web: nema OIB-a"
-  },
-  {
    "croai_id": "57",
    "name": "Crop Shepherd (robot PASTIR)",
    "website": "https://www.cropshepherd.com/",
@@ -623,16 +311,6 @@
    "grupa": "Enablers & Extended Ecosystem",
    "kategorije": [
     "Organizations & Communities"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "286",
-   "name": "CRTA Regional Center of Excellence for Robotic Technologies (CRTA) @FSB",
-   "website": "https://crta.fsb.hr/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Research"
    ],
    "razlog": "web: nema OIB-a"
   },
@@ -697,16 +375,6 @@
    "razlog": "web: nema OIB-a"
   },
   {
-   "croai_id": "608",
-   "name": "DATUM",
-   "website": "www.datumagent.ai",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Platforms & Infrastructure"
-   ],
-   "razlog": "web: nema OIB-a; ime: kratko i strana domena (datum-d-o-o)"
-  },
-  {
    "croai_id": "422",
    "name": "Daytona",
    "website": "https://www.daytona.io/",
@@ -717,52 +385,12 @@
    "razlog": "web: nema OIB-a"
   },
   {
-   "croai_id": "573",
-   "name": "DeepQ",
-   "website": "https://deepq.io",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Cybersecurity"
-   ],
-   "razlog": "web: nema OIB-a; ime: kratko i strana domena (deepq-d-o-o)"
-  },
-  {
-   "croai_id": "68",
-   "name": "Device art festival",
-   "website": "http://www.kontejner.org/projekti/device_art-festival/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Art"
-   ],
-   "razlog": "web: više OIB-a (44933468186, 35488530816)"
-  },
-  {
    "croai_id": "327",
    "name": "Digital Labin",
    "website": "https://digital-labin.com/",
    "grupa": "Enablers & Extended Ecosystem",
    "kategorije": [
     "Conferences & Meetups"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "227",
-   "name": "Dino Lab",
-   "website": "https://dinolab.hr/abous-us/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Smart Cities & Homes"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "402",
-   "name": "dSPACE",
-   "website": "https://www.dspace.com/en/pub/home.cfm",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Mobility"
    ],
    "razlog": "web: nema OIB-a"
   },
@@ -787,36 +415,6 @@
    "razlog": "web: nema OIB-a"
   },
   {
-   "croai_id": "297",
-   "name": "Efzg",
-   "website": "https://www.efzg.unizg.hr/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Research"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "498",
-   "name": "Eleks",
-   "website": "https://eleks.com/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Service Providers"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "609",
-   "name": "Elixirr Digital",
-   "website": "https://www.elixirrdigital.com/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Service Providers"
-   ],
-   "razlog": "web: nema OIB-a; ime: 2 profila"
-  },
-  {
    "croai_id": "237",
    "name": "Enterprise Europe Network",
    "website": "https://www.een.hr/",
@@ -835,14 +433,6 @@
    "razlog": "nema geokoda"
   },
   {
-   "croai_id": "436",
-   "name": "Erste Bank",
-   "website": "https://www.erstebank.hr/hr/gradjanstvo",
-   "oib": "28640228308",
-   "adresa": "ARSENIJA BOLJEVIĆA 2/A, PODGORICA",
-   "razlog": "nema geokoda"
-  },
-  {
    "croai_id": "323",
    "name": "EU AI Forum",
    "website": "https://www.european-ai-forum.com/",
@@ -850,14 +440,6 @@
    "kategorije": [
     "Conferences & Meetups"
    ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "583",
-   "name": "EuroBIZ Centar",
-   "website": "https://eurobiz-centar-mttj023.gamma.site/",
-   "grupa": "Early Adopters",
-   "kategorije": [],
    "razlog": "web: nema OIB-a"
   },
   {
@@ -871,34 +453,6 @@
    "razlog": "web: nema OIB-a"
   },
   {
-   "croai_id": "456",
-   "name": "EY",
-   "website": "https://www.ey.com/hr_hr",
-   "grupa": "Early Adopters",
-   "kategorije": [],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "541",
-   "name": "Fakultet informatike i digitalnih tehnologija",
-   "website": "https://www.inf.uniri.hr/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Research"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "125",
-   "name": "Farseer",
-   "website": "https://www.farseer.io/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "FinTech & Insurtech"
-   ],
-   "razlog": "web: nema OIB-a; ime: 2 profila"
-  },
-  {
    "croai_id": "238",
    "name": "Feelsgood Capital",
    "website": "https://www.feelsgoodcapital.com/",
@@ -909,32 +463,12 @@
    "razlog": "web: nema OIB-a"
   },
   {
-   "croai_id": "298",
-   "name": "FFZG",
-   "website": "https://web2020.ffzg.unizg.hr/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Research"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
    "croai_id": "239",
    "name": "Fil Rouge Capital",
    "website": "https://filrougecapital.com/",
    "grupa": "Enablers & Extended Ecosystem",
    "kategorije": [
     "Accelerators & Incubators & Investors"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "296",
-   "name": "FOI",
-   "website": "https://www.foi.unizg.hr/en",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Research"
    ],
    "razlog": "web: nema OIB-a"
   },
@@ -989,42 +523,12 @@
    "razlog": "web: nema OIB-a"
   },
   {
-   "croai_id": "181",
-   "name": "Gepek",
-   "website": "https://thegepek.com/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Mobility"
-   ],
-   "razlog": "web: nema OIB-a; ime: kratko i strana domena (gepek-d-o-o)"
-  },
-  {
-   "croai_id": "73",
-   "name": "Gideon",
-   "website": "https://www.gideonbros.ai/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Robotics"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
    "croai_id": "404",
    "name": "Global AI Ethics Institute",
    "website": "https://globalethics.ai/",
    "grupa": "Enablers & Extended Ecosystem",
    "kategorije": [
     "Organizations & Communities"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "193",
-   "name": "Global logic",
-   "website": "https://www.globallogic.com/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Service Providers"
    ],
    "razlog": "web: nema OIB-a"
   },
@@ -1047,122 +551,6 @@
    "razlog": "web: nema OIB-a"
   },
   {
-   "croai_id": "240",
-   "name": "HAMAG-BICRO",
-   "website": "https://hamagbicro.hr/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Accelerators & Incubators & Investors"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "349",
-   "name": "HealthHub",
-   "website": "https://www.healthhub.hr/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Organizations & Communities"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "67",
-   "name": "Heritage Museum of Drenova, Zavičajni muzej Drenove",
-   "website": "https://bezgranica.hr/zavicajni-muzej-drenove-2/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Art"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "337",
-   "name": "HGK ICT",
-   "website": "https://www.hgk.hr/s-industriju/o-udruzenju-za-informacijske-tehnologije",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Organizations & Communities"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "439",
-   "name": "HOK - Hrvatska odvjetnička komora",
-   "website": "http://www.hok-cba.hr/",
-   "grupa": "Early Adopters",
-   "kategorije": [],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "591",
-   "name": "Hrvatska agencija za civilno zrakoplovstvo",
-   "website": "http://www.ccaa.hr",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Public"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "440",
-   "name": "Hrvatski Telekom d.d.",
-   "website": "https://www.hrvatskitelekom.hr/",
-   "grupa": "Early Adopters",
-   "kategorije": [],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "347",
-   "name": "I.osnovna skola Čakovec",
-   "website": "http://os-prva-ck.skole.hr/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Organizations & Communities"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "553",
-   "name": "IAB Croatia",
-   "website": "https://iab-croatia.com/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Organizations & Communities"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "184",
-   "name": "IBM",
-   "website": "http://www.ibm.com",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Platforms & Infrastructure"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "288",
-   "name": "ICENT Innovation Centre Nikola Tesla @FER",
-   "website": "https://www.icent.hr/en/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Research"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "302",
-   "name": "ICT županija (Splitsko-dalmatinska)",
-   "website": "https://www.ictzupanija.hr/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Public"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
    "croai_id": "473",
    "name": "Idea Link",
    "website": "https://idealink.tech/",
@@ -1171,54 +559,6 @@
     "Service Providers"
    ],
    "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "162",
-   "name": "Identyum",
-   "website": "https://identyum.com/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Image & Video Processing"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "441",
-   "name": "Ina",
-   "website": "https://www.ina.hr/en/",
-   "grupa": "Early Adopters",
-   "kategorije": [],
-   "razlog": "web: nema OIB-a; ime: 3 profila"
-  },
-  {
-   "croai_id": "320",
-   "name": "Infobip Shift",
-   "website": "https://shift.infobip.com/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Conferences & Meetups"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "600",
-   "name": "InsiderCX",
-   "website": "https://www.insidercx.com/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Healthcare & Life Sciences"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "524",
-   "name": "Institut za umjetnu inteligenciju",
-   "website": "https://institutzaui.hr/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Organizations & Communities"
-   ],
-   "razlog": "web: OIB nije u info.BIZ-u"
   },
   {
    "croai_id": "400",
@@ -1247,16 +587,6 @@
    "grupa": "Enablers & Extended Ecosystem",
    "kategorije": [
     "Organizations & Communities"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "153",
-   "name": "Jenz",
-   "website": "https://jenz.app/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "HR & Law"
    ],
    "razlog": "web: nema OIB-a"
   },
@@ -1291,46 +621,6 @@
    "razlog": "web: nema OIB-a"
   },
   {
-   "croai_id": "343",
-   "name": "KIBEROne",
-   "website": "https://kiber-one.hr/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Organizations & Communities"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "601",
-   "name": "KIBERone",
-   "website": "https://kiber-one.hr/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "EduTech"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "499",
-   "name": "Koios",
-   "website": "https://koios.hr/#home",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Service Providers"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "65",
-   "name": "Kontejner Buro suvremene umjetničke prakse",
-   "website": "https://www.kontejner.org/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Art"
-   ],
-   "razlog": "web: više OIB-a (44933468186, 35488530816)"
-  },
-  {
    "croai_id": "312",
    "name": "KulenDayz",
    "website": "http://www.kulendayz.com/",
@@ -1351,34 +641,6 @@
    "razlog": "web: nema OIB-a"
   },
   {
-   "croai_id": "37",
-   "name": "Lebesgue",
-   "website": "https://www.lebesgue.io/",
-   "oib": "14434286463",
-   "adresa": "LITTLE FALLS DRIVE 251, WILMINGTON, NEW CASTLE COUNTY",
-   "razlog": "nema geokoda"
-  },
-  {
-   "croai_id": "319",
-   "name": "LegalTech",
-   "website": "https://legaltech.bug.hr/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Conferences & Meetups"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "394",
-   "name": "Legit",
-   "website": "https://legit.eu/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "HR & Law"
-   ],
-   "razlog": "web: nema OIB-a; ime: kratko i strana domena (legit-d-o-o)"
-  },
-  {
    "croai_id": "495",
    "name": "Leobit",
    "website": "https://leobit.com/",
@@ -1387,16 +649,6 @@
     "Service Providers"
    ],
    "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "369",
-   "name": "LIDER",
-   "website": "https://lidermedia.hr/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Media"
-   ],
-   "razlog": "web: nema OIB-a; ime: 3 profila"
   },
   {
    "croai_id": "259",
@@ -1429,16 +681,6 @@
    "razlog": "web: nema OIB-a"
   },
   {
-   "croai_id": "314",
-   "name": "LUMEN by eStudent",
-   "website": "https://estudent.hr/projekti/lumen-data-science",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Conferences & Meetups"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
    "croai_id": "415",
    "name": "Marenda",
    "website": "https://marenda.app/",
@@ -1447,26 +689,6 @@
     "Healthcare & Life Sciences"
    ],
    "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "486",
-   "name": "Martian&Machine",
-   "website": "https://martian.ventures/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Accelerators & Incubators & Investors"
-   ],
-   "razlog": "web: nema OIB-a; ime: 2 profila"
-  },
-  {
-   "croai_id": "134",
-   "name": "MCS",
-   "website": "https://mcs.hr/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Healthcare & Life Sciences"
-   ],
-   "razlog": "web: nema OIB-a; ime: 2 profila"
   },
   {
    "croai_id": "315",
@@ -1489,52 +711,12 @@
    "razlog": "web: OIB nije u info.BIZ-u"
   },
   {
-   "croai_id": "99",
-   "name": "MemGraph",
-   "website": "https://memgraph.com/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Data Analytics"
-   ],
-   "razlog": "web: nema OIB-a; ime: 2 profila"
-  },
-  {
    "croai_id": "257",
    "name": "Meta Change Capital",
    "website": "https://www.linkedin.com/company/meta-change-capital/",
    "grupa": "Enablers & Extended Ecosystem",
    "kategorije": [
     "Accelerators & Incubators & Investors"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "143",
-   "name": "Metabelly",
-   "website": "https://metabelly.com/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Healthcare & Life Sciences"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "244",
-   "name": "Međunarodni centar za crowdfunding (ICFC)",
-   "website": "https://crowdfundingvision.com/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Accelerators & Incubators & Investors"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "185",
-   "name": "Microsoft",
-   "website": "https://www.microsoft.com/hr-hr",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Platforms & Infrastructure"
    ],
    "razlog": "web: nema OIB-a"
   },
@@ -1549,58 +731,12 @@
    "razlog": "web: nema OIB-a"
   },
   {
-   "croai_id": "86",
-   "name": "Mindsmiths",
-   "website": "https://mindsmiths.com/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Customer Communication"
-   ],
-   "razlog": "web: nema OIB-a; ime: 2 profila"
-  },
-  {
-   "croai_id": "527",
-   "name": "Money Motion",
-   "website": "https://www.money-motion.eu/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Conferences & Meetups"
-   ],
-   "razlog": "web: više OIB-a (17877731232, 21447846241, 30513194761)"
-  },
-  {
-   "croai_id": "476",
-   "name": "Mplus",
-   "website": "https://mplusgroup.eu/",
-   "grupa": "Early Adopters",
-   "kategorije": [],
-   "razlog": "web: samo neoznačen broj"
-  },
-  {
    "croai_id": "39",
    "name": "Mr.Popper by Marteching",
    "website": "https://mr-popper.com/",
    "grupa": "Startups & Companies",
    "kategorije": [
     "Adtech & Sales & PR"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "467",
-   "name": "mStart",
-   "website": "https://www.mstart.hr/",
-   "grupa": "Early Adopters",
-   "kategorije": [],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "75",
-   "name": "MVT solutions",
-   "website": "https://www.mvt-solutions.com/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Robotics"
    ],
    "razlog": "web: nema OIB-a"
   },
@@ -1625,26 +761,6 @@
    "razlog": "web: nema OIB-a"
   },
   {
-   "croai_id": "265",
-   "name": "NetHub",
-   "website": "https://nethub.hr/o-nama/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Accelerators & Incubators & Investors"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "206",
-   "name": "Newfire",
-   "website": "https://www.newfireglobal.com/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Service Providers"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
    "croai_id": "79",
    "name": "Neyho",
    "website": "https://neyho.com/",
@@ -1655,32 +771,12 @@
    "razlog": "web: nema OIB-a"
   },
   {
-   "croai_id": "40",
-   "name": "Njuskalo.hr",
-   "website": "https://www.njuskalo.hr/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Adtech & Sales & PR"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
    "croai_id": "416",
    "name": "Novela Medica",
    "website": "https://www.zicer.hr/tim-novela-medica-ce-ostaviti-trajni-trag-u-napretku-medicine/",
    "grupa": "Startups & Companies",
    "kategorije": [
     "Healthcare & Life Sciences"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "522",
-   "name": "Novo Gallery",
-   "website": "https://novogallery.net/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Art"
    ],
    "razlog": "web: nema OIB-a"
   },
@@ -1702,14 +798,6 @@
    "kategorije": [
     "Accelerators & Incubators & Investors"
    ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "444",
-   "name": "Odašiljači i veze d.o.o. (OIV)",
-   "website": "https://oiv.hr/hr/naslovnica/",
-   "grupa": "Early Adopters",
-   "kategorije": [],
    "razlog": "web: nema OIB-a"
   },
   {
@@ -1741,42 +829,6 @@
    "razlog": "web: nema OIB-a"
   },
   {
-   "croai_id": "459",
-   "name": "Optika ANDA",
-   "website": "https://optika-anda.com/",
-   "grupa": "Early Adopters",
-   "kategorije": [],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "176",
-   "name": "OptimoRoute",
-   "website": "https://optimoroute.com/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Mobility"
-   ],
-   "razlog": "web: nema OIB-a; ime: 2 profila"
-  },
-  {
-   "croai_id": "186",
-   "name": "Oracle",
-   "website": "https://www.oracle.com/hr/index.html",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Platforms & Infrastructure"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "445",
-   "name": "Orbico",
-   "website": "https://lp.orbico.hr/",
-   "grupa": "Early Adopters",
-   "kategorije": [],
-   "razlog": "web: nema OIB-a; ime: 3 profila"
-  },
-  {
    "croai_id": "150",
    "name": "Orion Labs",
    "website": "https://www.orionlabs.io/",
@@ -1784,70 +836,6 @@
    "kategorije": [
     "Hospitality & Tourism"
    ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "80",
-   "name": "Orqa FPV",
-   "website": "https://orqafpv.com/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Robotics"
-   ],
-   "razlog": "web: samo neoznačen broj"
-  },
-  {
-   "croai_id": "447",
-   "name": "PBZ",
-   "website": "https://www.pbz.hr/en/gradjani",
-   "grupa": "Early Adopters",
-   "kategorije": [],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "253",
-   "name": "PICS predinkubator",
-   "website": "https://www.ictzupanija.hr/predinkubator",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Accelerators & Incubators & Investors"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "299",
-   "name": "PMF",
-   "website": "https://www.pmf.unizg.hr/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Research"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "262",
-   "name": "Poduzetnički inkubator Vinkovci",
-   "website": "https://www.inkubator-vinkovci.eu/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Accelerators & Incubators & Investors"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "584",
-   "name": "Poliklinika za dječje bolesti Sabol",
-   "website": "https://poliklinika-sabol.hr/",
-   "grupa": "Early Adopters",
-   "kategorije": [],
-   "razlog": "web: više OIB-a (49081771837, 95346564252)"
-  },
-  {
-   "croai_id": "449",
-   "name": "Porobija i Špoljarić",
-   "website": "https://www.psod.hr/",
-   "grupa": "Early Adopters",
-   "kategorije": [],
    "razlog": "web: nema OIB-a"
   },
   {
@@ -1871,86 +859,12 @@
    "razlog": "web: nema OIB-a"
   },
   {
-   "croai_id": "90",
-   "name": "Productive",
-   "website": "https://productive.io/about-us/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Automation"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "461",
-   "name": "PWC",
-   "website": "https://www.pwc.hr/hr.html",
-   "grupa": "Early Adopters",
-   "kategorije": [],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "410",
-   "name": "Pythagora",
-   "website": "https://www.pythagora.ai/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "DevTools & Frameworks"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "389",
-   "name": "Qubinets",
-   "website": "https://qubinets.com/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "DevTools & Frameworks"
-   ],
-   "razlog": "web: nema OIB-a; ime: 2 profila"
-  },
-  {
-   "croai_id": "464",
-   "name": "Radiokirurgija Zagreb",
-   "website": "https://radiochirurgiazagreb.com/hr/odjeli/radiologija",
-   "grupa": "Early Adopters",
-   "kategorije": [],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "385",
-   "name": "Rearm",
-   "website": "https://rearm.co/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Automation"
-   ],
-   "razlog": "web: nema OIB-a; ime: kratko i strana domena (rearm-d-o-o)"
-  },
-  {
-   "croai_id": "43",
-   "name": "Repsly",
-   "website": "https://www.repsly.com/",
-   "oib": "38731062435",
-   "adresa": "ORANGE STREET 1209, NEW CASTLE, WILMINGTON",
-   "razlog": "nema geokoda"
-  },
-  {
    "croai_id": "128",
    "name": "Revuto",
    "website": "https://revuto.com/",
    "grupa": "Startups & Companies",
    "kategorije": [
     "FinTech & Insurtech"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "178",
-   "name": "Rimac Automobili",
-   "website": "https://www.rimac-automobili.com/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Mobility"
    ],
    "razlog": "web: nema OIB-a"
   },
@@ -1965,62 +879,12 @@
    "razlog": "web: nema OIB-a"
   },
   {
-   "croai_id": "187",
-   "name": "SAP",
-   "website": "https://www.sap.com/croatia/index.html",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Platforms & Infrastructure"
-   ],
-   "razlog": "web: nema OIB-a; ime: 3 profila"
-  },
-  {
    "croai_id": "399",
    "name": "SENDD by TIS Grupa",
    "website": "https://sendd.eu/",
    "grupa": "Startups & Companies",
    "kategorije": [
     "Healthcare & Life Sciences"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "533",
-   "name": "SheepAI Hackathon",
-   "website": "https://www.sheepai.app/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Conferences & Meetups"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "215",
-   "name": "Siemens",
-   "website": "https://www.siemens.com/global/en.html",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Service Providers"
-   ],
-   "razlog": "web: nema OIB-a; ime: 2 profila"
-  },
-  {
-   "croai_id": "51",
-   "name": "Sihipshape",
-   "website": "https://shipshape-solutions.com/hr",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Adtech & Sales & PR"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "516",
-   "name": "Silicon Gardens",
-   "website": "https://silicongardens.com/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Accelerators & Incubators & Investors"
    ],
    "razlog": "web: nema OIB-a"
   },
@@ -2055,36 +919,6 @@
    "razlog": "web: nema OIB-a"
   },
   {
-   "croai_id": "81",
-   "name": "SPAN",
-   "website": "https://www.span.eu/hr/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Service Providers"
-   ],
-   "razlog": "web: nema OIB-a; ime: 4 profila"
-  },
-  {
-   "croai_id": "606",
-   "name": "Span",
-   "website": "https://www.span.eu/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Service Providers"
-   ],
-   "razlog": "web: nema OIB-a; ime: 4 profila"
-  },
-  {
-   "croai_id": "510",
-   "name": "Speck agency",
-   "website": "https://speck.agency/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Service Providers"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
    "croai_id": "342",
    "name": "Split Tech City",
    "website": "https://en.split-techcity.com/",
@@ -2093,16 +927,6 @@
     "Organizations & Communities"
    ],
    "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "387",
-   "name": "SplxAI",
-   "website": "https://splx.ai/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Cybersecurity"
-   ],
-   "razlog": "web: nema OIB-a; ime: 2 profila"
   },
   {
    "croai_id": "247",
@@ -2125,52 +949,12 @@
    "razlog": "web: više OIB-a (81127230861, 99895959831)"
   },
   {
-   "croai_id": "517",
-   "name": "SQ Capital",
-   "website": "https://www.sqc.hr/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Accelerators & Incubators & Investors"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
    "croai_id": "324",
    "name": "Startup Europe Regatta",
    "website": "https://startupeuroperegatta.com/",
    "grupa": "Enablers & Extended Ecosystem",
    "kategorije": [
     "Conferences & Meetups"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "260",
-   "name": "Studentski poduzetnicki inkubator",
-   "website": "http://spi.efst.hr/kontakt/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Accelerators & Incubators & Investors"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "497",
-   "name": "Sulie",
-   "website": "https://sulie.co/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Data Analytics"
-   ],
-   "razlog": "web: nema OIB-a; ime: kratko i strana domena (sulie-d-o-o)"
-  },
-  {
-   "croai_id": "282",
-   "name": "Sveuciliste u Dubrovniku",
-   "website": "https://www.unidu.hr/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Universities & Educational Institutions"
    ],
    "razlog": "web: nema OIB-a"
   },
@@ -2185,40 +969,12 @@
    "razlog": "web: nema OIB-a; ime: 2 profila"
   },
   {
-   "croai_id": "89",
-   "name": "Taia Translations",
-   "website": "https://taia.io/",
-   "oib": "99381589933",
-   "adresa": "SHELTON STREET 71/75, WC2H 9JQ COVENT GARDEN",
-   "razlog": "nema geokoda"
-  },
-  {
-   "croai_id": "518",
-   "name": "Tech Park Varaždin",
-   "website": "https://www.techpark.hr/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Accelerators & Incubators & Investors"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
    "croai_id": "300",
    "name": "Tehnički fakultet Pula/Laboratorij za robotiku i umjetnu inteligenciju",
    "website": "https://tfpu.unipu.hr/tfpu/znanost_i_istrazivanja/laboratoriji/laboratorij_za_robotiku_i_umjetnu_inteligenciju",
    "grupa": "Enablers & Extended Ecosystem",
    "kategorije": [
     "Research"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "403",
-   "name": "Tehnološki park Split",
-   "website": "https://tps.com.hr/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Accelerators & Incubators & Investors"
    ],
    "razlog": "web: nema OIB-a"
   },
@@ -2243,26 +999,6 @@
    "razlog": "web: nema OIB-a"
   },
   {
-   "croai_id": "151",
-   "name": "Trakbar",
-   "website": "https://www.trakbar.com/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Hospitality & Tourism"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "564",
-   "name": "Treblle",
-   "website": "https://treblle.com/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "DevTools & Frameworks"
-   ],
-   "razlog": "web: nema OIB-a; ime: 3 profila"
-  },
-  {
    "croai_id": "382",
    "name": "Trending topics",
    "website": "https://www.trendingtopics.eu/",
@@ -2281,36 +1017,6 @@
     "Art"
    ],
    "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "248",
-   "name": "Trokut - šibenski IT inkubator",
-   "website": "https://trokut.eu/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Accelerators & Incubators & Investors"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "534",
-   "name": "Trotoar galerija",
-   "website": "https://trotoar-galerija.hr/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Art"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "411",
-   "name": "Turneo",
-   "website": "https://www.turneo.com/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Hospitality & Tourism"
-   ],
-   "razlog": "web: nema OIB-a; ime: 2 profila"
   },
   {
    "croai_id": "478",
@@ -2333,26 +1039,6 @@
    "razlog": "web: nema OIB-a"
   },
   {
-   "croai_id": "546",
-   "name": "University North",
-   "website": "https://www.unin.hr/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Universities & Educational Institutions"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "271",
-   "name": "University of Rijeka",
-   "website": "https://uniri.hr/en/home/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Universities & Educational Institutions"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
    "croai_id": "525",
    "name": "Unlock RAB",
    "website": "https://www.unlock-rab.com/",
@@ -2361,34 +1047,6 @@
     "Conferences & Meetups"
    ],
    "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "539",
-   "name": "Valcon",
-   "website": "https://valcon.com/hr/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Service Providers"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "210",
-   "name": "Vertiv",
-   "website": "https://www.vertiv.com/en-emea/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Service Providers"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "397",
-   "name": "Very Big Things",
-   "website": "https://www.verybigthings.com/",
-   "oib": "82304398417",
-   "adresa": "2755 EAST OAKLAND PARK BOULEVARD, SUITE 301, 33306 FORT LAUDERDALE",
-   "razlog": "nema geokoda"
   },
   {
    "croai_id": "116",
@@ -2411,14 +1069,6 @@
    "razlog": "web: nema OIB-a"
   },
   {
-   "croai_id": "454",
-   "name": "Vukmir i suradnici d.o.o.",
-   "website": "https://www.vukmir.net/our-team/",
-   "grupa": "Early Adopters",
-   "kategorije": [],
-   "razlog": "web: nema OIB-a"
-  },
-  {
    "croai_id": "250",
    "name": "WBAF",
    "website": "https://croatia.wbaforum.org/",
@@ -2427,16 +1077,6 @@
     "Accelerators & Incubators & Investors"
    ],
    "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "360",
-   "name": "Wespa",
-   "website": "https://wespa-spaces.hr/en/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Organizations & Communities"
-   ],
-   "razlog": "web: više OIB-a (64759014334, 60367409975)"
   },
   {
    "croai_id": "353",
@@ -2449,16 +1089,6 @@
    "razlog": "web: nema OIB-a"
   },
   {
-   "croai_id": "571",
-   "name": "WooCommerce messaging",
-   "website": "https://www.infobip.com/docs/integrations/woocommerce-messaging",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Customer Communication"
-   ],
-   "razlog": "web: OIB nije u info.BIZ-u"
-  },
-  {
    "croai_id": "549",
    "name": "WoomAI",
    "website": "https://hellowoom.io/",
@@ -2467,14 +1097,6 @@
     "Customer Communication"
    ],
    "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "455",
-   "name": "ZABA",
-   "website": "https://www.zaba.hr/home/",
-   "grupa": "Early Adopters",
-   "kategorije": [],
-   "razlog": "web: nema OIB-a; ime: 2 profila"
   },
   {
    "croai_id": "526",
@@ -2492,16 +1114,6 @@
    "website": "https://zadom.hr",
    "grupa": "Early Adopters",
    "kategorije": [],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "316",
-   "name": "Zagreb Connect",
-   "website": "https://zagrebconnect.zicer.hr/index.en.html",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Conferences & Meetups"
-   ],
    "razlog": "web: nema OIB-a"
   },
   {
@@ -2555,16 +1167,6 @@
    "razlog": "web: nema OIB-a"
   },
   {
-   "croai_id": "231",
-   "name": "Zuluhood",
-   "website": "https://www.zuluhood.com/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Smart Cities & Homes"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
    "croai_id": "258",
    "name": "æternity Ventures",
    "website": "https://aeventures.io/",
@@ -2575,5 +1177,816 @@
    "razlog": "web: nema OIB-a"
   }
  ],
- "geo_conflicts": []
+ "geo_conflicts": [
+  {
+   "croai_id": "269",
+   "name": "RIT Croatia",
+   "oib": "24958681731",
+   "naziv": "RIT CROATIA",
+   "fina_adresa": "Don Frana Bulića 6, 20000 Dubrovnik",
+   "google_adresa": "Ul. Damira Tomljanovića 15, 10000, Zagreb",
+   "km": 388.0
+  },
+  {
+   "croai_id": "457",
+   "name": "Studenac",
+   "oib": "02023029348",
+   "naziv": "STUDENAC društvo s ograničenom odgovornošću za trgovinu i proizvodnju",
+   "fina_adresa": "Četvrt Ribnjak 17, 21310 Omiš",
+   "google_adresa": "Odranska ul. 88, 10410, Donja Lomnica",
+   "km": 258.4
+  },
+  {
+   "croai_id": "405",
+   "name": "Veleučilište ASPIRA",
+   "oib": "14885934105",
+   "naziv": "VELEUČILIŠTE ASPIRA",
+   "fina_adresa": "Ulica Mike Tripala 6, 21000 Split",
+   "google_adresa": "Ul. Vjekoslava Heinzela 62, 10000, Zagreb",
+   "km": 256.9
+  },
+  {
+   "croai_id": "446",
+   "name": "OTP",
+   "oib": "52508873833",
+   "naziv": "OTP banka dioničko društvo",
+   "fina_adresa": "Ulica Domovinskog rata 61, 21000 Split",
+   "google_adresa": "Ul. kneza Ljudevita Posavskog 45, 10410, Velika Gorica",
+   "km": 246.2
+  },
+  {
+   "croai_id": "149",
+   "name": "Lemax",
+   "oib": "05099173092",
+   "naziv": "LEMAX d.o.o. za proizvodnju, građevinarstvo, trgovinu i usluge, turistička agencija",
+   "fina_adresa": "Ul. 8. udarne dalmat. brigade 8, 22000 Šibenik",
+   "google_adresa": "Remetinečka cesta 139, 10000, Zagreb",
+   "km": 227.3
+  },
+  {
+   "croai_id": "251",
+   "name": "ZICER",
+   "oib": "46781982801",
+   "naziv": "ZICER jednostavno društvo s ograničenom odgovornošću za trgovinu i usluge",
+   "fina_adresa": "Ulica kneza Višeslava 11, 31107 Višnjevac",
+   "google_adresa": "Pav. 12, Avenija Dubrovnik 15, 10000, Zagreb",
+   "km": 206.2
+  },
+  {
+   "croai_id": "430",
+   "name": "Adris",
+   "oib": "82023167977",
+   "naziv": "ADRIS GRUPA dioničko društvo za upravljanje i ulaganje",
+   "fina_adresa": "Nazorova ulica - Riva Nazor 1, 52210 Rovinj - Rovigno",
+   "google_adresa": "Ul. Vatroslava Jagića 33, 10000, Zagreb",
+   "km": 198.5
+  },
+  {
+   "croai_id": "84",
+   "name": "Infobip",
+   "oib": "29756659895",
+   "naziv": "INFOBIP d.o.o. za informatičke usluge",
+   "fina_adresa": "Istarska ulica - Via dell'Istria 157, 52215 Vodnjan",
+   "google_adresa": "Utinjska ul. 29, 10000, Zagreb",
+   "km": 187.4
+  },
+  {
+   "croai_id": "571",
+   "name": "WooCommerce messaging",
+   "oib": "29756659895",
+   "naziv": "INFOBIP d.o.o. za informatičke usluge",
+   "fina_adresa": "Istarska ulica - Via dell'Istria 157, Vodnjan",
+   "google_adresa": "Utinjska ul. 29, 10000, Zagreb",
+   "km": 187.4
+  },
+  {
+   "croai_id": "335",
+   "name": "Croatian Independent Software Exporters (CISEx)",
+   "oib": "56261414492",
+   "naziv": "UNIT HRVATSKA",
+   "fina_adresa": "VRBANI 4, 10104 ZAGREB",
+   "google_adresa": "Koturaška ul. 47, 10000, Zagreb",
+   "km": 180.3
+  },
+  {
+   "croai_id": "45",
+   "name": "Sofascore",
+   "oib": "96366258208",
+   "naziv": "Sofa IT d.o.o. za informatiku",
+   "fina_adresa": "Vrbani 4, 10104 Zagreb",
+   "google_adresa": "Vrbani 4, 10000, Zagreb",
+   "km": 175.7
+  },
+  {
+   "croai_id": "115",
+   "name": "STEMI",
+   "oib": "91713184849",
+   "naziv": "STEMI d. o. o. za informatičku djelatnost",
+   "fina_adresa": "Ulica Radmile Matejčić 10, 51000 Rijeka",
+   "google_adresa": "Mihovljanska ul. 25, 10000, Zagreb",
+   "km": 126.8
+  },
+  {
+   "croai_id": "488",
+   "name": "Montelektro",
+   "oib": "45522650856",
+   "naziv": "MONTELEKTRO automatizacija i elektrotehnički inženjering, d. o. o.",
+   "fina_adresa": "Kudeji 53, 51215 Kastav",
+   "google_adresa": "Industrijska ul. 12, 10431, Sveta Nedelja",
+   "km": 117.7
+  },
+  {
+   "croai_id": "587",
+   "name": "Autegra",
+   "oib": "27496223500",
+   "naziv": "AUTEGRA društvo s ograničenom odgovornošću za proizvodnju, trgovinu i usluge",
+   "fina_adresa": "Milke Trnine 4, 43280 Garešnica",
+   "google_adresa": "Cebini ul. 28, 10000, Buzin",
+   "km": 76.5
+  },
+  {
+   "croai_id": "118",
+   "name": "ABC TECH ZAGREB d.o.o.",
+   "oib": "05293531061",
+   "naziv": "ABC TECH ZAGREB društvo s ograničenom odgovornošću za računalne djelatnosti",
+   "fina_adresa": "Ulica grada Vukovara 284, 10000 Zagreb",
+   "google_adresa": "Međimurska ul. 28, 42000, Varaždin",
+   "km": 62.7
+  },
+  {
+   "croai_id": "515",
+   "name": "Infinum ventures",
+   "oib": "97147456048",
+   "naziv": "INFINUM društvo s ograničenom odgovornošću za računalne djelatnosti i usluge",
+   "fina_adresa": "Mala Švarča 23, 47000 Karlovac",
+   "google_adresa": "Strojarska cesta 22, 10000, Zagreb",
+   "km": 50.7
+  },
+  {
+   "croai_id": "199",
+   "name": "Infinum",
+   "oib": "97147456048",
+   "naziv": "INFINUM društvo s ograničenom odgovornošću za računalne djelatnosti i usluge",
+   "fina_adresa": "Mala Švarča 23, 47000 Karlovac",
+   "google_adresa": "Strojarska cesta 22, 10000, Zagreb",
+   "km": 50.7
+  },
+  {
+   "croai_id": "491",
+   "name": "Pontis technology",
+   "oib": "68533008080",
+   "naziv": "Pontis Technology društvo s ograničenom odgovornošću za usluge",
+   "fina_adresa": "Savska cesta 144/A, 10110 Zagreb",
+   "google_adresa": "Savska cesta 144A, 10110, Zagreb",
+   "km": 37.2
+  },
+  {
+   "croai_id": "443",
+   "name": "Klinika Magdalena",
+   "oib": "51835157380",
+   "naziv": "MAGDALENA - klinika za kardiovaskularne bolesti Medicinskog fakulteta Sveučilišta J.J. Strossmayera u Osijeku",
+   "fina_adresa": "Ulica Ljudevita Gaja 2, 49217 Krapinske Toplice",
+   "google_adresa": "Radnička cesta 32, 10000, Zagreb",
+   "km": 34.5
+  },
+  {
+   "croai_id": "44",
+   "name": "Seek and hit",
+   "oib": "88526453580",
+   "naziv": "UBER d.o.o. za informatičke usluge",
+   "fina_adresa": "Prhovine 2, 21226 Vinišće",
+   "google_adresa": "TC Joker, 3. kat, Put Brodarice 6, 21000, Split",
+   "km": 27.2
+  },
+  {
+   "croai_id": "54",
+   "name": "Spona",
+   "oib": "72317551155",
+   "naziv": "TOP DIGITAL društvo s ograničenom odgovornošću za usluge",
+   "fina_adresa": "Ulica Vladimira Nazora 23, 49210 Zabok",
+   "google_adresa": "Ul. Ivana Lučića 2a, 10000, Zagreb",
+   "km": 26.5
+  },
+  {
+   "croai_id": "166",
+   "name": "Protostar Labs",
+   "oib": "46675049527",
+   "naziv": "PROTOSTAR LABS društvo s ograničenom odgovornošću za proizvodnju i usluge",
+   "fina_adresa": "Vijenac Salamona Henricha Gutmanna 4/B, 31551 Belišće",
+   "google_adresa": "Ribarska ul. 4, 31000, Osijek",
+   "km": 25.2
+  },
+  {
+   "croai_id": "507",
+   "name": "Scoop tech",
+   "oib": "06936315682",
+   "naziv": "Scoop Technologies d.o.o. za informatičke usluge",
+   "fina_adresa": "Dugoselska ulica 5, 10370 Rugvica",
+   "google_adresa": "Ul. Damira Tomljanovića Gavrana 13, 10000, Novi Zagreb - istok, Zagreb",
+   "km": 20.2
+  },
+  {
+   "croai_id": "451",
+   "name": "RBA",
+   "oib": "53056966535",
+   "naziv": "Raiffeisenbank Austria d.d.",
+   "fina_adresa": "Magazinska cesta 69, 10110 Zagreb",
+   "google_adresa": "Zagrebačka Ul. 44, 10410, Velika Gorica",
+   "km": 16.5
+  },
+  {
+   "croai_id": "432",
+   "name": "Atlantic grupa",
+   "oib": "71149912416",
+   "naziv": "ATLANTIC GRUPA dioničko društvo za unutarnju i vanjsku trgovinu",
+   "fina_adresa": "Miramarska cesta 23, 10000 Zagreb",
+   "google_adresa": "Zelena aleja 30, 10410, Vukovina",
+   "km": 15.9
+  },
+  {
+   "croai_id": "594",
+   "name": "FOR Automation",
+   "oib": "90316762748",
+   "naziv": "FOR Automation društvo s ograničenom odgovornošću za trgovinu i usluge",
+   "fina_adresa": "Ulica Većeslava Kolara 5, 10430 Samobor",
+   "google_adresa": "Petrovaradinska ul 1, 10000, Zagreb",
+   "km": 15.5
+  },
+  {
+   "croai_id": "178",
+   "name": "Rimac Automobili",
+   "oib": "53943536946",
+   "naziv": "Rimac Group d.o.o. za upravljanje društvima",
+   "fina_adresa": "Kerestinečka cesta 54, Kerestinec",
+   "google_adresa": "Ul. Buzinski krči, 10020, Buzin",
+   "km": 14.0
+  },
+  {
+   "croai_id": "453",
+   "name": "Tokić",
+   "oib": "74867487620",
+   "naziv": "TOKIĆ, trgovina, izvoz-uvoz, zastupanje i proizvodnja, dioničko društvo",
+   "fina_adresa": "Ulica 144. brigade Hrvatske vojske 1/A, 10360 Sesvete",
+   "google_adresa": "Ul. Andrije Kačića Miošića 90, 10410, Velika Gorica",
+   "km": 11.6
+  },
+  {
+   "croai_id": "76",
+   "name": "Proton EL d.o.o.",
+   "oib": "79590554595",
+   "naziv": "Proton EL d.o.o. za proizvodnju, trgovinu i usluge",
+   "fina_adresa": "Radnička cesta 177, 10135 Zagreb",
+   "google_adresa": "PETRIUS centar-4.kat, Radnička cesta 177, 10000, Zagreb",
+   "km": 10.5
+  },
+  {
+   "croai_id": "175",
+   "name": "Greyp",
+   "oib": "03627403593",
+   "naziv": "Porsche eBike Performance d.o.o. za proizvodnju električnih dvokotača u likvidaciji",
+   "fina_adresa": "Ulica Roberta Frangeša - Mihanovića 9, 10110 Zagreb",
+   "google_adresa": "Ljubljanska ul. 7, 10431, Sveta Nedelja",
+   "km": 9.2
+  },
+  {
+   "croai_id": "585",
+   "name": "Codeasy",
+   "oib": "93207816519",
+   "naziv": "LOOP d.o.o. za računalne djelatnosti i usluge",
+   "fina_adresa": "Obala kralja Tomislava 8, 21214 Kaštel Lukšić",
+   "google_adresa": "Ul. Antuna Gustava Matoša 43, 21210, Solin",
+   "km": 8.7
+  },
+  {
+   "croai_id": "77",
+   "name": "Robotiq.ai",
+   "oib": "04678927848",
+   "naziv": "Robotic Process Automation d.o.o. za usluge",
+   "fina_adresa": "Jarun 68, 10104 Zagreb",
+   "google_adresa": "Brezovička cesta 2, 10000, Zagreb",
+   "km": 8.6
+  },
+  {
+   "croai_id": "428",
+   "name": "A1 Hrvatska d.o.o.",
+   "oib": "29524210204",
+   "naziv": "A1 Hrvatska društvo s ograničenom odgovornošću za usluge javnih telekomunikacija",
+   "fina_adresa": "Vrtni put 1, 10135 Zagreb",
+   "google_adresa": "Vrtni put 1, 10000, Zagreb",
+   "km": 8.3
+  },
+  {
+   "croai_id": "406",
+   "name": "Končar",
+   "oib": "45050126417",
+   "naziv": "KONČAR - Elektroindustrija d.d. za proizvodnju i usluge",
+   "fina_adresa": "Fallerovo Šetalište 22, 10110 Zagreb",
+   "google_adresa": "Josipa Mokrovića 8, 10090, Zagreb",
+   "km": 8.0
+  },
+  {
+   "croai_id": "207",
+   "name": "STORM Computers",
+   "oib": "20142998436",
+   "naziv": "STORM COMPUTERS društvo s ograničenom odgovornošću za informatički inženjering",
+   "fina_adresa": "Koledovčina 1/B, 10135 Zagreb",
+   "google_adresa": "Koledovčina ul. 1B, 10000, Zagreb",
+   "km": 7.9
+  },
+  {
+   "croai_id": "161",
+   "name": "Delta Reality",
+   "oib": "47614915143",
+   "naziv": "Delta X društvo s ograničenom odgovornošću za računalne djelatnosti",
+   "fina_adresa": "Miroševečina 9, 10040 Zagreb",
+   "google_adresa": "Koledovčina ul. 1, 10000, Zagreb",
+   "km": 7.8
+  },
+  {
+   "croai_id": "111",
+   "name": "Appliment",
+   "oib": "32696391835",
+   "naziv": "Appliment d.o.o. za informatičke usluge",
+   "fina_adresa": "Utinjska ulica 19, 10020 Zagreb",
+   "google_adresa": "Slavonska avenija 24A, 10000, Zagreb",
+   "km": 7.7
+  },
+  {
+   "croai_id": "423",
+   "name": "Devot",
+   "oib": "03252244054",
+   "naziv": "DEVOT SOLUTIONS d.o.o. za informatičke usluge i trgovinu",
+   "fina_adresa": "Ulica Ede Murtića 2/B, 10146 Zagreb",
+   "google_adresa": "Ul. Ede Murtića 2C, 10020, Zagreb",
+   "km": 7.3
+  },
+  {
+   "croai_id": "438",
+   "name": "Fortenova grupa",
+   "oib": "88035992407",
+   "naziv": "FORTENOVA GRUPA dioničko društvo za upravljanje",
+   "fina_adresa": "Ulica Marijana Čavića 1, 10135 Zagreb",
+   "google_adresa": "Ul. Marijana Čavića 1, 10000, Zagreb",
+   "km": 7.1
+  },
+  {
+   "croai_id": "460",
+   "name": "FreshBooks",
+   "oib": "91938817383",
+   "naziv": "FreshBooks društvo s ograničenom odgovornošću za informatičku djelatnost",
+   "fina_adresa": "Radnička cesta 180, 10135 Zagreb",
+   "google_adresa": "Radnička cesta 180, 10000, Zagreb",
+   "km": 7.0
+  },
+  {
+   "croai_id": "379",
+   "name": "Bloomberg Adria",
+   "oib": "75150106632",
+   "naziv": "HD-WIN ARENA SPORT društvo s ograničenom odgovornošću za pružanje medijskih usluga",
+   "fina_adresa": "Radnička cesta 180, 10135 Zagreb",
+   "google_adresa": "Radnička cesta 180, 10000, Zagreb",
+   "km": 7.0
+  },
+  {
+   "croai_id": "494",
+   "name": "Valamar",
+   "oib": "36201212847",
+   "naziv": "Valamar Riviera dioničko društvo za turizam",
+   "fina_adresa": "Stancija Kaligari 1, 52440 Poreč - Parenzo",
+   "google_adresa": "Lanterna 1, 52465, Tar",
+   "km": 6.9
+  },
+  {
+   "croai_id": "194",
+   "name": "AISoft Technology",
+   "oib": "19685905917",
+   "naziv": "AISoft Technology d.o.o. za informatiku",
+   "fina_adresa": "Ulica Nikole Pavića 3, 10147 Zagreb",
+   "google_adresa": "Ul. Nikole Pavića 3, 10000, Zagreb",
+   "km": 6.9
+  },
+  {
+   "croai_id": "407",
+   "name": "Hypefy",
+   "oib": "89393159477",
+   "naziv": "Hypefy World d.o.o. za računalno programiranje",
+   "fina_adresa": "Zadarska ulica 80, 10110 Zagreb",
+   "google_adresa": "Selska cesta 217, 10000, Zagreb",
+   "km": 6.3
+  },
+  {
+   "croai_id": "222",
+   "name": "EM2",
+   "oib": "41061598603",
+   "naziv": "EM2 društvo s ograničenom odgovornošću za informatičke djelatnosti i usluge",
+   "fina_adresa": "Križevačka ulica 11, 31000 Osijek",
+   "google_adresa": "Križevačka ul., 31000, Osijek",
+   "km": 6.3
+  },
+  {
+   "croai_id": "338",
+   "name": "Humana digitalna inteligencija",
+   "oib": "38835255149",
+   "naziv": "HUMANA DIGITALNA INTELIGENCIJA",
+   "fina_adresa": "BIDROVEČKA CESTA 33, 10000 Zagreb",
+   "google_adresa": "Radauševa ul. 4, 10000, Zagreb",
+   "km": 6.2
+  },
+  {
+   "croai_id": "91",
+   "name": "3topia",
+   "oib": "72262528289",
+   "naziv": "3topia d.o.o. za savjetovanje i usluge",
+   "fina_adresa": "Gračanska cesta 189/A, 10000 Zagreb",
+   "google_adresa": "Ul. Andrije Žaje 10, 10000, Zagreb",
+   "km": 6.1
+  },
+  {
+   "croai_id": "147",
+   "name": "InSky",
+   "oib": "33138362623",
+   "naziv": "INSKY SOLUTIONS d.o.o. za usluge",
+   "fina_adresa": "Medačka ulica 18, 10104 Zagreb",
+   "google_adresa": "Medačka ul. 18, 10000, Zagreb",
+   "km": 6.0
+  },
+  {
+   "croai_id": "221",
+   "name": "HashCode",
+   "oib": "49637449593",
+   "naziv": "HashCode, d.o.o. za poslovne usluge",
+   "fina_adresa": "Palinovečka ulica 31, 10000 Zagreb",
+   "google_adresa": "Ul. Frana Folnegovića 1C, 10000, Zagreb",
+   "km": 5.9
+  },
+  {
+   "croai_id": "114",
+   "name": "E-Glas",
+   "oib": "01085855307",
+   "naziv": "E - GLAS društvo s ograničenom odgovornošću za inteligentne računalne sustave i asistivnu tehnologiju",
+   "fina_adresa": "Ratka Petrovića 54, 51000 Rijeka",
+   "google_adresa": "Rubeši 18b, 51215, Kastav",
+   "km": 5.8
+  },
+  {
+   "croai_id": "105",
+   "name": "True North",
+   "oib": "44581061901",
+   "naziv": "True North d.o.o. za usluge",
+   "fina_adresa": "Zadarska ulica 80, 10110 Zagreb",
+   "google_adresa": "Zadarska ul. 80, 10000, Zagreb",
+   "km": 5.6
+  },
+  {
+   "croai_id": "487",
+   "name": "Ingemark",
+   "oib": "02854892746",
+   "naziv": "INGEMARK društvo s ograničenom odgovornošću za proizvodnju i usluge",
+   "fina_adresa": "Palinovečka ulica 29, 10104 Zagreb",
+   "google_adresa": "Ul. grada Vukovara 269D, 10000, Zagreb",
+   "km": 5.6
+  },
+  {
+   "croai_id": "543",
+   "name": "Mediartem AI",
+   "oib": "72757755615",
+   "naziv": "Mediartem AI društvo s ograničenom odgovornošću za usluge",
+   "fina_adresa": "Ulica Aleksandra Hondla 2/9, 10123 Zagreb",
+   "google_adresa": "Hondlova 2-9, 10000, Zagreb",
+   "km": 5.3
+  },
+  {
+   "croai_id": "78",
+   "name": "Visor d.o.o.",
+   "oib": "87108765199",
+   "naziv": "VISOR, projektiranje, proizvodnja i trgovina elektroničkih sustava i informatički inženjering d.o.o.",
+   "fina_adresa": "Prisavlje 8, 10000 Zagreb",
+   "google_adresa": "Slavonska avenija 22c, 10000, Zagreb",
+   "km": 5.2
+  },
+  {
+   "croai_id": "514",
+   "name": "AduroIdea",
+   "oib": "99145666903",
+   "naziv": "ADURO IDEJA d.o.o. za usluge",
+   "fina_adresa": "Borovina 49, 10040 Zagreb",
+   "google_adresa": "Zavrtnica 17, 10000, Zagreb",
+   "km": 5.0
+  },
+  {
+   "croai_id": "197",
+   "name": "codebooq",
+   "oib": "37552301313",
+   "naziv": "Codebooq društvo s ograničenom odgovornošću za računalne djelatnosti i usluge",
+   "fina_adresa": "Rebrovac III. 2, 10040 Zagreb",
+   "google_adresa": "Strojarska cesta 22, 10000, Zagreb",
+   "km": 4.9
+  },
+  {
+   "croai_id": "70",
+   "name": "Bulb",
+   "oib": "84622104798",
+   "naziv": "BULB d.o.o. za trgovinu i usluge",
+   "fina_adresa": "Ulica grada Vukovara 23, 10110 Zagreb",
+   "google_adresa": "Ul. grada Vukovara 23, 10000, Zagreb",
+   "km": 4.8
+  },
+  {
+   "croai_id": "602",
+   "name": "AlphaWave",
+   "oib": "59896838619",
+   "naziv": "AlphaWave društvo s ograničenom odgovornošću za računalno programiranje, informatičke usluge, upravljanje projektima i poslovno savjetovanje",
+   "fina_adresa": "Vrlije 59, 51000 Rijeka",
+   "google_adresa": "Ul. Radmile Matejčić 10, 51000, Rijeka",
+   "km": 4.8
+  },
+  {
+   "croai_id": "425",
+   "name": "Amplibit",
+   "oib": "48004514574",
+   "naziv": "Amplibit d.o.o. za informatiku i usluge",
+   "fina_adresa": "Ulica Milana Ogrizovića 23, 10110 Zagreb",
+   "google_adresa": "Ul. grada Vukovara 5-1, 10000, Zagreb",
+   "km": 4.8
+  },
+  {
+   "croai_id": "277",
+   "name": "Effectus",
+   "oib": "47182242398",
+   "naziv": "EFFECTUS veleučilište",
+   "fina_adresa": "Trg Johna Fitzgeralda Kennedyja 2, 10123 Zagreb",
+   "google_adresa": "Trg Johna Fitzgeralda Kennedya 2, 10000, Zagreb",
+   "km": 4.7
+  },
+  {
+   "croai_id": "366",
+   "name": "Bug",
+   "oib": "05461674840",
+   "naziv": "B U G društvo s ograničenom odgovornošću za novinsko-nakladničku djelatnost",
+   "fina_adresa": "Tratinska ulica 36, 10110 Zagreb",
+   "google_adresa": "Ul. Milana Ogrizovića 36A, 10000, Zagreb",
+   "km": 4.6
+  },
+  {
+   "croai_id": "110",
+   "name": "Digital poirots",
+   "oib": "62004514019",
+   "naziv": "Deegloo d.o.o. za računalno programiranje",
+   "fina_adresa": "Radnička cesta 52, 10000 Zagreb",
+   "google_adresa": "Zadarska ul. 77, 10000, Zagreb",
+   "km": 4.5
+  },
+  {
+   "croai_id": "401",
+   "name": "Deegloo",
+   "oib": "62004514019",
+   "naziv": "Deegloo d.o.o. za računalno programiranje",
+   "fina_adresa": "Radnička cesta 52, 10000 Zagreb",
+   "google_adresa": "Zadarska ul. 80, 10000, Zagreb",
+   "km": 4.5
+  },
+  {
+   "croai_id": "216",
+   "name": "Ericsson Nikola Tesla",
+   "oib": "84214771175",
+   "naziv": "ERICSSON NIKOLA TESLA, dioničko društvo za proizvodnju telekomunikacijskih sustava i uređaja",
+   "fina_adresa": "Krapinska ulica 45, 10110 Zagreb",
+   "google_adresa": "Krapinska ul. 45, 10000, Zagreb",
+   "km": 4.5
+  },
+  {
+   "croai_id": "201",
+   "name": "ITEO expert AI",
+   "oib": "22697605551",
+   "naziv": "ITEO expert AI d.o.o. za usluge",
+   "fina_adresa": "Ulica Frana Kušana 11, 10090 Zagreb",
+   "google_adresa": "Ul. Frana Kušana 11, 10000, Zagreb",
+   "km": 4.5
+  },
+  {
+   "croai_id": "605",
+   "name": "Optimus Consulting d.o.o.",
+   "oib": "31457975319",
+   "naziv": "Optimus Consulting d.o.o. za poslovno savjetovanje i usluge, turistička agencija",
+   "fina_adresa": "Kvarnerska ulica - Via Quarnero 17, 52100 Pula",
+   "google_adresa": "Kvarnerska ul. 17, 52100, Pula",
+   "km": 4.4
+  },
+  {
+   "croai_id": "448",
+   "name": "Poliklinika Terapija",
+   "oib": "49343876478",
+   "naziv": "Poliklinika TERAPIJA d.o.o. za zdravstvenu djelatnost",
+   "fina_adresa": "Maksimirska cesta 12, 10123 Zagreb",
+   "google_adresa": "Maksimirska Cesta 12, 10000, Zagreb",
+   "km": 4.2
+  },
+  {
+   "croai_id": "375",
+   "name": "Vidi.hr",
+   "oib": "24523816042",
+   "naziv": "VIDI-TO, izdavaštvo, tiskanje i trgovina, d.o.o.",
+   "fina_adresa": "Zagrebačka cesta 233, 10000 Zagreb",
+   "google_adresa": "Ul. Ivana Broza 12, 10000, Zagreb",
+   "km": 4.2
+  },
+  {
+   "croai_id": "474",
+   "name": "Gauss",
+   "oib": "07575902160",
+   "naziv": "GAUSS d.o.o. za informatičke i marketinške usluge",
+   "fina_adresa": "Vukovarska cesta 30, 31000 Osijek",
+   "google_adresa": "Ul. Svetog Leopolda Bogdana Mandića 111O, 31000, Osijek",
+   "km": 4.2
+  },
+  {
+   "croai_id": "254",
+   "name": "Mosaic incubator",
+   "oib": "28711286175",
+   "naziv": "MOSAIC INCUBATOR d.o.o. za poslovne usluge",
+   "fina_adresa": "Vukovarska 167/B, 21000 Split",
+   "google_adresa": "Ul. Antuna Gustava Matoša 56, 21000, Split",
+   "km": 4.0
+  },
+  {
+   "croai_id": "38",
+   "name": "Briefing",
+   "oib": "05129429603",
+   "naziv": "BRIEFING MEDIJI društvo s ograničenom odgovornošću za praćenje medija",
+   "fina_adresa": "Vlaška ulica 121, 10123 Zagreb",
+   "google_adresa": "Vlaška ul. 121, 10000, Zagreb",
+   "km": 4.0
+  },
+  {
+   "croai_id": "48",
+   "name": "Tvbeat",
+   "oib": "22020304358",
+   "naziv": "Tvbeat j.d.o.o. za trgovinu, usluge i programiranje",
+   "fina_adresa": "Ulica Florijana Andrašeca 18, 10110 Zagreb",
+   "google_adresa": "Martićeva ul. 35-37, 10000, Zagreb",
+   "km": 4.0
+  },
+  {
+   "croai_id": "218",
+   "name": "Software sauna",
+   "oib": "42941941828",
+   "naziv": "Software Sauna društvo s ograničenom odgovornošću za usluge",
+   "fina_adresa": "Stara Knežija 20, 10110 Zagreb",
+   "google_adresa": "Ul. Franje Petračića 6, 10000, Zagreb",
+   "km": 3.9
+  },
+  {
+   "croai_id": "230",
+   "name": "Uprise",
+   "oib": "54026168821",
+   "naziv": "UPRISE društvo s ograničenom odgovornošću za usluge",
+   "fina_adresa": "Petrova ulica 15, 10123 Zagreb",
+   "google_adresa": "Trg Drage Iblera 10, 10000, Zagreb",
+   "km": 3.8
+  },
+  {
+   "croai_id": "350",
+   "name": "Institut za inovacije",
+   "oib": "23825867367",
+   "naziv": "INSTITUT ZA INOVACIJE",
+   "fina_adresa": "Desinićka ulica 5, 10110 Zagreb",
+   "google_adresa": "Masarykova ul. 28, 10000, Zagreb",
+   "km": 3.7
+  },
+  {
+   "croai_id": "273",
+   "name": "University of Zagreb",
+   "oib": "36612267447",
+   "naziv": "SVEUČILIŠTE U ZAGREBU",
+   "fina_adresa": "Trg Republike Hrvatske 14, 10000 Zagreb",
+   "google_adresa": "Ul. Radoslava Cimermana 88, 10000, Zagreb",
+   "km": 3.6
+  },
+  {
+   "croai_id": "580",
+   "name": "Bornfight",
+   "oib": "64834048134",
+   "naziv": "Bornfight društvo s ograničenom odgovornošću za trgovinu i usluge",
+   "fina_adresa": "Ulica Filipa Vukasovića 1, 10109 Zagreb",
+   "google_adresa": "Filipa Vukasovića 1, 10000, Zagreb",
+   "km": 3.4
+  },
+  {
+   "croai_id": "576",
+   "name": "Determ",
+   "oib": "78206544075",
+   "naziv": "DETERM društvo s ograničenom odgovornošću za trgovinu i usluge",
+   "fina_adresa": "Ulica Filipa Vukasovića 1, 10109 Zagreb",
+   "google_adresa": "Filipa Vukasovića 1, 10000, Zagreb",
+   "km": 3.4
+  },
+  {
+   "croai_id": "475",
+   "name": "Q agency",
+   "oib": "78082062075",
+   "naziv": "Q društvo s ograničenom odgovornošću za usluge",
+   "fina_adresa": "Reljkovićeva ulica 4, 10109 Zagreb",
+   "google_adresa": "Reljkovićeva ul. 4, 10000, Zagreb",
+   "km": 3.4
+  },
+  {
+   "croai_id": "465",
+   "name": "Maistra",
+   "oib": "25190869349",
+   "naziv": "MAISTRA dioničko društvo za hotelijerstvo i turizam",
+   "fina_adresa": "Obala Vladimira Nazora 6, 52210 Rovinj - Rovigno",
+   "google_adresa": "Monsena 2, 52210, Rovinj",
+   "km": 3.2
+  },
+  {
+   "croai_id": "292",
+   "name": "UNR Office of Advanced Computing (UNR)",
+   "oib": "70115824092",
+   "naziv": "URED ZA NAPREDNO RAČUNARSTVO društvo s ograničenom odgovornošću za usluge",
+   "fina_adresa": "Horvaćanska cesta 17, 10000 Zagreb",
+   "google_adresa": "Trg Kralja Tomislava, 10000, Zagreb",
+   "km": 2.9
+  },
+  {
+   "croai_id": "157",
+   "name": "DING",
+   "oib": "52935850171",
+   "naziv": "DING Applications d.o.o. za usluge",
+   "fina_adresa": "Ulica Otona Župančiča 6, 10000 Zagreb",
+   "google_adresa": "Avenija Dubrovnik 15, 10000, Zagreb",
+   "km": 2.7
+  },
+  {
+   "croai_id": "108",
+   "name": "Suprabit",
+   "oib": "94738438819",
+   "naziv": "Suprabit društvo s ograničenom odgovornošću za računarstvo",
+   "fina_adresa": "Vrhovec 136, 10000 Zagreb",
+   "google_adresa": "Zadarska ul. 80, 10000, Zagreb",
+   "km": 2.6
+  },
+  {
+   "croai_id": "437",
+   "name": "Fina",
+   "oib": "85821130368",
+   "naziv": "Financijska agencija",
+   "fina_adresa": "Ulica grada Vukovara 70, 10000 Zagreb",
+   "google_adresa": "Av. Većeslava Holjevca 10, 10000, Zagreb",
+   "km": 2.4
+  },
+  {
+   "croai_id": "290",
+   "name": "Institut Ruđer Bošković",
+   "oib": "69715301002",
+   "naziv": "INSTITUT RUĐER BOŠKOVIĆ",
+   "fina_adresa": "Bijenička cesta 54, 10163 Zagreb",
+   "google_adresa": "Bijenička Cesta 54, 10000, Zagreb",
+   "km": 2.4
+  },
+  {
+   "croai_id": "228",
+   "name": "Include",
+   "oib": "87239495136",
+   "naziv": "INCLUDE d.o.o. za proizvodnju električne opreme",
+   "fina_adresa": "Ulica don Frane Bulića 183/A, 21210 Solin",
+   "google_adresa": "Kopilica ul. 62, 21000, Split",
+   "km": 2.2
+  },
+  {
+   "croai_id": "509",
+   "name": "Cinnamon agency",
+   "oib": "48144159998",
+   "naziv": "CINNAMON d.o.o. za usluge",
+   "fina_adresa": "Gredice 8, 10000 Zagreb",
+   "google_adresa": "Gradišćanska ul. 24, 10000, Zagreb",
+   "km": 2.1
+  },
+  {
+   "croai_id": "429",
+   "name": "Addiko bank d.d.",
+   "oib": "14036333877",
+   "naziv": "Addiko Bank dioničko društvo",
+   "fina_adresa": "Slavonska avenija 6, 10000 Zagreb",
+   "google_adresa": "Ul. Ede Murtića 2d, 10000, Zagreb",
+   "km": 2.0
+  },
+  {
+   "croai_id": "586",
+   "name": "Školska knjiga",
+   "oib": "38967655335",
+   "naziv": "ŠKOLSKA KNJIGA izdavaštvo, trgovina i usluge d.d.",
+   "fina_adresa": "Masarykova ulica 28, 10000 Zagreb",
+   "google_adresa": "Trg Eugena Kvaternika 12, 10000, Zagreb",
+   "km": 2.0
+  },
+  {
+   "croai_id": "570",
+   "name": "Plus hosting grupa",
+   "oib": "25444746329",
+   "naziv": "Plus Hosting Grupa društvo s ograničenom odgovornošću za računalne djelatnosti i usluge",
+   "fina_adresa": "Valturska ulica - Via Altura 82, 52100 Pula",
+   "google_adresa": "Valturska 82, 52100, Pula",
+   "km": 1.7
+  }
+ ]
 }

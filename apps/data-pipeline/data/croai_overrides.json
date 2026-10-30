@@ -1,0 +1,290 @@
+{
+  "37": {
+    "_ime": "Lebesgue",
+    "oib": "75721713249",
+    "lat": 45.811758,
+    "lng": 15.939537,
+    "adresa_override": "Prilaz baruna Filipovića 23B, Zagreb",
+    "izvor": "sudreg: e-mail domena → LEBEG SOFTWARE d.o.o.; geokod Google po sudreg sjedištu, 2026-10-30"
+  },
+  "68": {
+    "_ime": "Device art festival",
+    "oib": "35488530816",
+    "lat": 45.792835,
+    "lng": 15.960728,
+    "adresa_override": "Odranska ulica 1/1, Zagreb",
+    "izvor": "sudreg: e-mail domena → Izvan kontejnera d.o.o.; geokod Google po sudreg sjedištu, 2026-10-30"
+  },
+  "73": {
+    "_ime": "Gideon",
+    "lat": 45.776787,
+    "lng": 16.059045,
+    "adresa_override": "Radnička cesta 177, 10000, Zagreb",
+    "izvor": "Google Maps (Gideon), ručno potvrđeno 2026-10-30",
+    "google_maps": "https://maps.google.com/?cid=16911021592471221188&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+  },
+  "80": {
+    "_ime": "Orqa FPV",
+    "oib": "98232144692",
+    "lat": 45.564668,
+    "lng": 18.635392,
+    "adresa_override": "Josipa Jurja Strossmayera 341, Osijek",
+    "izvor": "sudreg: e-mail domena → ORQA d.o.o.; geokod Google po sudreg sjedištu, 2026-10-30"
+  },
+  "120": {
+    "_ime": "Airt",
+    "oib": "18367329060",
+    "lat": 45.818907,
+    "lng": 15.964093,
+    "adresa_override": "Goljak 9, Zagreb",
+    "izvor": "sudreg: e-mail domena → AIRT TECHNOLOGIES d.o.o.; geokod Google po sudreg sjedištu, 2026-10-30"
+  },
+  "125": {
+    "_ime": "Farseer",
+    "lat": 45.795849,
+    "lng": 15.943118,
+    "adresa_override": "Selska cesta 136, 10000, Zagreb",
+    "izvor": "Google Maps (Farseer), ručno potvrđeno 2026-10-30",
+    "google_maps": "https://maps.google.com/?cid=9290084834237267500&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+  },
+  "146": {
+    "_ime": "Coffee Cloud",
+    "oib": "47931760445",
+    "lat": 45.803395,
+    "lng": 15.793072,
+    "adresa_override": "Dr. Franje Tuđmana 93, Sveta Nedelja",
+    "izvor": "sudreg: e-mail domena → HUPSER j.d.o.o.; geokod Google po sudreg sjedištu, 2026-10-30"
+  },
+  "176": {
+    "_ime": "OptimoRoute",
+    "oib": "33133817274",
+    "lat": 45.806548,
+    "lng": 15.97867,
+    "adresa_override": "Trg kralja Tomislava 8, Zagreb",
+    "izvor": "sudreg: e-mail domena → OptimoRoute d.o.o.; geokod Google po sudreg sjedištu, 2026-10-30"
+  },
+  "178": {
+    "_ime": "Rimac Automobili",
+    "oib": "53943536946",
+    "lat": 45.772934,
+    "lng": 15.811971,
+    "adresa_override": "Kerestinečka cesta 54, Kerestinec",
+    "izvor": "sudreg: e-mail domena → Rimac Group d.o.o.; geokod Google po sudreg sjedištu, 2026-10-30"
+  },
+  "181": {
+    "_ime": "Gepek",
+    "oib": "03639778735",
+    "lat": 45.488276,
+    "lng": 16.765055,
+    "adresa_override": "Ulica Miroslava Krleže 15, Kutina",
+    "izvor": "sudreg: e-mail domena → Gepek d.o.o.; geokod Google po sudreg sjedištu, 2026-10-30"
+  },
+  "215": {
+    "_ime": "Siemens",
+    "lat": 45.804146,
+    "lng": 16.008538,
+    "adresa_override": "Ul. Vjekoslava Heinzela 70a, 10000, Zagreb",
+    "izvor": "Google Maps (Siemens d.d.), ručno potvrđeno 2026-10-30",
+    "google_maps": "https://maps.google.com/?cid=14193606175621790491&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+  },
+  "283": {
+    "_ime": "AI Lab @FOI",
+    "oib": "02024882310",
+    "lat": 46.307699,
+    "lng": 16.338086,
+    "adresa_override": "Pavlinska ulica 2, Varaždin",
+    "izvor": "sudreg: e-mail domena → SUZG FOI; geokod Google po sudreg sjedištu, 2026-10-30"
+  },
+  "288": {
+    "_ime": "ICENT Innovation Centre Nikola Tesla @FER",
+    "lat": 45.801435,
+    "lng": 15.971116,
+    "adresa_override": "C zgrada, Unska ul. 3, 10000, Zagreb",
+    "izvor": "Google Maps (ICENT, Inovacijski centar Nikola Tesla), ručno potvrđeno 2026-10-30",
+    "google_maps": "https://maps.google.com/?cid=7039837908866670686&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+  },
+  "302": {
+    "_ime": "ICT županija (Splitsko-dalmatinska)",
+    "oib": "20854526848",
+    "lat": 43.509526,
+    "lng": 16.46826,
+    "adresa_override": "R. Boškovića 25, Split",
+    "izvor": "sudreg: e-mail domena → DIGITALNA DALMACIJA d.o.o.; geokod Google po sudreg sjedištu, 2026-10-30"
+  },
+  "304": {
+    "_ime": "AI Center Lipik",
+    "lat": 45.41353,
+    "lng": 17.152534,
+    "adresa_override": "Staklanska ul. 2, 34551, Lipik",
+    "izvor": "Google Maps (AI Centar Lipik), ručno potvrđeno 2026-10-30",
+    "google_maps": "https://maps.google.com/?cid=4476105606342292307&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+  },
+  "319": {
+    "_ime": "LegalTech",
+    "oib": "05461674840",
+    "lat": 45.802228,
+    "lng": 15.959966,
+    "adresa_override": "Tratinska ulica 36, Zagreb",
+    "izvor": "sudreg: e-mail domena → B U G d.o.o.; geokod Google po sudreg sjedištu, 2026-10-30"
+  },
+  "349": {
+    "_ime": "HealthHub",
+    "oib": "98475092745",
+    "lat": 45.798,
+    "lng": 15.950609,
+    "adresa_override": "Sokolgradska ulica 22, Zagreb",
+    "izvor": "sudreg: e-mail domena → IMAG MEDICAL d.o.o.; geokod Google po sudreg sjedištu, 2026-10-30"
+  },
+  "360": {
+    "_ime": "Wespa",
+    "oib": "12555627052",
+    "lat": 45.22837,
+    "lng": 13.607424,
+    "adresa_override": "Ilirska ulica 16, Poreč - Parenzo",
+    "izvor": "sudreg: e-mail domena → EUROPSKA ZADRUGA WESPA SPACES HUB; geokod Google po sudreg sjedištu, 2026-10-30"
+  },
+  "387": {
+    "_ime": "SplxAI",
+    "oib": "45485073605",
+    "lat": 43.525864,
+    "lng": 16.497945,
+    "adresa_override": "Dračevac 3D, Split",
+    "izvor": "sudreg: ime → SplxAI d.o.o.; geokod Google po sudreg sjedištu, 2026-10-30"
+  },
+  "397": {
+    "_ime": "Very Big Things",
+    "oib": "92437767171",
+    "lat": 45.817672,
+    "lng": 15.994469,
+    "adresa_override": "Ulica Tome Blažeka 14, Zagreb",
+    "izvor": "sudreg: e-mail domena → Jako Velike Stvari d.o.o.; geokod Google po sudreg sjedištu, 2026-10-30"
+  },
+  "410": {
+    "_ime": "Pythagora",
+    "oib": "20066183320",
+    "lat": 45.831235,
+    "lng": 16.036606,
+    "adresa_override": "Oporovečka ulica 5, Zagreb",
+    "izvor": "sudreg: e-mail domena → PYTHAGORA TECHNOLOGIES d.o.o.; geokod Google po sudreg sjedištu, 2026-10-30"
+  },
+  "411": {
+    "_ime": "Turneo",
+    "oib": "36835091980",
+    "lat": 45.808049,
+    "lng": 16.003306,
+    "adresa_override": "Ulica Vjekoslava Heinzela 60, Zagreb",
+    "izvor": "sudreg: e-mail domena → Turneo d.o.o.; geokod Google po sudreg sjedištu, 2026-10-30"
+  },
+  "424": {
+    "_ime": "Compass AI",
+    "oib": "17137301995",
+    "lat": 45.79478,
+    "lng": 15.958843,
+    "adresa_override": "Savska cesta 106, Zagreb",
+    "izvor": "sudreg: e-mail domena → COMPASS SOLUTIONS d.o.o.; geokod Google po sudreg sjedištu, 2026-10-30"
+  },
+  "434": {
+    "_ime": "Bruketa&Žinić&Grey",
+    "lat": 45.820622,
+    "lng": 15.977422,
+    "adresa_override": "Nova Ves 17, 2. kat trgovačkog centra \"Centar Kaptol\" - ulaz iz Nove Vesi, Centar Kaptol shopping mall 2nd floor - entrance from Nova Ves street, 10000, Gornji Grad - Medveščak, Zagreb",
+    "izvor": "Google Maps (Bruketa&Žinić&Grey), ručno potvrđeno 2026-10-30",
+    "google_maps": "https://maps.google.com/?cid=14337973131490684586&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+  },
+  "445": {
+    "_ime": "Orbico",
+    "oib": "85611744662",
+    "lat": 45.802461,
+    "lng": 15.966079,
+    "adresa_override": "Koturaška Cesta 69, Zagreb",
+    "izvor": "sudreg: ime → ORBICO d.o.o.; geokod Google po sudreg sjedištu, 2026-10-30"
+  },
+  "486": {
+    "_ime": "Martian&Machine",
+    "lat": 45.80613,
+    "lng": 15.987258,
+    "adresa_override": "Ul. kneza Branimira 41, 10000, Zagreb",
+    "izvor": "Google Maps (Martian & Machine d.o.o.), ručno potvrđeno 2026-10-30",
+    "google_maps": "https://maps.google.com/?cid=1723513030322066044&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+  },
+  "497": {
+    "_ime": "Sulie",
+    "oib": "11388459986",
+    "lat": 46.389168,
+    "lng": 16.435519,
+    "adresa_override": "Vrtna ulica 22, Čakovec",
+    "izvor": "sudreg: e-mail domena → sulie d.o.o.; geokod Google po sudreg sjedištu, 2026-10-30"
+  },
+  "527": {
+    "_ime": "Money Motion",
+    "oib": "17877731232",
+    "lat": 45.793758,
+    "lng": 15.969937,
+    "adresa_override": "Slavonska avenija 6, Zagreb",
+    "izvor": "sudreg: e-mail domena → Short Notice Productions d.o.o.; geokod Google po sudreg sjedištu, 2026-10-30"
+  },
+  "533": {
+    "_ime": "SheepAI Hackathon",
+    "oib": "79050869199",
+    "lat": 45.76451,
+    "lng": 15.937115,
+    "adresa_override": "Brezovička cesta 28E, Zagreb",
+    "izvor": "sudreg: e-mail domena → Sheep Labs d.o.o.; geokod Google po sudreg sjedištu, 2026-10-30"
+  },
+  "545": {
+    "_ime": "57hours",
+    "oib": "50332629342",
+    "lat": 45.807352,
+    "lng": 16.001051,
+    "adresa_override": "Zavrtnica 17, Zagreb",
+    "izvor": "sudreg: e-mail domena → Fiftyseven hours d.o.o.; geokod Google po sudreg sjedištu, 2026-10-30"
+  },
+  "553": {
+    "_ime": "IAB Croatia",
+    "lat": 45.80455,
+    "lng": 16.01126,
+    "adresa_override": "Ul. Charlesa Darwina 4a, 10000, Zagreb",
+    "izvor": "Google Maps (HURA & IAB Croatia), ručno potvrđeno 2026-10-30",
+    "google_maps": "https://maps.google.com/?cid=2274867497601777093&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+  },
+  "571": {
+    "_ime": "WooCommerce messaging",
+    "oib": "29756659895",
+    "lat": 44.953054,
+    "lng": 13.856368,
+    "adresa_override": "Istarska ulica - Via dell'Istria 157, Vodnjan",
+    "izvor": "sudreg: e-mail domena → INFOBIP d.o.o.; geokod Google po sudreg sjedištu, 2026-10-30"
+  },
+  "573": {
+    "_ime": "DeepQ",
+    "oib": "94833193621",
+    "lat": 45.564668,
+    "lng": 18.635392,
+    "adresa_override": "Josipa Jurja Strossmayera 341, Osijek",
+    "izvor": "sudreg: kratko ime (provjeri) → DeepQ d.o.o.; geokod Google po sudreg sjedištu, 2026-10-30"
+  },
+  "583": {
+    "_ime": "EuroBIZ Centar",
+    "lat": 45.817224,
+    "lng": 16.006646,
+    "adresa_override": "Maksimirska Cesta 78, 10000, Zagreb",
+    "izvor": "Google Maps (EUROBIZ CENTAR), ručno potvrđeno 2026-10-30",
+    "google_maps": "https://maps.google.com/?cid=11569846409117133697&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+  },
+  "590": {
+    "_ime": "AskHandle",
+    "oib": "21472873254",
+    "lat": 45.485099,
+    "lng": 16.769099,
+    "adresa_override": "Ulica Antuna Gustava Matoša 21, Kutina",
+    "izvor": "sudreg: e-mail domena → AskHandle Adria j.d.o.o.; geokod Google po sudreg sjedištu, 2026-10-30"
+  },
+  "608": {
+    "_ime": "DATUM",
+    "oib": "90789797546",
+    "lat": 45.482745,
+    "lng": 16.779261,
+    "adresa_override": "Ulica hrvatskih branitelja 2, Kutina",
+    "izvor": "sudreg: e-mail domena → DATUM OPCO d.o.o.; geokod Google po sudreg sjedištu, 2026-10-30"
+  }
+}

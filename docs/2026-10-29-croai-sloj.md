@@ -88,7 +88,7 @@ weba, 9 s OIB-om bez lokacije, 255 bez OIB-a.
 Posljedica: u trenutnom buildu 267 od 301 točke stoji na težištu naselja.
 Popup to piše kao „Točnost: središte mjesta“.
 
-## Dvostruka provjera preko Googlea (napisano, još nepokrenuto)
+## Dvostruka provjera preko Googlea
 
 Places se pita dvaput: po FINA adresi (za točku na razini zgrade) i po imenu.
 Pogodak po imenu vrijedi samo ako Googleov `websiteUri` ima isti host kao
@@ -100,20 +100,46 @@ CroAI domena. To je izvor koji nije sudjelovao u pronalasku OIB-a.
 - Subjekt bez OIB-a dobije Googleovu točku samo uz istu potvrdu weba
   (`google-web`).
 
-Procjena je ~870 Text Search poziva. Keš je u `data/raw/places/`.
+Pokrenuto 29.10.2026. s novim ključem (GCP `bimbo-sync-prod`, ključ ograničen
+na Places API (New)): 913 poziva, 301 → 410 na karti, težište naselja s 267
+na 73 točke. Keš je u `data/raw/places/`.
+
+Text Search ima `locationRestriction` na pravokutnik oko Hrvatske, pa u njega
+upadaju BiH i Crna Gora (Bihać, Podgorica). Karti to ne smeta jer se pogodak
+prihvaća samo uz isti web ili isti poštanski broj, ali kandidat „po sličnom
+imenu" bez te potvrde ne vrijedi ništa.
+
+## Sudski registar kao skupni izvor (30.10.2026.)
+
+`sudreg-data.gov.hr/api/javni` (OAuth2 client credentials; vjerodajnice su u
+`~/git/domovinatv/domovina-fiskal/backend/.dev.vars`, `SUDREG_CLIENT_ID/SECRET`)
+ima filter `subjekti?tvrtka_naziv=` koji traži **točan** naziv, pa za brendove
+ne pomaže. Ali tablice `subjekti`, `tvrtke`, `skracene_tvrtke`, `sjedista` i
+`email_adrese` povlače se cijele (`limit=50000&offset=…`, 186 637 subjekata,
+nekoliko sekundi po stranici) u `data/raw/sudreg/*.jsonl` (gitignorirano).
+
+Najjači signal je **domena e-maila u registru = domena weba iz imenika**:
+„57hours" je Fiftyseven hours d.o.o., „Lebesgue" LEBEG SOFTWARE, „Very Big
+Things" Jako Velike Stvari d.o.o. Od 146 nerazriješenih to je dalo 26
+pogodaka, jedinstveno ime još 3. Dva su odbačena (EDIT code school → Zavod za
+prostorno uređenje, dijele domenu; Calimero Network → KALIMERA consulting).
+Sjedište iz sudrega nema poštanski broj, pa se geokodira Google upitom
+„ulica broj, naselje, Hrvatska" uz uvjet da naselje stoji u Googleovoj adresi.
+
+Rezultat ide kao ručni unos u `data/croai_overrides.json` (`oib`, `lat`, `lng`,
+`adresa_override`, `izvor`), a skripta 34 iz njega uzme i FINA podatke po OIB-u.
+Spajanje je zasad jednokratna skripta, nije u 34: ako se imenik bitno promijeni,
+treba je pretvoriti u korak pipelinea.
+
+Stanje nakon toga: **446 od 565** na karti, 36 ručnih unosa, 119 nerazriješenih.
 
 ## Otvoreno
 
-- [ ] Popraviti Places ključ u GCP konzoli, pa `rm -rf apps/data-pipeline/data/raw/places`
-      i ponovno pokrenuti skriptu 34.
-- [ ] Pregledati `geo_conflicts` i 59 pogodaka samo s weba.
-- [ ] `data/croai_overrides.json` (`{croai_id: {oib | lat,lng | izvan_hr}}`) još
-      ne postoji. Kandidati su strani subjekti (Bloomberg Adria, Adria Tech
-      Forum) i subjekti bez OIB-a.
-- [ ] Treća provjera OIB-a kod sukoba preko `~/git/domovinatv/company-details-api`
-      (firme.domovina.ai v1: sudski registar, CompanyWall).
-- [ ] Deploy: `node apps/karta-web/scripts/sync-data.mjs` pa `npm run deploy`
-      u `apps/karta-web`.
+- [ ] 119 nerazriješenih: istraživanje weba preko Antigravity CLI-ja (Gemini
+      3.8 Flash subagenti), prompt u `docs/2026-10-30-croai-istrazivanje-antigravity.md`,
+      ulaz `apps/data-pipeline/data/croai_istrazivanje_ulaz.json`.
+- [ ] Pregledati `geo_conflicts` (90; 16 dalje od 50 km) i 59 pogodaka samo s weba.
+- [ ] Ručni unosi iz sudrega nemaju poštanski broj, pa im je `mjesto` u popupu prazno.
 
 ## Vezani dokumenti
 

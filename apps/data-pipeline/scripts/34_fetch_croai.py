@@ -447,7 +447,8 @@ def main() -> int:
             "fina_url": urls.get(oib) if oib else None,
             "geo_source": geo_source,
             "provjera": provjera,
-            "google_maps": g_ime["maps_url"] if g_ime else None,
+            "google_maps": g_ime["maps_url"] if g_ime else ov.get("google_maps"),
+            "geo_izvor": ov.get("izvor"),
         }))
 
     # Bez OIB-a: na kartu samo ako Google za to ime vodi ISTI web kao CroAI.
