@@ -20,8 +20,12 @@ routes = [{ pattern = "gis.domovina.ai/*", zone_name = "domovina.ai" }]
 [assets]
 directory = "./dist"
 binding = "ASSETS"
-# Worker hendla sve: OG, sadržaj za #root, cache headere (kao Advanced Mode).
-run_worker_first = true
+# Worker hendla HTML rute: OG, sadržaj za #root, SPA fallback. Statičke
+# datoteke (hashirani bundle, geojsoni, indeks pretrage, logotipi) idu ravno
+# iz asseta: takav zahtjev ne pokreće Worker, pa se ne broji u kvotu
+# poziva i trošak ne raste s brojem posjetitelja. Headere za njih daje
+# public/_headers. Vidi docs/2026-10-30-trazilica.md (Troškovi).
+run_worker_first = ["/*", "!/assets/*", "!/data/*", "!/logos/*", "!/icons/*"]
 # ASSETS.fetch za nepostojeći path vraća index.html — isto kao Pages; worker
 # za file-like putanje to pretvara u 404 no-store.
 not_found_handling = "single-page-application"
