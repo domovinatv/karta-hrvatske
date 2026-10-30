@@ -52,6 +52,7 @@ export function useLayerControls() {
       showPinka: { value: s.showPinka, set: s.setShowPinka },
       showOrto: { value: s.showOrto, set: s.setShowOrto },
       focusMode: { value: s.focusMode, set: s.setFocusMode },
+      jlsClick: { value: s.jlsClick, set: s.setJlsClick },
     }),
     [s],
   );

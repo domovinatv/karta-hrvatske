@@ -86,7 +86,20 @@ async function findJlsPoint(page: Page): Promise<{ x: number; y: number; name: s
   });
 }
 
+test("JLS click is off by default — click on map doesn't select", async ({ page }) => {
+  await page.goto(BASE + "/");
+  await waitForMapIdle(page);
+
+  const pt = await findJlsPoint(page);
+  expect(pt, "no JLS found under any grid point").not.toBeNull();
+  await page.mouse.click(pt!.x, pt!.y);
+  await page.waitForTimeout(1000);
+  expect(new URL(page.url()).pathname).toBe("/");
+});
+
 test("map renders + JLS click selects + URL updates", async ({ page }) => {
+  // Odabir JLS klikom je po defaultu ugašen; prekidač se pamti u localStorage.
+  await page.addInitScript(() => localStorage.setItem("domovina-jls-click", "1"));
   await page.goto(BASE + "/");
   await waitForMapIdle(page);
 

@@ -21,6 +21,11 @@ interface MapState {
   selectedNaselje: number | null;
   // Filter / focus
   focusMode: boolean;
+  /**
+   * Klik na kartu bira JLS (fitBounds + detalj + naselja). Po defaultu
+   * ugašeno: s toliko slojeva klik je za marker, a JLS se bira pretragom.
+   */
+  jlsClick: boolean;
   activeZup: string | null;
   // Layer visibility
   showNaselja: boolean;
@@ -73,6 +78,7 @@ interface MapStateActions {
   setSelectedJls: (id: number | null) => void;
   setSelectedNaselje: (id: number | null) => void;
   setFocusMode: (on: boolean) => void;
+  setJlsClick: (on: boolean) => void;
   setActiveZup: (zup: string | null) => void;
   setShowNaselja: (on: boolean) => void;
   setShowKvartovi: (on: boolean) => void;
@@ -120,10 +126,21 @@ const initialTheme = (): Theme => {
   return "dark";
 };
 
+const JLS_CLICK_KEY = "domovina-jls-click";
+
+const initialJlsClick = (): boolean => {
+  try {
+    return localStorage.getItem(JLS_CLICK_KEY) === "1";
+  } catch {
+    return false;
+  }
+};
+
 export function MapStateProvider({ children }: { children: ReactNode }) {
   const [selectedJls, setSelectedJls] = useState<number | null>(null);
   const [selectedNaselje, setSelectedNaselje] = useState<number | null>(null);
   const [focusMode, setFocusMode] = useState(false);
+  const [jlsClick, setJlsClick] = useState<boolean>(initialJlsClick);
   const [activeZup, setActiveZup] = useState<string | null>(null);
   const [showNaselja, setShowNaselja] = useState(false);
   const [showKvartovi, setShowKvartovi] = useState(false);
@@ -167,6 +184,14 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
     }
   }, [theme]);
 
+  useEffect(() => {
+    try {
+      localStorage.setItem(JLS_CLICK_KEY, jlsClick ? "1" : "0");
+    } catch {
+      /* ignore */
+    }
+  }, [jlsClick]);
+
   const setTheme = useCallback((t: Theme) => setThemeState(t), []);
   const toggleZupBorders = useCallback(() => setShowZupBorders((b) => !b), []);
   const toggleJlsBorders = useCallback(() => setShowJlsBorders((b) => !b), []);
@@ -191,6 +216,7 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
       selectedJls,
       selectedNaselje,
       focusMode,
+      jlsClick,
       activeZup,
       showNaselja,
       showKvartovi,
@@ -225,6 +251,7 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
       setSelectedJls,
       setSelectedNaselje,
       setFocusMode,
+      setJlsClick,
       setActiveZup,
       setShowNaselja,
       setShowKvartovi,
@@ -263,6 +290,7 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
       selectedJls,
       selectedNaselje,
       focusMode,
+      jlsClick,
       activeZup,
       showNaselja,
       showKvartovi,

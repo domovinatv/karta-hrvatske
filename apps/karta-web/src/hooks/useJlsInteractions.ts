@@ -13,12 +13,15 @@ interface Options {
   onSelect?: (feature: JlsFeature, opts?: { silent?: boolean; skipFit?: boolean }) => void;
 }
 
-// Wires hover state + click→select on the hr-fill layer. Suppressed when
-// Clubs layer is on (clubs-only mode — JLS becomes inert so accidental
-// clicks don't switch selection). Cleanup removes listeners so theme/style
-// rebuilds don't leave duplicates.
+// Wires hover state + click→select on the hr-fill layer. Only active when
+// the "Odabir JLS klikom" toggle (jlsClick) is on — off by default, so a
+// click belongs to layer markers and JLS is picked via search. Also
+// suppressed when Clubs layer is on (clubs-only mode — JLS becomes inert so
+// accidental clicks don't switch selection). Cleanup removes listeners so
+// theme/style rebuilds don't leave duplicates.
 export function useJlsInteractions({ map, loaded, styleRev, jls }: Options) {
   const {
+    jlsClick,
     showClubs,
     setSelectedJls,
     setSelectedNaselje,
@@ -30,6 +33,7 @@ export function useJlsInteractions({ map, loaded, styleRev, jls }: Options) {
   useEffect(() => {
     if (!map || !loaded || !jls) return;
     if (!map.getLayer("hr-fill")) return;
+    if (!jlsClick) return;
 
     let hovered: number | null = null;
 
@@ -94,12 +98,15 @@ export function useJlsInteractions({ map, loaded, styleRev, jls }: Options) {
       map.off("mousemove", "hr-fill", handleMove);
       map.off("mouseleave", "hr-fill", handleLeave);
       map.off("click", "hr-fill", handleClick);
+      // Toggle ugašen usred hovera — ne ostavljaj JLS osvijetljenu.
+      handleLeave();
     };
   }, [
     map,
     loaded,
     styleRev,
     jls,
+    jlsClick,
     showClubs,
     showNaselja,
     setSelectedJls,

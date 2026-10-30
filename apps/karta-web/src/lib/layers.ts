@@ -14,6 +14,7 @@ import {
   Map as MapIcon,
   MapPinHouse,
   Maximize,
+  MousePointerClick,
   Network,
   BrainCircuit,
   Palette,
@@ -91,7 +92,8 @@ export type LayerStateKey =
   | "showAirports"
   | "showPinka"
   | "showOrto"
-  | "focusMode";
+  | "focusMode"
+  | "jlsClick";
 
 export type LayerId =
   | "granice-zupanija"
@@ -121,7 +123,8 @@ export type LayerId =
   | "zracne-luke"
   | "pinka"
   | "ortofoto"
-  | "fokus";
+  | "fokus"
+  | "odabir-jls";
 
 export interface LegendItem {
   color: string;
@@ -622,6 +625,17 @@ export const CONTROLS: Control[] = [
     shortcut: "O",
     blurb:
       "Sakrij sve jedinice osim odabrane i naselja unutar nje. Korisno za izradu prikaza pojedinog grada ili općine.",
+  },
+  {
+    kind: "toggle",
+    id: "odabir-jls",
+    group: "prikaz",
+    label: "Odabir JLS klikom",
+    icon: MousePointerClick,
+    stateKey: "jlsClick",
+    shortcut: "M",
+    blurb:
+      "Klik na kartu odabire grad ili općinu: zumira na nju, otvara detalj i pali naselja. Ugašeno po defaultu, da klik služi samo markerima upaljenih slojeva. Pretraga JLS radi i bez ovoga. Izbor se pamti u pregledniku.",
   },
 ];
 

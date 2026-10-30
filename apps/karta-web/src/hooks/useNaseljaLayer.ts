@@ -30,6 +30,7 @@ export function useNaseljaLayer({
     showNaselja,
     showOrto,
     showClubs,
+    jlsClick,
     theme,
     setSelectedNaselje,
     selectedNaselje,
@@ -149,6 +150,9 @@ export function useNaseljaLayer({
   // Hover + click. Clubs-only mode disables both.
   useEffect(() => {
     if (!map || !map.getLayer("hr-nas-fill") || !naselja) return;
+    // Naselja prekrivaju cijelu kartu, pa bi klik na prazno mjesto birao
+    // naselje — isti prekidač kao za JLS.
+    if (!jlsClick) return;
     let hoveredNas: number | null = null;
 
     const handleMove = (e: MapLayerMouseEvent) => {
@@ -199,8 +203,9 @@ export function useNaseljaLayer({
       map.off("mousemove", "hr-nas-fill", handleMove);
       map.off("mouseleave", "hr-nas-fill", handleLeave);
       map.off("click", "hr-nas-fill", handleClick);
+      handleLeave();
     };
-  }, [map, styleRev, naselja, showClubs, setSelectedNaselje]);
+  }, [map, styleRev, naselja, showClubs, jlsClick, setSelectedNaselje]);
 
   // Mirror selectedNaselje -> feature-state.
   useEffect(() => {
