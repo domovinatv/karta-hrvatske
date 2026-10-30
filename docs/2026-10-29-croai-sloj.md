@@ -187,9 +187,78 @@ bez ureda) i stoji u središtu grada, s „razina grada" u `geo_izvor`.
 
 Stanje: **565 od 565** na karti, 156 ručnih unosa u `croai_overrides.json`.
 
+## Revizija geokoda i klasteri (30.10.2026., poslijepodne)
+
+Na karti je 61 firma stajala na istoj točki u Zagrebu (Prekrižje, težište
+naselja Zagreb), npr. Judge0 (Pavlenski put 11/C) i Ostendo (Remetinečka 100/2).
+Ukupno 73 točke s `geo_source = naselje`. Uzrok su dva istodobna kvara:
+
+1. **DGU WFS je bio dolje** (`ServiceUnavailable`) i `locate()` je tiho
+   preskočio adresni sloj.
+2. **Places Text Search traži objekte, ne adrese.** Upit „Vlaška ulica 121,
+   10123 Zagreb" vrati poštu na Prisavlju. FINA ima desetak zagrebačkih
+   poštanskih brojeva (10104, 10123, 10135…), a Google gotovo svuda piše 10000,
+   pa je provjera po poštanskom broju takve pogotke s pravom odbila, a lanac je
+   pao na težište. Kod „ulica = ime sela" (`seoski` fallback u 33) točka je
+   završila u istoimenom selu: Vrbani 4 (Sofascore, CISEx) u Istri, 175 km;
+   Savska cesta (Pontis, Web Summer Camp) kod Križevaca, 37 km.
+
+Usput: **isti poštanski broj nije dokaz adrese.** Pitchsee (Črnomerec 3) stajao je
+na Laubi, EM2 (Križevačka 11) na „Viška 52", Peekator 1,8 km dalje.
+
+```mermaid
+flowchart TD
+  A[FINA / ručna adresa] --> G{Geocoding API<br/>ROOFTOP/interpolirano<br/>+ ista ulica i broj}
+  G -->|da| GK[google-geokod]
+  G -->|ne| P{Text Search s pbr<br/>+ ista ulica i broj}
+  P -->|da| GA[google-adresa]
+  P -->|ne| S{Text Search bez pbr}
+  S -->|ista ulica i broj| GA
+  S -->|samo ulica| GU[google-ulica]
+  S -->|ne| L[DGU → težište naselja<br/>>10 km od grada → težište grada]
+  GU & L --> I{Google po imenu<br/>+ isti web, ≤1 km}
+  I -->|da| GI[google-ime]
+```
+
+- **Geocoding API** (`Places.geocode`, keš `data/raw/geocode/`) je prvi korak.
+  Ključ „karta-hrvatske data-pipeline (Places)" u GCP `bimbo-sync-prod` od
+  30.10. ima restrikcije Places API (New) + Geocoding API. Cijena ~$5 / 1000.
+- `_ista_adresa` uspoređuje po sadržaju, ne po obliku: bilo koja negenerička riječ
+  ulice po prefiksu od 5 slova (Google piše „Trg J. J. Strossmayera" za
+  „Strossmayerov trg"), kućni broj ne smije imati `/` ni znamenku ispred
+  („89/1" nije kuća 1), mjesto po prvoj riječi, a kad se poštanski broj podudara,
+  mjesto se ne gleda („52440, Žbandaj" je Poreč, „10000, Odra" je Zagreb).
+- **Ručna sjedišta**: adresa je provjerena na izvoru, ali koordinatu je donio
+  Text Search. Ako je geokod vlastite adrese dalje od 300 m, uzima se geokod.
+  PreferAI je bio 6,4 km od Štitarske 4, Zebra Cross 2,8 km, Mr.Popper 2,5 km.
+  Mjesta događaja i institucije ostaju ručni (LEAP na Velesajmu, BAIF).
+
+Rezultat: `google-geokod` 278, `rucno` 149, `google-ime` 111, `google-adresa` 22,
+`google-ulica` 2, `naselje` 3 (Mrljane, Gabonjin, Pula Kvarnerska — geokoder zna
+samo ulicu). Revizija `scripts/croai_backfill/revizija_geokoda.py` uspoređuje
+svaku točku s geokodom vlastite adrese. Od 342 adrese 2 su dalje od 300 m, obje
+namjerno. Sve preostale grupe na istoj koordinati dijele adresu (ZICER 15,
+Slavonska avenija 6: 6, FER: 4…), osim 6 subjekata na razini grada.
+
+**Klasteri na karti** (`usePointLayer`, opcija `cluster`, uključena za CroAI):
+krug s brojem, a klik otvara popis kad je sve unutar 50 m, inače zumira. Dvije
+zamke koje ne javljaju grešku:
+
+- `"text-font": ["Noto Sans Bold"]` na tamnoj Carto podlozi vraća 404 i tile
+  worker baci cijelu pločicu, pa nestanu i klasteri i obične točke. Ostali slojevi
+  zato pišu `dark ? Regular : Bold`, a ovdje je uvijek Regular.
+- `maxzoom` izvora mora biti veći od `clusterMaxZoom` (default maxzoom je 18).
+  Koristi se 24/23, pa točke na istoj koordinati ostaju skupa do kraja.
+
+Pretraga otvara popup točke unutar klastera izravno po id-u
+(`pointPopupOpeners`), jer sintetički klik treba iscrtanu točku.
+
 ## Otvoreno
 
-- [ ] Pregledati `geo_conflicts` (93; 16 dalje od 50 km) i 59 pogodaka samo s weba.
+- [ ] Uvesti `geocode_address` i u ostale slojeve s adresama (29 PPI, 33,
+      udruge): isti Text Search + pbr obrazac vjerojatno ima iste greške.
+- [ ] 3 točke na težištu (Mrljane, Gabonjin, Pula Kvarnerska) i 2 `google-ulica`.
+- [ ] Pregledati `geo_conflicts` (sad 67) i 59 pogodaka samo s weba.
 - [ ] Ručni unosi iz sudrega nemaju poštanski broj, pa im je `mjesto` u popupu prazno.
 - [ ] Popup ne razlikuje sjedište, ured, mjesto događaja i razinu grada; to je
       zasad samo u `geo_izvor`, koji frontend ne prikazuje.
