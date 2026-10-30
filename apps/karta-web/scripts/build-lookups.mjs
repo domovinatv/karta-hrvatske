@@ -45,6 +45,7 @@ for (const f of jls.features) {
     name: f.properties.name,
     type: f.properties.type,
     zupanija: f.properties.zupanija,
+    zupanijaSlug: slugify(f.properties.zupanija ?? ""),
     area: f.properties.area_m2,
     title: `${f.properties.type} ${f.properties.name} — DOMOVINA GIS`,
     description: `${f.properties.zupanija} · ${(f.properties.area_km2 ?? 0).toFixed(2)} km² · DGU Registar prostornih jedinica`,
@@ -93,6 +94,13 @@ if (existsSync(clubsPath)) {
         ? descBits.join(" · ")
         : "Hrvatski nogometni klub — DOMOVINA GIS",
       image: `/logos/${p.slug}.png`,
+      // Za tekstualni sadržaj koji worker ubacuje u #root (crawleri bez JS-a).
+      city: p.city ?? null,
+      stadium: p.stadium_name ?? null,
+      // Grad u kojem je klub, ako je to ujedno JLS ("Zagreb" je u JLS-u "Grad Zagreb").
+      jlsSlug: p.city
+        ? [slugify(p.city), `grad-${slugify(p.city)}`].find((s) => jlsLookup[s]) ?? null
+        : null,
     };
   }
   writeFileSync(join(PUBLIC_DATA, "lookup-clubs.json"), JSON.stringify(clubsLookup));

@@ -1,12 +1,26 @@
-# Cloudflare Pages config for gis.domovina.ai
+# Cloudflare Workers (static assets) config za gis.domovina.ai
 #
-# This file is read by `wrangler pages dev` (local) and by `wrangler pages deploy`
-# (CI). The CF Pages project itself was created via `wrangler pages project create
-# gis-domovina --production-branch=main` in the D.O.M. account.
+# Isti worker kao na Pagesu: public/_worker.js. Vite ga kopira u dist/, gdje ga
+# Pages (Advanced Mode) pokreće sam, a ovdje ga wrangler bundla kao `main`.
+# public/.assetsignore drži ga izvan javnih asseta.
 #
-# The actual deploy command lives in scripts/deploy.sh — wrangler.toml is mostly
-# documentation here.
+# Deploy: scripts/deploy.sh (DEPLOY_TARGET=worker | pages). `wrangler pages
+# deploy` ovaj file preskače jer nema pages_build_output_dir.
 
 name = "gis-domovina"
-compatibility_date = "2024-11-01"
-pages_build_output_dir = "./dist"
+main = "public/_worker.js"
+compatibility_date = "2025-10-01"
+account_id = "7dc7167b7e2e00923bfa7cd697df14e4"
+workers_dev = true
+
+[assets]
+directory = "./dist"
+binding = "ASSETS"
+# Worker hendla sve: OG, sadržaj za #root, cache headere (kao Advanced Mode).
+run_worker_first = true
+# ASSETS.fetch za nepostojeći path vraća index.html — isto kao Pages; worker
+# za file-like putanje to pretvara u 404 no-store.
+not_found_handling = "single-page-application"
+
+[observability]
+enabled = true

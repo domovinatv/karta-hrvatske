@@ -21,3 +21,4 @@ public/robots.txt
 .env
 .env.local
 .DS_Store
+.wrangler/
