@@ -1,0 +1,744 @@
+[
+ {
+  "croai_id": "557",
+  "ime": "AI Art Singularity",
+  "web": "https://artexpo.ai/",
+  "kategorije": [
+   "Conferences & Meetups"
+  ],
+  "prvi_krug": {
+   "tip": "dogadjaj",
+   "drzava": "HR",
+   "adresa": "Trg Krešimira Ćosića 9",
+   "postanski_broj": "10000",
+   "mjesto": "Zagreb",
+   "izvor_url": "https://www.culturenet.hr/izlozba-slika-koju-je-kreirala-umjetna-inteligencija-otvara-se-u-zagrebu/198244",
+   "drugi_izvor_url": "https://artexpo.ai/",
+   "napomena": "Izložba 'Zagreb Art Singularity: When AI Meets Creation' (autor i organizator Aco Momčilović). Premijerno održana u Hotelu Zonar Zagreb (Trg Krešimira Ćosića 9), a potom na Weekend Media Festivalu u Rovinju. Izvorna web domena artexpo.ai je na prodaju."
+  },
+  "zasto_odbijeno": "adresa NIJE pronađena na stranici navedenoj kao izvor (dohvaćen HTML, tražena ulica i kućni broj), nije sjedište u sudskom registru, a Google ne nalazi subjekt tog imena na toj adresi"
+ },
+ {
+  "croai_id": "328",
+  "ime": "AI weekend",
+  "web": "https://ai.weekend.hr/",
+  "kategorije": [
+   "Conferences & Meetups"
+  ],
+  "prvi_krug": {
+   "tip": "dogadjaj",
+   "pravni_naziv": "PEPERMINT d.o.o.",
+   "oib": "13120899290",
+   "drzava": "HR",
+   "adresa": "Obala Vladimira Nazora 1",
+   "postanski_broj": "52210",
+   "mjesto": "Rovinj",
+   "izvor_url": "https://ai.weekend.hr/",
+   "drugi_izvor_url": "https://weekend.hr/festivali/tech-weekend",
+   "napomena": "AI.Weekend (kasnije proširen u Tech.Weekend) održava se u sklopu Weekend Media Festivala u Staroj tvornici duhana Rovinj (Obala Vladimira Nazora 1, 52210 Rovinj). Organizator je PEPERMINT d.o.o., Ulica Republike Austrije 27, 10000 Zagreb, OIB 13120899290."
+  },
+  "zasto_odbijeno": "adresa NIJE pronađena na stranici navedenoj kao izvor (dohvaćen HTML, tražena ulica i kućni broj), nije sjedište u sudskom registru, a Google ne nalazi subjekt tog imena na toj adresi"
+ },
+ {
+  "croai_id": "321",
+  "ime": "BestInvest.hr",
+  "web": "https://www.bestinvest.hr/",
+  "kategorije": [
+   "Conferences & Meetups"
+  ],
+  "prvi_krug": {
+   "tip": "dogadjaj",
+   "pravni_naziv": "Hrvatska Private Equity i Venture Capital Asocijacija",
+   "oib": "68510828086",
+   "drzava": "HR",
+   "adresa": "Mihanovićeva ulica 1",
+   "postanski_broj": "10000",
+   "mjesto": "Zagreb",
+   "izvor_url": "https://bestinvest.hr/",
+   "drugi_izvor_url": "https://cvca.hr/",
+   "napomena": "Godišnja investicijska konferencija BestInvest Croatia u organizaciji udruge CVCA (Hrvatska Private Equity i Venture Capital Asocijacija, OIB 68510828086, predsjednica Mirna Marović, sjedište Savska cesta 32, Zagreb). Mjesto održavanja konferencije je Hotel Esplanade, Mihanovićeva ulica 1, 10000 Zagreb."
+  },
+  "zasto_odbijeno": "adresa NIJE pronađena na stranici navedenoj kao izvor (dohvaćen HTML, tražena ulica i kućni broj), nije sjedište u sudskom registru, a Google ne nalazi subjekt tog imena na toj adresi"
+ },
+ {
+  "croai_id": "317",
+  "ime": "Bounding Box",
+  "web": "https://bounding-box.ai/",
+  "kategorije": [
+   "Conferences & Meetups"
+  ],
+  "prvi_krug": {
+   "tip": "dogadjaj",
+   "pravni_naziv": "PROTOSTAR LABS d.o.o.",
+   "oib": "46675049527",
+   "drzava": "HR",
+   "adresa": "Ulica kneza Trpimira 2/A",
+   "postanski_broj": "31000",
+   "mjesto": "Osijek",
+   "izvor_url": "https://sib.net.hr/lifestyle/ostalo/1245802/osijek-jaca-deep-tech-zajednicu-konferencija-bounding-box-2025-u-kulturnom-centru-osijek/",
+   "drugi_izvor_url": "https://bounding-box.ai/",
+   "napomena": "Regionalna deep-tech i AI konferencija Bounding Box u organizaciji tvrtke PROTOSTAR LABS d.o.o. (OIB 46675049527, direktor Filip Novoselnik). Održava se u Kulturnom centru Osijek na adresi Ulica kneza Trpimira 2/A, 31000 Osijek. Ulaznice su se prodavale na bounding-box.ai."
+  },
+  "zasto_odbijeno": "adresa NIJE pronađena na stranici navedenoj kao izvor (dohvaćen HTML, tražena ulica i kućni broj), nije sjedište u sudskom registru, a Google ne nalazi subjekt tog imena na toj adresi"
+ },
+ {
+  "croai_id": "333",
+  "ime": "Code for Croatia",
+  "web": "https://codeforcroatia.org/",
+  "kategorije": [
+   "Organizations & Communities"
+  ],
+  "prvi_krug": {
+   "tip": "nepoznato",
+   "drzava": "HR",
+   "izvor_url": "https://codeforcroatia.org/",
+   "napomena": "Neformalna civic-tech zajednica / forum za otvorene podatke i digitalni aktivizam u Hrvatskoj; nema registriranu udrugu/pravni subjekt ni fizičku adresu."
+  },
+  "zasto_odbijeno": "prvi krug nije našao adresu"
+ },
+ {
+  "croai_id": "57",
+  "ime": "Crop Shepherd (robot PASTIR)",
+  "web": "https://www.cropshepherd.com/",
+  "kategorije": [
+   "Agriculture & Greentech"
+  ],
+  "prvi_krug": {
+   "tip": "nepoznato",
+   "drzava": "HR",
+   "mjesto": "Zagreb",
+   "izvor_url": "https://www.fer.unizg.hr/spock",
+   "drugi_izvor_url": "https://tockanai.hr/startupi/crop-shepherd-robot-za-unistavanje-korova-laserom-41398/",
+   "napomena": "Studentski startup projekt robotskog lasera za uništavanje korova (Leon Andrec i Milivoj Bošnjak, TVZ/SPOCK FER Zagreb). Domena cropshepherd.com više nije aktivna i projekt nije registriran kao samostalno trgovačko društvo."
+  },
+  "zasto_odbijeno": "prvi krug nije našao adresu"
+ },
+ {
+  "croai_id": "351",
+  "ime": "CroStartup",
+  "web": "https://www.crostartup.org/",
+  "kategorije": [
+   "Organizations & Communities"
+  ],
+  "prvi_krug": {
+   "tip": "sjediste",
+   "pravni_naziv": "UDRUGA CRO STARTUP EKOSUSTAV ZA PROMICANJE INOVATIVNOSTI",
+   "oib": "43145355545",
+   "drzava": "HR",
+   "adresa": "Bednjanska ulica 8",
+   "postanski_broj": "10000",
+   "mjesto": "Zagreb",
+   "izvor_url": "https://www.crostartup.org/",
+   "drugi_izvor_url": "https://www.fininfo.hr/Poduzece/Pregled/udruga-cro-startup-ekosustav-za-promicanje-inovativnosti/Detaljno/819777",
+   "napomena": "CroStartup je krovna nacionalna udruga hrvatskog startup ekosustava (Croatian Startup Ecosystem Association), registrirana u Registru udruga RH sa sjedištem u Bednjanskoj 8 u Zagrebu."
+  },
+  "zasto_odbijeno": "adresa NIJE pronađena na stranici navedenoj kao izvor (dohvaćen HTML, tražena ulica i kućni broj), nije sjedište u sudskom registru, a Google ne nalazi subjekt tog imena na toj adresi"
+ },
+ {
+  "croai_id": "470",
+  "ime": "Curriqla",
+  "web": "https://www.curriqla.com/",
+  "kategorije": [
+   "EduTech"
+  ],
+  "prvi_krug": {
+   "tip": "ured",
+   "pravni_naziv": "WERXE d.o.o. za informacijske tehnologije",
+   "oib": "24302887476",
+   "drzava": "HR",
+   "adresa": "Ulica Ivana Grohovca 1/a",
+   "postanski_broj": "51000",
+   "mjesto": "Rijeka",
+   "izvor_url": "https://www.curriqla.com/",
+   "drugi_izvor_url": "https://www.companywall.hr/firma/werxe-doo/MMiS627Q",
+   "napomena": "Platforma razvijena u sklopu Startup inkubatora Rijeka; web stranica sadrži interaktivnu kartu i adresu coworking prostora RiHub (Ivana Grohovca 1/a, koordinate 45.328425, 14.443183). Matična tvrtka osnivača (Filip Pravica) je WERXE d.o.o. sa sjedištem na adresi Šetalište trinaeste divizije 17, Rijeka."
+  },
+  "zasto_odbijeno": "adresa NIJE pronađena na stranici navedenoj kao izvor (dohvaćen HTML, tražena ulica i kućni broj), nije sjedište u sudskom registru, a Google ne nalazi subjekt tog imena na toj adresi"
+ },
+ {
+  "croai_id": "414",
+  "ime": "Cyclops",
+  "web": "https://cyclops-ui.com/",
+  "kategorije": [
+   "DevTools & Frameworks"
+  ],
+  "prvi_krug": {
+   "tip": "sjediste",
+   "drzava": "HR",
+   "mjesto": "Zagreb",
+   "izvor_url": "https://cyclops-ui.com/",
+   "drugi_izvor_url": "https://www.linkedin.com/company/cyclops-ui",
+   "napomena": "Open-source developer tools startup za Kubernetes UI (suosnivači Juraj Karadža i Petar Cvitanović, Zagreb, podržan od ZICER-a i Fil Rouge Capitala). Na službenom webu nema objavljene fizičke adrese/impressuma; LinkedIn i PitchBook navode Zagreb kao sjedište."
+  },
+  "zasto_odbijeno": "prvi krug nije našao adresu"
+ },
+ {
+  "croai_id": "528",
+  "ime": "Dani komunikacija",
+  "web": "https://danikomunikacija.com/",
+  "kategorije": [
+   "Conferences & Meetups"
+  ],
+  "prvi_krug": {
+   "tip": "dogadjaj",
+   "pravni_naziv": "Hrvatska udruga društava za tržišno komuniciranje (HURA!)",
+   "oib": "97189552878",
+   "drzava": "HR",
+   "adresa": "Ul. Luje Adamovića 31",
+   "postanski_broj": "52210",
+   "mjesto": "Rovinj",
+   "izvor_url": "https://danikomunikacija.com/about/",
+   "drugi_izvor_url": "https://hura.hr/",
+   "napomena": "Godišnji festival tržišnih komunikacija koji organizira HURA! (sjedište organizatora: Ulica Charlesa Darwina 4a, Zagreb; OIB 97189552878); festival se tradicionalno održava u Hotelu Lone, Ul. Luje Adamovića 31 u Rovinju."
+  },
+  "zasto_odbijeno": "adresa NIJE pronađena na stranici navedenoj kao izvor (dohvaćen HTML, tražena ulica i kućni broj), nije sjedište u sudskom registru, a Google ne nalazi subjekt tog imena na toj adresi"
+ },
+ {
+  "croai_id": "326",
+  "ime": "Data Science Conference",
+  "web": "https://dsccroatia.com/",
+  "kategorije": [
+   "Conferences & Meetups"
+  ],
+  "prvi_krug": {
+   "tip": "dogadjaj",
+   "pravni_naziv": "EVENTA nulajedan d.o.o.",
+   "oib": "68383496496",
+   "drzava": "HR",
+   "adresa": "Slavonska avenija 6/2",
+   "postanski_broj": "10000",
+   "mjesto": "Zagreb",
+   "izvor_url": "https://dsccroatia.com/",
+   "drugi_izvor_url": "https://www.entrio.hr/event/data-science-conference-croatia-2022-10874",
+   "napomena": "Konferencija o podatkovnoj znanosti i AI-ju u Zagrebu. Mjesto održavanja: Mozaik Event Centar, Slavonska avenija 6/2, Zagreb. Organizator je EVENTA nulajedan d.o.o. (Ulica Milana Ogrizovića 32, Zagreb; OIB 68383496496)."
+  },
+  "zasto_odbijeno": "adresa NIJE pronađena na stranici navedenoj kao izvor (dohvaćen HTML, tražena ulica i kućni broj), nije sjedište u sudskom registru, a Google ne nalazi subjekt tog imena na toj adresi"
+ },
+ {
+  "croai_id": "561",
+  "ime": "Eduformacije",
+  "web": "https://www.eduformacije.com/",
+  "kategorije": [
+   "EduTech"
+  ],
+  "prvi_krug": {
+   "tip": "nepoznato",
+   "drzava": "HR",
+   "izvor_url": "https://www.eduformacije.com/",
+   "drugi_izvor_url": "https://netokracija.com",
+   "napomena": "Eduformacije je projekt i AI pretraživač srednjih škola u Hrvatskoj autora Dobrena Dragojevića (Vela Luka / Dubrovnik). Nema registriran poslovni subjekt (nema OIB/tvrtku)."
+  },
+  "zasto_odbijeno": "prvi krug nije našao adresu"
+ },
+ {
+  "croai_id": "323",
+  "ime": "EU AI Forum",
+  "web": "https://www.european-ai-forum.com/",
+  "kategorije": [
+   "Conferences & Meetups"
+  ],
+  "prvi_krug": {
+   "tip": "institucija",
+   "pravni_naziv": "European AI Forum (EAIF) aisbl",
+   "drzava": "BE",
+   "adresa": "Rue Cantersteen 12",
+   "postanski_broj": "1000",
+   "mjesto": "Bruxelles",
+   "izvor_url": "https://eaiforum.org",
+   "drugi_izvor_url": "https://www.european-ai-forum.com/",
+   "napomena": "Krovna europska organizacija nacionalnih AI udruga (suosnivač CroAI). Registrirana u Belgiji kao međunarodna neprofitna udruga AISBL (matični broj BCE 0803.922.637, BeCentral, Rue Cantersteen 12, 1000 Bruxelles)."
+  },
+  "zasto_odbijeno": "adresa NIJE pronađena na stranici navedenoj kao izvor (dohvaćen HTML, tražena ulica i kućni broj), nije sjedište u sudskom registru, a Google ne nalazi subjekt tog imena na toj adresi"
+ },
+ {
+  "croai_id": "53",
+  "ime": "Fructus",
+  "web": "https://theengineersapproach.netlify.app/",
+  "kategorije": [
+   "Adtech & Sales & PR"
+  ],
+  "prvi_krug": {
+   "tip": "nepoznato",
+   "drzava": "HR",
+   "izvor_url": "https://theengineersapproach.netlify.app/",
+   "napomena": "Projekt i neformalno udruženje za analizu tržišta pokrenuto 2021. od strane studenata FER-a (Antun Modrušan, Ivan Modrušan, Ivan Stresec). Nema navedene adrese ni registriranog samostalnog pravnog subjekta pod tim nazivom."
+  },
+  "zasto_odbijeno": "prvi krug nije našao adresu"
+ },
+ {
+  "croai_id": "256",
+  "ime": "Funderbeam",
+  "web": "https://www.funderbeam.com/",
+  "kategorije": [
+   "Accelerators & Incubators & Investors"
+  ],
+  "prvi_krug": {
+   "tip": "ured",
+   "pravni_naziv": "Funderbeam South-East Europe d.o.o.",
+   "oib": "11407307685",
+   "drzava": "HR",
+   "adresa": "Ulica Ivana Lučića 2a",
+   "postanski_broj": "10000",
+   "mjesto": "Zagreb",
+   "izvor_url": "https://www.funderbeam.com/",
+   "drugi_izvor_url": "https://sudreg.pravosudje.hr/",
+   "napomena": "Zajedničko ulaganje i ured platforme Funderbeam u partnerstvu sa Zagrebačkom burzom (Funderbeam South-East Europe d.o.o., Ivana Lučića 2a, Eurotower, Zagreb). Globalno sjedište: Rotermanni 2B-8, Tallinn, Estonija."
+  },
+  "zasto_odbijeno": "adresa NIJE pronađena na stranici navedenoj kao izvor (dohvaćen HTML, tražena ulica i kućni broj), nije sjedište u sudskom registru, a Google ne nalazi subjekt tog imena na toj adresi"
+ },
+ {
+  "croai_id": "311",
+  "ime": "Future Tense",
+  "web": "https://futuretense.eu/",
+  "kategorije": [
+   "Conferences & Meetups"
+  ],
+  "prvi_krug": {
+   "tip": "dogadjaj",
+   "pravni_naziv": "Komunikacijski laboratorij d.o.o.",
+   "oib": "27606172972",
+   "drzava": "HR",
+   "adresa": "Slavonska avenija 6",
+   "postanski_broj": "10000",
+   "mjesto": "Zagreb",
+   "izvor_url": "https://futuretense.eu/",
+   "drugi_izvor_url": "https://komunikacijskilaboratorij.com/",
+   "napomena": "B2B konferencija o budućnosti poslovanja koja se održava u dvorani Mozaik Event Centar (Slavonska avenija 6, Zagreb). Organizator konferencije je agencija Komunikacijski laboratorij d.o.o. (Ulica grada Vukovara 5/1, Zagreb, OIB 27606172972)."
+  },
+  "zasto_odbijeno": "adresa NIJE pronađena na stranici navedenoj kao izvor (dohvaćen HTML, tražena ulica i kućni broj), nije sjedište u sudskom registru, a Google ne nalazi subjekt tog imena na toj adresi"
+ },
+ {
+  "croai_id": "287",
+  "ime": "FutureHR",
+  "web": "https://www.linkedin.com/company/futurehrconsulting/",
+  "kategorije": [
+   "Research"
+  ],
+  "prvi_krug": {
+   "tip": "sjediste",
+   "pravni_naziv": "FUTUREHR, obrt za poslovno savjetovanje, vl. Aco Momčilović",
+   "oib": "88517216552",
+   "drzava": "HR",
+   "adresa": "Ulica Predraga Heruca 10",
+   "postanski_broj": "10000",
+   "mjesto": "Zagreb",
+   "izvor_url": "https://www.linkedin.com/company/futurehrconsulting/",
+   "drugi_izvor_url": "https://companywall.hr",
+   "napomena": "Obrt za poslovno savjetovanje u vlasništvu Ace Momčilovića sa sjedištem u Zagrebu."
+  },
+  "zasto_odbijeno": "adresa NIJE pronađena na stranici navedenoj kao izvor (dohvaćen HTML, tražena ulica i kućni broj), nije sjedište u sudskom registru, a Google ne nalazi subjekt tog imena na toj adresi"
+ },
+ {
+  "croai_id": "404",
+  "ime": "Global AI Ethics Institute",
+  "web": "https://globalethics.ai/",
+  "kategorije": [
+   "Organizations & Communities"
+  ],
+  "prvi_krug": {
+   "tip": "institucija",
+   "pravni_naziv": "Global AI Ethics Institute",
+   "drzava": "FR",
+   "mjesto": "Paris",
+   "izvor_url": "https://globalaiethicsinstitute.com/",
+   "drugi_izvor_url": "https://globalethics.ai/",
+   "napomena": "Međunarodni think-tank osnovan u Parizu 2021. (predsjednik Aco Momčilović, Zagreb). Nema registriran poslovni subjekt u RH. Izvorna domena globalethics.ai zamijenjena je s globalaiethicsinstitute.com."
+  },
+  "zasto_odbijeno": "prvi krug nije našao adresu"
+ },
+ {
+  "croai_id": "252",
+  "ime": "HACK - Hub for Advanced Computing Križevci",
+  "web": "https://hack.udruga-point.hr/",
+  "kategorije": [
+   "Accelerators & Incubators & Investors"
+  ],
+  "prvi_krug": {
+   "tip": "institucija",
+   "pravni_naziv": "Udruga P.O.I.N.T.",
+   "oib": "75093177043",
+   "drzava": "HR",
+   "adresa": "Trg svetog Florijana 16",
+   "postanski_broj": "48260",
+   "mjesto": "Križevci",
+   "izvor_url": "https://hack.udruga-point.hr/",
+   "drugi_izvor_url": "https://www.udruga-point.hr",
+   "napomena": "Edukacijski projekt udruge P.O.I.N.T. iz Križevaca (sjedište Trg sv. Florijana 16, OIB 75093177043). Tečajevi su se održavali u učionici Pučkog otvorenog učilišta na adresi Trg sv. Florijana 14."
+  },
+  "zasto_odbijeno": "adresa NIJE pronađena na stranici navedenoj kao izvor (dohvaćen HTML, tražena ulica i kućni broj), nije sjedište u sudskom registru, a Google ne nalazi subjekt tog imena na toj adresi"
+ },
+ {
+  "croai_id": "355",
+  "ime": "IT zajednica Rijeka",
+  "web": "https://itzajednicarijeka.com/",
+  "kategorije": [
+   "Organizations & Communities"
+  ],
+  "prvi_krug": {
+   "tip": "nepoznato",
+   "drzava": "HR",
+   "postanski_broj": "51000",
+   "mjesto": "Rijeka",
+   "izvor_url": "https://itzajednicarijeka.com/",
+   "drugi_izvor_url": "https://poduzetnik.biz",
+   "napomena": "Otvorena neformalna IT zajednica i inicijativa u Rijeci (osnivač Rene Brakus / 46elks). Nema registriranu udrugu ni pravni subjekt s OIB-om; susreti i konferencije održavaju se na raznim lokacijama u Rijeci."
+  },
+  "zasto_odbijeno": "prvi krug nije našao adresu"
+ },
+ {
+  "croai_id": "243",
+  "ime": "Keymon Ventures",
+  "web": "https://www.keymonventures.com",
+  "kategorije": [
+   "Accelerators & Incubators & Investors"
+  ],
+  "prvi_krug": {
+   "tip": "sjediste",
+   "pravni_naziv": "KEYMON ANĐELI - MREŽA POSLOVNIH ANĐELA (KAMPA)",
+   "oib": "76660797479",
+   "drzava": "HR",
+   "adresa": "Bijenička cesta 113",
+   "postanski_broj": "10000",
+   "mjesto": "Zagreb",
+   "izvor_url": "https://www.companywall.hr/tvrtka/kampa-udruga-keymon-andeli-mreza-poslovnih-andela/mm3qj3x",
+   "drugi_izvor_url": "https://www.fininfo.hr/Poduzece/Pregled/kampa/Detaljno/718429",
+   "napomena": "Keymon Ventures je investicijska inicijativa / mreža koju u RH vodi Marta-Patricia Aparicio y Montesinos preko registrirane udruge KAMPA (Keymon anđeli - mreža poslovnih anđela)."
+  },
+  "zasto_odbijeno": "adresa NIJE pronađena na stranici navedenoj kao izvor (dohvaćen HTML, tražena ulica i kućni broj), nije sjedište u sudskom registru, a Google ne nalazi subjekt tog imena na toj adresi"
+ },
+ {
+  "croai_id": "312",
+  "ime": "KulenDayz",
+  "web": "http://www.kulendayz.com/",
+  "kategorije": [
+   "Conferences & Meetups"
+  ],
+  "prvi_krug": {
+   "tip": "dogadjaj",
+   "pravni_naziv": "Udruga Osijek Software City",
+   "oib": "06519815245",
+   "drzava": "HR",
+   "adresa": "IT park 9",
+   "postanski_broj": "31000",
+   "mjesto": "Osijek",
+   "izvor_url": "https://softwarecity.hr/dogadaj/kulendayz-2024/",
+   "drugi_izvor_url": "http://www.kulendayz.com/",
+   "napomena": "IT konferencija u organizaciji Udruge Osijek Software City (Trg slobode 6, Osijek). Glavna lokacija održavanja je IT park Osijek."
+  },
+  "zasto_odbijeno": "adresa NIJE pronađena na stranici navedenoj kao izvor (dohvaćen HTML, tražena ulica i kućni broj), nije sjedište u sudskom registru, a Google ne nalazi subjekt tog imena na toj adresi"
+ },
+ {
+  "croai_id": "313",
+  "ime": "LEAP Summit",
+  "web": "https://leapsummit.com/",
+  "kategorije": [
+   "Conferences & Meetups"
+  ],
+  "prvi_krug": {
+   "tip": "dogadjaj",
+   "pravni_naziv": "Hrvatski ured za kreativnost i inovacije (HUKI)",
+   "oib": "42871852309",
+   "drzava": "HR",
+   "adresa": "Ulica Radoslava Cimermana 88",
+   "postanski_broj": "10000",
+   "mjesto": "Zagreb",
+   "izvor_url": "https://leapsummit.com/",
+   "drugi_izvor_url": "https://huki.hr/",
+   "napomena": "Godišnja konferencija LEAP Summit održava se u Zagrebu (lokacija SEECEL, Ulica Radoslava Cimermana 88). Organizator je udruga HUKI (sjedište Lubenjaki 10, ured Savska cesta 41, Zagreb)."
+  },
+  "zasto_odbijeno": "adresa NIJE pronađena na stranici navedenoj kao izvor (dohvaćen HTML, tražena ulica i kućni broj), nije sjedište u sudskom registru, a Google ne nalazi subjekt tog imena na toj adresi"
+ },
+ {
+  "croai_id": "415",
+  "ime": "Marenda",
+  "web": "https://marenda.app/",
+  "kategorije": [
+   "Healthcare & Life Sciences"
+  ],
+  "prvi_krug": {
+   "tip": "sjediste",
+   "pravni_naziv": "Narratio, obrt za usluge, vl. Josip Ralašić",
+   "oib": "91926387107",
+   "drzava": "HR",
+   "adresa": "Nova cesta 178",
+   "postanski_broj": "10000",
+   "mjesto": "Zagreb",
+   "izvor_url": "https://www.zicer.hr/upoznajte-finaliste-8-generacije-startup-factoryja/",
+   "drugi_izvor_url": "https://www.fininfo.hr/Poduzece/Pregled/narratio-obrt-za-usluge-vl-josip-ralasic/Detaljno/792615",
+   "napomena": "Startup projekt/aplikacija za planiranje prehrane (finalist ZICER Startup Factoryja 2023), voditelj tima Josip Ralašić (nositelj obrta Narratio, Nova cesta 178, Zagreb). Domena marenda.app je neaktivna."
+  },
+  "zasto_odbijeno": "adresa NIJE pronađena na stranici navedenoj kao izvor (dohvaćen HTML, tražena ulica i kućni broj), nije sjedište u sudskom registru, a Google ne nalazi subjekt tog imena na toj adresi"
+ },
+ {
+  "croai_id": "257",
+  "ime": "Meta Change Capital",
+  "web": "https://www.linkedin.com/company/meta-change-capital/",
+  "kategorije": [
+   "Accelerators & Incubators & Investors"
+  ],
+  "prvi_krug": {
+   "tip": "sjediste",
+   "pravni_naziv": "Meta Change Capital",
+   "drzava": "GB",
+   "mjesto": "London",
+   "izvor_url": "https://www.linkedin.com/company/meta-change-capital/",
+   "drugi_izvor_url": "https://tech.eu/2020/06/03/meta-change-capital-100m-fund/",
+   "napomena": "Venture capital fond koji su pokrenuli Luka Sučić i Nikola Stojanow, sa sjedištem u Londonu (UK). Ulična adresa nije javno objavljena."
+  },
+  "zasto_odbijeno": "prvi krug nije našao adresu"
+ },
+ {
+  "croai_id": "60",
+  "ime": "Necogi",
+  "web": "https://necogi.com/",
+  "kategorije": [
+   "Agriculture & Greentech"
+  ],
+  "prvi_krug": {
+   "tip": "sjediste",
+   "pravni_naziv": "Necogi, obrt za računalne usluge, vl. Ivan Biliškov",
+   "oib": "14923986443",
+   "drzava": "HR",
+   "adresa": "Obala kralja Tomislava 8",
+   "postanski_broj": "21215",
+   "mjesto": "Kaštel Lukšić",
+   "izvor_url": "https://necogi.com/",
+   "drugi_izvor_url": "https://www.companywall.hr/tvrtka/necogi-obrt-za-racunalne-usluge-vl-ivan-biliskov/mmx0v7D",
+   "napomena": "Necogi je AI greentech projekt za podvodno čišćenje i ekološki monitoring koji je pokrenuo Ivan Biliškov (Codeasy), registriran kao samostalni obrt."
+  },
+  "zasto_odbijeno": "adresa NIJE pronađena na stranici navedenoj kao izvor (dohvaćen HTML, tražena ulica i kućni broj), nije sjedište u sudskom registru, a Google ne nalazi subjekt tog imena na toj adresi"
+ },
+ {
+  "croai_id": "578",
+  "ime": "ODOO",
+  "web": "https://odoo-community.com.hr/",
+  "kategorije": [
+   "Service Providers"
+  ],
+  "prvi_krug": {
+   "tip": "nepoznato",
+   "drzava": "HR",
+   "izvor_url": "https://odoo-community.com.hr/",
+   "drugi_izvor_url": "https://uviddigital.hr/",
+   "napomena": "Hrvatska Odoo zajednica (odoo-community.com.hr) je neformalno udruženje bez javno navedene fizičke adrese ili pravnog subjekta (kontakt samo putem obrasca/emaila). Portal održava Odoo partner Uvid d.o.o. (Savska 34, Ivanić-Grad / Hrelićka 96, Zagreb, OIB 54763901920)."
+  },
+  "zasto_odbijeno": "prvi krug nije našao adresu"
+ },
+ {
+  "croai_id": "150",
+  "ime": "Orion Labs",
+  "web": "https://www.orionlabs.io/",
+  "kategorije": [
+   "Hospitality & Tourism"
+  ],
+  "prvi_krug": {
+   "tip": "sjediste",
+   "pravni_naziv": "Orion Labs, Inc.",
+   "drzava": "US",
+   "adresa": "208 Utah Street, Suite 350",
+   "postanski_broj": "CA 94103",
+   "mjesto": "San Francisco",
+   "izvor_url": "https://www.orionlabs.io/",
+   "drugi_izvor_url": "https://www.orionlabs.io/contact/",
+   "napomena": "Sjedište tvrtke s navedene web domene (orionlabs.io) je u San Franciscu, SAD. U Hrvatskoj u Puli djeluje istoimeni domaći studio 'Orion Labs, obrt za računalne usluge' (vl. Erik Matošević, Buonarrotijeva 1, 52100 Pula, orionlabs.work) s kojim je CroAI unos vjerojatno pomiješao URL."
+  },
+  "zasto_odbijeno": "adresa NIJE pronađena na stranici navedenoj kao izvor (dohvaćen HTML, tražena ulica i kućni broj), nije sjedište u sudskom registru, a Google ne nalazi subjekt tog imena na toj adresi"
+ },
+ {
+  "croai_id": "468",
+  "ime": "SlimFit AI",
+  "web": "https://www.linkedin.com/company/slimfit-ai/about/?viewAsMember=true",
+  "kategorije": [
+   "Healthcare & Life Sciences"
+  ],
+  "prvi_krug": {
+   "tip": "nepoznato",
+   "drzava": "HR",
+   "mjesto": "Zagreb",
+   "izvor_url": "https://bird-incubator.com/",
+   "drugi_izvor_url": "https://www.linkedin.com/company/slimfit-ai/about/?viewAsMember=true",
+   "napomena": "Startup za AI vođeni trening i fitness (osnivač Aleksandar Petković) u sklopu BIRD Incubatora u Zagrebu. Nema samostalno registriranu pravnu osobu niti javno objavljenu adresu."
+  },
+  "zasto_odbijeno": "prvi krug nije našao adresu"
+ },
+ {
+  "croai_id": "246",
+  "ime": "South Central Ventures",
+  "web": "https://sc-ventures.com/",
+  "kategorije": [
+   "Accelerators & Incubators & Investors"
+  ],
+  "prvi_krug": {
+   "tip": "ured",
+   "pravni_naziv": "SCV Fund Management B.V.",
+   "drzava": "HR",
+   "adresa": "Gradišćanska ulica 36",
+   "postanski_broj": "10000",
+   "mjesto": "Zagreb",
+   "izvor_url": "https://sc-ventures.com/privacy-policy",
+   "drugi_izvor_url": "https://capitalatlas.ai/",
+   "napomena": "Hrvatski ured regionalnog VC fonda South Central Ventures (partner Jan Kobler) nalazi se u HUB385, Gradišćanska ulica 36, 10000 Zagreb. Matično pravno sjedište fonda je u Amsterdamu (SCV Fund Management B.V., Herikerbergweg 88, 1101 CM Amsterdam, Nizozemska)."
+  },
+  "zasto_odbijeno": "adresa NIJE pronađena na stranici navedenoj kao izvor (dohvaćen HTML, tražena ulica i kućni broj), nije sjedište u sudskom registru, a Google ne nalazi subjekt tog imena na toj adresi"
+ },
+ {
+  "croai_id": "342",
+  "ime": "Split Tech City",
+  "web": "https://en.split-techcity.com/",
+  "kategorije": [
+   "Organizations & Communities"
+  ],
+  "prvi_krug": {
+   "tip": "sjediste",
+   "pravni_naziv": "Startup – udruga za poticanje i razvoj IT sektora Splita i regije",
+   "oib": "27758798266",
+   "drzava": "HR",
+   "adresa": "Poljička cesta 26B",
+   "postanski_broj": "21000",
+   "mjesto": "Split",
+   "izvor_url": "https://split-techcity.com/kontakt",
+   "drugi_izvor_url": "https://registri.uprava.hr/",
+   "napomena": "Split Tech City je zajednica i portal iza kojeg stoji pravni subjekt 'Startup – udruga za poticanje i razvoj IT sektora Splita i regije' sa sjedištem na adresi Poljička cesta 26B, Split."
+  },
+  "zasto_odbijeno": "adresa NIJE pronađena na stranici navedenoj kao izvor (dohvaćen HTML, tražena ulica i kućni broj), nije sjedište u sudskom registru, a Google ne nalazi subjekt tog imena na toj adresi"
+ },
+ {
+  "croai_id": "324",
+  "ime": "Startup Europe Regatta",
+  "web": "https://startupeuroperegatta.com/",
+  "kategorije": [
+   "Conferences & Meetups"
+  ],
+  "prvi_krug": {
+   "tip": "dogadjaj",
+   "drzava": "HR",
+   "adresa": "Obala Hrvatskog narodnog preporoda 1",
+   "postanski_broj": "21000",
+   "mjesto": "Split",
+   "izvor_url": "https://startupeuroperegatta.com/",
+   "drugi_izvor_url": "https://nxtforum.com/",
+   "napomena": "Startup Europe Regatta je godišnja tehnološka manifestacija u Splitu (glavna konferencija u Dioklecijanovim podrumima na adresi Obala Hrvatskog narodnog preporoda 1 i na Rivi). Događaj je preimenovan u NXT Innovation Future Forum (nxtforum.com), u organizaciji inicijative SplitX."
+  },
+  "zasto_odbijeno": "adresa NIJE pronađena na stranici navedenoj kao izvor (dohvaćen HTML, tražena ulica i kućni broj), nije sjedište u sudskom registru, a Google ne nalazi subjekt tog imena na toj adresi"
+ },
+ {
+  "croai_id": "572",
+  "ime": "SwipeSpec",
+  "web": "https://swipespec.com/",
+  "kategorije": [
+   "Automation"
+  ],
+  "prvi_krug": {
+   "tip": "ured",
+   "pravni_naziv": "SWIPESPEC d.o.o.",
+   "oib": "44409125570",
+   "drzava": "HR",
+   "adresa": "Radnička cesta 50",
+   "postanski_broj": "10000",
+   "mjesto": "Zagreb",
+   "izvor_url": "https://swipespec.com/terms-of-use/",
+   "drugi_izvor_url": "https://sudreg.pravosudje.hr/",
+   "napomena": "Hrvatsko povezano društvo i razvojni ured je SWIPESPEC d.o.o. (OIB: 44409125570, osnivači Marko Šustić i Mario Smolčić) na adresi Radnička cesta 50, Zagreb. Matična tvrtka navedena u uvjetima korištenja na webu je SwipeSpec Inc., 1111B S Governors Ave STE 23286, Dover, DE 19904, SAD."
+  },
+  "zasto_odbijeno": "adresa NIJE pronađena na stranici navedenoj kao izvor (dohvaćen HTML, tražena ulica i kućni broj), nije sjedište u sudskom registru, a Google ne nalazi subjekt tog imena na toj adresi"
+ },
+ {
+  "croai_id": "478",
+  "ime": "Ulpian",
+  "web": "https://www.ulpian.com",
+  "kategorije": [
+   "HR & Law"
+  ],
+  "prvi_krug": {
+   "tip": "sjediste",
+   "pravni_naziv": "ULPIAN AI d.o.o. za usluge",
+   "oib": "64992711010",
+   "drzava": "HR",
+   "adresa": "Zelinska 5",
+   "postanski_broj": "10000",
+   "mjesto": "Zagreb",
+   "izvor_url": "https://www.ulpian.com",
+   "drugi_izvor_url": "https://sudreg.pravosudje.hr",
+   "napomena": "U footeru i politici privatnosti na ulpian.com navedena je adresa Zelinska 5, 10000 Zagreb. U sudskom registru (MBS 081559175) registrirano sjedište pri osnivanju bilo je Avenija Dubrovnik 15 (ZICER), 10020 Zagreb."
+  },
+  "zasto_odbijeno": "adresa NIJE pronađena na stranici navedenoj kao izvor (dohvaćen HTML, tražena ulica i kućni broj), nije sjedište u sudskom registru, a Google ne nalazi subjekt tog imena na toj adresi"
+ },
+ {
+  "croai_id": "526",
+  "ime": "Zadar Connect Meetup",
+  "web": "https://www.meetup.com/zadarconnect/",
+  "kategorije": [
+   "Organizations & Communities"
+  ],
+  "prvi_krug": {
+   "tip": "dogadjaj",
+   "drzava": "HR",
+   "adresa": "Ul. Jurja Barakovića 5",
+   "postanski_broj": "23000",
+   "mjesto": "Zadar",
+   "izvor_url": "https://antenazadar.hr",
+   "drugi_izvor_url": "https://slobodnadalmacija.hr/zadar/regional/u-srijedu-se-odrzava-prvi-zadarconnect-cilj-je-stvoriti-jaku-lokalnu-zajednicu-1296068",
+   "napomena": "Serijal IT meetup događanja u Zadru (meetup.com/zadarconnect). Panel CroAI & ZadarConnect održan je u Cedulin Atriumu (Palača Cedulin, Ul. Jurja Barakovića 5, 23000 Zadar), a inauguralni meetup na terasi MeetUp caffe-a (Put Murvice 3, Zadar)."
+  },
+  "zasto_odbijeno": "adresa NIJE pronađena na stranici navedenoj kao izvor (dohvaćen HTML, tražena ulica i kućni broj), nije sjedište u sudskom registru, a Google ne nalazi subjekt tog imena na toj adresi"
+ },
+ {
+  "croai_id": "574",
+  "ime": "ZaDom",
+  "web": "https://zadom.hr",
+  "kategorije": [],
+  "prvi_krug": {
+   "tip": "sjediste",
+   "pravni_naziv": "REBASE, obrt za informatičke usluge, vl. Mario Krvarić",
+   "oib": "48336421377",
+   "drzava": "HR",
+   "adresa": "Rudeška cesta 160 A",
+   "postanski_broj": "10000",
+   "mjesto": "Zagreb",
+   "izvor_url": "https://www.zadom.hr/",
+   "drugi_izvor_url": "https://mkrvaric.com/",
+   "napomena": "Web portal za uređenje doma i usporedbu proizvoda zadom.hr u footeru navodi 'Izradio @mkrvaric © Za Dom 2026' uz kontakt info@zadom.hr. Mario Krvarić posluje putem registriranog obrta REBASE (OIB 48336421377, Rudeška cesta 160 A, Zagreb). Subjekt 'ZADOM PROMET d.o.o.' iz automatskih tragova je nepovezan."
+  },
+  "zasto_odbijeno": "adresa NIJE pronađena na stranici navedenoj kao izvor (dohvaćen HTML, tražena ulica i kućni broj), nije sjedište u sudskom registru, a Google ne nalazi subjekt tog imena na toj adresi"
+ },
+ {
+  "croai_id": "531",
+  "ime": "Zagreb Slush'D",
+  "web": "https://www.zagrebslushd.com/",
+  "kategorije": [
+   "Conferences & Meetups"
+  ],
+  "prvi_krug": {
+   "tip": "dogadjaj",
+   "drzava": "HR",
+   "adresa": "Ulica Filipa Vukasovića 1",
+   "postanski_broj": "10000",
+   "mjesto": "Zagreb",
+   "izvor_url": "https://www.entrio.hr/event/zagreb-slushd-2025-24017",
+   "drugi_izvor_url": "https://poduzetnik.biz",
+   "napomena": "Startup konferencija, lokalno izdanje globalnog Slusha u organizaciji HUKI-ja, Bornfighta i ZŠEM-a. Za izdanje 2025. dvorana i domaćin je ZŠEM (Aula Magna, Ulica Filipa Vukasovića 1, 10000 Zagreb), dok se izdanje 2024. održalo u Mozaik Event Centru (Slavonska avenija 6/2)."
+  },
+  "zasto_odbijeno": "adresa NIJE pronađena na stranici navedenoj kao izvor (dohvaćen HTML, tražena ulica i kućni broj), nije sjedište u sudskom registru, a Google ne nalazi subjekt tog imena na toj adresi"
+ },
+ {
+  "croai_id": "376",
+  "ime": "Zimo",
+  "web": "https://zimo.dnevnik.hr/",
+  "kategorije": [
+   "Media"
+  ],
+  "prvi_krug": {
+   "tip": "sjediste",
+   "pravni_naziv": "NOVA TV d.d.",
+   "oib": "75399377119",
+   "drzava": "HR",
+   "adresa": "Buzinski krči 1",
+   "postanski_broj": "10000",
+   "mjesto": "Zagreb",
+   "izvor_url": "https://novatv.dnevnik.hr/stranica/impressum",
+   "drugi_izvor_url": "https://zimo.dnevnik.hr/",
+   "napomena": "Zimo (zimo.dnevnik.hr) je tehnološki portal Nove TV. Nakladnik i pravni subjekt je NOVA TV d.d., Buzinski krči 1, 10000 Zagreb (OIB 75399377119, MB 1417398). Clue 'Čarobna zima' iz Ljubljane u automatskim tragovima bio je false positive."
+  },
+  "zasto_odbijeno": "adresa ne postoji na Google Mapsu u tom obliku"
+ }
+]
