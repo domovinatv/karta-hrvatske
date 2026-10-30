@@ -120,3 +120,24 @@ bez ičega, i za svaki „bez ičega" jednu rečenicu zašto.
    `izvor` napisati da je to razina grada.
 3. Geokod, `croai_overrides.json`, skripta 34, count u `layers.ts`, deploy iz
    čistog worktreeja ako u `apps/karta-web` ima tuđih necommitanih izmjena.
+
+---
+
+## Rezultati drugog kruga (Antigravity 2026-10-30)
+
+Istraživanje uspješno dovršeno kroz 2 subagenta. Datoteke:
+- `apps/data-pipeline/data/croai_istrazivanje2/batch-01.json` (indeksi 0–18, 19 subjekata)
+- `apps/data-pipeline/data/croai_istrazivanje2/batch-02.json` (indeksi 19–37, 19 subjekata)
+- `apps/data-pipeline/data/croai_istrazivanje2_izlaz.json` (svih 38 subjekata)
+- `apps/data-pipeline/data/croai_istrazivanje2/oib-provjera.json` (4 sumnjiva OIB-a iz 1. kruga)
+
+### Statistika (38 subjekata)
+- **S točnom adresom (ulica i broj):** 22
+- **Samo grad / dvorana / ustanova:** 16 (svi s doslovnim citatom iz otvorenog HTML-a bez prijave)
+- **Bez lokacije:** 0
+
+### Razjašnjenje 4 OIB-a iz 1. kruga
+1. **Careesma:** OIB `29598595344` je ispravan. Puni naziv je `Careesma j.d.o.o. za informacijske usluge u stečaju` (MBS 081109444, Trg Stjepana Konzula 4, Zagreb). Nije bio nađen jer je pretraživan kao d.o.o.
+2. **Funderbeam:** OIB `11407307685` je ispravan (`Funderbeam South-East Europe d.o.o. za usluge`, MBS 081079366, Ivana Lučića 2a, Zagreb). Društvo je likvidirano i brisano iz sudskog registra, pa se ne vidi među aktivnima.
+3. **SwipeSpec:** OIB `44409125570` je ispravan (`SWIPESPEC d.o.o. za informatičke usluge`, Radnička cesta 50, Zagreb). Društvo je novoosnovano 2024. godine.
+4. **Meetup Group: ML/AI Split:** OIB `38234674312` iz 1. kruga je bio nevaljan (loša kontrolna znamenka). Iza inicijative stoji Splitsko-dalmatinska županija čiji je točan OIB `40781519492` (Domovinskog rata 2, Split).
