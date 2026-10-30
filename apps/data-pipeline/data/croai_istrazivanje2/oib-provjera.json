@@ -1,0 +1,38 @@
+[
+  {
+    "ime": "Careesma",
+    "oib_prvi_krug": "29598595344",
+    "oib_ispravan": "29598595344",
+    "pravni_naziv": "Careesma j.d.o.o. za informacijske usluge u stečaju",
+    "izvor_url": "https://infobiz.fina.hr/tvrtka/careesma-j-d-o-o/OIB-29598595344",
+    "citat": "Careesma j.d.o.o. u stečaju, OIB 29598595344, MB 04757459. Pretežita djelatnost subjekta je 6201 - Računalno programiranje... Adresa: Trg Stjepana Konzula 4, 10000 Zagreb",
+    "napomena": "Pravni oblik nije d.o.o. nego j.d.o.o. te je subjekt u stečaju (MBS 081109444, MB 04757459). OIB 29598595344 je točan i matematički ispravan, ali pretraga po imenu 'Careesma d.o.o.' u sudskom registru nije davala rezultat zbog pogrešnog pravnog oblika."
+  },
+  {
+    "ime": "Funderbeam",
+    "oib_prvi_krug": "11407307685",
+    "oib_ispravan": "11407307685",
+    "pravni_naziv": "Funderbeam South-East Europe d.o.o. za usluge",
+    "izvor_url": "https://infobiz.fina.hr/tvrtka/funderbeam-south-east-europe-d-o-o/OIB-11407307685",
+    "citat": "Funderbeam South-East Europe d.o.o., OIB 11407307685, MB 04624122. Pretežita djelatnost subjekta je 63100 - Računalna infrastruktura, obrada podataka, usluge poslužitelja i djelatnosti povezane s njima. Adresa: Ulica Ivana Lučića 2/a/22, 10000 Zagreb",
+    "napomena": "Društvo je postojalo pod OIB-om 11407307685 (MBS 081079366, MB 04624122) sa sjedištem u Ulici Ivana Lučića 2/a, Zagreb, no likvidirano je i brisano iz sudskog registra, zbog čega se ne prikazuje u pretrazi aktivnih subjekata."
+  },
+  {
+    "ime": "SwipeSpec",
+    "oib_prvi_krug": "44409125570",
+    "oib_ispravan": "44409125570",
+    "pravni_naziv": "SWIPESPEC d.o.o. za informatičke usluge",
+    "izvor_url": "https://infobiz.fina.hr/tvrtka/swipespec-d-o-o/OIB-44409125570",
+    "citat": "SWIPESPEC d.o.o., OIB 44409125570, MB 06032052. Pretežita djelatnost subjekta je 62.09 - Ostale uslužne djelatnosti u vezi s informacijskom tehnologijom i računalima... Adresa: Radnička cesta 50, 10000 Zagreb",
+    "napomena": "Društvo je osnovano 2024. godine (MBS 081616197, MB 06032052), OIB 44409125570 je točan i važeći u službenim registrima FINA-e."
+  },
+  {
+    "ime": "Meetup Group: ML/AI Split",
+    "oib_prvi_krug": "38234674312",
+    "oib_ispravan": "40781519492",
+    "pravni_naziv": "SPLITSKO-DALMATINSKA ŽUPANIJA",
+    "izvor_url": "https://www.companywall.hr/tvrtka/splitsko-dalmatinska-zupanija/MM2TC11R",
+    "citat": "SPLITSKO-DALMATINSKA ŽUPANIJA DOMOVINSKOG RATA 2 , 21000 , Split , Hrvatska Aktivan OIB 40781519492 MBS 002544008",
+    "napomena": "OIB iz prvog kruga (38234674312) je neispravan jer mu kontrolna znamenka ne zadovoljava ISO 7064 MOD 11, 10 algoritam. Nositelj projekta Digitalna Dalmacija koji organizira meetup ML/AI Split je Splitsko-dalmatinska županija, čiji je točan OIB 40781519492."
+  }
+]
