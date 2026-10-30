@@ -3,6 +3,7 @@
 // public/logos/. Run after `python3 scripts/09_build_hr_full_app.py` in
 // apps/data-pipeline/. Run by `npm run sync-data` or directly: node scripts/sync-data.mjs
 import { copyFileSync, cpSync, existsSync, mkdirSync, writeFileSync } from "node:fs";
+import { homedir } from "node:os";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -70,29 +71,35 @@ if (existsSync(logosSrc)) {
 // Tematski slojevi iz sestrinskih repozitorija (nisu iz data-pipelinea).
 // Svaki domenski repo generira svoj GeoJSON i drži ga kod sebe; ovdje se samo
 // preslika. public/data/ je gitignored, pa bez ovog koraka sloj nestane na
-// svježem checkoutu ili u CI-u. Ako repo nije kloniran — preskoči tiho.
+// svježem checkoutu ili u CI-u. Ako repo nije kloniran — preskoči.
+//
+// Repoi ne žive nužno uz ovaj: karta-hrvatske je na vanjskom disku
+// (/Volumes/DOMOVINA2TB/git/domovinatv), a crkve/oou u ~/git/domovinatv. Zato
+// se repo traži redom u: $SIBLINGS_ROOT, direktorij iznad ovog repoa,
+// ~/git/domovinatv — prvi koji ima exports/ pobjeđuje.
+const SIBLING_ROOTS = [
+  process.env.SIBLINGS_ROOT,
+  resolve(KARTA_WEB, "../../.."),
+  join(homedir(), "git/domovinatv"),
+].filter(Boolean);
 const SIBLING_LAYERS = [
-  [
-    "../../../crkve.domovina.ai/data/exports",
-    ["crkve.geojson", "zupe.geojson", "biskupije.geojson"],
-  ],
-  ["../../../udruge.domovina.ai/data/exports", ["udruge.geojson"]],
-  [
-    "../../../oou.domovina.ai/data/exports",
-    ["skole.geojson", "vrtici.geojson", "ustanove.geojson"],
-  ],
+  ["crkve.domovina.ai", ["crkve.geojson", "zupe.geojson", "biskupije.geojson"]],
+  ["udruge.domovina.ai", ["udruge.geojson"]],
+  ["oou.domovina.ai", ["skole.geojson", "vrtici.geojson", "ustanove.geojson"]],
 ];
-for (const [relDir, files] of SIBLING_LAYERS) {
-  const dir = resolve(KARTA_WEB, relDir);
+for (const [repo, files] of SIBLING_LAYERS) {
+  const dir = SIBLING_ROOTS.map((r) => join(r, repo, "data/exports")).find((d) => existsSync(d));
   for (const f of files) {
-    const src = join(dir, f);
-    if (!existsSync(src)) {
-      console.warn(`  skip ${f} (nema ${relDir} — pokreni tamo \`make export\`)`);
+    const src = dir && join(dir, f);
+    if (!src || !existsSync(src)) {
+      console.warn(
+        `  skip ${f} (nema ${repo}/data/exports/${f} u ${SIBLING_ROOTS.join(", ")} — pokreni tamo \`make export\`)`,
+      );
       continue;
     }
     copyFileSync(src, join(targetData, f));
     copied++;
-    console.log(`  ${relDir}/${f} → public/data/${f}`);
+    console.log(`  ${src} → public/data/${f}`);
   }
 }
 
