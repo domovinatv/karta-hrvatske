@@ -164,14 +164,37 @@ je izvan Hrvatske (Bruxelles, Sofija, London, Tokio…).
 
 Stanje: **527 od 565** na karti, 117 ručnih unosa, 38 nerazriješenih.
 
+## Drugi krug: obavezan citat (30.10.2026.)
+
+38 preostalih (27 nepotvrđenih + 11 bez adrese) ponovno kroz agy, s promptom
+`docs/2026-10-30-croai-istrazivanje-antigravity-2.md`: uz svaku adresu
+doslovni citat sa stranice. Citat se strojno traži na `izvor_url` (najdulji
+zajednički niz ≥ 60 % citata i ulica u tekstu stranice): **31 od 38
+potvrđeno**. Ostalih 7 pregledano ručno; svi su prošli, jer je padala
+provjera, ne podatak: padež („Petračićevoj"), Brussels/Bruxelles, adresa u
+JSON-LD-u koji provjera briše, SPA stranice (Dani komunikacija → Hotel Lone,
+Fructus → FER), bon.hr citat potvrđen Registrom udruga (Keymon) i sudregom
+(SwipeSpec).
+
+Tri „d.o.o." kojih nije bilo u sudregu (Careesma, Funderbeam, SwipeSpec)
+postoje, ali su **brisani** 2025. Skupne tablice sudrega sadrže samo aktivne
+subjekte; `detalji_subjekta?tip_identifikatora=oib` vraća i brisane
+(`status: 0`, `datum_brisanja`). Točka ostaje, u `geo_izvor` piše da je
+društvo brisano.
+
+15 subjekata nema stalnu adresu (neformalne zajednice, projekti, think-tank
+bez ureda) i stoji u središtu grada, s „razina grada" u `geo_izvor`.
+
+Stanje: **565 od 565** na karti, 156 ručnih unosa u `croai_overrides.json`.
+
 ## Otvoreno
 
-- [ ] 27 nepotvrđenih (razina D, popis u `croai_report.json`): drugi izvor za
-      svaki, ili ručna potvrda. Većina su događaji (Mozaik Event Centar, SEECEL,
-      Rovinj) i adrese koje su vjerojatno točne, ali ih ništa ne potvrđuje.
 - [ ] Pregledati `geo_conflicts` (93; 16 dalje od 50 km) i 59 pogodaka samo s weba.
 - [ ] Ručni unosi iz sudrega nemaju poštanski broj, pa im je `mjesto` u popupu prazno.
-- [ ] Popup ne razlikuje sjedište, ured i mjesto događaja; to je zasad samo u `geo_izvor`.
+- [ ] Popup ne razlikuje sjedište, ured, mjesto događaja i razinu grada; to je
+      zasad samo u `geo_izvor`, koji frontend ne prikazuje.
+- [ ] Spajanje sa sudregom, Registrom udruga i agy rezultatima su jednokratne
+      skripte; overrideovi su trajni, ali nova imena u imeniku ih neće dobiti sama.
 
 ## Vezani dokumenti
 

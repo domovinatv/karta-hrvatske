@@ -6,7 +6,7 @@
   "napomena": "Imenik AI ekosustava, NE popis članova udruge CroAI.",
   "provjereno": "2026-10-30",
   "u_imeniku": 565,
-  "na_karti": 527
+  "na_karti": 565
  },
  "features": [
   {
@@ -767,6 +767,41 @@
   },
   {
    "type": "Feature",
+   "id": 53,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.981919,
+     45.815011
+    ]
+   },
+   "properties": {
+    "id": 53,
+    "name": "Fructus",
+    "grupa": "tvrtke",
+    "grupa_naziv": "AI tvrtke i startupi",
+    "kategorije": "Adtech & Sales & PR",
+    "about": "Netlify provides a platform that enables web developers and agencies to build, deploy, and host static websites and applications efficiently, leveraging modern web technologies to enhance speed, security, and scalability.",
+    "website": "https://theengineersapproach.netlify.app/",
+    "year": 2014,
+    "oib": null,
+    "oib_izvor": "ručno",
+    "naziv": null,
+    "adresa": "Zagreb",
+    "mjesto": null,
+    "fina_status": null,
+    "fina_aktivan": null,
+    "fina_velicina": null,
+    "fina_zaposleni": null,
+    "fina_url": null,
+    "geo_source": "rucno",
+    "provjera": null,
+    "google_maps": null,
+    "geo_izvor": "lokacija (razina grada): https://theengineersapproach.netlify.app/ (Antigravity/Gemini, 2. krug, citat ručno pregledan), 2026-10-30"
+   }
+  },
+  {
+   "type": "Feature",
    "id": 54,
    "geometry": {
     "type": "Point",
@@ -865,6 +900,41 @@
   },
   {
    "type": "Feature",
+   "id": 57,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.981919,
+     45.815011
+    ]
+   },
+   "properties": {
+    "id": 57,
+    "name": "Crop Shepherd (robot PASTIR)",
+    "grupa": "tvrtke",
+    "grupa_naziv": "AI tvrtke i startupi",
+    "kategorije": "Agriculture & Greentech",
+    "about": "Crop Shepherd is an agri-tech startup developing an autonomous laser-equipped weeding robot for organic farms. The compact robot can navigate fields, identify weeds among crops using AI and computer vision, and eliminate those weeds with precision lasers instead of chemicals. By providing an herbicide-free weed control solution, Crop Shepherd helps farmers reduce manual labor and avoid pesticides. The system is especially beneficial for mid-sized organic farms, automating a traditionally time-consuming task. The ultimate goal is to increase agricultural productivity and sustainability by replacing chemical herbicides with smart robotics that can work day and night removing weeds.",
+    "website": "https://www.cropshepherd.com/",
+    "year": 2019,
+    "oib": null,
+    "oib_izvor": "ručno",
+    "naziv": null,
+    "adresa": "Zagreb",
+    "mjesto": null,
+    "fina_status": null,
+    "fina_aktivan": null,
+    "fina_velicina": null,
+    "fina_zaposleni": null,
+    "fina_url": null,
+    "geo_source": "rucno",
+    "provjera": null,
+    "google_maps": null,
+    "geo_izvor": "institucija (razina grada): https://spock.fer.hr/crop-shepherd-osvojio-dodatnih-10-000-eura-u-sklopu-eit-ovog-programa/ (Antigravity/Gemini, 2. krug, citat potvrđen), 2026-10-30"
+   }
+  },
+  {
+   "type": "Feature",
    "id": 58,
    "geometry": {
     "type": "Point",
@@ -931,6 +1001,41 @@
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 60,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.365571,
+     43.550436
+    ]
+   },
+   "properties": {
+    "id": 60,
+    "name": "Necogi",
+    "grupa": "tvrtke",
+    "grupa_naziv": "AI tvrtke i startupi",
+    "kategorije": "Agriculture & Greentech",
+    "about": "necogi provides an AI underwater clean tool using drones and AI computer vision to detect and remove macroplastics, reducing microplastic concentration and protecting marine life.",
+    "website": "https://necogi.com/",
+    "year": null,
+    "oib": "14923986443",
+    "oib_izvor": "ručno",
+    "naziv": null,
+    "adresa": "Obala kralja Tomislava 8, 21215 Kaštel Lukšić",
+    "mjesto": "Kaštel Lukšić",
+    "fina_status": null,
+    "fina_aktivan": null,
+    "fina_velicina": null,
+    "fina_zaposleni": null,
+    "fina_url": null,
+    "geo_source": "rucno",
+    "provjera": null,
+    "google_maps": null,
+    "geo_izvor": "sjedište: https://infobiz.fina.hr/subjekt/necogi-obrt-za-racunalne-usluge-vl-ivan-biliskov-kastel-luksic-obala-kralja/MBO-98551884 (Antigravity/Gemini, 2. krug, citat potvrđen), 2026-10-30"
    }
   },
   {
@@ -3885,6 +3990,41 @@
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=1303968751567666786&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 150,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.844735,
+     44.857517
+    ]
+   },
+   "properties": {
+    "id": 150,
+    "name": "Orion Labs",
+    "grupa": "tvrtke",
+    "grupa_naziv": "AI tvrtke i startupi",
+    "kategorije": "Hospitality & Tourism",
+    "about": "Orion provides voice-activated business communication and automation solutions for frontline teams, including push-to-talk technology, language translation, and Voice AI Workflows for faster incident response and improved safety.",
+    "website": "https://www.orionlabs.io/",
+    "year": 2013,
+    "oib": null,
+    "oib_izvor": "ručno",
+    "naziv": null,
+    "adresa": "Buonarrotijeva 1, 52100 Pula",
+    "mjesto": "Pula",
+    "fina_status": null,
+    "fina_aktivan": null,
+    "fina_velicina": null,
+    "fina_zaposleni": null,
+    "fina_url": null,
+    "geo_source": "rucno",
+    "provjera": null,
+    "google_maps": null,
+    "geo_izvor": "sjedište: https://crobiz.net/info/orion-labs-pula/ARkmxplD (Antigravity/Gemini, 2. krug, citat potvrđen), 2026-10-30"
    }
   },
   {
@@ -6864,6 +7004,41 @@
   },
   {
    "type": "Feature",
+   "id": 243,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.996815,
+     45.832292
+    ]
+   },
+   "properties": {
+    "id": 243,
+    "name": "Keymon Ventures",
+    "grupa": "ekosustav",
+    "grupa_naziv": "Ekosustav",
+    "kategorije": "Accelerators & Incubators & Investors",
+    "about": "keymon ventures focuses on enhancing the economies of emerging countries by fostering the early stage investment industry, working closely with clients to support their roles within entrepreneurial ecosystems.",
+    "website": "https://www.keymonventures.com",
+    "year": null,
+    "oib": "76660797479",
+    "oib_izvor": "ručno",
+    "naziv": "KEYMON ANĐELI - MREŽA POSLOVNIH ANĐELA",
+    "adresa": "Bijenička cesta 113, 10000 Zagreb",
+    "mjesto": "Zagreb",
+    "fina_status": "Aktivan",
+    "fina_aktivan": true,
+    "fina_velicina": null,
+    "fina_zaposleni": null,
+    "fina_url": "https://infobiz.fina.hr/neprofitni/kampa/OIB-76660797479",
+    "geo_source": "rucno",
+    "provjera": null,
+    "google_maps": null,
+    "geo_izvor": "sjedište: https://www.bon.hr/apex/pdborcl/r/bonitet/bonitet/pokazatelji?naziv=KEYMON-AN%C4%90ELI---MRE%C5%BDA-POSLOVNIH-AN%C4%90ELA&oib=xxxxxxxxxxx&partner_id=1802018 (Antigravity/Gemini, 2. krug, citat ručno pregledan), 2026-10-30"
+   }
+  },
+  {
+   "type": "Feature",
    "id": 244,
    "geometry": {
     "type": "Point",
@@ -6923,6 +7098,41 @@
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=2289806965766750058&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 246,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.938462,
+     45.81031
+    ]
+   },
+   "properties": {
+    "id": 246,
+    "name": "South Central Ventures",
+    "grupa": "ekosustav",
+    "grupa_naziv": "Ekosustav",
+    "kategorije": "Accelerators & Incubators & Investors",
+    "about": "SC Ventures South Central Ventures is dedicated to investments in startups, small and medium globally oriented technology companies in SE Europe.",
+    "website": "https://sc-ventures.com/",
+    "year": null,
+    "oib": null,
+    "oib_izvor": "ručno",
+    "naziv": null,
+    "adresa": "HUB385, Gradišćanska ulica 36, 10000 Zagreb",
+    "mjesto": "Zagreb",
+    "fina_status": null,
+    "fina_aktivan": null,
+    "fina_velicina": null,
+    "fina_zaposleni": null,
+    "fina_url": null,
+    "geo_source": "rucno",
+    "provjera": null,
+    "google_maps": null,
+    "geo_izvor": "ured: https://sc-ventures.com/about-us/ (Antigravity/Gemini, 2. krug, citat potvrđen), 2026-10-30"
    }
   },
   {
@@ -7060,6 +7270,41 @@
   },
   {
    "type": "Feature",
+   "id": 252,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.544986,
+     46.021561
+    ]
+   },
+   "properties": {
+    "id": 252,
+    "name": "HACK - Hub for Advanced Computing Križevci",
+    "grupa": "ekosustav",
+    "grupa_naziv": "Ekosustav",
+    "kategorije": "Accelerators & Incubators & Investors",
+    "about": "P.O.I.N.T. Association, established in 2004 in Križevci, Croatia, promotes projects in STEM, culture, education, and media for the local community.",
+    "website": "https://hack.udruga-point.hr/",
+    "year": null,
+    "oib": "75093177043",
+    "oib_izvor": "ručno",
+    "naziv": "UDRUGA \"PROMICANJE OBRAZOVANJA, INFORMIRANJA, NOVINARSTVA I TEHNOLOGIJA\"",
+    "adresa": "Učionica Pučkog otvorenog učilišta Križevci, Trg sv. Florijana 14, 48260 Križevci",
+    "mjesto": "Križevci",
+    "fina_status": "Aktivan",
+    "fina_aktivan": true,
+    "fina_velicina": null,
+    "fina_zaposleni": null,
+    "fina_url": "https://infobiz.fina.hr/neprofitni/p-o-i-n-t/OIB-75093177043",
+    "geo_source": "rucno",
+    "provjera": null,
+    "google_maps": null,
+    "geo_izvor": "institucija: https://hack.udruga-point.hr/ (Antigravity/Gemini, 2. krug, citat potvrđen), 2026-10-30"
+   }
+  },
+  {
+   "type": "Feature",
    "id": 253,
    "geometry": {
     "type": "Point",
@@ -7154,6 +7399,76 @@
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 256,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.969959,
+     45.798828
+    ]
+   },
+   "properties": {
+    "id": 256,
+    "name": "Funderbeam",
+    "grupa": "ekosustav",
+    "grupa_naziv": "Ekosustav",
+    "kategorije": "Accelerators & Incubators & Investors",
+    "about": "Funderbeam is a global marketplace where growth companies are funded and traded across borders on blockchain technology. They provide a platform for anyone to buy and sell investments in ambitious companies, offering services for angels, entrepreneurs, and investors. The platform aims to democratize investment by allowing a wide range of investors to access start-up investments, breaking traditional barriers where only venture capitalists or angel investors had access.",
+    "website": "https://www.funderbeam.com/",
+    "year": null,
+    "oib": "11407307685",
+    "oib_izvor": "ručno",
+    "naziv": "Funderbeam South-East Europe društvo s ograničenom odgovornošću za usluge",
+    "adresa": "Eurotower (Zagrebačka burza), Ulica Ivana Lučića 2a, 10000 Zagreb",
+    "mjesto": "Zagreb",
+    "fina_status": "Neaktivan/izbrisan",
+    "fina_aktivan": false,
+    "fina_velicina": null,
+    "fina_zaposleni": 0,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/funderbeam-south-east-europe-d-o-o/OIB-11407307685",
+    "geo_source": "rucno",
+    "provjera": null,
+    "google_maps": null,
+    "geo_izvor": "ured: https://infobiz.fina.hr/tvrtka/funderbeam-south-east-europe-d-o-o/OIB-11407307685 (Antigravity/Gemini, 2. krug, citat potvrđen), 2026-10-30; društvo brisano iz sudskog registra 24.6.2025."
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 257,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.127586,
+     51.507218
+    ]
+   },
+   "properties": {
+    "id": 257,
+    "name": "Meta Change Capital",
+    "grupa": "ekosustav",
+    "grupa_naziv": "Ekosustav",
+    "kategorije": "Accelerators & Incubators & Investors",
+    "about": "Meta Change Capital (mcc.capital) is a venture capital and private equity firm supporting innovative startups for growth and success.",
+    "website": "https://www.linkedin.com/company/meta-change-capital/",
+    "year": null,
+    "oib": null,
+    "oib_izvor": "ručno",
+    "naziv": null,
+    "adresa": "London, GB",
+    "mjesto": null,
+    "fina_status": null,
+    "fina_aktivan": null,
+    "fina_velicina": null,
+    "fina_zaposleni": null,
+    "fina_url": null,
+    "geo_source": "rucno",
+    "provjera": null,
+    "google_maps": null,
+    "geo_izvor": "sjedište (razina grada): https://startupintros.com/orgs/meta-change-capital (Antigravity/Gemini, 2. krug, citat potvrđen), 2026-10-30"
    }
   },
   {
@@ -8054,6 +8369,41 @@
   },
   {
    "type": "Feature",
+   "id": 287,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.923608,
+     45.78535
+    ]
+   },
+   "properties": {
+    "id": 287,
+    "name": "FutureHR",
+    "grupa": "ekosustav",
+    "grupa_naziv": "Ekosustav",
+    "kategorije": "Research",
+    "about": null,
+    "website": "https://www.linkedin.com/company/futurehrconsulting/",
+    "year": null,
+    "oib": "88517216552",
+    "oib_izvor": "ručno",
+    "naziv": null,
+    "adresa": "Ulica Predraga Heruca 10, 10000 Zagreb",
+    "mjesto": "Zagreb",
+    "fina_status": null,
+    "fina_aktivan": null,
+    "fina_velicina": null,
+    "fina_zaposleni": null,
+    "fina_url": null,
+    "geo_source": "rucno",
+    "provjera": null,
+    "google_maps": null,
+    "geo_izvor": "sjedište: https://epoduzetnici.hr/subjekt/futurehr-obrt-za-poslovno-savjetovanje-vl-aco-momcilovic-129294 (Antigravity/Gemini, 2. krug, citat potvrđen), 2026-10-30"
+   }
+  },
+  {
+   "type": "Feature",
    "id": 288,
    "geometry": {
     "type": "Point",
@@ -8775,6 +9125,111 @@
   },
   {
    "type": "Feature",
+   "id": 311,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.981919,
+     45.815011
+    ]
+   },
+   "properties": {
+    "id": 311,
+    "name": "Future Tense",
+    "grupa": "ekosustav",
+    "grupa_naziv": "Ekosustav",
+    "kategorije": "Conferences & Meetups",
+    "about": "Future Tense konferencija organizes an internationally recognized B2B conference that brings together leading futurist experts to explore emerging trends in various sectors, including leadership, technology, sustainability, and the metaverse.",
+    "website": "https://futuretense.eu/",
+    "year": null,
+    "oib": "27606172972",
+    "oib_izvor": "ručno",
+    "naziv": "KOMUNIKACIJSKI LABORATORIJ d.o.o. za trgovinu i usluge",
+    "adresa": "Zagreb",
+    "mjesto": null,
+    "fina_status": "Aktivan",
+    "fina_aktivan": true,
+    "fina_velicina": "Mali",
+    "fina_zaposleni": 26,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/komunikacijski-laboratorij-d-o-o/OIB-27606172972",
+    "geo_source": "rucno",
+    "provjera": null,
+    "google_maps": null,
+    "geo_izvor": "mjesto održavanja (razina grada): https://futuretense.eu/ (Antigravity/Gemini, 2. krug, citat potvrđen), 2026-10-30"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 312,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     18.68992,
+     45.548531
+    ]
+   },
+   "properties": {
+    "id": 312,
+    "name": "KulenDayz",
+    "grupa": "ekosustav",
+    "grupa_naziv": "Ekosustav",
+    "kategorije": "Conferences & Meetups",
+    "about": "KulenDayz is an IT conference in Croatia that offers three full days of trainings, talks, and team building. The event aims to provide an informal environment for IT specialists to meet, exchange ideas, attend sessions and workshops, and relax.",
+    "website": "http://www.kulendayz.com/",
+    "year": null,
+    "oib": "06519815245",
+    "oib_izvor": "ručno",
+    "naziv": "OSIJEK SOFTWARE CITY",
+    "adresa": "IT Park Osijek, IT park 9, 31000 Osijek",
+    "mjesto": "Osijek",
+    "fina_status": "Aktivan",
+    "fina_aktivan": true,
+    "fina_velicina": null,
+    "fina_zaposleni": null,
+    "fina_url": "https://infobiz.fina.hr/neprofitni/osc/OIB-06519815245",
+    "geo_source": "rucno",
+    "provjera": null,
+    "google_maps": null,
+    "geo_izvor": "mjesto održavanja: https://sib.net.hr/dogadjanja/1274467/it-park-osijek-18-kulendayz/ (Antigravity/Gemini, 2. krug, citat ručno pregledan), 2026-10-30"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 313,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.977027,
+     45.778179
+    ]
+   },
+   "properties": {
+    "id": 313,
+    "name": "LEAP Summit",
+    "grupa": "ekosustav",
+    "grupa_naziv": "Ekosustav",
+    "kategorije": "Conferences & Meetups",
+    "about": "LEAP Summit Zagreb is a global conference that gathers leaders and changemakers from over 40 countries. It aims to educate and inspire innovators, entrepreneurs, and trailblazing individuals through multidisciplinary events, workshops, and meetups.",
+    "website": "https://leapsummit.com/",
+    "year": null,
+    "oib": "42871852309",
+    "oib_izvor": "ručno",
+    "naziv": "HRVATSKI URED ZA KREATIVNOST I INOVACIJE",
+    "adresa": "Zagrebački Velesajam, Avenija Dubrovnik 15, 10000 Zagreb",
+    "mjesto": "Zagreb",
+    "fina_status": "Aktivan",
+    "fina_aktivan": true,
+    "fina_velicina": null,
+    "fina_zaposleni": null,
+    "fina_url": "https://infobiz.fina.hr/neprofitni/huki/OIB-42871852309",
+    "geo_source": "rucno",
+    "provjera": null,
+    "google_maps": null,
+    "geo_izvor": "mjesto održavanja: https://www.udrugamladihlumen.com/aktivnosti/leap-summit (Antigravity/Gemini, 2. krug, citat potvrđen), 2026-10-30"
+   }
+  },
+  {
+   "type": "Feature",
    "id": 314,
    "geometry": {
     "type": "Point",
@@ -8792,13 +9247,20 @@
     "about": "eSTUDENT is a non-profit student association connecting top students with leading companies in Croatia, providing practical experience and networking opportunities for over 250 members.",
     "website": "https://estudent.hr/projekti/lumen-data-science",
     "year": null,
-    "oib": null,
-    "oib_izvor": null,
+    "oib": "85776407714",
+    "oib_izvor": "ručno",
+    "naziv": "eSTUDENT",
     "adresa": "Trg John F. Kennedy 6, 10000, Zagreb",
     "mjesto": null,
-    "geo_source": "google-ime",
-    "provjera": "google-web",
-    "google_maps": "https://maps.google.com/?cid=12660104735597329424&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    "fina_status": "Aktivan",
+    "fina_aktivan": true,
+    "fina_velicina": null,
+    "fina_zaposleni": null,
+    "fina_url": "https://infobiz.fina.hr/neprofitni/estudent/OIB-85776407714",
+    "geo_source": "rucno",
+    "provjera": "google-potvrda",
+    "google_maps": "https://maps.google.com/?cid=12660104735597329424&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "geo_izvor": "OIB: Registar udruga (eSTUDENT, domena weba); točka Google Maps po imenu i webu, 2026-10-30"
    }
   },
   {
@@ -8862,6 +9324,41 @@
     "geo_source": "google-ime",
     "provjera": "google-web",
     "google_maps": "https://maps.google.com/?cid=1861185304532289703&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 317,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     18.695514,
+     45.554962
+    ]
+   },
+   "properties": {
+    "id": 317,
+    "name": "Bounding Box",
+    "grupa": "ekosustav",
+    "grupa_naziv": "Ekosustav",
+    "kategorije": "Conferences & Meetups",
+    "about": "Bounding Box is a deep tech conference held in Slavonia, Croatia, focusing on artificial intelligence, drones, and space technology. Organized by Protostar Labs (an R&D company specializing in AI and computer vision), the event aims to inspire engineers, scientists, and entrepreneurs while combining cutting-edge technology discussions with unique gastronomy experiences.",
+    "website": "https://bounding-box.ai/",
+    "year": null,
+    "oib": "46675049527",
+    "oib_izvor": "ručno",
+    "naziv": "PROTOSTAR LABS društvo s ograničenom odgovornošću za proizvodnju i usluge",
+    "adresa": "Osijek",
+    "mjesto": null,
+    "fina_status": "Aktivan",
+    "fina_aktivan": true,
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 19,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/protostar-labs-d-o-o/OIB-46675049527",
+    "geo_source": "rucno",
+    "provjera": null,
+    "google_maps": null,
+    "geo_izvor": "mjesto održavanja (razina grada): https://sib.net.hr/lifestyle/ostalo/1245802/osijek-jaca-deep-tech-zajednicu-konferencija-bounding-box-2025-u-kulturnom-centru-osijek/ (Antigravity/Gemini, 2. krug, citat potvrđen), 2026-10-30"
    }
   },
   {
@@ -8964,6 +9461,41 @@
   },
   {
    "type": "Feature",
+   "id": 321,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.981919,
+     45.815011
+    ]
+   },
+   "properties": {
+    "id": 321,
+    "name": "BestInvest.hr",
+    "grupa": "ekosustav",
+    "grupa_naziv": "Ekosustav",
+    "kategorije": "Conferences & Meetups",
+    "about": "Bestinvest is a company that organizes the Croatian Annual PE&VC Investment Awards Conference, which aims to accelerate the Croatian economy's growth by investing in the best entrepreneurial projects.",
+    "website": "https://www.bestinvest.hr/",
+    "year": null,
+    "oib": "68510828086",
+    "oib_izvor": "ručno",
+    "naziv": "HRVATSKA PRIVATE EQUITY I VENTURE CAPITAL ASOCIJACIJA",
+    "adresa": "Zagreb",
+    "mjesto": null,
+    "fina_status": "Aktivan",
+    "fina_aktivan": true,
+    "fina_velicina": null,
+    "fina_zaposleni": null,
+    "fina_url": "https://infobiz.fina.hr/neprofitni/hvca/OIB-68510828086",
+    "geo_source": "rucno",
+    "provjera": null,
+    "google_maps": null,
+    "geo_izvor": "mjesto održavanja (razina grada): https://bestinvest.hr/ (Antigravity/Gemini, 2. krug, citat potvrđen), 2026-10-30"
+   }
+  },
+  {
+   "type": "Feature",
    "id": 322,
    "geometry": {
     "type": "Point",
@@ -8995,6 +9527,76 @@
     "provjera": null,
     "google_maps": null,
     "geo_izvor": "mjesto održavanja: https://thegeekgathering.org/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 323,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.3572,
+     50.847703
+    ]
+   },
+   "properties": {
+    "id": 323,
+    "name": "EU AI Forum",
+    "grupa": "ekosustav",
+    "grupa_naziv": "Ekosustav",
+    "kategorije": "Conferences & Meetups",
+    "about": "EAIF HOME is the umbrella organization of national European AI associations and clusters, representing over 2,000 members including SMEs, corporates, organizations, and individual experts in the field of AI.",
+    "website": "https://www.european-ai-forum.com/",
+    "year": null,
+    "oib": null,
+    "oib_izvor": "ručno",
+    "naziv": null,
+    "adresa": "Bruxelles, BE",
+    "mjesto": null,
+    "fina_status": null,
+    "fina_aktivan": null,
+    "fina_velicina": null,
+    "fina_zaposleni": null,
+    "fina_url": null,
+    "geo_source": "rucno",
+    "provjera": null,
+    "google_maps": null,
+    "geo_izvor": "institucija (razina grada): https://www.european-ai-forum.com/legal-notice (Antigravity/Gemini, 2. krug, citat ručno pregledan), 2026-10-30"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 324,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.443515,
+     43.514712
+    ]
+   },
+   "properties": {
+    "id": 324,
+    "name": "Startup Europe Regatta",
+    "grupa": "ekosustav",
+    "grupa_naziv": "Ekosustav",
+    "kategorije": "Conferences & Meetups",
+    "about": "Startup Europe Regatta is a platform that brings together founders, investors, buyers, and media to connect and grow potential.",
+    "website": "https://startupeuroperegatta.com/",
+    "year": null,
+    "oib": null,
+    "oib_izvor": "ručno",
+    "naziv": null,
+    "adresa": "Split",
+    "mjesto": null,
+    "fina_status": null,
+    "fina_aktivan": null,
+    "fina_velicina": null,
+    "fina_zaposleni": null,
+    "fina_url": null,
+    "geo_source": "rucno",
+    "provjera": null,
+    "google_maps": null,
+    "geo_izvor": "mjesto održavanja (razina grada): https://split.hr/clanak/otvoreno-sesto-izdanje-dvodnevne-konferencije-startup-europe-regatta (Antigravity/Gemini, 2. krug, citat potvrđen), 2026-10-30"
    }
   },
   {
@@ -9034,6 +9636,41 @@
   },
   {
    "type": "Feature",
+   "id": 326,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.970172,
+     45.79337
+    ]
+   },
+   "properties": {
+    "id": 326,
+    "name": "Data Science Conference",
+    "grupa": "ekosustav",
+    "grupa_naziv": "Ekosustav",
+    "kategorije": "Conferences & Meetups",
+    "about": "Data Science Conference is one of the leading Franchises dedicated to Data Science & AI worldwide. It is a multidisciplinary conference with an abundance of talks, discussions, workshops and hands-on tutorials.",
+    "website": "https://dsccroatia.com/",
+    "year": null,
+    "oib": "68383496496",
+    "oib_izvor": "ručno",
+    "naziv": "EVENTA nulajedan društvo s ograničenom odgovornošću za usluge",
+    "adresa": "Mozaik Event Centar, Slavonska avenija 6/2, 10000 Zagreb",
+    "mjesto": "Zagreb",
+    "fina_status": "Aktivan",
+    "fina_aktivan": true,
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 1,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/eventa-nulajedan-d-o-o/OIB-68383496496",
+    "geo_source": "rucno",
+    "provjera": null,
+    "google_maps": null,
+    "geo_izvor": "mjesto održavanja: https://rep.hr/dogadjanja/dsc-croatia-2022/2054/ (Antigravity/Gemini, 2. krug, citat potvrđen), 2026-10-30"
+   }
+  },
+  {
+   "type": "Feature",
    "id": 327,
    "geometry": {
     "type": "Point",
@@ -9065,6 +9702,41 @@
     "provjera": null,
     "google_maps": null,
     "geo_izvor": "mjesto održavanja: https://digital-labin.com/venue (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 328,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.638822,
+     45.078733
+    ]
+   },
+   "properties": {
+    "id": 328,
+    "name": "AI weekend",
+    "grupa": "ekosustav",
+    "grupa_naziv": "Ekosustav",
+    "kategorije": "Conferences & Meetups",
+    "about": "Weekend Media Festival is the largest regional festival in the communication industry, offering a platform for networking, trend exploration, and idea presentation in media, advertising, and communications.",
+    "website": "https://ai.weekend.hr/",
+    "year": null,
+    "oib": "13120899290",
+    "oib_izvor": "ručno",
+    "naziv": "PEPERMINT d.o.o. za organizaciju promotivnih događanja i turistička agencija",
+    "adresa": "Stara tvornica duhana, Obala Vladimira Nazora 1, 52210 Rovinj",
+    "mjesto": "Rovinj",
+    "fina_status": "Aktivan",
+    "fina_aktivan": true,
+    "fina_velicina": "Mali",
+    "fina_zaposleni": 6,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/pepermint-d-o-o/OIB-13120899290",
+    "geo_source": "rucno",
+    "provjera": null,
+    "google_maps": null,
+    "geo_izvor": "mjesto održavanja: https://weekend.hr/info (Antigravity/Gemini, 2. krug, citat potvrđen), 2026-10-30"
    }
   },
   {
@@ -9198,6 +9870,41 @@
     "geo_source": "google-ime",
     "provjera": "google-web",
     "google_maps": "https://maps.google.com/?cid=856091714393878160&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 333,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.95705,
+     45.807395
+    ]
+   },
+   "properties": {
+    "id": 333,
+    "name": "Code for Croatia",
+    "grupa": "ekosustav",
+    "grupa_naziv": "Ekosustav",
+    "kategorije": "Organizations & Communities",
+    "about": "Code for Croatia engages in socially beneficial open-source and open data volunteer projects, fostering a global movement of designers, programmers, and hacktivists dedicated to creating positive societal change.",
+    "website": "https://codeforcroatia.org/",
+    "year": null,
+    "oib": null,
+    "oib_izvor": "ručno",
+    "naziv": null,
+    "adresa": "HUB385, Petračićeva ulica 6, 10000 Zagreb",
+    "mjesto": "Zagreb",
+    "fina_status": null,
+    "fina_aktivan": null,
+    "fina_velicina": null,
+    "fina_zaposleni": null,
+    "fina_url": null,
+    "geo_source": "rucno",
+    "provjera": null,
+    "google_maps": null,
+    "geo_izvor": "mjesto okupljanja: https://codeforcroatia.org/t/open-data-day-hrvatska-2019/861 (Antigravity/Gemini, 2. krug, citat ručno pregledan), 2026-10-30"
    }
   },
   {
@@ -9475,6 +10182,41 @@
   },
   {
    "type": "Feature",
+   "id": 342,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.461329,
+     43.505857
+    ]
+   },
+   "properties": {
+    "id": 342,
+    "name": "Split Tech City",
+    "grupa": "ekosustav",
+    "grupa_naziv": "Ekosustav",
+    "kategorije": "Organizations & Communities",
+    "about": "Split Tech City is focused on fostering and promoting the technology community in Split through events like the Split Tech City Festival, which highlights innovations in areas such as healthtech, entrepreneurship, and UX/UI design.",
+    "website": "https://en.split-techcity.com/",
+    "year": null,
+    "oib": "27758798266",
+    "oib_izvor": "ručno",
+    "naziv": "Startup- udruga za poticanje i razvoj IT sektora Splita i regije",
+    "adresa": "Poljička cesta 26B, 21000 Split",
+    "mjesto": "Split",
+    "fina_status": "Aktivan",
+    "fina_aktivan": true,
+    "fina_velicina": null,
+    "fina_zaposleni": null,
+    "fina_url": "https://infobiz.fina.hr/neprofitni/startup-udruga-za-poticanje-i-razvoj-it-sektora-splita-i-regije/OIB-27758798266",
+    "geo_source": "rucno",
+    "provjera": null,
+    "google_maps": null,
+    "geo_izvor": "sjedište: https://www.fininfo.hr/Poduzece/Pregled/startup-udruga-za-poticanje-i-razvoj-it-sektora-splita-i-regije/Detaljno/643787 (Antigravity/Gemini, 2. krug, citat potvrđen), 2026-10-30"
+   }
+  },
+  {
+   "type": "Feature",
    "id": 343,
    "geometry": {
     "type": "Point",
@@ -9741,6 +10483,41 @@
   },
   {
    "type": "Feature",
+   "id": 351,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.971985,
+     45.802992
+    ]
+   },
+   "properties": {
+    "id": 351,
+    "name": "CroStartup",
+    "grupa": "ekosustav",
+    "grupa_naziv": "Ekosustav",
+    "kategorije": "Organizations & Communities",
+    "about": "CroStartup is a non-profit organization dedicated to supporting Croatian startup founders and employees by offering a variety of resources, tools, and networking opportunities.",
+    "website": "https://www.crostartup.org/",
+    "year": null,
+    "oib": "43145355545",
+    "oib_izvor": "ručno",
+    "naziv": "CRO STARTUP EKOSUSTAV ZA PROMICANJE INOVATIVNOSTI",
+    "adresa": "Bednjanska ulica 8, 10000 Zagreb",
+    "mjesto": "Zagreb",
+    "fina_status": "Aktivan",
+    "fina_aktivan": true,
+    "fina_velicina": null,
+    "fina_zaposleni": null,
+    "fina_url": "https://infobiz.fina.hr/neprofitni/cro-startup/OIB-43145355545",
+    "geo_source": "rucno",
+    "provjera": null,
+    "google_maps": null,
+    "geo_izvor": "sjedište: https://infobiz.fina.hr/neprofitni/cro-startup/OIB-43145355545 (Antigravity/Gemini, 2. krug, citat potvrđen), 2026-10-30"
+   }
+  },
+  {
+   "type": "Feature",
    "id": 352,
    "geometry": {
     "type": "Point",
@@ -9842,6 +10619,41 @@
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 355,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.447525,
+     45.327047
+    ]
+   },
+   "properties": {
+    "id": 355,
+    "name": "IT zajednica Rijeka",
+    "grupa": "ekosustav",
+    "grupa_naziv": "Ekosustav",
+    "kategorije": "Organizations & Communities",
+    "about": "IT zajednica Rijeka is a platform that aims to connect people and companies in the IT world, providing IT services, consulting, and employer branding. They focus on facilitating networking and support among IT professionals in Rijeka and surrounding area.",
+    "website": "https://itzajednicarijeka.com/",
+    "year": null,
+    "oib": null,
+    "oib_izvor": "ručno",
+    "naziv": null,
+    "adresa": "Rijeka",
+    "mjesto": null,
+    "fina_status": null,
+    "fina_aktivan": null,
+    "fina_velicina": null,
+    "fina_zaposleni": null,
+    "fina_url": null,
+    "geo_source": "rucno",
+    "provjera": null,
+    "google_maps": null,
+    "geo_izvor": "mjesto okupljanja (razina grada): https://poduzetnik.biz/tehnologija/zasto-je-svedska-firma-pokrenula-it-zajednicu-u-rijeci/ (Antigravity/Gemini, 2. krug, citat potvrđen), 2026-10-30"
    }
   },
   {
@@ -10500,6 +11312,41 @@
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=11961936213421550684&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 376,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.991475,
+     45.75502
+    ]
+   },
+   "properties": {
+    "id": 376,
+    "name": "Zimo",
+    "grupa": "ekosustav",
+    "grupa_naziv": "Ekosustav",
+    "kategorije": "Media",
+    "about": "Dnevnik.hr: Leading news video portal for latest updates from Croatia and worldwide. Stay informed and be the first to know important news.",
+    "website": "https://zimo.dnevnik.hr/",
+    "year": null,
+    "oib": "75399377119",
+    "oib_izvor": "ručno",
+    "naziv": "NOVA TV d.d. za film, audio i video zapise, radijsku i televizijsku djelatnost i marketing",
+    "adresa": "Ul. Buzinski krči 1, 10020 Buzin",
+    "mjesto": "Buzin",
+    "fina_status": "Aktivan",
+    "fina_aktivan": true,
+    "fina_velicina": "Veliki",
+    "fina_zaposleni": 369,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/nova-tv-d-d/OIB-75399377119",
+    "geo_source": "rucno",
+    "provjera": null,
+    "google_maps": null,
+    "geo_izvor": "sjedište nakladnika (NOVA TV d.d.): https://novatv.dnevnik.hr/stranica/impressum; Google Maps nalazi „Nova TV” na toj adresi, 2026-10-30"
    }
   },
   {
@@ -11379,6 +12226,41 @@
   },
   {
    "type": "Feature",
+   "id": 404,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.351376,
+     48.857547
+    ]
+   },
+   "properties": {
+    "id": 404,
+    "name": "Global AI Ethics Institute",
+    "grupa": "ekosustav",
+    "grupa_naziv": "Ekosustav",
+    "kategorije": "Organizations & Communities",
+    "about": "Global AI Ethics is a global think tank that focuses on addressing ethics applied to AI through cultural lenses. It provides a unique forum for people passionate about ethics applied to AI to express their cultural diversity and exchange brand new ideas.",
+    "website": "https://globalethics.ai/",
+    "year": null,
+    "oib": null,
+    "oib_izvor": "ručno",
+    "naziv": null,
+    "adresa": "Pariz, FR",
+    "mjesto": null,
+    "fina_status": null,
+    "fina_aktivan": null,
+    "fina_velicina": null,
+    "fina_zaposleni": null,
+    "fina_url": null,
+    "geo_source": "rucno",
+    "provjera": null,
+    "google_maps": null,
+    "geo_izvor": "institucija (razina grada): https://globalaiethicsinstitute.com/contact/ (Antigravity/Gemini, 2. krug), 2026-10-30"
+   }
+  },
+  {
+   "type": "Feature",
    "id": 405,
    "geometry": {
     "type": "Point",
@@ -11690,6 +12572,76 @@
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 414,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.981919,
+     45.815011
+    ]
+   },
+   "properties": {
+    "id": 414,
+    "name": "Cyclops",
+    "grupa": "tvrtke",
+    "grupa_naziv": "AI tvrtke i startupi",
+    "kategorije": "DevTools & Frameworks",
+    "about": "Cyclops UI is an open-source tool that provides a user-friendly web interface for managing Kubernetes clusters. It allows developers and DevOps teams to perform Kubernetes operations (like deploying applications, adjusting configurations, and monitoring resources) through customizable forms and dashboards instead of complex CLI commands or YAML files. Cyclops UI can be tailored to an organization’s specific needs, offering form-based interactions that validate configurations and automate best practices. By abstracting away Kubernetes’ complexity, Cyclops UI accelerates onboarding and daily operations, enabling teams to move faster and reduce errors in cloud application management.",
+    "website": "https://cyclops-ui.com/",
+    "year": 2023,
+    "oib": null,
+    "oib_izvor": "ručno",
+    "naziv": null,
+    "adresa": "Zagreb",
+    "mjesto": null,
+    "fina_status": null,
+    "fina_aktivan": null,
+    "fina_velicina": null,
+    "fina_zaposleni": null,
+    "fina_url": null,
+    "geo_source": "rucno",
+    "provjera": null,
+    "google_maps": null,
+    "geo_izvor": "ured (razina grada): https://www.zicer.hr/cyclops-developerima-stedi-vrijeme-i-novac-te-minimizira-mogucnost-pogreski/ (Antigravity/Gemini, 2. krug, citat potvrđen), 2026-10-30"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 415,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.977027,
+     45.778179
+    ]
+   },
+   "properties": {
+    "id": 415,
+    "name": "Marenda",
+    "grupa": "tvrtke",
+    "grupa_naziv": "AI tvrtke i startupi",
+    "kategorije": "Healthcare & Life Sciences",
+    "about": "Marenda is an AI-driven platform designed to enhance the home dining experience by integrating personalized meal planning, streamlined grocery shopping, and gourmet cooking guidance. Users can receive customized meal plans tailored to their dietary preferences and allergies, simplifying the process of deciding what to cook. The platform generates optimized shopping lists, facilitating efficient grocery shopping and reducing food waste. Additionally, Marenda offers step-by-step cooking tutorials, making it accessible for individuals with varying levels of culinary expertise.",
+    "website": "https://marenda.app/",
+    "year": 2023,
+    "oib": "91926387107",
+    "oib_izvor": "ručno",
+    "naziv": null,
+    "adresa": "Zagrebački inovacijski centar (ZICER), Avenija Dubrovnik 15, 10000 Zagreb",
+    "mjesto": "Zagreb",
+    "fina_status": null,
+    "fina_aktivan": null,
+    "fina_velicina": null,
+    "fina_zaposleni": null,
+    "fina_url": null,
+    "geo_source": "rucno",
+    "provjera": null,
+    "google_maps": null,
+    "geo_izvor": "institucija: https://www.zicer.hr/marenda-transformira-nacin-na-koji-ljudi-jedu-i-dolaze-do-namirnica/ (Antigravity/Gemini, 2. krug, citat potvrđen), 2026-10-30"
    }
   },
   {
@@ -13360,6 +14312,41 @@
   },
   {
    "type": "Feature",
+   "id": 468,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.95749,
+     45.807652
+    ]
+   },
+   "properties": {
+    "id": 468,
+    "name": "SlimFit AI",
+    "grupa": "tvrtke",
+    "grupa_naziv": "AI tvrtke i startupi",
+    "kategorije": "Healthcare & Life Sciences",
+    "about": "SlimFit.ai is developing a solution to transform the fitness industry by democratizing access to expert-level hypertrophy training.",
+    "website": "https://www.linkedin.com/company/slimfit-ai/about/?viewAsMember=true",
+    "year": 2024,
+    "oib": null,
+    "oib_izvor": "ručno",
+    "naziv": null,
+    "adresa": "BIRD Incubator, Ul. Franje Petračića 4, 10110 Zagreb",
+    "mjesto": "Zagreb",
+    "fina_status": null,
+    "fina_aktivan": null,
+    "fina_velicina": null,
+    "fina_zaposleni": null,
+    "fina_url": null,
+    "geo_source": "rucno",
+    "provjera": null,
+    "google_maps": null,
+    "geo_izvor": "institucija: https://zagreb.place/b/bird-incubator/ (Antigravity/Gemini, 2. krug, citat potvrđen), 2026-10-30"
+   }
+  },
+  {
+   "type": "Feature",
    "id": 469,
    "geometry": {
     "type": "Point",
@@ -13391,6 +14378,41 @@
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 470,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.447525,
+     45.327047
+    ]
+   },
+   "properties": {
+    "id": 470,
+    "name": "Curriqla",
+    "grupa": "tvrtke",
+    "grupa_naziv": "AI tvrtke i startupi",
+    "kategorije": "EduTech",
+    "about": "Curriqla focuses on creating personalized lifelong learning pathways that empower individuals to thrive, fostering holistic development and career progression while contributing to social sustainability and community growth.",
+    "website": "https://www.curriqla.com/",
+    "year": 2022,
+    "oib": "24302887476",
+    "oib_izvor": "ručno",
+    "naziv": "WERXE društvo s ograničenom odgovornošću za informacijske tehnologije",
+    "adresa": "Rijeka",
+    "mjesto": null,
+    "fina_status": "Aktivan",
+    "fina_aktivan": true,
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 4,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/werxe-d-o-o/OIB-24302887476",
+    "geo_source": "rucno",
+    "provjera": null,
+    "google_maps": null,
+    "geo_izvor": "ured (razina grada): https://www.curriqla.com/ (Antigravity/Gemini, 2. krug, citat potvrđen), 2026-10-30"
    }
   },
   {
@@ -13629,6 +14651,41 @@
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=869061167123805447&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 478,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.977027,
+     45.778179
+    ]
+   },
+   "properties": {
+    "id": 478,
+    "name": "Ulpian",
+    "grupa": "tvrtke",
+    "grupa_naziv": "AI tvrtke i startupi",
+    "kategorije": "HR & Law",
+    "about": "Ulpian is a legal AI assistant (named after the ancient jurist Ulpian) that helps lawyers and legal researchers find answers across vast legal texts. The platform allows users to ask complex legal questions in plain language and get answers along with citations to the relevant laws, regulations, or court decisions. Ulpian’s AI models are trained on national and EU legal sources, enabling it to provide precise, jurisdiction-aware responses. By simulating a smart legal researcher that works 24/7, Ulpian speeds up the research process – for example, quickly finding which law applies to a scenario or summarizing case law on a topic – thus empowering legal professionals with faster and more comprehensive insights.",
+    "website": "https://www.ulpian.com",
+    "year": 2024,
+    "oib": "64992711010",
+    "oib_izvor": "ručno",
+    "naziv": "ULPIAN AI društvo s ograničenom odgovornošću za usluge",
+    "adresa": "ZICER, Avenija Dubrovnik 15, 10020 Zagreb",
+    "mjesto": "Zagreb",
+    "fina_status": "Aktivan",
+    "fina_aktivan": true,
+    "fina_velicina": "Mikro",
+    "fina_zaposleni": 1,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/ulpian-ai-d-o-o/OIB-64992711010",
+    "geo_source": "rucno",
+    "provjera": null,
+    "google_maps": null,
+    "geo_izvor": "sjedište: https://infobiz.fina.hr/subjekt/ulpian-ai-d-o-o/OIB-64992711010 (Antigravity/Gemini, 2. krug, citat potvrđen), 2026-10-30"
    }
   },
   {
@@ -15222,6 +16279,41 @@
   },
   {
    "type": "Feature",
+   "id": 526,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.231365,
+     44.119371
+    ]
+   },
+   "properties": {
+    "id": 526,
+    "name": "Zadar Connect Meetup",
+    "grupa": "ekosustav",
+    "grupa_naziv": "Ekosustav",
+    "kategorije": "Organizations & Communities",
+    "about": "ZadarConnect is an initiative aimed at connecting IT professionals, enthusiasts, and other interested individuals in the Zadar County area. The group focuses on promoting the IT industry and digital technologies within the region by organizing engaging programs and activities. These events provide opportunities for participants to stay updated on technological and business trends, meet interesting speakers, network, and establish collaborations.",
+    "website": "https://www.meetup.com/zadarconnect/",
+    "year": null,
+    "oib": null,
+    "oib_izvor": "ručno",
+    "naziv": null,
+    "adresa": "Zadar",
+    "mjesto": null,
+    "fina_status": null,
+    "fina_aktivan": null,
+    "fina_velicina": null,
+    "fina_zaposleni": null,
+    "fina_url": null,
+    "geo_source": "rucno",
+    "provjera": null,
+    "google_maps": null,
+    "geo_izvor": "mjesto okupljanja (razina grada): https://www.antenazadar.hr/clanak/2025/05/sheep-ai-dolazi-u-zadar-vecernji-meetup-s-domacim-osnivacima-donosi-set-iskrenih-poduzetnickih-prica/ (Antigravity/Gemini, 2. krug, citat potvrđen), 2026-10-30"
+   }
+  },
+  {
+   "type": "Feature",
    "id": 527,
    "geometry": {
     "type": "Point",
@@ -15253,6 +16345,41 @@
     "provjera": null,
     "google_maps": null,
     "geo_izvor": "sudreg: e-mail domena → Short Notice Productions d.o.o.; geokod Google po sudreg sjedištu, 2026-10-30"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 528,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.639136,
+     45.073032
+    ]
+   },
+   "properties": {
+    "id": 528,
+    "name": "Dani komunikacija",
+    "grupa": "ekosustav",
+    "grupa_naziv": "Ekosustav",
+    "kategorije": "Conferences & Meetups",
+    "about": "Dani Komunikacija: National festival uniting marketing professionals for quality competition and networking.",
+    "website": "https://danikomunikacija.com/",
+    "year": null,
+    "oib": "97189552878",
+    "oib_izvor": "ručno",
+    "naziv": "HRVATSKA UDRUGA DRUŠTAVA ZA TRŽIŠNO KOMUNICIRANJE - HURA!",
+    "adresa": "Hotel Lone, Ul. Luje Adamovića 31, 52210, Rovinj",
+    "mjesto": null,
+    "fina_status": "Aktivan",
+    "fina_aktivan": true,
+    "fina_velicina": null,
+    "fina_zaposleni": null,
+    "fina_url": "https://infobiz.fina.hr/neprofitni/udruga-hura/OIB-97189552878",
+    "geo_source": "rucno",
+    "provjera": null,
+    "google_maps": null,
+    "geo_izvor": "mjesto održavanja: https://danikomunikacija.com/ (Antigravity/Gemini, 2. krug, citat ručno pregledan), 2026-10-30"
    }
   },
   {
@@ -15323,6 +16450,41 @@
     "provjera": null,
     "google_maps": null,
     "geo_izvor": "mjesto održavanja: https://www.jumpitforum.com/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 531,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.945873,
+     45.814491
+    ]
+   },
+   "properties": {
+    "id": 531,
+    "name": "Zagreb Slush'D",
+    "grupa": "ekosustav",
+    "grupa_naziv": "Ekosustav",
+    "kategorije": "Conferences & Meetups",
+    "about": "Zagreb Slush'D is a localized spinoff of Slush, the leading global startup event. Built with a focus on advancing regional startups, Zagreb Slush'D provides a platform for founders, investors, and entrepreneurs to connect, share experiences, and drive the startup ecosystem forward.",
+    "website": "https://www.zagrebslushd.com/",
+    "year": null,
+    "oib": "42871852309",
+    "oib_izvor": "ručno",
+    "naziv": "HRVATSKI URED ZA KREATIVNOST I INOVACIJE",
+    "adresa": "Zagrebačka škola za ekonomiju i menadžment (ZŠEM), Ulica Filipa Vukasovića 1, 10000 Zagreb",
+    "mjesto": "Zagreb",
+    "fina_status": "Aktivan",
+    "fina_aktivan": true,
+    "fina_velicina": null,
+    "fina_zaposleni": null,
+    "fina_url": "https://infobiz.fina.hr/neprofitni/huki/OIB-42871852309",
+    "geo_source": "rucno",
+    "provjera": null,
+    "google_maps": null,
+    "geo_izvor": "mjesto održavanja: https://een.hr/vise-od-konferencije-za-start-upove-slushd-i-ove-godine-u-zagrebu/ (Antigravity/Gemini, 2. krug, citat potvrđen), 2026-10-30"
    }
   },
   {
@@ -16097,6 +17259,41 @@
   },
   {
    "type": "Feature",
+   "id": 557,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.981919,
+     45.815011
+    ]
+   },
+   "properties": {
+    "id": 557,
+    "name": "AI Art Singularity",
+    "grupa": "ekosustav",
+    "grupa_naziv": "Ekosustav",
+    "kategorije": "Conferences & Meetups",
+    "about": "First exhibition of AI-generated pictures.  This unique and forward-thinking endeavour aims to foster understanding, appreciation, and adoption of AI technology through a fusion of art and science. By displaying artwork created with the assistance of AI and providing interactive educational experiences, this project will serve as a platform for technological cooperation and public engagement.",
+    "website": "https://artexpo.ai/",
+    "year": null,
+    "oib": null,
+    "oib_izvor": "ručno",
+    "naziv": null,
+    "adresa": "Zagreb",
+    "mjesto": null,
+    "fina_status": null,
+    "fina_aktivan": null,
+    "fina_velicina": null,
+    "fina_zaposleni": null,
+    "fina_url": null,
+    "geo_source": "rucno",
+    "provjera": null,
+    "google_maps": null,
+    "geo_izvor": "mjesto održavanja (razina grada): https://www.culturenet.hr/izlozba-slika-koju-je-kreirala-umjetna-inteligencija-otvara-se-u-zagrebu/198244 (Antigravity/Gemini, 2. krug, citat potvrđen), 2026-10-30"
+   }
+  },
+  {
+   "type": "Feature",
    "id": 558,
    "geometry": {
     "type": "Point",
@@ -16191,6 +17388,41 @@
     "geo_source": "google-ime",
     "provjera": "google-web",
     "google_maps": "https://maps.google.com/?cid=2818031015852772641&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 561,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     18.094424,
+     42.650661
+    ]
+   },
+   "properties": {
+    "id": 561,
+    "name": "Eduformacije",
+    "grupa": "tvrtke",
+    "grupa_naziv": "AI tvrtke i startupi",
+    "kategorije": "EduTech",
+    "about": "Eduformacije is AI search engine for educational institutions in Croatia, designed to help students find schools and programs that match their interests.",
+    "website": "https://www.eduformacije.com/",
+    "year": null,
+    "oib": null,
+    "oib_izvor": "ručno",
+    "naziv": null,
+    "adresa": "Dubrovnik",
+    "mjesto": null,
+    "fina_status": null,
+    "fina_aktivan": null,
+    "fina_velicina": null,
+    "fina_zaposleni": null,
+    "fina_url": null,
+    "geo_source": "rucno",
+    "provjera": null,
+    "google_maps": null,
+    "geo_izvor": "institucija (razina grada): https://www.srednja.hr/ideja-godine/vijesti/21707/ucenik-dobren-na-svojoj-je-platformi-skupio-sve-informacije-o-srednjim-skolama-ima-i-ai-koji-savjetuje-osmase/vijest (Antigravity/Gemini, 2. krug, citat potvrđen), 2026-10-30"
    }
   },
   {
@@ -16538,6 +17770,41 @@
   },
   {
    "type": "Feature",
+   "id": 572,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.002588,
+     45.80245
+    ]
+   },
+   "properties": {
+    "id": 572,
+    "name": "SwipeSpec",
+    "grupa": "tvrtke",
+    "grupa_naziv": "AI tvrtke i startupi",
+    "kategorije": "Automation",
+    "about": "SwipeSpec is SaaS company making an AI-powered tool that helps teams write, organize, and manage software requirements with ease, combining smart editing with specialized features for better requirement management.",
+    "website": "https://swipespec.com/",
+    "year": null,
+    "oib": "44409125570",
+    "oib_izvor": "ručno",
+    "naziv": "SWIPESPEC društvo s ograničenom odgovornošću za informatičke usluge",
+    "adresa": "Radnička cesta 50, 10000 Zagreb",
+    "mjesto": "Zagreb",
+    "fina_status": "Neaktivan/izbrisan",
+    "fina_aktivan": false,
+    "fina_velicina": null,
+    "fina_zaposleni": 1,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/swipespec-d-o-o/OIB-44409125570",
+    "geo_source": "rucno",
+    "provjera": null,
+    "google_maps": null,
+    "geo_izvor": "ured: https://www.bon.hr/opci-podaci-tvrtke?naziv=SWIPESPEC-d.o.o.&oib=44409125570&partner_id=1760471 (Antigravity/Gemini, 2. krug, citat ručno pregledan), 2026-10-30; društvo brisano iz sudskog registra 19.11.2025."
+   }
+  },
+  {
+   "type": "Feature",
    "id": 573,
    "geometry": {
     "type": "Point",
@@ -16569,6 +17836,41 @@
     "provjera": null,
     "google_maps": null,
     "geo_izvor": "sudreg: kratko ime (provjeri) → DeepQ d.o.o.; geokod Google po sudreg sjedištu, 2026-10-30"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 574,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     15.915604,
+     45.793693
+    ]
+   },
+   "properties": {
+    "id": 574,
+    "name": "ZaDom",
+    "grupa": "korisnici",
+    "grupa_naziv": "Rani korisnici AI-ja",
+    "kategorije": null,
+    "about": "ZaDom helps users find the best deals on home&garden products in Croatia.",
+    "website": "https://zadom.hr",
+    "year": null,
+    "oib": "48336421377",
+    "oib_izvor": "ručno",
+    "naziv": null,
+    "adresa": "Rudeška cesta 160 A, 10000 Zagreb",
+    "mjesto": "Zagreb",
+    "fina_status": null,
+    "fina_aktivan": null,
+    "fina_velicina": null,
+    "fina_zaposleni": null,
+    "fina_url": null,
+    "geo_source": "rucno",
+    "provjera": null,
+    "google_maps": null,
+    "geo_izvor": "sjedište: https://www.fininfo.hr/Poduzece/Pregled/rebase-obrt-za-informaticke-usluge-vl-mario-krvaric/Detaljno/721094 (Antigravity/Gemini, 2. krug, citat potvrđen), 2026-10-30"
    }
   },
   {
@@ -16674,6 +17976,41 @@
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 578,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.007554,
+     45.760299
+    ]
+   },
+   "properties": {
+    "id": 578,
+    "name": "ODOO",
+    "grupa": "tvrtke",
+    "grupa_naziv": "AI tvrtke i startupi",
+    "kategorije": "Service Providers",
+    "about": "Odoo je digitalna poslovna platforma. Sveobuhvatan paket poslovnih aplikacija, uključujući prodaju, CRM, upravljanje projektima, upravljanje zalihama, proizvodnju, ﬁnancijsko upravljanje i ljudske resurse te više od 10000 dodatnih modula. Jedinstveni modularni pristup omogućava jednostavno proširivanje područja primjene. Odoo se temelji na otvorenoj arhitekturi i razvojnom okružju u kojem sudjeluje velika razvojna zajednica programera, dizajnera, konzultanata, poslovnih analitičara i drugih specijalista.",
+    "website": "https://odoo-community.com.hr/",
+    "year": null,
+    "oib": "54763901920",
+    "oib_izvor": "ručno",
+    "naziv": "UVID društvo s ograničenom odgovornošću za promet i usluge",
+    "adresa": "Uvid d.o.o. - Poslovnica Zagreb, Hrelićka 96, 10000 Zagreb",
+    "mjesto": "Zagreb",
+    "fina_status": "Aktivan",
+    "fina_aktivan": true,
+    "fina_velicina": "Mali",
+    "fina_zaposleni": 19,
+    "fina_url": "https://infobiz.fina.hr/tvrtka/uvid-d-o-o/OIB-54763901920",
+    "geo_source": "rucno",
+    "provjera": null,
+    "google_maps": null,
+    "geo_izvor": "mjesto okupljanja: https://uviddigital.hr/kontakt/ (Antigravity/Gemini, 2. krug, citat potvrđen), 2026-10-30"
    }
   },
   {
