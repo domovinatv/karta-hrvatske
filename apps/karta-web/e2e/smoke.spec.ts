@@ -170,6 +170,13 @@ test("deep link /klub/dinamo-zagreb opens modal", async ({ page }) => {
   expect(name).toMatch(/Dinamo/i);
 });
 
+test("header title returns home from a deep link", async ({ page }) => {
+  await page.goto(BASE + "/jls/grad-zagreb");
+  await waitForMapIdle(page);
+  await page.getByRole("link", { name: /Karta Hrvatske/ }).click();
+  await expect(page).toHaveURL(new RegExp(`^${BASE}/?$`), { timeout: 5000 });
+});
+
 test("deep link /jls/grad-zagreb selects and fits", async ({ page }) => {
   await page.goto(BASE + "/jls/grad-zagreb");
   await waitForMapIdle(page);

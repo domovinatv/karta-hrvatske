@@ -149,7 +149,7 @@ export default function MapView() {
   return (
     <>
       <RouteHelmet jls={jls as JlsCollection | null} clubs={clubs} />
-      <MapHeader />
+      <MapHeader onHome={handleFitHome} />
       <main className="grid flex-1 overflow-hidden md:grid-cols-[280px_1fr] lg:grid-cols-[320px_1fr_380px]">
         {/* Desktop left sidebar: search + zup list */}
         <aside

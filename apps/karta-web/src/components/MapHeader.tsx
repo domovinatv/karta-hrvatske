@@ -2,8 +2,9 @@ import { Link } from "react-router-dom";
 import { Image } from "lucide-react";
 
 // Kompaktno zaglavlje — na uskom ekranu se svodi na jednu liniju
-// (statistika je skrivena ispod md).
-export function MapHeader() {
+// (statistika je skrivena ispod md). Naslov je link na početnu: ruta `/`
+// sama čisti odabir (useUrlSync), a onHome vraća kameru na Hrvatsku.
+export function MapHeader({ onHome }: { onHome?: () => void }) {
   return (
     <header
       className="flex items-center gap-3 border-b px-4 py-2 md:gap-6 md:px-6 md:py-3.5"
@@ -12,23 +13,30 @@ export function MapHeader() {
         borderColor: "var(--line)",
       }}
     >
-      <h1 className="m-0 flex min-w-0 items-baseline gap-2 text-sm md:gap-3 md:text-base">
-        <span
-          className="font-extrabold tracking-[0.06em] text-ink md:text-lg"
-          style={{ fontSize: "1rem" }}
+      <h1 className="m-0 min-w-0 text-sm md:text-base">
+        <Link
+          to="/"
+          onClick={onHome}
+          title="Početna — cijela Hrvatska"
+          className="flex min-w-0 items-baseline gap-2 no-underline md:gap-3"
         >
-          DOMOVINA
-          <span style={{ color: "var(--brand-red)", letterSpacing: 0 }}>.ai</span>
-        </span>
-        <span className="text-muted" style={{ fontWeight: 400 }}>
-          ·
-        </span>
-        <span
-          className="truncate font-display font-semibold tracking-tight"
-          style={{ color: "var(--ink)" }}
-        >
-          Karta Hrvatske
-        </span>
+          <span
+            className="font-extrabold tracking-[0.06em] text-ink md:text-lg"
+            style={{ fontSize: "1rem" }}
+          >
+            DOMOVINA
+            <span style={{ color: "var(--brand-red)", letterSpacing: 0 }}>.ai</span>
+          </span>
+          <span className="text-muted" style={{ fontWeight: 400 }}>
+            ·
+          </span>
+          <span
+            className="truncate font-display font-semibold tracking-tight"
+            style={{ color: "var(--ink)" }}
+          >
+            Karta Hrvatske
+          </span>
+        </Link>
       </h1>
       <Link
         to="/poster"
