@@ -133,13 +133,45 @@ treba je pretvoriti u korak pipelinea.
 
 Stanje nakon toga: **446 od 565** na karti, 36 ručnih unosa, 119 nerazriješenih.
 
+## Istraživanje preko Antigravityja (30.10.2026.)
+
+119 nerazriješenih istražio je Gemini 3.8 Flash kroz `agy`
+(`docs/2026-10-30-croai-istrazivanje-antigravity.md`), izlaz u
+`apps/data-pipeline/data/croai_istrazivanje_izlaz.json`. Gemini je 99 od 119
+označio „visoka pouzdanost", a strojna provjera kaže drugačije, pa je ulaz na
+kartu stupnjevan:
+
+| Razina | Uvjet | Broj |
+|---|---|---|
+| A | ulica i kućni broj stoje na `izvor_url` (dohvaćeno, normalizirano) | 60 |
+| B | OIB postoji u sudregu i njegovo sjedište je ista ulica | 19 |
+| C | Google nađe subjekt sličnog imena ≤ 500 m od geokodirane adrese | 2 |
+| D | ništa od toga — **nije na karti** | 27 |
+| — | bez adrese (neformalne zajednice, projekti) ili se ne geokodira | 11 |
+
+Od 77 OIB-a 24 nije u sudregu: udruge, obrti, županija i HGK su u drugim
+registrima, to je normalno. Sumnjiva su četiri: loša kontrolna znamenka
+(Meetup ML/AI Split) i tri „d.o.o." kojih nema ni po OIB-u ni po imenu
+(Careesma, Funderbeam, SwipeSpec). U override se OIB upisuje samo ako je u
+sudregu.
+
+Kod 47 subjekata adresa nije bila na stranici koju Gemini navodi kao izvor.
+Kod velikih statičnih stranica (Bellabeat, AI weekend) to znači da ju je
+zaključio, ne pročitao; Savska 32 se pojavljuje kod tri nepovezana subjekta.
+
+Strane adrese se geokodiraju s `places.search(..., hr_only=False)`. 17 točaka
+je izvan Hrvatske (Bruxelles, Sofija, London, Tokio…).
+
+Stanje: **527 od 565** na karti, 117 ručnih unosa, 38 nerazriješenih.
+
 ## Otvoreno
 
-- [ ] 119 nerazriješenih: istraživanje weba preko Antigravity CLI-ja (Gemini
-      3.8 Flash subagenti), prompt u `docs/2026-10-30-croai-istrazivanje-antigravity.md`,
-      ulaz `apps/data-pipeline/data/croai_istrazivanje_ulaz.json`.
-- [ ] Pregledati `geo_conflicts` (90; 16 dalje od 50 km) i 59 pogodaka samo s weba.
+- [ ] 27 nepotvrđenih (razina D, popis u `croai_report.json`): drugi izvor za
+      svaki, ili ručna potvrda. Većina su događaji (Mozaik Event Centar, SEECEL,
+      Rovinj) i adrese koje su vjerojatno točne, ali ih ništa ne potvrđuje.
+- [ ] Pregledati `geo_conflicts` (93; 16 dalje od 50 km) i 59 pogodaka samo s weba.
 - [ ] Ručni unosi iz sudrega nemaju poštanski broj, pa im je `mjesto` u popupu prazno.
+- [ ] Popup ne razlikuje sjedište, ured i mjesto događaja; to je zasad samo u `geo_izvor`.
 
 ## Vezani dokumenti
 

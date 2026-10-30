@@ -67,19 +67,22 @@ class Places:
         self.cache_hits = 0
         self.disabled: str | None = None
 
-    def search(self, query: str, max_results: int = 3) -> list[dict[str, Any]]:
+    def search(self, query: str, max_results: int = 3, hr_only: bool = True) -> list[dict[str, Any]]:
+        """Text Search. `hr_only=False` za strane adrese: bez regionCode i bez
+        pravokutnika oko Hrvatske (koji usput hvata i BiH i Crnu Goru)."""
         if self.disabled:
             return []
         body = {
             "textQuery": query,
-            "regionCode": "HR",
             "languageCode": "hr",
             "maxResultCount": max_results,
-            "locationRestriction": {"rectangle": {
+        }
+        if hr_only:
+            body["regionCode"] = "HR"
+            body["locationRestriction"] = {"rectangle": {
                 "low": {"latitude": HR_LAT[0], "longitude": HR_LNG[0]},
                 "high": {"latitude": HR_LAT[1], "longitude": HR_LNG[1]},
-            }},
-        }
+            }}
         cache = CACHE_DIR / (hashlib.sha256(json.dumps(body, sort_keys=True).encode()).hexdigest()[:16] + ".json")
         if cache.exists():
             self.cache_hits += 1

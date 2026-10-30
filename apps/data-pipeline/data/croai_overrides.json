@@ -1,4 +1,12 @@
 {
+  "33": {
+    "_ime": "Capt’n.ai",
+    "oib": "18367329060",
+    "lat": 45.818907,
+    "lng": 15.964093,
+    "adresa_override": "Goljak 9, 10000 Zagreb",
+    "izvor": "ured: https://captn.ai/ (Antigravity/Gemini, provjera sudreg sjedište), 2026-10-30"
+  },
   "37": {
     "_ime": "Lebesgue",
     "oib": "75721713249",
@@ -6,6 +14,39 @@
     "lng": 15.939537,
     "adresa_override": "Prilaz baruna Filipovića 23B, Zagreb",
     "izvor": "sudreg: e-mail domena → LEBEG SOFTWARE d.o.o.; geokod Google po sudreg sjedištu, 2026-10-30"
+  },
+  "39": {
+    "_ime": "Mr.Popper by Marteching",
+    "oib": "01639965206",
+    "lat": 43.515718,
+    "lng": 16.478537,
+    "adresa_override": "Vukovarska 25, 21000 Split",
+    "izvor": "sjedište: https://marteching.eu/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
+  },
+  "61": {
+    "_ime": "Climatig",
+    "oib": "93017443977",
+    "lat": 45.330473,
+    "lng": 14.442513,
+    "adresa_override": "Kvaternikova 21, 51000 Rijeka",
+    "izvor": "sjedište: https://www.climatig.com/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30",
+    "google_maps": "https://maps.google.com/?cid=6304554271940774510&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+  },
+  "63": {
+    "_ime": "Nuotwo",
+    "oib": "88845446333",
+    "lat": 45.807011,
+    "lng": 15.953432,
+    "adresa_override": "Andrije Žaje 58, 10000 Zagreb",
+    "izvor": "sjedište: https://www.nuotwo.com/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
+  },
+  "66": {
+    "_ime": "Art Zagreb sajam suvremene likovne umjetnosti",
+    "oib": "87541970646",
+    "lat": 45.812615,
+    "lng": 15.974935,
+    "adresa_override": "Ilica 5, 10000 Zagreb",
+    "izvor": "mjesto održavanja: https://www.artzagreb.com/kontakt/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
   },
   "68": {
     "_ime": "Device art festival",
@@ -23,6 +64,14 @@
     "izvor": "Google Maps (Gideon), ručno potvrđeno 2026-10-30",
     "google_maps": "https://maps.google.com/?cid=16911021592471221188&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
+  "79": {
+    "_ime": "Neyho",
+    "oib": "33270485543",
+    "lat": 45.712184,
+    "lng": 16.057712,
+    "adresa_override": "Kolodvorska 64B, 10410 Velika Gorica",
+    "izvor": "sjedište: https://neyho.com/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
+  },
   "80": {
     "_ime": "Orqa FPV",
     "oib": "98232144692",
@@ -30,6 +79,46 @@
     "lng": 18.635392,
     "adresa_override": "Josipa Jurja Strossmayera 341, Osijek",
     "izvor": "sudreg: e-mail domena → ORQA d.o.o.; geokod Google po sudreg sjedištu, 2026-10-30"
+  },
+  "82": {
+    "_ime": "Careesma",
+    "lat": 45.806699,
+    "lng": 16.020255,
+    "adresa_override": "Trg Stjepana Konzula 4, 10000 Zagreb",
+    "izvor": "sjedište: http://careesma.co/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
+  },
+  "83": {
+    "_ime": "Erato",
+    "oib": "05079664228",
+    "lat": 45.758158,
+    "lng": 16.005137,
+    "adresa_override": "Sarajevska cesta 27, 10000 Zagreb",
+    "izvor": "sjedište: https://erato.hr/ (Antigravity/Gemini, provjera sudreg sjedište), 2026-10-30"
+  },
+  "85": {
+    "_ime": "Ispravi.me",
+    "oib": "57029260362",
+    "lat": 45.801432,
+    "lng": 15.971117,
+    "adresa_override": "Unska ulica 3, 10000 Zagreb",
+    "izvor": "institucija: https://ispravi.me/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30",
+    "google_maps": "https://maps.google.com/?cid=8331197685937308977&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+  },
+  "109": {
+    "_ime": "Zeal agency",
+    "oib": "50027210968",
+    "lat": 45.777569,
+    "lng": 15.972227,
+    "adresa_override": "Prilaz Vladislava Brajkovića 12, 10020 Zagreb",
+    "izvor": "sjedište: https://zealagency.co/terms-of-use (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
+  },
+  "116": {
+    "_ime": "Vidi X",
+    "oib": "24523816042",
+    "lat": 45.796534,
+    "lng": 15.90955,
+    "adresa_override": "Zagrebačka cesta 233, 10000 Zagreb",
+    "izvor": "sjedište: https://sudreg.pravosudje.hr (Antigravity/Gemini, provjera sudreg sjedište), 2026-10-30"
   },
   "120": {
     "_ime": "Airt",
@@ -39,6 +128,14 @@
     "adresa_override": "Goljak 9, Zagreb",
     "izvor": "sudreg: e-mail domena → AIRT TECHNOLOGIES d.o.o.; geokod Google po sudreg sjedištu, 2026-10-30"
   },
+  "124": {
+    "_ime": "CantabPI",
+    "oib": "44141188495",
+    "lat": 45.851748,
+    "lng": 15.956268,
+    "adresa_override": "Kalabarovo vrelo 7A, 10000 Zagreb",
+    "izvor": "ured: https://cantabpi.com/ (Antigravity/Gemini, provjera sudreg sjedište), 2026-10-30"
+  },
   "125": {
     "_ime": "Farseer",
     "lat": 45.795849,
@@ -47,6 +144,37 @@
     "izvor": "Google Maps (Farseer), ručno potvrđeno 2026-10-30",
     "google_maps": "https://maps.google.com/?cid=9290084834237267500&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
+  "128": {
+    "_ime": "Revuto",
+    "lat": 59.42773,
+    "lng": 24.708794,
+    "adresa_override": "Keemia tn 4, 10616 Tallinn, EE",
+    "izvor": "sjedište: https://revuto.com/terms-of-service/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
+  },
+  "132": {
+    "_ime": "Bellabeat",
+    "oib": "40522074184",
+    "lat": 45.801539,
+    "lng": 15.963474,
+    "adresa_override": "Savska cesta 32, 10000 Zagreb",
+    "izvor": "ured: https://bellabeat.com/ (Antigravity/Gemini, provjera sudreg sjedište), 2026-10-30"
+  },
+  "133": {
+    "_ime": "Ani Biome",
+    "oib": "89473677493",
+    "lat": 45.832437,
+    "lng": 16.082479,
+    "adresa_override": "Ulica Ivana Meštrovića 35, 10360 Sesvete",
+    "izvor": "sjedište: https://www.fininfo.hr/Poduzece/Pregled/cidrani/Detaljno/756972 (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
+  },
+  "139": {
+    "_ime": "Ultrax",
+    "oib": "01359891774",
+    "lat": 46.089676,
+    "lng": 16.045377,
+    "adresa_override": "Mače 94A, 49250 Mače",
+    "izvor": "sjedište: https://www.ultrax.ai/ (Antigravity/Gemini, provjera sudreg sjedište), 2026-10-30"
+  },
   "146": {
     "_ime": "Coffee Cloud",
     "oib": "47931760445",
@@ -54,6 +182,14 @@
     "lng": 15.793072,
     "adresa_override": "Dr. Franje Tuđmana 93, Sveta Nedelja",
     "izvor": "sudreg: e-mail domena → HUPSER j.d.o.o.; geokod Google po sudreg sjedištu, 2026-10-30"
+  },
+  "173": {
+    "_ime": "Code map",
+    "oib": "36992716846",
+    "lat": 45.812752,
+    "lng": 15.972191,
+    "adresa_override": "Gundulićeva ulica 3, 10000 Zagreb",
+    "izvor": "sjedište: https://sudreg.pravosudje.hr/ (Antigravity/Gemini, provjera sudreg sjedište), 2026-10-30"
   },
   "176": {
     "_ime": "OptimoRoute",
@@ -71,6 +207,14 @@
     "adresa_override": "Kerestinečka cesta 54, Kerestinec",
     "izvor": "sudreg: e-mail domena → Rimac Group d.o.o.; geokod Google po sudreg sjedištu, 2026-10-30"
   },
+  "179": {
+    "_ime": "Zebra Cross (Zicer startup)",
+    "oib": "47969005799",
+    "lat": 45.834851,
+    "lng": 15.970761,
+    "adresa_override": "Bukovečke stube 4, 10000 Zagreb",
+    "izvor": "sjedište: http://www.zebracross.hr/ (Antigravity/Gemini, provjera sudreg sjedište), 2026-10-30"
+  },
   "181": {
     "_ime": "Gepek",
     "oib": "03639778735",
@@ -78,6 +222,30 @@
     "lng": 16.765055,
     "adresa_override": "Ulica Miroslava Krleže 15, Kutina",
     "izvor": "sudreg: e-mail domena → Gepek d.o.o.; geokod Google po sudreg sjedištu, 2026-10-30"
+  },
+  "183": {
+    "_ime": "Google",
+    "oib": "06861541063",
+    "lat": 45.801539,
+    "lng": 15.963474,
+    "adresa_override": "Savska cesta 32, 10000 Zagreb",
+    "izvor": "ured: https://about.google/ (Antigravity/Gemini, provjera sudreg sjedište), 2026-10-30"
+  },
+  "189": {
+    "_ime": "BURA",
+    "oib": "64218323816",
+    "lat": 45.32871,
+    "lng": 14.46695,
+    "adresa_override": "Radmile Matejčić 2, 51000 Rijeka",
+    "izvor": "institucija: https://cnrm.uniri.hr/bura/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
+  },
+  "198": {
+    "_ime": "evocenta GmbH",
+    "lat": 51.499002,
+    "lng": 7.107952,
+    "adresa_override": "Munscheidstraße 14, 45886 Gelsenkirchen, DE",
+    "izvor": "sjedište: https://www.evocenta.com/impressum/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30",
+    "google_maps": "https://maps.google.com/?cid=15777732055580092844&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   "215": {
     "_ime": "Siemens",
@@ -87,6 +255,80 @@
     "izvor": "Google Maps (Siemens d.d.), ručno potvrđeno 2026-10-30",
     "google_maps": "https://maps.google.com/?cid=14193606175621790491&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
+  "229": {
+    "_ime": "Spotsie",
+    "oib": "81127230861",
+    "lat": 45.809345,
+    "lng": 15.957189,
+    "adresa_override": "Ulica Republike Austrije 33, 10000 Zagreb",
+    "izvor": "sjedište: https://spotsie.io/contact.html (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
+  },
+  "237": {
+    "_ime": "Enterprise Europe Network",
+    "lat": 45.808412,
+    "lng": 15.968578,
+    "adresa_override": "Rooseveltov trg 2, 10000 Zagreb",
+    "izvor": "institucija: https://een.hr/kontakt-i-faq/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30",
+    "google_maps": "https://maps.google.com/?cid=16754888787898496534&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+  },
+  "238": {
+    "_ime": "Feelsgood Capital",
+    "oib": "89112739620",
+    "lat": 45.812967,
+    "lng": 15.975677,
+    "adresa_override": "Ilica 1a, 10000 Zagreb",
+    "izvor": "sjedište: https://www.feelsgoodcapital.com/contact (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
+  },
+  "239": {
+    "_ime": "Fil Rouge Capital",
+    "oib": "75960208366",
+    "lat": 45.806241,
+    "lng": 15.977852,
+    "adresa_override": "Trg kralja Tomislava 15, 10000 Zagreb",
+    "izvor": "ured: https://filrougecapital.com/ (Antigravity/Gemini, provjera sudreg sjedište), 2026-10-30"
+  },
+  "247": {
+    "_ime": "SPOCK @FER",
+    "oib": "57029260362",
+    "lat": 45.801432,
+    "lng": 15.971117,
+    "adresa_override": "Unska 3, 10000 Zagreb",
+    "izvor": "institucija: https://spock.fer.hr/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30",
+    "google_maps": "https://maps.google.com/?cid=8331197685937308977&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+  },
+  "250": {
+    "_ime": "WBAF",
+    "lat": 46.01781,
+    "lng": 15.939978,
+    "adresa_override": "Bračak 4, 49210 Bračak",
+    "izvor": "ured: https://croatia.wbaforum.org/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30",
+    "google_maps": "https://maps.google.com/?cid=16924244744416145701&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+  },
+  "258": {
+    "_ime": "æternity Ventures",
+    "lat": 42.693673,
+    "lng": 23.339595,
+    "adresa_override": "ул. Шипка № 3, 1504 Sofia, BG",
+    "izvor": "sjedište: https://papagal.bg/eik/204633521/3c15 (Antigravity/Gemini, provjera Google ime na adresi), 2026-10-30",
+    "google_maps": "https://maps.google.com/?cid=11819477283984878291&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+  },
+  "259": {
+    "_ime": "Lighthuse Japan",
+    "lat": 35.720401,
+    "lng": 139.746043,
+    "adresa_override": "Hakusan, Bunkyo-ku, 112-0001 Tokyo, JP",
+    "izvor": "sjedište: https://www.innovationlighthousejapan.com/aboutus (Antigravity/Gemini, provjera Google ime na adresi), 2026-10-30",
+    "google_maps": "https://maps.google.com/?cid=4611870420865960951&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+  },
+  "266": {
+    "_ime": "BAIF",
+    "oib": "63625874835",
+    "lat": 46.145361,
+    "lng": 15.871874,
+    "adresa_override": "Bobovje 52G, 49000 Krapina",
+    "izvor": "institucija: https://baif.hr/kontakti/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30",
+    "google_maps": "https://maps.google.com/?cid=4724048023853801944&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+  },
   "283": {
     "_ime": "AI Lab @FOI",
     "oib": "02024882310",
@@ -95,6 +337,15 @@
     "adresa_override": "Pavlinska ulica 2, Varaždin",
     "izvor": "sudreg: e-mail domena → SUZG FOI; geokod Google po sudreg sjedištu, 2026-10-30"
   },
+  "284": {
+    "_ime": "CAI Centar za umjetnu inteligenciju @FER",
+    "oib": "57029260362",
+    "lat": 45.801432,
+    "lng": 15.971117,
+    "adresa_override": "Unska 3, 10000 Zagreb",
+    "izvor": "institucija: https://cai.fer.hr/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30",
+    "google_maps": "https://maps.google.com/?cid=8331197685937308977&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+  },
   "288": {
     "_ime": "ICENT Innovation Centre Nikola Tesla @FER",
     "lat": 45.801435,
@@ -102,6 +353,30 @@
     "adresa_override": "C zgrada, Unska ul. 3, 10000, Zagreb",
     "izvor": "Google Maps (ICENT, Inovacijski centar Nikola Tesla), ručno potvrđeno 2026-10-30",
     "google_maps": "https://maps.google.com/?cid=7039837908866670686&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+  },
+  "293": {
+    "_ime": "AIRI Centre for Artificial Intelligence and Cybersecurity",
+    "oib": "46319717480",
+    "lat": 45.337531,
+    "lng": 14.425837,
+    "adresa_override": "Vukovarska 58, 51000 Rijeka",
+    "izvor": "institucija: https://airi.uniri.hr/contact/ (Antigravity/Gemini, provjera sudreg sjedište), 2026-10-30"
+  },
+  "295": {
+    "_ime": "Centre for research of digital transformation - CREDO",
+    "oib": "01338491514",
+    "lat": 42.656303,
+    "lng": 18.0843,
+    "adresa_override": "Lapadska obala 7, 20000 Dubrovnik",
+    "izvor": "institucija: https://credo.unidu.hr/kontakt/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
+  },
+  "300": {
+    "_ime": "Tehnički fakultet Pula/Laboratorij za robotiku i umjetnu inteligenciju",
+    "oib": "61738073226",
+    "lat": 44.860158,
+    "lng": 13.837185,
+    "adresa_override": "Negrijeva 6, 52100 Pula",
+    "izvor": "institucija: https://tfpu.unipu.hr/tfpu/znanost_i_istrazivanja/laboratoriji/laboratorij_za_robotiku_i_umjetnu_inteligenciju (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
   },
   "302": {
     "_ime": "ICT županija (Splitsko-dalmatinska)",
@@ -119,6 +394,28 @@
     "izvor": "Google Maps (AI Centar Lipik), ručno potvrđeno 2026-10-30",
     "google_maps": "https://maps.google.com/?cid=4476105606342292307&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
+  "308": {
+    "_ime": "AIBG (Artificial Intelligence BattleGround)",
+    "lat": 45.807652,
+    "lng": 15.95749,
+    "adresa_override": "Ul. Franje Petračića 4, 10110 Zagreb",
+    "izvor": "mjesto održavanja: https://best.hr/aibg/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
+  },
+  "315": {
+    "_ime": "Meetup Group: Data Science Croatia",
+    "lat": 45.807304,
+    "lng": 16.000508,
+    "adresa_override": "Zavrtnica 17, 10000 Zagreb",
+    "izvor": "mjesto održavanja: https://www.meetup.com/DataScienceCroatia/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30",
+    "google_maps": "https://maps.google.com/?cid=10984194054104657001&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+  },
+  "318": {
+    "_ime": "Meetup Group: ML/AI Split",
+    "lat": 43.509364,
+    "lng": 16.467295,
+    "adresa_override": "Ruđera Boškovića 25, 21000 Split",
+    "izvor": "mjesto održavanja: https://www.meetup.com/ML-AI-Split/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
+  },
   "319": {
     "_ime": "LegalTech",
     "oib": "05461674840",
@@ -126,6 +423,36 @@
     "lng": 15.959966,
     "adresa_override": "Tratinska ulica 36, Zagreb",
     "izvor": "sudreg: e-mail domena → B U G d.o.o.; geokod Google po sudreg sjedištu, 2026-10-30"
+  },
+  "322": {
+    "_ime": "The geek gathering",
+    "lat": 45.555794,
+    "lng": 18.695266,
+    "adresa_override": "Ul. Kneza Trpimira 2-A, 31000 Osijek",
+    "izvor": "mjesto održavanja: https://thegeekgathering.org/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
+  },
+  "327": {
+    "_ime": "Digital Labin",
+    "oib": "42238462344",
+    "lat": 45.092083,
+    "lng": 14.120488,
+    "adresa_override": "Rudarska ul. 2, 52220 Labin",
+    "izvor": "mjesto održavanja: https://digital-labin.com/venue (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
+  },
+  "346": {
+    "_ime": "RiTeh AI & Robotics Group",
+    "oib": "46319717480",
+    "lat": 45.337531,
+    "lng": 14.425837,
+    "adresa_override": "Vukovarska 58, 51000 Rijeka",
+    "izvor": "institucija: https://riteh.uniri.hr/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
+  },
+  "348": {
+    "_ime": "EDIT code school",
+    "lat": 43.509364,
+    "lng": 16.467295,
+    "adresa_override": "Ruđera Boškovića 25, 21000 Split",
+    "izvor": "institucija: https://digitalnadalmacija.hr (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
   },
   "349": {
     "_ime": "HealthHub",
@@ -135,6 +462,37 @@
     "adresa_override": "Sokolgradska ulica 22, Zagreb",
     "izvor": "sudreg: e-mail domena → IMAG MEDICAL d.o.o.; geokod Google po sudreg sjedištu, 2026-10-30"
   },
+  "352": {
+    "_ime": "AI4Health",
+    "oib": "69715301002",
+    "lat": 45.828762,
+    "lng": 15.98737,
+    "adresa_override": "Bijenička cesta 54, 10000 Zagreb",
+    "izvor": "institucija: https://ai4healthcro.eu/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30",
+    "google_maps": "https://maps.google.com/?cid=10554730757792753905&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+  },
+  "353": {
+    "_ime": "Women in tech Croatia",
+    "lat": 48.880444,
+    "lng": 2.287596,
+    "adresa_override": "88 Ave de Ternes, 75017 Paris, FR",
+    "izvor": "sjedište: https://women-in-tech.org/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
+  },
+  "356": {
+    "_ime": "Alliance for Responsible AI",
+    "lat": 50.88793,
+    "lng": 4.460131,
+    "adresa_override": "Davincilaan 1, 1930 Zaventem, BE",
+    "izvor": "sjedište: https://behorizon.org/alliance-for-responsible-ai/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30",
+    "google_maps": "https://maps.google.com/?cid=15337469971711495284&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+  },
+  "359": {
+    "_ime": "ADRAe",
+    "lat": 50.842029,
+    "lng": 4.371844,
+    "adresa_override": "Rue Belliard 40, 1040 Brussels, BE",
+    "izvor": "sjedište: https://adr-association.eu/legal-notes (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
+  },
   "360": {
     "_ime": "Wespa",
     "oib": "12555627052",
@@ -142,6 +500,59 @@
     "lng": 13.607424,
     "adresa_override": "Ilirska ulica 16, Poreč - Parenzo",
     "izvor": "sudreg: e-mail domena → EUROPSKA ZADRUGA WESPA SPACES HUB; geokod Google po sudreg sjedištu, 2026-10-30"
+  },
+  "362": {
+    "_ime": "Smion",
+    "lat": 45.813085,
+    "lng": 15.996996,
+    "adresa_override": "Martićeva ulica 72, 10000 Zagreb",
+    "izvor": "sjedište: https://smion.com/hr/politika-privatnosti/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
+  },
+  "363": {
+    "_ime": "CVCA - Hrvatska Private equity i Venture capital Asocijacija",
+    "lat": 45.801539,
+    "lng": 15.963474,
+    "adresa_override": "Savska cesta 32, 10000 Zagreb",
+    "izvor": "sjedište: https://cvca.hr/hr/kontakt/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
+  },
+  "368": {
+    "_ime": "Jutarnji",
+    "oib": "79517545745",
+    "lat": 45.802432,
+    "lng": 15.966789,
+    "adresa_override": "Koranska 2, 10000 Zagreb",
+    "izvor": "sjedište: https://www.jutarnji.hr/zastita-privatnosti (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
+  },
+  "371": {
+    "_ime": "Poslovni dnevnik",
+    "oib": "92276133102",
+    "lat": 45.760189,
+    "lng": 15.984247,
+    "adresa_override": "Oreškovićeva 3D, 10010 Zagreb",
+    "izvor": "sjedište: https://www.poslovni.hr/impressum (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30",
+    "google_maps": "https://maps.google.com/?cid=3167283733334378783&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+  },
+  "381": {
+    "_ime": "The Recursive",
+    "lat": 42.658966,
+    "lng": 23.317588,
+    "adresa_override": "Cherni Vrah Boulevard 51, Building 4, 1407 Sofia, BG",
+    "izvor": "sjedište: https://therecursive.com/privacy-policy/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30",
+    "google_maps": "https://maps.google.com/?cid=6562568332303269002&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+  },
+  "382": {
+    "_ime": "Trending topics",
+    "lat": 48.188196,
+    "lng": 16.403706,
+    "adresa_override": "Karl Farkas Gasse 22, 1030 Wien, AT",
+    "izvor": "sjedište: https://www.trendingtopics.eu/imprint/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
+  },
+  "384": {
+    "_ime": "Omnisearch",
+    "lat": 49.280463,
+    "lng": -123.107652,
+    "adresa_override": "90 West Pender St, 6th floor, V6C 1L6 Vancouver, CA",
+    "izvor": "sjedište: https://omnisearch.ai/terms-and-conditions (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
   },
   "387": {
     "_ime": "SplxAI",
@@ -151,6 +562,14 @@
     "adresa_override": "Dračevac 3D, Split",
     "izvor": "sudreg: ime → SplxAI d.o.o.; geokod Google po sudreg sjedištu, 2026-10-30"
   },
+  "390": {
+    "_ime": "Calimero Network",
+    "oib": "20718221739",
+    "lat": 45.793748,
+    "lng": 15.969575,
+    "adresa_override": "Slavonska avenija 6, 10000 Zagreb",
+    "izvor": "ured: https://calimero.network/ (Antigravity/Gemini, provjera sudreg sjedište), 2026-10-30"
+  },
   "397": {
     "_ime": "Very Big Things",
     "oib": "92437767171",
@@ -158,6 +577,30 @@
     "lng": 15.994469,
     "adresa_override": "Ulica Tome Blažeka 14, Zagreb",
     "izvor": "sudreg: e-mail domena → Jako Velike Stvari d.o.o.; geokod Google po sudreg sjedištu, 2026-10-30"
+  },
+  "399": {
+    "_ime": "SENDD by TIS Grupa",
+    "oib": "62434408100",
+    "lat": 45.810899,
+    "lng": 16.001828,
+    "adresa_override": "Ulica Vjekoslava Heinzela 33, 10000 Zagreb",
+    "izvor": "sjedište: https://sendd.eu/ (Antigravity/Gemini, provjera sudreg sjedište), 2026-10-30",
+    "google_maps": "https://maps.google.com/?cid=10730886655505314572&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+  },
+  "400": {
+    "_ime": "Isgen",
+    "lat": 51.514756,
+    "lng": -0.12357,
+    "adresa_override": "71-75 Shelton Street, Covent Garden, WC2H 9JQ London, GB",
+    "izvor": "sjedište: https://isgen.ai/privacy-policy (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
+  },
+  "409": {
+    "_ime": "DataKolektiv",
+    "lat": 44.747729,
+    "lng": 20.422277,
+    "adresa_override": "Breza 4/7, 11000 Beograd, RS",
+    "izvor": "sjedište: https://datakolektiv.com/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30",
+    "google_maps": "https://maps.google.com/?cid=15343667246808495740&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   "410": {
     "_ime": "Pythagora",
@@ -175,6 +618,29 @@
     "adresa_override": "Ulica Vjekoslava Heinzela 60, Zagreb",
     "izvor": "sudreg: e-mail domena → Turneo d.o.o.; geokod Google po sudreg sjedištu, 2026-10-30"
   },
+  "412": {
+    "_ime": "Fonoa",
+    "oib": "63433918405",
+    "lat": 45.802365,
+    "lng": 16.002959,
+    "adresa_override": "Radnička cesta 52, 10000 Zagreb",
+    "izvor": "ured: https://www.fonoa.com/ (Antigravity/Gemini, provjera sudreg sjedište), 2026-10-30"
+  },
+  "416": {
+    "_ime": "Novela Medica",
+    "lat": 45.778179,
+    "lng": 15.977027,
+    "adresa_override": "Avenija Dubrovnik 15, 10000 Zagreb",
+    "izvor": "lokacija: https://www.zicer.hr/tim-novela-medica-ce-ostaviti-trajni-trag-u-napretku-medicine/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
+  },
+  "422": {
+    "_ime": "Daytona",
+    "oib": "26105376053",
+    "lat": 43.520285,
+    "lng": 16.451017,
+    "adresa_override": "Ulica Domovinskog rata 61A, 21000 Split",
+    "izvor": "ured: https://www.daytona.io/ (Antigravity/Gemini, provjera sudreg sjedište), 2026-10-30"
+  },
   "424": {
     "_ime": "Compass AI",
     "oib": "17137301995",
@@ -182,6 +648,14 @@
     "lng": 15.958843,
     "adresa_override": "Savska cesta 106, Zagreb",
     "izvor": "sudreg: e-mail domena → COMPASS SOLUTIONS d.o.o.; geokod Google po sudreg sjedištu, 2026-10-30"
+  },
+  "433": {
+    "_ime": "BAT",
+    "oib": "37014645007",
+    "lat": 45.776569,
+    "lng": 15.978981,
+    "adresa_override": "Avenija Dubrovnik 16, 10020 Zagreb",
+    "izvor": "ured: https://www.bat.com/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
   },
   "434": {
     "_ime": "Bruketa&Žinić&Grey",
@@ -199,6 +673,45 @@
     "adresa_override": "Koturaška Cesta 69, Zagreb",
     "izvor": "sudreg: ime → ORBICO d.o.o.; geokod Google po sudreg sjedištu, 2026-10-30"
   },
+  "463": {
+    "_ime": "Odvjetnicko drustvo Stefan Martinic",
+    "lat": 45.77843,
+    "lng": 15.98686,
+    "adresa_override": "Ulica Ivana Šibla 17, 10020 Zagreb",
+    "izvor": "sjedište: https://oustefanmartinic.hr/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
+  },
+  "472": {
+    "_ime": "Live sync",
+    "oib": "80514925712",
+    "lat": 45.820291,
+    "lng": 16.025547,
+    "adresa_override": "Šeferova ulica 5, 10000 Zagreb",
+    "izvor": "sjedište: https://www.companywall.hr/tvrtka/differo-studio-doo/mmfWd3c (Antigravity/Gemini, provjera sudreg sjedište), 2026-10-30"
+  },
+  "473": {
+    "_ime": "Idea Link",
+    "lat": 54.899647,
+    "lng": 23.961511,
+    "adresa_override": "K. Baršausko g. 59, 51423 Kaunas, LT",
+    "izvor": "sjedište: https://idealink.tech/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30",
+    "google_maps": "https://maps.google.com/?cid=17026917507750097199&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+  },
+  "479": {
+    "_ime": "Zakon ai",
+    "oib": "92006302133",
+    "lat": 45.797011,
+    "lng": 15.912462,
+    "adresa_override": "Ulica Roberta Frangeša - Mihanovića 6, 10000 Zagreb",
+    "izvor": "sjedište: https://zakon.ai/o-nama/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
+  },
+  "485": {
+    "_ime": "PreferAI",
+    "oib": "76994300523",
+    "lat": 45.800369,
+    "lng": 15.971377,
+    "adresa_override": "Štitarska ulica 4, 10000 Zagreb",
+    "izvor": "sjedište: https://preferai.hr/ (Antigravity/Gemini, provjera sudreg sjedište), 2026-10-30"
+  },
   "486": {
     "_ime": "Martian&Machine",
     "lat": 45.80613,
@@ -206,6 +719,21 @@
     "adresa_override": "Ul. kneza Branimira 41, 10000, Zagreb",
     "izvor": "Google Maps (Martian & Machine d.o.o.), ručno potvrđeno 2026-10-30",
     "google_maps": "https://maps.google.com/?cid=1723513030322066044&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+  },
+  "489": {
+    "_ime": "Logicbricks by XYLON",
+    "oib": "89992971942",
+    "lat": 45.811253,
+    "lng": 15.947864,
+    "adresa_override": "Vodovodna ulica 20/1, 10000 Zagreb",
+    "izvor": "sjedište: https://www.logicbricks.com/About-Xylon/Contacts.aspx (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
+  },
+  "495": {
+    "_ime": "Leobit",
+    "lat": 30.322349,
+    "lng": -97.72539,
+    "adresa_override": "5555 N. Lamar, Suite L-127, 78751 Austin, US",
+    "izvor": "sjedište: https://leobit.com/contact/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
   },
   "497": {
     "_ime": "Sulie",
@@ -215,6 +743,21 @@
     "adresa_override": "Vrtna ulica 22, Čakovec",
     "izvor": "sudreg: e-mail domena → sulie d.o.o.; geokod Google po sudreg sjedištu, 2026-10-30"
   },
+  "512": {
+    "_ime": "Tribute Brand",
+    "oib": "00503398764",
+    "lat": 46.406949,
+    "lng": 16.404891,
+    "adresa_override": "Ksajpa 2/A, 40000 Šenkovec",
+    "izvor": "ured: https://www.tribute-brand.com/privacy (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
+  },
+  "525": {
+    "_ime": "Unlock RAB",
+    "lat": 44.760887,
+    "lng": 14.75815,
+    "adresa_override": "M. de Dominisa 9, 51280 Rab",
+    "izvor": "mjesto održavanja: https://www.unlock-rab.com/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
+  },
   "527": {
     "_ime": "Money Motion",
     "oib": "17877731232",
@@ -222,6 +765,28 @@
     "lng": 15.969937,
     "adresa_override": "Slavonska avenija 6, Zagreb",
     "izvor": "sudreg: e-mail domena → Short Notice Productions d.o.o.; geokod Google po sudreg sjedištu, 2026-10-30"
+  },
+  "529": {
+    "_ime": "Nesvrstani",
+    "lat": 45.811749,
+    "lng": 15.94017,
+    "adresa_override": "Prilaz baruna Filipovića 23A, 10000 Zagreb",
+    "izvor": "mjesto održavanja: https://www.nesvrstani.hr/kontakt/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
+  },
+  "530": {
+    "_ime": "JumpIT",
+    "lat": 45.793748,
+    "lng": 15.969575,
+    "adresa_override": "Slavonska avenija 6, 10000 Zagreb",
+    "izvor": "mjesto održavanja: https://www.jumpitforum.com/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
+  },
+  "532": {
+    "_ime": "Adria Tech Forum",
+    "lat": 50.116169,
+    "lng": 8.68308,
+    "adresa_override": "Brönnerstraße 17, 60313 Frankfurt am Main, DE",
+    "izvor": "mjesto održavanja: https://kwvd.de/impressum/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30",
+    "google_maps": "https://maps.google.com/?cid=13102175300355196276&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   "533": {
     "_ime": "SheepAI Hackathon",
@@ -239,6 +804,23 @@
     "adresa_override": "Zavrtnica 17, Zagreb",
     "izvor": "sudreg: e-mail domena → Fiftyseven hours d.o.o.; geokod Google po sudreg sjedištu, 2026-10-30"
   },
+  "549": {
+    "_ime": "WoomAI",
+    "oib": "78389484682",
+    "lat": 45.810126,
+    "lng": 15.985943,
+    "adresa_override": "Ulica kralja Zvonimira 62, 10000 Zagreb",
+    "izvor": "sjedište: https://woomai.io/privacy-policy/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
+  },
+  "551": {
+    "_ime": "Nuqleus",
+    "oib": "48640028500",
+    "lat": 45.801432,
+    "lng": 15.971117,
+    "adresa_override": "Unska 3, 10000 Zagreb",
+    "izvor": "institucija: https://nuqleus.io/contact/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30",
+    "google_maps": "https://maps.google.com/?cid=7039837908866670686&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+  },
   "553": {
     "_ime": "IAB Croatia",
     "lat": 45.80455,
@@ -246,6 +828,57 @@
     "adresa_override": "Ul. Charlesa Darwina 4a, 10000, Zagreb",
     "izvor": "Google Maps (HURA & IAB Croatia), ručno potvrđeno 2026-10-30",
     "google_maps": "https://maps.google.com/?cid=2274867497601777093&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+  },
+  "554": {
+    "_ime": "Voogle",
+    "lat": 46.305625,
+    "lng": 16.337205,
+    "adresa_override": "Ulica Augusta Cesarca 1, 42000 Varaždin",
+    "izvor": "mjesto održavanja: https://voogle.hr/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
+  },
+  "555": {
+    "_ime": "Aleph Croatia",
+    "oib": "62790516285",
+    "lat": 45.808884,
+    "lng": 15.98391,
+    "adresa_override": "Draškovićeva ulica 29, 10000 Zagreb",
+    "izvor": "ured: https://alephholding.com/ (Antigravity/Gemini, provjera sudreg sjedište), 2026-10-30"
+  },
+  "558": {
+    "_ime": "AI Business Hackathon",
+    "lat": 45.80797,
+    "lng": 15.957001,
+    "adresa_override": "Franje Petračića 4, 10000 Zagreb",
+    "izvor": "mjesto održavanja: https://www.aibizhack.org/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
+  },
+  "559": {
+    "_ime": "Mikai",
+    "oib": "70343070409",
+    "lat": 45.832437,
+    "lng": 16.082479,
+    "adresa_override": "Ulica Ivana Meštrovića 35, 10040 Sesvete",
+    "izvor": "sjedište: https://www.mikai-legal.com/ (Antigravity/Gemini, provjera sudreg sjedište), 2026-10-30"
+  },
+  "565": {
+    "_ime": "Astro Synapse",
+    "lat": 53.334775,
+    "lng": -6.245705,
+    "adresa_override": "71 Lower Baggot Street, D02 P593 Dublin, IE",
+    "izvor": "sjedište: https://astrosynapse.ai/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
+  },
+  "566": {
+    "_ime": "Affordable Care Entertainment",
+    "lat": 45.34022,
+    "lng": 16.975197,
+    "adresa_override": "Trg Luke Ilića Oriovčanina 8, 44330 Novska",
+    "izvor": "sjedište: https://www.fininfo.hr/Poduzece/Pregled/affordable-care-entertainment-obrt-za-racunalno-programiranje-vl-sonja-hranjec/Detaljno/880241 (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
+  },
+  "567": {
+    "_ime": "Algorise",
+    "lat": 51.520595,
+    "lng": -0.722027,
+    "adresa_override": "22 Carter House, 55 King Street, SL6 1EB Maidenhead, GB",
+    "izvor": "sjedište: https://find-and-update.company-information.service.gov.uk/company/15312605 (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
   },
   "571": {
     "_ime": "WooCommerce messaging",

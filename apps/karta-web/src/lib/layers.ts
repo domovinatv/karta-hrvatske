@@ -491,10 +491,10 @@ export const CONTROLS: Control[] = [
     label: "AI ekosustav (CroAI)",
     icon: BrainCircuit,
     stateKey: "showCroai",
-    count: 446,
+    count: 527,
     lazy: true,
     blurb:
-      "Croatian AI Landscape — imenik hrvatskih AI tvrtki, startupa, investitora, istraživača, konferencija i ranih korisnika koji vodi udruga CroAI na map.croai.org. Imenik NIJE popis članova udruge, i nema adresa: točka postoji za subjekt čiji je OIB nađen u impresumu njegova weba ili jednoznačno po imenu u info.BIZ-u (adresa i status iz FINA-e), ili po e-mail domeni u sudskom registru, ili kojeg Google Maps nađe po imenu s istim webom kao u imeniku. Sloj prikazuje 446 od 565 upisa.",
+      "Croatian AI Landscape — imenik hrvatskih AI tvrtki, startupa, investitora, istraživača, konferencija i ranih korisnika koji vodi udruga CroAI na map.croai.org. Imenik NIJE popis članova udruge, i nema adresa: točka postoji za subjekt čiji je OIB nađen u impresumu njegova weba ili jednoznačno po imenu u info.BIZ-u (adresa i status iz FINA-e), ili po e-mail domeni u sudskom registru, ili kojeg Google Maps nađe po imenu s istim webom kao u imeniku; ostatak je ručno istražen (adresa provjerena na izvoru, u sudskom registru ili na Google Mapsu). Događaji su na mjestu zadnjeg održavanja, strani subjekti na svojoj adresi u inozemstvu. Sloj prikazuje 527 od 565 upisa.",
     source: { label: "map.croai.org + FINA info.BIZ", href: "https://map.croai.org" },
     legend: [
       { color: "#2563eb", label: "AI tvrtke i startupi" },

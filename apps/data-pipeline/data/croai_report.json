@@ -1,49 +1,9 @@
 {
  "nerazrijeseno": [
   {
-   "croai_id": "359",
-   "name": "ADRAe",
-   "website": "https://adra-e.eu/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Organizations & Communities"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "532",
-   "name": "Adria Tech Forum",
-   "website": "https://adriatechforum.de/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Conferences & Meetups"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "566",
-   "name": "Affordable Care Entertainment",
-   "website": "https://affordablecareentertainment.com/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Service Providers"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
    "croai_id": "557",
    "name": "AI Art Singularity",
    "website": "https://artexpo.ai/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Conferences & Meetups"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "558",
-   "name": "AI Business Hackathon",
-   "website": "https://www.aibizhack.org/",
    "grupa": "Enablers & Extended Ecosystem",
    "kategorije": [
     "Conferences & Meetups"
@@ -59,120 +19,6 @@
     "Conferences & Meetups"
    ],
    "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "352",
-   "name": "AI4Health",
-   "website": "https://ai4healthcro.eu/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Organizations & Communities"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "308",
-   "name": "AIBG (Artificial Intelligence BattleGround)",
-   "website": "https://best.hr/aibg/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Conferences & Meetups"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "293",
-   "name": "AIRI Centre for Artificial Intelligence and Cybersecurity",
-   "website": "https://airi.uniri.hr/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Research"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "555",
-   "name": "Aleph Croatia",
-   "website": "https://alephholding.com/",
-   "grupa": "Early Adopters",
-   "kategorije": [],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "567",
-   "name": "Algorise",
-   "website": "https://www.algorise.co.uk/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Service Providers"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "356",
-   "name": "Alliance for Responsible AI",
-   "website": "https://behorizon.org/alliance-for-responsible-ai/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Organizations & Communities"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "133",
-   "name": "Ani Biome",
-   "website": "https://anibiome.ai/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Healthcare & Life Sciences"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "66",
-   "name": "Art Zagreb sajam suvremene likovne umjetnosti",
-   "website": "https://www.artzagreb.com/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Art"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "565",
-   "name": "Astro Synapse",
-   "website": "https://astrosynapse.ai/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Service Providers"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "266",
-   "name": "BAIF",
-   "website": "https://baif.hr/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Accelerators & Incubators & Investors"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "433",
-   "name": "BAT",
-   "website": "https://www.bat.com/",
-   "grupa": "Early Adopters",
-   "kategorije": [],
-   "razlog": "web: nema OIB-a; ime: 3 profila"
-  },
-  {
-   "croai_id": "132",
-   "name": "Bellabeat",
-   "website": "https://bellabeat.com/",
-   "oib": "18799772399",
-   "adresa": "SOUTH DUPONT HIGHWAY 615, 19901 DOVER",
-   "razlog": "nema geokoda"
   },
   {
    "croai_id": "321",
@@ -195,102 +41,12 @@
    "razlog": "web: nema OIB-a"
   },
   {
-   "croai_id": "189",
-   "name": "BURA",
-   "website": "https://cnrm.uniri.hr/bura/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Platforms & Infrastructure"
-   ],
-   "razlog": "web: nema OIB-a; ime: 5 profila"
-  },
-  {
-   "croai_id": "284",
-   "name": "CAI Centar za umjetnu inteligenciju @FER",
-   "website": "https://cai.fer.hr/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Research"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "390",
-   "name": "Calimero Network",
-   "website": "https://calimero.network/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Data Analytics"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "124",
-   "name": "CantabPI",
-   "website": "https://cantabpi.com/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "FinTech & Insurtech"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "33",
-   "name": "Capt’n.ai",
-   "website": "https://captn.ai/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Adtech & Sales & PR"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "82",
-   "name": "Careesma",
-   "website": "http://careesma.co/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Customer Communication"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "295",
-   "name": "Centre for research of digital transformation - CREDO",
-   "website": "https://credo.unidu.hr/index.php/en/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Research"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "61",
-   "name": "Climatig",
-   "website": "https://www.climatig.com/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Agriculture & Greentech"
-   ],
-   "razlog": "web: samo neoznačen broj"
-  },
-  {
    "croai_id": "333",
    "name": "Code for Croatia",
    "website": "https://codeforcroatia.org/",
    "grupa": "Enablers & Extended Ecosystem",
    "kategorije": [
     "Organizations & Communities"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "173",
-   "name": "Code map",
-   "website": "https://codemap.io/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Mobility"
    ],
    "razlog": "web: nema OIB-a"
   },
@@ -325,16 +81,6 @@
    "razlog": "web: nema OIB-a"
   },
   {
-   "croai_id": "363",
-   "name": "CVCA - Hrvatska Private equity i Venture capital Asocijacija",
-   "website": "https://cvca.hr/hr/o-cvca/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Organizations & Communities"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
    "croai_id": "414",
    "name": "Cyclops",
    "website": "https://cyclops-ui.com/",
@@ -365,46 +111,6 @@
    "razlog": "web: nema OIB-a"
   },
   {
-   "croai_id": "409",
-   "name": "DataKolektiv",
-   "website": "https://datakolektiv.com/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Data Analytics"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "422",
-   "name": "Daytona",
-   "website": "https://www.daytona.io/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "DevTools & Frameworks"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "327",
-   "name": "Digital Labin",
-   "website": "https://digital-labin.com/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Conferences & Meetups"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "348",
-   "name": "EDIT code school",
-   "website": "https://edit.dalmacija.hr/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Organizations & Communities"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
    "croai_id": "561",
    "name": "Eduformacije",
    "website": "https://www.eduformacije.com/",
@@ -415,70 +121,12 @@
    "razlog": "web: nema OIB-a"
   },
   {
-   "croai_id": "237",
-   "name": "Enterprise Europe Network",
-   "website": "https://www.een.hr/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Accelerators & Incubators & Investors"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "83",
-   "name": "Erato",
-   "website": "https://erato.hr/",
-   "oib": "27127616990",
-   "adresa": "ULICA JELENČEVIH 67, LIMBUŠ",
-   "razlog": "nema geokoda"
-  },
-  {
    "croai_id": "323",
    "name": "EU AI Forum",
    "website": "https://www.european-ai-forum.com/",
    "grupa": "Enablers & Extended Ecosystem",
    "kategorije": [
     "Conferences & Meetups"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "198",
-   "name": "evocenta GmbH",
-   "website": "https://www.evocenta.com/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Service Providers"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "238",
-   "name": "Feelsgood Capital",
-   "website": "https://www.feelsgoodcapital.com/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Accelerators & Incubators & Investors"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "239",
-   "name": "Fil Rouge Capital",
-   "website": "https://filrougecapital.com/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Accelerators & Incubators & Investors"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "412",
-   "name": "Fonoa",
-   "website": "https://www.fonoa.com/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "FinTech & Insurtech"
    ],
    "razlog": "web: nema OIB-a"
   },
@@ -533,50 +181,12 @@
    "razlog": "web: nema OIB-a"
   },
   {
-   "croai_id": "183",
-   "name": "Google",
-   "website": "https://about.google/",
-   "oib": "01775013301",
-   "adresa": "251 LITTLE FALLS DRIVE , WILMINGTON , DELEWARE , SAD, WILMINGTON , DELEWARE , SAD",
-   "razlog": "nema geokoda"
-  },
-  {
    "croai_id": "252",
    "name": "HACK - Hub for Advanced Computing Križevci",
    "website": "https://hack.udruga-point.hr/",
    "grupa": "Enablers & Extended Ecosystem",
    "kategorije": [
     "Accelerators & Incubators & Investors"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "473",
-   "name": "Idea Link",
-   "website": "https://idealink.tech/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Service Providers"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "400",
-   "name": "Isgen",
-   "website": "https://isgen.ai/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Cybersecurity"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "85",
-   "name": "Ispravi.me",
-   "website": "https://ispravi.me/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Customer Communication"
    ],
    "razlog": "web: nema OIB-a"
   },
@@ -589,26 +199,6 @@
     "Organizations & Communities"
    ],
    "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "530",
-   "name": "JumpIT",
-   "website": "https://www.jumpitforum.com/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Conferences & Meetups"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "368",
-   "name": "Jutarnji",
-   "website": "https://www.jutarnji.hr/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Media"
-   ],
-   "razlog": "web: više OIB-a (79517545745, 93439147186, 71342575080)"
   },
   {
    "croai_id": "243",
@@ -641,46 +231,6 @@
    "razlog": "web: nema OIB-a"
   },
   {
-   "croai_id": "495",
-   "name": "Leobit",
-   "website": "https://leobit.com/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Service Providers"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "259",
-   "name": "Lighthuse Japan",
-   "website": "https://www.innovationlighthousejapan.com/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Accelerators & Incubators & Investors"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "472",
-   "name": "Live sync",
-   "website": "https://livesync.site/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Healthcare & Life Sciences"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "489",
-   "name": "Logicbricks by XYLON",
-   "website": "https://www.logicbricks.com/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Robotics"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
    "croai_id": "415",
    "name": "Marenda",
    "website": "https://marenda.app/",
@@ -691,52 +241,12 @@
    "razlog": "web: nema OIB-a"
   },
   {
-   "croai_id": "315",
-   "name": "Meetup Group: Data Science Croatia",
-   "website": "https://www.meetup.com/DataScienceCroatia/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Conferences & Meetups"
-   ],
-   "razlog": "web: OIB nije u info.BIZ-u"
-  },
-  {
-   "croai_id": "318",
-   "name": "Meetup Group: ML/AI Split",
-   "website": "https://www.meetup.com/ML-AI-Split/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Conferences & Meetups"
-   ],
-   "razlog": "web: OIB nije u info.BIZ-u"
-  },
-  {
    "croai_id": "257",
    "name": "Meta Change Capital",
    "website": "https://www.linkedin.com/company/meta-change-capital/",
    "grupa": "Enablers & Extended Ecosystem",
    "kategorije": [
     "Accelerators & Incubators & Investors"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "559",
-   "name": "Mikai",
-   "website": "https://www.mikai-legal.com/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "HR & Law"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "39",
-   "name": "Mr.Popper by Marteching",
-   "website": "https://mr-popper.com/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Adtech & Sales & PR"
    ],
    "razlog": "web: nema OIB-a"
   },
@@ -751,80 +261,12 @@
    "razlog": "web: nema OIB-a"
   },
   {
-   "croai_id": "529",
-   "name": "Nesvrstani",
-   "website": "https://www.nesvrstani.hr/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Conferences & Meetups"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "79",
-   "name": "Neyho",
-   "website": "https://neyho.com/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Automation"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "416",
-   "name": "Novela Medica",
-   "website": "https://www.zicer.hr/tim-novela-medica-ce-ostaviti-trajni-trag-u-napretku-medicine/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Healthcare & Life Sciences"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "63",
-   "name": "Nuotwo",
-   "website": "https://www.nuotwo.com/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Agriculture & Greentech"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "551",
-   "name": "Nuqleus",
-   "website": "https://nuqleus.io/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Accelerators & Incubators & Investors"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
    "croai_id": "578",
    "name": "ODOO",
    "website": "https://odoo-community.com.hr/",
    "grupa": "Startups & Companies",
    "kategorije": [
     "Service Providers"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "463",
-   "name": "Odvjetnicko drustvo Stefan Martinic",
-   "website": "https://odvjetnikstefanmartinic.hr/",
-   "grupa": "Early Adopters",
-   "kategorije": [],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "384",
-   "name": "Omnisearch",
-   "website": "https://omnisearch.ai/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Image & Video Processing"
    ],
    "razlog": "web: nema OIB-a"
   },
@@ -839,56 +281,6 @@
    "razlog": "web: nema OIB-a"
   },
   {
-   "croai_id": "371",
-   "name": "Poslovni dnevnik",
-   "website": "https://www.poslovni.hr/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Media"
-   ],
-   "razlog": "web: više OIB-a (92276133102, 29005509482)"
-  },
-  {
-   "croai_id": "485",
-   "name": "PreferAI",
-   "website": "https://preferai.hr/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "DevTools & Frameworks"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "128",
-   "name": "Revuto",
-   "website": "https://revuto.com/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "FinTech & Insurtech"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "346",
-   "name": "RiTeh AI & Robotics Group",
-   "website": "https://www.facebook.com/RitehAIandRobot/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Organizations & Communities"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "399",
-   "name": "SENDD by TIS Grupa",
-   "website": "https://sendd.eu/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Healthcare & Life Sciences"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
    "croai_id": "468",
    "name": "SlimFit AI",
    "website": "https://www.linkedin.com/company/slimfit-ai/about/?viewAsMember=true",
@@ -897,16 +289,6 @@
     "Healthcare & Life Sciences"
    ],
    "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "362",
-   "name": "Smion",
-   "website": "https://smion.com/hr/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Organizations & Communities"
-   ],
-   "razlog": "web: nema OIB-a; ime: kratko i strana domena (smion)"
   },
   {
    "croai_id": "246",
@@ -929,26 +311,6 @@
    "razlog": "web: nema OIB-a"
   },
   {
-   "croai_id": "247",
-   "name": "SPOCK @FER",
-   "website": "https://spock.fer.hr/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Accelerators & Incubators & Investors"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "229",
-   "name": "Spotsie",
-   "website": "https://spotsie.io/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Smart Cities & Homes"
-   ],
-   "razlog": "web: više OIB-a (81127230861, 99895959831)"
-  },
-  {
    "croai_id": "324",
    "name": "Startup Europe Regatta",
    "website": "https://startupeuroperegatta.com/",
@@ -969,132 +331,12 @@
    "razlog": "web: nema OIB-a; ime: 2 profila"
   },
   {
-   "croai_id": "300",
-   "name": "Tehnički fakultet Pula/Laboratorij za robotiku i umjetnu inteligenciju",
-   "website": "https://tfpu.unipu.hr/tfpu/znanost_i_istrazivanja/laboratoriji/laboratorij_za_robotiku_i_umjetnu_inteligenciju",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Research"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "322",
-   "name": "The geek gathering",
-   "website": "https://thegeekgathering.org/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Conferences & Meetups"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "381",
-   "name": "The Recursive",
-   "website": "https://therecursive.com/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Media"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "382",
-   "name": "Trending topics",
-   "website": "https://www.trendingtopics.eu/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Media"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "512",
-   "name": "Tribute Brand",
-   "website": "http://www.tribute-brand.com",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Art"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
    "croai_id": "478",
    "name": "Ulpian",
    "website": "https://www.ulpian.com",
    "grupa": "Startups & Companies",
    "kategorije": [
     "HR & Law"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "139",
-   "name": "Ultrax",
-   "website": "https://www.ultrax.ai/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Healthcare & Life Sciences"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "525",
-   "name": "Unlock RAB",
-   "website": "https://www.unlock-rab.com/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Conferences & Meetups"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "116",
-   "name": "Vidi X",
-   "website": "https://vidi-x.org/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "EduTech"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "554",
-   "name": "Voogle",
-   "website": "https://voogle.hr/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Conferences & Meetups"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "250",
-   "name": "WBAF",
-   "website": "https://croatia.wbaforum.org/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Accelerators & Incubators & Investors"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "353",
-   "name": "Women in tech Croatia",
-   "website": "https://women-in-tech.org/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Organizations & Communities"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "549",
-   "name": "WoomAI",
-   "website": "https://hellowoom.io/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Customer Communication"
    ],
    "razlog": "web: nema OIB-a"
   },
@@ -1127,52 +369,12 @@
    "razlog": "web: nema OIB-a"
   },
   {
-   "croai_id": "479",
-   "name": "Zakon ai",
-   "website": "https://zakon.ai/en/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "HR & Law"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "109",
-   "name": "Zeal agency",
-   "website": "https://zealagency.co/services/business-process-automation",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Data Analytics"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "179",
-   "name": "Zebra Cross (Zicer startup)",
-   "website": "http://www.zebracross.hr/",
-   "grupa": "Startups & Companies",
-   "kategorije": [
-    "Mobility"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
    "croai_id": "376",
    "name": "Zimo",
    "website": "https://zimo.dnevnik.hr/",
    "grupa": "Enablers & Extended Ecosystem",
    "kategorije": [
     "Media"
-   ],
-   "razlog": "web: nema OIB-a"
-  },
-  {
-   "croai_id": "258",
-   "name": "æternity Ventures",
-   "website": "https://aeventures.io/",
-   "grupa": "Enablers & Extended Ecosystem",
-   "kategorije": [
-    "Accelerators & Incubators & Investors"
    ],
    "razlog": "web: nema OIB-a"
   }
@@ -1980,6 +1182,15 @@
    "km": 2.0
   },
   {
+   "croai_id": "295",
+   "name": "Centre for research of digital transformation - CREDO",
+   "oib": "01338491514",
+   "naziv": "Sveučilište u Dubrovniku",
+   "fina_adresa": "Lapadska obala 7, 20000 Dubrovnik",
+   "google_adresa": "Ul. branitelja Dubrovnika 29, 20000, Dubrovnik",
+   "km": 1.9
+  },
+  {
    "croai_id": "570",
    "name": "Plus hosting grupa",
    "oib": "25444746329",
@@ -1987,6 +1198,24 @@
    "fina_adresa": "Valturska ulica - Via Altura 82, 52100 Pula",
    "google_adresa": "Valturska 82, 52100, Pula",
    "km": 1.7
+  },
+  {
+   "croai_id": "300",
+   "name": "Tehnički fakultet Pula/Laboratorij za robotiku i umjetnu inteligenciju",
+   "oib": "61738073226",
+   "naziv": "Sveučilište Jurja Dobrile u Puli",
+   "fina_adresa": "Negrijeva 6, 52100 Pula",
+   "google_adresa": "Zagrebačka ul. 30, 52100, Pula",
+   "km": 1.5
+  },
+  {
+   "croai_id": "189",
+   "name": "BURA",
+   "oib": "64218323816",
+   "naziv": "Sveučilište u Rijeci",
+   "fina_adresa": "Radmile Matejčić 2, 51000 Rijeka",
+   "google_adresa": "Trg braće Mažuranića 10, 51000, Rijeka",
+   "km": 1.1
   }
  ]
 }
