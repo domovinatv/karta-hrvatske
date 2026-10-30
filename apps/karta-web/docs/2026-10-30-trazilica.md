@@ -352,3 +352,20 @@ Okidač za razinu 2 je veličina indeksa (`build-search-index.mjs` je ispisuje
 pri svakom deployu), a ne broj posjetitelja. Na razini 3 trošak raste s brojem
 **različitih** upita, ne s brojem posjetitelja, jer popularne upite poslužuje
 edge cache.
+
+## 8. Otvoreno
+
+- **Mobitel (BottomSheet, kartica Pretraga)** koristi isti `SearchBox`, ali
+  e2e i vizualna provjera rađeni su samo na desktopu (1400×900).
+- **Promjena teme** (tamna/svijetla) ponovno gradi stil i briše sloj
+  isticanja `hr-search-hits-halo`. Pogoci ostaju u listi, a prstene vraća
+  novi klik na „Prikaži sve na karti".
+- **Pin odabranog rezultata** ostaje do sljedećeg odabira ili brisanja upita.
+- **CroAI firme bez adrese** (`geo_source: naselje`) dijele točku središta
+  naselja. Pretraga zato otvara pravi popup, ali na karti se i dalje vide kao
+  jedna točka.
+- **Pitanja prirodnim jezikom** koja rječnik ne pokriva („tko radi
+  prepoznavanje govora") idu u full-text nad engleskim `about` tekstom. Za
+  bolje rezultate treba razina „Semantika" iz poglavlja 7.
+- `npm run lint` ne radi jer `eslint` nije instaliran u `apps/karta-web`. To
+  je stanje od prije, ne posljedica ove promjene.
