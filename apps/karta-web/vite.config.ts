@@ -12,6 +12,9 @@ export default defineConfig({
   define: {
     __BUILD_VERSION__: JSON.stringify(BUILD_VERSION),
   },
+  // Web Worker pretrage (src/search/search.worker.ts) uvozi engine i
+  // MiniSearch kao ES module.
+  worker: { format: "es" },
   plugins: [
     react(),
     VitePWA({

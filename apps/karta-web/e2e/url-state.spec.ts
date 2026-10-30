@@ -82,15 +82,16 @@ test("odabir JLS-a iz pretrage zadržava slojeve; Back vraća početnu", async (
 
   const input = page.getByTestId("floating-search").locator("input");
   await input.fill("Samobor");
-  await page.getByTestId("floating-search").getByRole("button", { name: /Samobor/ }).first().click();
+  // Rezultati su role="option" (listbox, ↑/↓/Enter), od pretrage kroz sve slojeve.
+  await page.getByTestId("floating-search").getByRole("option", { name: /Samobor/ }).first().click();
 
   await expect(page).toHaveURL(/\/jls\/samobor\?.*l=[^&#]*crkve/);
   await expect(page.getByTestId("sidebar-left")).toBeVisible();
   await expect(page.getByTestId("sidebar-right")).toBeVisible();
   await expect(page.getByTestId("zup-jls-list")).toContainText("Zagrebačka");
 
-  // Tipkanje u pretragu (≥2 znaka) pali naselja radi pretrage naselja, pa
-  // početni unos legitimno nosi i `naselja`; bitno je da crkve ostanu.
+  // Odabir JLS-a pali naselja (fokus na JLS), pa unos može nositi i
+  // `naselja`; bitno je da crkve ostanu.
   await page.goBack();
   await expect(page).toHaveURL(new RegExp(`^${BASE}/\\?l=[^#]*crkve`));
   await expect(page.getByTestId("sidebar-right")).toHaveCount(0);

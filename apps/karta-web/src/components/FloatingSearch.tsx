@@ -2,14 +2,11 @@ import { useState, type FocusEvent } from "react";
 import type { Map as MapLibreMap } from "maplibre-gl";
 import { SearchBox } from "./SearchBox";
 import { ZupList } from "./ZupList";
-import type { JlsCollection, NaseljaCollection } from "@/lib/types";
+import type { JlsCollection } from "@/lib/types";
 
 interface Props {
   map: MapLibreMap | null;
   jls: JlsCollection | null;
-  naselja: NaseljaCollection | null;
-  naseljaLoading: boolean;
-  onKickNaseljaLoad: () => void;
 }
 
 // Pretraga nad kartom na `/`, gdje nema sidebara. Otkad je klik na JLS ugašen,
@@ -28,10 +25,10 @@ export function FloatingSearch(props: Props) {
       data-testid="floating-search"
       onFocus={() => setFocused(true)}
       onBlur={onBlur}
-      className="absolute left-4 top-4 z-[500] hidden max-h-[calc(100%-2rem)] w-[300px] flex-col overflow-hidden rounded-xl border shadow-panel md:flex"
+      className="absolute left-4 top-4 z-[500] hidden max-h-[calc(100%-2rem)] w-[340px] flex-col overflow-hidden rounded-xl border shadow-panel md:flex"
       style={{ background: "var(--bg-2)", borderColor: "var(--line)" }}
     >
-      <SearchBox {...props} onQueryChange={setQ} />
+      <SearchBox map={props.map} onQueryChange={setQ} />
       {focused && q.trim() === "" && (
         <div className="min-h-0 overflow-y-auto">
           <div className="px-5 pt-2 font-display text-[10px] font-semibold uppercase tracking-wider text-muted">

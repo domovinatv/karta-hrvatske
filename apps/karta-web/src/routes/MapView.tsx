@@ -90,7 +90,7 @@ export default function MapView() {
 
   useJlsLayer({ map: mapRef.current, loaded, styleRev, jls, zupanije, drzava });
   useJlsInteractions({ map: mapRef.current, loaded, styleRev, jls: jls as JlsCollection | null });
-  const { naselja, loading: naseljaLoading } = useNaseljaLayer({
+  const { naselja } = useNaseljaLayer({
     map: mapRef.current,
     loaded,
     styleRev,
@@ -163,10 +163,6 @@ export default function MapView() {
       ? "md:grid-cols-[280px_1fr] lg:grid-cols-[320px_1fr]"
       : "grid-cols-1";
 
-  // Search & sheet need a way to lazy-load naselja before user toggles the
-  // layer button. setShowNaselja(true) triggers the fetch via useNaseljaLayer's
-  // own effect, so we expose a tiny wrapper.
-  const kickNaseljaLoad = useCallback(() => setShowNaselja(true), [setShowNaselja]);
 
   return (
     <>
@@ -183,13 +179,7 @@ export default function MapView() {
             className="hidden overflow-y-auto border-r md:block"
             style={{ background: "var(--bg-2)", borderColor: "var(--line)" }}
           >
-            <SearchBox
-              map={mapRef.current}
-              jls={jls as JlsCollection | null}
-              naselja={naselja}
-              naseljaLoading={naseljaLoading}
-              onKickNaseljaLoad={kickNaseljaLoad}
-            />
+            <SearchBox map={mapRef.current} />
             <ZupJlsList map={mapRef.current} jls={jls as JlsCollection | null} zupanija={leftZup} />
           </aside>
         )}
@@ -202,13 +192,7 @@ export default function MapView() {
             style={{ background: "var(--map-bg)" }}
           />
           {!hasLeft && (
-            <FloatingSearch
-              map={mapRef.current}
-              jls={jls as JlsCollection | null}
-              naselja={naselja}
-              naseljaLoading={naseljaLoading}
-              onKickNaseljaLoad={kickNaseljaLoad}
-            />
+            <FloatingSearch map={mapRef.current} jls={jls as JlsCollection | null} />
           )}
           <LayersPanel variant="desktop" counts={layerCounts} onFitHome={handleFitHome} />
           <LayersFab
@@ -252,8 +236,6 @@ export default function MapView() {
         map={mapRef.current}
         jls={jls as JlsCollection | null}
         naselja={naselja}
-        naseljaLoading={naseljaLoading}
-        onKickNaseljaLoad={kickNaseljaLoad}
         totalArea={totalArea}
       />
       <ClubModal />

@@ -13,8 +13,6 @@ interface Props {
   map: MapLibreMap | null;
   jls: JlsCollection | null;
   naselja: NaseljaCollection | null;
-  naseljaLoading: boolean;
-  onKickNaseljaLoad: () => void;
   totalArea: number;
 }
 
@@ -29,8 +27,6 @@ export function BottomSheet({
   map,
   jls,
   naselja,
-  naseljaLoading,
-  onKickNaseljaLoad,
   totalArea,
 }: Props) {
   const { selectedJls, selectedNaselje } = useMapState();
@@ -101,13 +97,7 @@ export function BottomSheet({
       </div>
       <div className="flex-1 overflow-y-auto" style={{ WebkitOverflowScrolling: "touch" }}>
         {tab === "pretraga" && (
-          <SearchBox
-            map={map}
-            jls={jls}
-            naselja={naselja}
-            naseljaLoading={naseljaLoading}
-            onKickNaseljaLoad={onKickNaseljaLoad}
-          />
+          <SearchBox map={map} />
         )}
         {tab === "zupanije" && <ZupList map={map} jls={jls} />}
         {tab === "detalji" && (

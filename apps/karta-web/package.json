@@ -10,12 +10,15 @@
     "lint": "eslint . --ext ts,tsx --max-warnings 0",
     "sync-data": "node scripts/sync-data.mjs",
     "build-lookups": "node scripts/build-lookups.mjs",
+    "build-search": "node scripts/build-search-index.mjs",
+    "search-smoke": "node scripts/search-smoke.mjs",
     "build-sitemap": "node scripts/build-sitemap.mjs",
     "deploy": "bash scripts/deploy.sh"
   },
   "dependencies": {
     "lucide-react": "^1.31.0",
     "maplibre-gl": "^4.7.1",
+    "minisearch": "^7.2.0",
     "pmtiles": "^3.2.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

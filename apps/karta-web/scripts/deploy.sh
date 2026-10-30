@@ -10,6 +10,8 @@ node scripts/sync-data.mjs
 
 echo "▸ 2/5 build-lookups (lookup-{clubs,jls,zupanije,poster}.json for CF Worker)"
 node scripts/build-lookups.mjs
+echo "  + build-search-index (search-index.json za pretragu, docs/2026-10-30-trazilica.md)"
+node scripts/build-search-index.mjs
 
 echo "▸ 3/5 build-sitemap (sitemap.xml + robots.txt)"
 node scripts/build-sitemap.mjs
