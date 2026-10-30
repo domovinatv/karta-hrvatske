@@ -8,9 +8,24 @@ import {
   useState,
   type ReactNode,
 } from "react";
+import { useLocation, useNavigationType } from "react-router-dom";
 import type { ClubProperties, Theme } from "./types";
+import {
+  defaultLayers,
+  parseColorMode,
+  parseLayers,
+  parseTheme,
+  sceneKey,
+  URL_LAYERS,
+  writeScene,
+  type ColorMode,
+  type LayerFlags,
+  type SceneState,
+} from "./urlState";
 
 // Centralized state for the map — selection, layer toggles, theme, dimming.
+// Slojevi, boja i tema su "prizor" i žive u URL-u (lib/urlState.ts); ovdje
+// je samo zrcalo da 20-ak use*Layer hookova zadrži imenovani API.
 // Lives in a single provider so any component (FAB, sheet, popover, hooks)
 // can flip toggles without prop drilling. Theme also persists to localStorage
 // here so MapLibre listeners and Tailwind dark: utilities stay in sync.
@@ -72,6 +87,8 @@ interface MapState {
   colorMode: "zupanija" | "type";
   // Rich-card modal target (or null when closed)
   clubModal: ClubProperties | null;
+  /** Slojevi + boja + tema, za upis u URL (useUrlSync). */
+  scene: SceneState;
 }
 
 interface MapStateActions {
@@ -109,6 +126,8 @@ interface MapStateActions {
   toggleJlsBorders: () => void;
   setTheme: (t: Theme) => void;
   toggleColorMode: () => void;
+  /** Više slojeva odjednom (npr. "Očisti") — jedan zapis u URL. */
+  setLayerFlags: (patch: Partial<LayerFlags>) => void;
   openClubModal: (p: ClubProperties) => void;
   closeClubModal: () => void;
   /** Reset everything to defaults (Fit Hrvatska). */
@@ -136,52 +155,60 @@ const initialJlsClick = (): boolean => {
   }
 };
 
+// Ime settera za stateKey: showCrkve → setShowCrkve.
+const setterName = (k: string) => `set${k[0].toUpperCase()}${k.slice(1)}`;
+
+type LayerSetters = Record<string, (on: boolean) => void>;
+
 export function MapStateProvider({ children }: { children: ReactNode }) {
+  const location = useLocation();
+  const navType = useNavigationType();
+
   const [selectedJls, setSelectedJls] = useState<number | null>(null);
   const [selectedNaselje, setSelectedNaselje] = useState<number | null>(null);
   const [focusMode, setFocusMode] = useState(false);
   const [jlsClick, setJlsClick] = useState<boolean>(initialJlsClick);
   const [activeZup, setActiveZup] = useState<string | null>(null);
-  const [showNaselja, setShowNaselja] = useState(false);
-  const [showKvartovi, setShowKvartovi] = useState(false);
-  const [showKolokvijalni, setShowKolokvijalni] = useState(false);
-  const [showClubs, setShowClubs] = useState(false);
-  const [showOrto, setShowOrto] = useState(false);
-  const [showPitches, setShowPitches] = useState(false);
-  const [showCrkve, setShowCrkve] = useState(false);
-  const [showZupe, setShowZupe] = useState(false);
-  const [showUdruge, setShowUdruge] = useState(false);
-  const [showBiskupije, setShowBiskupije] = useState(false);
-  const [showSkole, setShowSkole] = useState(false);
-  const [showVrtici, setShowVrtici] = useState(false);
-  const [showUstanove, setShowUstanove] = useState(false);
-  const [showStadiums, setShowStadiums] = useState(false);
-  const [showInkubatori, setShowInkubatori] = useState(false);
-  const [showZgObrazovanje, setShowZgObrazovanje] = useState(false);
-  const [showZgZdravlje, setShowZgZdravlje] = useState(false);
-  const [showZgKretanje, setShowZgKretanje] = useState(false);
-  const [showZgSvakodnevno, setShowZgSvakodnevno] = useState(false);
-  const [showZgOtpad, setShowZgOtpad] = useState(false);
-  const [showZgSigurnost, setShowZgSigurnost] = useState(false);
-  const [showEkosustav, setShowEkosustav] = useState(false);
-  const [showCroai, setShowCroai] = useState(false);
-  const [showAirports, setShowAirports] = useState(false);
-  const [showPinka, setShowPinka] = useState(false);
-  const [showZupBorders, setShowZupBorders] = useState(true);
-  const [showJlsBorders, setShowJlsBorders] = useState(true);
-  const [theme, setThemeState] = useState<Theme>(initialTheme);
-  const [colorMode, setColorMode] = useState<"zupanija" | "type">("zupanija");
   const [clubModal, setClubModal] = useState<ClubProperties | null>(null);
 
-  // Mirror theme onto <html data-theme="..."> and persist.
+  // Prizor (slojevi, boja, tema) — inicijalno iz URL-a, dalje URL prati stanje.
+  const initial = useMemo(() => new URLSearchParams(location.search), []); // eslint-disable-line react-hooks/exhaustive-deps
+  const [layers, setLayers] = useState<Partial<LayerFlags>>(() => parseLayers(initial.get("l")));
+  const [colorMode, setColorMode] = useState<ColorMode>(() => parseColorMode(initial.get("boja")));
+  const [theme, setThemeState] = useState<Theme>(
+    () => parseTheme(initial.get("tema")) ?? initialTheme(),
+  );
+
+  // Zadnji prizor koji je stanje upisalo u URL (samo scenski parametri).
+  const lastScene = useRef(sceneKey(location.search));
+
+  // URL → stanje: Back/Forward i tuđi linkovi. Primjenjuje se samo prizor koji
+  // se razlikuje od zadnjeg upisanog: useUrlSync i header link rade PUSH s
+  // queryjem od prije klika, pa bi inače vratili npr. naselja koja je reset()
+  // upravo ugasio. Naši zapisi su REPLACE i preskaču se iz istog razloga.
+  useEffect(() => {
+    if (navType === "REPLACE") return;
+    const key = sceneKey(location.search);
+    if (key === lastScene.current) return;
+    lastScene.current = key;
+    const p = new URLSearchParams(location.search);
+    setLayers(parseLayers(p.get("l")));
+    setColorMode(parseColorMode(p.get("boja")));
+    const t = parseTheme(p.get("tema"));
+    if (t) setThemeState(t);
+  }, [location.search, navType]);
+
+  // URL piše useUrlSync (putanja + prizor u JEDNOJ navigaciji, inače se
+  // zasebni replace utrkuje s njegovim pushom i prepiše krivi unos povijesti).
+  const scene = useMemo<SceneState>(() => ({ layers, colorMode, theme }), [layers, colorMode, theme]);
+  useEffect(() => {
+    lastScene.current = writeScene("", scene);
+  }, [scene]);
+
+  // Mirror theme onto <html data-theme="...">.
   useEffect(() => {
     if (theme === "light") document.documentElement.setAttribute("data-theme", "light");
     else document.documentElement.removeAttribute("data-theme");
-    try {
-      localStorage.setItem("domovina-theme", theme);
-    } catch {
-      /* ignore */
-    }
   }, [theme]);
 
   useEffect(() => {
@@ -192,9 +219,39 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
     }
   }, [jlsClick]);
 
-  const setTheme = useCallback((t: Theme) => setThemeState(t), []);
-  const toggleZupBorders = useCallback(() => setShowZupBorders((b) => !b), []);
-  const toggleJlsBorders = useCallback(() => setShowJlsBorders((b) => !b), []);
+  // Tema se pamti samo kad je korisnik sam promijeni — `?tema=` iz tuđeg
+  // linka ne smije pregaziti primateljevu postavku.
+  const setTheme = useCallback((t: Theme) => {
+    setThemeState(t);
+    try {
+      localStorage.setItem("domovina-theme", t);
+    } catch {
+      /* ignore */
+    }
+  }, []);
+
+  const layerSetters = useMemo<LayerSetters>(
+    () =>
+      Object.fromEntries(
+        URL_LAYERS.map(({ key }) => [
+          setterName(key),
+          (on: boolean) => setLayers((cur) => (cur[key] === on ? cur : { ...cur, [key]: on })),
+        ]),
+      ),
+    [],
+  );
+  const setLayerFlags = useCallback(
+    (patch: Partial<LayerFlags>) => setLayers((cur) => ({ ...cur, ...patch })),
+    [],
+  );
+  const toggleZupBorders = useCallback(
+    () => setLayers((cur) => ({ ...cur, showZupBorders: !cur.showZupBorders })),
+    [],
+  );
+  const toggleJlsBorders = useCallback(
+    () => setLayers((cur) => ({ ...cur, showJlsBorders: !cur.showJlsBorders })),
+    [],
+  );
   const toggleColorMode = useCallback(
     () => setColorMode((m) => (m === "zupanija" ? "type" : "zupanija")),
     [],
@@ -206,122 +263,51 @@ export function MapStateProvider({ children }: { children: ReactNode }) {
     setSelectedNaselje(null);
     setFocusMode(false);
     setActiveZup(null);
-    setShowNaselja(false);
-    setShowKvartovi(false);
-    setShowKolokvijalni(false);
+    setLayers((cur) => ({ ...cur, showNaselja: false, showKvartovi: false, showKolokvijalni: false }));
   }, []);
 
   const value = useMemo(
-    () => ({
-      selectedJls,
-      selectedNaselje,
-      focusMode,
-      jlsClick,
-      activeZup,
-      showNaselja,
-      showKvartovi,
-      showKolokvijalni,
-      showClubs,
-      showOrto,
-      showPitches,
-      showCrkve,
-      showZupe,
-      showUdruge,
-      showBiskupije,
-      showSkole,
-      showVrtici,
-      showUstanove,
-      showStadiums,
-      showInkubatori,
-      showZgObrazovanje,
-      showZgZdravlje,
-      showZgKretanje,
-      showZgSvakodnevno,
-      showZgOtpad,
-      showZgSigurnost,
-      showEkosustav,
-      showCroai,
-      showAirports,
-      showPinka,
-      showZupBorders,
-      showJlsBorders,
-      theme,
-      colorMode,
-      clubModal,
-      setSelectedJls,
-      setSelectedNaselje,
-      setFocusMode,
-      setJlsClick,
-      setActiveZup,
-      setShowNaselja,
-      setShowKvartovi,
-      setShowKolokvijalni,
-      setShowClubs,
-      setShowOrto,
-      setShowPitches,
-      setShowCrkve,
-      setShowZupe,
-      setShowUdruge,
-      setShowBiskupije,
-      setShowSkole,
-      setShowVrtici,
-      setShowUstanove,
-      setShowStadiums,
-      setShowInkubatori,
-      setShowZgObrazovanje,
-      setShowZgZdravlje,
-      setShowZgKretanje,
-      setShowZgSvakodnevno,
-      setShowZgOtpad,
-      setShowZgSigurnost,
-      setShowEkosustav,
-      setShowCroai,
-      setShowAirports,
-      setShowPinka,
-      toggleZupBorders,
-      toggleJlsBorders,
-      setTheme,
-      toggleColorMode,
-      openClubModal,
-      closeClubModal,
-      reset,
-    }),
+    () =>
+      ({
+        ...defaultLayers(),
+        ...layers,
+        ...layerSetters,
+        selectedJls,
+        selectedNaselje,
+        focusMode,
+        jlsClick,
+        activeZup,
+        theme,
+        colorMode,
+        clubModal,
+        scene,
+        setSelectedJls,
+        setSelectedNaselje,
+        setFocusMode,
+        setJlsClick,
+        setActiveZup,
+        setLayerFlags,
+        toggleZupBorders,
+        toggleJlsBorders,
+        setTheme,
+        toggleColorMode,
+        openClubModal,
+        closeClubModal,
+        reset,
+      }) as MapState & MapStateActions,
     [
+      layers,
+      layerSetters,
       selectedJls,
       selectedNaselje,
       focusMode,
       jlsClick,
       activeZup,
-      showNaselja,
-      showKvartovi,
-      showKolokvijalni,
-      showClubs,
-      showOrto,
-      showPitches,
-      showCrkve,
-      showZupe,
-      showUdruge,
-      showBiskupije,
-      showSkole,
-      showVrtici,
-      showUstanove,
-      showStadiums,
-      showInkubatori,
-      showZgObrazovanje,
-      showZgZdravlje,
-      showZgKretanje,
-      showZgSvakodnevno,
-      showZgOtpad,
-      showZgSigurnost,
-      showEkosustav,
-      showCroai,
-      showAirports,
-      showPinka,
-      showZupBorders,
-      showJlsBorders,
       theme,
       colorMode,
       clubModal,
+      scene,
+      setLayerFlags,
       toggleZupBorders,
       toggleJlsBorders,
       setTheme,

@@ -111,8 +111,9 @@ test("map renders + JLS click selects + URL updates", async ({ page }) => {
   await expect(page).toHaveURL(/\/jls\/[^/]+/, { timeout: 5000 });
   console.log("After JLS click, URL =", page.url());
 
-  // Verify feature-state selected is set on the clicked feature.
-  const selectedExists = await page.evaluate(() => {
+  // Verify feature-state selected is set on the clicked feature. Poll: odabir
+  // otvara sidebare, karta se resiza i par frameova nema renderiranih featurea.
+  const selectedExists = () => page.evaluate(() => {
     const w = window as unknown as { _gisMap?: import("maplibre-gl").Map };
     const map = w._gisMap!;
     // Find any feature with selected feature-state via queryRenderedFeatures
@@ -122,7 +123,7 @@ test("map renders + JLS click selects + URL updates", async ({ page }) => {
       return fs.selected === true;
     });
   });
-  expect(selectedExists).toBe(true);
+  await expect.poll(selectedExists, { timeout: 5000 }).toBe(true);
 });
 
 test("Klubovi toggle loads clubs.geojson and renders markers", async ({ page }) => {
@@ -174,7 +175,8 @@ test("header title returns home from a deep link", async ({ page }) => {
   await page.goto(BASE + "/jls/grad-zagreb");
   await waitForMapIdle(page);
   await page.getByRole("link", { name: /Karta Hrvatske/ }).click();
-  await expect(page).toHaveURL(new RegExp(`^${BASE}/?$`), { timeout: 5000 });
+  // Hash nosi samo kameru (MapLibre `hash: "map"`); odabira i slojeva nema.
+  await expect(page).toHaveURL(new RegExp(`^${BASE}/?(#map=[\\d./-]+)?$`), { timeout: 5000 });
 });
 
 test("deep link /jls/grad-zagreb selects and fits", async ({ page }) => {

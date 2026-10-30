@@ -146,7 +146,7 @@ export function usePitchesLayer({
       const btn = popup.getElement()?.querySelector("[data-go]") as HTMLButtonElement | null;
       btn?.addEventListener("click", () => {
         const to = btn.getAttribute("data-go");
-        if (to) navigate(to);
+        if (to) navigate({ pathname: to, search: window.location.search });
       });
     };
 

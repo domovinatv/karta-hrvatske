@@ -4,12 +4,14 @@ import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { useMapState } from "@/lib/MapState";
 import { computeBounds } from "@/lib/geo";
 import { slugify } from "@/lib/slug";
+import { writeScene } from "@/lib/urlState";
 import type {
   ClubCollection,
   ClubFeature,
   JlsCollection,
   JlsFeature,
 } from "@/lib/types";
+import { fitAfterLayout } from "@/lib/fit";
 
 interface Options {
   map: MapLibreMap | null;
@@ -39,6 +41,7 @@ export function useUrlSync({ map, jls, clubs, ensureClubsOn }: Options) {
     selectedJls,
     activeZup,
     clubModal,
+    scene,
     setSelectedJls,
     setSelectedNaselje,
     setActiveZup,
@@ -53,6 +56,14 @@ export function useUrlSync({ map, jls, clubs, ensureClubsOn }: Options) {
   // state→URL effect on initial mount (state all-null) would overwrite a
   // deep-linked URL with "/", clobbering the very URL we're meant to read.
   const hadSelectionRef = useRef(false);
+  // Link s kamerom (#map=zoom/lat/lng) pobjeđuje auto-fit na odabrani
+  // entitet — inače bi podijeljeni prizor odmah odletio na fitBounds. Vrijedi
+  // samo za prvo razrješenje URL-a; kasniji odabiri fitaju normalno.
+  const keepCameraRef = useRef(/(^#|&)map=/.test(window.location.hash));
+  const fit = (fn: () => void) => {
+    if (!keepCameraRef.current) fn();
+    keepCameraRef.current = false;
+  };
 
   // URL → state
   useEffect(() => {
@@ -63,6 +74,7 @@ export function useUrlSync({ map, jls, clubs, ensureClubsOn }: Options) {
       if (selectedJls !== null) setSelectedJls(null);
       if (activeZup !== null) setActiveZup(null);
       if (clubModal !== null) closeClubModal();
+      keepCameraRef.current = false;
       return;
     }
 
@@ -76,7 +88,7 @@ export function useUrlSync({ map, jls, clubs, ensureClubsOn }: Options) {
       if (!zup) return;
       if (activeZup !== zup) {
         setActiveZup(zup);
-        if (map) {
+        if (map) fit(() => {
           const feats = (jls.features as JlsFeature[]).filter(
             (f) => f.properties.zupanija === zup,
           );
@@ -92,7 +104,8 @@ export function useUrlSync({ map, jls, clubs, ensureClubsOn }: Options) {
               if (b[1][0] > maxX) maxX = b[1][0];
               if (b[1][1] > maxY) maxY = b[1][1];
             }
-            map.fitBounds(
+            fitAfterLayout(
+              map,
               [
                 [minX, minY],
                 [maxX, maxY],
@@ -100,7 +113,7 @@ export function useUrlSync({ map, jls, clubs, ensureClubsOn }: Options) {
               { padding: 40, duration: 800 },
             );
           }
-        }
+        });
       }
       return;
     }
@@ -116,8 +129,13 @@ export function useUrlSync({ map, jls, clubs, ensureClubsOn }: Options) {
         setFocusMode(true);
         setShowNaselja(true);
         if (map) {
-          const b = computeBounds(f.geometry);
-          map.fitBounds(b, { padding: 50, maxZoom: 12, duration: 800 });
+          fit(() =>
+            fitAfterLayout(map, computeBounds(f.geometry), {
+              padding: 50,
+              maxZoom: 12,
+              duration: 800,
+            }),
+          );
         }
       }
       return;
@@ -137,9 +155,21 @@ export function useUrlSync({ map, jls, clubs, ensureClubsOn }: Options) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location.pathname, params.slug, jls, clubs, map]);
 
-  // state → URL
+  // Prvo razrješenje URL-a je gotovo čim su JLS-ovi tu (i /klub/ ruta koja ne
+  // fita); poslije toga se kamera iz linka više ne čuva.
   useEffect(() => {
-    let desired = "/";
+    if (jls) keepCameraRef.current = false;
+  }, [jls]);
+
+  // state → URL. Jedini pisac URL-a: putanja (odabir) i query (prizor) idu u
+  // istoj navigaciji — push kad se mijenja odabir, replace kad samo slojevi.
+  // window.location, ne `location`: MapLibre hash piše mimo routera, a router
+  // zna zaostajati za navigacijom koju smo upravo pokrenuli.
+  useEffect(() => {
+    const search = writeScene(window.location.search, scene);
+    const hash = window.location.hash;
+
+    let desired: string | null = null;
     let hasSelection = false;
     if (clubModal?.slug) {
       desired = `/klub/${clubModal.slug}`;
@@ -153,20 +183,27 @@ export function useUrlSync({ map, jls, clubs, ensureClubsOn }: Options) {
     } else if (activeZup) {
       desired = `/zupanija/${slugify(activeZup)}`;
       hasSelection = true;
+    } else {
+      desired = "/";
     }
 
     // First mount or unrelated re-renders: state is empty AND we haven't
     // tracked any prior selection. Don't fire navigate("/") — that would
-    // clobber a deep-linked URL before URL→state could populate state.
-    if (!hasSelection && !hadSelectionRef.current) return;
+    // clobber a deep-linked URL (npr. /kampanje) before URL→state could
+    // populate state. Prizor se svejedno upisuje na trenutnu putanju.
+    if (!hasSelection && !hadSelectionRef.current) desired = null;
     hadSelectionRef.current = hasSelection || hadSelectionRef.current;
 
-    if (desired === location.pathname) {
+    if (desired !== null && desired !== location.pathname) {
+      // Odabir se razrješava iz URL-a (Back) — stanje još zaostaje, ne diraj.
+      if (lastWrittenUrl.current === desired) return;
       lastWrittenUrl.current = desired;
+      navigate({ pathname: desired, search, hash }, { replace: false });
       return;
     }
-    if (lastWrittenUrl.current === desired) return;
-    lastWrittenUrl.current = desired;
-    navigate(desired, { replace: false });
-  }, [selectedJls, activeZup, clubModal, jls, location.pathname, navigate]);
+    if (desired !== null) lastWrittenUrl.current = desired;
+    if (search !== window.location.search) {
+      navigate({ pathname: window.location.pathname, search, hash }, { replace: true });
+    }
+  }, [selectedJls, activeZup, clubModal, scene, jls, location.pathname, navigate]);
 }

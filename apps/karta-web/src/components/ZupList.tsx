@@ -2,6 +2,7 @@ import { useMemo } from "react";
 import type { Map as MapLibreMap } from "maplibre-gl";
 import { useMapState } from "@/lib/MapState";
 import type { JlsCollection, JlsFeature } from "@/lib/types";
+import { fitAfterLayout } from "@/lib/fit";
 
 interface Props {
   map: MapLibreMap | null;
@@ -68,7 +69,8 @@ export function ZupList({ map, jls }: Props) {
       };
       walk(f.geometry);
     }
-    map.fitBounds(
+    fitAfterLayout(
+      map,
       [
         [minX, minY],
         [maxX, maxY],

@@ -8,6 +8,7 @@ import type {
   NaseljaCollection,
   NaseljeFeature,
 } from "@/lib/types";
+import { fitAfterLayout } from "@/lib/fit";
 
 interface Props {
   map: MapLibreMap | null;
@@ -16,6 +17,8 @@ interface Props {
   naseljaLoading: boolean;
   /** When user searches and there are no naselja yet, kick the lazy load. */
   onKickNaseljaLoad: () => void;
+  /** FloatingSearch prikazuje popis županija dok je polje prazno. */
+  onQueryChange?: (q: string) => void;
 }
 
 interface JlsHit {
@@ -30,9 +33,20 @@ interface NasHit {
 }
 type Hit = JlsHit | NasHit;
 
-export function SearchBox({ map, jls, naselja, naseljaLoading, onKickNaseljaLoad }: Props) {
+export function SearchBox({
+  map,
+  jls,
+  naselja,
+  naseljaLoading,
+  onKickNaseljaLoad,
+  onQueryChange,
+}: Props) {
   const { setSelectedJls, setSelectedNaselje, setFocusMode, setShowNaselja } = useMapState();
   const [q, setQ] = useState("");
+
+  useEffect(() => {
+    onQueryChange?.(q);
+  }, [q, onQueryChange]);
 
   // Kick naselje load when query is non-trivial.
   useEffect(() => {
@@ -70,7 +84,7 @@ export function SearchBox({ map, jls, naselja, naseljaLoading, onKickNaseljaLoad
       setFocusMode(true);
       setShowNaselja(true);
       const b = computeBounds(hit.feature.geometry);
-      map.fitBounds(b, { padding: 50, maxZoom: 12, duration: 800 });
+      fitAfterLayout(map, b, { padding: 50, maxZoom: 12, duration: 800 });
     } else {
       // Naselje search → focus parent JLS first (focus + lazy naselja),
       // then select the naselje and zoom to it.
@@ -85,7 +99,7 @@ export function SearchBox({ map, jls, naselja, naseljaLoading, onKickNaseljaLoad
       setShowNaselja(true);
       setSelectedNaselje(hit.id);
       const b = computeBounds(hit.feature.geometry);
-      map.fitBounds(b, { padding: 60, maxZoom: 14, duration: 800 });
+      fitAfterLayout(map, b, { padding: 60, maxZoom: 14, duration: 800 });
     }
     setQ("");
   };

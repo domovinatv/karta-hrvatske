@@ -3,6 +3,7 @@ import type { Map as MapLibreMap, MapLayerMouseEvent } from "maplibre-gl";
 import { useMapState } from "@/lib/MapState";
 import { computeBounds } from "@/lib/geo";
 import type { JlsCollection, JlsFeature } from "@/lib/types";
+import { fitAfterLayout } from "@/lib/fit";
 
 interface Options {
   map: MapLibreMap | null;
@@ -86,7 +87,7 @@ export function useJlsInteractions({ map, loaded, styleRev, jls }: Options) {
       const feat = jls.features.find((f) => (f as JlsFeature).id === id) as JlsFeature | undefined;
       if (feat) {
         const b = computeBounds(feat.geometry);
-        map.fitBounds(b, { padding: 50, maxZoom: 12, duration: 800 });
+        fitAfterLayout(map, b, { padding: 50, maxZoom: 12, duration: 800 });
       }
     };
 

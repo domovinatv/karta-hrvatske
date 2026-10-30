@@ -21,6 +21,9 @@ export function useMapLibre({ container }: UseMapLibreOptions) {
   useEffect(() => {
     if (!container.current || mapRef.current) return;
 
+    // Je li kamera stigla linkom — vidi cleanup.
+    const linkedCamera = /(^#|&)map=/.test(window.location.hash);
+
     const protocol = new Protocol();
     maplibregl.addProtocol("pmtiles", protocol.tile);
 
@@ -32,6 +35,9 @@ export function useMapLibre({ container }: UseMapLibreOptions) {
       // pregaziti deep-link fit ili korisnikov zoom.
       bounds: HR_BOUNDS,
       fitBoundsOptions: { padding: 25 },
+      // Kamera u URL-u: #map=zoom/lat/lng, replaceState, Back je ne puni.
+      // Ako link već nosi hash, MapLibre ga primijeni umjesto `bounds`.
+      hash: "map",
       attributionControl: { compact: true },
       dragRotate: false,
       pitchWithRotate: false,
@@ -61,7 +67,16 @@ export function useMapLibre({ container }: UseMapLibreOptions) {
 
     return () => {
       map.off("style.load", handleStyleLoad);
+      // map.remove() briše #map= iz URL-a. Pod StrictModeom (dev) karta se
+      // montira dvaput, pa bi druga instanca izgubila kameru iz linka. Vraća
+      // se samo kamera iz linka — bez nje bi prva instanca drugoj ostavila
+      // svoj međukorak (#map=0.36/0/0 prije fitBoundsa).
+      const hash = window.location.hash;
       map.remove();
+      if (linkedCamera && hash && !window.location.hash) {
+        const { pathname, search } = window.location;
+        window.history.replaceState(window.history.state, "", pathname + search + hash);
+      }
       mapRef.current = null;
       setLoaded(false);
       if (typeof window !== "undefined") {

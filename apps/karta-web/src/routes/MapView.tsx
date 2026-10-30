@@ -3,12 +3,13 @@ import { useLocation } from "react-router-dom";
 import { BottomSheet } from "@/components/BottomSheet";
 import { ClubModal } from "@/components/ClubModal";
 import { DetailPanel } from "@/components/DetailPanel";
+import { FloatingSearch } from "@/components/FloatingSearch";
 import { LayersFab } from "@/components/LayersFab";
 import { LayersPanel } from "@/components/LayersPanel";
 import { MapHeader } from "@/components/MapHeader";
 import { RouteHelmet } from "@/components/RouteHelmet";
 import { SearchBox } from "@/components/SearchBox";
-import { ZupList } from "@/components/ZupList";
+import { ZupJlsList } from "@/components/ZupJlsList";
 import { useClubsLayer } from "@/hooks/useClubsLayer";
 import { useCrkveLayer } from "@/hooks/useCrkveLayer";
 import { useGeojsonData } from "@/hooks/useGeojsonData";
@@ -36,6 +37,7 @@ import { useSkoleLayer, useUstanoveLayer, useVrticiLayer } from "@/hooks/useOouL
 import { useMapState } from "@/lib/MapState";
 import { HR_BOUNDS } from "@/lib/style";
 import type { JlsCollection, JlsFeature } from "@/lib/types";
+import { fitAfterLayout } from "@/lib/fit";
 
 export default function MapView() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -43,6 +45,9 @@ export default function MapView() {
   const { jls, zupanije, drzava, error } = useGeojsonData();
   const [layersOpen, setLayersOpen] = useState(false);
   const {
+    selectedJls,
+    selectedNaselje,
+    activeZup,
     reset,
     setSelectedJls,
     setFocusMode,
@@ -56,7 +61,7 @@ export default function MapView() {
   const handleFitHome = useCallback(() => {
     reset();
     setLayersOpen(false);
-    mapRef.current?.fitBounds(HR_BOUNDS, { padding: 25, duration: 800 });
+    if (mapRef.current) fitAfterLayout(mapRef.current, HR_BOUNDS, { padding: 25, duration: 800 });
   }, [reset, mapRef]);
 
   // Deep-link /kampanje[?c={slug}] — uključi pinka sloj; ?c fokusira kampanju.
@@ -141,6 +146,23 @@ export default function MapView() {
     [clubs, naselja],
   );
 
+  // Raspored prati odabir (a time i putanju): `/` je čista karta, županija
+  // otvara lijevi popis njezinih JLS-ova, JLS još i desne detalje. Ispod `lg`
+  // detalje nosi BottomSheet, ispod `md` i pretragu.
+  const leftZup = useMemo(() => {
+    if (activeZup) return activeZup;
+    if (selectedJls === null || !jls) return null;
+    const f = (jls.features as JlsFeature[]).find((x) => x.id === selectedJls);
+    return f?.properties.zupanija ?? null;
+  }, [activeZup, selectedJls, jls]);
+  const hasLeft = leftZup !== null;
+  const hasRight = selectedJls !== null || selectedNaselje !== null;
+  const gridCols = hasRight
+    ? "md:grid-cols-[280px_1fr] lg:grid-cols-[320px_1fr_380px]"
+    : hasLeft
+      ? "md:grid-cols-[280px_1fr] lg:grid-cols-[320px_1fr]"
+      : "grid-cols-1";
+
   // Search & sheet need a way to lazy-load naselja before user toggles the
   // layer button. setShowNaselja(true) triggers the fetch via useNaseljaLayer's
   // own effect, so we expose a tiny wrapper.
@@ -150,39 +172,27 @@ export default function MapView() {
     <>
       <RouteHelmet jls={jls as JlsCollection | null} clubs={clubs} />
       <MapHeader onHome={handleFitHome} />
-      <main className="grid flex-1 overflow-hidden md:grid-cols-[280px_1fr] lg:grid-cols-[320px_1fr_380px]">
-        {/* Desktop left sidebar: search + zup list */}
-        <aside
-          className="hidden overflow-y-auto border-r md:block"
-          style={{ background: "var(--bg-2)", borderColor: "var(--line)" }}
-        >
-          <h2
-            className="m-0 flex items-baseline justify-between border-b px-5 py-4 font-display text-[13px] font-semibold uppercase tracking-wider text-muted"
-            style={{ borderColor: "var(--line)" }}
+      <main
+        className={`grid flex-1 overflow-hidden ${gridCols}`}
+        data-layout={hasRight ? "lijevo-desno" : hasLeft ? "lijevo" : "karta"}
+      >
+        {/* Desktop left sidebar: pretraga + JLS-ovi županije (samo uz odabir) */}
+        {hasLeft && (
+          <aside
+            data-testid="sidebar-left"
+            className="hidden overflow-y-auto border-r md:block"
+            style={{ background: "var(--bg-2)", borderColor: "var(--line)" }}
           >
-            Hrvatska
-            <span className="font-mono text-[10px] normal-case text-[var(--accent-2)]">
-              556 JLS
-            </span>
-          </h2>
-          <SearchBox
-            map={mapRef.current}
-            jls={jls as JlsCollection | null}
-            naselja={naselja}
-            naseljaLoading={naseljaLoading}
-            onKickNaseljaLoad={kickNaseljaLoad}
-          />
-          <h2
-            className="m-0 flex items-baseline justify-between border-b px-5 py-4 font-display text-[13px] font-semibold uppercase tracking-wider text-muted"
-            style={{ borderColor: "var(--line)" }}
-          >
-            Po županijama
-            <span className="font-mono text-[10px] normal-case text-[var(--accent-2)]">
-              klik = filter
-            </span>
-          </h2>
-          <ZupList map={mapRef.current} jls={jls as JlsCollection | null} />
-        </aside>
+            <SearchBox
+              map={mapRef.current}
+              jls={jls as JlsCollection | null}
+              naselja={naselja}
+              naseljaLoading={naseljaLoading}
+              onKickNaseljaLoad={kickNaseljaLoad}
+            />
+            <ZupJlsList map={mapRef.current} jls={jls as JlsCollection | null} zupanija={leftZup} />
+          </aside>
+        )}
 
         {/* Map (center) */}
         <div className="relative">
@@ -191,6 +201,15 @@ export default function MapView() {
             className="absolute inset-0"
             style={{ background: "var(--map-bg)" }}
           />
+          {!hasLeft && (
+            <FloatingSearch
+              map={mapRef.current}
+              jls={jls as JlsCollection | null}
+              naselja={naselja}
+              naseljaLoading={naseljaLoading}
+              onKickNaseljaLoad={kickNaseljaLoad}
+            />
+          )}
           <LayersPanel variant="desktop" counts={layerCounts} onFitHome={handleFitHome} />
           <LayersFab
             open={layersOpen}
@@ -211,22 +230,22 @@ export default function MapView() {
           )}
         </div>
 
-        {/* Desktop right sidebar: detail */}
-        <aside
-          className="hidden overflow-y-auto border-l lg:block"
-          style={{ background: "var(--bg-2)", borderColor: "var(--line)" }}
-        >
-          <h2
-            className="m-0 flex items-baseline justify-between border-b px-5 py-4 font-display text-[13px] font-semibold uppercase tracking-wider text-muted"
-            style={{ borderColor: "var(--line)" }}
+        {/* Desktop right sidebar: detalji (samo uz odabranu JLS / naselje) */}
+        {hasRight && (
+          <aside
+            data-testid="sidebar-right"
+            className="hidden overflow-y-auto border-l lg:block"
+            style={{ background: "var(--bg-2)", borderColor: "var(--line)" }}
           >
-            Detalji
-            <span className="font-mono text-[10px] normal-case text-[var(--accent-2)]">
-              click ili search
-            </span>
-          </h2>
-          <DetailPanel jls={jls as JlsCollection | null} naselja={naselja} totalArea={totalArea} />
-        </aside>
+            <h2
+              className="m-0 flex items-baseline justify-between border-b px-5 py-4 font-display text-[13px] font-semibold uppercase tracking-wider text-muted"
+              style={{ borderColor: "var(--line)" }}
+            >
+              Detalji
+            </h2>
+            <DetailPanel jls={jls as JlsCollection | null} naselja={naselja} totalArea={totalArea} />
+          </aside>
+        )}
       </main>
 
       <BottomSheet

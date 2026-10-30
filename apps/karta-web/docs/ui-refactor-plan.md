@@ -208,4 +208,4 @@ Test `klub click` sad prvo sklopi panel — panel je plutajući dock nad kartom,
 
 ### Ostaje
 
-Faza 3 (tipografija, tokeni elevacije/radiusa/motiona, prazna stanja, staklene ploče), Faza 2 (legenda za aktivne slojeve, skeleton/progress za lazy dohvat, `?` cheat sheet, čipovi aktivnih slojeva), Faza 4 (slojevi u URL, presetovi, share, onboarding, `Snimi prizor`), Faza 5 (a11y prolaz).
+Faza 3 (tipografija, tokeni elevacije/radiusa/motiona, prazna stanja, staklene ploče), Faza 2 (legenda za aktivne slojeve, skeleton/progress za lazy dohvat, `?` cheat sheet, čipovi aktivnih slojeva), Faza 4 (presetovi, onboarding, `Snimi prizor`; slojevi u URL i `Podijeli` su gotovi 30.10.2026., vidi `2026-10-30-url-stanje-plan.md`), Faza 5 (a11y prolaz).
