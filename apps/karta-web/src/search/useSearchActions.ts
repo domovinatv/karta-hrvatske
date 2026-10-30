@@ -3,6 +3,7 @@ import maplibregl, { type Map as MapLibreMap } from "maplibre-gl";
 import { useMapState } from "@/lib/MapState";
 import { CONTROLS, type LayerStateKey, type ToggleLayer } from "@/lib/layers";
 import { fitAfterLayout } from "@/lib/fit";
+import { pointPopupOpeners } from "@/hooks/usePointLayer";
 import type { Hit, SearchResponse } from "./engine";
 
 // Što se događa kad korisnik odabere rezultat. Pretraga ne zna ništa o
@@ -59,6 +60,13 @@ function openPointPopup(map: MapLibreMap, layerId: string, p: [number, number], 
     if (tries > 60) return; // ~9 s: sloj se nije učitao, ostaje samo marker
     if (!map.getLayer(layerId) || map.isMoving()) {
       setTimeout(attempt, 150);
+      return;
+    }
+    // Sloj s klasterima: točka unutar klastera nije iscrtana, pa se popup
+    // otvara izravno po id-u, bez sintetičkog klika.
+    const open = pointPopupOpeners.get(layerId);
+    if (open?.(id)) {
+      done = true;
       return;
     }
     const point = map.project(p);

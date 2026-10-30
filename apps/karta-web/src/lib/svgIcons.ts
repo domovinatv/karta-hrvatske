@@ -24,3 +24,6 @@ export const svgArrowUpRight = (size = 11) =>
 
 /** lucide: check */
 export const svgCheck = (size = 12) => wrap('<path d="M20 6 9 17l-5-5"/>', size);
+
+/** lucide: chevron-left */
+export const svgChevronLeft = (size = 12) => wrap('<path d="m15 18-6-6 6-6"/>', size);

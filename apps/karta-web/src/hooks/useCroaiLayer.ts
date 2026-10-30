@@ -65,6 +65,8 @@ export function useCroaiLayer(args: {
       radiusExpr: RADIUS_EXPR,
       ringFilter: MRTAV_FILTER,
       popupHtml,
+      cluster: true,
+      listLabel: (p) => ({ name: p.name, sub: p.grupa_naziv, color: BOJE[p.grupa] }),
     },
   });
 }
@@ -87,6 +89,7 @@ function popupHtml(p: CroaiProperties): string {
     row("Adresa", p.adresa),
     // DGU/Nominatim nisu našli kuću — točka je središte mjesta, ne sjedište.
     p.geo_source === "naselje" ? row("Točnost", "središte mjesta") : "",
+    p.geo_source === "google-ulica" ? row("Točnost", "ulica, ne kućni broj") : "",
     p.provjera ? row("Provjera", PROVJERA[p.provjera]) : "",
     row("Osnovano", p.year),
     row("OIB", p.oib),
