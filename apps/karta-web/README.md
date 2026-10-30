@@ -58,7 +58,11 @@ npm run deploy          # chain svega + wrangler deploy (Worker)
 
 ## Deploy (Cloudflare Worker)
 
-Worker **`gis-domovina`** pod D.O.M. accountom (`7dc7167b…df14e4`), config u `wrangler.toml`: `main = public/_worker.js`, assets iz `dist/`, route `gis.domovina.ai/*`. Stari Pages projekt istog imena ostaje iza routea kao rezerva. Prijelaz i povratak: [`docs/2026-10-30-pages-u-workers.md`](docs/2026-10-30-pages-u-workers.md).
+Worker **`gis-domovina`** pod D.O.M. accountom (`7dc7167b…df14e4`), config u `wrangler.toml`: `main = public/_worker.js`, assets iz `dist/`, route `gis.domovina.ai/*`. Stari Pages projekt istog imena ostaje iza routea kao rezerva. Prijelaz i povratak: [`docs/2026-10-30-pages-u-workers.md`](docs/2026-10-30-pages-u-workers.md). Worker obrađuje samo HTML rute; `/assets/*`, `/data/*`, `/logos/*` i `/icons/*` idu ravno iz asseta (besplatno, headeri iz `public/_headers`).
+
+## Pretraga
+
+Tražilica kroz svih 24 sloja (32.666 objekata, CroAI firme po kategoriji, mjestu i statusu), bez servera: statički indeks `search-index.json` (`npm run build-search`) i MiniSearch u Web Workeru. Arhitektura, dijagrami i kako dodati sloj ili riječ u rječnik: [`docs/2026-10-30-trazilica.md`](docs/2026-10-30-trazilica.md). Brza provjera rangiranja: `npm run search-smoke`.
 
 ```bash
 npm run deploy                        # Worker (produkcija)
