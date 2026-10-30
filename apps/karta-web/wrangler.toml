@@ -12,6 +12,10 @@ main = "public/_worker.js"
 compatibility_date = "2025-10-01"
 account_id = "7dc7167b7e2e00923bfa7cd697df14e4"
 workers_dev = true
+# Route ispred Pages custom domene: zahtjevi na gis.domovina.ai idu u ovaj
+# Worker, Pages projekt ostaje iza kao rezerva. Povratak na Pages = makni
+# route i `npx wrangler deploy` (ili obriši route u dashboardu).
+routes = [{ pattern = "gis.domovina.ai/*", zone_name = "domovina.ai" }]
 
 [assets]
 directory = "./dist"
@@ -24,3 +28,7 @@ not_found_handling = "single-page-application"
 
 [observability]
 enabled = true
+
+[vars]
+# Worker postavlja X-Runtime: worker — vidi se tko je odgovorio (Pages nema var).
+RUNTIME = "worker"

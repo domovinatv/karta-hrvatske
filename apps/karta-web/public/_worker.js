@@ -173,6 +173,9 @@ function applyCacheHeaders(res, path) {
   } else {
     headers.set("Cache-Control", "public, max-age=60, must-revalidate");
   }
+  // Pages ga na asset odgovorima stavlja sam, Workers assets ne — drži isto
+  // ponašanje na oba runtimea (data/*.geojson s drugih domena).
+  headers.set("Access-Control-Allow-Origin", "*");
   headers.set("X-Content-Type-Options", "nosniff");
   headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
   headers.set("Permissions-Policy", "interest-cohort=()");
@@ -236,79 +239,88 @@ export default {
    * @param {{ ASSETS: { fetch: (req: Request) => Promise<Response> } }} env
    */
   async fetch(request, env) {
-    const url = new URL(request.url);
-    const path = url.pathname;
-
-    // Static assets — anything with a file extension. Cheaper than
-    // path-prefix matching for /data/, /logos/, etc. — ASSETS.fetch
-    // handles MIME types and 404s, we just patch cache headers on top.
-    if (path === "/index.html") {
-      // Service worker precachira ovaj URL kao app shell (navigateFallback).
-      // Mora biti čisti shell bez sadržaja početne, i 200 umjesto redirecta
-      // koji assets daju za /index.html.
-      const shell = await env.ASSETS.fetch(new Request(`${SITE}/`));
-      const headers = new Headers(shell.headers);
-      headers.set("Content-Type", "text/html; charset=utf-8");
-      headers.set("Cache-Control", "public, max-age=60, must-revalidate");
-      return new Response(shell.body, { status: shell.status, headers });
-    }
-    if (/\.\w{1,8}$/.test(path)) {
-      const res = await env.ASSETS.fetch(request);
-      // Pages ASSETS.fetch za NEPOSTOJEĆI path vraća 200 index.html (SPA
-      // not_found_handling) — za file-like path to je otrov: modul dobije
-      // MIME text/html, a edge bi HTML cachirao pod asset URL-om s
-      // immutable headerom (deploy race). Vrati 404 no-store umjesto toga;
-      // klijentski lazyReload tada povuče svježi shell.
-      const ct = res.headers.get("content-type") || "";
-      if (ct.includes("text/html") && !/\.html?$/.test(path)) {
-        return new Response("Not found", {
-          status: 404,
-          headers: { "Cache-Control": "no-store" },
-        });
-      }
-      return applyCacheHeaders(res, path);
-    }
-
-    // Entity routes — OG injection.
-    let m;
-    if ((m = path.match(/^\/klub\/([^/]+)\/?$/))) {
-      const slug = decodeURIComponent(m[1]);
-      const meta = (await loadClubsLookup(env))[slug];
-      if (meta) return serveWithOg(env, request, meta, await entityBody(env, "klub", slug, meta));
-    } else if ((m = path.match(/^\/jls\/([^/]+)\/?$/))) {
-      const slug = decodeURIComponent(m[1]);
-      const meta = (await loadJlsLookup(env))[slug];
-      if (meta) return serveWithOg(env, request, meta, await entityBody(env, "jls", slug, meta));
-    } else if ((m = path.match(/^\/zupanija\/([^/]+)\/?$/))) {
-      const slug = decodeURIComponent(m[1]);
-      const meta = (await loadZupLookup(env))[slug];
-      if (meta) return serveWithOg(env, request, meta, await entityBody(env, "zupanija", slug, meta));
-    } else if ((m = path.match(/^\/poster\/([^/]+)\/?$/))) {
-      // Plakat po gradu se dijeli linkom (WhatsApp) — bez ovoga kartica
-      // pokazuje generički naslov cijele karte, ne grad iz URL-a.
-      const slug = decodeURIComponent(m[1]);
-      const meta = (await loadPosterLookup(env))[slug];
-      if (meta) return serveWithOg(env, request, meta, await entityBody(env, "poster", slug, meta));
-    }
-
-    // SPA fallback — every other path serves index.html with 200 so the
-    // client router can take over. Single-shot Response wrap to avoid
-    // body stream lock issues across two new Response() calls.
-    let indexRes = await env.ASSETS.fetch(new Request(`${SITE}/`));
-    if (path === "/" && indexRes.ok) {
-      const body = await homeBody(env);
-      indexRes = new HTMLRewriter()
-        .on("div#root", { element: (el) => el.setInnerContent(body, { html: true }) })
-        .transform(indexRes);
-    }
-    const headers = new Headers(indexRes.headers);
-    headers.set("Content-Type", "text/html; charset=utf-8");
-    headers.set("Cache-Control", "public, max-age=300, must-revalidate");
-    headers.set("X-Content-Type-Options", "nosniff");
-    headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
-    return new Response(indexRes.body, {
-      status: indexRes.status === 404 ? 200 : indexRes.status,
-      headers,
-    });
+    const res = await handle(request, env);
+    // Tko je odgovorio (Pages ili Worker) dok domena prelazi — wrangler.toml
+    // [vars] RUNTIME postoji samo na Workeru.
+    // try: sirovi ASSETS odgovor (npr. !ok u serveWithOg) ima immutable headere.
+    if (env.RUNTIME) try { res.headers.set("X-Runtime", env.RUNTIME); } catch {}
+    return res;
   },
 };
+
+async function handle(request, env) {
+  const url = new URL(request.url);
+  const path = url.pathname;
+
+  // Static assets — anything with a file extension. Cheaper than
+  // path-prefix matching for /data/, /logos/, etc. — ASSETS.fetch
+  // handles MIME types and 404s, we just patch cache headers on top.
+  if (path === "/index.html") {
+    // Service worker precachira ovaj URL kao app shell (navigateFallback).
+    // Mora biti čisti shell bez sadržaja početne, i 200 umjesto redirecta
+    // koji assets daju za /index.html.
+    const shell = await env.ASSETS.fetch(new Request(`${SITE}/`));
+    const headers = new Headers(shell.headers);
+    headers.set("Content-Type", "text/html; charset=utf-8");
+    headers.set("Cache-Control", "public, max-age=60, must-revalidate");
+    return new Response(shell.body, { status: shell.status, headers });
+  }
+  if (/\.\w{1,8}$/.test(path)) {
+    const res = await env.ASSETS.fetch(request);
+    // Pages ASSETS.fetch za NEPOSTOJEĆI path vraća 200 index.html (SPA
+    // not_found_handling) — za file-like path to je otrov: modul dobije
+    // MIME text/html, a edge bi HTML cachirao pod asset URL-om s
+    // immutable headerom (deploy race). Vrati 404 no-store umjesto toga;
+    // klijentski lazyReload tada povuče svježi shell.
+    const ct = res.headers.get("content-type") || "";
+    if (ct.includes("text/html") && !/\.html?$/.test(path)) {
+      return new Response("Not found", {
+        status: 404,
+        headers: { "Cache-Control": "no-store" },
+      });
+    }
+    return applyCacheHeaders(res, path);
+  }
+
+  // Entity routes — OG injection.
+  let m;
+  if ((m = path.match(/^\/klub\/([^/]+)\/?$/))) {
+    const slug = decodeURIComponent(m[1]);
+    const meta = (await loadClubsLookup(env))[slug];
+    if (meta) return serveWithOg(env, request, meta, await entityBody(env, "klub", slug, meta));
+  } else if ((m = path.match(/^\/jls\/([^/]+)\/?$/))) {
+    const slug = decodeURIComponent(m[1]);
+    const meta = (await loadJlsLookup(env))[slug];
+    if (meta) return serveWithOg(env, request, meta, await entityBody(env, "jls", slug, meta));
+  } else if ((m = path.match(/^\/zupanija\/([^/]+)\/?$/))) {
+    const slug = decodeURIComponent(m[1]);
+    const meta = (await loadZupLookup(env))[slug];
+    if (meta) return serveWithOg(env, request, meta, await entityBody(env, "zupanija", slug, meta));
+  } else if ((m = path.match(/^\/poster\/([^/]+)\/?$/))) {
+    // Plakat po gradu se dijeli linkom (WhatsApp) — bez ovoga kartica
+    // pokazuje generički naslov cijele karte, ne grad iz URL-a.
+    const slug = decodeURIComponent(m[1]);
+    const meta = (await loadPosterLookup(env))[slug];
+    if (meta) return serveWithOg(env, request, meta, await entityBody(env, "poster", slug, meta));
+  }
+
+  // SPA fallback — every other path serves index.html with 200 so the
+  // client router can take over. Single-shot Response wrap to avoid
+  // body stream lock issues across two new Response() calls.
+  let indexRes = await env.ASSETS.fetch(new Request(`${SITE}/`));
+  if (path === "/" && indexRes.ok) {
+    const body = await homeBody(env);
+    indexRes = new HTMLRewriter()
+      .on("div#root", { element: (el) => el.setInnerContent(body, { html: true }) })
+      .transform(indexRes);
+  }
+  const headers = new Headers(indexRes.headers);
+  headers.set("Content-Type", "text/html; charset=utf-8");
+  headers.set("Cache-Control", "public, max-age=300, must-revalidate");
+  headers.set("X-Content-Type-Options", "nosniff");
+  headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
+  return new Response(indexRes.body, {
+    status: indexRes.status === 404 ? 200 : indexRes.status,
+    headers,
+  });
+}

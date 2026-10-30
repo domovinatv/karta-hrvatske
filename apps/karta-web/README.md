@@ -24,7 +24,7 @@ Bazni slojevi (granice, naselja, klubovi, aerodromi) dolaze iz `apps/data-pipeli
 - **react-router-dom v6** za SPA routing + deep links
 - **react-helmet-async** za per-route `<head>` (klijent fallback prije CF Worker injekcije)
 - **vite-plugin-pwa + Workbox** za offline PWA
-- **Cloudflare Pages + Worker** (Advanced Mode) za hosting + OG meta injection
+- **Cloudflare Worker sa static assets** za hosting, OG meta i tekst za crawlere (od 2026-10-30; prije Pages Advanced Mode)
 
 Stack je identičan sibling-u `klubovi.domovina.ai/frontend/` — dijeli infrastrukturu.
 
@@ -45,7 +45,7 @@ npm run dev          # → http://localhost:5174/
 
 ```bash
 npm run sync-data       # 1. data iz Python pipeline-a
-npm run build-lookups   # 2. lookup-{clubs,jls,zupanije}.json za CF Worker
+npm run build-lookups   # 2. lookup-{clubs,jls,zupanije,poster}.json za CF Worker
 npm run build-sitemap   # 3. sitemap.xml + robots.txt (~1500 URL-ova)
 npm run build           # 4. tsc + vite → dist/ (PWA precache)
 ```
@@ -53,28 +53,29 @@ npm run build           # 4. tsc + vite → dist/ (PWA precache)
 ili sve odjednom:
 
 ```bash
-npm run deploy          # chain svega + wrangler pages deploy
+npm run deploy          # chain svega + wrangler deploy (Worker)
 ```
 
-## Deploy (Cloudflare Pages)
+## Deploy (Cloudflare Worker)
 
-Target projekt: **`gis-domovina`** pod D.O.M. accountom (`7dc7167b…df14e4`). Custom domena `gis.domovina.ai` attached u CF dashboardu nakon prvog deploya.
+Worker **`gis-domovina`** pod D.O.M. accountom (`7dc7167b…df14e4`), config u `wrangler.toml`: `main = public/_worker.js`, assets iz `dist/`, route `gis.domovina.ai/*`. Stari Pages projekt istog imena ostaje iza routea kao rezerva. Prijelaz i povratak: [`docs/2026-10-30-pages-u-workers.md`](docs/2026-10-30-pages-u-workers.md).
 
 ```bash
-# Prvi put: kreiraj projekat
-npx wrangler pages project create gis-domovina --production-branch=main
-
-# Deploy
-npm run deploy
+npm run deploy                        # Worker (produkcija)
+DEPLOY_TARGET=pages npm run deploy    # Pages rezerva — na domeni se ne vidi dok route postoji
 ```
 
 `scripts/deploy.sh` lančuje sync-data → build-lookups → build-sitemap → vite build → wrangler. Idempotentno; safe re-run.
 
-**CF Worker contract** (`public/_worker.js`):
-- Pages Advanced Mode — worker hendlira SVE requests
-- HTMLRewriter injektira `<title>` + `<meta og:*>` na `/klub/:slug`, `/jls/:slug`, `/zupanija/:slug` rutama (čita iz lookup JSON-ova)
+**CF Worker contract** (`public/_worker.js`, isti na Workeru i na Pagesu):
+- `run_worker_first` — worker hendlira SVE requests
+- HTMLRewriter injektira `<title>` + `<meta og:*>` na `/klub/:slug`, `/jls/:slug`, `/zupanija/:slug`, `/poster/:slug` (čita iz lookup JSON-ova)
+- Na tim rutama i na `/` ubacuje u `<div id="root">` naslov, opis i poveznice za crawlere bez JS-a; React ga zamijeni pri prvom renderu
+- `/index.html` je čisti shell s 200 (SW ga precachira kao `navigateFallback`), ne redirect
 - SPA fallback: nepoznate path-ove servira `index.html` s 200 (client router preuzima)
-- Cache-Control headeri se postavljaju u workeru (`_headers` ne radi u Advanced Mode)
+- Cache-Control i `Access-Control-Allow-Origin: *` se postavljaju u workeru
+- `X-Runtime: worker` u odgovoru znači da je odgovorio Worker, ne Pages
+- `public/.assetsignore` drži `_worker.js` izvan javnih asseta
 - **NE dodaj `_redirects`** — shadowa `env.ASSETS.fetch()` i razbije OG injection
 
 ## Deep-link rute
