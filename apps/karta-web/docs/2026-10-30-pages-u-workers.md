@@ -61,3 +61,9 @@ Playwrightu: ubačeni `<main>` nestane, karta se nacrta, konzola čista.
 Polja za to dolaze iz `scripts/build-lookups.mjs`: `zupanijaSlug` na JLS-u,
 `city`, `stadium` i `jlsSlug` na klubu. `jlsSlug` je postavljen za 437 od
 1014 klubova, jer je kod ostalih `city` naselje, a ne JLS.
+
+## Vezani dokumenti
+
+- [`2026-08-17-deploy-verifikacija.md`](./2026-08-17-deploy-verifikacija.md) — verifikacija deploya; poglavlje 4 o `sw.js` cacheu i `navigateFallback`
+- Blog post (EN/HR): https://stepanic.domovina.ai/blog/gis-domovina-pages-to-workers
+- Odluka „React SPA ostaje, ne Astro": jedini stvarni dobitak Astra bio je čitljiv HTML za crawlere, a to sad radi worker (poglavlje „Tekst za crawlere" gore). Prepisivanje bi izgubilo montiranu kartu između ruta, uhodan PWA, `useUrlSync` i Playwright pokrivenost.

@@ -177,7 +177,9 @@ U pregledniku, na produkciji:
 // ocekivano: ["activated"], ne []
 ```
 
-### Otvoreno: `sw.js` ide u browser cache na 4 sata
+### `sw.js` je išao u browser cache na 4 sata (riješeno prijelazom na Worker 2026-10-30)
+
+> **Stanje 2026-10-30:** otkako `gis.domovina.ai` poslužuje Worker (route ispred Pagesa), `/sw.js` dolazi s `no-cache, must-revalidate`, kako ga worker postavlja. Popravak 1 ispod više ne treba; uzrok prepisivanja na Pagesu nije utvrđen. Popravak 2 (NetworkFirst) i dalje stoji. Vidi [`2026-10-30-pages-u-workers.md`](./2026-10-30-pages-u-workers.md).
 
 Worker eksplicitno postavlja `no-cache, must-revalidate` za `/sw.js` (`public/_worker.js`, grana za SW skripte), ali produkcija vraća:
 
@@ -189,7 +191,7 @@ cache-control: max-age=14400, must-revalidate
 
 Uz to, i s ispravnim SW-om **prvo učitavanje nakon deploya poslužuje prethodni shell** — `navigateFallback` servira precachirani `index.html`, pa je navigacija uvijek jednu verziju iza. Potvrđeno 2026-08-28: prvo otvaranje `/poster/turopolje` odmah nakon deploya redirectalo je na `/poster/zagreb` (stari registar), drugo je bilo ispravno.
 
-Dva popravka, nijedan još nije napravljen:
+Dva popravka (prvi je od 2026-10-30 suvišan, drugi nije napravljen):
 
 1. **Cache Rule u CF dashboardu** za `/sw.js` i `/workbox-*.js`, da se update uopće otkrije. Jeftinije i važnije.
 2. **NetworkFirst za navigacije** umjesto `navigateFallback` — dokument je 1,8 kB i worker mu ionako daje `max-age=300`. Mijenja PWA offline ponašanje za rute koje korisnik nije posjetio, pa traži zaseban prolaz.
@@ -197,6 +199,8 @@ Dva popravka, nijedan još nije napravljen:
 ---
 
 ## Vezani dokumenti
+
+- [`2026-10-30-pages-u-workers.md`](./2026-10-30-pages-u-workers.md) — prijelaz s Pagesa na Worker, razlike platformi, povratak
 
 - [`2026-08-28-poster-generator.md`](./2026-08-28-poster-generator.md) — generator plakata: registar subjekata, fit imena, izvori za Turopolje
 - [`ui-refactor-plan.md`](./ui-refactor-plan.md) — plan UI refactora u pet faza, dijagnoza i status
