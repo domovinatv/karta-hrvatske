@@ -66,3 +66,28 @@ udruga za poticanje i razvoj IT sektora" (Split), te OIB za CVCA, The geek
 gathering i eStudent. Domene sveučilišta i velikih firmi daju lažne pogotke
 (studentske i sportske udruge dijele domenu), pa domena sama ne vrijedi bez
 sličnosti imena.
+
+## Registar birača — broj birača po adresi (detalj, 30.10.2026.)
+
+- **Izdavač:** Ministarstvo pravosuđa, uprave i digitalne transformacije,
+  licenca Otvorena dozvola, na portalu od 3.9.2021. Snimljena verzija od
+  13.5.2026. (`bb_po_adresi_13_05_2026.csv`).
+- **Format:** CSV, separator `;`, kodiranje **cp1250** (nije UTF-8 — `utf-8`
+  pada na „Č").
+- **Stupci:** `ZUPANIJA_NAZIV; GROP_NAZIV; NASELJE_NAZIV; ULICA_NAZIV; ADR_KBR;
+  ADR_KBR_DODA; ADR_KBR_DODN; BROJ_BIRACA; STATUS`. Nema imena, OIB-a ni
+  datuma rođenja — samo broj birača po adresi.
+- **Brojke:** 1 014 364 adrese (989 279 `VAŽEĆA`, 25 085 `NEVAŽEĆA`),
+  3 600 345 birača. 260 328 adresa ima točno jednog birača, 261 327 točno dva.
+- **Što nije:** popis svih kućnih brojeva. U njemu su samo adrese na kojima je
+  prijavljen barem jedan birač — poslovni prostori, vikendice i prazne kuće
+  nisu.
+
+**Privatnost.** Skup je zbirni, ali adresa s jednim biračem kaže da na toj
+kućnoj adresi živi jedna punoljetna osoba s biračkim pravom; spojeno s
+imenikom, katastrom ili društvenim mrežama to postaje podatak o kućanstvu.
+Je li to osobni podatak u smislu GDPR-a (prepoznatljiva osoba), procjena je
+AZOP-a; pravna osnova objave nije provjerena. Za karti je pravilo: **nikad
+broj birača po kućnom broju** (ni popup, ni toplinska karta na razini
+zgrade). Smije: provjera postoji li adresa i je li stambena (validacija
+geokodera), i zbirovi po naselju ili mjesnom odboru.

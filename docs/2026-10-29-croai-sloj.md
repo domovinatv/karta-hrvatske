@@ -198,6 +198,10 @@ Stanje: **565 od 565** na karti, 156 ručnih unosa u `croai_overrides.json`.
 
 ## Vezani dokumenti
 
+- `docs/2026-10-30-data-gov-hr-pregled.md` — data.gov.hr katalog, Registar udruga/zaklada, Registar birača
+- `apps/data-pipeline/scripts/croai_backfill/README.md` — jednokratne skripte backfilla
+- `docs/2026-10-30-croai-istrazivanje-antigravity.md`, `…-2.md` — agy promptovi
+
 - `apps/data-pipeline/scripts/33_fetch_ppi_privatni.py`: isti obrazac
   „identitet je OIB“ za privatni ekosustav.
 - `docs/2026-09-06-zagrebacki-otvoreni-podaci.md`
