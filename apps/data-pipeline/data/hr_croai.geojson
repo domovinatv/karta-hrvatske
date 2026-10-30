@@ -15,8 +15,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     16.014637,
+     45.809312
     ]
    },
    "properties": {
@@ -38,7 +38,7 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 63,
     "fina_url": "https://infobiz.fina.hr/tvrtka/all-eyes-on-screens-d-o-o/OIB-80736801367",
-    "geo_source": "naselje",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -50,8 +50,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.995362,
-     45.794921
+     15.995461,
+     45.795027
     ]
    },
    "properties": {
@@ -73,7 +73,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 5,
     "fina_url": "https://infobiz.fina.hr/tvrtka/binx-games-d-o-o/OIB-13082110576",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -120,8 +120,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.999123,
-     45.738768
+     15.999224,
+     45.73897
     ]
    },
    "properties": {
@@ -143,7 +143,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 3,
     "fina_url": "https://infobiz.fina.hr/tvrtka/cloudonia-d-o-o/OIB-69464212320",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -155,8 +155,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.237516,
-     44.121986
+     15.236328,
+     44.121429
     ]
    },
    "properties": {
@@ -178,7 +178,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 55,
     "fina_url": "https://infobiz.fina.hr/tvrtka/cognism-d-o-o/OIB-72843059121",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -190,8 +190,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.421046,
-     46.403208
+     16.420209,
+     46.407452
     ]
    },
    "properties": {
@@ -213,7 +213,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 3,
     "fina_url": "https://infobiz.fina.hr/tvrtka/digital-media-d-o-o/OIB-37059015660",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=6345473549722248484&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -260,8 +260,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     15.994993,
+     45.814541
     ]
    },
    "properties": {
@@ -283,8 +283,8 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 3,
     "fina_url": "https://infobiz.fina.hr/tvrtka/briefing-mediji-d-o-o/OIB-05129429603",
-    "geo_source": "naselje",
-    "provjera": "google-sukob",
+    "geo_source": "google-geokod",
+    "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=13731235980921159106&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
    }
@@ -295,8 +295,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.478537,
-     43.515718
+     16.447442,
+     43.511559
     ]
    },
    "properties": {
@@ -318,7 +318,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 0,
     "fina_url": "https://infobiz.fina.hr/tvrtka/marteching-solutions-d-o-o/OIB-01639965206",
-    "geo_source": "rucno",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": "sjedište: https://marteching.eu/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
@@ -358,8 +358,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.012453,
-     45.797071
+     16.035262,
+     45.795579
     ]
    },
    "properties": {
@@ -381,7 +381,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/peekator-d-o-o/OIB-35737697564",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -393,8 +393,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.978981,
-     45.776569
+     15.977027,
+     45.778179
     ]
    },
    "properties": {
@@ -416,7 +416,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/recogno-d-o-o/OIB-41559546689",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=15392250847335931980&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -463,8 +463,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.111419,
-     43.489437
+     16.109976,
+     43.490186
     ]
    },
    "properties": {
@@ -486,7 +486,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 50,
     "fina_url": "https://infobiz.fina.hr/tvrtka/uber-d-o-o/OIB-88526453580",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=4273726600451096738&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -498,8 +498,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     13.748749,
-     45.341896
+     15.911119,
+     45.795546
     ]
    },
    "properties": {
@@ -521,8 +521,8 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 217,
     "fina_url": "https://infobiz.fina.hr/tvrtka/sofa-it-d-o-o/OIB-96366258208",
-    "geo_source": "naselje",
-    "provjera": "google-sukob",
+    "geo_source": "google-geokod",
+    "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=7273668519626803969&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
    }
@@ -533,8 +533,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     15.910581,
+     45.790667
     ]
    },
    "properties": {
@@ -556,7 +556,7 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 337,
     "fina_url": "https://infobiz.fina.hr/tvrtka/happening-d-o-o/OIB-32669869063",
-    "geo_source": "naselje",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -568,8 +568,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.999649,
-     45.74627
+     15.999841,
+     45.745957
     ]
    },
    "properties": {
@@ -591,7 +591,7 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/tvrtka/televend-d-o-o/OIB-56713858511",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=6017053170201085041&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -603,8 +603,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     15.960798,
+     45.800894
     ]
    },
    "properties": {
@@ -626,7 +626,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 6,
     "fina_url": "https://infobiz.fina.hr/tvrtka/tvbeat-j-d-o-o/OIB-22020304358",
-    "geo_source": "naselje",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=4473180023549520493&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -638,8 +638,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     15.994929,
+     45.830069
     ]
    },
    "properties": {
@@ -661,7 +661,7 @@
     "fina_velicina": null,
     "fina_zaposleni": 0,
     "fina_url": "https://infobiz.fina.hr/tvrtka/you-intelligence-d-o-o/OIB-13884382664",
-    "geo_source": "naselje",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -673,8 +673,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.920626,
-     45.760371
+     15.920436,
+     45.760315
     ]
    },
    "properties": {
@@ -696,7 +696,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 5,
     "fina_url": "https://infobiz.fina.hr/tvrtka/funestra-d-o-o/OIB-87939378078",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=14081964654247836389&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -736,8 +736,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     16.011035,
+     45.83503
     ]
    },
    "properties": {
@@ -759,7 +759,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 0,
     "fina_url": "https://infobiz.fina.hr/tvrtka/new-machines-d-o-o/OIB-51727369841",
-    "geo_source": "naselje",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -806,8 +806,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.907126,
-     46.033234
+     15.906931,
+     46.033277
     ]
    },
    "properties": {
@@ -829,7 +829,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 6,
     "fina_url": "https://infobiz.fina.hr/tvrtka/top-digital-d-o-o/OIB-72317551155",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=15285173251210309183&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -962,7 +962,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/veemee-d-o-o/OIB-02837824881",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=15705445002849232405&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -997,7 +997,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 3,
     "fina_url": "https://infobiz.fina.hr/tvrtka/waveform-j-d-o-o/OIB-14335928185",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -1044,8 +1044,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     14.442513,
-     45.330473
+     14.46785,
+     45.32115
     ]
    },
    "properties": {
@@ -1067,7 +1067,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 3,
     "fina_url": "https://infobiz.fina.hr/tvrtka/altacon-d-o-o/OIB-93017443977",
-    "geo_source": "rucno",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": "https://maps.google.com/?cid=6304554271940774510&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": "sjedište: https://www.climatig.com/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
@@ -1079,8 +1079,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.952979,
-     45.793277
+     15.952355,
+     45.793815
     ]
    },
    "properties": {
@@ -1102,7 +1102,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 8,
     "fina_url": "https://infobiz.fina.hr/tvrtka/green-energy-pal-d-o-o/OIB-73177945676",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -1172,7 +1172,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 57,
     "fina_url": "https://infobiz.fina.hr/tvrtka/hidrocibalae-d-o-o/OIB-38874770240",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=2377239350700192974&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -1338,8 +1338,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     15.95989,
+     45.799514
     ]
    },
    "properties": {
@@ -1361,8 +1361,8 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 53,
     "fina_url": "https://infobiz.fina.hr/tvrtka/bulb-d-o-o/OIB-84622104798",
-    "geo_source": "naselje",
-    "provjera": "google-sukob",
+    "geo_source": "google-geokod",
+    "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=9657596189559244955&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
    }
@@ -1396,7 +1396,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/mastroy-d-o-o/OIB-29706761450",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=9369559400023654303&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -1408,8 +1408,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     16.034511,
+     45.792448
     ]
    },
    "properties": {
@@ -1431,7 +1431,7 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": 210,
     "fina_url": "https://infobiz.fina.hr/tvrtka/dok-ing-d-o-o/OIB-39982657045",
-    "geo_source": "naselje",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -1541,8 +1541,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     16.059062,
+     45.777395
     ]
    },
    "properties": {
@@ -1564,8 +1564,8 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 9,
     "fina_url": "https://infobiz.fina.hr/tvrtka/proton-el-d-o-o/OIB-79590554595",
-    "geo_source": "naselje",
-    "provjera": "google-sukob",
+    "geo_source": "google-geokod",
+    "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=11111067047876791541&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
    }
@@ -1576,8 +1576,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     15.923418,
+     45.786035
     ]
    },
    "properties": {
@@ -1599,7 +1599,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 15,
     "fina_url": "https://infobiz.fina.hr/tvrtka/robotic-process-automation-d-o-o/OIB-04678927848",
-    "geo_source": "naselje",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=11232512656759464308&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -1611,8 +1611,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.964984,
-     45.790487
+     15.964975,
+     45.790343
     ]
    },
    "properties": {
@@ -1634,7 +1634,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 13,
     "fina_url": "https://infobiz.fina.hr/tvrtka/visor-d-o-o/OIB-87108765199",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=14681494283369246797&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -1779,8 +1779,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.005137,
-     45.758158
+     16.008325,
+     45.762483
     ]
    },
    "properties": {
@@ -1802,7 +1802,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 7,
     "fina_url": "https://infobiz.fina.hr/tvrtka/erato-inteligentni-softver-d-o-o/OIB-05079664228",
-    "geo_source": "rucno",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": "sjedište: https://erato.hr/ (Antigravity/Gemini, provjera sudreg sjedište), 2026-10-30"
@@ -1912,8 +1912,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     15.994993,
+     45.814541
     ]
    },
    "properties": {
@@ -1935,7 +1935,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 4,
     "fina_url": "https://infobiz.fina.hr/tvrtka/newton-technologies-adria-d-o-o/OIB-11678791686",
-    "geo_source": "naselje",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -1947,8 +1947,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     15.961007,
+     45.8125
     ]
    },
    "properties": {
@@ -1970,7 +1970,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 3,
     "fina_url": "https://infobiz.fina.hr/tvrtka/sendbee-d-o-o/OIB-15025865688",
-    "geo_source": "naselje",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -2045,8 +2045,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.981899,
-     45.86012
+     15.982214,
+     45.860347
     ]
    },
    "properties": {
@@ -2068,7 +2068,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 2,
     "fina_url": "https://infobiz.fina.hr/tvrtka/3topia-d-o-o/OIB-72262528289",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=4517467507288514857&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -2080,8 +2080,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.003586,
-     45.803078
+     16.003593,
+     45.803444
     ]
    },
    "properties": {
@@ -2103,7 +2103,7 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 165,
     "fina_url": "https://infobiz.fina.hr/tvrtka/reversinglabs-d-o-o/OIB-40902945776",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=5617309636790904997&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -2115,8 +2115,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     16.027642,
+     45.815859
     ]
    },
    "properties": {
@@ -2138,7 +2138,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 0,
     "fina_url": "https://infobiz.fina.hr/tvrtka/con4com-usluge-d-o-o/OIB-87120797438",
-    "geo_source": "naselje",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -2150,8 +2150,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.998302,
-     45.810051
+     15.998378,
+     45.810068
     ]
    },
    "properties": {
@@ -2173,7 +2173,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 30,
     "fina_url": "https://infobiz.fina.hr/tvrtka/alfatec-group-d-o-o/OIB-28951396962",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=8915785657265407736&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -2208,7 +2208,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 25,
     "fina_url": "https://infobiz.fina.hr/tvrtka/atomic-intelligence-d-o-o/OIB-18242987707",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -2220,8 +2220,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.994467,
-     45.811025
+     15.994542,
+     45.81111
     ]
    },
    "properties": {
@@ -2243,7 +2243,7 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/tvrtka/beyond-merrity-j-d-o-o/OIB-64363893908",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -2255,8 +2255,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.980182,
-     45.763296
+     15.979895,
+     45.763236
     ]
    },
    "properties": {
@@ -2278,7 +2278,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 26,
     "fina_url": "https://infobiz.fina.hr/tvrtka/comminus-d-o-o/OIB-06217151753",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=6132182342781162458&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -2290,8 +2290,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.999281,
-     45.794094
+     15.999332,
+     45.794077
     ]
    },
    "properties": {
@@ -2313,7 +2313,7 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 190,
     "fina_url": "https://infobiz.fina.hr/tvrtka/croz-d-o-o/OIB-86132384544",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=3457118024734007737&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -2353,8 +2353,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.934747,
-     45.801587
+     15.933514,
+     45.80162
     ]
    },
    "properties": {
@@ -2376,7 +2376,7 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 126,
     "fina_url": "https://infobiz.fina.hr/tvrtka/neos-d-o-o/OIB-77018181695",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=13771514375934094427&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -2423,8 +2423,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.980735,
-     45.806341
+     15.980777,
+     45.806281
     ]
    },
    "properties": {
@@ -2446,7 +2446,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 4,
     "fina_url": "https://infobiz.fina.hr/tvrtka/qualia-poslovna-rjesenja-d-o-o/OIB-39031322823",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=7934824015194939527&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -2458,8 +2458,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.720482,
-     45.805026
+     15.721704,
+     45.800433
     ]
    },
    "properties": {
@@ -2481,7 +2481,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 3,
     "fina_url": "https://infobiz.fina.hr/tvrtka/sparky-solution-d-o-o/OIB-75796160484",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -2493,8 +2493,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.969575,
-     45.793748
+     15.96985,
+     45.793935
     ]
    },
    "properties": {
@@ -2516,7 +2516,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 70,
     "fina_url": "https://infobiz.fina.hr/tvrtka/syntio-d-o-o/OIB-88942753905",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=7559344992249531616&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -2528,8 +2528,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     15.946243,
+     45.793463
     ]
    },
    "properties": {
@@ -2551,8 +2551,8 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 46,
     "fina_url": "https://infobiz.fina.hr/tvrtka/true-north-d-o-o/OIB-44581061901",
-    "geo_source": "naselje",
-    "provjera": "google-sukob",
+    "geo_source": "google-geokod",
+    "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=17982693469514273407&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
    }
@@ -2563,8 +2563,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.983469,
-     45.759393
+     15.982921,
+     45.759371
     ]
    },
    "properties": {
@@ -2586,7 +2586,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 25,
     "fina_url": "https://infobiz.fina.hr/tvrtka/agilos-it-d-o-o/OIB-32160662087",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=14083226656194449870&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -2598,8 +2598,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.999226,
-     45.802529
+     15.999304,
+     45.802533
     ]
    },
    "properties": {
@@ -2621,7 +2621,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 19,
     "fina_url": "https://infobiz.fina.hr/tvrtka/fistnet-d-o-o/OIB-14549555348",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -2633,8 +2633,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.948773,
-     45.81684
+     15.947471,
+     45.825892
     ]
    },
    "properties": {
@@ -2656,7 +2656,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 6,
     "fina_url": "https://infobiz.fina.hr/tvrtka/suprabit-d-o-o/OIB-94738438819",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=14389657166579157797&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -2668,8 +2668,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.972227,
-     45.777569
+     15.976338,
+     45.776415
     ]
    },
    "properties": {
@@ -2691,7 +2691,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 2,
     "fina_url": "https://infobiz.fina.hr/tvrtka/inventa-ir2-d-o-o/OIB-50027210968",
-    "geo_source": "rucno",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": "sjedište: https://zealagency.co/terms-of-use (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
@@ -2738,8 +2738,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     15.95899,
+     45.765933
     ]
    },
    "properties": {
@@ -2761,7 +2761,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 7,
     "fina_url": "https://infobiz.fina.hr/tvrtka/appliment-d-o-o/OIB-32696391835",
-    "geo_source": "naselje",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=2457041330830063098&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -2796,7 +2796,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 14,
     "fina_url": "https://infobiz.fina.hr/tvrtka/strategio-d-o-o/OIB-11783260615",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=13500640016119166384&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -2836,8 +2836,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     14.413079,
-     45.345819
+     14.482986,
+     45.322726
     ]
    },
    "properties": {
@@ -2859,7 +2859,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 9,
     "fina_url": "https://infobiz.fina.hr/tvrtka/e-glas-d-o-o/OIB-01085855307",
-    "geo_source": "naselje",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=14747117405859389258&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -2871,8 +2871,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     14.467907,
-     45.327112
+     14.467849,
+     45.327225
     ]
    },
    "properties": {
@@ -2894,7 +2894,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 7,
     "fina_url": "https://infobiz.fina.hr/tvrtka/stemi-d-o-o/OIB-91713184849",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=2327671759062034069&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -2964,7 +2964,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 3,
     "fina_url": "https://infobiz.fina.hr/tvrtka/omolab-komunikacije-d-o-o/OIB-54157626144",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=17347449576599905484&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -2976,8 +2976,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.012455,
-     45.802281
+     16.012844,
+     45.80225
     ]
    },
    "properties": {
@@ -2999,7 +2999,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 19,
     "fina_url": "https://infobiz.fina.hr/tvrtka/abc-tech-zagreb-d-o-o/OIB-05293531061",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=17803319726144465167&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -3011,8 +3011,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.008532,
-     45.802916
+     16.008747,
+     45.80282
     ]
    },
    "properties": {
@@ -3034,7 +3034,7 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": 121,
     "fina_url": "https://infobiz.fina.hr/tvrtka/aircash-d-o-o/OIB-99833713101",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=18039361693022742934&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -3137,8 +3137,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.965869,
-     45.79528
+     15.966229,
+     45.795394
     ]
    },
    "properties": {
@@ -3160,7 +3160,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 2,
     "fina_url": "https://infobiz.fina.hr/tvrtka/blocksize-d-o-o/OIB-87772227261",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -3265,7 +3265,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 12,
     "fina_url": "https://infobiz.fina.hr/tvrtka/oradian-d-o-o/OIB-98019965582",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=3429769023168119944&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -3277,8 +3277,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     15.986095,
+     45.779093
     ]
    },
    "properties": {
@@ -3300,7 +3300,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/pinkdroids-d-o-o/OIB-08652241354",
-    "geo_source": "naselje",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -3347,8 +3347,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.915118,
-     45.79184
+     15.909424,
+     45.792485
     ]
    },
    "properties": {
@@ -3370,7 +3370,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 4,
     "fina_url": "https://infobiz.fina.hr/tvrtka/vis-solutions-d-o-o/OIB-55893106593",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -3515,8 +3515,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     18.68992,
-     45.548531
+     18.688922,
+     45.547831
     ]
    },
    "properties": {
@@ -3538,7 +3538,7 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 155,
     "fina_url": "https://infobiz.fina.hr/tvrtka/mono-d-o-o/OIB-99545162665",
-    "geo_source": "google-adresa",
+    "geo_source": "google-ime",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=4700177947399012376&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -3550,8 +3550,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.969575,
-     45.793748
+     15.96985,
+     45.793935
     ]
    },
    "properties": {
@@ -3573,7 +3573,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 19,
     "fina_url": "https://infobiz.fina.hr/tvrtka/ronna-medical-d-o-o/OIB-75065707106",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=12161304367916566671&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -3585,8 +3585,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.000508,
-     45.807304
+     15.999935,
+     45.807627
     ]
    },
    "properties": {
@@ -3608,7 +3608,7 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 62,
     "fina_url": "https://infobiz.fina.hr/tvrtka/shimadzu-d-o-o/OIB-16214531266",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -3690,8 +3690,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.838325,
-     46.093242
+     15.838079,
+     46.093464
     ]
    },
    "properties": {
@@ -3713,7 +3713,7 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 284,
     "fina_url": "https://infobiz.fina.hr/tvrtka/magdalena/OIB-51835157380",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=17520454159364690529&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -3725,8 +3725,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.96508,
-     45.796323
+     15.965084,
+     45.796271
     ]
    },
    "properties": {
@@ -3748,7 +3748,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/umo-neuroscience-d-o-o/OIB-07829084025",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -3760,8 +3760,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     16.046042,
+     45.807059
     ]
    },
    "properties": {
@@ -3783,7 +3783,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 2,
     "fina_url": "https://infobiz.fina.hr/tvrtka/digicyte-digitalne-tehnologije-d-o-o/OIB-81391694106",
-    "geo_source": "naselje",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -3823,8 +3823,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.946057,
-     45.774817
+     15.945764,
+     45.774681
     ]
    },
    "properties": {
@@ -3846,7 +3846,7 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/tvrtka/sanitas-analytica-j-d-o-o/OIB-45471124192",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -3893,8 +3893,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     15.929381,
+     45.793966
     ]
    },
    "properties": {
@@ -3916,8 +3916,8 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 18,
     "fina_url": "https://infobiz.fina.hr/tvrtka/insky-solutions-d-o-o/OIB-33138362623",
-    "geo_source": "naselje",
-    "provjera": "google-sukob",
+    "geo_source": "google-geokod",
+    "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=16977587071794533091&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
    }
@@ -3928,8 +3928,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     13.607424,
-     45.22837
+     13.628694,
+     45.224398
     ]
    },
    "properties": {
@@ -3951,8 +3951,8 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 24,
     "fina_url": "https://infobiz.fina.hr/tvrtka/infosit-d-o-o/OIB-13375007367",
-    "geo_source": "google-adresa",
-    "provjera": "google-potvrda",
+    "geo_source": "google-geokod",
+    "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=11812922677541229207&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
    }
@@ -4089,8 +4089,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.9889,
-     45.803273
+     15.988772,
+     45.803337
     ]
    },
    "properties": {
@@ -4112,7 +4112,7 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 83,
     "fina_url": "https://infobiz.fina.hr/tvrtka/alma-career-croatia-d-o-o/OIB-14273924910",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -4124,8 +4124,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.99724,
-     45.808894
+     15.997282,
+     45.80885
     ]
    },
    "properties": {
@@ -4147,7 +4147,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 8,
     "fina_url": "https://infobiz.fina.hr/tvrtka/adoptotech-d-o-o/OIB-57168930727",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=6394716922527213911&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -4159,8 +4159,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.066297,
-     45.827425
+     16.066158,
+     45.827736
     ]
    },
    "properties": {
@@ -4182,7 +4182,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 4,
     "fina_url": "https://infobiz.fina.hr/tvrtka/testdome-d-o-o/OIB-72303741144",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -4194,8 +4194,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.002691,
-     45.795208
+     16.004238,
+     45.795652
     ]
    },
    "properties": {
@@ -4217,7 +4217,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 5,
     "fina_url": "https://infobiz.fina.hr/tvrtka/ding-applications-d-o-o/OIB-52935850171",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=11159655937362056111&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -4229,8 +4229,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.410299,
-     45.883344
+     16.410181,
+     45.883323
     ]
    },
    "properties": {
@@ -4252,7 +4252,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 23,
     "fina_url": "https://infobiz.fina.hr/tvrtka/aether-signum-d-o-o/OIB-20089061095",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=12046733802792980832&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -4264,8 +4264,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     17.157179,
-     45.41211
+     17.155722,
+     45.412207
     ]
    },
    "properties": {
@@ -4287,7 +4287,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 3,
     "fina_url": "https://infobiz.fina.hr/tvrtka/ai-power-d-o-o/OIB-81627436690",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -4299,8 +4299,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.909771,
-     45.794274
+     15.909965,
+     45.794347
     ]
    },
    "properties": {
@@ -4322,7 +4322,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 9,
     "fina_url": "https://infobiz.fina.hr/tvrtka/citus-d-o-o/OIB-64959301921",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -4334,8 +4334,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     16.02757,
+     45.855916
     ]
    },
    "properties": {
@@ -4357,7 +4357,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 17,
     "fina_url": "https://infobiz.fina.hr/tvrtka/delta-x-d-o-o/OIB-47614915143",
-    "geo_source": "naselje",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=5585830512121639559&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -4397,8 +4397,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     18.013491,
-     45.16516
+     18.015871,
+     45.164481
     ]
    },
    "properties": {
@@ -4420,7 +4420,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 16,
     "fina_url": "https://infobiz.fina.hr/tvrtka/inin-informaticki-inzenjering-d-o-o/OIB-52909770220",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=12198541118117649995&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -4432,8 +4432,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.984915,
-     45.812958
+     15.985129,
+     45.813227
     ]
    },
    "properties": {
@@ -4455,7 +4455,7 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 95,
     "fina_url": "https://infobiz.fina.hr/tvrtka/microblink-d-o-o/OIB-21173725829",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=10802976926519779240&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -4490,7 +4490,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/piculjan-technologies-d-o-o/OIB-60438620418",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -4502,8 +4502,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     18.404515,
-     45.685661
+     18.407121,
+     45.686246
     ]
    },
    "properties": {
@@ -4537,8 +4537,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.011423,
-     45.797037
+     16.011683,
+     45.797103
     ]
    },
    "properties": {
@@ -4560,7 +4560,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 4,
     "fina_url": "https://infobiz.fina.hr/tvrtka/redai-solutions-d-o-o/OIB-62203975264",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=1037356732741708517&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -4572,8 +4572,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.006162,
-     45.78563
+     16.006811,
+     45.785357
     ]
    },
    "properties": {
@@ -4595,7 +4595,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 3,
     "fina_url": "https://infobiz.fina.hr/tvrtka/subpixel-d-o-o/OIB-70828559078",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=9065587574562302137&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -4607,8 +4607,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     15.943985,
+     45.788474
     ]
    },
    "properties": {
@@ -4630,7 +4630,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 13,
     "fina_url": "https://infobiz.fina.hr/tvrtka/velebit-umjetna-inteligencija-d-o-o/OIB-71703116019",
-    "geo_source": "naselje",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -4642,8 +4642,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.970086,
-     45.79847
+     15.970068,
+     45.798691
     ]
    },
    "properties": {
@@ -4665,7 +4665,7 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 148,
     "fina_url": "https://infobiz.fina.hr/tvrtka/visage-technologies-d-o-o/OIB-11883765066",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=5848485528110363853&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -4705,8 +4705,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     18.020382,
-     45.151984
+     18.042724,
+     45.166011
     ]
    },
    "properties": {
@@ -4728,8 +4728,8 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 4,
     "fina_url": "https://infobiz.fina.hr/tvrtka/brodbot-d-o-o/OIB-02054488318",
-    "geo_source": "google-adresa",
-    "provjera": "google-potvrda",
+    "geo_source": "google-geokod",
+    "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=5790435676195832709&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
    }
@@ -4775,8 +4775,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.45854,
-     43.503802
+     16.438438,
+     43.510076
     ]
    },
    "properties": {
@@ -4810,8 +4810,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.912087,
-     45.796904
+     15.911911,
+     45.796702
     ]
    },
    "properties": {
@@ -4833,7 +4833,7 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 122,
     "fina_url": "https://infobiz.fina.hr/tvrtka/porsche-ebike-performance-d-o-o/OIB-03627403593",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=5582931194398721865&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -4880,8 +4880,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.497945,
-     43.525864
+     16.49756,
+     43.525553
     ]
    },
    "properties": {
@@ -4903,7 +4903,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 20,
     "fina_url": "https://infobiz.fina.hr/tvrtka/parklio-d-o-o/OIB-60755958894",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=4290809760433246700&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -4950,8 +4950,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.970761,
-     45.834851
+     16.007246,
+     45.834994
     ]
    },
    "properties": {
@@ -4973,7 +4973,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/zebra-cross-j-d-o-o/OIB-47969005799",
-    "geo_source": "rucno",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": "sjedište: http://www.zebracross.hr/ (Antigravity/Gemini, provjera sudreg sjedište), 2026-10-30"
@@ -5048,8 +5048,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.957033,
-     45.808166
+     15.957085,
+     45.808103
     ]
    },
    "properties": {
@@ -5071,7 +5071,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 2,
     "fina_url": "https://infobiz.fina.hr/tvrtka/make-it-easy-d-o-o/OIB-36694319971",
-    "geo_source": "dgu-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -5230,8 +5230,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.969413,
-     45.792436
+     15.969644,
+     45.792319
     ]
    },
    "properties": {
@@ -5253,7 +5253,7 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/proracun/srce/OIB-34016189309",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=16085340664821687391&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -5300,8 +5300,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962629,
-     45.809099
+     15.962553,
+     45.808759
     ]
    },
    "properties": {
@@ -5323,7 +5323,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 10,
     "fina_url": "https://infobiz.fina.hr/tvrtka/vsite/OIB-28017824635",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -5335,8 +5335,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     18.684456,
-     45.558391
+     18.684006,
+     45.557858
     ]
    },
    "properties": {
@@ -5358,7 +5358,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 4,
     "fina_url": "https://infobiz.fina.hr/tvrtka/osjecka-radionica-kvalitetnih-aplikacija-d-o-o-za-racunalne-aktivnosti-i-trgovin/OIB-77396594560",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=2804950672331978897&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -5426,8 +5426,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     15.892514,
+     45.804383
     ]
    },
    "properties": {
@@ -5449,8 +5449,8 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 6,
     "fina_url": "https://infobiz.fina.hr/tvrtka/aisoft-technology-d-o-o/OIB-19685905917",
-    "geo_source": "naselje",
-    "provjera": "google-sukob",
+    "geo_source": "google-geokod",
+    "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=684826855793028821&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
    }
@@ -5461,8 +5461,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     18.671786,
-     45.555708
+     18.671767,
+     45.555699
     ]
    },
    "properties": {
@@ -5484,7 +5484,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 72,
     "fina_url": "https://infobiz.fina.hr/tvrtka/barrage-d-o-o/OIB-63896222880",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=2574852334548955982&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -5496,8 +5496,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.9889,
-     45.803273
+     15.988772,
+     45.803337
     ]
    },
    "properties": {
@@ -5519,7 +5519,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 70,
     "fina_url": "https://infobiz.fina.hr/tvrtka/be-terna-d-o-o/OIB-41289820841",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=12290638368289809891&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -5531,8 +5531,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     16.00358,
+     45.827048
     ]
    },
    "properties": {
@@ -5554,7 +5554,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 5,
     "fina_url": "https://infobiz.fina.hr/tvrtka/codebooq-d-o-o/OIB-37552301313",
-    "geo_source": "naselje",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=1659784058732112866&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -5601,8 +5601,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.558492,
-     45.462089
+     15.558706,
+     45.462041
     ]
    },
    "properties": {
@@ -5624,7 +5624,7 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 202,
     "fina_url": "https://infobiz.fina.hr/tvrtka/infinum-d-o-o/OIB-97147456048",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=413287550740475189&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -5636,8 +5636,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     15.90534,
+     45.83361
     ]
    },
    "properties": {
@@ -5659,8 +5659,8 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/iteo-expert-ai-d-o-o/OIB-22697605551",
-    "geo_source": "naselje",
-    "provjera": "google-sukob",
+    "geo_source": "google-geokod",
+    "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=2955790851897835694&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
    }
@@ -5694,7 +5694,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 2,
     "fina_url": "https://infobiz.fina.hr/tvrtka/logit-internet-usluge-d-o-o/OIB-81592331325",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -5706,8 +5706,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.999123,
-     45.738768
+     15.999224,
+     45.73897
     ]
    },
    "properties": {
@@ -5729,7 +5729,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/megatrend-poslovna-rjesenja-d-o-o/OIB-94495978018",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=15411239274126969406&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -5741,8 +5741,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.957932,
-     45.792741
+     15.958075,
+     45.792796
     ]
    },
    "properties": {
@@ -5764,7 +5764,7 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 54,
     "fina_url": "https://infobiz.fina.hr/tvrtka/multicom-d-o-o/OIB-02956250698",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=11465707418129469557&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -5804,8 +5804,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     16.039026,
+     45.795447
     ]
    },
    "properties": {
@@ -5827,8 +5827,8 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": 130,
     "fina_url": "https://infobiz.fina.hr/tvrtka/storm-computers-d-o-o/OIB-20142998436",
-    "geo_source": "naselje",
-    "provjera": "google-sukob",
+    "geo_source": "google-geokod",
+    "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=4461797197936733700&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
    }
@@ -5839,8 +5839,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.001719,
-     45.811051
+     16.001998,
+     45.810828
     ]
    },
    "properties": {
@@ -5862,7 +5862,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 77,
     "fina_url": "https://infobiz.fina.hr/tvrtka/tis-grupa-d-o-o/OIB-62434408100",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=10730886655505314572&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -5874,8 +5874,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.980966,
-     45.759333
+     15.982808,
+     45.760237
     ]
    },
    "properties": {
@@ -5897,7 +5897,7 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 111,
     "fina_url": "https://infobiz.fina.hr/tvrtka/njuskalo-d-o-o/OIB-94718723416",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -5965,8 +5965,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.912087,
-     45.796904
+     15.911911,
+     45.796702
     ]
    },
    "properties": {
@@ -5988,7 +5988,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 42,
     "fina_url": "https://infobiz.fina.hr/tvrtka/hivetech-d-o-o/OIB-25454144336",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -6000,8 +6000,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     15.953278,
+     45.806978
     ]
    },
    "properties": {
@@ -6023,7 +6023,7 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 95,
     "fina_url": "https://infobiz.fina.hr/tvrtka/infodom-d-o-o/OIB-99054430142",
-    "geo_source": "naselje",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -6035,8 +6035,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.990869,
-     45.795931
+     15.99067,
+     45.795869
     ]
    },
    "properties": {
@@ -6058,7 +6058,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 61,
     "fina_url": "https://infobiz.fina.hr/tvrtka/serengeti-d-o-o/OIB-80860195039",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=17811174187746586118&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -6105,8 +6105,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     15.946442,
+     45.803648
     ]
    },
    "properties": {
@@ -6128,8 +6128,8 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": 2683,
     "fina_url": "https://infobiz.fina.hr/tvrtka/ericsson-nikola-tesla-d-d/OIB-84214771175",
-    "geo_source": "naselje",
-    "provjera": "google-sukob",
+    "geo_source": "google-geokod",
+    "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=13988612669235880222&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
    }
@@ -6175,8 +6175,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     15.953411,
+     45.792951
     ]
    },
    "properties": {
@@ -6198,7 +6198,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 13,
     "fina_url": "https://infobiz.fina.hr/tvrtka/software-sauna-d-o-o/OIB-42941941828",
-    "geo_source": "naselje",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=17438390352978836372&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -6210,8 +6210,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.969951,
-     45.792932
+     15.968762,
+     45.793313
     ]
    },
    "properties": {
@@ -6233,7 +6233,7 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": 250,
     "fina_url": "https://infobiz.fina.hr/tvrtka/in2-d-o-o/OIB-68195665956",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -6245,8 +6245,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.994418,
-     45.747922
+     15.994094,
+     45.748274
     ]
    },
    "properties": {
@@ -6268,7 +6268,7 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": 458,
     "fina_url": "https://infobiz.fina.hr/tvrtka/king-ict-d-o-o/OIB-67001695549",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -6280,8 +6280,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     15.915026,
+     45.788132
     ]
    },
    "properties": {
@@ -6303,7 +6303,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 3,
     "fina_url": "https://infobiz.fina.hr/tvrtka/hashcode-d-o-o/OIB-49637449593",
-    "geo_source": "naselje",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=12806370751179658536&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -6315,8 +6315,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     18.717828,
-     45.549248
+     18.641009,
+     45.566639
     ]
    },
    "properties": {
@@ -6338,8 +6338,8 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 2,
     "fina_url": "https://infobiz.fina.hr/tvrtka/em2-d-o-o/OIB-41061598603",
-    "geo_source": "google-adresa",
-    "provjera": "google-sukob",
+    "geo_source": "google-geokod",
+    "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=3056359599364842104&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
    }
@@ -6350,8 +6350,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.999281,
-     45.794094
+     15.999332,
+     45.794077
     ]
    },
    "properties": {
@@ -6373,7 +6373,7 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 190,
     "fina_url": "https://infobiz.fina.hr/tvrtka/croz-d-o-o/OIB-86132384544",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=3457118024734007737&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -6385,8 +6385,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.020569,
-     45.819468
+     16.022411,
+     45.819225
     ]
    },
    "properties": {
@@ -6408,7 +6408,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 16,
     "fina_url": "https://infobiz.fina.hr/tvrtka/leapwise-d-o-o/OIB-92559664038",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -6420,8 +6420,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     15.942661,
+     45.80442
     ]
    },
    "properties": {
@@ -6443,7 +6443,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 4,
     "fina_url": "https://infobiz.fina.hr/tvrtka/ai-technologies-d-o-o/OIB-23235987672",
-    "geo_source": "naselje",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -6511,8 +6511,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.460979,
-     43.544169
+     16.461799,
+     43.545022
     ]
    },
    "properties": {
@@ -6534,7 +6534,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/include-d-o-o/OIB-87239495136",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=14636477309264943768&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -6581,8 +6581,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     15.993227,
+     45.815896
     ]
    },
    "properties": {
@@ -6604,8 +6604,8 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 36,
     "fina_url": "https://infobiz.fina.hr/tvrtka/uprise-d-o-o/OIB-54026168821",
-    "geo_source": "naselje",
-    "provjera": "google-sukob",
+    "geo_source": "google-geokod",
+    "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=93787044016362115&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
    }
@@ -6695,7 +6695,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 5,
     "fina_url": "https://infobiz.fina.hr/tvrtka/poduzetnicki-inkubator-bios-d-o-o/OIB-21055328609",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=693293388933957792&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -6735,8 +6735,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.003436,
-     45.801993
+     16.003467,
+     45.802102
     ]
    },
    "properties": {
@@ -6758,7 +6758,7 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/neprofitni/hmpa/OIB-67014273482",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -6770,8 +6770,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     18.10429,
-     42.642416
+     18.104309,
+     42.64241
     ]
    },
    "properties": {
@@ -6793,7 +6793,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 15,
     "fina_url": "https://infobiz.fina.hr/tvrtka/dubrovacka-razvojna-agencija-dura-d-o-o/OIB-80026201761",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=58375639840523139&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -6961,7 +6961,7 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/financije/hbor/OIB-26702280390",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=7920283961961344729&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -6973,8 +6973,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.957001,
-     45.80797
+     15.957085,
+     45.808103
     ]
    },
    "properties": {
@@ -6996,7 +6996,7 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/neprofitni/hub385/OIB-53336141612",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=16786795558099380926&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -7071,8 +7071,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     18.180772,
-     45.75199
+     18.179495,
+     45.752243
     ]
    },
    "properties": {
@@ -7094,7 +7094,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 3,
     "fina_url": "https://infobiz.fina.hr/tvrtka/poduzetnicki-inkubator-osvit-zadruga/OIB-39693206416",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=2289806965766750058&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -7239,8 +7239,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     18.609513,
-     45.55866
+     18.606264,
+     45.567464
     ]
    },
    "properties": {
@@ -7262,7 +7262,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 0,
     "fina_url": "https://infobiz.fina.hr/tvrtka/zicer-j-d-o-o/OIB-46781982801",
-    "geo_source": "naselje",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=1861185304532289703&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -7360,7 +7360,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/mosaic-incubator-d-o-o/OIB-28711286175",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=14070034990948886896&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -7372,8 +7372,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.944356,
-     45.811789
+     15.935391,
+     45.81514
     ]
    },
    "properties": {
@@ -7395,7 +7395,7 @@
     "fina_velicina": null,
     "fina_zaposleni": 0,
     "fina_url": "https://infobiz.fina.hr/tvrtka/pitchsee-d-o-o/OIB-92561119699",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -7575,8 +7575,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.998302,
-     45.810051
+     15.998378,
+     45.810068
     ]
    },
    "properties": {
@@ -7598,7 +7598,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 18,
     "fina_url": "https://infobiz.fina.hr/tvrtka/impuls-savjetovanje-d-o-o/OIB-30259958677",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=3878720166513046568&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -7638,8 +7638,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.871874,
-     46.145361
+     15.871867,
+     46.145373
     ]
    },
    "properties": {
@@ -7661,7 +7661,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 10,
     "fina_url": "https://infobiz.fina.hr/tvrtka/poduzetnicki-centar-krapinsko-zagorske-zupanije-d-o-o/OIB-63625874835",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=4724048023853801944&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -7673,8 +7673,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.497945,
-     43.525864
+     16.49756,
+     43.525553
     ]
    },
    "properties": {
@@ -7696,7 +7696,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 3,
     "fina_url": "https://infobiz.fina.hr/tvrtka/poduzetnicki-akcelerator-split-d-o-o/OIB-07925158825",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -7799,8 +7799,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     18.695771,
-     45.560482
+     18.69577,
+     45.560505
     ]
    },
    "properties": {
@@ -7822,7 +7822,7 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/proracun/sveuciliste-u-osijeku/OIB-78808975734",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=16671579213016892480&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -7834,8 +7834,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     18.102915,
-     42.642001
+     18.102936,
+     42.641993
     ]
    },
    "properties": {
@@ -7857,7 +7857,7 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/neprofitni/rit-croatia/OIB-24958681731",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=5738820229687081756&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -7869,8 +7869,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.969514,
-     45.795285
+     15.969788,
+     45.795369
     ]
    },
    "properties": {
@@ -7892,7 +7892,7 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/proracun/tvz/OIB-08814003451",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=6116627418636764271&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -7967,8 +7967,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.969915,
-     45.810607
+     15.969823,
+     45.810711
     ]
    },
    "properties": {
@@ -7990,7 +7990,7 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/proracun/sveuciliste-u-zagrebu/OIB-36612267447",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=1612230255357721134&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -8002,8 +8002,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962629,
-     45.809099
+     15.962553,
+     45.808759
     ]
    },
    "properties": {
@@ -8025,7 +8025,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 10,
     "fina_url": "https://infobiz.fina.hr/tvrtka/vsite/OIB-28017824635",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -8037,8 +8037,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.945873,
-     45.814491
+     15.945756,
+     45.814328
     ]
    },
    "properties": {
@@ -8060,7 +8060,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 42,
     "fina_url": "https://infobiz.fina.hr/tvrtka/zagrebacka-skola-ekonomije-i-managementa/OIB-96760515998",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=6194118848846925659&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -8072,8 +8072,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     16.008868,
+     45.815893
     ]
    },
    "properties": {
@@ -8095,8 +8095,8 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 20,
     "fina_url": "https://infobiz.fina.hr/tvrtka/effectus-veleuciliste/OIB-47182242398",
-    "geo_source": "naselje",
-    "provjera": "google-sukob",
+    "geo_source": "google-ime",
+    "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=15328391513593570391&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
    }
@@ -8107,8 +8107,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.903109,
-     43.729086
+     15.905172,
+     43.729261
     ]
    },
    "properties": {
@@ -8130,7 +8130,7 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/proracun/veleuciliste-u-sibeniku/OIB-61727512157",
-    "geo_source": "google-adresa",
+    "geo_source": "google-ime",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=6284484154181077859&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -8142,8 +8142,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.449016,
-     46.391384
+     16.448055,
+     46.391104
     ]
    },
    "properties": {
@@ -8165,7 +8165,7 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/proracun/medimursko-veleuciliste-u-cakovcu/OIB-31444990605",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=5882719309138345041&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -8177,8 +8177,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.981945,
-     45.805899
+     15.981952,
+     45.805902
     ]
    },
    "properties": {
@@ -8200,7 +8200,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 74,
     "fina_url": "https://infobiz.fina.hr/tvrtka/sveuciliste-vern/OIB-22341026596",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=16783117590412987428&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -8310,8 +8310,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.997903,
-     45.813592
+     15.997555,
+     45.813818
     ]
    },
    "properties": {
@@ -8333,7 +8333,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 2,
     "fina_url": "https://infobiz.fina.hr/tvrtka/cohres-d-o-o/OIB-42093279660",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=3782269393081260344&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -8443,8 +8443,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     15.98737,
+     45.828762
     ]
    },
    "properties": {
@@ -8466,8 +8466,8 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/proracun/irb/OIB-69715301002",
-    "geo_source": "naselje",
-    "provjera": "google-sukob",
+    "geo_source": "google-adresa",
+    "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=10554730757792753905&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
    }
@@ -8478,8 +8478,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.969413,
-     45.792436
+     15.969644,
+     45.792319
     ]
    },
    "properties": {
@@ -8501,7 +8501,7 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/proracun/srce/OIB-34016189309",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=16085340664821687391&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -8513,8 +8513,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.951786,
-     45.787333
+     15.951672,
+     45.787416
     ]
    },
    "properties": {
@@ -8536,7 +8536,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 2,
     "fina_url": "https://infobiz.fina.hr/tvrtka/ured-za-napredno-racunarstvo-d-o-o/OIB-70115824092",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=7038198693666588824&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -8606,7 +8606,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/parser-compliance-d-o-o/OIB-59211267966",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=11290830178151994811&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -8800,8 +8800,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.971241,
-     45.795332
+     15.972276,
+     45.795738
     ]
    },
    "properties": {
@@ -8823,7 +8823,7 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/proracun/sveuciliste-u-zagrebu-fakultet-strojarstva-i-brodogradnje/OIB-22910368449",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=17808317807451309067&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -8870,8 +8870,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.986023,
-     45.801064
+     15.985872,
+     45.801051
     ]
    },
    "properties": {
@@ -8893,7 +8893,7 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/proracun/ministarstvo-pravosua-uprave-i-digitalne-transformacije/OIB-72910430276",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -8940,8 +8940,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.976782,
-     45.832251
+     15.976798,
+     45.832356
     ]
    },
    "properties": {
@@ -8963,7 +8963,7 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/proracun/ministarstvo-zdravstva/OIB-88362248492",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=3686120366850272918&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -9003,8 +9003,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.957143,
-     45.801961
+     15.957013,
+     45.802118
     ]
    },
    "properties": {
@@ -9026,7 +9026,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/eventa-nulajedan-d-o-o/OIB-68383496496",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -9605,8 +9605,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.957277,
-     45.810078
+     15.957443,
+     45.810051
     ]
    },
    "properties": {
@@ -9628,7 +9628,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 6,
     "fina_url": "https://infobiz.fina.hr/tvrtka/pepermint-d-o-o/OIB-13120899290",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -9745,8 +9745,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.000508,
-     45.807304
+     15.999935,
+     45.807627
     ]
    },
    "properties": {
@@ -9768,7 +9768,7 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/neprofitni/hrvatska-udruga-ui/OIB-29213482736",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=10984194054104657001&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -9780,8 +9780,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.000508,
-     45.807304
+     15.999935,
+     45.807627
     ]
    },
    "properties": {
@@ -9803,7 +9803,7 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/neprofitni/hrvatska-udruga-ui/OIB-29213482736",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=10984194054104657001&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -9815,8 +9815,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.990074,
-     45.80365
+     15.990177,
+     45.803648
     ]
    },
    "properties": {
@@ -9838,7 +9838,7 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/neprofitni/njhitk/OIB-18509652133",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=17543312959176166421&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -9913,8 +9913,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.000508,
-     45.807304
+     15.999935,
+     45.807627
     ]
    },
    "properties": {
@@ -9936,7 +9936,7 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/neprofitni/hrvatska-udruga-ui/OIB-29213482736",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=10984194054104657001&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -9948,8 +9948,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     13.748749,
-     45.341896
+     15.911119,
+     45.795546
     ]
    },
    "properties": {
@@ -9971,7 +9971,7 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/neprofitni/unit-hrvatska/OIB-56261414492",
-    "geo_source": "naselje",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=997490908249796342&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -9983,8 +9983,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.976303,
-     45.812738
+     15.976164,
+     45.812706
     ]
    },
    "properties": {
@@ -10006,7 +10006,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 8,
     "fina_url": "https://infobiz.fina.hr/tvrtka/rud-pedersen-croatia-d-o-o/OIB-80786916470",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=17456009205748019286&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -10046,8 +10046,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.014313,
-     45.875323
+     16.027845,
+     45.892076
     ]
    },
    "properties": {
@@ -10069,7 +10069,7 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/neprofitni/hdi/OIB-38835255149",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=17373319611306760124&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -10139,7 +10139,7 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/neprofitni/irim/OIB-29139223214",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=12100073168243304938&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -10151,8 +10151,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     18.678217,
-     45.560057
+     18.677819,
+     45.560775
     ]
    },
    "properties": {
@@ -10174,7 +10174,7 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/neprofitni/osc/OIB-06519815245",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=9603701805120633534&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -10249,8 +10249,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.544681,
-     46.021494
+     16.54467,
+     46.02144
     ]
    },
    "properties": {
@@ -10272,7 +10272,7 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/neprofitni/p-o-i-n-t/OIB-75093177043",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -10284,8 +10284,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     14.467907,
-     45.327112
+     14.467849,
+     45.327225
     ]
    },
    "properties": {
@@ -10307,7 +10307,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 10,
     "fina_url": "https://infobiz.fina.hr/tvrtka/step-ri-d-o-o/OIB-70410022758",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=11637673952051516750&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -10452,8 +10452,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     15.935982,
+     45.809022
     ]
    },
    "properties": {
@@ -10475,7 +10475,7 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/neprofitni/institut-za-inovacije/OIB-23825867367",
-    "geo_source": "naselje",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=2485228524017540276&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -10592,8 +10592,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.98831,
-     45.810484
+     15.988384,
+     45.810468
     ]
    },
    "properties": {
@@ -10615,7 +10615,7 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/neprofitni/alice-in-blockchains-udruga-za-fintech-kriptovalute-i-blockchain/OIB-45632684298",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -10720,7 +10720,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/cbbs-d-o-o/OIB-53112231425",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=16072401525385595761&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -10732,8 +10732,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.421347,
-     46.210593
+     16.427067,
+     46.211453
     ]
    },
    "properties": {
@@ -10755,7 +10755,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/bello-consulting-j-d-o-o/OIB-01545357551",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -10907,8 +10907,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.990177,
-     45.803648
+     15.990062,
+     45.803946
     ]
    },
    "properties": {
@@ -10930,7 +10930,7 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/neprofitni/agk/OIB-91127208369",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=17273588935223536431&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -10942,8 +10942,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.984134,
-     45.760395
+     15.984213,
+     45.760195
     ]
    },
    "properties": {
@@ -10965,7 +10965,7 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 115,
     "fina_url": "https://infobiz.fina.hr/tvrtka/24sata-d-o-o/OIB-78093047651",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=4492832786979248365&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -10977,8 +10977,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     15.959941,
+     45.802244
     ]
    },
    "properties": {
@@ -11000,8 +11000,8 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 10,
     "fina_url": "https://infobiz.fina.hr/tvrtka/b-u-g-d-o-o/OIB-05461674840",
-    "geo_source": "naselje",
-    "provjera": "google-sukob",
+    "geo_source": "google-geokod",
+    "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=11048753615900343203&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
    }
@@ -11012,8 +11012,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     15.997169,
+     45.766909
     ]
    },
    "properties": {
@@ -11035,7 +11035,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 4,
     "fina_url": "https://infobiz.fina.hr/tvrtka/optimus-prime-informatika-d-o-o/OIB-94235177665",
-    "geo_source": "naselje",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -11110,8 +11110,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.921735,
-     45.788087
+     15.921725,
+     45.788252
     ]
    },
    "properties": {
@@ -11133,7 +11133,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 0,
     "fina_url": "https://infobiz.fina.hr/tvrtka/netokracija-d-o-o/OIB-36474827436",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -11180,8 +11180,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.957262,
-     45.790069
+     15.955836,
+     45.789335
     ]
    },
    "properties": {
@@ -11203,7 +11203,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 0,
     "fina_url": "https://infobiz.fina.hr/tvrtka/racunalni-i-ekonomski-poslovi-rep-d-o-o/OIB-97663697990",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -11215,8 +11215,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.957033,
-     45.808166
+     15.957085,
+     45.808103
     ]
    },
    "properties": {
@@ -11238,7 +11238,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 62,
     "fina_url": "https://infobiz.fina.hr/tvrtka/presshaus-d-o-o/OIB-36974788949",
-    "geo_source": "dgu-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=14588232615021672662&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -11250,8 +11250,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.984134,
-     45.760395
+     15.984213,
+     45.760195
     ]
    },
    "properties": {
@@ -11273,7 +11273,7 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 142,
     "fina_url": "https://infobiz.fina.hr/tvrtka/vecernji-list-d-o-o/OIB-92276133102",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=3167283733334378783&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -11285,8 +11285,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.909521,
-     45.796648
+     15.909412,
+     45.796518
     ]
    },
    "properties": {
@@ -11308,7 +11308,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 6,
     "fina_url": "https://infobiz.fina.hr/tvrtka/vidi-to-d-o-o/OIB-24523816042",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=11961936213421550684&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -11355,8 +11355,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.998799,
-     45.804564
+     15.999694,
+     45.804695
     ]
    },
    "properties": {
@@ -11378,7 +11378,7 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": 3926,
     "fina_url": "https://infobiz.fina.hr/tvrtka/ht-d-d/OIB-81793146560",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=1207319073862654917&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -11390,8 +11390,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.752052,
-     43.156687
+     16.692851,
+     43.16006
     ]
    },
    "properties": {
@@ -11413,7 +11413,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/bradbury-d-o-o/OIB-35016494441",
-    "geo_source": "naselje",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -11425,8 +11425,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     16.020355,
+     45.795092
     ]
    },
    "properties": {
@@ -11448,8 +11448,8 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 41,
     "fina_url": "https://infobiz.fina.hr/tvrtka/hd-win-arena-sport-d-o-o/OIB-75150106632",
-    "geo_source": "naselje",
-    "provjera": "google-sukob",
+    "geo_source": "google-geokod",
+    "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=3980159377151885487&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
    }
@@ -11460,8 +11460,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.001747,
-     45.800401
+     16.001679,
+     45.800427
     ]
    },
    "properties": {
@@ -11483,7 +11483,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 5,
     "fina_url": "https://infobiz.fina.hr/tvrtka/hashnet-d-o-o/OIB-61833745918",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -11565,8 +11565,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     14.450077,
-     45.337653
+     14.450097,
+     45.337638
     ]
    },
    "properties": {
@@ -11588,7 +11588,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 3,
     "fina_url": "https://infobiz.fina.hr/tvrtka/poduzetnik-d-o-o/OIB-31281910909",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -11831,8 +11831,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.973875,
-     45.776238
+     15.97009,
+     45.776334
     ]
    },
    "properties": {
@@ -11854,7 +11854,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 3,
     "fina_url": "https://infobiz.fina.hr/tvrtka/arkensight-d-o-o/OIB-67884668432",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -11866,8 +11866,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.969575,
-     45.793748
+     15.96985,
+     45.793935
     ]
    },
    "properties": {
@@ -11889,7 +11889,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 5,
     "fina_url": "https://infobiz.fina.hr/tvrtka/tensorpix-d-o-o/OIB-95953325784",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=964615725750848791&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -11964,8 +11964,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.991363,
-     45.755665
+     15.991369,
+     45.755574
     ]
    },
    "properties": {
@@ -11987,7 +11987,7 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 96,
     "fina_url": "https://infobiz.fina.hr/tvrtka/project-3-mobility-d-o-o/OIB-49842564886",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=689404588953336531&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -12034,8 +12034,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     15.950874,
+     45.773051
     ]
    },
    "properties": {
@@ -12057,7 +12057,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 0,
     "fina_url": "https://infobiz.fina.hr/tvrtka/alti-agro-d-o-o/OIB-93381415653",
-    "geo_source": "naselje",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -12265,8 +12265,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.445943,
-     43.519351
+     16.44621,
+     43.519371
     ]
    },
    "properties": {
@@ -12288,7 +12288,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 40,
     "fina_url": "https://infobiz.fina.hr/tvrtka/aspira/OIB-14885934105",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=2409552836270396221&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -12300,8 +12300,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     15.933514,
+     45.80162
     ]
    },
    "properties": {
@@ -12323,7 +12323,7 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": 586,
     "fina_url": "https://infobiz.fina.hr/tvrtka/koncar-d-d/OIB-45050126417",
-    "geo_source": "naselje",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=7529884575651534691&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -12335,8 +12335,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     15.946243,
+     45.793463
     ]
    },
    "properties": {
@@ -12358,8 +12358,8 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 20,
     "fina_url": "https://infobiz.fina.hr/tvrtka/hypefy-world-d-o-o/OIB-89393159477",
-    "geo_source": "naselje",
-    "provjera": "google-sukob",
+    "geo_source": "google-geokod",
+    "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=7823506421834796415&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
    }
@@ -12370,8 +12370,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.003586,
-     45.803078
+     16.003568,
+     45.803066
     ]
    },
    "properties": {
@@ -12393,7 +12393,7 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 89,
     "fina_url": "https://infobiz.fina.hr/tvrtka/nanobit-d-o-o/OIB-56906077918",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -12685,8 +12685,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     16.012283,
+     45.764584
     ]
    },
    "properties": {
@@ -12708,7 +12708,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 2,
     "fina_url": "https://infobiz.fina.hr/tvrtka/petchat-j-d-o-o/OIB-27980872045",
-    "geo_source": "naselje",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -12783,8 +12783,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.955918,
-     45.782327
+     15.955961,
+     45.782272
     ]
    },
    "properties": {
@@ -12806,7 +12806,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 5,
     "fina_url": "https://infobiz.fina.hr/tvrtka/once-sport-d-o-o/OIB-22886137161",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -12881,8 +12881,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     15.983148,
+     45.778644
     ]
    },
    "properties": {
@@ -12904,8 +12904,8 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 27,
     "fina_url": "https://infobiz.fina.hr/tvrtka/devot-solutions-d-o-o/OIB-03252244054",
-    "geo_source": "naselje",
-    "provjera": "google-sukob",
+    "geo_source": "google-geokod",
+    "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=16221339425524515412&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
    }
@@ -12951,8 +12951,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     15.957344,
+     45.80264
     ]
    },
    "properties": {
@@ -12974,8 +12974,8 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 14,
     "fina_url": "https://infobiz.fina.hr/tvrtka/amplibit-d-o-o/OIB-48004514574",
-    "geo_source": "naselje",
-    "provjera": "google-sukob",
+    "geo_source": "google-geokod",
+    "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=13905617779868476591&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
    }
@@ -13014,8 +13014,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.003586,
-     45.803078
+     16.003593,
+     45.803444
     ]
    },
    "properties": {
@@ -13037,7 +13037,7 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 86,
     "fina_url": "https://infobiz.fina.hr/tvrtka/404-d-o-o/OIB-95664694376",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=18200905870063836178&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -13049,8 +13049,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     16.032067,
+     45.786066
     ]
    },
    "properties": {
@@ -13072,8 +13072,8 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": 1653,
     "fina_url": "https://infobiz.fina.hr/tvrtka/a1-hrvatska-d-o-o/OIB-29524210204",
-    "geo_source": "naselje",
-    "provjera": "google-sukob",
+    "geo_source": "google-geokod",
+    "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=5132747118891162042&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
    }
@@ -13084,8 +13084,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.969575,
-     45.793748
+     15.96985,
+     45.793935
     ]
    },
    "properties": {
@@ -13107,7 +13107,7 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/financije/addiko-bank-d-d/OIB-14036333877",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=14197964796522829087&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -13154,8 +13154,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.007856,
-     45.804461
+     16.00789,
+     45.804537
     ]
    },
    "properties": {
@@ -13177,7 +13177,7 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/financije/allianz-hrvatska-d-d/OIB-23759810849",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=9010999177278862004&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -13189,8 +13189,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.974797,
-     45.802218
+     15.975078,
+     45.80218
     ]
    },
    "properties": {
@@ -13212,7 +13212,7 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 172,
     "fina_url": "https://infobiz.fina.hr/tvrtka/atlantic-grupa-d-d/OIB-71149912416",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=906248817743838551&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -13357,7 +13357,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.972362,
+     15.972361,
      45.79946
     ]
    },
@@ -13380,7 +13380,7 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": 2331,
     "fina_url": "https://infobiz.fina.hr/tvrtka/fina/OIB-85821130368",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=14604878661371932885&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -13392,8 +13392,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     16.033502,
+     45.802076
     ]
    },
    "properties": {
@@ -13415,8 +13415,8 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 103,
     "fina_url": "https://infobiz.fina.hr/tvrtka/fortenova-grupa-d-d/OIB-88035992407",
-    "geo_source": "naselje",
-    "provjera": "google-sukob",
+    "geo_source": "google-geokod",
+    "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=1025646164379746619&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
    }
@@ -13511,8 +13511,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.729954,
-     45.823456
+     15.729573,
+     45.823517
     ]
    },
    "properties": {
@@ -13534,7 +13534,7 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": 613,
     "fina_url": "https://infobiz.fina.hr/tvrtka/klimaoprema-d-o-o/OIB-34383404032",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -13546,8 +13546,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.838325,
-     46.093242
+     15.838079,
+     46.093464
     ]
    },
    "properties": {
@@ -13569,7 +13569,7 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 284,
     "fina_url": "https://infobiz.fina.hr/tvrtka/magdalena/OIB-51835157380",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=16624462373446391236&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -13644,8 +13644,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.450132,
-     43.520086
+     16.450284,
+     43.520131
     ]
    },
    "properties": {
@@ -13667,7 +13667,7 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/financije/otp-banka-d-d/OIB-52508873833",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=3981097645293272116&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -13707,8 +13707,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     15.998935,
+     45.815395
     ]
    },
    "properties": {
@@ -13730,8 +13730,8 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/poliklinika-terapija-d-o-o/OIB-49343876478",
-    "geo_source": "naselje",
-    "provjera": "google-sukob",
+    "geo_source": "google-geokod",
+    "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=2999102596188329815&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
    }
@@ -13770,8 +13770,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     15.949856,
+     45.808605
     ]
    },
    "properties": {
@@ -13793,7 +13793,7 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/financije/raiffeisenbank-austria-d-d/OIB-53056966535",
-    "geo_source": "naselje",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=1628119592921394140&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -13805,8 +13805,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.969951,
-     45.792932
+     15.968747,
+     45.793453
     ]
    },
    "properties": {
@@ -13828,7 +13828,7 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": 632,
     "fina_url": "https://infobiz.fina.hr/tvrtka/telemach-hrvatska-d-o-o/OIB-70133616033",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=12762271272250082588&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -13840,8 +13840,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.105322,
-     45.81342
+     16.103413,
+     45.813322
     ]
    },
    "properties": {
@@ -13863,7 +13863,7 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": 1098,
     "fina_url": "https://infobiz.fina.hr/tvrtka/tokic-d-d/OIB-74867487620",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=13669259077217138833&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -13959,8 +13959,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.682653,
-     43.44241
+     16.682447,
+     43.442369
     ]
    },
    "properties": {
@@ -13982,7 +13982,7 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": 6095,
     "fina_url": "https://infobiz.fina.hr/tvrtka/studenac-d-o-o/OIB-02023029348",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=4007489800703878110&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -13994,8 +13994,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.823324,
-     46.167102
+     16.823224,
+     46.167041
     ]
    },
    "properties": {
@@ -14017,7 +14017,7 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": 3211,
     "fina_url": "https://infobiz.fina.hr/tvrtka/podravka-d-d/OIB-18928523252",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -14057,8 +14057,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     16.020355,
+     45.795092
     ]
    },
    "properties": {
@@ -14080,8 +14080,8 @@
     "fina_velicina": null,
     "fina_zaposleni": 2,
     "fina_url": "https://infobiz.fina.hr/tvrtka/freshbooks-d-o-o/OIB-91938817383",
-    "geo_source": "naselje",
-    "provjera": "google-sukob",
+    "geo_source": "google-geokod",
+    "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=13896151217231266052&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
    }
@@ -14120,8 +14120,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     14.465929,
-     45.351227
+     14.465546,
+     45.35118
     ]
    },
    "properties": {
@@ -14143,7 +14143,7 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": 781,
     "fina_url": "https://infobiz.fina.hr/tvrtka/jgl-d-d/OIB-20950636972",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=8685484557484541105&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -14218,8 +14218,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     13.638835,
-     45.079627
+     13.638935,
+     45.078738
     ]
    },
    "properties": {
@@ -14241,7 +14241,7 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": 2514,
     "fina_url": "https://infobiz.fina.hr/tvrtka/maistra-d-d/OIB-25190869349",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=12362852276335531938&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -14276,7 +14276,7 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/financije/interkapital-vrijednosni-papiri-d-o-o/OIB-68481874507",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=14591649088360832673&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -14374,7 +14374,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/sonder-innovations-d-o-o/OIB-95631264068",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -14421,8 +14421,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     15.970842,
+     45.844745
     ]
    },
    "properties": {
@@ -14444,7 +14444,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/reach-the-sea-d-o-o/OIB-23182591050",
-    "geo_source": "naselje",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -14526,8 +14526,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     18.694435,
-     45.554784
+     18.689732,
+     45.556014
     ]
    },
    "properties": {
@@ -14549,7 +14549,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 50,
     "fina_url": "https://infobiz.fina.hr/tvrtka/gauss-d-o-o/OIB-07575902160",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=3463103257130239258&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -14561,8 +14561,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     15.954885,
+     45.812579
     ]
    },
    "properties": {
@@ -14584,8 +14584,8 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 220,
     "fina_url": "https://infobiz.fina.hr/tvrtka/q-d-o-o/OIB-78082062075",
-    "geo_source": "naselje",
-    "provjera": "google-sukob",
+    "geo_source": "google-geokod",
+    "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=14120582766813461117&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
    }
@@ -14624,8 +14624,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.008532,
-     45.802916
+     16.008747,
+     45.80282
     ]
    },
    "properties": {
@@ -14647,7 +14647,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 4,
     "fina_url": "https://infobiz.fina.hr/tvrtka/drap-d-o-o/OIB-41437879613",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=869061167123805447&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -14764,8 +14764,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     15.99287,
+     45.821037
     ]
    },
    "properties": {
@@ -14787,7 +14787,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/kalphatech-d-o-o/OIB-73948612072",
-    "geo_source": "naselje",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -14799,8 +14799,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.007383,
-     45.817164
+     16.00737,
+     45.817121
     ]
    },
    "properties": {
@@ -14822,7 +14822,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 4,
     "fina_url": "https://infobiz.fina.hr/tvrtka/calirad-d-o-o/OIB-78901718890",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -14834,8 +14834,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.444217,
-     43.508329
+     16.445446,
+     43.508303
     ]
    },
    "properties": {
@@ -14857,7 +14857,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 24,
     "fina_url": "https://infobiz.fina.hr/tvrtka/code-vibe-d-o-o/OIB-81542490027",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -14869,8 +14869,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.228745,
-     45.967823
+     16.23278,
+     45.960528
     ]
    },
    "properties": {
@@ -14892,7 +14892,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 2,
     "fina_url": "https://infobiz.fina.hr/tvrtka/textiloop-d-o-o/OIB-30087764103",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -14904,8 +14904,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.971377,
-     45.800369
+     16.052218,
+     45.813631
     ]
    },
    "properties": {
@@ -14927,7 +14927,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 0,
     "fina_url": "https://infobiz.fina.hr/tvrtka/prefer-ai-d-o-o/OIB-76994300523",
-    "geo_source": "rucno",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": "sjedište: https://preferai.hr/ (Antigravity/Gemini, provjera sudreg sjedište), 2026-10-30"
@@ -14974,8 +14974,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     15.91566,
+     45.78812
     ]
    },
    "properties": {
@@ -14997,7 +14997,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 58,
     "fina_url": "https://infobiz.fina.hr/tvrtka/ingemark-d-o-o/OIB-02854892746",
-    "geo_source": "naselje",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=52892046834159754&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -15009,8 +15009,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     14.369581,
-     45.391168
+     14.369852,
+     45.39106
     ]
    },
    "properties": {
@@ -15032,7 +15032,7 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 184,
     "fina_url": "https://infobiz.fina.hr/tvrtka/montelektro-d-o-o/OIB-45522650856",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=6949124763168636216&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -15079,8 +15079,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.115286,
-     45.856515
+     16.115566,
+     45.856516
     ]
    },
    "properties": {
@@ -15102,7 +15102,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 17,
     "fina_url": "https://infobiz.fina.hr/tvrtka/cb-control-systems-d-o-o/OIB-17382526547",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=9025206884224665180&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -15114,8 +15114,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.42353,
-     45.86832
+     15.956071,
+     45.791683
     ]
    },
    "properties": {
@@ -15137,8 +15137,8 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 97,
     "fina_url": "https://infobiz.fina.hr/tvrtka/pontis-technology-d-o-o/OIB-68533008080",
-    "geo_source": "naselje",
-    "provjera": "google-sukob",
+    "geo_source": "google-geokod",
+    "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=17954129081486602407&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
    }
@@ -15172,7 +15172,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 4,
     "fina_url": "https://infobiz.fina.hr/tvrtka/romb-technologies-d-o-o/OIB-34690437344",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -15184,8 +15184,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962649,
-     45.823392
+     15.962627,
+     45.823366
     ]
    },
    "properties": {
@@ -15207,7 +15207,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 13,
     "fina_url": "https://infobiz.fina.hr/tvrtka/size-d-o-o/OIB-88183612525",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=8097817534108520124&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -15219,8 +15219,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     13.600065,
-     45.235152
+     13.670538,
+     45.212702
     ]
    },
    "properties": {
@@ -15242,7 +15242,7 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": 3658,
     "fina_url": "https://infobiz.fina.hr/tvrtka/valamar-riviera-d-d/OIB-36201212847",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=6260582073994729904&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -15312,7 +15312,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 90,
     "fina_url": "https://infobiz.fina.hr/tvrtka/notch-software-solutions-d-o-o/OIB-99895959831",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=16595612592413504472&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -15415,8 +15415,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     18.719535,
-     45.543333
+     18.713909,
+     45.543373
     ]
    },
    "properties": {
@@ -15438,7 +15438,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 12,
     "fina_url": "https://infobiz.fina.hr/tvrtka/alpha-score-d-o-o/OIB-89870478875",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -15450,8 +15450,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.007856,
-     45.804461
+     16.00789,
+     45.804537
     ]
    },
    "properties": {
@@ -15473,7 +15473,7 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 136,
     "fina_url": "https://infobiz.fina.hr/tvrtka/comping-d-o-o/OIB-09201087238",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=1846833781922101211&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -15485,8 +15485,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.98988,
-     45.810633
+     15.989919,
+     45.810626
     ]
    },
    "properties": {
@@ -15508,7 +15508,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 9,
     "fina_url": "https://infobiz.fina.hr/tvrtka/nephos-d-o-o/OIB-45593438856",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=766270624387212850&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -15520,8 +15520,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.943615,
-     45.816728
+     15.942607,
+     45.816007
     ]
    },
    "properties": {
@@ -15543,7 +15543,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/ideas4ai-d-o-o/OIB-38990012017",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -15555,8 +15555,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     18.68197,
-     45.552952
+     18.681987,
+     45.553019
     ]
    },
    "properties": {
@@ -15578,7 +15578,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 32,
     "fina_url": "https://infobiz.fina.hr/tvrtka/prototyp-d-o-o/OIB-69410380024",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=1830128831969601293&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -15590,8 +15590,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.308563,
-     44.160377
+     15.288934,
+     44.173801
     ]
    },
    "properties": {
@@ -15613,8 +15613,8 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/sintelly-d-o-o/OIB-06225773987",
-    "geo_source": "google-ime",
-    "provjera": "google-potvrda",
+    "geo_source": "google-ulica",
+    "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=3285627200939366050&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
    }
@@ -15625,8 +15625,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     19.004259,
-     45.348802
+     19.004586,
+     45.349096
     ]
    },
    "properties": {
@@ -15648,7 +15648,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 3,
     "fina_url": "https://infobiz.fina.hr/tvrtka/daidream-d-o-o/OIB-61952123215",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=5866034787324159224&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -15660,8 +15660,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.238424,
-     45.757449
+     16.233893,
+     45.759489
     ]
    },
    "properties": {
@@ -15683,7 +15683,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 19,
     "fina_url": "https://infobiz.fina.hr/tvrtka/scoop-technologies-d-o-o/OIB-06936315682",
-    "geo_source": "naselje",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=8040168918008475796&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -15695,8 +15695,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.881961,
-     45.816479
+     15.8844,
+     45.817226
     ]
    },
    "properties": {
@@ -15718,7 +15718,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/riskoria-advising-professional-services-d-o-o/OIB-84611853622",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -15730,8 +15730,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.922098,
-     45.796858
+     15.938912,
+     45.784357
     ]
    },
    "properties": {
@@ -15753,7 +15753,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 18,
     "fina_url": "https://infobiz.fina.hr/tvrtka/cinnamon-d-o-o/OIB-48144159998",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=1861527923783320844&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -15793,8 +15793,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.004804,
-     45.802551
+     16.004724,
+     45.802619
     ]
    },
    "properties": {
@@ -15816,7 +15816,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 73,
     "fina_url": "https://infobiz.fina.hr/tvrtka/decode-hq-d-o-o/OIB-20903022276",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=8297510326547842488&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -15863,8 +15863,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.938854,
-     45.819918
+     15.940232,
+     45.8297
     ]
    },
    "properties": {
@@ -15886,7 +15886,7 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/neprofitni/shpigl/OIB-50169343345",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -15898,8 +15898,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     16.004373,
+     45.874265
     ]
    },
    "properties": {
@@ -15921,7 +15921,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 20,
     "fina_url": "https://infobiz.fina.hr/tvrtka/aduro-ideja-d-o-o/OIB-99145666903",
-    "geo_source": "naselje",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=11058260830549608191&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -15933,8 +15933,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.558492,
-     45.462089
+     15.558706,
+     45.462041
     ]
    },
    "properties": {
@@ -15956,7 +15956,7 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 202,
     "fina_url": "https://infobiz.fina.hr/tvrtka/infinum-d-o-o/OIB-97147456048",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=413287550740475189&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -16052,8 +16052,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     18.684456,
-     45.558391
+     18.684006,
+     45.557858
     ]
    },
    "properties": {
@@ -16075,7 +16075,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 10,
     "fina_url": "https://infobiz.fina.hr/tvrtka/tera-tehnopolis-d-o-o/OIB-39077073015",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=16046801292418532937&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -16122,8 +16122,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.944356,
-     45.811789
+     15.941085,
+     45.811101
     ]
    },
    "properties": {
@@ -16145,7 +16145,7 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/neprofitni/lauba/OIB-23248350988",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=2691890975863040084&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -16185,8 +16185,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.966079,
-     45.802461
+     15.966031,
+     45.80248
     ]
    },
    "properties": {
@@ -16208,7 +16208,7 @@
     "fina_velicina": null,
     "fina_zaposleni": null,
     "fina_url": "https://infobiz.fina.hr/neprofitni/slo-cro-gospodarska-komora/OIB-07441699232",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -16591,8 +16591,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.108724,
-     44.361711
+     16.127785,
+     44.354898
     ]
    },
    "properties": {
@@ -16614,7 +16614,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/little-bag-j-d-o-o/OIB-78489934738",
-    "geo_source": "naselje",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -16626,8 +16626,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.42353,
-     45.86832
+     15.953697,
+     45.787557
     ]
    },
    "properties": {
@@ -16649,7 +16649,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 28,
     "fina_url": "https://infobiz.fina.hr/tvrtka/netgen-d-o-o/OIB-56703914419",
-    "geo_source": "naselje",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -16661,8 +16661,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.007856,
-     45.804461
+     16.00789,
+     45.804537
     ]
    },
    "properties": {
@@ -16684,7 +16684,7 @@
     "fina_velicina": "Srednji",
     "fina_zaposleni": 128,
     "fina_url": "https://infobiz.fina.hr/tvrtka/porsche-digital-croatia-d-o-o/OIB-58734276843",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=9830716627075779413&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -16696,8 +16696,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.996468,
-     45.794143
+     15.998241,
+     45.79387
     ]
    },
    "properties": {
@@ -16719,7 +16719,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 3,
     "fina_url": "https://infobiz.fina.hr/tvrtka/bruncin-d-o-o/OIB-29863640528",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=3784338321551895280&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -16787,8 +16787,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.237516,
-     44.121986
+     15.236328,
+     44.121429
     ]
    },
    "properties": {
@@ -16810,7 +16810,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 11,
     "fina_url": "https://infobiz.fina.hr/tvrtka/helmholz-sistemi-d-o-o/OIB-76758762210",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -16822,8 +16822,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     16.022268,
+     45.819575
     ]
    },
    "properties": {
@@ -16845,8 +16845,8 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 0,
     "fina_url": "https://infobiz.fina.hr/tvrtka/mediartem-ai-d-o-o/OIB-72757755615",
-    "geo_source": "naselje",
-    "provjera": "google-sukob",
+    "geo_source": "google-geokod",
+    "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=524543527011709761&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
    }
@@ -16880,7 +16880,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 2,
     "fina_url": "https://infobiz.fina.hr/tvrtka/need-appd-o-o/OIB-39287030332",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=7666241673309318823&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -16955,8 +16955,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.065074,
-     45.712729
+     16.101227,
+     45.668661
     ]
    },
    "properties": {
@@ -16978,7 +16978,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/saastanak-d-o-o/OIB-40801114584",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -16990,8 +16990,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.985943,
-     45.810126
+     15.99856,
+     45.811114
     ]
    },
    "properties": {
@@ -17013,7 +17013,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/virtualni-eventi-j-d-o-o/OIB-78389484682",
-    "geo_source": "rucno",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": "sjedište: https://woomai.io/privacy-policy/ (Antigravity/Gemini, provjera adresa na izvoru), 2026-10-30"
@@ -17025,8 +17025,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.969561,
-     45.798033
+     15.969723,
+     45.798055
     ]
    },
    "properties": {
@@ -17048,7 +17048,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 4,
     "fina_url": "https://infobiz.fina.hr/tvrtka/aymo-ventures-d-o-o/OIB-31486520098",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -17095,8 +17095,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     16.025904,
+     45.816446
     ]
    },
    "properties": {
@@ -17118,7 +17118,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 0,
     "fina_url": "https://infobiz.fina.hr/tvrtka/game-changer-d-o-o/OIB-67067915661",
-    "geo_source": "naselje",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -17431,8 +17431,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     17.386083,
-     45.825175
+     17.385563,
+     45.822066
     ]
    },
    "properties": {
@@ -17454,7 +17454,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 5,
     "fina_url": "https://infobiz.fina.hr/tvrtka/lexi-d-o-o/OIB-38647156795",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -17466,8 +17466,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.229873,
-     44.137065
+     15.229843,
+     44.13704
     ]
    },
    "properties": {
@@ -17489,7 +17489,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 30,
     "fina_url": "https://infobiz.fina.hr/tvrtka/rentlio-d-o-o/OIB-27842617105",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=1742635645127831219&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -17634,8 +17634,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     15.906944,
+     45.801127
     ]
    },
    "properties": {
@@ -17657,7 +17657,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 2,
     "fina_url": "https://infobiz.fina.hr/tvrtka/judge0-d-o-o/OIB-37135718819",
-    "geo_source": "naselje",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -17692,7 +17692,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 11,
     "fina_url": "https://infobiz.fina.hr/tvrtka/neuralab-d-o-o/OIB-63401934653",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=497263279544050694&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -17727,7 +17727,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 25,
     "fina_url": "https://infobiz.fina.hr/tvrtka/plus-hosting-grupa-d-o-o/OIB-25444746329",
-    "geo_source": "google-adresa",
+    "geo_source": "google-ulica",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=14965762194768614679&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -17879,8 +17879,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     15.945756,
+     45.814328
     ]
    },
    "properties": {
@@ -17902,7 +17902,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 7,
     "fina_url": "https://infobiz.fina.hr/tvrtka/swen-hospitality-d-o-o/OIB-27238984889",
-    "geo_source": "naselje",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -17914,8 +17914,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     15.945756,
+     45.814328
     ]
    },
    "properties": {
@@ -17937,8 +17937,8 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 20,
     "fina_url": "https://infobiz.fina.hr/tvrtka/determ-d-o-o/OIB-78206544075",
-    "geo_source": "naselje",
-    "provjera": "google-sukob",
+    "geo_source": "google-geokod",
+    "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=13567966752749770234&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
    }
@@ -17949,8 +17949,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.9889,
-     45.803273
+     15.988772,
+     45.803337
     ]
    },
    "properties": {
@@ -17972,7 +17972,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 4,
     "fina_url": "https://infobiz.fina.hr/tvrtka/forvis-mazars-digital-d-o-o/OIB-41111767612",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -18054,8 +18054,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     15.945756,
+     45.814328
     ]
    },
    "properties": {
@@ -18077,8 +18077,8 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 5,
     "fina_url": "https://infobiz.fina.hr/tvrtka/bornfight-d-o-o/OIB-64834048134",
-    "geo_source": "naselje",
-    "provjera": "google-sukob",
+    "geo_source": "google-geokod",
+    "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=16976545154305242572&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
    }
@@ -18089,8 +18089,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.899064,
-     45.808164
+     15.898999,
+     45.808124
     ]
    },
    "properties": {
@@ -18112,7 +18112,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/get-digital-d-o-o/OIB-95334959847",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -18215,8 +18215,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.387513,
-     43.548488
+     16.362362,
+     43.550886
     ]
    },
    "properties": {
@@ -18238,7 +18238,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 9,
     "fina_url": "https://infobiz.fina.hr/tvrtka/loop-d-o-o/OIB-93207816519",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=13600891317599699670&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -18250,8 +18250,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.971207,
-     45.810369
+     15.97125,
+     45.810429
     ]
    },
    "properties": {
@@ -18273,7 +18273,7 @@
     "fina_velicina": "Veliki",
     "fina_zaposleni": 311,
     "fina_url": "https://infobiz.fina.hr/tvrtka/skolska-knjiga-d-d/OIB-38967655335",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=3057596041963373932&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -18285,8 +18285,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.947845,
-     45.574495
+     16.947822,
+     45.57444
     ]
    },
    "properties": {
@@ -18308,7 +18308,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 24,
     "fina_url": "https://infobiz.fina.hr/tvrtka/autegra-d-o-o/OIB-27496223500",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=17525089510168535860&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -18343,7 +18343,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 10,
     "fina_url": "https://infobiz.fina.hr/tvrtka/nobula-technologies-d-o-o/OIB-09209716270",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -18355,8 +18355,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     13.689252,
-     45.063162
+     13.693939,
+     45.061613
     ]
    },
    "properties": {
@@ -18378,7 +18378,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 0,
     "fina_url": "https://infobiz.fina.hr/tvrtka/smart-hospitality-d-o-o/OIB-82718673214",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -18453,8 +18453,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     14.442876,
-     45.326174
+     14.44251,
+     45.326369
     ]
    },
    "properties": {
@@ -18476,7 +18476,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 15,
     "fina_url": "https://infobiz.fina.hr/tvrtka/own-solutions-d-o-o/OIB-74958794545",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -18488,8 +18488,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.911356,
-     45.805078
+     15.911019,
+     45.805047
     ]
    },
    "properties": {
@@ -18511,7 +18511,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 35,
     "fina_url": "https://infobiz.fina.hr/tvrtka/byte-lab-grupa-d-o-o/OIB-90076939291",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=4949249499694128502&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -18523,8 +18523,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.708754,
-     45.801034
+     15.728194,
+     45.795479
     ]
    },
    "properties": {
@@ -18546,7 +18546,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 5,
     "fina_url": "https://infobiz.fina.hr/tvrtka/for-automation-d-o-o/OIB-90316762748",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=15380176201644234528&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -18558,8 +18558,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     15.970007,
+     45.768391
     ]
    },
    "properties": {
@@ -18581,7 +18581,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 3,
     "fina_url": "https://infobiz.fina.hr/tvrtka/skai-labs-d-o-o/OIB-12285322295",
-    "geo_source": "naselje",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -18593,8 +18593,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     16.454514,
-     43.510167
+     16.455718,
+     43.510637
     ]
    },
    "properties": {
@@ -18616,7 +18616,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 4,
     "fina_url": "https://infobiz.fina.hr/tvrtka/workspace-d-o-o/OIB-21261099784",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -18628,8 +18628,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.969575,
-     45.793748
+     15.96985,
+     45.793935
     ]
    },
    "properties": {
@@ -18651,7 +18651,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 37,
     "fina_url": "https://infobiz.fina.hr/tvrtka/margins-d-o-o/OIB-30100320285",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=2189309483890553793&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -18663,8 +18663,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.986026,
-     45.800949
+     15.992757,
+     45.801525
     ]
    },
    "properties": {
@@ -18686,7 +18686,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 0,
     "fina_url": "https://infobiz.fina.hr/tvrtka/odonata-technologies-d-o-o/OIB-42173437282",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -18698,8 +18698,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.969575,
-     45.793748
+     15.96985,
+     45.793935
     ]
    },
    "properties": {
@@ -18721,7 +18721,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 37,
     "fina_url": "https://infobiz.fina.hr/tvrtka/margins-d-o-o/OIB-30100320285",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -18789,8 +18789,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     14.413079,
-     45.345819
+     14.466032,
+     45.334186
     ]
    },
    "properties": {
@@ -18812,8 +18812,8 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 3,
     "fina_url": "https://infobiz.fina.hr/tvrtka/alphawave-d-o-o/OIB-59896838619",
-    "geo_source": "naselje",
-    "provjera": "google-sukob",
+    "geo_source": "google-geokod",
+    "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=14659237939928015154&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
    }
@@ -18824,8 +18824,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     13.830162,
-     44.859457
+     13.831008,
+     44.859367
     ]
    },
    "properties": {
@@ -18847,7 +18847,7 @@
     "fina_velicina": "Mali",
     "fina_zaposleni": 25,
     "fina_url": "https://infobiz.fina.hr/tvrtka/istra-tech-d-o-o/OIB-94114100359",
-    "geo_source": "google-adresa",
+    "geo_source": "google-geokod",
     "provjera": "google-potvrda",
     "google_maps": "https://maps.google.com/?cid=3471073591055671689&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -18859,8 +18859,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     15.943869,
+     45.824605
     ]
    },
    "properties": {
@@ -18882,7 +18882,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/animone-studio-d-o-o/OIB-49095610069",
-    "geo_source": "naselje",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null
@@ -18894,8 +18894,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     13.835909,
-     44.835283
+     13.875067,
+     44.873675
     ]
    },
    "properties": {
@@ -18917,7 +18917,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/optimus-consulting-d-o-o/OIB-31457975319",
-    "geo_source": "google-adresa",
+    "geo_source": "naselje",
     "provjera": "google-sukob",
     "google_maps": "https://maps.google.com/?cid=2928697172273671522&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "geo_izvor": null
@@ -18957,8 +18957,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     15.962103,
-     45.842803
+     15.951543,
+     45.773617
     ]
    },
    "properties": {
@@ -18980,7 +18980,7 @@
     "fina_velicina": "Mikro",
     "fina_zaposleni": 1,
     "fina_url": "https://infobiz.fina.hr/tvrtka/ostendo-consulting-d-o-o/OIB-86090645922",
-    "geo_source": "naselje",
+    "geo_source": "google-geokod",
     "provjera": null,
     "google_maps": null,
     "geo_izvor": null

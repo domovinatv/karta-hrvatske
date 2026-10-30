@@ -53,7 +53,7 @@
    "naziv": "ZICER jednostavno društvo s ograničenom odgovornošću za trgovinu i usluge",
    "fina_adresa": "Ulica kneza Višeslava 11, 31107 Višnjevac",
    "google_adresa": "Pav. 12, Avenija Dubrovnik 15, 10000, Zagreb",
-   "km": 206.2
+   "km": 205.8
   },
   {
    "croai_id": "430",
@@ -81,24 +81,6 @@
    "fina_adresa": "Istarska ulica - Via dell'Istria 157, Vodnjan",
    "google_adresa": "Utinjska ul. 29, 10000, Zagreb",
    "km": 187.4
-  },
-  {
-   "croai_id": "335",
-   "name": "Croatian Independent Software Exporters (CISEx)",
-   "oib": "56261414492",
-   "naziv": "UNIT HRVATSKA",
-   "fina_adresa": "VRBANI 4, 10104 ZAGREB",
-   "google_adresa": "Koturaška ul. 47, 10000, Zagreb",
-   "km": 180.3
-  },
-  {
-   "croai_id": "45",
-   "name": "Sofascore",
-   "oib": "96366258208",
-   "naziv": "Sofa IT d.o.o. za informatiku",
-   "fina_adresa": "Vrbani 4, 10104 Zagreb",
-   "google_adresa": "Vrbani 4, 10000, Zagreb",
-   "km": 175.7
   },
   {
    "croai_id": "115",
@@ -155,15 +137,6 @@
    "km": 50.7
   },
   {
-   "croai_id": "491",
-   "name": "Pontis technology",
-   "oib": "68533008080",
-   "naziv": "Pontis Technology društvo s ograničenom odgovornošću za usluge",
-   "fina_adresa": "Savska cesta 144/A, 10110 Zagreb",
-   "google_adresa": "Savska cesta 144A, 10110, Zagreb",
-   "km": 37.2
-  },
-  {
    "croai_id": "443",
    "name": "Klinika Magdalena",
    "oib": "51835157380",
@@ -179,7 +152,7 @@
    "naziv": "UBER d.o.o. za informatičke usluge",
    "fina_adresa": "Prhovine 2, 21226 Vinišće",
    "google_adresa": "TC Joker, 3. kat, Put Brodarice 6, 21000, Split",
-   "km": 27.2
+   "km": 27.3
   },
   {
    "croai_id": "54",
@@ -197,7 +170,7 @@
    "naziv": "PROTOSTAR LABS društvo s ograničenom odgovornošću za proizvodnju i usluge",
    "fina_adresa": "Vijenac Salamona Henricha Gutmanna 4/B, 31551 Belišće",
    "google_adresa": "Ribarska ul. 4, 31000, Osijek",
-   "km": 25.2
+   "km": 25.1
   },
   {
    "croai_id": "507",
@@ -206,16 +179,7 @@
    "naziv": "Scoop Technologies d.o.o. za informatičke usluge",
    "fina_adresa": "Dugoselska ulica 5, 10370 Rugvica",
    "google_adresa": "Ul. Damira Tomljanovića Gavrana 13, 10000, Novi Zagreb - istok, Zagreb",
-   "km": 20.2
-  },
-  {
-   "croai_id": "451",
-   "name": "RBA",
-   "oib": "53056966535",
-   "naziv": "Raiffeisenbank Austria d.d.",
-   "fina_adresa": "Magazinska cesta 69, 10110 Zagreb",
-   "google_adresa": "Zagrebačka Ul. 44, 10410, Velika Gorica",
-   "km": 16.5
+   "km": 19.8
   },
   {
    "croai_id": "432",
@@ -227,13 +191,22 @@
    "km": 15.9
   },
   {
+   "croai_id": "451",
+   "name": "RBA",
+   "oib": "53056966535",
+   "naziv": "Raiffeisenbank Austria d.d.",
+   "fina_adresa": "Magazinska cesta 69, 10110 Zagreb",
+   "google_adresa": "Zagrebačka Ul. 44, 10410, Velika Gorica",
+   "km": 14.0
+  },
+  {
    "croai_id": "594",
    "name": "FOR Automation",
    "oib": "90316762748",
    "naziv": "FOR Automation društvo s ograničenom odgovornošću za trgovinu i usluge",
    "fina_adresa": "Ulica Većeslava Kolara 5, 10430 Samobor",
    "google_adresa": "Petrovaradinska ul 1, 10000, Zagreb",
-   "km": 15.5
+   "km": 14.0
   },
   {
    "croai_id": "178",
@@ -245,22 +218,40 @@
    "km": 14.0
   },
   {
+   "croai_id": "114",
+   "name": "E-Glas",
+   "oib": "01085855307",
+   "naziv": "E - GLAS društvo s ograničenom odgovornošću za inteligentne računalne sustave i asistivnu tehnologiju",
+   "fina_adresa": "Ratka Petrovića 54, 51000 Rijeka",
+   "google_adresa": "Rubeši 18b, 51215, Kastav",
+   "km": 11.8
+  },
+  {
    "croai_id": "453",
    "name": "Tokić",
    "oib": "74867487620",
    "naziv": "TOKIĆ, trgovina, izvoz-uvoz, zastupanje i proizvodnja, dioničko društvo",
    "fina_adresa": "Ulica 144. brigade Hrvatske vojske 1/A, 10360 Sesvete",
    "google_adresa": "Ul. Andrije Kačića Miošića 90, 10410, Velika Gorica",
-   "km": 11.6
+   "km": 11.5
   },
   {
-   "croai_id": "76",
-   "name": "Proton EL d.o.o.",
-   "oib": "79590554595",
-   "naziv": "Proton EL d.o.o. za proizvodnju, trgovinu i usluge",
-   "fina_adresa": "Radnička cesta 177, 10135 Zagreb",
-   "google_adresa": "PETRIUS centar-4.kat, Radnička cesta 177, 10000, Zagreb",
-   "km": 10.5
+   "croai_id": "494",
+   "name": "Valamar",
+   "oib": "36201212847",
+   "naziv": "Valamar Riviera dioničko društvo za turizam",
+   "fina_adresa": "Stancija Kaligari 1, 52440 Poreč - Parenzo",
+   "google_adresa": "Lanterna 1, 52465, Tar",
+   "km": 11.1
+  },
+  {
+   "croai_id": "585",
+   "name": "Codeasy",
+   "oib": "93207816519",
+   "naziv": "LOOP d.o.o. za računalne djelatnosti i usluge",
+   "fina_adresa": "Obala kralja Tomislava 8, 21214 Kaštel Lukšić",
+   "google_adresa": "Ul. Antuna Gustava Matoša 43, 21210, Solin",
+   "km": 10.7
   },
   {
    "croai_id": "175",
@@ -272,58 +263,40 @@
    "km": 9.2
   },
   {
-   "croai_id": "585",
-   "name": "Codeasy",
-   "oib": "93207816519",
-   "naziv": "LOOP d.o.o. za računalne djelatnosti i usluge",
-   "fina_adresa": "Obala kralja Tomislava 8, 21214 Kaštel Lukšić",
-   "google_adresa": "Ul. Antuna Gustava Matoša 43, 21210, Solin",
-   "km": 8.7
-  },
-  {
-   "croai_id": "77",
-   "name": "Robotiq.ai",
-   "oib": "04678927848",
-   "naziv": "Robotic Process Automation d.o.o. za usluge",
-   "fina_adresa": "Jarun 68, 10104 Zagreb",
-   "google_adresa": "Brezovička cesta 2, 10000, Zagreb",
-   "km": 8.6
-  },
-  {
-   "croai_id": "428",
-   "name": "A1 Hrvatska d.o.o.",
-   "oib": "29524210204",
-   "naziv": "A1 Hrvatska društvo s ograničenom odgovornošću za usluge javnih telekomunikacija",
-   "fina_adresa": "Vrtni put 1, 10135 Zagreb",
-   "google_adresa": "Vrtni put 1, 10000, Zagreb",
-   "km": 8.3
-  },
-  {
-   "croai_id": "406",
-   "name": "Končar",
-   "oib": "45050126417",
-   "naziv": "KONČAR - Elektroindustrija d.d. za proizvodnju i usluge",
-   "fina_adresa": "Fallerovo Šetalište 22, 10110 Zagreb",
-   "google_adresa": "Josipa Mokrovića 8, 10090, Zagreb",
+   "croai_id": "338",
+   "name": "Humana digitalna inteligencija",
+   "oib": "38835255149",
+   "naziv": "HUMANA DIGITALNA INTELIGENCIJA",
+   "fina_adresa": "BIDROVEČKA CESTA 33, 10000 Zagreb",
+   "google_adresa": "Radauševa ul. 4, 10000, Zagreb",
    "km": 8.0
   },
   {
-   "croai_id": "207",
-   "name": "STORM Computers",
-   "oib": "20142998436",
-   "naziv": "STORM COMPUTERS društvo s ograničenom odgovornošću za informatički inženjering",
-   "fina_adresa": "Koledovčina 1/B, 10135 Zagreb",
-   "google_adresa": "Koledovčina ul. 1B, 10000, Zagreb",
-   "km": 7.9
+   "croai_id": "221",
+   "name": "HashCode",
+   "oib": "49637449593",
+   "naziv": "HashCode, d.o.o. za poslovne usluge",
+   "fina_adresa": "Palinovečka ulica 31, 10000 Zagreb",
+   "google_adresa": "Ul. Frana Folnegovića 1C, 10000, Zagreb",
+   "km": 7.5
   },
   {
-   "croai_id": "161",
-   "name": "Delta Reality",
-   "oib": "47614915143",
-   "naziv": "Delta X društvo s ograničenom odgovornošću za računalne djelatnosti",
-   "fina_adresa": "Miroševečina 9, 10040 Zagreb",
-   "google_adresa": "Koledovčina ul. 1, 10000, Zagreb",
-   "km": 7.8
+   "croai_id": "514",
+   "name": "AduroIdea",
+   "oib": "99145666903",
+   "naziv": "ADURO IDEJA d.o.o. za usluge",
+   "fina_adresa": "Borovina 49, 10040 Zagreb",
+   "google_adresa": "Zavrtnica 17, 10000, Zagreb",
+   "km": 7.4
+  },
+  {
+   "croai_id": "487",
+   "name": "Ingemark",
+   "oib": "02854892746",
+   "naziv": "INGEMARK društvo s ograničenom odgovornošću za proizvodnju i usluge",
+   "fina_adresa": "Palinovečka ulica 29, 10104 Zagreb",
+   "google_adresa": "Ul. grada Vukovara 269D, 10000, Zagreb",
+   "km": 7.0
   },
   {
    "croai_id": "111",
@@ -332,88 +305,16 @@
    "naziv": "Appliment d.o.o. za informatičke usluge",
    "fina_adresa": "Utinjska ulica 19, 10020 Zagreb",
    "google_adresa": "Slavonska avenija 24A, 10000, Zagreb",
-   "km": 7.7
+   "km": 6.6
   },
   {
-   "croai_id": "423",
-   "name": "Devot",
-   "oib": "03252244054",
-   "naziv": "DEVOT SOLUTIONS d.o.o. za informatičke usluge i trgovinu",
-   "fina_adresa": "Ulica Ede Murtića 2/B, 10146 Zagreb",
-   "google_adresa": "Ul. Ede Murtića 2C, 10020, Zagreb",
-   "km": 7.3
-  },
-  {
-   "croai_id": "438",
-   "name": "Fortenova grupa",
-   "oib": "88035992407",
-   "naziv": "FORTENOVA GRUPA dioničko društvo za upravljanje",
-   "fina_adresa": "Ulica Marijana Čavića 1, 10135 Zagreb",
-   "google_adresa": "Ul. Marijana Čavića 1, 10000, Zagreb",
-   "km": 7.1
-  },
-  {
-   "croai_id": "460",
-   "name": "FreshBooks",
-   "oib": "91938817383",
-   "naziv": "FreshBooks društvo s ograničenom odgovornošću za informatičku djelatnost",
-   "fina_adresa": "Radnička cesta 180, 10135 Zagreb",
-   "google_adresa": "Radnička cesta 180, 10000, Zagreb",
-   "km": 7.0
-  },
-  {
-   "croai_id": "379",
-   "name": "Bloomberg Adria",
-   "oib": "75150106632",
-   "naziv": "HD-WIN ARENA SPORT društvo s ograničenom odgovornošću za pružanje medijskih usluga",
-   "fina_adresa": "Radnička cesta 180, 10135 Zagreb",
-   "google_adresa": "Radnička cesta 180, 10000, Zagreb",
-   "km": 7.0
-  },
-  {
-   "croai_id": "494",
-   "name": "Valamar",
-   "oib": "36201212847",
-   "naziv": "Valamar Riviera dioničko društvo za turizam",
-   "fina_adresa": "Stancija Kaligari 1, 52440 Poreč - Parenzo",
-   "google_adresa": "Lanterna 1, 52465, Tar",
-   "km": 6.9
-  },
-  {
-   "croai_id": "194",
-   "name": "AISoft Technology",
-   "oib": "19685905917",
-   "naziv": "AISoft Technology d.o.o. za informatiku",
-   "fina_adresa": "Ulica Nikole Pavića 3, 10147 Zagreb",
-   "google_adresa": "Ul. Nikole Pavića 3, 10000, Zagreb",
-   "km": 6.9
-  },
-  {
-   "croai_id": "407",
-   "name": "Hypefy",
-   "oib": "89393159477",
-   "naziv": "Hypefy World d.o.o. za računalno programiranje",
-   "fina_adresa": "Zadarska ulica 80, 10110 Zagreb",
-   "google_adresa": "Selska cesta 217, 10000, Zagreb",
-   "km": 6.3
-  },
-  {
-   "croai_id": "222",
-   "name": "EM2",
-   "oib": "41061598603",
-   "naziv": "EM2 društvo s ograničenom odgovornošću za informatičke djelatnosti i usluge",
-   "fina_adresa": "Križevačka ulica 11, 31000 Osijek",
-   "google_adresa": "Križevačka ul., 31000, Osijek",
-   "km": 6.3
-  },
-  {
-   "croai_id": "338",
-   "name": "Humana digitalna inteligencija",
-   "oib": "38835255149",
-   "naziv": "HUMANA DIGITALNA INTELIGENCIJA",
-   "fina_adresa": "BIDROVEČKA CESTA 33, 10000 Zagreb",
-   "google_adresa": "Radauševa ul. 4, 10000, Zagreb",
-   "km": 6.2
+   "croai_id": "161",
+   "name": "Delta Reality",
+   "oib": "47614915143",
+   "naziv": "Delta X društvo s ograničenom odgovornošću za računalne djelatnosti",
+   "fina_adresa": "Miroševečina 9, 10040 Zagreb",
+   "google_adresa": "Koledovčina ul. 1, 10000, Zagreb",
+   "km": 6.6
   },
   {
    "croai_id": "91",
@@ -425,60 +326,6 @@
    "km": 6.1
   },
   {
-   "croai_id": "147",
-   "name": "InSky",
-   "oib": "33138362623",
-   "naziv": "INSKY SOLUTIONS d.o.o. za usluge",
-   "fina_adresa": "Medačka ulica 18, 10104 Zagreb",
-   "google_adresa": "Medačka ul. 18, 10000, Zagreb",
-   "km": 6.0
-  },
-  {
-   "croai_id": "221",
-   "name": "HashCode",
-   "oib": "49637449593",
-   "naziv": "HashCode, d.o.o. za poslovne usluge",
-   "fina_adresa": "Palinovečka ulica 31, 10000 Zagreb",
-   "google_adresa": "Ul. Frana Folnegovića 1C, 10000, Zagreb",
-   "km": 5.9
-  },
-  {
-   "croai_id": "114",
-   "name": "E-Glas",
-   "oib": "01085855307",
-   "naziv": "E - GLAS društvo s ograničenom odgovornošću za inteligentne računalne sustave i asistivnu tehnologiju",
-   "fina_adresa": "Ratka Petrovića 54, 51000 Rijeka",
-   "google_adresa": "Rubeši 18b, 51215, Kastav",
-   "km": 5.8
-  },
-  {
-   "croai_id": "105",
-   "name": "True North",
-   "oib": "44581061901",
-   "naziv": "True North d.o.o. za usluge",
-   "fina_adresa": "Zadarska ulica 80, 10110 Zagreb",
-   "google_adresa": "Zadarska ul. 80, 10000, Zagreb",
-   "km": 5.6
-  },
-  {
-   "croai_id": "487",
-   "name": "Ingemark",
-   "oib": "02854892746",
-   "naziv": "INGEMARK društvo s ograničenom odgovornošću za proizvodnju i usluge",
-   "fina_adresa": "Palinovečka ulica 29, 10104 Zagreb",
-   "google_adresa": "Ul. grada Vukovara 269D, 10000, Zagreb",
-   "km": 5.6
-  },
-  {
-   "croai_id": "543",
-   "name": "Mediartem AI",
-   "oib": "72757755615",
-   "naziv": "Mediartem AI društvo s ograničenom odgovornošću za usluge",
-   "fina_adresa": "Ulica Aleksandra Hondla 2/9, 10123 Zagreb",
-   "google_adresa": "Hondlova 2-9, 10000, Zagreb",
-   "km": 5.3
-  },
-  {
    "croai_id": "78",
    "name": "Visor d.o.o.",
    "oib": "87108765199",
@@ -488,66 +335,21 @@
    "km": 5.2
   },
   {
-   "croai_id": "514",
-   "name": "AduroIdea",
-   "oib": "99145666903",
-   "naziv": "ADURO IDEJA d.o.o. za usluge",
-   "fina_adresa": "Borovina 49, 10040 Zagreb",
-   "google_adresa": "Zavrtnica 17, 10000, Zagreb",
-   "km": 5.0
-  },
-  {
-   "croai_id": "197",
-   "name": "codebooq",
-   "oib": "37552301313",
-   "naziv": "Codebooq društvo s ograničenom odgovornošću za računalne djelatnosti i usluge",
-   "fina_adresa": "Rebrovac III. 2, 10040 Zagreb",
-   "google_adresa": "Strojarska cesta 22, 10000, Zagreb",
+   "croai_id": "406",
+   "name": "Končar",
+   "oib": "45050126417",
+   "naziv": "KONČAR - Elektroindustrija d.d. za proizvodnju i usluge",
+   "fina_adresa": "Fallerovo Šetalište 22, 10110 Zagreb",
+   "google_adresa": "Josipa Mokrovića 8, 10090, Zagreb",
    "km": 4.9
   },
   {
-   "croai_id": "70",
-   "name": "Bulb",
-   "oib": "84622104798",
-   "naziv": "BULB d.o.o. za trgovinu i usluge",
-   "fina_adresa": "Ulica grada Vukovara 23, 10110 Zagreb",
-   "google_adresa": "Ul. grada Vukovara 23, 10000, Zagreb",
-   "km": 4.8
-  },
-  {
-   "croai_id": "602",
-   "name": "AlphaWave",
-   "oib": "59896838619",
-   "naziv": "AlphaWave društvo s ograničenom odgovornošću za računalno programiranje, informatičke usluge, upravljanje projektima i poslovno savjetovanje",
-   "fina_adresa": "Vrlije 59, 51000 Rijeka",
-   "google_adresa": "Ul. Radmile Matejčić 10, 51000, Rijeka",
-   "km": 4.8
-  },
-  {
-   "croai_id": "425",
-   "name": "Amplibit",
-   "oib": "48004514574",
-   "naziv": "Amplibit d.o.o. za informatiku i usluge",
-   "fina_adresa": "Ulica Milana Ogrizovića 23, 10110 Zagreb",
-   "google_adresa": "Ul. grada Vukovara 5-1, 10000, Zagreb",
-   "km": 4.8
-  },
-  {
-   "croai_id": "277",
-   "name": "Effectus",
-   "oib": "47182242398",
-   "naziv": "EFFECTUS veleučilište",
-   "fina_adresa": "Trg Johna Fitzgeralda Kennedyja 2, 10123 Zagreb",
-   "google_adresa": "Trg Johna Fitzgeralda Kennedya 2, 10000, Zagreb",
-   "km": 4.7
-  },
-  {
-   "croai_id": "366",
-   "name": "Bug",
-   "oib": "05461674840",
-   "naziv": "B U G društvo s ograničenom odgovornošću za novinsko-nakladničku djelatnost",
-   "fina_adresa": "Tratinska ulica 36, 10110 Zagreb",
-   "google_adresa": "Ul. Milana Ogrizovića 36A, 10000, Zagreb",
+   "croai_id": "335",
+   "name": "Croatian Independent Software Exporters (CISEx)",
+   "oib": "56261414492",
+   "naziv": "UNIT HRVATSKA",
+   "fina_adresa": "VRBANI 4, 10104 ZAGREB",
+   "google_adresa": "Koturaška ul. 47, 10000, Zagreb",
    "km": 4.6
   },
   {
@@ -569,57 +371,12 @@
    "km": 4.5
   },
   {
-   "croai_id": "216",
-   "name": "Ericsson Nikola Tesla",
-   "oib": "84214771175",
-   "naziv": "ERICSSON NIKOLA TESLA, dioničko društvo za proizvodnju telekomunikacijskih sustava i uređaja",
-   "fina_adresa": "Krapinska ulica 45, 10110 Zagreb",
-   "google_adresa": "Krapinska ul. 45, 10000, Zagreb",
-   "km": 4.5
-  },
-  {
-   "croai_id": "201",
-   "name": "ITEO expert AI",
-   "oib": "22697605551",
-   "naziv": "ITEO expert AI d.o.o. za usluge",
-   "fina_adresa": "Ulica Frana Kušana 11, 10090 Zagreb",
-   "google_adresa": "Ul. Frana Kušana 11, 10000, Zagreb",
-   "km": 4.5
-  },
-  {
-   "croai_id": "605",
-   "name": "Optimus Consulting d.o.o.",
-   "oib": "31457975319",
-   "naziv": "Optimus Consulting d.o.o. za poslovno savjetovanje i usluge, turistička agencija",
-   "fina_adresa": "Kvarnerska ulica - Via Quarnero 17, 52100 Pula",
-   "google_adresa": "Kvarnerska ul. 17, 52100, Pula",
-   "km": 4.4
-  },
-  {
-   "croai_id": "448",
-   "name": "Poliklinika Terapija",
-   "oib": "49343876478",
-   "naziv": "Poliklinika TERAPIJA d.o.o. za zdravstvenu djelatnost",
-   "fina_adresa": "Maksimirska cesta 12, 10123 Zagreb",
-   "google_adresa": "Maksimirska Cesta 12, 10000, Zagreb",
-   "km": 4.2
-  },
-  {
    "croai_id": "375",
    "name": "Vidi.hr",
    "oib": "24523816042",
    "naziv": "VIDI-TO, izdavaštvo, tiskanje i trgovina, d.o.o.",
    "fina_adresa": "Zagrebačka cesta 233, 10000 Zagreb",
    "google_adresa": "Ul. Ivana Broza 12, 10000, Zagreb",
-   "km": 4.2
-  },
-  {
-   "croai_id": "474",
-   "name": "Gauss",
-   "oib": "07575902160",
-   "naziv": "GAUSS d.o.o. za informatičke i marketinške usluge",
-   "fina_adresa": "Vukovarska cesta 30, 31000 Osijek",
-   "google_adresa": "Ul. Svetog Leopolda Bogdana Mandića 111O, 31000, Osijek",
    "km": 4.2
   },
   {
@@ -632,49 +389,13 @@
    "km": 4.0
   },
   {
-   "croai_id": "38",
-   "name": "Briefing",
-   "oib": "05129429603",
-   "naziv": "BRIEFING MEDIJI društvo s ograničenom odgovornošću za praćenje medija",
-   "fina_adresa": "Vlaška ulica 121, 10123 Zagreb",
-   "google_adresa": "Vlaška ul. 121, 10000, Zagreb",
+   "croai_id": "474",
+   "name": "Gauss",
+   "oib": "07575902160",
+   "naziv": "GAUSS d.o.o. za informatičke i marketinške usluge",
+   "fina_adresa": "Vukovarska cesta 30, 31000 Osijek",
+   "google_adresa": "Ul. Svetog Leopolda Bogdana Mandića 111O, 31000, Osijek",
    "km": 4.0
-  },
-  {
-   "croai_id": "48",
-   "name": "Tvbeat",
-   "oib": "22020304358",
-   "naziv": "Tvbeat j.d.o.o. za trgovinu, usluge i programiranje",
-   "fina_adresa": "Ulica Florijana Andrašeca 18, 10110 Zagreb",
-   "google_adresa": "Martićeva ul. 35-37, 10000, Zagreb",
-   "km": 4.0
-  },
-  {
-   "croai_id": "218",
-   "name": "Software sauna",
-   "oib": "42941941828",
-   "naziv": "Software Sauna društvo s ograničenom odgovornošću za usluge",
-   "fina_adresa": "Stara Knežija 20, 10110 Zagreb",
-   "google_adresa": "Ul. Franje Petračića 6, 10000, Zagreb",
-   "km": 3.9
-  },
-  {
-   "croai_id": "230",
-   "name": "Uprise",
-   "oib": "54026168821",
-   "naziv": "UPRISE društvo s ograničenom odgovornošću za usluge",
-   "fina_adresa": "Petrova ulica 15, 10123 Zagreb",
-   "google_adresa": "Trg Drage Iblera 10, 10000, Zagreb",
-   "km": 3.8
-  },
-  {
-   "croai_id": "350",
-   "name": "Institut za inovacije",
-   "oib": "23825867367",
-   "naziv": "INSTITUT ZA INOVACIJE",
-   "fina_adresa": "Desinićka ulica 5, 10110 Zagreb",
-   "google_adresa": "Masarykova ul. 28, 10000, Zagreb",
-   "km": 3.7
   },
   {
    "croai_id": "273",
@@ -686,31 +407,13 @@
    "km": 3.6
   },
   {
-   "croai_id": "580",
-   "name": "Bornfight",
-   "oib": "64834048134",
-   "naziv": "Bornfight društvo s ograničenom odgovornošću za trgovinu i usluge",
-   "fina_adresa": "Ulica Filipa Vukasovića 1, 10109 Zagreb",
-   "google_adresa": "Filipa Vukasovića 1, 10000, Zagreb",
-   "km": 3.4
-  },
-  {
-   "croai_id": "576",
-   "name": "Determ",
-   "oib": "78206544075",
-   "naziv": "DETERM društvo s ograničenom odgovornošću za trgovinu i usluge",
-   "fina_adresa": "Ulica Filipa Vukasovića 1, 10109 Zagreb",
-   "google_adresa": "Filipa Vukasovića 1, 10000, Zagreb",
-   "km": 3.4
-  },
-  {
-   "croai_id": "475",
-   "name": "Q agency",
-   "oib": "78082062075",
-   "naziv": "Q društvo s ograničenom odgovornošću za usluge",
-   "fina_adresa": "Reljkovićeva ulica 4, 10109 Zagreb",
-   "google_adresa": "Reljkovićeva ul. 4, 10000, Zagreb",
-   "km": 3.4
+   "croai_id": "108",
+   "name": "Suprabit",
+   "oib": "94738438819",
+   "naziv": "Suprabit društvo s ograničenom odgovornošću za računarstvo",
+   "fina_adresa": "Vrhovec 136, 10000 Zagreb",
+   "google_adresa": "Zadarska ul. 80, 10000, Zagreb",
+   "km": 3.6
   },
   {
    "croai_id": "465",
@@ -719,7 +422,7 @@
    "naziv": "MAISTRA dioničko društvo za hotelijerstvo i turizam",
    "fina_adresa": "Obala Vladimira Nazora 6, 52210 Rovinj - Rovigno",
    "google_adresa": "Monsena 2, 52210, Rovinj",
-   "km": 3.2
+   "km": 3.3
   },
   {
    "croai_id": "292",
@@ -737,16 +440,52 @@
    "naziv": "DING Applications d.o.o. za usluge",
    "fina_adresa": "Ulica Otona Župančiča 6, 10000 Zagreb",
    "google_adresa": "Avenija Dubrovnik 15, 10000, Zagreb",
+   "km": 2.9
+  },
+  {
+   "croai_id": "509",
+   "name": "Cinnamon agency",
+   "oib": "48144159998",
+   "naziv": "CINNAMON d.o.o. za usluge",
+   "fina_adresa": "Gredice 8, 10000 Zagreb",
+   "google_adresa": "Gradišćanska ul. 24, 10000, Zagreb",
+   "km": 2.9
+  },
+  {
+   "croai_id": "172",
+   "name": "Brodbot",
+   "oib": "02054488318",
+   "naziv": "BRODBOT d.o.o. za proizvodnju računala",
+   "fina_adresa": "Glogovačka ulica 7, 35000 Slavonski Brod",
+   "google_adresa": "Šetalište Braće Radić 7, 35000, Slavonski Brod",
+   "km": 2.8
+  },
+  {
+   "croai_id": "197",
+   "name": "codebooq",
+   "oib": "37552301313",
+   "naziv": "Codebooq društvo s ograničenom odgovornošću za računalne djelatnosti i usluge",
+   "fina_adresa": "Rebrovac III. 2, 10040 Zagreb",
+   "google_adresa": "Strojarska cesta 22, 10000, Zagreb",
+   "km": 2.8
+  },
+  {
+   "croai_id": "350",
+   "name": "Institut za inovacije",
+   "oib": "23825867367",
+   "naziv": "INSTITUT ZA INOVACIJE",
+   "fina_adresa": "Desinićka ulica 5, 10110 Zagreb",
+   "google_adresa": "Masarykova ul. 28, 10000, Zagreb",
    "km": 2.7
   },
   {
-   "croai_id": "108",
-   "name": "Suprabit",
-   "oib": "94738438819",
-   "naziv": "Suprabit društvo s ograničenom odgovornošću za računarstvo",
-   "fina_adresa": "Vrhovec 136, 10000 Zagreb",
-   "google_adresa": "Zadarska ul. 80, 10000, Zagreb",
-   "km": 2.6
+   "croai_id": "48",
+   "name": "Tvbeat",
+   "oib": "22020304358",
+   "naziv": "Tvbeat j.d.o.o. za trgovinu, usluge i programiranje",
+   "fina_adresa": "Ulica Florijana Andrašeca 18, 10110 Zagreb",
+   "google_adresa": "Martićeva ul. 35-37, 10000, Zagreb",
+   "km": 2.5
   },
   {
    "croai_id": "437",
@@ -758,12 +497,12 @@
    "km": 2.4
   },
   {
-   "croai_id": "290",
-   "name": "Institut Ruđer Bošković",
-   "oib": "69715301002",
-   "naziv": "INSTITUT RUĐER BOŠKOVIĆ",
-   "fina_adresa": "Bijenička cesta 54, 10163 Zagreb",
-   "google_adresa": "Bijenička Cesta 54, 10000, Zagreb",
+   "croai_id": "77",
+   "name": "Robotiq.ai",
+   "oib": "04678927848",
+   "naziv": "Robotic Process Automation d.o.o. za usluge",
+   "fina_adresa": "Jarun 68, 10104 Zagreb",
+   "google_adresa": "Brezovička cesta 2, 10000, Zagreb",
    "km": 2.4
   },
   {
@@ -773,16 +512,16 @@
    "naziv": "INCLUDE d.o.o. za proizvodnju električne opreme",
    "fina_adresa": "Ulica don Frane Bulića 183/A, 21210 Solin",
    "google_adresa": "Kopilica ul. 62, 21000, Split",
-   "km": 2.2
+   "km": 2.3
   },
   {
-   "croai_id": "509",
-   "name": "Cinnamon agency",
-   "oib": "48144159998",
-   "naziv": "CINNAMON d.o.o. za usluge",
-   "fina_adresa": "Gredice 8, 10000 Zagreb",
-   "google_adresa": "Gradišćanska ul. 24, 10000, Zagreb",
-   "km": 2.1
+   "croai_id": "505",
+   "name": "Sintelly",
+   "oib": "06225773987",
+   "naziv": "SINTELLY društvo s ograničenom odgovornošću za računalno programiranje",
+   "fina_adresa": "Ulica Samostalne satnije Briševo 11, 23274 Briševo",
+   "google_adresa": "Samost. satnije Briševo 11, 23000, Zadar",
+   "km": 2.2
   },
   {
    "croai_id": "429",
@@ -821,6 +560,15 @@
    "km": 1.7
   },
   {
+   "croai_id": "218",
+   "name": "Software sauna",
+   "oib": "42941941828",
+   "naziv": "Software Sauna društvo s ograničenom odgovornošću za usluge",
+   "fina_adresa": "Stara Knežija 20, 10110 Zagreb",
+   "google_adresa": "Ul. Franje Petračića 6, 10000, Zagreb",
+   "km": 1.6
+  },
+  {
    "croai_id": "300",
    "name": "Tehnički fakultet Pula/Laboratorij za robotiku i umjetnu inteligenciju",
    "oib": "61738073226",
@@ -828,6 +576,24 @@
    "fina_adresa": "Negrijeva 6, 52100 Pula",
    "google_adresa": "Zagrebačka ul. 30, 52100, Pula",
    "km": 1.5
+  },
+  {
+   "croai_id": "148",
+   "name": "Infosit",
+   "oib": "13375007367",
+   "naziv": "INFOSIT d. o. o. za informatičke tehnologije",
+   "fina_adresa": "Baldini 37, 52440 Poreč - Parenzo",
+   "google_adresa": "Mate Vlašića 26/31, (Poduzetnička Zona Poreč), 52440, Poreč",
+   "km": 1.4
+  },
+  {
+   "croai_id": "605",
+   "name": "Optimus Consulting d.o.o.",
+   "oib": "31457975319",
+   "naziv": "Optimus Consulting d.o.o. za poslovno savjetovanje i usluge, turistička agencija",
+   "fina_adresa": "Kvarnerska ulica - Via Quarnero 17, 52100 Pula",
+   "google_adresa": "Kvarnerska ul. 17, 52100, Pula",
+   "km": 1.2
   },
   {
    "croai_id": "189",

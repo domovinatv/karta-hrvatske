@@ -67,7 +67,7 @@ import httpx
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from src import infobiz, places
+from src import dgu, infobiz, places
 from src.normalize import strip_diacritics
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -294,22 +294,95 @@ def places_by_name(pl: places.Places, e: dict, naziv: str | None) -> dict | None
     return None
 
 
+def _ista_adresa(r: dict, adr: dict, mjesto: bool = True) -> str | None:
+    """Koliko se Googleov pogodak slaže s FINA adresom: `google-adresa` (ista
+    ulica i kućni broj), `google-ulica` (samo ulica) ili None.
+
+    Namjerno labavo po obliku, strogo po sadržaju. Google piše „Trg Josipa
+    Jurja Strossmayera" za „Strossmayerov trg", „Odra" ili „Rovinj" umjesto
+    „Zagreb" i „Rovinj - Rovigno", a ime firme zna stajati ispred adrese
+    („Direct4.me, Kupreška ul. 14"). Zato ulica prolazi ako se bilo koja
+    njezina negenerička riječ poklopi po prefiksu od 5 slova, a mjesto po
+    prvoj riječi. Uz isti poštanski broj (`mjesto=False`) mjesto se ne
+    provjerava: „Velika cesta 47, 10000, Odra" jest Zagreb."""
+    num, _ = dgu._split_number(adr["broj"])
+    if not adr["ulica"] or num is None or not adr["mjesto"]:
+        return None
+    if "route" in r["types"] or "locality" in r["types"]:
+        return None
+    g = strip_diacritics(r["address"] or "").lower()
+    rijeci = [w for w in (strip_diacritics(x).lower().strip('.,"-') for x in adr["ulica"].split())
+              if len(w) >= 3 and w not in dgu._GENERIC]
+    grad = strip_diacritics(adr["mjesto"]).lower().split()[0]
+    if not rijeci or not any(w[:5] in g for w in rijeci) or (mjesto and grad[:5] not in g):
+        return None
+    # „89/1" nije kuća 1 (Gabonjin), pa ni znak „/" ne smije stajati ispred.
+    return "google-adresa" if re.search(rf"(?<![\d/-]){num}(?!\d)", g) else "google-ulica"
+
+
+def geocode_address(pl: places.Places, adr: dict, raw: str | None) -> dict | None:
+    """FINA adresa → kuća, preko Geocoding API-ja. Prvi korak lanca: geokoder
+    zna adrese, Text Search zna objekte. Prihvaća se samo točka kuće
+    (ROOFTOP ili interpolirana) s istom ulicom i kućnim brojem; poštanski broj
+    se ne gleda jer Google piše 10000 tamo gdje FINA ima 10123."""
+    if not raw or not adr["ulica"]:
+        return None
+    for r in pl.geocode(raw)[:2]:
+        if (r["location_type"] in ("ROOFTOP", "RANGE_INTERPOLATED")
+                # Isti poštanski broj zamjenjuje provjeru mjesta: „Stancija
+                # Kaligari 1, 52440, Žbandaj" je Valamar u Poreču.
+                and _ista_adresa(r, adr, mjesto=(adr["pbr"] or "-") not in (r["address"] or ""))
+                == "google-adresa"):
+            return r
+    return None
+
+
 def places_by_address(pl: places.Places, adr: dict) -> dict | None:
-    """FINA adresa → točka. Prihvaća se samo rezultat s istim poštanskim
-    brojem, inače Text Search za nepoznatu ulicu vrati središte grada."""
+    """FINA adresa → točka. Isti poštanski broj NIJE dovoljan: za „Ulica
+    Črnomerec 3, 10109" Google je vratio Laubu na Prilazu baruna Filipovića
+    (isti broj pošte, druga ulica), za „Slavonska avenija 1/C" točku 1,8 km
+    dalje. Zato i ovdje vrijedi `_ista_adresa`, s kućnim brojem."""
     if not adr["ulica"] or not adr["pbr"]:
         return None
     q = f"{adr['ulica']} {adr['broj']}, {adr['pbr']} {adr['mjesto']}, Hrvatska"
     for r in pl.search(q, max_results=1):
-        if adr["pbr"] in (r["address"] or "") and "route" not in r["types"] and "locality" not in r["types"]:
+        if adr["pbr"] in (r["address"] or "") and _ista_adresa(r, adr, mjesto=False) == "google-adresa":
             return r
     return None
+
+
+def places_by_street(pl: places.Places, adr: dict) -> dict | None:
+    """Druga prilika za FINA adresu, bez poštanskog broja u upitu.
+
+    Zagreb u FINA-i ima desetak brojeva (10104, 10123, 10135…), a Google za
+    gotovo sve adrese piše 10000. Text Search za „Vlaška ulica 121, 10123
+    Zagreb" vrati poštu na Prisavlju, pa `places_by_address` to s pravom
+    odbije. Bez broja vrati baš tu kuću. Umjesto poštanskog broja provjera je
+    ulica i kućni broj u Googleovoj adresi (`_ista_adresa`).
+    Bez te provjere 61 firma završila je na težištu Zagreba (30.10.2026.).
+
+    Vraća (pogodak, geo_source). Text Search traži objekte, ne adrese, pa za
+    stambenu kuću bez firme vrati susjeda u istoj ulici („Pavlenski put 7" za
+    11/C). To je `google-ulica`: desetci metara, ne kilometri kao težište.
+    """
+    num, letter = dgu._split_number(adr["broj"])
+    kw = dgu.keyword(adr["ulica"])
+    if not kw or num is None or not adr["mjesto"]:
+        return None, None
+    q = f"{adr['ulica']} {num}{letter or ''}, {adr['mjesto']}, Hrvatska"
+    for r in pl.search(q, max_results=1):
+        src = _ista_adresa(r, adr)
+        if src:
+            return r, src
+    return None, None
 
 
 # Iznad ovoga FINA sjedište i Googleova točka po imenu nisu ista lokacija.
 # Česti legitimni razlog: sjedište kod knjigovođe ili u stanu osnivača, ured
 # drugdje. Zato se ne odbacuje nego bilježi u `geo_conflicts`.
 CONFLICT_M = 1000.0
+# Ručna točka sjedišta dalje od ovoga od geokoda vlastite adrese → geokod.
+RUCNO_GEOKOD_M = 300.0
 
 
 # ---------------------------------------------------------------- main
@@ -405,11 +478,32 @@ def main() -> int:
         adr = ov.get("adresa_override") or d["adresa"]
         parsed = infobiz.parse_adresa(adr)
         # Redom: ručno → Google po FINA adresi → DGU → težište naselja.
-        g_adr = None if ov.get("lat") is not None else places_by_address(pl, parsed)
+        g_adr, g_src = None, None
+        if ov.get("lat") is None:
+            g_adr, g_src = geocode_address(pl, parsed, adr), "google-geokod"
+            if not g_adr:
+                g_adr, g_src = places_by_address(pl, parsed), "google-adresa"
+            if not g_adr:
+                g_adr, g_src = places_by_street(pl, parsed)
         if g_adr:
-            lat, lng, geo_source = g_adr["lat"], g_adr["lng"], "google-adresa"
+            lat, lng, geo_source = g_adr["lat"], g_adr["lng"], g_src
         else:
             lat, lng, geo_source = locate(idx, ov, parsed)
+            # `locate` za gradsku ulicu zna uzeti istoimeno SELO: „Vrbani 4,
+            # Zagreb" je završio u Istri, „Savska cesta, Zagreb" kod Križevaca.
+            # Težište je ionako samo gruba točka, pa neka bude težište grada.
+            if geo_source == "naselje" and parsed["mjesto"]:
+                grad = _m29.settlement_candidates(idx, parsed["mjesto"], parsed["mjesto"])
+                if grad and places.haversine_m(lat, lng, grad[0].lat, grad[0].lng) > 10_000:
+                    lat, lng = grad[0].lat, grad[0].lng
+            # Ručno sjedište: istina je ADRESA (provjerena na izvoru), a
+            # koordinatu je donio Text Search, koji zna pogoditi krivi objekt
+            # (PreferAI 6,4 km od Štitarske 4). Mjesto događaja i institucija
+            # ostaju ručni: tamo je točka namjerno izabrana unutar kompleksa.
+            if geo_source == "rucno" and (ov.get("izvor") or "").startswith("sjedište"):
+                g = geocode_address(pl, parsed, adr)
+                if g and places.haversine_m(lat, lng, g["lat"], g["lng"]) > RUCNO_GEOKOD_M:
+                    lat, lng, geo_source = g["lat"], g["lng"], "google-geokod"
         # Dvostruka provjera: Google po IMENU, potvrđen istim webom. Kad se
         # slaže s adresom, OIB je potvrđen iz izvora koji nije sudjelovao u
         # njegovom pronalasku. Kad se ne slaže, FINA sjedište ostaje točka, a
@@ -423,7 +517,7 @@ def main() -> int:
                 conflicts.append({"croai_id": cid, "name": e["name"], "oib": oib,
                                   "naziv": d["naziv"], "fina_adresa": adr,
                                   "google_adresa": g_ime["address"], "km": round(dist / 1000, 1)})
-            elif geo_source in ("naselje", None):
+            elif geo_source in ("naselje", "google-ulica", None):
                 lat, lng, geo_source = g_ime["lat"], g_ime["lng"], "google-ime"
         elif g_ime:
             lat, lng, geo_source = g_ime["lat"], g_ime["lng"], "google-ime"

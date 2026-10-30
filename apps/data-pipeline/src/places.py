@@ -26,6 +26,8 @@ import httpx
 ROOT = Path(__file__).resolve().parent.parent
 CACHE_DIR = ROOT / "data" / "raw" / "places"
 URL = "https://places.googleapis.com/v1/places:searchText"
+GEOCODE_URL = "https://maps.googleapis.com/maps/api/geocode/json"
+GEOCODE_CACHE = ROOT / "data" / "raw" / "geocode"
 FIELD_MASK = ",".join(
     f"places.{f}" for f in (
         "id", "displayName", "formattedAddress", "location", "types",
@@ -122,3 +124,36 @@ class Places:
                 "business_status": p.get("businessStatus"),
             })
         return out
+
+    def geocode(self, address: str) -> list[dict[str, Any]]:
+        """Geocoding API: adresa → točka kuće. Za razliku od Text Searcha ne
+        traži objekte, pa nađe i stambenu kuću bez firme („Pavlenski put 11C").
+        Isti ključ, mora imati `geocoding-backend.googleapis.com` u API
+        restrikcijama (dodano 30.10.2026.). Keš u `data/raw/geocode/`."""
+        if self.disabled:
+            return []
+        params = {"address": address, "components": "country:HR", "language": "hr"}
+        cache = GEOCODE_CACHE / (hashlib.sha256(json.dumps(params, sort_keys=True).encode()).hexdigest()[:16] + ".json")
+        if cache.exists():
+            self.cache_hits += 1
+            data = json.loads(cache.read_text())
+        else:
+            r = self.client.get(GEOCODE_URL, params={**params, "key": self.key})
+            self.calls += 1
+            r.raise_for_status()
+            data = r.json()
+            if data.get("status") not in ("OK", "ZERO_RESULTS"):
+                # REQUEST_DENIED / OVER_QUERY_LIMIT dolaze kao HTTP 200.
+                print(f"  ! Geocoding: {data.get('status')} {data.get('error_message', '')[:200]}")
+                return []
+            GEOCODE_CACHE.mkdir(parents=True, exist_ok=True)
+            cache.write_text(json.dumps(data, ensure_ascii=False))
+        return [{
+            "address": g.get("formatted_address"),
+            "lat": float(g["geometry"]["location"]["lat"]),
+            "lng": float(g["geometry"]["location"]["lng"]),
+            "location_type": g["geometry"].get("location_type"),
+            "partial_match": bool(g.get("partial_match")),
+            "types": g.get("types") or [],
+            "maps_url": None,
+        } for g in data.get("results", [])]
