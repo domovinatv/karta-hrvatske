@@ -12,7 +12,7 @@ po imenu, pravnom nazivu, domeni weba, OIB-u, kategoriji, opisu
 
 | | |
 |---|---|
-| Indeks | `public/data/search-index.json`: 5,0 MB sirovo, 1,15 MB gzip, ~720 KB brotli |
+| Indeks | `public/data/search-index.json`: 5,0 MB sirovo, 1,15 MB gzip; Cloudflare ga šalje kao brotli od 1,07 MB (izmjereno na produkciji) |
 | Kada se učitava | na prvi fokus polja za pretragu, ne pri otvaranju karte |
 | Izgradnja indeksa u pregledniku | ~300 ms (M-čip), u Web Workeru |
 | Trajanje upita | 0–12 ms |
